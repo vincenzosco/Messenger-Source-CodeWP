@@ -12,8 +12,8 @@
             <localization:LocalizedStrings x:Key="LocalizedStrings" />
 
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="Styles/LoginStyles.xaml" />
-                <ResourceDictionary Source="Converters/Converters.xaml"/>
+                <ResourceDictionary Source="/Facebook.Messenger.WP8;component/styles/loginstyles.xaml" />
+                <ResourceDictionary Source="/Facebook.Messenger.WP8;component/converters/converters.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>
