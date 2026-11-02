@@ -1,0 +1,99 @@
+﻿<UserControl x:Class="Facebook.Messenger.WP8.Controls.GroupsNuxControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+    xmlns:groups="clr-namespace:Facebook.Messenger.WP8.Controls.Groups"
+    mc:Ignorable="d"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}">
+    <UserControl.Resources>
+        <Style x:Key="Divider"
+               TargetType="Grid">
+            <Setter Property="Height"
+                    Value="2" />
+            <Setter Property="Background">
+                <Setter.Value>
+                    <LinearGradientBrush StartPoint="0.5,0"
+                                         EndPoint="0.5,2">
+                        <GradientStop Color="Transparent"
+                                      Offset="0" />
+                        <GradientStop Color="{StaticResource MessengerWhite}"
+                                      Offset="0.2" />
+                        <GradientStop Color="{StaticResource MessengerWhite}"
+                                      Offset="1" />
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </UserControl.Resources>
+    
+    <Grid x:Name="LayoutRoot" Background="White" >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        
+        <TextBlock Grid.Row="0"
+                   FontSize="{StaticResource PhoneFontSizeMediumLarge}"
+                   Foreground="{StaticResource PhonePageTextGrayBrush}"
+                   FontWeight="Light"
+                   TextWrapping="Wrap"
+                   Margin="24,16"
+                   Text="{Binding StringLibrary.Groups_NUX_Help_Title, Source={StaticResource LocalizedStrings}}"
+                   HorizontalAlignment="Center" 
+                   VerticalAlignment="Center"
+                   TextAlignment="Center"/>
+
+        <toolkit:WrapPanel Grid.Row="1"
+                           Orientation="Horizontal"
+                           Margin="44,16,22,0">
+            
+            <groups:GroupNuxElement ImageUri="/Assets/Groups/NUX/roomates.png"
+                                    Members="{Binding StringLibrary.Groups_NUX_PlaceholderOne_Members, Source={StaticResource LocalizedStrings}}"
+                                    GroupName="{Binding StringLibrary.Groups_NUX_PlaceholderOne_Title, Source={StaticResource LocalizedStrings}}"
+                                    ActivityLabel="{Binding StringLibrary.Groups_NUX_PlaceholderActive_Yesterday, Source={StaticResource LocalizedStrings}}"/>
+
+            <groups:GroupNuxElement ImageUri="/Assets/Groups/NUX/family.png"
+                                    Members="{Binding StringLibrary.Groups_NUX_PlaceholderTwo_Members, Source={StaticResource LocalizedStrings}}"
+                                    GroupName="{Binding StringLibrary.Groups_NUX_PlaceholderTwo_Title, Source={StaticResource LocalizedStrings}}"
+                                    ActivityLabel="{Binding StringLibrary.Groups_NUX_PlaceholderActive_LastWeek, Source={StaticResource LocalizedStrings}}" />
+
+            <groups:GroupNuxElement ImageUri="/Assets/Groups/NUX/surf.png"
+                                    Members="{Binding StringLibrary.Groups_NUX_PlaceholderThree_Members, Source={StaticResource LocalizedStrings}}"
+                                    GroupName="{Binding StringLibrary.Groups_NUX_PlaceholderThree_Title, Source={StaticResource LocalizedStrings}}"
+                                    ActivityLabel="{Binding StringLibrary.Groups_NUX_PlaceholderActive_Yesterday, Source={StaticResource LocalizedStrings}}" />
+
+            <groups:GroupNuxElement ImageUri="/Assets/Groups/NUX/sushi.png"
+                                    Members="{Binding StringLibrary.Groups_NUX_PlaceholderFour_Members, Source={StaticResource LocalizedStrings}}"
+                                    GroupName="{Binding StringLibrary.Groups_NUX_PlaceholderFour_Title, Source={StaticResource LocalizedStrings}}"
+                                    ActivityLabel="{Binding StringLibrary.Groups_NUX_PlaceholderActive_LastWeek, Source={StaticResource LocalizedStrings}}" />
+
+        </toolkit:WrapPanel>
+        <Grid Grid.Row="1"
+              Grid.RowSpan="2"
+              Height="240"
+              VerticalAlignment="Bottom"
+              Style="{StaticResource Divider}"/>
+
+        <Grid Grid.Row="1"
+              Grid.RowSpan="2"
+              VerticalAlignment="Bottom"
+              Margin="0,0,0,46">
+            <Button Width="240"
+                    MinHeight="50"
+                    Tap="ButtonOnClick"
+                    Style="{StaticResource BlueButtonStyle}">
+                <TextBlock Name="NuxButtonText"
+                           Text="{Binding StringLibrary.Groups_NUX_Button_Text, Source={StaticResource LocalizedStrings}}"
+                           TextAlignment="Center"
+                           TextWrapping="Wrap" />
+            </Button>
+        </Grid>
+            
+        
+    </Grid>
+</UserControl>

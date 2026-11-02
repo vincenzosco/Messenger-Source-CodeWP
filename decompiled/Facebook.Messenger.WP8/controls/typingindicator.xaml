@@ -1,0 +1,97 @@
+﻿<UserControl x:Class="Facebook.Messenger.WP8.Controls.TypingIndicator"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:controls="clr-namespace:Facebook.Messenger.WP8.Controls"
+    mc:Ignorable="d"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    d:DesignHeight="480" d:DesignWidth="480">
+
+    <UserControl.Resources>
+        <Style x:Key="DotStyle" TargetType="TextBlock">
+            <Setter Property="RenderTransform">
+                <Setter.Value>
+                    <TranslateTransform Y="0"/>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Text" Value="•"/>
+            <Setter Property="FontFamily" Value="Segoe WP"/>
+            <Setter Property="FontSize" Value="30"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Foreground" Value="{StaticResource MessengerTextLightGreyBrush}"/>
+        </Style>
+
+        <!-- The keyframes below are filled programatically -->
+        <Storyboard
+            x:Name="TypingAnimation"
+            RepeatBehavior="Forever"
+            BeginTime="0:0:0.367"
+            SpeedRatio="1.0">
+
+            <DoubleAnimationUsingKeyFrames
+                x:Name="KeyframesDot1"
+                Storyboard.TargetName="DotLeft"
+                Storyboard.TargetProperty="UIElement.RenderTransform.TranslateTransform.Y"
+                Duration="0:0:2.667" />
+            <DoubleAnimationUsingKeyFrames
+                x:Name="KeyframesDot2"
+                Storyboard.TargetName="DotMiddle"
+                Storyboard.TargetProperty="UIElement.RenderTransform.TranslateTransform.Y"
+                Duration="0:0:2.667" />
+            <DoubleAnimationUsingKeyFrames
+                x:Name="KeyframesDot3"
+                Storyboard.TargetName="DotRight"
+                Storyboard.TargetProperty="UIElement.RenderTransform.TranslateTransform.Y"
+                Duration="0:0:2.667" />
+
+        </Storyboard>
+    </UserControl.Resources>
+    
+    <Grid x:Name="RootGrid" 
+          Margin="24, 5, 11, 21"
+          Background="Transparent">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition x:Name="ProfilePhotoColumn"  Width="Auto" />
+            <ColumnDefinition x:Name="ContentColumn" Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <controls:UserTile
+            x:Name="ProfilePhoto"
+            Grid.Column="0"
+            Width="{StaticResource MessagesProfilePictureSize}"
+            Height="{StaticResource MessagesProfilePictureSize}"
+            Margin="3,0,9,0"
+            VerticalAlignment="Bottom"
+            IndicatorDiameter="20"
+            DataContext="{Binding Messages.Thread.CanonicalParticipant}"/>
+
+        <controls:BubbleContainer
+            x:Name="Bubble"
+            Grid.Column="1"
+            BottomNubVisibility="Collapsed"
+            TopNubVisibility="Visible"
+            BubbleFill="{StaticResource MessageBubbleBrush}"
+            HorizontalAlignment="Left">
+            <StackPanel
+                Orientation="Horizontal"
+                Margin="3,-3,0,-7">
+
+                <TextBlock
+                    x:Name="DotLeft"
+                    Style="{StaticResource DotStyle}"/>
+
+                <TextBlock
+                    x:Name="DotMiddle"
+                    Style="{StaticResource DotStyle}"/>
+
+                <TextBlock
+                    x:Name="DotRight"
+                    Style="{StaticResource DotStyle}"/>
+
+            </StackPanel>
+        </controls:BubbleContainer>
+    </Grid>
+</UserControl>

@@ -1,0 +1,226 @@
+﻿<base:BaseControl x:Class="Facebook.Messenger.WP8.Controls.GroupTileControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:pixelLab="clr-namespace:PixelLab"
+    xmlns:controls="clr-namespace:Facebook.Messenger.WP8.Controls"
+    xmlns:base="clr-namespace:Facebook.Messenger.WP8.Controls.Base"
+    xmlns:viewModels="clr-namespace:Facebook.Messenger.WP8.ViewModels"
+    mc:Ignorable="d"
+    UseOptimizedManipulationRouting="False"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    d:DataContext="{viewModels:ThreadViewModel}"
+    d:DesignHeight="480" d:DesignWidth="480">
+
+    <UserControl.Resources>
+        <CubicEase x:Name="ZoomEase" EasingMode="EaseInOut"/>
+        <ElasticEase x:Name="ElasticEase" EasingMode="EaseOut" Oscillations="1" Springiness="2"/>
+        
+        <Storyboard x:Name="ZoomOut">
+            <DoubleAnimation
+                            To="0.85"
+                            From="1"
+                            Duration="00:00:00.4"
+                            EasingFunction="{StaticResource ZoomEase}"
+                            Storyboard.TargetName="PinnedStackPanel"
+                            Storyboard.TargetProperty="(UIElement.RenderTransform).(ScaleTransform.ScaleY)"/>
+            <DoubleAnimation
+                            To="0.85"
+                            From="1"
+                            Duration="00:00:00.4"
+                            EasingFunction="{StaticResource ZoomEase}"
+                            Storyboard.TargetName="PinnedStackPanel"
+                            Storyboard.TargetProperty="(UIElement.RenderTransform).(ScaleTransform.ScaleX)"/>
+            <DoubleAnimation
+                            To="0.4"
+                            From="1"
+                            Duration="00:00:00.4"
+                            EasingFunction="{StaticResource ZoomEase}"
+                            Storyboard.TargetName="PinnedStackPanel"
+                            Storyboard.TargetProperty="Opacity"/>
+        </Storyboard>
+
+        <Storyboard x:Name="ZoomIn">
+            <DoubleAnimation
+                            To="1"
+                            From="0.85"
+                            Duration="00:00:00.4"
+                            EasingFunction="{StaticResource ZoomEase}"
+                            Storyboard.TargetName="PinnedStackPanel"
+                            Storyboard.TargetProperty="(UIElement.RenderTransform).(ScaleTransform.ScaleY)"/>
+            <DoubleAnimation
+                            To="1"
+                            From="0.85"
+                            Duration="00:00:00.4"
+                            EasingFunction="{StaticResource ZoomEase}"
+                            Storyboard.TargetName="PinnedStackPanel"
+                            Storyboard.TargetProperty="(UIElement.RenderTransform).(ScaleTransform.ScaleX)"/>
+            <DoubleAnimation
+                            To="1"
+                            From="0.4"
+                            Duration="00:00:00.4"
+                            EasingFunction="{StaticResource ZoomEase}"
+                            Storyboard.TargetName="PinnedStackPanel"
+                            Storyboard.TargetProperty="Opacity"/>
+        </Storyboard>
+
+
+        <Storyboard x:Name="BounceOut">
+            <DoubleAnimationUsingKeyFrames                            
+                    Duration="00:00:00.4"                            
+                    Storyboard.TargetName="PinnedStackPanel"
+                    Storyboard.TargetProperty="(UIElement.RenderTransform).(ScaleTransform.ScaleX)">
+
+                <LinearDoubleKeyFrame Value="1" KeyTime="0:0:0" />
+                <EasingDoubleKeyFrame Value="1.15" KeyTime="0:0:0.1" >
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CubicEase EasingMode="EaseIn"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+
+                <EasingDoubleKeyFrame
+                    Value="1"
+                    KeyTime="0:0:0.4"
+                    EasingFunction="{StaticResource ElasticEase}"/>
+            </DoubleAnimationUsingKeyFrames>
+
+            <DoubleAnimationUsingKeyFrames                            
+                    Duration="00:00:00.4"                            
+                    Storyboard.TargetName="PinnedStackPanel"
+                    Storyboard.TargetProperty="(UIElement.RenderTransform).(ScaleTransform.ScaleY)">
+
+                <LinearDoubleKeyFrame Value="1" KeyTime="0:0:0" />
+                <EasingDoubleKeyFrame Value="1.15" KeyTime="0:0:0.1" >
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CubicEase EasingMode="EaseIn"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+
+                <EasingDoubleKeyFrame 
+                    Value="1"
+                    KeyTime="0:0:0.4"
+                    EasingFunction="{StaticResource ElasticEase}"/>
+            </DoubleAnimationUsingKeyFrames>
+
+        </Storyboard>
+
+        <Storyboard x:Name="BounceIn">
+            <DoubleAnimation
+                            To="1"
+                            From="0.85"
+                            Duration="00:00:00.4"
+                            EasingFunction="{StaticResource ElasticEase}"
+                            Storyboard.TargetName="PinnedStackPanel"
+                            Storyboard.TargetProperty="(UIElement.RenderTransform).(ScaleTransform.ScaleY)"/>
+            <DoubleAnimation
+                            To="1"
+                            From="0.85"
+                            Duration="00:00:00.4"
+                            EasingFunction="{StaticResource ElasticEase}"
+                            Storyboard.TargetName="PinnedStackPanel"
+                            Storyboard.TargetProperty="(UIElement.RenderTransform).(ScaleTransform.ScaleX)"/>
+            <DoubleAnimation
+                            To="1"
+                            From="0.4"
+                            Duration="00:00:00.4"
+                            EasingFunction="{StaticResource ZoomEase}"
+                            Storyboard.TargetName="PinnedStackPanel"
+                            Storyboard.TargetProperty="Opacity"/>
+        </Storyboard>
+    </UserControl.Resources>
+
+
+    <Grid>
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup x:Name="CommonStates">
+                <VisualState x:Name="Active">
+                    <Storyboard Duration="00:00:00">
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Visibility" Storyboard.TargetName="UnpinOverlay">
+                            <DiscreteObjectKeyFrame KeyTime="0">
+                                <DiscreteObjectKeyFrame.Value>
+                                    <Visibility>Visible</Visibility>
+                                </DiscreteObjectKeyFrame.Value>
+                            </DiscreteObjectKeyFrame>
+                        </ObjectAnimationUsingKeyFrames>
+                    </Storyboard>
+                </VisualState>
+                <VisualState x:Name="Inactive">
+                    <Storyboard Duration="00:00:00">
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Visibility" Storyboard.TargetName="UnpinOverlay">
+                            <DiscreteObjectKeyFrame KeyTime="0">
+                                <DiscreteObjectKeyFrame.Value>
+                                    <Visibility>Collapsed</Visibility>
+                                </DiscreteObjectKeyFrame.Value>
+                            </DiscreteObjectKeyFrame>
+                        </ObjectAnimationUsingKeyFrames>
+                    </Storyboard>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+
+        <StackPanel x:Name="PinnedStackPanel"
+                            CacheMode="BitmapCache"
+                            RenderTransformOrigin="0.5,0.5"
+                            UseOptimizedManipulationRouting="False"
+                            Tap="PinnedThread_OnTap"
+                            Background="{StaticResource MessengerBorderGreyBrush}" 
+                            Margin="0,10,10,0">
+
+            <StackPanel.RenderTransform>
+                <ScaleTransform/>
+            </StackPanel.RenderTransform>
+
+            <controls:FaceMash x:Name="FaceMash"
+                                       Margin="0,22,0,16"
+                                       HorizontalAlignment="Center"
+                                       HorizontalContentAlignment="Center"
+                                       Height="80"
+                                       Width="80"/>
+
+            <pixelLab:DynamicTextBlock Height="28"
+                                       MaxWidth="170"
+                                       x:Name="NameBlock"
+                                       FontSize="20" 
+                                       FontWeight="SemiBold" 
+                                       HorizontalAlignment="Center"/>
+
+            <TextBlock Height="24" 
+                                       MaxWidth="170"
+                                       TextAlignment="Center"
+                                       x:Name="TimestampBlock"
+                                       Foreground="{StaticResource MessengerTextDarkGreyBrush}"
+                                       FontSize="16" 
+                                       FontWeight="Normal"  
+                                       HorizontalAlignment="Center"/>
+
+            <Rectangle Width="165"
+                                       Height="1"
+                                       Fill="#FFE1E1E1"
+                                       Margin="0,10,0,5"/>
+
+            <pixelLab:DynamicTextBlock Height="32" 
+                                       x:Name="ParticipantsBlock"
+                                       FontSize="14" 
+                                       MaxWidth="165"
+                                       Foreground="{StaticResource MessengerTextLightGreyBrush}"
+                                       FontWeight="Normal"
+                                       HorizontalAlignment="Center"
+                                       Margin="0,20,0,0"/>
+        </StackPanel>
+
+        <controls:ImageButton 
+            x:Name="UnpinOverlay"
+            Width="46"
+            Height="46"
+            VerticalAlignment="Top"
+            HorizontalAlignment="Right"
+            Visibility="Collapsed"
+            Tap="UnpinOverlay_OnTap"
+            Source="\Assets\Groups\UnpinIcon.png"
+            SelectedSource="\Assets\Groups\UnpinIconPressed.png"/>
+
+    </Grid>
+</base:BaseControl>

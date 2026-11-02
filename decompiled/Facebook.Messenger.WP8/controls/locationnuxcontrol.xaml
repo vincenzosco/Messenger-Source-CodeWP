@@ -1,0 +1,47 @@
+﻿<UserControl x:Class="Facebook.Messenger.WP8.Controls.LocationNuxControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    d:DesignHeight="480" d:DesignWidth="480">
+
+    <Grid
+        x:Name="LocationWarning"
+        VerticalAlignment="Bottom"
+        Visibility="{Binding ShowLocationWarning, Converter={StaticResource BoolToVisibilityConverter}}"
+        Tap="LocationWarning_OnTap"
+        Margin="0,0,0,-20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Border
+            Grid.Row="0"
+            Background="Black">
+            <StackPanel
+                        Margin="20">
+                <TextBlock
+                            Text="{Binding StringLibrary.Location_Warning_Body, Source={StaticResource LocalizedStrings}}"
+                            Foreground="White"
+                            FontSize="22"
+                            TextWrapping="Wrap"/>
+            </StackPanel>
+        </Border>
+
+        <Border
+            VerticalAlignment="Top"
+            Margin="0,0,0,5"
+            Grid.Row="1">
+            <Viewbox
+                Margin="0,0,286,0"
+                Height="10"
+                Width="20">
+                <Path Data="M0,0L1,1L2,0z" Fill="Black"/>
+            </Viewbox>
+        </Border>
+    </Grid> 
+</UserControl>

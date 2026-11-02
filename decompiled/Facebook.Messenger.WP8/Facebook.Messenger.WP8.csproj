@@ -1,0 +1,320 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <AssemblyName>Facebook.Messenger.WP8</AssemblyName>
+    <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
+    <TargetFramework>wp81</TargetFramework>
+  </PropertyGroup>
+  <PropertyGroup>
+    <LangVersion>14.0</LangVersion>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+  </PropertyGroup>
+  <PropertyGroup />
+  <ItemGroup>
+    <Resource Remove="app.xaml" />
+    <Resource Remove="controls\activeuserscontrol.xaml" />
+    <Resource Remove="controls\activeuserslistcontrol.xaml" />
+    <Resource Remove="controls\adminmessagecontrol.xaml" />
+    <Resource Remove="controls\base\hinttextbox.xaml" />
+    <Resource Remove="controls\cameraview.xaml" />
+    <Resource Remove="controls\common\fullscreenprogressindicator.xaml" />
+    <Resource Remove="controls\common\fullscreenprogressindicatorwithbutton.xaml" />
+    <Resource Remove="controls\common\messagetopbar.xaml" />
+    <Resource Remove="controls\common\stickercontrol.xaml" />
+    <Resource Remove="controls\contactlistusercontrol.xaml" />
+    <Resource Remove="controls\contacts\contactcardpopup.xaml" />
+    <Resource Remove="controls\contacts\contactphoneusercontrol.xaml" />
+    <Resource Remove="controls\contacts\foundcontactspopup.xaml" />
+    <Resource Remove="controls\contactusercontrol.xaml" />
+    <Resource Remove="controls\debugging\coloredconnectionbanner.xaml" />
+    <Resource Remove="controls\debugging\logpopup.xaml" />
+    <Resource Remove="controls\drawercontainer.xaml" />
+    <Resource Remove="controls\dropshadowtextbox.xaml" />
+    <Resource Remove="controls\facemash.xaml" />
+    <Resource Remove="controls\fbmessengerprogressbar.xaml" />
+    <Resource Remove="controls\gallerydrawer.xaml" />
+    <Resource Remove="controls\genericfileattachmentscontrol.xaml" />
+    <Resource Remove="controls\groupsnuxcontrol.xaml" />
+    <Resource Remove="controls\groups\groupnuxelement.xaml" />
+    <Resource Remove="controls\grouptilecontrol.xaml" />
+    <Resource Remove="controls\imageattachmentscontrol.xaml" />
+    <Resource Remove="controls\imagebutton.xaml" />
+    <Resource Remove="controls\imagedrawer.xaml" />
+    <Resource Remove="controls\imagedraweritem.xaml" />
+    <Resource Remove="controls\imagesearchdrawer.xaml" />
+    <Resource Remove="controls\internalsettingsaudiocontrol.xaml" />
+    <Resource Remove="controls\internal\audiolevels.xaml" />
+    <Resource Remove="controls\internal\builddetails.xaml" />
+    <Resource Remove="controls\internal\diskdetails.xaml" />
+    <Resource Remove="controls\internal\networkdetails.xaml" />
+    <Resource Remove="controls\internal\syncprotocol.xaml" />
+    <Resource Remove="controls\locationdrawer.xaml" />
+    <Resource Remove="controls\locationnuxcontrol.xaml" />
+    <Resource Remove="controls\login\loginbutton.xaml" />
+    <Resource Remove="controls\mainpanorama\switchchatpopup.xaml" />
+    <Resource Remove="controls\messagebubblecontrol.xaml" />
+    <Resource Remove="controls\messagecomposerbubble.xaml" />
+    <Resource Remove="controls\messagecontrol.xaml" />
+    <Resource Remove="controls\messagedetailcontrol.xaml" />
+    <Resource Remove="controls\messagesharecontrol.xaml" />
+    <Resource Remove="controls\messages\imageuploadattachmentcontrol.xaml" />
+    <Resource Remove="controls\messages\imageuploadattachmentitem.xaml" />
+    <Resource Remove="controls\messages\token.xaml" />
+    <Resource Remove="controls\messages\videouploadoverlay.xaml" />
+    <Resource Remove="controls\notificationdrawer.xaml" />
+    <Resource Remove="controls\peopleusercontrol..xaml" />
+    <Resource Remove="controls\photoattachmentpopup.xaml" />
+    <Resource Remove="controls\photos\colorpickeroverlay.xaml" />
+    <Resource Remove="controls\photos\drawingoverlay.xaml" />
+    <Resource Remove="controls\photos\photocroppingpopup.xaml" />
+    <Resource Remove="controls\photos\photodrawingpopup.xaml" />
+    <Resource Remove="controls\pinnedthreadgridview.xaml" />
+    <Resource Remove="controls\pinnedthreadscontrol.xaml" />
+    <Resource Remove="controls\profileindicatorcontrol.xaml" />
+    <Resource Remove="controls\rageshakecontrol.xaml" />
+    <Resource Remove="controls\recentthreadsusercontrol.xaml" />
+    <Resource Remove="controls\roundimagecontrol.xaml" />
+    <Resource Remove="controls\searchoverlay.xaml" />
+    <Resource Remove="controls\searchresultcontrol.xaml" />
+    <Resource Remove="controls\seenheadscontrol.xaml" />
+    <Resource Remove="controls\stateindicatingprogressbar.xaml" />
+    <Resource Remove="controls\stickers\stickerdrawer.xaml" />
+    <Resource Remove="controls\stickers\stickerpackitemcontrol.xaml" />
+    <Resource Remove="controls\stickers\stickerpacklistusercontrol.xaml" />
+    <Resource Remove="controls\stickers\stickerselector.xaml" />
+    <Resource Remove="controls\threadcontrol.xaml" />
+    <Resource Remove="controls\threadparticipantcontrol.xaml" />
+    <Resource Remove="controls\typingindicator.xaml" />
+    <Resource Remove="controls\usertile.xaml" />
+    <Resource Remove="controls\videoattachmentcontrol.xaml" />
+    <Resource Remove="controls\viewfinderdrawer.xaml" />
+    <Resource Remove="controls\voiceclipattachment.xaml" />
+    <Resource Remove="controls\voiceclipdrawer.xaml" />
+    <Resource Remove="converters\converters.xaml" />
+    <Resource Remove="pages\addcontactpage.xaml" />
+    <Resource Remove="pages\addprofilepicpage.xaml" />
+    <Resource Remove="pages\addusertogroup.xaml" />
+    <Resource Remove="pages\canonicalthreaddetailspage.xaml" />
+    <Resource Remove="pages\composerbarpage.xaml" />
+    <Resource Remove="pages\existinguserpage.xaml" />
+    <Resource Remove="pages\firstlaunchpage.xaml" />
+    <Resource Remove="pages\forwardingpage.xaml" />
+    <Resource Remove="pages\groupcomposeradduserspage.xaml" />
+    <Resource Remove="pages\groupcomposerpage.xaml" />
+    <Resource Remove="pages\groupdetailspage.xaml" />
+    <Resource Remove="pages\internalsettingspage.xaml" />
+    <Resource Remove="pages\loginapprovalpage.xaml" />
+    <Resource Remove="pages\loginpage.xaml" />
+    <Resource Remove="pages\longmessagedetailspage.xaml" />
+    <Resource Remove="pages\messagedetailspage.xaml" />
+    <Resource Remove="pages\messengermainpage.xaml" />
+    <Resource Remove="pages\muteselectionpage.xaml" />
+    <Resource Remove="pages\nameconversationpage.xaml" />
+    <Resource Remove="pages\newuserregistrationpage.xaml" />
+    <Resource Remove="pages\nuxonmessengerpage.xaml" />
+    <Resource Remove="pages\phonenumberpage.xaml" />
+    <Resource Remove="pages\phonenumberregistrationpage.xaml" />
+    <Resource Remove="pages\photoattachmentspage.xaml" />
+    <Resource Remove="pages\profilepicconfirmationpage.xaml" />
+    <Resource Remove="pages\reportpage.xaml" />
+    <Resource Remove="pages\settingspage.xaml" />
+    <Resource Remove="pages\stickerstorepackpage.xaml" />
+    <Resource Remove="pages\stickerstorepage.xaml" />
+    <Resource Remove="pages\suggestedpinspage.xaml" />
+    <Resource Remove="pages\synccontactspage.xaml" />
+    <Resource Remove="pages\threadpage.xaml" />
+    <Resource Remove="pages\verifyphonenumberpage.xaml" />
+    <Resource Remove="pages\webviewpage.xaml" />
+    <Resource Remove="styles\facebookmessengerstyles.xaml" />
+    <Resource Remove="styles\loginstyles.xaml" />
+    <Resource Remove="themes\generic.xaml" />
+    <Resource Remove="views\externallaunch.xaml" />
+    <Resource Remove="views\home.xaml" />
+    <Resource Include="app.xaml" LogicalName="app.xaml" />
+    <Resource Include="controls\activeuserscontrol.xaml" LogicalName="controls/activeuserscontrol.xaml" />
+    <Resource Include="controls\activeuserslistcontrol.xaml" LogicalName="controls/activeuserslistcontrol.xaml" />
+    <Resource Include="controls\adminmessagecontrol.xaml" LogicalName="controls/adminmessagecontrol.xaml" />
+    <Resource Include="controls\base\hinttextbox.xaml" LogicalName="controls/base/hinttextbox.xaml" />
+    <Resource Include="controls\cameraview.xaml" LogicalName="controls/cameraview.xaml" />
+    <Resource Include="controls\common\fullscreenprogressindicator.xaml" LogicalName="controls/common/fullscreenprogressindicator.xaml" />
+    <Resource Include="controls\common\fullscreenprogressindicatorwithbutton.xaml" LogicalName="controls/common/fullscreenprogressindicatorwithbutton.xaml" />
+    <Resource Include="controls\common\messagetopbar.xaml" LogicalName="controls/common/messagetopbar.xaml" />
+    <Resource Include="controls\common\stickercontrol.xaml" LogicalName="controls/common/stickercontrol.xaml" />
+    <Resource Include="controls\contactlistusercontrol.xaml" LogicalName="controls/contactlistusercontrol.xaml" />
+    <Resource Include="controls\contacts\contactcardpopup.xaml" LogicalName="controls/contacts/contactcardpopup.xaml" />
+    <Resource Include="controls\contacts\contactphoneusercontrol.xaml" LogicalName="controls/contacts/contactphoneusercontrol.xaml" />
+    <Resource Include="controls\contacts\foundcontactspopup.xaml" LogicalName="controls/contacts/foundcontactspopup.xaml" />
+    <Resource Include="controls\contactusercontrol.xaml" LogicalName="controls/contactusercontrol.xaml" />
+    <Resource Include="controls\debugging\coloredconnectionbanner.xaml" LogicalName="controls/debugging/coloredconnectionbanner.xaml" />
+    <Resource Include="controls\debugging\logpopup.xaml" LogicalName="controls/debugging/logpopup.xaml" />
+    <Resource Include="controls\drawercontainer.xaml" LogicalName="controls/drawercontainer.xaml" />
+    <Resource Include="controls\dropshadowtextbox.xaml" LogicalName="controls/dropshadowtextbox.xaml" />
+    <Resource Include="controls\facemash.xaml" LogicalName="controls/facemash.xaml" />
+    <Resource Include="controls\fbmessengerprogressbar.xaml" LogicalName="controls/fbmessengerprogressbar.xaml" />
+    <Resource Include="controls\gallerydrawer.xaml" LogicalName="controls/gallerydrawer.xaml" />
+    <Resource Include="controls\genericfileattachmentscontrol.xaml" LogicalName="controls/genericfileattachmentscontrol.xaml" />
+    <Resource Include="controls\groupsnuxcontrol.xaml" LogicalName="controls/groupsnuxcontrol.xaml" />
+    <Resource Include="controls\groups\groupnuxelement.xaml" LogicalName="controls/groups/groupnuxelement.xaml" />
+    <Resource Include="controls\grouptilecontrol.xaml" LogicalName="controls/grouptilecontrol.xaml" />
+    <Resource Include="controls\imageattachmentscontrol.xaml" LogicalName="controls/imageattachmentscontrol.xaml" />
+    <Resource Include="controls\imagebutton.xaml" LogicalName="controls/imagebutton.xaml" />
+    <Resource Include="controls\imagedrawer.xaml" LogicalName="controls/imagedrawer.xaml" />
+    <Resource Include="controls\imagedraweritem.xaml" LogicalName="controls/imagedraweritem.xaml" />
+    <Resource Include="controls\imagesearchdrawer.xaml" LogicalName="controls/imagesearchdrawer.xaml" />
+    <Resource Include="controls\internalsettingsaudiocontrol.xaml" LogicalName="controls/internalsettingsaudiocontrol.xaml" />
+    <Resource Include="controls\internal\audiolevels.xaml" LogicalName="controls/internal/audiolevels.xaml" />
+    <Resource Include="controls\internal\builddetails.xaml" LogicalName="controls/internal/builddetails.xaml" />
+    <Resource Include="controls\internal\diskdetails.xaml" LogicalName="controls/internal/diskdetails.xaml" />
+    <Resource Include="controls\internal\networkdetails.xaml" LogicalName="controls/internal/networkdetails.xaml" />
+    <Resource Include="controls\internal\syncprotocol.xaml" LogicalName="controls/internal/syncprotocol.xaml" />
+    <Resource Include="controls\locationdrawer.xaml" LogicalName="controls/locationdrawer.xaml" />
+    <Resource Include="controls\locationnuxcontrol.xaml" LogicalName="controls/locationnuxcontrol.xaml" />
+    <Resource Include="controls\login\loginbutton.xaml" LogicalName="controls/login/loginbutton.xaml" />
+    <Resource Include="controls\mainpanorama\switchchatpopup.xaml" LogicalName="controls/mainpanorama/switchchatpopup.xaml" />
+    <Resource Include="controls\messagebubblecontrol.xaml" LogicalName="controls/messagebubblecontrol.xaml" />
+    <Resource Include="controls\messagecomposerbubble.xaml" LogicalName="controls/messagecomposerbubble.xaml" />
+    <Resource Include="controls\messagecontrol.xaml" LogicalName="controls/messagecontrol.xaml" />
+    <Resource Include="controls\messagedetailcontrol.xaml" LogicalName="controls/messagedetailcontrol.xaml" />
+    <Resource Include="controls\messagesharecontrol.xaml" LogicalName="controls/messagesharecontrol.xaml" />
+    <Resource Include="controls\messages\imageuploadattachmentcontrol.xaml" LogicalName="controls/messages/imageuploadattachmentcontrol.xaml" />
+    <Resource Include="controls\messages\imageuploadattachmentitem.xaml" LogicalName="controls/messages/imageuploadattachmentitem.xaml" />
+    <Resource Include="controls\messages\token.xaml" LogicalName="controls/messages/token.xaml" />
+    <Resource Include="controls\messages\videouploadoverlay.xaml" LogicalName="controls/messages/videouploadoverlay.xaml" />
+    <Resource Include="controls\notificationdrawer.xaml" LogicalName="controls/notificationdrawer.xaml" />
+    <Resource Include="controls\peopleusercontrol..xaml" LogicalName="controls/peopleusercontrol..xaml" />
+    <Resource Include="controls\photoattachmentpopup.xaml" LogicalName="controls/photoattachmentpopup.xaml" />
+    <Resource Include="controls\photos\colorpickeroverlay.xaml" LogicalName="controls/photos/colorpickeroverlay.xaml" />
+    <Resource Include="controls\photos\drawingoverlay.xaml" LogicalName="controls/photos/drawingoverlay.xaml" />
+    <Resource Include="controls\photos\photocroppingpopup.xaml" LogicalName="controls/photos/photocroppingpopup.xaml" />
+    <Resource Include="controls\photos\photodrawingpopup.xaml" LogicalName="controls/photos/photodrawingpopup.xaml" />
+    <Resource Include="controls\pinnedthreadgridview.xaml" LogicalName="controls/pinnedthreadgridview.xaml" />
+    <Resource Include="controls\pinnedthreadscontrol.xaml" LogicalName="controls/pinnedthreadscontrol.xaml" />
+    <Resource Include="controls\profileindicatorcontrol.xaml" LogicalName="controls/profileindicatorcontrol.xaml" />
+    <Resource Include="controls\rageshakecontrol.xaml" LogicalName="controls/rageshakecontrol.xaml" />
+    <Resource Include="controls\recentthreadsusercontrol.xaml" LogicalName="controls/recentthreadsusercontrol.xaml" />
+    <Resource Include="controls\roundimagecontrol.xaml" LogicalName="controls/roundimagecontrol.xaml" />
+    <Resource Include="controls\searchoverlay.xaml" LogicalName="controls/searchoverlay.xaml" />
+    <Resource Include="controls\searchresultcontrol.xaml" LogicalName="controls/searchresultcontrol.xaml" />
+    <Resource Include="controls\seenheadscontrol.xaml" LogicalName="controls/seenheadscontrol.xaml" />
+    <Resource Include="controls\stateindicatingprogressbar.xaml" LogicalName="controls/stateindicatingprogressbar.xaml" />
+    <Resource Include="controls\stickers\stickerdrawer.xaml" LogicalName="controls/stickers/stickerdrawer.xaml" />
+    <Resource Include="controls\stickers\stickerpackitemcontrol.xaml" LogicalName="controls/stickers/stickerpackitemcontrol.xaml" />
+    <Resource Include="controls\stickers\stickerpacklistusercontrol.xaml" LogicalName="controls/stickers/stickerpacklistusercontrol.xaml" />
+    <Resource Include="controls\stickers\stickerselector.xaml" LogicalName="controls/stickers/stickerselector.xaml" />
+    <Resource Include="controls\threadcontrol.xaml" LogicalName="controls/threadcontrol.xaml" />
+    <Resource Include="controls\threadparticipantcontrol.xaml" LogicalName="controls/threadparticipantcontrol.xaml" />
+    <Resource Include="controls\typingindicator.xaml" LogicalName="controls/typingindicator.xaml" />
+    <Resource Include="controls\usertile.xaml" LogicalName="controls/usertile.xaml" />
+    <Resource Include="controls\videoattachmentcontrol.xaml" LogicalName="controls/videoattachmentcontrol.xaml" />
+    <Resource Include="controls\viewfinderdrawer.xaml" LogicalName="controls/viewfinderdrawer.xaml" />
+    <Resource Include="controls\voiceclipattachment.xaml" LogicalName="controls/voiceclipattachment.xaml" />
+    <Resource Include="controls\voiceclipdrawer.xaml" LogicalName="controls/voiceclipdrawer.xaml" />
+    <Resource Include="converters\converters.xaml" LogicalName="converters/converters.xaml" />
+    <Resource Include="pages\addcontactpage.xaml" LogicalName="pages/addcontactpage.xaml" />
+    <Resource Include="pages\addprofilepicpage.xaml" LogicalName="pages/addprofilepicpage.xaml" />
+    <Resource Include="pages\addusertogroup.xaml" LogicalName="pages/addusertogroup.xaml" />
+    <Resource Include="pages\canonicalthreaddetailspage.xaml" LogicalName="pages/canonicalthreaddetailspage.xaml" />
+    <Resource Include="pages\composerbarpage.xaml" LogicalName="pages/composerbarpage.xaml" />
+    <Resource Include="pages\existinguserpage.xaml" LogicalName="pages/existinguserpage.xaml" />
+    <Resource Include="pages\firstlaunchpage.xaml" LogicalName="pages/firstlaunchpage.xaml" />
+    <Resource Include="pages\forwardingpage.xaml" LogicalName="pages/forwardingpage.xaml" />
+    <Resource Include="pages\groupcomposeradduserspage.xaml" LogicalName="pages/groupcomposeradduserspage.xaml" />
+    <Resource Include="pages\groupcomposerpage.xaml" LogicalName="pages/groupcomposerpage.xaml" />
+    <Resource Include="pages\groupdetailspage.xaml" LogicalName="pages/groupdetailspage.xaml" />
+    <Resource Include="pages\internalsettingspage.xaml" LogicalName="pages/internalsettingspage.xaml" />
+    <Resource Include="pages\loginapprovalpage.xaml" LogicalName="pages/loginapprovalpage.xaml" />
+    <Resource Include="pages\loginpage.xaml" LogicalName="pages/loginpage.xaml" />
+    <Resource Include="pages\longmessagedetailspage.xaml" LogicalName="pages/longmessagedetailspage.xaml" />
+    <Resource Include="pages\messagedetailspage.xaml" LogicalName="pages/messagedetailspage.xaml" />
+    <Resource Include="pages\messengermainpage.xaml" LogicalName="pages/messengermainpage.xaml" />
+    <Resource Include="pages\muteselectionpage.xaml" LogicalName="pages/muteselectionpage.xaml" />
+    <Resource Include="pages\nameconversationpage.xaml" LogicalName="pages/nameconversationpage.xaml" />
+    <Resource Include="pages\newuserregistrationpage.xaml" LogicalName="pages/newuserregistrationpage.xaml" />
+    <Resource Include="pages\nuxonmessengerpage.xaml" LogicalName="pages/nuxonmessengerpage.xaml" />
+    <Resource Include="pages\phonenumberpage.xaml" LogicalName="pages/phonenumberpage.xaml" />
+    <Resource Include="pages\phonenumberregistrationpage.xaml" LogicalName="pages/phonenumberregistrationpage.xaml" />
+    <Resource Include="pages\photoattachmentspage.xaml" LogicalName="pages/photoattachmentspage.xaml" />
+    <Resource Include="pages\profilepicconfirmationpage.xaml" LogicalName="pages/profilepicconfirmationpage.xaml" />
+    <Resource Include="pages\reportpage.xaml" LogicalName="pages/reportpage.xaml" />
+    <Resource Include="pages\settingspage.xaml" LogicalName="pages/settingspage.xaml" />
+    <Resource Include="pages\stickerstorepackpage.xaml" LogicalName="pages/stickerstorepackpage.xaml" />
+    <Resource Include="pages\stickerstorepage.xaml" LogicalName="pages/stickerstorepage.xaml" />
+    <Resource Include="pages\suggestedpinspage.xaml" LogicalName="pages/suggestedpinspage.xaml" />
+    <Resource Include="pages\synccontactspage.xaml" LogicalName="pages/synccontactspage.xaml" />
+    <Resource Include="pages\threadpage.xaml" LogicalName="pages/threadpage.xaml" />
+    <Resource Include="pages\verifyphonenumberpage.xaml" LogicalName="pages/verifyphonenumberpage.xaml" />
+    <Resource Include="pages\webviewpage.xaml" LogicalName="pages/webviewpage.xaml" />
+    <Resource Include="styles\facebookmessengerstyles.xaml" LogicalName="styles/facebookmessengerstyles.xaml" />
+    <Resource Include="styles\loginstyles.xaml" LogicalName="styles/loginstyles.xaml" />
+    <Resource Include="themes\generic.xaml" LogicalName="themes/generic.xaml" />
+    <Resource Include="views\externallaunch.xaml" LogicalName="views/externallaunch.xaml" />
+    <Resource Include="views\home.xaml" LogicalName="views/home.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Windows">
+      <HintPath>..\..\..\..\..\..\WINDOWS\Microsoft.NET\Framework64\v4.0.30319\System.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Phone" />
+    <Reference Include="Facebook-Services">
+      <HintPath>extracted/Facebook-Services.dll</HintPath>
+    </Reference>
+    <Reference Include="Facebook-Models">
+      <HintPath>extracted/Facebook-Models.dll</HintPath>
+    </Reference>
+    <Reference Include="Facebook-Base">
+      <HintPath>extracted/Facebook-Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Phone.Controls.Toolkit">
+      <HintPath>extracted/Microsoft.Phone.Controls.Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="GalaSoft.MvvmLight">
+      <HintPath>extracted/GalaSoft.MvvmLight.dll</HintPath>
+    </Reference>
+    <Reference Include="Facebook-Messenger-WP8-Base">
+      <HintPath>extracted/Facebook-Messenger-WP8-Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework" />
+    <Reference Include="System.Runtime.WindowsRuntime" />
+    <Reference Include="Windows" />
+    <Reference Include="System.Net.Http">
+      <HintPath>extracted/System.Net.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Phone.Maps" />
+    <Reference Include="System.Device">
+      <HintPath>..\..\..\..\..\..\WINDOWS\Microsoft.NET\Framework64\v4.0.30319\System.Device.dll</HintPath>
+    </Reference>
+    <Reference Include="Facebook-Messenger-Localization">
+      <HintPath>extracted/Facebook-Messenger-Localization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Devices.Sensors" />
+    <Reference Include="System.Core">
+      <HintPath>..\..\..\..\..\..\WINDOWS\Microsoft.NET\Framework64\v4.0.30319\System.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net">
+      <HintPath>..\..\..\..\..\..\WINDOWS\Microsoft.NET\Framework64\v4.0.30319\System.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.PhoneNumbers">
+      <HintPath>extracted/Google.PhoneNumbers.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.MediaLibraryExtensions" />
+    <Reference Include="Microsoft.Practices.ServiceLocation">
+      <HintPath>extracted/Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="JeffWilcox.PhoneThemeManager">
+      <HintPath>extracted/JeffWilcox.PhoneThemeManager.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization">
+      <HintPath>..\..\..\..\..\..\WINDOWS\Microsoft.NET\Framework64\v4.0.30319\System.Runtime.Serialization.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>extracted/Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WriteableBitmapExWinPhone">
+      <HintPath>extracted/WriteableBitmapExWinPhone.dll</HintPath>
+    </Reference>
+    <Reference Include="ExifLib">
+      <HintPath>extracted/ExifLib.dll</HintPath>
+    </Reference>
+    <Reference Include="WebP" />
+  </ItemGroup>
+</Project>

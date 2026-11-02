@@ -1,0 +1,47 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <AssemblyName>Facebook-Messenger-WP8-Base</AssemblyName>
+    <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
+    <TargetFramework>wp8</TargetFramework>
+  </PropertyGroup>
+  <PropertyGroup>
+    <LangVersion>14.0</LangVersion>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+  </PropertyGroup>
+  <PropertyGroup />
+  <ItemGroup />
+  <ItemGroup>
+    <Reference Include="Facebook-Base">
+      <HintPath>extracted/Facebook-Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Facebook-Services">
+      <HintPath>extracted/Facebook-Services.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation">
+      <HintPath>extracted/Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="Facebook-Models">
+      <HintPath>extracted/Facebook-Models.dll</HintPath>
+    </Reference>
+    <Reference Include="Windows" />
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>extracted/Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows">
+      <HintPath>..\..\..\..\..\..\WINDOWS\Microsoft.NET\Framework64\v4.0.30319\System.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Phone" />
+    <Reference Include="System.Runtime.WindowsRuntime" />
+    <Reference Include="System.Core">
+      <HintPath>..\..\..\..\..\..\WINDOWS\Microsoft.NET\Framework64\v4.0.30319\System.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Facebook-Messenger-Localization">
+      <HintPath>extracted/Facebook-Messenger-Localization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <HintPath>..\..\..\..\..\..\WINDOWS\Microsoft.NET\Framework64\v4.0.30319\System.Xml.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="mscorlib.Extensions" />
+  </ItemGroup>
+</Project>

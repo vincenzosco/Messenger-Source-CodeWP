@@ -1,0 +1,71 @@
+﻿<UserControl x:Class="Facebook.Messenger.WP8.Controls.Photos.ColorPickerOverlay"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    d:DesignHeight="480" d:DesignWidth="480">
+    
+    <Grid>
+        <Grid
+            x:Name="ColorPickerGrid"
+            
+            VerticalAlignment="Stretch"
+            HorizontalAlignment="Right">
+
+            <Rectangle
+                Width ="66" 
+                VerticalAlignment="Stretch"
+                ManipulationStarted="ColorPicker_OnManipulationStarted"
+                ManipulationDelta="ColorPicker_OnManipulationDelta"
+                ManipulationCompleted="ColorPicker_OnManipulationCompleted"
+                Fill="Transparent"/>
+
+            <Rectangle
+                x:Name="ColorPicker"
+                Width="10"
+                HorizontalAlignment="Right"
+                IsHitTestVisible="False">
+
+                <Rectangle.Fill>
+                    <ImageBrush
+                        ImageSource="/Assets/Camera/ColorBar.png" 
+                        Stretch="Fill"/>
+                </Rectangle.Fill>
+            </Rectangle>
+
+        </Grid>
+
+        <Canvas
+            IsHitTestVisible="False"
+            x:Name="IndicatorCanvas">
+
+            <Grid
+                x:Name="ColorIndicator" 
+                Visibility="Collapsed"
+                CacheMode="BitmapCache">
+
+                <Image
+                    x:Name="ColorScrubberImage"
+                    Source="/Assets/Camera/ColorScrubber.png"
+                    Width="56"
+                    Height="48"/>
+
+                <Ellipse
+                    x:Name="ChosenColor"
+                    Margin="-12, 0, 0, 0"
+                    Width="{Binding BrushThickness}"
+                    Height="{Binding BrushThickness}"/>
+
+                <Grid.RenderTransform>
+                    <TranslateTransform x:Name="ColorIndicatorTranslateTransform"/>
+                </Grid.RenderTransform>
+
+            </Grid>
+
+        </Canvas>
+    </Grid>
+</UserControl>

@@ -1,0 +1,106 @@
+﻿<pages:GroupDetailsViewModelPage
+    x:Class="Facebook.Messenger.WP8.Pages.GroupDetailsPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:pages="clr-namespace:Facebook.Messenger.WP8.Pages"
+    xmlns:controls="clr-namespace:Facebook.Messenger.WP8.Controls"
+    xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:base="clr-namespace:Facebook.Messenger.WP8.Controls.Base"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d"
+    BackKeyPress="OnBackKeyPress">
+
+    <Grid x:Name="LayoutRoot">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <TextBlock 
+            Text="{Binding StringLibrary.GroupDetailsPage_Title, Source={StaticResource LocalizedStrings}}"
+            Grid.Row ="0"
+            Margin="22,0,0,8"
+            FontSize="66"
+            CharacterSpacing="-20"
+            FontFamily="{StaticResource PhoneFontFamilySemiLight}"
+            Foreground="{StaticResource MessengerBlackBrush}"/>
+        <base:FacebookListView 
+            Grid.Row="1"
+            x:Name="ContactList"
+            ItemsSource="{Binding Members}"
+            Margin="22,0">
+            <base:FacebookListView.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <controls:ContactUserControl
+                            NameFontSize="{StaticResource PhoneFontSizeLarge}"
+                            ImageSize="62"
+                            Tap="OnPersonTapped"
+                            AllowSelection="False"/>
+                        <toolkit:ContextMenuService.ContextMenu>
+                            <toolkit:ContextMenu 
+                                Style="{StaticResource ContextMenuStyle}"
+                                Unloaded="ContextMenu_OnUnloaded">
+                                <toolkit:MenuItem 
+                                    x:Name="Remove" 
+                                    Header="{Binding StringLibrary.GroupMember_Context_Menu_Remove_Member, Source={StaticResource LocalizedStrings}}"
+                                    Click="OnRemoveMemberClicked" />
+                            </toolkit:ContextMenu>
+                        </toolkit:ContextMenuService.ContextMenu>
+                    </Grid>
+                </DataTemplate>
+            </base:FacebookListView.ItemTemplate>
+            <base:FacebookListView.ListHeader>
+                <StackPanel
+                    Background="Transparent"
+                    Margin="0,18">
+                    <StackPanel x:Name="RootPanel">
+                        <Grid
+                            VerticalAlignment="Top"
+                            Margin="0,20,0,0">
+                            <Button
+                                x:Name="FaceMashButton"
+                                toolkit:TiltEffect.IsTiltEnabled="True"
+                                Tap="ThreadImage_OnTapped"
+                                Style="{StaticResource BareTiltButton}">
+                                <controls:FaceMash
+                                    x:Name="FaceMash"
+                                    Height="160"
+                                    Width="160"
+                                    DataContext="{Binding Thread}"/>
+                            </Button>
+                        </Grid>
+                        <Button
+                            x:Name="ThreadNameButton"
+                            HorizontalAlignment="Center"
+                            Margin="0,5,0,5"
+                            Style="{StaticResource BareButton}"
+                            toolkit:TiltEffect.IsTiltEnabled="True"
+                            FontSize="37"
+                            FontFamily="{StaticResource PhoneFontFamilySemiLight}"
+                            Click="ThreadNameButton_OnClick"/>
+                    </StackPanel>
+                </StackPanel>
+            </base:FacebookListView.ListHeader>
+        </base:FacebookListView>
+
+        <controls:FBMessengerProgressBar
+            x:Name="BusyIndicator"
+            Height="10"
+            VerticalAlignment="Top"
+            IsIndeterminate="{Binding IsLoading}"
+            Visibility="{Binding IsLoading, Converter={StaticResource BoolToVisibilityConverter}}"/>
+    </Grid>
+
+    <phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar 
+            ForegroundColor="{StaticResource MessengerAppBarWhite}"
+            BackgroundColor="{StaticResource MessengerBlue}"/>
+    </phone:PhoneApplicationPage.ApplicationBar>
+</pages:GroupDetailsViewModelPage>

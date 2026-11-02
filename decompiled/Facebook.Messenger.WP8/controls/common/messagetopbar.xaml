@@ -1,0 +1,79 @@
+﻿<base:BaseControl x:Class="Facebook.Messenger.WP8.Controls.Common.MessageTopBar"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:base="clr-namespace:Facebook.Messenger.WP8.Controls.Base"
+    xmlns:extensions="clr-namespace:Facebook.Messenger.WP8.Extensions"
+    xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+    mc:Ignorable="d"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    d:DesignHeight="480" d:DesignWidth="480"
+    x:Name="TopBar">
+    
+    <Grid HorizontalAlignment="Stretch">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel
+            x:Name="CanonicalStackPanel"
+            Orientation="Horizontal"
+            Grid.Row="0"
+            HorizontalAlignment="Left">
+
+            <TextBlock
+                Text ="{Binding StringLibrary.Messages_On_Messenger, Source={StaticResource LocalizedStrings}, Converter={StaticResource StringAllCapsConverter}}"
+                x:Name="MessengerOriginTextBlock"
+                Foreground="Black"
+                FontSize="22"
+                Visibility="Collapsed"/>
+
+            <TextBlock
+                Text ="{Binding StringLibrary.Messages_On_Facebook, Source={StaticResource LocalizedStrings}, Converter={StaticResource StringAllCapsConverter}}"
+                x:Name="FacebookOriginTextBlock"
+                Foreground="Black"
+                FontSize="22"
+                Visibility="Collapsed"/>
+
+            <Image
+                Source ="/Assets/Messages/lastActiveDotIcon.png"
+                Height ="10"
+                Width ="10"
+                Visibility="{Binding LastActiveText, Converter={StaticResource StringLengthToVisibilityConverter}}"
+                Margin="5,0"/>
+
+            <TextBlock
+                x:Name="ChatStatus"
+                Text="{Binding LastActiveText, Converter={StaticResource StringAllCapsConverter}}"
+                Visibility="{Binding HasLastActive, Converter={StaticResource BoolToVisibilityConverter}}"
+                Foreground="{StaticResource MessengerTextLightGreyBrush}"
+                FontSize="22"/>
+        </StackPanel>
+        
+        <TextBlock
+            x:Name="GroupTextBlock"
+            Grid.Row="0"
+            Text="{Binding StringLibrary.Messages_Group_Message , Source={StaticResource LocalizedStrings}, Converter={StaticResource StringAllCapsConverter}}"
+            Foreground="{StaticResource MessengerTextLightGreyBrush}"
+            FontSize="22"
+            Visibility="Collapsed"/>
+
+        <Button
+            Grid.Row="1"
+            Style="{StaticResource BareButton}"
+            toolkit:TiltEffect.IsTiltEnabled="{Binding ElementName=TopBar, Path=TiltEnabled}"
+            HorizontalAlignment="Left">
+            <TextBlock
+                x:Name="ChatName"
+                TextAlignment="Left"
+                TextWrapping="NoWrap"
+                FontSize="56"
+                FontFamily="{StaticResource PhoneFontFamilyNormal}"
+                CharacterSpacing="-10"/>
+        </Button>
+    </Grid>
+</base:BaseControl>

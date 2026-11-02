@@ -1,0 +1,513 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{1B693ECB-2045-4081-A6AA-5EEA8B934585}</ProjectGuid>
+    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <OutputType>Library</OutputType>
+    <LangVersion>14.0</LangVersion>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <AssemblyName>Facebook-Services</AssemblyName>
+    <TargetFrameworkIdentifier>.NETPortable</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Profile78</TargetFrameworkProfile>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System.Runtime" />
+    <Reference Include="Facebook-Base">
+      <HintPath>extracted\Facebook-Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>extracted\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Collections" />
+    <Reference Include="System.Threading.Tasks" />
+    <Reference Include="Facebook-Models">
+      <HintPath>extracted\Facebook-Models.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization.Primitives" />
+    <Reference Include="System.Threading" />
+    <Reference Include="System.Net.Http">
+      <HintPath>extracted\System.Net.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Resources.ResourceManager" />
+    <Reference Include="System.Linq" />
+    <Reference Include="System.Diagnostics.Debug" />
+    <Reference Include="GalaSoft.MvvmLight">
+      <HintPath>extracted\GalaSoft.MvvmLight.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation">
+      <HintPath>extracted\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO" />
+    <Reference Include="System.Globalization" />
+    <Reference Include="System.Runtime.Extensions" />
+    <Reference Include="ThriftPortable">
+      <HintPath>extracted\ThriftPortable.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Encoding" />
+    <Reference Include="System.Net.Http.Primitives">
+      <HintPath>extracted\System.Net.Http.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Primitives">
+      <HintPath>C:\WINDOWS\Microsoft.NET\Framework64\v4.0.30319\System.Net.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks">
+      <HintPath>C:\WINDOWS\Microsoft.NET\Framework64\v4.0.30319\System.Threading.Tasks.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Requests">
+      <HintPath>C:\WINDOWS\Microsoft.NET\Framework64\v4.0.30319\System.Net.Requests.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Facebook\Services\Analytics\AddEventRequest.cs" />
+    <Compile Include="Facebook\Services\Analytics\AnalyticsEvent.cs" />
+    <Compile Include="Facebook\Services\Analytics\DataUsageEventCreator.cs" />
+    <Compile Include="Facebook\Services\Analytics\DataUsageTracker.cs" />
+    <Compile Include="Facebook\Services\Analytics\Logging\BackgroundSendingEventLogger.cs" />
+    <Compile Include="Facebook\Services\Analytics\Logging\DataConsumptionLogger.cs" />
+    <Compile Include="Facebook\Services\Analytics\Logging\DataEventRequest.cs" />
+    <Compile Include="Facebook\Services\Analytics\Logging\DataType.cs" />
+    <Compile Include="Facebook\Services\Analytics\Logging\PageNavigationLogger.cs" />
+    <Compile Include="Facebook\Services\Analytics\Logging\SendEventLogger.cs" />
+    <Compile Include="Facebook\Services\Analytics\Service.cs" />
+    <Compile Include="Facebook\Services\Api\ApiConstants.cs" />
+    <Compile Include="Facebook\Services\Api\ApiErrorCodes.cs" />
+    <Compile Include="Facebook\Services\Api\Attributes\BundleAttribute.cs" />
+    <Compile Include="Facebook\Services\Api\AuthCheckFilter.cs" />
+    <Compile Include="Facebook\Services\Api\BackgroundSendingAgentEnabledProvider.cs" />
+    <Compile Include="Facebook\Services\Api\Bundle.cs" />
+    <Compile Include="Facebook\Services\Api\BundleType.cs" />
+    <Compile Include="Facebook\Services\Api\Cache\ActionIdResult.cs" />
+    <Compile Include="Facebook\Services\Api\Cache\AnalyticsCache.cs" />
+    <Compile Include="Facebook\Services\Api\Cache\CachedThreadInfo.cs" />
+    <Compile Include="Facebook\Services\Api\Cache\CacheRequestStateUtil.cs" />
+    <Compile Include="Facebook\Services\Api\Cache\ContactCache.cs" />
+    <Compile Include="Facebook\Services\Api\Cache\ContactCacheData.cs" />
+    <Compile Include="Facebook\Services\Api\Cache\ICache.cs" />
+    <Compile Include="Facebook\Services\Api\Cache\PhoneContactCache.cs" />
+    <Compile Include="Facebook\Services\Api\Cache\SaveCacheUtil.cs" />
+    <Compile Include="Facebook\Services\Api\Cache\SelectorHelper.cs" />
+    <Compile Include="Facebook\Services\Api\Cache\SequenceIdState.cs" />
+    <Compile Include="Facebook\Services\Api\Cache\StickerCacheData.cs" />
+    <Compile Include="Facebook\Services\Api\Cache\StickerPackCache.cs" />
+    <Compile Include="Facebook\Services\Api\Cache\ThreadCache.cs" />
+    <Compile Include="Facebook\Services\Api\Cache\ThreadCachedData.cs" />
+    <Compile Include="Facebook\Services\Api\Cache\ThreadCacheHelper.cs" />
+    <Compile Include="Facebook\Services\Api\ContactSyncFeatureEnabledProvider.cs" />
+    <Compile Include="Facebook\Services\Api\DeltaSentMessageEnabledProvider.cs" />
+    <Compile Include="Facebook\Services\Api\Filter.cs" />
+    <Compile Include="Facebook\Services\Api\FilterChain.cs" />
+    <Compile Include="Facebook\Services\Api\Fql\Common.cs" />
+    <Compile Include="Facebook\Services\Api\Fql\FriendRequests.cs" />
+    <Compile Include="Facebook\Services\Api\Fql\MultiQueryData.cs" />
+    <Compile Include="Facebook\Services\Api\Fql\MultiQueryResponse.cs" />
+    <Compile Include="Facebook\Services\Api\Fql\MultiResponseConverter.cs" />
+    <Compile Include="Facebook\Services\Api\Fql\Notifications.cs" />
+    <Compile Include="Facebook\Services\Api\Fql\ParseUtils.cs" />
+    <Compile Include="Facebook\Services\Api\Fql\UnifiedMessage.cs" />
+    <Compile Include="Facebook\Services\Api\Fql\UnifiedThread.cs" />
+    <Compile Include="Facebook\Services\Api\GatekeeperProvider.cs" />
+    <Compile Include="Facebook\Services\Api\GraphQL\Common.cs" />
+    <Compile Include="Facebook\Services\Api\GraphQL\Constants.cs" />
+    <Compile Include="Facebook\Services\Api\GraphQL\FeedType.cs" />
+    <Compile Include="Facebook\Services\Api\GraphQL\StreamRefreshMode.cs" />
+    <Compile Include="Facebook\Services\Api\GraphQL\ThreadQuery.cs" />
+    <Compile Include="Facebook\Services\Api\IFilter.cs" />
+    <Compile Include="Facebook\Services\Api\IFilterImpl.cs" />
+    <Compile Include="Facebook\Services\Api\IHandler.cs" />
+    <Compile Include="Facebook\Services\Api\LocaleFilter.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\AddContact\Request.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\AddContact\Response.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\AddContact\WebFilter.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\AddPinThread\CacheFilter.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\AddPinThread\Request.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\AddPinThread\Response.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\AddPinThread\WebFilter.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\AddRecentSticker\Request.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\AddStickerPack\CacheFilter.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\AddStickerPack\Request.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\AddStickerPack\WebFilter.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\AddThreadParticipants\CacheFilter.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\AddThreadParticipants\FetchParticipantsResponse.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\AddThreadParticipants\Request.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\AddThreadParticipants\Response.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\AddThreadParticipants\WebFilter.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\BatchGraphResponse.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\BatchGraphResponseConverter.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\BypassLoginWithConfirmedMessengerCredentials\Request.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\BypassLoginWithConfirmedMessengerCredentials\WebFilter.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\ClearThreadPicture\CacheFilter.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\ClearThreadPicture\Request.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\ClearThreadPicture\WebFilter.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\ContactsMessengerSync\Request.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\ContactsMessengerSync\WebFilter.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\CreateGroup\CacheFilter.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\CreateGroup\CreateGroupThreadResponse.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\CreateGroup\Request.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\CreateGroup\Response.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\CreateGroup\WebFilter.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\CreateNewUserAccount\Request.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\CreateNewUserAccount\WebFilter.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\DeleteContact\CacheFilter.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\DeleteContact\Request.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\DeleteContact\Response.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\DeleteContact\WebFilter.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\DeleteMessage\CacheFilter.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\DeleteMessage\Request.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\DeleteMessage\WebFilter.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\DeleteStickerPack\Request.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\DeleteThread\CacheFilter.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\DeleteThread\Request.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\DeleteThread\WebFilter.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\DownloadStickerPack\Request.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\ErrorData.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\FacebookApiError.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\FacebookApiFilter.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\FacebookApiResponse.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\FacebookServiceRequest.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\FetchAppConfig\ClientConfig.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\FetchAppConfig\Data.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\FetchAppConfig\Request.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\FetchAppConfig\Response.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\FetchAppConfig\WebFilter.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\FetchChangedPhoneContacts\CacheFilter.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\FetchChangedPhoneContacts\Request.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\FetchChangedPhoneContacts\Response.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\FetchContactsById\CacheFilter.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\FetchContactsById\ContactSyncConverter.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\FetchContactsById\Request.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\FetchContactsById\Response.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\FetchContactsById\WebFilter.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\FetchFriendLastActive\CacheFilter.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\FetchFriendLastActive\LastActiveParams.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\FetchFriendLastActive\Request.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\FetchFriendLastActive\Response.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\FetchFriendLastActive\WebFilter.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\FetchFriendsOfFriends\FriendsOfFriendsArrayConverter.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\FetchFriendsOfFriends\Request.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\FetchFriendsOfFriends\Response.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\FetchFriendsOfFriends\WebFilter.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\FetchFriends\CacheFilter.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\FetchFriends\Request.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\FetchFriends\Response.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\FetchGatekeeperSettings\Request.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\FetchGatekeeperSettings\Response.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\FetchGatekeeperSettings\WebFilter.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\FetchGroupSearchResults\PinnedId.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\FetchGroupSearchResults\Request.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\FetchGroupSearchResults\Response.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\FetchGroupSearchResults\WebFilter.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\FetchGroupThreads\Request.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\FetchGroupThreads\Response.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\FetchGroupThreads\WebFilter.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\FetchInitialThreadListSyncData\InitialThreadListConverter.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\FetchInitialThreadListSyncData\Request.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\FetchInitialThreadListSyncData\Response.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\FetchInitialThreadListSyncData\WebFilter.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\FetchLocalThreadData\CacheFilter.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\FetchLocalThreadData\Request.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\FetchLocalThreadData\Response.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\FetchMessages\CacheFilter.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\FetchMessages\Request.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\FetchMessages\Response.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\FetchMessages\SendFilter.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\FetchMessages\WebFilter.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\FetchMessage\CacheFilter.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\FetchMessage\Request.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\FetchMessage\Response.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\FetchMessage\WebFilter.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\FetchPinnedThreads\CacheFilter.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\FetchPinnedThreads\Request.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\FetchPinnedThreads\Response.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\FetchPinnedThreads\WebFilter.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\FetchPresence\Request.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\FetchPresence\Response.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\FetchPresence\WebFilter.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\FetchProfile\Request.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\FetchProfile\Response.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\FetchProfile\WebFilter.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\FetchRecentStickers\CacheFilter.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\FetchRecentStickers\Request.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\FetchRecentStickers\Response.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\FetchSearchability\PhoneSearchabilityTypes.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\FetchSearchability\Request.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\FetchSearchability\Response.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\FetchSearchability\WebFilter.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\FetchStickerPackIds\Request.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\FetchStickerPackIds\Response.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\FetchStickerPackIds\StickerPacksIdConverter.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\FetchStickerPackIds\WebFilter.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\FetchStickerPacks\CacheFilter.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\FetchStickerPacks\Request.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\FetchStickerPacks\Response.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\FetchStickerPack\CacheFilter.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\FetchStickerPack\Request.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\FetchStickerPack\Response.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\FetchSticker\Request.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\FetchSticker\Response.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\FetchSticker\StickerConverter.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\FetchSticker\WebFilter.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\FetchThreadsAndMessages\Request.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\FetchThreadsAndMessages\Response.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\FetchThreadsAndMessages\WebFilter.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\FetchThreads\CacheFilter.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\FetchThreads\Request.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\FetchThreads\Response.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\FetchThreads\WebFilter.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\FetchThread\CacheFilter.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\FetchThread\Request.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\FetchThread\Response.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\FetchThread\WebFilter.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\FetchUserById\Request.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\FetchUserById\Response.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\FetchUserById\WebFilter.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\FetchUser\Request.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\FetchUser\Response.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\FetchUser\WebFilter.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\GraphApiRequestObject.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\GraphResponse.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\GraphResponseConverter.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\LeaveThread\CacheFilter.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\LeaveThread\Request.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\LeaveThread\WebFilter.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\Login\AuthFilter.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\Login\AuthResponse.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\Login\Request.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\Login\Response.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\Login\WebFilter.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\MarkInboxSeen\Request.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\MarkInboxSeen\WebFilter.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\MarkMessageFailedById\CacheFilter.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\MarkMessageFailedById\Request.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\MarkMessageFailedById\Response.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\MarkMessagesSent\CacheFilter.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\MarkMessagesSent\Request.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\MarkMessagesSent\Response.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\MarkQueuedMessagesFailed\CacheFilter.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\MarkQueuedMessagesFailed\Request.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\MarkQueuedMessagesFailed\Response.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\MarkThreadState\CacheFilter.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\MarkThreadState\Request.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\MarkThreadState\Response.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\MarkThreadState\WebFilter.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\MediaItemUpload\FbidResponseConverter.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\MediaItemUpload\MediaType.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\MediaItemUpload\Request.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\MediaItemUpload\Response.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\MediaItemUpload\WebFilter.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\NoDataResponseException.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\PhoneNumberConfirmCode\Request.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\PhoneNumberConfirmCode\WebFilter.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\PhoneNumberRegistrationConfirmation\ExistingUserResponse.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\PhoneNumberRegistrationConfirmation\Request.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\PhoneNumberRegistrationConfirmation\WebFilter.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\PhoneNumberRegistration\Request.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\PhoneNumberRegistration\WebFilter.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\PhoneNumber\Request.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\PhoneNumber\WebFilter.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\RegisterPush\Request.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\RegisterPush\WebFilter.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\RemovePhoneContacts\CacheFilter.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\RemovePhoneContacts\Request.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\RemovePhoneContacts\Response.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\RemoveThreadParticipants\CacheFilter.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\RemoveThreadParticipants\Request.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\RemoveThreadParticipants\WebFilter.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\ReportCrash\Request.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\ReportCrash\WebFilter.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\SaveOutgoingMessage\CacheFilter.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\SaveOutgoingMessage\OfflineThreadUtil.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\SaveOutgoingMessage\Response.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\SearchImages\Image.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\SearchImages\ImageSearchResult.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\SearchImages\Query.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\SearchImages\Request.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\SearchImages\Response.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\SearchImages\SearchResponse.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\SearchImages\Thumbnail.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\SearchImages\WebFilter.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\SendAnalyticsEvents\HoneyClientUpload.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\SendAnalyticsEvents\Request.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\SendAnalyticsEvents\Response.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\SendAnalyticsEvents\WebFilter.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\SendFlytrapReport\Info.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\SendFlytrapReport\Request.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\SendFlytrapReport\WebFilter.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\SendMessage\Attachment.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\SendMessage\CacheFilter.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\SendMessage\ExtraFailureReason.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\SendMessage\MediaUploadFilter.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\SendMessage\MqttFilter.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\SendMessage\Request.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\SendMessage\Response.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\SendMessage\WebFilter.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\SetGlobalMute\Request.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\SetGlobalMute\WebFilter.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\SetPinnedThreads\CacheFilter.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\SetPinnedThreads\Request.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\SetPinnedThreads\Response.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\SetPinnedThreads\WebFilter.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\SetStickerTrayPacks\Request.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\SetStickerTrayPacks\WebFilter.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\SetThreadMute\CacheFilter.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\SetThreadMute\Request.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\SetThreadMute\WebFilter.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\SetThreadName\CacheFilter.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\SetThreadName\Request.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\SetThreadName\WebFilter.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\SetThreadPicture\CacheFilter.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\SetThreadPicture\Data.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\SetThreadPicture\Request.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\SetThreadPicture\Response.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\SetThreadPicture\ThreadPictureResponse.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\SetThreadPicture\WebFilter.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\SyncContacts\ContactChange.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\SyncContacts\ContactChangeResult.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\SyncContacts\ContactChangeResultConverter.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\SyncContacts\Request.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\SyncContacts\Response.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\SyncContacts\WebFilter.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\SyncFriends\CacheFilter.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\SyncFriends\Request.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\SyncFriends\Response.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\SyncFriends\WebFilter.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\SyncStickerPacks\CacheFilter.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\SyncStickerPacks\Request.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\SyncStickerPacks\Response.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\SyncStickerPacks\ResponseConverter.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\SyncStickerPacks\StickerPacksResponse.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\SyncStickerPacks\WebFilter.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\ThreadQuery\CacheFilter.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\ThreadQuery\Request.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\ThreadQuery\Response.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\ThreadQuery\ThreadQueryConverter.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\ThreadQuery\WebFilter.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\UnregisterPush\Request.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\UnregisterPush\WebFilter.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\UploadProfilePicture\Request.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\UploadProfilePicture\Response.cs" />
+    <Compile Include="Facebook\Services\Api\Methods\UploadProfilePicture\WebFilter.cs" />
+    <Compile Include="Facebook\Services\Api\QueueAttribute.cs" />
+    <Compile Include="Facebook\Services\Api\QueueType.cs" />
+    <Compile Include="Facebook\Services\Api\Service.cs" />
+    <Compile Include="Facebook\Services\Api\ServiceContext.cs" />
+    <Compile Include="Facebook\Services\Api\StickerDrawerBadgeEnabledProvider.cs" />
+    <Compile Include="Facebook\Services\Api\TerminatingHandler.cs" />
+    <Compile Include="Facebook\Services\Api\UpgradePromptEnabledProvider.cs" />
+    <Compile Include="Facebook\Services\BackgroundService.cs" />
+    <Compile Include="Facebook\Services\BackgroundTransfer\Request.cs" />
+    <Compile Include="Facebook\Services\BackgroundTransfer\Response.cs" />
+    <Compile Include="Facebook\Services\BackgroundTransfer\Service.cs" />
+    <Compile Include="Facebook\Services\Cache\Service.cs" />
+    <Compile Include="Facebook\Services\Common\AddFriendHowFound.cs" />
+    <Compile Include="Facebook\Services\Common\BoolResponse.cs" />
+    <Compile Include="Facebook\Services\Common\BoolResponseConverter.cs" />
+    <Compile Include="Facebook\Services\Common\FriendRequestCommon.cs" />
+    <Compile Include="Facebook\Services\Common\FriendRequestOperation.cs" />
+    <Compile Include="Facebook\Services\Common\JewelCommon.cs" />
+    <Compile Include="Facebook\Services\Common\JewelRequestedEventArgs.cs" />
+    <Compile Include="Facebook\Services\Common\JewelSyncCompletedEventArgs.cs" />
+    <Compile Include="Facebook\Services\Common\JewelType.cs" />
+    <Compile Include="Facebook\Services\Common\PeopleYouMayKnowLocation.cs" />
+    <Compile Include="Facebook\Services\Friends\Service.cs" />
+    <Compile Include="Facebook\Services\Http\Method.cs" />
+    <Compile Include="Facebook\Services\Http\Request.cs" />
+    <Compile Include="Facebook\Services\Http\Response.cs" />
+    <Compile Include="Facebook\Services\Http\Service.cs" />
+    <Compile Include="Facebook\Services\Localization\IThreadSnippetGenerator.cs" />
+    <Compile Include="Facebook\Services\Localization\ThreadSnippetInfo.cs" />
+    <Compile Include="Facebook\Services\MessageSender\SendContext.cs" />
+    <Compile Include="Facebook\Services\MessageSender\Service.cs" />
+    <Compile Include="Facebook\Services\Mqtt\ConnectionStrategy.cs" />
+    <Compile Include="Facebook\Services\Mqtt\CreateSyncDiffsRequest.cs" />
+    <Compile Include="Facebook\Services\Mqtt\CreateSyncQueueRequest.cs" />
+    <Compile Include="Facebook\Services\Mqtt\Error.cs" />
+    <Compile Include="Facebook\Services\Mqtt\MqttConnectionCapabilities.cs" />
+    <Compile Include="Facebook\Services\Mqtt\MqttConnectUser.cs" />
+    <Compile Include="Facebook\Services\Mqtt\NotificationDeduplicator.cs" />
+    <Compile Include="Facebook\Services\Mqtt\PublishAcknowledgementAwaiter.cs" />
+    <Compile Include="Facebook\Services\Mqtt\Service.cs" />
+    <Compile Include="Facebook\Services\Mqtt\SyncResponse.cs" />
+    <Compile Include="Facebook\Services\Mqtt\Sync\CreateQueueMessage.cs" />
+    <Compile Include="Facebook\Services\Mqtt\Sync\CreateSyncDiffsMessage.cs" />
+    <Compile Include="Facebook\Services\Mqtt\Sync\DeviceParams.cs" />
+    <Compile Include="Facebook\Services\Mqtt\Sync\SyncMessageBase.cs" />
+    <Compile Include="Facebook\Services\Mqtt\TopicSubscriptions\PresenceSubscription.cs" />
+    <Compile Include="Facebook\Services\Mqtt\TopicSubscriptions\SendMessageResponse.cs" />
+    <Compile Include="Facebook\Services\Mqtt\TopicSubscriptions\Subscription.cs" />
+    <Compile Include="Facebook\Services\Mqtt\TopicSubscriptions\Sync.cs" />
+    <Compile Include="Facebook\Services\Mqtt\TopicSubscriptions\Typing.cs" />
+    <Compile Include="Facebook\Services\Presence\Service.cs" />
+    <Compile Include="Facebook\Services\Presence\TypingHelper.cs" />
+    <Compile Include="Facebook\Services\Presence\UserPresenceHelper.cs" />
+    <Compile Include="Facebook\Services\ScheduledTasksService\ScheduledTask.cs" />
+    <Compile Include="Facebook\Services\ScheduledTasksService\Service.cs" />
+    <Compile Include="Facebook\Services\ScheduledTasksService\Tasks\GatekeeperProjects.cs" />
+    <Compile Include="Facebook\Services\ScheduledTasksService\Tasks\GatekeeperSync.cs" />
+    <Compile Include="Facebook\Services\Stickers\IStickerPackProgressHandler.cs" />
+    <Compile Include="Facebook\Services\Stickers\IStickerStorage.cs" />
+    <Compile Include="Facebook\Services\Stickers\Service.cs" />
+    <Compile Include="Facebook\Services\Stickers\StickerPackProgressHelper.cs" />
+    <Compile Include="Facebook\Services\SyncProtocol\ActionIdUtil.cs" />
+    <Compile Include="Facebook\Services\SyncProtocol\CacheMissException.cs" />
+    <Compile Include="Facebook\Services\SyncProtocol\DeltaHandler.cs" />
+    <Compile Include="Facebook\Services\SyncProtocol\DeltaHandlerContext.cs" />
+    <Compile Include="Facebook\Services\SyncProtocol\DeltaHandlerManager.cs" />
+    <Compile Include="Facebook\Services\SyncProtocol\DeltaWrapperExtensions.cs" />
+    <Compile Include="Facebook\Services\SyncProtocol\FetchRequired.cs" />
+    <Compile Include="Facebook\Services\SyncProtocol\FetchRequiredExtensions.cs" />
+    <Compile Include="Facebook\Services\SyncProtocol\Handler\DeltaAdminTextMessageHandler.cs" />
+    <Compile Include="Facebook\Services\SyncProtocol\Handler\DeltaBroadcastMessageHandler.cs" />
+    <Compile Include="Facebook\Services\SyncProtocol\Handler\DeltaDeliveryReceiptHandler.cs" />
+    <Compile Include="Facebook\Services\SyncProtocol\Handler\DeltaForcedFetchHandler.cs" />
+    <Compile Include="Facebook\Services\SyncProtocol\Handler\DeltaMarkReadHandler.cs" />
+    <Compile Include="Facebook\Services\SyncProtocol\Handler\DeltaMarkUnreadHandler.cs" />
+    <Compile Include="Facebook\Services\SyncProtocol\Handler\DeltaMessageDeleteHandler.cs" />
+    <Compile Include="Facebook\Services\SyncProtocol\Handler\DeltaNewGroupThreadHandler.cs" />
+    <Compile Include="Facebook\Services\SyncProtocol\Handler\DeltaNewMessageHandler.cs" />
+    <Compile Include="Facebook\Services\SyncProtocol\Handler\DeltaNoOpHandler.cs" />
+    <Compile Include="Facebook\Services\SyncProtocol\Handler\DeltaParticipantLeftGroupThreadHandler.cs" />
+    <Compile Include="Facebook\Services\SyncProtocol\Handler\DeltaParticipantsAddedToGroupThreadHandler.cs" />
+    <Compile Include="Facebook\Services\SyncProtocol\Handler\DeltaReadReceiptHandler.cs" />
+    <Compile Include="Facebook\Services\SyncProtocol\Handler\DeltaRtcEventLogHandler.cs" />
+    <Compile Include="Facebook\Services\SyncProtocol\Handler\DeltaSentMessageHandler.cs" />
+    <Compile Include="Facebook\Services\SyncProtocol\Handler\DeltaThreadActionHandler.cs" />
+    <Compile Include="Facebook\Services\SyncProtocol\Handler\DeltaThreadDeleteHandler.cs" />
+    <Compile Include="Facebook\Services\SyncProtocol\Handler\DeltaThreadFolderHandler.cs" />
+    <Compile Include="Facebook\Services\SyncProtocol\Handler\DeltaThreadImageHandler.cs" />
+    <Compile Include="Facebook\Services\SyncProtocol\Handler\DeltaThreadMuteSettingsHandler.cs" />
+    <Compile Include="Facebook\Services\SyncProtocol\Handler\DeltaThreadNameHandler.cs" />
+    <Compile Include="Facebook\Services\SyncProtocol\Handler\DeltaVideoCallHandler.cs" />
+    <Compile Include="Facebook\Services\SyncProtocol\MessageDeltaUtil.cs" />
+    <Compile Include="Facebook\Services\SyncProtocol\RequiredFetchesHandler.cs" />
+    <Compile Include="Facebook\Services\SyncProtocol\RequiredFetchResponse.cs" />
+    <Compile Include="Facebook\Services\SyncProtocol\SequenceIdUtil.cs" />
+    <Compile Include="Facebook\Services\SyncProtocol\Service.cs" />
+    <Compile Include="Facebook\Services\SyncProtocol\SyncConnectionHelper.cs" />
+    <Compile Include="Facebook\Services\SyncProtocol\SyncProtocolSettings.cs" />
+    <Compile Include="Facebook\Services\SyncProtocol\ThreadDeltaUtil.cs" />
+    <Compile Include="Facebook\Services\Utilities\OfflineIdHelper.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+</Project>

@@ -1,0 +1,36 @@
+﻿<UserControl
+    x:Class="Facebook.Messenger.WP8.Controls.SeenHeadsControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:ex="clr-namespace:Facebook.Messenger.WP8.Extensions"
+    mc:Ignorable="d">
+
+    <StackPanel 
+        x:Name="SeenHeadsPanel"
+        Orientation="Horizontal"
+        VerticalAlignment="Top"
+        HorizontalAlignment="Right"
+        Margin="0,5">
+
+        <Border
+            x:Name="SeenHeadOverflowBorder"
+            ex:RoundContentExtension.Radius="10"
+            Margin="2, 0, 2, 0"
+            Background="{StaticResource MessengerBorderGreyBrush}">
+
+            <TextBlock
+                x:Name="SeenHeadOverflowText"
+                TextWrapping="NoWrap"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Center"
+                TextAlignment="Center"
+                Style="{StaticResource MessageStatusStyle}"
+                FontWeight="Bold"
+                FontSize="10"
+                Foreground="Black"/>
+        </Border>
+    </StackPanel>
+
+</UserControl>

@@ -1,0 +1,173 @@
+using System;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Media.Animation;
+
+namespace Facebook.Messenger.WP8.Controls;
+
+public class TypingIndicator : UserControl
+{
+	private static class AnimationValues
+	{
+		public const int ValueScale = 10;
+
+		public static readonly double[] ValuesDot1 = new double[98]
+		{
+			0.0, -0.0284183162909287, -0.110864455883319, -0.210312769963191, -0.333474085881159, -0.45266815332266, -0.573056624485896, -0.678060091458834, -0.77405834197998, -0.853574899526742,
+			-0.916935333838829, -0.968979982229379, -1.0062445127047, -1.03200325599083, -1.04952966249906, -1.05849339411808, -1.0615271788377, -1.06021110828106, -1.05589125706599, -1.01911111978384,
+			-0.938828615041879, -0.827929643484262, -0.693249922532301, -0.577103027930626, -0.452533245086669, -0.330767448131854, -0.241505696223332, -0.15716055723337, -0.0831070129687969, -0.0345198580851921,
+			0.0059960914345888, 0.0364624330630669, 0.0510121446389418, 0.0611137656065133, 0.0650141972761887, 0.063855583851154, 0.059681644806495, 0.0520759454140296, 0.0453704687265249, 0.0377389444754673,
+			0.0287193931066072, 0.0227760214072007, 0.0161104993178294, 0.0093000147205133, 0.0062182431037609, 0.0026932258445483, -0.0004326607673787, -0.0018180647435097, -0.0030612014234066, -0.0038355477154255,
+			-0.0039925277233124, -0.0039516251820784, -0.0035968726644149, -0.0033214161029229, -0.0028715213904014, -0.0022239164950756, -0.0018960052671341, -0.0014544470378986, -0.0009319867508916, -0.0007106932596518,
+			-0.0004198463418736, -0.0001286008896736, -2.88567658012E-05, 8.9582754299E-05, 0.0002002592843312, 0.0002194858299425, 0.0002433826179745, 0.0002415699418634, 0.0002335699525877, 0.0002112654216874,
+			0.0001702413786776, 0.0001538133141226, 0.00012390610153, 8.30823107837E-05, 7.02612137852E-05, 4.70622550123E-05, 2.23121583426E-05, 1.56087794144E-05, 4.09686226E-06, -7.4028727025E-06,
+			-9.6762557335E-06, -1.3118325464E-05, -1.51556506843E-05, -1.51813650378E-05, -1.46107351891E-05, -1.21532715499E-05, -9.9154892198E-06, 0.0, 0.0, 0.0,
+			0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0
+		};
+
+		public static readonly double[] ValuesDot2 = new double[98]
+		{
+			0.0, -0.0007880728405256, -0.0057729052809569, -0.0167417801343477, -0.0392808501537029, -0.0722266481472895, -0.119761311090909, -0.176529792638925, -0.245832314858069, -0.321490177741417,
+			-0.399980141566349, -0.484539472139798, -0.565273725069486, -0.641434816213754, -0.717293225801908, -0.783110838669997, -0.840248694786658, -0.891335927523099, -0.932911065908578, -0.96615850008451,
+			-0.987646689781775, -0.996433404775766, -0.988044518690842, -0.966202589181753, -0.925892022939828, -0.865411978501539, -0.803897637587327, -0.72666520338792, -0.635431216313288, -0.556243933164156,
+			-0.468894555018498, -0.376507318936861, -0.312344074249267, -0.241758713355431, -0.170039140261136, -0.12305724620819, -0.078837697322552, -0.0360192977465116, -0.0108994726951305, 0.0102219707690752,
+			0.0280136145078218, 0.0362354654532212, 0.0422288867143484, 0.0443500922276423, 0.0436660463993365, 0.0410826068658095, 0.0361835819024306, 0.032531752036168, 0.0274182626834282, 0.0212059433643634,
+			0.0177378597167822, 0.0136835082219197, 0.0089520685947858, 0.00683627392237, 0.0042715783302601, 0.001606269667928, 0.0005588858531645, -0.0005927187247345, -0.0015880572967804, -0.0018855374879562,
+			-0.0021409976940889, -0.0021841540359534, -0.0021246415204727, -0.0019659977406263, -0.0016222530259536, -0.0015060265476887, -0.0012365280149075, -0.0008845661695187, -0.0007631748628158, -0.0005545045177524,
+			-0.0003111573437659, -0.0002365581368884, -0.0001220941239108, -1.9054009149E-06, 2.82915649362E-05, 7.33670850213E-05, 0.0001052774112815, 0.0001102690943159, 0.0001134508146116, 0.0001047316293877,
+			0.0001000920668817, 8.80375826875E-05, 6.68831008415E-05, 6.14106046179E-05, 4.83020781898E-05, 2.82144979932E-05, 1.70419225469E-05, 6.6070497269E-06, 0.0, 0.0,
+			0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0
+		};
+
+		public static readonly double[] ValuesDot3 = new double[98]
+		{
+			0.0, -2.15695315721E-05, -0.0002462575570322, -0.0009378955627863, -0.0029727641779643, -0.0069841261093433, -0.0146237497146313, -0.0262514948844909, -0.0440417940800006, -0.0679648014215322,
+			-0.0979801783194908, -0.136903240130497, -0.18124613395104, -0.230643290739793, -0.288903896625225, -0.348702944242037, -0.409827085641714, -0.474567596728985, -0.537440886864295, -0.599677269275371,
+			-0.656530160170335, -0.711083265451284, -0.763588538536658, -0.801747395442082, -0.836267031156099, -0.862318405738243, -0.874710156367375, -0.87770337324876, -0.867627290578988, -0.848959262554462,
+			-0.817867279052734, -0.772133387052095, -0.731981570904071, -0.678069554842435, -0.60972785949707, -0.555350303649902, -0.494242961590106, -0.420866452730619, -0.367433841411884, -0.311809796553391,
+			-0.249185708852914, -0.208539100793691, -0.162537629787738, -0.113867713854863, -0.0907228359809288, -0.062679295356457, -0.0352130165466895, -0.0213657663418696, -0.0067766320246917, 0.0059196897424184,
+			0.0111871235645734, 0.0158537534567026, 0.0191927792934271, 0.0198884124939258, 0.0199079032127673, 0.0185795128345489, 0.0174915675933544, 0.0156417408814797, 0.0128586097405507, 0.011460033746866,
+			0.0093620763375209, 0.0068271297674913, 0.0057933966700847, 0.0043610136669416, 0.0025587336948285, 0.002105190920142, 0.0012275877480324, 0.000355581788776, 0.0001127000342911, -0.0002387648519988,
+			-0.0005334258222809, -0.0005952595518186, -0.0006555871894726, -0.0006497381255031, -0.0006294181713691, -0.0005691744960271, -0.0004651234485209, -0.000427660281555, -0.0003495315233102, -0.0002411190921871,
+			-0.0002119365470627, -0.0001542918527356, -8.27181994772E-05, -6.77357759112E-05, -3.62471596768E-05, 9.657279896E-07, 1.59355102089E-05, 2.54179019696E-05, 2.70961474878E-05, 2.50962531516E-05,
+			2.42022394489E-05, 2.16941228316E-05, 1.90040669762E-05, 1.6202720312E-05, 1.36142256311E-05, 1.12768119344E-05, 9.308546186E-06, 0.0
+		};
+	}
+
+	internal Storyboard TypingAnimation;
+
+	internal DoubleAnimationUsingKeyFrames KeyframesDot1;
+
+	internal DoubleAnimationUsingKeyFrames KeyframesDot2;
+
+	internal DoubleAnimationUsingKeyFrames KeyframesDot3;
+
+	internal Grid RootGrid;
+
+	internal ColumnDefinition ProfilePhotoColumn;
+
+	internal ColumnDefinition ContentColumn;
+
+	internal UserTile ProfilePhoto;
+
+	internal BubbleContainer Bubble;
+
+	internal TextBlock DotLeft;
+
+	internal TextBlock DotMiddle;
+
+	internal TextBlock DotRight;
+
+	private bool _contentLoaded;
+
+	public TypingIndicator()
+	{
+		InitializeComponent();
+		SetUpKeyFrames();
+	}
+
+	private void SetUpKeyFrames()
+	{
+		SetupKeyFrames(KeyframesDot1, AnimationValues.ValuesDot1);
+		SetupKeyFrames(KeyframesDot2, AnimationValues.ValuesDot2);
+		SetupKeyFrames(KeyframesDot3, AnimationValues.ValuesDot3);
+	}
+
+	private static void SetupKeyFrames(DoubleAnimationUsingKeyFrames keyFrames, ICollection<double> values)
+	{
+		//IL_0001: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0006: Unknown result type (might be due to invalid IL or missing references)
+		//IL_003f: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0046: Expected Obj, but got Unknown
+		//IL_0049: Unknown result type (might be due to invalid IL or missing references)
+		Duration duration = ((Timeline)keyFrames).Duration;
+		TimeSpan timeSpan = TimeSpan.FromMilliseconds(duration.TimeSpan.TotalMilliseconds / (double)values.Count);
+		TimeSpan zero = TimeSpan.Zero;
+		foreach (double value in values)
+		{
+			double num = value;
+			DiscreteDoubleKeyFrame val = new DiscreteDoubleKeyFrame();
+			((DoubleKeyFrame)val).KeyTime = KeyTime.op_Implicit(zero);
+			((DoubleKeyFrame)val).Value = num * 10.0;
+			DiscreteDoubleKeyFrame val2 = val;
+			((PresentationFrameworkCollection<DoubleKeyFrame>)(object)keyFrames.KeyFrames).Add((DoubleKeyFrame)(object)val2);
+			zero += timeSpan;
+		}
+	}
+
+	public void Show()
+	{
+		((UIElement)this).Visibility = (Visibility)0;
+		TypingAnimation.Begin();
+	}
+
+	public void Hide()
+	{
+		((UIElement)this).Visibility = (Visibility)1;
+		TypingAnimation.Stop();
+	}
+
+	[DebuggerNonUserCode]
+	public void InitializeComponent()
+	{
+		//IL_002d: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0037: Expected Obj, but got Unknown
+		//IL_0043: Unknown result type (might be due to invalid IL or missing references)
+		//IL_004d: Expected Obj, but got Unknown
+		//IL_0059: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0063: Expected Obj, but got Unknown
+		//IL_006f: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0079: Expected Obj, but got Unknown
+		//IL_0085: Unknown result type (might be due to invalid IL or missing references)
+		//IL_008f: Expected Obj, but got Unknown
+		//IL_009b: Unknown result type (might be due to invalid IL or missing references)
+		//IL_00a5: Expected Obj, but got Unknown
+		//IL_00b1: Unknown result type (might be due to invalid IL or missing references)
+		//IL_00bb: Expected Obj, but got Unknown
+		//IL_00f3: Unknown result type (might be due to invalid IL or missing references)
+		//IL_00fd: Expected Obj, but got Unknown
+		//IL_0109: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0113: Expected Obj, but got Unknown
+		//IL_011f: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0129: Expected Obj, but got Unknown
+		if (!_contentLoaded)
+		{
+			_contentLoaded = true;
+			Application.LoadComponent((object)this, new Uri("/Facebook.Messenger.WP8;component/Controls/TypingIndicator.xaml", UriKind.Relative));
+			TypingAnimation = (Storyboard)((FrameworkElement)this).FindName("TypingAnimation");
+			KeyframesDot1 = (DoubleAnimationUsingKeyFrames)((FrameworkElement)this).FindName("KeyframesDot1");
+			KeyframesDot2 = (DoubleAnimationUsingKeyFrames)((FrameworkElement)this).FindName("KeyframesDot2");
+			KeyframesDot3 = (DoubleAnimationUsingKeyFrames)((FrameworkElement)this).FindName("KeyframesDot3");
+			RootGrid = (Grid)((FrameworkElement)this).FindName("RootGrid");
+			ProfilePhotoColumn = (ColumnDefinition)((FrameworkElement)this).FindName("ProfilePhotoColumn");
+			ContentColumn = (ColumnDefinition)((FrameworkElement)this).FindName("ContentColumn");
+			ProfilePhoto = (UserTile)((FrameworkElement)this).FindName("ProfilePhoto");
+			Bubble = (BubbleContainer)((FrameworkElement)this).FindName("Bubble");
+			DotLeft = (TextBlock)((FrameworkElement)this).FindName("DotLeft");
+			DotMiddle = (TextBlock)((FrameworkElement)this).FindName("DotMiddle");
+			DotRight = (TextBlock)((FrameworkElement)this).FindName("DotRight");
+		}
+	}
+}

@@ -1,0 +1,36 @@
+using System;
+using System.Diagnostics.Contracts;
+using System.IO;
+using System.Threading.Tasks;
+
+namespace ImageTools.IO;
+
+internal abstract class IImageDecoderContract : IImageDecoder
+{
+	int IImageDecoder.HeaderSize
+	{
+		get
+		{
+			throw new NotImplementedException();
+		}
+	}
+
+	bool IImageDecoder.IsSupportedFileExtension(string extension)
+	{
+		Contract.Requires<ArgumentException>(!string.IsNullOrEmpty(extension), "Extension cannot be null or empty.");
+		throw new NotImplementedException();
+	}
+
+	bool IImageDecoder.IsSupportedFileFormat(byte[] header)
+	{
+		Contract.Requires<ArgumentNullException>(header != null, "Header cannot be null.");
+		throw new NotImplementedException();
+	}
+
+	Task IImageDecoder.Decode(ExtendedImage image, Stream stream)
+	{
+		Contract.Requires<ArgumentNullException>(image != null, "Image cannot be null.");
+		Contract.Requires<ArgumentNullException>(stream != null, "Stream cannot be null.");
+		throw new NotImplementedException();
+	}
+}

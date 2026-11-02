@@ -1,0 +1,91 @@
+﻿<pages:GroupComposerViewModelPage
+    x:Class="Facebook.Messenger.WP8.Pages.GroupComposerPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:ex="clr-namespace:Facebook.Messenger.WP8.Extensions"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:pages="clr-namespace:Facebook.Messenger.WP8.Pages"
+    xmlns:controls="clr-namespace:Facebook.Messenger.WP8.Controls"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:common="clr-namespace:Facebook.Messenger.WP8.Controls.Common"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d">
+
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <controls:FBMessengerProgressBar Visibility="{Binding IsLoading, Converter={StaticResource BoolToVisibilityConverter}}"
+                                         IsIndeterminate="{Binding IsLoading}"
+                                         HorizontalAlignment="Stretch"
+                                         VerticalAlignment="Top"
+                                         Height="10" />
+
+        <TextBlock Grid.Row="0"
+                   Margin="24,56,24,0"
+                   Name="CreateGroupTitle"
+                   Foreground="{StaticResource MessengerBlackBrush}"
+                   FontSize="22"
+                   FontWeight="Medium" />
+        
+        <Grid Grid.Row="1"
+              VerticalAlignment="Top"
+              Margin="24,50">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+                <controls:RoundImageControl
+                    x:Name="GroupImageControl"
+                    ex:TiltEffect.IsTiltEnabled="True"
+                    PlaceholderUri="/Assets/Groups/PhotoPlaceholder.png"
+                    ImageUri="{Binding ThreadImageUri, Converter={StaticResource UniqueUriConverter}}"
+                    Grid.Column="0"
+                    Width="124"
+                    Height="124"
+                    Tap="GroupPhoto_OnTap"/>
+            <Grid Grid.Column="1"
+                  Margin="24,0,0,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="2.2*"/>
+                </Grid.RowDefinitions>
+                    <TextBlock 
+                        Grid.Row="0"
+                        VerticalAlignment="Center"
+                        FontWeight="Light"
+                        Foreground ="{StaticResource MessengerTextLightGreyBrush}"
+                        Text="{Binding StringLibrary.CreateGroup_TextBox_Label, Source={StaticResource LocalizedStrings}}"/>
+                    <TextBox 
+                         Grid.RowSpan="2"
+                         VerticalAlignment="Center"
+                         Name="GroupNameTextBox"
+                         Style="{StaticResource LoginTextBoxStyle2}"
+                         InputScope="Text"
+                         TextChanged="GroupNameChanged"
+                         Text="{Binding GroupName, Mode=TwoWay}" />
+
+            </Grid>
+                
+        </Grid>
+
+        <common:FullscreenProgressIndicator
+            Grid.Row="0"
+            Grid.RowSpan="2"
+            x:Name="FullscreenProgressIndicator"
+            Text="{Binding StringLibrary.SuggestedPins_Pinning_StateIndicator, Source={StaticResource LocalizedStrings}}"
+            Visibility="Collapsed"/>
+    </Grid>
+
+    <phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar ForegroundColor="{StaticResource MessengerAppBarWhite}"
+                              BackgroundColor="{StaticResource MessengerBlue}" />
+    </phone:PhoneApplicationPage.ApplicationBar>
+
+</pages:GroupComposerViewModelPage>

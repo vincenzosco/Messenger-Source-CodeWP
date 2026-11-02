@@ -1,0 +1,223 @@
+﻿<controls:ComposerDrawer
+    x:Class="Facebook.Messenger.WP8.Controls.Stickers.StickerDrawer"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:primitives="clr-namespace:Microsoft.Phone.Controls.Primitives;assembly=Microsoft.Phone"
+    xmlns:controls="clr-namespace:Facebook.Messenger.WP8.Controls"
+    xmlns:viewModels="clr-namespace:Facebook.Messenger.WP8.ViewModels"
+    xmlns:stickers="clr-namespace:Facebook.Messenger.WP8.Controls.Stickers"
+    xmlns:extensions="clr-namespace:Facebook.Messenger.WP8.Extensions"
+    mc:Ignorable="d"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    Visibility="Collapsed"
+    d:DesignHeight="408"
+    d:DesignWidth="480"
+    d:DataContext="{d:DesignInstance viewModels:StickerDrawerViewModel}">
+
+    <UserControl.Resources>
+
+        <Style 
+            x:Key="StickerDrawerPivotStyle" 
+            TargetType="phone:Pivot">
+            <Setter Property="Margin" Value="0" />
+            <Setter Property="Padding" Value="0" />
+            <Setter Property="Foreground" Value="{StaticResource PhoneForegroundBrush}" />
+            <Setter Property="Background" Value="Transparent" />
+            <Setter Property="ItemsPanel">
+                <Setter.Value>
+                    <ItemsPanelTemplate>
+                        <Grid />
+                    </ItemsPanelTemplate>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="phone:Pivot">
+                        <Grid 
+                            HorizontalAlignment="Stretch" 
+                            VerticalAlignment="Stretch">
+                            <primitives:PivotHeadersControl 
+                                x:Name="HeadersListElement" 
+                                Grid.Row="0" 
+                                Margin="0" />
+                            <ItemsPresenter 
+                                x:Name="PivotItemPresenter" 
+                                Margin="0" 
+                                Grid.Row="0"  />
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style 
+            x:Key="StickerDrawerPivotItemStyle" 
+            TargetType="phone:PivotItem">
+            <Setter Property="Margin" Value="0" />
+        </Style>
+
+        <Style
+            x:Name="StickerPackPanelImage"
+            TargetType="Image">
+            <Setter Property="Height" Value="46" />
+            <Setter Property="Width" Value="46" />
+            <Setter Property="Source" Value="\Assets\Stickers\StickerPlaceholder.png" />
+        </Style>
+
+        <Style
+            x:Name="StickerPackPanelElement"
+            BasedOn="{StaticResource StickerPackPanelImage}"
+            TargetType="Image">
+            <Setter Property="Margin" Value="10, 0, 12, 0" />
+        </Style>
+
+        <Style 
+            x:Name="StickerSelectorItemStyle" 
+            TargetType="ListBoxItem">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="ListBoxItem">
+                        <Border>
+                            <ContentPresenter
+                                x:Name="ItemPresenter"
+                                Opacity="0.3"
+                                Content="{TemplateBinding Content}" />
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup x:Name="SelectionStates">
+                                    <VisualState x:Name="Unselected" />
+                                    <VisualState x:Name="Selected">
+                                        <Storyboard>
+                                            <DoubleAnimation
+                                                Storyboard.TargetName="ItemPresenter"
+                                                Storyboard.TargetProperty="Opacity"
+                                                Duration="0"
+                                                To="1" />
+                                        </Storyboard>
+                                    </VisualState>
+                                    <VisualState x:Name="SelectedUnfocused">
+                                        <Storyboard>
+                                            <DoubleAnimation
+                                                Storyboard.TargetName="ItemPresenter"
+                                                Storyboard.TargetProperty="Opacity"
+                                                Duration="0"
+                                                To="1" />
+                                        </Storyboard>
+                                    </VisualState>
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+    </UserControl.Resources>
+
+    <Grid Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Border 
+            Grid.Row="0" 
+            Background="{StaticResource MessengerBackgroundGreyBrush}" 
+            Padding="2, 9, 2, 11">
+            <Grid>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <controls:CircledIcon
+                    Grid.Column="0"
+                    Margin="10 0"
+                    Opacity=".3"
+                    BackgroundSource="/Assets/AppBar/BaseBlackCircle.png"
+                    Source="/Assets/Stickers/StickerStore.png" 
+                    SelectedSource="/Assets/Stickers/StickerStoreSelected.png"
+                    Tap="StickerStoreButton_OnTap"/>
+                
+                <Image 
+                    x:Name="NewStickersIcon" 
+                    Grid.Column="0"
+                    Stretch="None"
+                    Margin="5 5"
+                    Visibility="{Binding DisplayNewStickerPacksBadge, Converter={StaticResource BoolToVisibilityConverter}}"
+                    VerticalAlignment="Top"
+                    HorizontalAlignment="Right"
+                    Source="/Assets/Stickers/AlertDot.png"
+                    IsHitTestVisible="false"/>
+
+                <controls:FBMessengerProgressBar 
+                    Name="StickerPacksLoadingProgressBar"
+                    Grid.Column="1"
+                    IsIndeterminate="False"
+                    VerticalAlignment="Top"/>
+
+                <ListBox
+                    Name="StickerPackSelector"
+                    Grid.Column="1"
+                    ItemsSource="{Binding StickerPacks}"
+                    ItemContainerStyle="{StaticResource StickerSelectorItemStyle}"
+                    SelectionChanged="StickerPackSelectorList_OnSelectionChanged"
+                    ScrollViewer.VerticalScrollBarVisibility="Disabled"
+                    ScrollViewer.HorizontalScrollBarVisibility="Hidden">
+
+                    <ListBox.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <StackPanel Orientation="Horizontal" />
+                        </ItemsPanelTemplate>
+                    </ListBox.ItemsPanel>
+
+                    <ListBox.Template>
+                        <ControlTemplate>
+                            <ScrollViewer x:Name="ScrollViewer">
+                                <ItemsPresenter />
+                            </ScrollViewer>
+                        </ControlTemplate>
+                    </ListBox.Template>
+
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <Image
+                                Style="{StaticResource StickerPackPanelElement}"
+                                extensions:ImageCacheExtensions.ImageUri="{Binding Path=ThumbnailImage.Url}"
+                                extensions:ImageCacheExtensions.PlaceholderUri="/Assets/Stickers/StickerPlaceholder.png" />
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                    
+                </ListBox>
+
+            </Grid>
+        </Border>
+
+        <Border 
+            Grid.Row="1" 
+            Margin="0, 4, 0, 0" 
+            Background="{StaticResource MessengerBackgroundGreyBrush}">
+            <phone:Pivot 
+                Name="StickerPivot" 
+                SelectedIndex="1" 
+                SelectionChanged="PivotSelectionChanged"
+                Style="{StaticResource StickerDrawerPivotStyle}"
+                ItemContainerStyle="{StaticResource StickerDrawerPivotItemStyle}">
+                <phone:PivotItem />
+                <phone:PivotItem>
+                    <stickers:StickerSelector
+                        x:Name="StickersContainer" 
+                        DataContext="{Binding ElementName=StickerPackSelector, Path=SelectedItem}"
+                        StickerSelected ="StickersContainer_OnStickerSelected"
+                        DownloadPackSelected="StickersContainer_OnDownloadPackSelected"/>
+                </phone:PivotItem>
+                <phone:PivotItem />
+            </phone:Pivot>
+        </Border>
+    </Grid>
+</controls:ComposerDrawer>

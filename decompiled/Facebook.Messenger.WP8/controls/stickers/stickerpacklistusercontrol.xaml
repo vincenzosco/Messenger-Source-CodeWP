@@ -1,0 +1,70 @@
+﻿<UserControl x:Class="Facebook.Messenger.WP8.Controls.Stickers.StickerPackListUserControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:fb="clr-namespace:Facebook.Messenger.WP8.Controls.Base"
+    xmlns:controls="clr-namespace:Facebook.Messenger.WP8.Controls"
+    xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+    xmlns:command="clr-namespace:GalaSoft.MvvmLight.Command;assembly=GalaSoft.MvvmLight.Platform"
+    xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+    xmlns:stickers="clr-namespace:Facebook.Messenger.WP8.Controls.Stickers"
+    mc:Ignorable="d"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    x:Name="StickerPackListUserControlRoot"
+    d:DesignHeight="480" d:DesignWidth="480">
+
+    <i:Interaction.Triggers>
+        <i:EventTrigger EventName="NavigateEvent">
+            <command:EventToCommand
+                Command="{Binding NavigateCommand}"
+                PassEventArgsToCommand="True" />
+        </i:EventTrigger>
+    </i:Interaction.Triggers>
+
+    <Grid
+        x:Name="LayoutRoot"
+        Margin="0 -10 0 0">
+        <TextBlock
+            x:Name="EmptyTextBlock"
+            TextAlignment="Center"
+            TextWrapping="Wrap"
+            FontSize="{StaticResource PhoneFontSizeMediumLarge}"
+            Foreground="{StaticResource MessengerTextDarkGreyBrush}"
+            VerticalAlignment="Center"
+            HorizontalAlignment="Center" />
+
+        <fb:FacebookListView x:Name="StickerPackList">
+
+            <fb:FacebookListView.ItemTemplate>
+                <DataTemplate>
+                    <stickers:StickerPackItemControl StickerPackClicked="OnStickerPackClicked">
+                        <toolkit:ContextMenuService.ContextMenu>
+                            <toolkit:ContextMenu
+                                Style="{StaticResource ContextMenuStyle}"
+                                Unloaded="ContextMenu_OnUnloaded"
+                                Visibility="{Binding Path=CanRemoveItems, ElementName=SickerPackListUserControlRoot, Converter={StaticResource BoolToVisibilityConverter}}"
+                                IsEnabled="{Binding CanRemove}">
+                                <toolkit:MenuItem
+                                    Header="{Binding StringLibrary.Sticker_Store_ContextMenu_Remove, Source={StaticResource LocalizedStrings}}" 
+                                    Click="RemoveStickerPack_OnClick"/>
+                            </toolkit:ContextMenu>
+                        </toolkit:ContextMenuService.ContextMenu>
+                    </stickers:StickerPackItemControl>
+                </DataTemplate>
+            </fb:FacebookListView.ItemTemplate>
+
+            <fb:FacebookListView.ListHeader>
+                <Grid Height="5">
+                    <controls:FBMessengerProgressBar
+                        x:Name="UpdateProgessBar"
+                        VerticalAlignment="Top"
+                        Visibility="{Binding IsLoading, Converter={StaticResource BoolToVisibilityConverter}}"
+                        IsIndeterminate="{Binding IsLoading}"/>
+                </Grid>
+            </fb:FacebookListView.ListHeader>
+        </fb:FacebookListView>
+    </Grid>
+</UserControl>

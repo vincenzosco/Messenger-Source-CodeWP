@@ -1,0 +1,248 @@
+﻿<controls:FacebookPopup
+    x:Class="Facebook.Messenger.WP8.Controls.Photos.PhotoDrawingPopup"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:controls="clr-namespace:Facebook.Messenger.WP8.Controls"
+    xmlns:photos="clr-namespace:Facebook.Messenger.WP8.Controls.Photos"
+    mc:Ignorable="d"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    Loaded="OnLoaded"
+    x:Name="PhotoDrawingPopupRoot">
+
+    <controls:FacebookPopup.Resources>
+        <Storyboard
+            x:Name="SendAnimation"
+            Completed="SendAnimation_OnCompleted">
+            
+            <DoubleAnimationUsingKeyFrames 
+                Storyboard.TargetName="ContentPanel"
+                Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)">
+                <EasingDoubleKeyFrame 
+                    Value="1000"
+                    KeyTime="0:0:1.25">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CubicEase EasingMode="EaseOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+
+            <DoubleAnimationUsingKeyFrames 
+                Storyboard.TargetName="HintTextBlock"
+                Storyboard.TargetProperty="Opacity">
+                <EasingDoubleKeyFrame Value="0" KeyTime="0"/>
+            </DoubleAnimationUsingKeyFrames>
+
+            <DoubleAnimationUsingKeyFrames 
+                Storyboard.TargetName="ColorPicker"
+                Storyboard.TargetProperty="Opacity">
+                <EasingDoubleKeyFrame Value="0" KeyTime="0:0:0.75"/>
+            </DoubleAnimationUsingKeyFrames>
+            
+        </Storyboard>
+
+        <Storyboard x:Name="ColorPickerFadeIn">
+            <DoubleAnimation
+                Storyboard.TargetName="ColorPicker"
+                Storyboard.TargetProperty="Opacity"
+                From="0.0"
+                To="1.0"
+                Duration="0:0:0.3" />
+            <DoubleAnimation
+                x:Name="UndoButtonAnimation"
+                Storyboard.TargetName="UndoButton"
+                Storyboard.TargetProperty="Opacity"
+                From="0.0"
+                To="1.0"
+                Duration="0:0:0.3" />
+        </Storyboard>
+        <Storyboard x:Name="ColorPickerFadeOut">
+            <DoubleAnimation
+                Storyboard.TargetName="ColorPicker"
+                Storyboard.TargetProperty="Opacity"
+                From="1.0"
+                To="0.0"
+                Duration="0:0:0.3" />
+            <DoubleAnimation 
+                Storyboard.TargetName="UndoButton"
+                Storyboard.TargetProperty="Opacity"
+                From="1.0"
+                To="0.0"
+                Duration="0:0:0.3" />
+        </Storyboard>
+        
+        <Style x:Key="DrawingTextBoxStyle" TargetType="TextBox">
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Padding"  Value="0"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="TextBox">
+                        <Grid Background="Transparent">
+                            <ContentControl
+                                x:Name="ContentElement"
+                                BorderThickness="0"
+                                HorizontalContentAlignment="Stretch"
+                                Padding="0"
+                                VerticalContentAlignment="Stretch"
+                                Content=""/>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style
+            x:Key="AppBarButtonStyle"
+            TargetType="controls:CircledIcon"
+            BasedOn="{StaticResource TiltingImageButton}">
+            <Setter Property="Margin" Value="18,0"/>
+        </Style>
+    </controls:FacebookPopup.Resources>
+
+    <Grid Background="White" x:Name="RootGrid">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid
+            x:Name="ContentPanel"
+            Grid.Row="0"
+            Background="White">
+            <Grid.RenderTransform>
+                <CompositeTransform/>
+            </Grid.RenderTransform>
+
+            <Grid
+                x:Name="ImageCanvas"
+                Tap="Canvas_OnTap"
+                Background="Transparent">
+
+                <Image
+                    x:Name="Photo"
+                    Stretch="Fill"
+                    CacheMode="BitmapCache"
+                    IsHitTestVisible="False"/>
+                
+                <photos:DrawingOverlay
+                    x:Name="DrawCanvas"
+                    BrushColor="{Binding BrushColor, ElementName=ColorPicker}"
+                    BrushThickness="{Binding BrushThickness, ElementName=ColorPicker}"
+                    DrawActionStarted="DrawCanvasOnDrawActionStarted"
+                    DrawActionComplete="DrawCanvasOnDrawActionComplete"/>
+
+                <controls:DropShadowTextBox
+                    x:Name="HintTextBlock"
+                    Foreground="White"
+                    FontSize="20"
+                    TextAlignment="Center"
+                    HorizontalAlignment="Stretch"
+                    TextWrapping="Wrap"
+                    VerticalAlignment="Top"
+                    Text="{Binding StringLibrary.PhotoEdit_Nux_Text, Source={StaticResource LocalizedStrings}}"
+                    Margin="10,20"
+                    IsEnabled="False"
+                    Visibility="Collapsed"/>
+                <Grid
+                    x:Name="PhotoTextGrid"
+                    CacheMode="BitmapCache"
+                    ManipulationDelta="PhotoTextGrid_OnManipulationDelta"
+                    Background="Transparent"
+                    SizeChanged="PhotoTextGrid_OnSizeChanged">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <controls:DropShadowTextBox
+                        x:Name="PhotoEditText"
+                        Grid.Row="0"
+                        Padding="10,0"
+                        TextAlignment="Center"
+                        TextWrapping="Wrap"
+                        GotFocus="PhotoEditText_OnGotFocus"
+                        LostFocus="PhotoEditText_OnLostFocus"
+                        TextChanged="PhotoEditText_OnTextChanged"
+                        Foreground="White"
+                        FontSize="{Binding RelativeSource={RelativeSource Self}, Path=Text, Converter={StaticResource FontSizeFromTextLengthConverter}}"
+                        Width="{Binding Width, ElementName=ImageCanvas}">
+                    </controls:DropShadowTextBox>
+                    <controls:ImageButton
+                        x:Name ="RemoveTextButton"
+                        Source="/Assets/Icons/delete.png"
+                        SelectedSource="/Assets/Icons/delete_selected.png"
+                        Grid.Row="1"
+                        Width="40"
+                        Height="40"
+                        Click="RemoveTextButton_OnClick"
+                        HorizontalAlignment="Center"
+                        IsEnabled="false"
+                        Margin="0,10,0,0"
+                        Opacity="0.0"/>
+                    <Grid.RenderTransform>
+                        <TranslateTransform x:Name="TextBoxTranslateTransform"/>
+                    </Grid.RenderTransform>
+                </Grid>
+
+            </Grid>
+
+            <photos:ColorPickerOverlay
+                x:Name="ColorPicker"
+                Visibility="Visible"/>
+
+            <controls:FBMessengerProgressBar
+                x:Name="MessengerProgressBar"
+                Visibility="Collapsed"
+                VerticalAlignment="Top"
+                IsIndeterminate="False"/>
+        </Grid>
+        
+        <controls:ImageButton
+            x:Name ="UndoButton"
+            Source="/Assets/Icons/undo.png"
+            SelectedSource="/Assets/Icons/undo_selected.png"
+            Grid.Column="0"
+            Width="48"
+            Height="48"
+            Margin="0,0,0,20"
+            Click="UndoButton_OnClick"
+            VerticalAlignment="Bottom"
+            Opacity="0.5"
+            IsEnabled="false"
+            Visibility="Collapsed">
+        </controls:ImageButton>
+
+        <Grid
+            x:Name="CustomApplicationBar"
+            Background="{StaticResource MessengerBlueBrush}"
+            VerticalAlignment="Bottom"
+            Height="{StaticResource AppBarHeight}">
+            <StackPanel
+                Orientation="Horizontal"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center">
+                <controls:CircledIcon
+                    x:Name="SendButton"
+                    Source="/Assets/AppBar/SendMessage.png"
+                    Style="{StaticResource AppBarButtonStyle}"
+                    Click="SendButton_OnClick"/>
+
+                <controls:CircledIcon
+                    x:Name="TextButton"
+                    Source="/Assets/AppBar/Text.png"
+                    SelectedSource="/Assets/AppBar/TextSelected.png"
+                    Style="{StaticResource AppBarButtonStyle}"
+                    Click="TextButton_OnClick"/>
+
+                <controls:CircledIcon
+                    x:Name="EditButton"
+                    Source="/Assets/AppBar/Edit.png"
+                    SelectedSource="/Assets/AppBar/EditSelected.png"
+                    Style="{StaticResource AppBarButtonStyle}"
+                    Click="EditButton_OnClick"/>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</controls:FacebookPopup>

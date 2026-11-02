@@ -1,0 +1,90 @@
+﻿<UserControl x:Class="Facebook.Messenger.WP8.Controls.RageShakeControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:base="clr-namespace:Facebook.Messenger.WP8.Controls.Base"
+    mc:Ignorable="d"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    Background="White"
+    Width="480"
+    d:DesignHeight="480" d:DesignWidth="480">
+
+    <UserControl.Resources>
+        <Style x:Key="InputText" TargetType="TextBox" BasedOn="{StaticResource LoginTextBoxStyle2}">
+            <Setter Property="FontSize" Value="{StaticResource PhoneFontSizeMedium}"/>
+            <Setter Property="Padding"  Value="10,9,3,2"/>
+        </Style>
+
+        <Style x:Key="HintText" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="{StaticResource PhoneFontSizeMedium}"/>
+            <Setter Property="Margin" Value="10,0,0,0" />
+        </Style>
+    </UserControl.Resources>
+
+    <Border
+        Padding="10,30,10,10"
+        Background="White">
+        <Grid
+            x:Name="LayoutRoot"
+            HorizontalAlignment="Stretch">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+        
+            <TextBlock
+                Grid.Row="0"
+                Text="{Binding InternalStringsLibrary.Rage_Shake_Title, Source={StaticResource LocalizedStrings}}"
+                FontSize="{StaticResource PhoneFontSizeExtraLarge}"/>
+        
+            <TextBlock
+                Grid.Row="1"
+                Text="{Binding InternalStringsLibrary.Rage_Shake_Body, Source={StaticResource LocalizedStrings}}"
+                FontSize="{StaticResource PhoneFontSizeMedium}"/>
+
+            <ScrollViewer
+                Grid.Row="2"
+                MaxHeight="150">
+                <base:HintTextBox
+                    TextWrapping="Wrap"
+                    x:Name="Details"
+                    AcceptsReturn="True"
+                    InputScope="Text"
+                    TextBoxStyle="{StaticResource InputText}"
+                    HintStyle="{StaticResource HintText}"
+                    Hint="{Binding InternalStringsLibrary.Rage_Shake_HintText, Source={StaticResource LocalizedStrings}}"/>
+            </ScrollViewer>
+        
+            <Grid
+                Grid.Row="3">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Button
+                    Grid.Column="0"
+                    Click="CancelButton_OnClick"
+                    Content="{Binding InternalStringsLibrary.Rage_Shake_Button_Cancel, Source={StaticResource LocalizedStrings}}"/>
+
+                <Button
+                    Grid.Column="1"
+                    Click="MessageButton_OnClick"
+                    Content="{Binding InternalStringsLibrary.Rage_Shake_Button_Message, Source={StaticResource LocalizedStrings}}"/>
+
+                <Button
+                    Grid.Column="2"
+                    Click="EmailButton_OnClick"
+                    Content="{Binding InternalStringsLibrary.Rage_Shake_Button_Email, Source={StaticResource LocalizedStrings}}"/>
+            </Grid>
+        </Grid>
+    </Border>
+
+</UserControl>

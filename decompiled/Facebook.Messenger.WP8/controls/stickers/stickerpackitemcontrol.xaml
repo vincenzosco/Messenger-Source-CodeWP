@@ -1,0 +1,65 @@
+﻿<stickers:AbstractStickerPackItemControl
+    x:Class="Facebook.Messenger.WP8.Controls.Stickers.StickerPackItemControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:controls="clr-namespace:Facebook.Messenger.WP8.Controls"
+    xmlns:ex="clr-namespace:Facebook.Messenger.WP8.Extensions"
+    xmlns:pixelLab="clr-namespace:PixelLab"
+    xmlns:stickers="clr-namespace:Facebook.Messenger.WP8.Controls.Stickers"
+    mc:Ignorable="d"
+    d:DesignHeight="480" d:DesignWidth="480">
+
+    <Grid Tap="OnItemTapped">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Image
+            Grid.Column="0"
+            Grid.Row="0"
+            x:Name="StickerPackPicture"
+            ex:ImageCacheExtensions.ImageUri="{Binding ThumbnailImage.Url}"
+            Stretch="UniformToFill"
+            Width="90" 
+            Height="90"
+            Margin="10" />
+        <controls:FBMessengerProgressBar
+            Name="DownloadProgressBar"
+            VerticalAlignment="Bottom"
+            Width="90"
+            Height="5"
+            Minimum="0"
+            Maximum="100"
+            IsIndeterminate="{Binding HasDownloadProgress, Converter={StaticResource InverseBoolConverter}}"
+            Visibility="Collapsed"
+            Value="{Binding DownloadProgress}"/>
+        <StackPanel
+            Margin="10, 0, 10, 0"
+            Grid.Column="1"
+            Grid.Row="0"
+            VerticalAlignment="Center">
+            <pixelLab:DynamicTextBlock
+                Text="{Binding Name}"
+                FontSize="{StaticResource PhoneFontSizeLarge}"/>
+            <TextBlock
+                Text="{Binding Artist}"
+                FontSize="{StaticResource PhoneFontSizeSmall}"
+                Foreground="{StaticResource MessengerTextLightGreyBrush}" />
+        </StackPanel>
+        <Image
+            x:Name="DownloadedImage"
+            VerticalAlignment="Center"
+            Grid.Column="2"
+            Width="20"
+            Margin="0,0,0,0"
+            Source="/Assets/Threads/inboxSeenIcon.png"
+            Visibility="Collapsed"/>
+    </Grid>
+
+</stickers:AbstractStickerPackItemControl>

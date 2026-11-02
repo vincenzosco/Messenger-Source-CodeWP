@@ -1,0 +1,70 @@
+﻿<controls:ContactListItemControl x:Class="Facebook.Messenger.WP8.Controls.ContactUserControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:controls="clr-namespace:Facebook.Messenger.WP8.Controls"
+    xmlns:pixelLab="clr-namespace:PixelLab"
+    xmlns:ex="clr-namespace:Facebook.Messenger.WP8.Extensions"
+    mc:Ignorable="d"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    ex:TiltEffect.IsTiltEnabled="True"
+    d:DesignHeight="100" d:DesignWidth="480"
+    x:Name="ContactUserControlRoot">
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <controls:UserTile
+                Margin="0,6,5,6"
+                x:Name="UserTile"
+                Grid.Column="0"
+                Grid.Row="0"
+                Height="80"
+                Width="80"
+                IndicatorDiameter="20"/>
+            <pixelLab:DynamicTextBlock
+                Style="{StaticResource ActiveUserDynamicTextBlockStyle}"
+                Margin="10"
+                x:Name="NameTextBlock"
+                Foreground="{Binding IsSelected, Converter={StaticResource BoolToHighlightConverter}}"
+                Grid.Column="1"
+                Grid.Row="0"
+                Text="{Binding Name}"
+                VerticalAlignment="Center"/>
+            <Grid Grid.Column="2"
+                  VerticalAlignment="Stretch"
+                  Tap="ContactCard_OnTap"
+                  Background="Transparent">
+                <Image Source="/Assets/Contacts/PhoneContact.png" 
+                       Visibility="{Binding IsPhoneOnlyContact, Converter={StaticResource BoolToVisibilityConverter}}"/>
+            </Grid>
+            <Grid Visibility="{Binding Path=AllowSelection, ElementName=ContactUserControlRoot, Converter={StaticResource BoolToVisibilityConverter}, ConverterParameter=1}"
+                  Margin="0,10,10,10"
+                  Grid.Column="3"
+                  Grid.Row="0">
+            </Grid>
+            <Image Grid.Column="4"
+                   Source="/Assets/Contacts/DeselectMember.png"
+                   x:Name="DeselectOption"
+                   Tap="Deselect_OnTap"
+                   Visibility="Collapsed"/>
+            
+            <Image Grid.Column="4"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Right"
+                   Source ="/Assets/Generic/BlueCheck.png"
+                   Visibility="{Binding IsSelected, Converter={StaticResource BoolToVisibilityConverter}}"/>
+        </Grid>
+    </Grid>
+</controls:ContactListItemControl>

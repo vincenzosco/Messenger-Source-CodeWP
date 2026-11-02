@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{C8E2CFAC-99B5-488D-A6E1-3CEDC71CE83C}</ProjectGuid>
+    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <OutputType>Library</OutputType>
+    <LangVersion>14.0</LangVersion>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <AssemblyName>Facebook-Models</AssemblyName>
+    <TargetFrameworkIdentifier>.NETPortable</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Profile78</TargetFrameworkProfile>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System.Runtime" />
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>extracted\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ObjectModel" />
+    <Reference Include="ThriftPortable">
+      <HintPath>extracted\ThriftPortable.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Collections" />
+    <Reference Include="System.Runtime.Serialization.Primitives" />
+    <Reference Include="Facebook-Base">
+      <HintPath>extracted\Facebook-Base.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks" />
+    <Reference Include="System.Net.Primitives">
+      <HintPath>C:\WINDOWS\Microsoft.NET\Framework64\v4.0.30319\System.Net.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Resources.ResourceManager" />
+    <Reference Include="System.Linq" />
+    <Reference Include="System.Threading" />
+    <Reference Include="System.Diagnostics.Debug" />
+    <Reference Include="System.Globalization" />
+    <Reference Include="System.IO" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Facebook\Base\Settings\IGlobalSettings.cs" />
+    <Compile Include="Facebook\Base\Settings\IPasswordSettings.cs" />
+    <Compile Include="Facebook\Base\Settings\IUserSettings.cs" />
+    <Compile Include="Facebook\Base\Settings\IUserSettingsProvider.cs" />
+    <Compile Include="Facebook\Models\AboutType.cs" />
+    <Compile Include="Facebook\Models\ActionCount.cs" />
+    <Compile Include="Facebook\Models\Actor.cs" />
+    <Compile Include="Facebook\Models\ActorCollectionNode.cs" />
+    <Compile Include="Facebook\Models\ActorNode.cs" />
+    <Compile Include="Facebook\Models\Address.cs" />
+    <Compile Include="Facebook\Models\AffiliationsInfo.cs" />
+    <Compile Include="Facebook\Models\Attachment.cs" />
+    <Compile Include="Facebook\Models\BaseRange.cs" />
+    <Compile Include="Facebook\Models\BasicInfo.cs" />
+    <Compile Include="Facebook\Models\Body.cs" />
+    <Compile Include="Facebook\Models\BodyConverter.cs" />
+    <Compile Include="Facebook\Models\Bookmark.cs" />
+    <Compile Include="Facebook\Models\BookmarkSection.cs" />
+    <Compile Include="Facebook\Models\Byline.cs" />
+    <Compile Include="Facebook\Models\CaptionTag.cs" />
+    <Compile Include="Facebook\Models\CheckinType.cs" />
+    <Compile Include="Facebook\Models\ClientTypes.cs" />
+    <Compile Include="Facebook\Models\CollapseEdgesConverter.cs" />
+    <Compile Include="Facebook\Models\CollapseNodesConverter.cs" />
+    <Compile Include="Facebook\Models\Comment.cs" />
+    <Compile Include="Facebook\Models\CommentAttachment.cs" />
+    <Compile Include="Facebook\Models\CommentNode.cs" />
+    <Compile Include="Facebook\Models\Contact.cs" />
+    <Compile Include="Facebook\Models\ConverterHelper.cs" />
+    <Compile Include="Facebook\Models\CoordinatesConverter.cs" />
+    <Compile Include="Facebook\Models\CoverPhoto.cs" />
+    <Compile Include="Facebook\Models\DeliveryReceipt.cs" />
+    <Compile Include="Facebook\Models\DeliveryReceiptConverter.cs" />
+    <Compile Include="Facebook\Models\DictionaryKeysToListConverter.cs" />
+    <Compile Include="Facebook\Models\DigitalGoodsUnit.cs" />
+    <Compile Include="Facebook\Models\EducationExperience.cs" />
+    <Compile Include="Facebook\Models\EducationExperiencesConverter.cs" />
+    <Compile Include="Facebook\Models\Entity.cs" />
+    <Compile Include="Facebook\Models\Event.cs" />
+    <Compile Include="Facebook\Models\EventDescription.cs" />
+    <Compile Include="Facebook\Models\EventListItemModel.cs" />
+    <Compile Include="Facebook\Models\EventListMiscItem.cs" />
+    <Compile Include="Facebook\Models\EventMemberChangedSignal.cs" />
+    <Compile Include="Facebook\Models\EventMembersUpdateSignal.cs" />
+    <Compile Include="Facebook\Models\EventTimeRange.cs" />
+    <Compile Include="Facebook\Models\EventType.cs" />
+    <Compile Include="Facebook\Models\EventUserNode.cs" />
+    <Compile Include="Facebook\Models\ExperienceWithConverter.cs" />
+    <Compile Include="Facebook\Models\FacebookAbout.cs" />
+    <Compile Include="Facebook\Models\FacebookAlbum.cs" />
+    <Compile Include="Facebook\Models\FacebookAudience.cs" />
+    <Compile Include="Facebook\Models\FacebookCheckin.cs" />
+    <Compile Include="Facebook\Models\FacebookConfig.cs" />
+    <Compile Include="Facebook\Models\FacebookContext.cs" />
+    <Compile Include="Facebook\Models\FacebookCredentials.cs" />
+    <Compile Include="Facebook\Models\FacebookDateConverter.cs" />
+    <Compile Include="Facebook\Models\FacebookDefaultPrivacy.cs" />
+    <Compile Include="Facebook\Models\FacebookFriendAudienceList.cs" />
+    <Compile Include="Facebook\Models\FacebookFriendRequest.cs" />
+    <Compile Include="Facebook\Models\FacebookGroup.cs" />
+    <Compile Include="Facebook\Models\FacebookImage.cs" />
+    <Compile Include="Facebook\Models\FacebookMedia.cs" />
+    <Compile Include="Facebook\Models\FacebookNotification.cs" />
+    <Compile Include="Facebook\Models\FacebookPhoto.cs" />
+    <Compile Include="Facebook\Models\FacebookPlace.cs" />
+    <Compile Include="Facebook\Models\FacebookPostResponse.cs" />
+    <Compile Include="Facebook\Models\FacebookProfile.cs" />
+    <Compile Include="Facebook\Models\FacebookProfileGraphQl.cs" />
+    <Compile Include="Facebook\Models\FacebookSession.cs" />
+    <Compile Include="Facebook\Models\FacebookSettings.cs" />
+    <Compile Include="Facebook\Models\FacebookSubType.cs" />
+    <Compile Include="Facebook\Models\FacebookSubTypeConverter.cs" />
+    <Compile Include="Facebook\Models\FacebookType.cs" />
+    <Compile Include="Facebook\Models\FacebookUberSearchResult.cs" />
+    <Compile Include="Facebook\Models\FacebookUser.cs" />
+    <Compile Include="Facebook\Models\FacebookWithFriendTag.cs" />
+    <Compile Include="Facebook\Models\FamilyConverter.cs" />
+    <Compile Include="Facebook\Models\FamilyMember.cs" />
+    <Compile Include="Facebook\Models\FeaturedContent.cs" />
+    <Compile Include="Facebook\Models\FeaturedNode.cs" />
+    <Compile Include="Facebook\Models\FeaturedObject.cs" />
+    <Compile Include="Facebook\Models\FeedAlbum.cs" />
+    <Compile Include="Facebook\Models\Feedback.cs" />
+    <Compile Include="Facebook\Models\FeedItem.cs" />
+    <Compile Include="Facebook\Models\FeedMedia.cs" />
+    <Compile Include="Facebook\Models\FeedNode.cs" />
+    <Compile Include="Facebook\Models\FeedPhoto.cs" />
+    <Compile Include="Facebook\Models\FeedSection.cs" />
+    <Compile Include="Facebook\Models\Focus.cs" />
+    <Compile Include="Facebook\Models\Friend.cs" />
+    <Compile Include="Facebook\Models\FriendRequestStatus.cs" />
+    <Compile Include="Facebook\Models\Gender.cs" />
+    <Compile Include="Facebook\Models\Group.cs" />
+    <Compile Include="Facebook\Models\GroupIcon.cs" />
+    <Compile Include="Facebook\Models\GroupStoryEdges.cs" />
+    <Compile Include="Facebook\Models\GroupStoryNodes.cs" />
+    <Compile Include="Facebook\Models\GroupVisibility.cs" />
+    <Compile Include="Facebook\Models\IAboutType.cs" />
+    <Compile Include="Facebook\Models\IEventType.cs" />
+    <Compile Include="Facebook\Models\IGroupHeader.cs" />
+    <Compile Include="Facebook\Models\Inviter.cs" />
+    <Compile Include="Facebook\Models\JewelCount.cs" />
+    <Compile Include="Facebook\Models\JewelCounts.cs" />
+    <Compile Include="Facebook\Models\JsonConverters\EventRSVPStatusConverter.cs" />
+    <Compile Include="Facebook\Models\JsonConverters\FormattedDateTimeConverter.cs" />
+    <Compile Include="Facebook\Models\JsonConverters\UnixDateTimeConverter.cs" />
+    <Compile Include="Facebook\Models\LastActive.cs" />
+    <Compile Include="Facebook\Models\ListJsonConverter.cs" />
+    <Compile Include="Facebook\Models\LivingCity.cs" />
+    <Compile Include="Facebook\Models\LoadFinishedSignal.cs" />
+    <Compile Include="Facebook\Models\LoadMoreType.cs" />
+    <Compile Include="Facebook\Models\LoadStartedSignal.cs" />
+    <Compile Include="Facebook\Models\LogConverter.cs" />
+    <Compile Include="Facebook\Models\LogoutEventArgs.cs" />
+    <Compile Include="Facebook\Models\MachineId.cs" />
+    <Compile Include="Facebook\Models\MailAttachment.cs" />
+    <Compile Include="Facebook\Models\MailCoordinates.cs" />
+    <Compile Include="Facebook\Models\MailFolderCount.cs" />
+    <Compile Include="Facebook\Models\MailMessage.cs" />
+    <Compile Include="Facebook\Models\MailMessageNewestFirstComparer.cs" />
+    <Compile Include="Facebook\Models\MailShare.cs" />
+    <Compile Include="Facebook\Models\MailThread.cs" />
+    <Compile Include="Facebook\Models\MailThreadAction.cs" />
+    <Compile Include="Facebook\Models\MailUser.cs" />
+    <Compile Include="Facebook\Models\MediaSource.cs" />
+    <Compile Include="Facebook\Models\MessageAggregatedRange.cs" />
+    <Compile Include="Facebook\Models\MessageClassifier.cs" />
+    <Compile Include="Facebook\Models\MessageRange.cs" />
+    <Compile Include="Facebook\Models\MessageTags.cs" />
+    <Compile Include="Facebook\Models\MuteJsonConvertor.cs" />
+    <Compile Include="Facebook\Models\NamePart.cs" />
+    <Compile Include="Facebook\Models\NameStringPropertyConverter.cs" />
+    <Compile Include="Facebook\Models\Notifiable.cs" />
+    <Compile Include="Facebook\Models\NotificationType.cs" />
+    <Compile Include="Facebook\Models\ObjectComments.cs" />
+    <Compile Include="Facebook\Models\PageData.cs" />
+    <Compile Include="Facebook\Models\PageInfo.cs" />
+    <Compile Include="Facebook\Models\Phone.cs" />
+    <Compile Include="Facebook\Models\PhoneContacts\FBContactBirthday.cs" />
+    <Compile Include="Facebook\Models\PhoneContacts\FBContactEmail.cs" />
+    <Compile Include="Facebook\Models\PhoneContacts\FBContactName.cs" />
+    <Compile Include="Facebook\Models\PhoneContacts\FBContactPhoneNumber.cs" />
+    <Compile Include="Facebook\Models\PhoneContacts\FBPhoneContact.cs" />
+    <Compile Include="Facebook\Models\PhoneInfo.cs" />
+    <Compile Include="Facebook\Models\PhoneNumber.cs" />
+    <Compile Include="Facebook\Models\PhoneType.cs" />
+    <Compile Include="Facebook\Models\PhotoTagEdge.cs" />
+    <Compile Include="Facebook\Models\PhotoTagLocation.cs" />
+    <Compile Include="Facebook\Models\PhotoTagObject.cs" />
+    <Compile Include="Facebook\Models\PhotoTags.cs" />
+    <Compile Include="Facebook\Models\PhotoTagToPost.cs" />
+    <Compile Include="Facebook\Models\PinnedThread.cs" />
+    <Compile Include="Facebook\Models\Place.cs" />
+    <Compile Include="Facebook\Models\Privacy.cs" />
+    <Compile Include="Facebook\Models\PrivacyOption.cs" />
+    <Compile Include="Facebook\Models\PrivacyScope.cs" />
+    <Compile Include="Facebook\Models\ProfileType.cs" />
+    <Compile Include="Facebook\Models\Push\FacebookPushUtil.cs" />
+    <Compile Include="Facebook\Models\Rank.cs" />
+    <Compile Include="Facebook\Models\ReadReceipt.cs" />
+    <Compile Include="Facebook\Models\RecentPhoto.cs" />
+    <Compile Include="Facebook\Models\RecipientChatOrigin.cs" />
+    <Compile Include="Facebook\Models\Relationship.cs" />
+    <Compile Include="Facebook\Models\ReportInfo.cs" />
+    <Compile Include="Facebook\Models\RSVPStatus.cs" />
+    <Compile Include="Facebook\Models\SchoolClass.cs" />
+    <Compile Include="Facebook\Models\SchoolClassesConverter.cs" />
+    <Compile Include="Facebook\Models\SearchResultType.cs" />
+    <Compile Include="Facebook\Models\SectionFeed.cs" />
+    <Compile Include="Facebook\Models\SectionInfo.cs" />
+    <Compile Include="Facebook\Models\SelectableFeedSections.cs" />
+    <Compile Include="Facebook\Models\SelectableFeedSectionsViewer.cs" />
+    <Compile Include="Facebook\Models\Shareable.cs" />
+    <Compile Include="Facebook\Models\Signals\CacheInboxDataClearedSignal.cs" />
+    <Compile Include="Facebook\Models\Signals\CacheMarkedQueuedThreadsFailedSignal.cs" />
+    <Compile Include="Facebook\Models\Signals\CacheMessagesUpdatedSignal.cs" />
+    <Compile Include="Facebook\Models\Signals\CachePinnedThreadUpdatedSignal.cs" />
+    <Compile Include="Facebook\Models\Signals\CacheRecentStickersUpdatedSignal.cs" />
+    <Compile Include="Facebook\Models\Signals\CacheStickerPacksUpdatedSignal.cs" />
+    <Compile Include="Facebook\Models\Signals\CacheThreadUpdatedSignal.cs" />
+    <Compile Include="Facebook\Models\Signals\ChatSettingSignal.cs" />
+    <Compile Include="Facebook\Models\Signals\ContactSyncToggled.cs" />
+    <Compile Include="Facebook\Models\Signals\DataTypeCleared.cs" />
+    <Compile Include="Facebook\Models\Signals\FriendsSyncComplete.cs" />
+    <Compile Include="Facebook\Models\Signals\FriendsUpdatedSignal.cs" />
+    <Compile Include="Facebook\Models\Signals\GlobalMuteSignal.cs" />
+    <Compile Include="Facebook\Models\Signals\GroupPinnedSignal.cs" />
+    <Compile Include="Facebook\Models\Signals\LoginSignal.cs" />
+    <Compile Include="Facebook\Models\Signals\LogoutSignal.cs" />
+    <Compile Include="Facebook\Models\Signals\MessageSentSignal.cs" />
+    <Compile Include="Facebook\Models\Signals\MessageTypingReceivedSignal.cs" />
+    <Compile Include="Facebook\Models\Signals\MessageTypingSentSignal.cs" />
+    <Compile Include="Facebook\Models\Signals\MqttConnectionStateChangedSignal.cs" />
+    <Compile Include="Facebook\Models\Signals\MqttTypingReceivedSignal.cs" />
+    <Compile Include="Facebook\Models\Signals\OnlineUserSignal.cs" />
+    <Compile Include="Facebook\Models\Signals\PresenceUpdateSignal.cs" />
+    <Compile Include="Facebook\Models\Signals\PresenceUpdateType.cs" />
+    <Compile Include="Facebook\Models\Signals\SyncConnectionStateChangedSignal.cs" />
+    <Compile Include="Facebook\Models\Signals\SyncMessageSignal.cs" />
+    <Compile Include="Facebook\Models\SlopBucket.cs" />
+    <Compile Include="Facebook\Models\SponsoredData.cs" />
+    <Compile Include="Facebook\Models\Sticker.cs" />
+    <Compile Include="Facebook\Models\StickerPack.cs" />
+    <Compile Include="Facebook\Models\StickerPackType.cs" />
+    <Compile Include="Facebook\Models\StickersConverter.cs" />
+    <Compile Include="Facebook\Models\Story.cs" />
+    <Compile Include="Facebook\Models\StoryType.cs" />
+    <Compile Include="Facebook\Models\StringEntity.cs" />
+    <Compile Include="Facebook\Models\StringPropertyConverter.cs" />
+    <Compile Include="Facebook\Models\StructuredName.cs" />
+    <Compile Include="Facebook\Models\SubscribeStatus.cs" />
+    <Compile Include="Facebook\Models\SyncProtocol\AppAttributionVisibility.cs" />
+    <Compile Include="Facebook\Models\SyncProtocol\Attachment.cs" />
+    <Compile Include="Facebook\Models\SyncProtocol\AttachmentAppAttribution.cs" />
+    <Compile Include="Facebook\Models\SyncProtocol\ClientPayload.cs" />
+    <Compile Include="Facebook\Models\SyncProtocol\Coordinates.cs" />
+    <Compile Include="Facebook\Models\SyncProtocol\DeltaAdminTextMessage.cs" />
+    <Compile Include="Facebook\Models\SyncProtocol\DeltaBroadcastMessage.cs" />
+    <Compile Include="Facebook\Models\SyncProtocol\DeltaDeliveryReceipt.cs" />
+    <Compile Include="Facebook\Models\SyncProtocol\DeltaFolderCount.cs" />
+    <Compile Include="Facebook\Models\SyncProtocol\DeltaForcedFetch.cs" />
+    <Compile Include="Facebook\Models\SyncProtocol\DeltaMarkFolderSeen.cs" />
+    <Compile Include="Facebook\Models\SyncProtocol\DeltaMarkRead.cs" />
+    <Compile Include="Facebook\Models\SyncProtocol\DeltaMarkUnread.cs" />
+    <Compile Include="Facebook\Models\SyncProtocol\DeltaMessageDelete.cs" />
+    <Compile Include="Facebook\Models\SyncProtocol\DeltaNewGroupThread.cs" />
+    <Compile Include="Facebook\Models\SyncProtocol\DeltaNewMessage.cs" />
+    <Compile Include="Facebook\Models\SyncProtocol\DeltaNoOp.cs" />
+    <Compile Include="Facebook\Models\SyncProtocol\DeltaNotificationSettings.cs" />
+    <Compile Include="Facebook\Models\SyncProtocol\DeltaP2PPaymentMessage.cs" />
+    <Compile Include="Facebook\Models\SyncProtocol\DeltaPageAdminReply.cs" />
+    <Compile Include="Facebook\Models\SyncProtocol\DeltaPagesManagerEvent.cs" />
+    <Compile Include="Facebook\Models\SyncProtocol\DeltaParticipantLeftGroupThread.cs" />
+    <Compile Include="Facebook\Models\SyncProtocol\DeltaParticipantsAddedToGroupThread.cs" />
+    <Compile Include="Facebook\Models\SyncProtocol\DeltaPinnedGroups.cs" />
+    <Compile Include="Facebook\Models\SyncProtocol\DeltaReadReceipt.cs" />
+    <Compile Include="Facebook\Models\SyncProtocol\DeltaRTCEventLog.cs" />
+    <Compile Include="Facebook\Models\SyncProtocol\DeltaSentMessage.cs" />
+    <Compile Include="Facebook\Models\SyncProtocol\DeltaThreadAction.cs" />
+    <Compile Include="Facebook\Models\SyncProtocol\DeltaThreadDelete.cs" />
+    <Compile Include="Facebook\Models\SyncProtocol\DeltaThreadFolder.cs" />
+    <Compile Include="Facebook\Models\SyncProtocol\DeltaThreadImage.cs" />
+    <Compile Include="Facebook\Models\SyncProtocol\DeltaThreadMuteSettings.cs" />
+    <Compile Include="Facebook\Models\SyncProtocol\DeltaThreadName.cs" />
+    <Compile Include="Facebook\Models\SyncProtocol\DeltaType.cs" />
+    <Compile Include="Facebook\Models\SyncProtocol\DeltaVideoCall.cs" />
+    <Compile Include="Facebook\Models\SyncProtocol\DeltaWrapper.cs" />
+    <Compile Include="Facebook\Models\SyncProtocol\FailedSend.cs" />
+    <Compile Include="Facebook\Models\SyncProtocol\FolderCountType.cs" />
+    <Compile Include="Facebook\Models\SyncProtocol\ImageMetadata.cs" />
+    <Compile Include="Facebook\Models\SyncProtocol\ImageSource.cs" />
+    <Compile Include="Facebook\Models\SyncProtocol\MessageLifetime.cs" />
+    <Compile Include="Facebook\Models\SyncProtocol\MessageMetadata.cs" />
+    <Compile Include="Facebook\Models\SyncProtocol\MqttThriftHeader.cs" />
+    <Compile Include="Facebook\Models\SyncProtocol\NotificationDoNotDisturbRange.cs" />
+    <Compile Include="Facebook\Models\SyncProtocol\PageAdminReplyType.cs" />
+    <Compile Include="Facebook\Models\SyncProtocol\ParticipantInfo.cs" />
+    <Compile Include="Facebook\Models\SyncProtocol\PaymentLogMessageType.cs" />
+    <Compile Include="Facebook\Models\SyncProtocol\RTCEventType.cs" />
+    <Compile Include="Facebook\Models\SyncProtocol\TagCount.cs" />
+    <Compile Include="Facebook\Models\SyncProtocol\ThreadAction.cs" />
+    <Compile Include="Facebook\Models\SyncProtocol\ThreadFolder.cs" />
+    <Compile Include="Facebook\Models\SyncProtocol\ThreadKey.cs" />
+    <Compile Include="Facebook\Models\SyncProtocol\VideoMetadata.cs" />
+    <Compile Include="Facebook\Models\SyncProtocol\VideoSource.cs" />
+    <Compile Include="Facebook\Models\Target.cs" />
+    <Compile Include="Facebook\Models\ThreadFbid.cs" />
+    <Compile Include="Facebook\Models\ThreadFbidConverter.cs" />
+    <Compile Include="Facebook\Models\TimelineAppSection.cs" />
+    <Compile Include="Facebook\Models\TimelineCollectionAppSection.cs" />
+    <Compile Include="Facebook\Models\TimelineCollectionAppSections.cs" />
+    <Compile Include="Facebook\Models\TimelineCollectionNode.cs" />
+    <Compile Include="Facebook\Models\TimelineData.cs" />
+    <Compile Include="Facebook\Models\TimelineFriends.cs" />
+    <Compile Include="Facebook\Models\TimelineFriendsContainer.cs" />
+    <Compile Include="Facebook\Models\TimelineItems.cs" />
+    <Compile Include="Facebook\Models\TimelineNode.cs" />
+    <Compile Include="Facebook\Models\TimelineObject.cs" />
+    <Compile Include="Facebook\Models\TimelineSection.cs" />
+    <Compile Include="Facebook\Models\TimelineSectionNode.cs" />
+    <Compile Include="Facebook\Models\TimelineSections.cs" />
+    <Compile Include="Facebook\Models\TimeRange.cs" />
+    <Compile Include="Facebook\Models\TimestampObject.cs" />
+    <Compile Include="Facebook\Models\Utilities\LoggedInUserUtils.cs" />
+    <Compile Include="Facebook\Models\VideoResult.cs" />
+    <Compile Include="Facebook\Models\ViewerActsAsPage.cs" />
+    <Compile Include="Facebook\Models\WorkExperience.cs" />
+    <Compile Include="Facebook\Models\WorkExperiencesConverter.cs" />
+    <Compile Include="Facebook\Models\WorkProject.cs" />
+    <Compile Include="Facebook\Models\WorkProjectsConverter.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+</Project>

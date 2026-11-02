@@ -1,0 +1,26 @@
+﻿<UserControl x:Class="Facebook.Messenger.WP8.Controls.ProfileIndicatorControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    d:DesignHeight="40" d:DesignWidth="40">
+    
+    <Grid x:Name="Border" 
+          Background="White">
+        
+        <Grid x:Name="Clipper">
+            <Image x:Name="FacebookIcon"
+                   Source="/Assets/profileImageIndicatorFb.png" 
+                   Stretch="UniformToFill"/>
+            
+            <Image x:Name="MessengerIcon"
+                   Visibility="Collapsed"
+                   Source="/Assets/profileImageIndicatorMsgr.png" 
+                   Stretch="UniformToFill"/>
+        </Grid>
+    </Grid>
+</UserControl>

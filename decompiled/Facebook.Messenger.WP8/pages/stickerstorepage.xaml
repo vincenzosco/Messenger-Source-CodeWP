@@ -1,0 +1,54 @@
+﻿<pages:StickerStoreViewModelPage
+    x:Class="Facebook.Messenger.WP8.Pages.StickerStorePage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:pages="clr-namespace:Facebook.Messenger.WP8.Pages"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:stickers="clr-namespace:Facebook.Messenger.WP8.Controls.Stickers"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d">
+
+    <Grid x:Name="LayoutRoot">
+        <phone:Pivot
+            Title="{Binding StringLibrary.Sticker_Store_Title, Source={StaticResource LocalizedStrings}}"
+            Style="{StaticResource MessengerPivotStyle}">
+            <phone:Pivot.HeaderTemplate>
+                <DataTemplate>
+                    <TextBlock
+                        Style="{StaticResource MessengerPivotHeaderBlockStyle}"
+                        Text="{Binding}" />
+                </DataTemplate>
+            </phone:Pivot.HeaderTemplate>
+            <phone:PivotItem Header="{Binding StringLibrary.Sticker_Store_Tab_Featured, Source={StaticResource LocalizedStrings}}">
+                <stickers:StickerPackListUserControl
+                    x:Name="FeaturedStickerPackList"
+                    EmptyMessage="{Binding AvailableErrorMessage}"
+                    StickerPackRemoved="OnStickerPackRemoved"
+                    StickerPackClicked="OnStickerPackClicked"
+                    StickerPacks="{Binding FeaturedStickerPacks}"/>
+            </phone:PivotItem>
+            <phone:PivotItem Header="{Binding StringLibrary.Sticker_Store_Tab_All, Source={StaticResource LocalizedStrings}}">
+                <stickers:StickerPackListUserControl
+                    x:Name="AllStickerPackList"
+                    EmptyMessage="{Binding AvailableErrorMessage}"
+                    StickerPackRemoved="OnStickerPackRemoved"
+                    StickerPackClicked="OnStickerPackClicked"
+                    StickerPacks="{Binding AvailableStickerPacks}"/>
+            </phone:PivotItem>
+            <phone:PivotItem Header="{Binding StringLibrary.Sticker_Store_Tab_Owned, Source={StaticResource LocalizedStrings}}">
+                <stickers:StickerPackListUserControl
+                    x:Name="OwnedStickerPackList"
+                    CanRemoveItems="True"
+                    EmptyMessage="{Binding OwnedErrorMessage}"
+                    StickerPackRemoved="OnStickerPackRemoved"
+                    StickerPackClicked="OnStickerPackClicked"
+                    StickerPacks="{Binding OwnedStickerPacks}"/>
+            </phone:PivotItem>
+        </phone:Pivot>
+    </Grid>
+</pages:StickerStoreViewModelPage>
