@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <ProjectGuid>{1969381B-36AB-ED92-5267-DC980401AEE4}</ProjectGuid>
@@ -90,7 +90,6 @@
     <Reference Include="WebP">
       <HintPath>..\\lib\WebP.winmd</HintPath>
     </Reference>
-    <Reference Include="Windows" />
     <Reference Include="WriteableBitmapExWinPhone">
       <HintPath>..\\lib\WriteableBitmapExWinPhone.dll</HintPath>
     </Reference>  </ItemGroup>

@@ -81,7 +81,7 @@
                 Margin="0"
                 Grid.Row="3"
                 Style="{StaticResource HyperlinkButtonStyle}"
-                Command="{Binding ResendApprovalCodeCommand}"
+                Click="ResendApprovalCode_OnClick"
                 Foreground="Black"/>
         
         <Grid Grid.Row="4"

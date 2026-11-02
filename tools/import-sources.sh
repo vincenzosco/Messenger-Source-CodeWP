@@ -318,6 +318,7 @@ apply_fixups
 python tools/fixups-xaml.py
 python tools/fixups-ambiguous.py
 python tools/fixups-residual.py
+python tools/fixups-links.py
 python tools/fixups-il.py
 python tools/fixups-resources.py
 
