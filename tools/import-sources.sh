@@ -42,6 +42,7 @@ for dll in "$ROOT"/extracted/*.dll; do
     Facebook-Messenger-Localization.dll|ThriftPortable.dll|Facebook-Base-RT.dll)
       continue ;;
   esac
+  case "$name" in Facebook*|ThriftPortable*) continue;; esac  # le assembly di prima parte sono progetti
   cp -n "$dll" "$LIB/$name" 2>/dev/null || true
 done
 for component in "$ROOT"/extracted/*.winmd; do
