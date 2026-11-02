@@ -243,5 +243,3 @@ ModelManifest.xml
 
 # Reverse engineering: toolchain locale, pacchetto originale e payload estratto
 .tools/
-*.xap
-extracted/

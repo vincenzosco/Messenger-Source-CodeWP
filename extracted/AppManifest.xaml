@@ -1,0 +1,91 @@
+﻿<Deployment xmlns="http://schemas.microsoft.com/client/2007/deployment" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" EntryPointAssembly="Facebook.Messenger.WP8" EntryPointType="Facebook.Messenger.WP8.App" RuntimeVersion="6.7.50308.0">
+  <Deployment.Parts>
+    <AssemblyPart x:Name="Facebook.Messenger.WP8" Source="Facebook.Messenger.WP8.dll" />
+    <AssemblyPart x:Name="ExifLib" Source="ExifLib.dll" />
+    <AssemblyPart x:Name="Facebook-Base" Source="Facebook-Base.dll" />
+    <AssemblyPart x:Name="Facebook-Messenger-Localization" Source="Facebook-Messenger-Localization.dll" />
+    <AssemblyPart x:Name="Facebook-Messenger-WP8-Agents" Source="Facebook-Messenger-WP8-Agents.dll" />
+    <AssemblyPart x:Name="Facebook-Messenger-WP8-Base" Source="Facebook-Messenger-WP8-Base.dll" />
+    <AssemblyPart x:Name="Facebook-Models" Source="Facebook-Models.dll" />
+    <AssemblyPart x:Name="Facebook-Services" Source="Facebook-Services.dll" />
+    <AssemblyPart x:Name="GalaSoft.MvvmLight" Source="GalaSoft.MvvmLight.dll" />
+    <AssemblyPart x:Name="GalaSoft.MvvmLight.Extras" Source="GalaSoft.MvvmLight.Extras.dll" />
+    <AssemblyPart x:Name="GalaSoft.MvvmLight.Platform" Source="GalaSoft.MvvmLight.Platform.dll" />
+    <AssemblyPart x:Name="Google.PhoneNumbers" Source="Google.PhoneNumbers.dll" />
+    <AssemblyPart x:Name="JeffWilcox.PhoneThemeManager" Source="JeffWilcox.PhoneThemeManager.dll" />
+    <AssemblyPart x:Name="Microsoft.Phone.Controls" Source="Microsoft.Phone.Controls.dll" />
+    <AssemblyPart x:Name="Microsoft.Phone.Controls.Toolkit" Source="Microsoft.Phone.Controls.Toolkit.dll" />
+    <AssemblyPart x:Name="Microsoft.Practices.ServiceLocation" Source="Microsoft.Practices.ServiceLocation.dll" />
+    <AssemblyPart x:Name="Newtonsoft.Json" Source="Newtonsoft.Json.dll" />
+    <AssemblyPart x:Name="System.Net.Http" Source="System.Net.Http.dll" />
+    <AssemblyPart x:Name="System.Net.Http.Extensions" Source="System.Net.Http.Extensions.dll" />
+    <AssemblyPart x:Name="System.Net.Http.Primitives" Source="System.Net.Http.Primitives.dll" />
+    <AssemblyPart x:Name="System.Windows.Interactivity" Source="System.Windows.Interactivity.dll" />
+    <AssemblyPart x:Name="WriteableBitmapExWinPhone" Source="WriteableBitmapExWinPhone.dll" />
+    <AssemblyPart x:Name="WriteableBitmapExWinPhoneXnaDependant" Source="WriteableBitmapExWinPhoneXnaDependant.dll" />
+    <AssemblyPart x:Name="Zlib.Portable" Source="Zlib.Portable.dll" />
+    <AssemblyPart x:Name="ThriftPortable" Source="ThriftPortable.dll" />
+    <AssemblyPart Source="ar/Facebook.Messenger.WP8.resources.dll" />
+    <AssemblyPart Source="cs-CZ/Facebook.Messenger.WP8.resources.dll" />
+    <AssemblyPart Source="da-DK/Facebook.Messenger.WP8.resources.dll" />
+    <AssemblyPart Source="de-DE/Facebook.Messenger.WP8.resources.dll" />
+    <AssemblyPart Source="el-GR/Facebook.Messenger.WP8.resources.dll" />
+    <AssemblyPart Source="es-ES/Facebook.Messenger.WP8.resources.dll" />
+    <AssemblyPart Source="es/Facebook.Messenger.WP8.resources.dll" />
+    <AssemblyPart Source="fi-FI/Facebook.Messenger.WP8.resources.dll" />
+    <AssemblyPart Source="fil-PH/Facebook.Messenger.WP8.resources.dll" />
+    <AssemblyPart Source="fr-FR/Facebook.Messenger.WP8.resources.dll" />
+    <AssemblyPart Source="hi-IN/Facebook.Messenger.WP8.resources.dll" />
+    <AssemblyPart Source="hr-HR/Facebook.Messenger.WP8.resources.dll" />
+    <AssemblyPart Source="hu-HU/Facebook.Messenger.WP8.resources.dll" />
+    <AssemblyPart Source="id-ID/Facebook.Messenger.WP8.resources.dll" />
+    <AssemblyPart Source="it-IT/Facebook.Messenger.WP8.resources.dll" />
+    <AssemblyPart Source="ja-JP/Facebook.Messenger.WP8.resources.dll" />
+    <AssemblyPart Source="ko-KR/Facebook.Messenger.WP8.resources.dll" />
+    <AssemblyPart Source="ms-MY/Facebook.Messenger.WP8.resources.dll" />
+    <AssemblyPart Source="nb-NO/Facebook.Messenger.WP8.resources.dll" />
+    <AssemblyPart Source="nl-NL/Facebook.Messenger.WP8.resources.dll" />
+    <AssemblyPart Source="pl-PL/Facebook.Messenger.WP8.resources.dll" />
+    <AssemblyPart Source="pt-BR/Facebook.Messenger.WP8.resources.dll" />
+    <AssemblyPart Source="pt-PT/Facebook.Messenger.WP8.resources.dll" />
+    <AssemblyPart Source="ru-RU/Facebook.Messenger.WP8.resources.dll" />
+    <AssemblyPart Source="sk-SK/Facebook.Messenger.WP8.resources.dll" />
+    <AssemblyPart Source="sv-SE/Facebook.Messenger.WP8.resources.dll" />
+    <AssemblyPart Source="th-TH/Facebook.Messenger.WP8.resources.dll" />
+    <AssemblyPart Source="tr-TR/Facebook.Messenger.WP8.resources.dll" />
+    <AssemblyPart Source="vi-VN/Facebook.Messenger.WP8.resources.dll" />
+    <AssemblyPart Source="zh-CN/Facebook.Messenger.WP8.resources.dll" />
+    <AssemblyPart Source="zh-TW/Facebook.Messenger.WP8.resources.dll" />
+    <AssemblyPart Source="ar/Facebook-Messenger-Localization.resources.dll" />
+    <AssemblyPart Source="cs-CZ/Facebook-Messenger-Localization.resources.dll" />
+    <AssemblyPart Source="da-DK/Facebook-Messenger-Localization.resources.dll" />
+    <AssemblyPart Source="de-DE/Facebook-Messenger-Localization.resources.dll" />
+    <AssemblyPart Source="el-GR/Facebook-Messenger-Localization.resources.dll" />
+    <AssemblyPart Source="es/Facebook-Messenger-Localization.resources.dll" />
+    <AssemblyPart Source="es-ES/Facebook-Messenger-Localization.resources.dll" />
+    <AssemblyPart Source="fi-FI/Facebook-Messenger-Localization.resources.dll" />
+    <AssemblyPart Source="fil-PH/Facebook-Messenger-Localization.resources.dll" />
+    <AssemblyPart Source="fr-FR/Facebook-Messenger-Localization.resources.dll" />
+    <AssemblyPart Source="hi-IN/Facebook-Messenger-Localization.resources.dll" />
+    <AssemblyPart Source="hr-HR/Facebook-Messenger-Localization.resources.dll" />
+    <AssemblyPart Source="hu-HU/Facebook-Messenger-Localization.resources.dll" />
+    <AssemblyPart Source="id-ID/Facebook-Messenger-Localization.resources.dll" />
+    <AssemblyPart Source="it-IT/Facebook-Messenger-Localization.resources.dll" />
+    <AssemblyPart Source="ja-JP/Facebook-Messenger-Localization.resources.dll" />
+    <AssemblyPart Source="ko-KR/Facebook-Messenger-Localization.resources.dll" />
+    <AssemblyPart Source="ms-MY/Facebook-Messenger-Localization.resources.dll" />
+    <AssemblyPart Source="nb-NO/Facebook-Messenger-Localization.resources.dll" />
+    <AssemblyPart Source="nl-NL/Facebook-Messenger-Localization.resources.dll" />
+    <AssemblyPart Source="pl-PL/Facebook-Messenger-Localization.resources.dll" />
+    <AssemblyPart Source="pt-BR/Facebook-Messenger-Localization.resources.dll" />
+    <AssemblyPart Source="pt-PT/Facebook-Messenger-Localization.resources.dll" />
+    <AssemblyPart Source="ru-RU/Facebook-Messenger-Localization.resources.dll" />
+    <AssemblyPart Source="sk-SK/Facebook-Messenger-Localization.resources.dll" />
+    <AssemblyPart Source="sv-SE/Facebook-Messenger-Localization.resources.dll" />
+    <AssemblyPart Source="th-TH/Facebook-Messenger-Localization.resources.dll" />
+    <AssemblyPart Source="tr-TR/Facebook-Messenger-Localization.resources.dll" />
+    <AssemblyPart Source="vi-VN/Facebook-Messenger-Localization.resources.dll" />
+    <AssemblyPart Source="zh-CN/Facebook-Messenger-Localization.resources.dll" />
+    <AssemblyPart Source="zh-TW/Facebook-Messenger-Localization.resources.dll" />
+  </Deployment.Parts>
+</Deployment>

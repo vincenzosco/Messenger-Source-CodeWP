@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Deployment xmlns="http://schemas.microsoft.com/windowsphone/2014/deployment" AppPlatformVersion="8.1">
+  <DefaultLanguage xmlns="" code="en-US" />
+  <Languages xmlns="">
+    <Language code="ar" />
+    <Language code="cs-CZ" />
+    <Language code="da-DK" />
+    <Language code="fi-FI" />
+    <Language code="de-DE" />
+    <Language code="el-GR" />
+    <Language code="es-ES" />
+    <Language code="hr-HR" />
+    <Language code="nl-NL" />
+    <Language code="fr-FR" />
+    <Language code="hi-IN" />
+    <Language code="id-ID" />
+    <Language code="it-IT" />
+    <Language code="ja-JP" />
+    <Language code="ko-KR" />
+    <Language code="ms-MY" />
+    <Language code="nb-NO" />
+    <Language code="pl-PL" />
+    <Language code="pt-BR" />
+    <Language code="pt-PT" />
+    <Language code="ru-RU" />
+    <Language code="sk-SK" />
+    <Language code="sv-SE" />
+    <Language code="th-TH" />
+    <Language code="tr-TR" />
+    <Language code="zh-CN" />
+    <Language code="zh-TW" />
+    <Language code="vi-VN" />
+    <Language code="hu-HU" />
+    <Language code="fil-PH" />
+    <Language code="es" />
+  </Languages>
+  <App xmlns="" Title="Messenger" RuntimeType="Silverlight" Version="11.0.1.0" Description="Facebook Messenger" SDOptOut="false" ProductID="{3219d30d-4a23-4f58-a91c-c44b04e6a0c7}" Genre="apps.normal" IsBeta="false" Author="Facebook, Inc." Publisher="Facebook, Inc." PublisherID="{c45a7263-351e-4866-8213-bcf154b15fac}">
+    <IconPath IsRelative="true" IsResource="false">Assets\ApplicationIcon.png</IconPath>
+    <Capabilities>
+      <Capability Name="ID_CAP_CONTACTS" />
+      <Capability Name="ID_CAP_NETWORKING" />
+      <Capability Name="ID_CAP_MEDIALIB_AUDIO" />
+      <Capability Name="ID_CAP_MEDIALIB_PLAYBACK" />
+      <Capability Name="ID_CAP_SENSORS" />
+      <Capability Name="ID_CAP_WEBBROWSERCOMPONENT" />
+      <Capability Name="ID_CAP_IDENTITY_DEVICE" />
+      <Capability Name="ID_CAP_LOCATION" />
+      <Capability Name="ID_CAP_PUSH_NOTIFICATION" />
+      <Capability Name="ID_CAP_VOIP" />
+      <Capability Name="ID_CAP_MAP" />
+      <Capability Name="ID_CAP_MEDIALIB_PHOTO" />
+      <Capability Name="ID_CAP_ISV_CAMERA" />
+      <Capability Name="ID_CAP_MICROPHONE" />
+    </Capabilities>
+    <Tasks>
+      <DefaultTask Name="_default" NavigationPage="Pages/FirstLaunchPage.xaml" ActivationPolicy="Resume" />
+      <ExtendedTask Name="BackgroundAgent">
+        <BackgroundServiceAgent Name="BackgroundSendingAgent" Source="Facebook-Messenger-WP8-Agents" Specifier="AudioPlayerAgent" Type="Facebook.Messenger.WP8.Agents.BackgroundSendingAgent" />
+        <BackgroundServiceAgent Specifier="AudioStreamingAgent" Name="BackgroundStreamerAgent" Source="Facebook-Messenger-WP8-Agents" Type="Facebook.Messenger.WP8.Agents.BackgroundStreamerAgent" />
+      </ExtendedTask>
+    </Tasks>
+    <Tokens>
+      <PrimaryToken TokenID="Facebook_Messenger_WP8Token" TaskName="_default">
+        <TemplateIconic>
+          <SmallImageURI IsRelative="true" IsResource="false">Assets\Tiles\IconicTileSmall.png</SmallImageURI>
+          <Count>0</Count>
+          <IconImageURI IsRelative="true" IsResource="false">Assets\Tiles\IconicTileMedium.png</IconImageURI>
+          <Title>Messenger</Title>
+          <Message></Message>
+          <BackgroundColor></BackgroundColor>
+          <HasLarge>True</HasLarge>
+          <LargeContent1></LargeContent1>
+          <LargeContent2></LargeContent2>
+          <LargeContent3></LargeContent3>
+          <DeviceLockImageURI IsRelative="true" IsResource="false">Assets\IconLockScreen.png</DeviceLockImageURI>
+        </TemplateIconic>
+      </PrimaryToken>
+    </Tokens>
+    <Extensions>
+      <Extension ExtensionName="LockScreen_Notification_TextField" ConsumerID="{111DFF24-AA15-4A96-8006-2BFF8122084F}" TaskID="_default" />
+      <Extension ExtensionName="LockScreen_Notification_IconCount" ConsumerID="{111DFF24-AA15-4A96-8006-2BFF8122084F}" TaskID="_default" />
+      <Extension ExtensionName="Photos_Extra_Share" ConsumerID="{5B04B775-356B-4AA0-AAF8-6491FFEA5632}" TaskID="_default" />
+      <Protocol Name="fbmessenger" NavUriFragment="encodedLaunchUri=%s" TaskID="_default" />
+    </Extensions>
+    <ActivatableClasses>
+      <InProcessServer>
+        <Path>WebP-WP8.dll</Path>
+        <ActivatableClass ActivatableClassId="WebP.WebPFrame" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="WebP.WebPImage" ThreadingModel="both" />
+      </InProcessServer>
+      <InProcessServer>
+        <Path>Facebook-Base-RT.dll</Path>
+        <ActivatableClass ActivatableClassId="Facebook_Base_RT.Readme" ThreadingModel="both" />
+      </InProcessServer>
+    </ActivatableClasses>
+    <ScreenResolutions>
+      <ScreenResolution Name="ID_RESOLUTION_WVGA" />
+      <ScreenResolution Name="ID_RESOLUTION_WXGA" />
+      <ScreenResolution Name="ID_RESOLUTION_HD720P" />
+    </ScreenResolutions>
+    <FunctionalCapabilities>
+      <FunctionalCapability Name="ID_FUNCCAP_EXTEND_MEM" />
+    </FunctionalCapabilities>
+  </App>
+</Deployment>
