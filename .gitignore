@@ -240,3 +240,8 @@ ModelManifest.xml
 
 # FAKE - F# Make
 .fake/
+
+# Reverse engineering: toolchain locale, pacchetto originale e payload estratto
+.tools/
+*.xap
+extracted/
