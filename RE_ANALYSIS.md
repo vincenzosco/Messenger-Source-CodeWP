@@ -63,11 +63,11 @@ Totale recuperato: **1.346 file C#** (112.254 righe) e **119 file XAML**
 
 ## Limiti dell'analisi
 
-- **15 metodi non decompilati** nella DLL principale: state machine `async` di
-  `CameraView.CameraState`, `FBGeoLocator.Service` e
-  `SingleInputPaneHelper` (`Value cannot be null (Parameter 'source')`).
-  Il IL di quei metodi resta leggibile con `ilspycmd -il`, ma non è stato
-  tradotto in C#.
+- **15 metodi non decompilati automaticamente** nella DLL principale: state
+  machine `async` di `CameraView.CameraState`, `FBGeoLocator.Service` e
+  `SingleInputPaneHelper` (`Value cannot be null (Parameter 'source')`). Sono
+  stati ritradotti a mano dal IL in `recovered/` (indice in
+  `recovered/README.md`, dump IL in `recovered/il/`).
 - Nessun PDB nel pacchetto: i nomi dei campi sono corretti, quelli delle
   variabili locali sono sintetici (`num`, `text`).
 - Assembly di terze parti non decompilate perché ridistribuite invariate e con
