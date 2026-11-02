@@ -102,6 +102,37 @@ project reports duplicate members.
 Building a single project instead of the solution needs `-p:Platform=AnyCPU`,
 without the space: the generated projects key their conditions on `Debug|AnyCPU`.
 
+## Deploy it
+
+The Windows Phone 8.1 SDK tools are installed here, so deployment goes through
+`AppDeployCmd`. List the targets first:
+
+```powershell
+powershell -File tools/deploy.ps1 -List
+```
+
+`0` is the phone, `1` to `7` are the emulator images. Install and launch on one of
+them:
+
+```powershell
+powershell -File tools/deploy.ps1 -DeviceIndex 1 -Launch
+```
+
+Without `-Cert` the package stays unsigned, which is enough for an emulator or a
+development-unlocked phone. With a certificate the script signs first and then
+installs:
+
+```powershell
+powershell -File tools/deploy.ps1 -DeviceIndex 0 -Cert dev.pfx -CertPassword <password>
+```
+
+`-Uninstall` removes the app by `ProductID`, `-DryRun` prints the exact
+`AppDeployCmd` line and stops. Boot the emulator from Visual Studio before
+deploying: the tool installs into a running target, it does not start the image.
+Run `python tools/verify-package.py` first; it fails if a part the manifest
+declares is missing from the package, which is the failure that shows up on the
+phone as an app that installs and never opens.
+
 ## Layout
 
 ```

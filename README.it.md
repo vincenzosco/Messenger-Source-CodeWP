@@ -103,6 +103,36 @@ Compilare un singolo progetto invece della soluzione richiede
 `-p:Platform=AnyCPU`, senza spazio: i progetti generati hanno condizioni su
 `Debug|AnyCPU`.
 
+## Come si fa il deploy
+
+I tool dell'SDK Windows Phone 8.1 sono installati, quindi il deploy passa da
+`AppDeployCmd`. Prima si elencano le destinazioni:
+
+```powershell
+powershell -File tools/deploy.ps1 -List
+```
+
+`0` è il telefono, da `1` a `7` ci sono le immagini dell'emulatore. Installazione e
+avvio su una di quelle:
+
+```powershell
+powershell -File tools/deploy.ps1 -DeviceIndex 1 -Launch
+```
+
+Senza `-Cert` il pacchetto resta non firmato: basta per emulatore o telefono
+sbloccato per sviluppo. Con un certificato lo script firma e poi installa:
+
+```powershell
+powershell -File tools/deploy.ps1 -DeviceIndex 0 -Cert dev.pfx -CertPassword <password>
+```
+
+`-Uninstall` rimuove l'app tramite `ProductID`, `-DryRun` stampa la riga esatta di
+`AppDeployCmd` e si ferma. L'emulatore va avviato da Visual Studio prima: il tool
+installa su un target già acceso, non accende l'immagine. Prima di tutto conviene
+`python tools/verify-package.py`: fallisce se una parte dichiarata dal manifest non
+è nel pacchetto, che è l'errore che sul telefono si vede come app installata e mai
+aperta.
+
 ## Struttura
 
 ```
