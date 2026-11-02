@@ -1,6 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Ricostruito da AppManifest.xaml + AppxManifest.xml del pacchetto: il
-     WMAppManifest originale non è distribuito nel XAP, viene generato in build. -->
 <Deployment xmlns="http://schemas.microsoft.com/windowsphone/2014/deployment" AppPlatformVersion="8.1">
   <DefaultLanguage xmlns="" code="en-US" />
   <App xmlns="" ProductID="{317180b0-bb48-6110-0000-000000000000}"
@@ -36,5 +34,10 @@
         </TemplateFlip>
       </PrimaryToken>
     </Tokens>
+    <ScreenResolutions>
+      <ScreenResolution Name="ID_RESOLUTION_WVGA" />
+      <ScreenResolution Name="ID_RESOLUTION_WXGA" />
+      <ScreenResolution Name="ID_RESOLUTION_HD720P" />
+    </ScreenResolutions>
   </App>
 </Deployment>

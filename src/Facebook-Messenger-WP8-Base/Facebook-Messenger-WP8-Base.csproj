@@ -10,6 +10,7 @@
     <TargetFrameworkIdentifier>WindowsPhone</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v8.1</TargetFrameworkVersion>
     <SilverlightVersion>v8.1</SilverlightVersion>
+    <TargetPlatformVersion>8.1</TargetPlatformVersion>
     <LangVersion>5</LangVersion>
     <FileAlignment>512</FileAlignment>
     <MinimumVisualStudioVersion>12</MinimumVisualStudioVersion>

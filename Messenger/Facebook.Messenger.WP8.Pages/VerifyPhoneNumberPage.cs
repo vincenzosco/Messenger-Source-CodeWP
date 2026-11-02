@@ -200,5 +200,16 @@ namespace Facebook.Messenger.WP8.Pages
 			return InputHelper.GetOccludedOffset((FrameworkElement)(object)ConfirmCodeTextBox, (FrameworkElement)(object)LayoutRoot, occludedHeight);
 		}
 
+
+		private void SendCodeAgain_OnClick(object sender, RoutedEventArgs e)
+		{
+			WithViewModel((VerifyPhoneNumberViewModel vm) =>
+			{
+				if (vm.SendCodeAgainCommand.CanExecute(null))
+				{
+					vm.SendCodeAgainCommand.Execute(null);
+				}
+			});
+		}
 	}
 }

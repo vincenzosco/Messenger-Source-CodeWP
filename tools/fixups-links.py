@@ -42,6 +42,33 @@ def write(path, text):
         fh.write(text)
 
 
+def handler_block(view_model, handler, command):
+    return (
+        "\n\t\tprivate void " + handler + "(object sender, RoutedEventArgs e)\n"
+        "\t\t{\n"
+        "\t\t\tWithViewModel((" + view_model + " vm) =>\n"
+        "\t\t\t{\n"
+        "\t\t\t\tif (vm." + command + ".CanExecute(null))\n"
+        "\t\t\t\t{\n"
+        "\t\t\t\t\tvm." + command + ".Execute(null);\n"
+        "\t\t\t\t}\n"
+        "\t\t\t});\n"
+        "\t\t}\n"
+    )
+
+
+def insert_member(text, block):
+    """Inserisce il membro prima della graffa che chiude la classe.
+
+    Il decompilatore chiude la classe con `\t}` e il namespace con `}` alla
+    colonna zero: la graffa da cercare e' la penultima, non l'ultima.
+    """
+    trimmed = text.rstrip()
+    match = re.search(r"\n(\t*)\}\s*\n\}\s*$", trimmed)
+    pos = match.start() + 1 if match else trimmed.rfind("\n}") + 1
+    return trimmed[:pos] + block + trimmed[pos:] + "\r\n"
+
+
 def main():
     for filename, old, new in HYPERLINKS:
         for path in APP.rglob(filename):
@@ -59,22 +86,8 @@ def main():
             text = read(path)
             if handler in text:
                 continue
-            block = (
-                "\n\t\tprivate void " + handler + "(object sender, RoutedEventArgs e)\n"
-                "\t\t{\n"
-                "\t\t\tWithViewModel((" + view_model + " vm) =>\n"
-                "\t\t\t{\n"
-                "\t\t\t\tif (vm." + command + ".CanExecute(null))\n"
-                "\t\t\t\t{\n"
-                "\t\t\t\t\tvm." + command + ".Execute(null);\n"
-                "\t\t\t\t}\n"
-                "\t\t\t});\n"
-                "\t\t}\n"
-            )
-            updated = re.sub(r"\n\t\}\n\}\s*$", lambda _: block + "\n\t}\n}\n", text)
-            if updated != text:
-                write(path, updated)
-                print("handler aggiunto: " + path.name)
+            write(path, insert_member(text, handler_block(view_model, handler, command)))
+            print("handler aggiunto: " + path.name)
 
     for base in (APP, ROOT / "src"):
         for path in base.rglob("*.csproj"):

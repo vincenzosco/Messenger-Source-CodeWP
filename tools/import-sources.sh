@@ -67,8 +67,6 @@ done
 # --- manifest applicativo ricostruito ---------------------------------------
 cat > "$APP_DIR/Properties/WMAppManifest.xml" <<'XML'
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Ricostruito da AppManifest.xaml + AppxManifest.xml del pacchetto: il
-     WMAppManifest originale non è distribuito nel XAP, viene generato in build. -->
 <Deployment xmlns="http://schemas.microsoft.com/windowsphone/2014/deployment" AppPlatformVersion="8.1">
   <DefaultLanguage xmlns="" code="en-US" />
   <App xmlns="" ProductID="{317180b0-bb48-6110-0000-000000000000}"
@@ -104,6 +102,11 @@ cat > "$APP_DIR/Properties/WMAppManifest.xml" <<'XML'
         </TemplateFlip>
       </PrimaryToken>
     </Tokens>
+    <ScreenResolutions>
+      <ScreenResolution Name="ID_RESOLUTION_WVGA" />
+      <ScreenResolution Name="ID_RESOLUTION_WXGA" />
+      <ScreenResolution Name="ID_RESOLUTION_HD720P" />
+    </ScreenResolutions>
   </App>
 </Deployment>
 XML
@@ -184,6 +187,7 @@ emit_csproj() {
     <TargetFrameworkIdentifier>WindowsPhone</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v8.1</TargetFrameworkVersion>
     <SilverlightVersion>v8.1</SilverlightVersion>
+    <TargetPlatformVersion>8.1</TargetPlatformVersion>
     <LangVersion>5</LangVersion>
     <FileAlignment>512</FileAlignment>
     <MinimumVisualStudioVersion>12</MinimumVisualStudioVersion>
@@ -219,11 +223,32 @@ XML
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="**\*.xaml" Exclude="App.xaml;bin\**;obj\**">
+    <Page Include="**\*.xaml" Exclude="App.xaml;AppManifest.xaml;bin\**;obj\**">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
+  <ItemGroup>
+    <Reference Include="GalaSoft.MvvmLight.Extras">
+      <HintPath>..\lib\GalaSoft.MvvmLight.Extras.dll</HintPath>
+    </Reference>
+    <Reference Include="GalaSoft.MvvmLight.Platform">
+      <HintPath>..\lib\GalaSoft.MvvmLight.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Phone.Controls">
+      <HintPath>..\lib\Microsoft.Phone.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Extensions">
+      <HintPath>..\lib\System.Net.Http.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Primitives">
+      <HintPath>..\lib\System.Net.Http.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Interactivity">
+      <HintPath>..\lib\System.Windows.Interactivity.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <Import Project="..\build\WpPackagingFallback.targets" />
   <ItemGroup>
     <Content Include="Assets\**\*" />
     <Content Include="AppManifest.xaml" />

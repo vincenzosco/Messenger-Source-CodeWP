@@ -1,82 +1,87 @@
 <p align="center">
-  <img src="docs/logo.png" width="128" alt="Icona di Facebook Messenger per Windows Phone 8.1">
+  <img src="docs/logo.png" width="128" alt="Icon of Facebook Messenger for Windows Phone 8.1">
 </p>
 
-<h1 align="center">Messenger 2015 — codice recuperato</h1>
+<h1 align="center">Messenger 2015 — recovered source</h1>
 
 <p align="center">
-  <strong>Il codice C# e XAML di Messenger per Windows Phone 8.1, ricostruito in progetti compilabili.</strong><br>
-  Decompilato dal pacchetto 11.0.1.0 e riportato a C# 5, la stessa versione del 2015.
+  <strong>The C# and XAML behind Messenger for Windows Phone 8.1, rebuilt into projects that compile.</strong><br>
+  Decompiled from the 11.0.1.0 package and brought back to C# 5, the language it shipped with in 2015.
 </p>
 
 <p align="center">
-  <a href="#come-si-compila">Compilare</a> ·
-  <a href="#struttura">Struttura</a> ·
-  <a href="#limiti-noti">Limiti</a> ·
-  <a href="RE_ANALYSIS.md">Analisi del pacchetto</a>
+  <a href="#build-it">Build</a> ·
+  <a href="#layout">Layout</a> ·
+  <a href="#known-limits">Limits</a> ·
+  <a href="RE_ANALYSIS.md">Package analysis</a>
 </p>
 
-Questo repository contiene i sorgenti recuperati dal `.xap` di Messenger 11.0.1.0
-per Windows Phone 8.1: 1.346 file C#, 119 file XAML e le otto assembly di prima
-parte, ognuna come progetto separato. La soluzione compila con MSBuild 18 contro
-i reference set WP8.1.
+<p align="center">
+  Read in: <strong>English</strong> · <a href="README.it.md">Italiano</a>
+</p>
 
-Non è un fork e non è il sorgente ufficiale: è il risultato di una
-decompilazione, con i limiti che questo comporta.
+This repository holds the sources recovered from the Messenger 11.0.1.0 `.xap`
+for Windows Phone 8.1: 1,346 C# files, 119 XAML files and the eight first-party
+assemblies, each one as its own project. The solution compiles with MSBuild 18
+against the WP8.1 reference sets.
 
-## Cosa c'è dentro
+It is not a fork and it is not the official source. It is the output of a
+decompiler, with the gaps that implies.
 
-| Assembly | Ruolo | Progetto |
+## What is inside
+
+| Assembly | Job | Project |
 | --- | --- | --- |
-| `Facebook.Messenger.WP8` | app: pagine, controlli, view model | `Messenger/` |
-| `Facebook-Services` | GraphQL, cache, invio messaggi, analytics | `src/Facebook-Services/` |
-| `Facebook-Models` | modello dati e signal | `src/Facebook-Models/` |
-| `Facebook-Base` | rete, MQTT astratto, logging, estensioni | `src/Facebook-Base/` |
-| `Facebook-Messenger-WP8-Base` | MQTT su socket WinRT, helper di piattaforma | `src/Facebook-Messenger-WP8-Base/` |
-| `Facebook-Messenger-WP8-Agents` | background agent di invio | `src/Facebook-Messenger-WP8-Agents/` |
+| `Facebook.Messenger.WP8` | app: pages, controls, view models | `Messenger/` |
+| `Facebook-Services` | GraphQL, caches, message sending, analytics | `src/Facebook-Services/` |
+| `Facebook-Models` | data model and signals | `src/Facebook-Models/` |
+| `Facebook-Base` | networking, abstract MQTT, logging, extensions | `src/Facebook-Base/` |
+| `Facebook-Messenger-WP8-Base` | MQTT over a WinRT socket, platform helpers | `src/Facebook-Messenger-WP8-Base/` |
+| `Facebook-Messenger-WP8-Agents` | background sending agent | `src/Facebook-Messenger-WP8-Agents/` |
 | `Facebook-Messenger-Localization` | string library | `src/Facebook-Messenger-Localization/` |
-| `ThriftPortable` | trasporto Thrift | `src/ThriftPortable/` |
+| `ThriftPortable` | Thrift transport | `src/ThriftPortable/` |
 
-L'architettura ricostruita è in `RE_ANALYSIS.md`: MVVM con MvvmLight, MQTT sopra
-`StreamSocket`, livello GraphQL in `Facebook/Services/Api/GraphQL/Constants.cs`,
-cache su `Newtonsoft.Json` e `Zlib.Portable`.
+The reconstructed architecture is written up in `RE_ANALYSIS.md`: MVVM with
+MvvmLight, MQTT over `StreamSocket`, GraphQL queries in
+`Facebook/Services/Api/GraphQL/Constants.cs` (282 KB of them), caches on
+`Newtonsoft.Json` and `Zlib.Portable`.
 
-## Stato
+## Status
 
-- **0 errori di compilazione** in `Debug|Any CPU` e `Release|Any CPU`.
-- Le otto assembly producono le rispettive DLL; l'app produce 115 file `.g.cs`
-  dal markup compile, quindi le pagine XAML compilano davvero.
-- Il **packaging `.xap` non arriva in fondo**: il target
-  `_GetRecursiveResolvedSDKReferences` non esiste in questo MSBuild e, saltandolo,
-  la validazione del manifest ricostruito si ferma sulla versione di sistema.
-  Compilare i sorgenti funziona; generare il pacchetto installabile no.
+- **0 compile errors** in `Debug|Any CPU` and `Release|Any CPU`.
+- All eight assemblies produce their DLLs, and the app emits 115 `.g.cs` files
+  from the markup compiler, so the XAML pages really do compile.
+- **No `.xap` comes out.** The packaging targets run to the end
+  (`FilesToXap` and `XapPackager` both exit 0) but write nothing: the task that
+  collects the payload ships with the standalone Windows Phone 8.1 SDK, which is
+  not installed here. Everything before that step is verified.
 
-## Requisiti
+## Requirements
 
-- Windows con i target **Windows Phone 8.1** installati
+- Windows with the **Windows Phone 8.1** targets installed
   (`%ProgramFiles(x86)%\MSBuild\Microsoft\WindowsPhone\v8.1`).
-- MSBuild 18 (Visual Studio 2026 o Build Tools). Non serve .NET SDK.
-- Le DLL di terze parti sono già in `lib/`.
+- MSBuild 18 (Visual Studio 2026 or Build Tools). The .NET SDK is not needed.
+- Third-party DLLs are already in `lib/`.
 
-## Come si compila
+## Build it
 
-I sorgenti in `Messenger/` e `src/` sono **generati**: non si modificano a mano,
-si rigenerano da `decompiled/`. Il ciclo completo è:
+The sources under `Messenger/` and `src/` are **generated**. Do not edit them by
+hand; regenerate them from `decompiled/`:
 
 ```bash
 bash tools/import-sources.sh
 ```
 
-Lo script ricopia `decompiled/` nei progetti, riscrive i `.csproj`, il manifest e
-le risorse, e applica i fixup. Poi si compila:
+That script copies `decompiled/` into the projects, rewrites the `.csproj`
+files, the manifest and the resources, then applies the fixups. Then compile:
 
 ```bash
 "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/MSBuild/Current/Bin/MSBuild.exe" \
   Messenger.sln -p:Configuration=Debug -p:Platform="Any CPU"
 ```
 
-Se i `.g.cs` del XAML vanno rigenerati dopo un import, si compila una volta,
-si riconciliano i campi rigenerati e si ricompila:
+After an import, the XAML `.g.cs` files have to be regenerated once before the
+sources agree with them:
 
 ```bash
 MSBuild.exe Messenger.sln -p:Configuration=Debug -p:Platform="Any CPU"
@@ -84,66 +89,77 @@ python tools/fixups-gfields.py
 MSBuild.exe Messenger.sln -p:Configuration=Debug -p:Platform="Any CPU"
 ```
 
-Il secondo passaggio serve perché il decompilatore emette nella classe anche i
-campi che il compilatore XAML rigenera, e senza riconciliazione il progetto
-segnala membri duplicati.
+The decompiler also emits, inside each page class, the fields the XAML compiler
+regenerates. Reconciling those is what the middle command does; without it the
+project reports duplicate members.
 
-## Struttura
+Building a single project instead of the solution needs `-p:Platform=AnyCPU`,
+without the space: the generated projects key their conditions on `Debug|AnyCPU`.
+
+## Layout
 
 ```
-Messenger/              app: pagine, controlli, view model, App.xaml
-src/<assembly>/         le sette librerie di prima parte
-lib/                    DLL di terze parti (toolkit, Json.NET, WebP, Thrift...)
-decompiled/             output del decompilatore, sorgente di verità dell'import
-recovered/              i 15 metodi async ritradotti a mano dal IL
-localization/           .resx per lingua estratti dalle assembly satellite
-extracted/              payload grezzo del .xap (non versionato)
-tools/                  import e fixup
+Messenger/              the app: pages, controls, view models, App.xaml
+src/<assembly>/         the seven first-party libraries
+lib/                    third-party DLLs (toolkit, Json.NET, WebP, Thrift...)
+decompiled/             decompiler output, the source of truth for the import
+recovered/              the 15 async methods retyped by hand from IL
+localization/           .resx per language, pulled from the satellite assemblies
+extracted/              raw .xap payload (not committed)
+build/                  packaging fallback for the missing WP8.1 SDK
+tools/                  import and fixup scripts
 ```
 
-`decompiled/`, `recovered/` e `localization/` sono materiale di analisi: non
-entrano nel build.
+`decompiled/`, `recovered/` and `localization/` are analysis material and stay
+out of the build.
 
 <details>
-<summary><strong>Come funziona l'import</strong> cosa fanno gli script in <code>tools/</code></summary>
+<summary><strong>How the import works</strong> what each script in <code>tools/</code> does</summary>
 <br>
 
-`import-sources.sh` rigenera gli otto progetti e chiama in ordine:
+`import-sources.sh` regenerates the eight projects and calls, in order:
 
-- `fixups-xaml.py` — ricostruisce i code-behind delle pagine XAML e rimuove i
-  membri che il compilatore XAML rigenera.
-- `fixups-ambiguous.py` — risolve i nomi presenti in due namespace (per esempio
-  `GestureEventArgs`, `Rect`, `Size`) con alias espliciti.
-- `fixups-residual.py` — correzioni puntuali: `Nullable` senza argomento, cast a
-  `this`, override delle proprietà di pagina, parametri `out`, eventi ricostruiti.
-- `fixups-il.py` — artefatti del IL: accessi protetti qualificati con cast,
-  `Duration.op_Implicit`, enum senza nome, accessor chiamati come metodi.
-- `fixups-links.py` — `HyperlinkButton.Command` (che Silverlight non ha) tradotto
-  in `Click`, e riferimento `Windows` ridondante rimosso.
-- `fixups-resources.py` — `x:Name` dei dizionari riportato a `x:Key`.
-- `fixups-gfields.py` — riconcilia i campi duplicati dei `.g.cs` (dopo una build).
+- `fixups-xaml.py` rebuilds the page code-behinds and strips the members the XAML
+  compiler regenerates.
+- `fixups-ambiguous.py` resolves names that exist in two namespaces
+  (`GestureEventArgs`, `Rect`, `Size`) with explicit aliases.
+- `fixups-residual.py` handles one-off shapes: `Nullable` without an argument,
+  casts to `this`, page property overrides, `out` parameters, rebuilt events.
+- `fixups-il.py` handles IL artifacts: qualified protected access, enum members
+  without a name, accessors called like methods, `Duration.op_Implicit`.
+- `fixups-links.py` turns `HyperlinkButton.Command`, which Silverlight does not
+  have, into `Click`, and drops the redundant `Windows` reference.
+- `fixups-resources.py` puts the dictionary `x:Name` back to `x:Key`.
+- `fixups-gfields.py` reconciles the duplicate fields in `.g.cs` (run after a
+  build).
+
+`build/WpPackagingFallback.targets` covers two pieces of the packaging chain that
+ship with the standalone WP8.1 SDK: it defines the `_GetRecursiveResolvedSDKReferences`
+target the WP targets reference but never declare, and it seeds
+`$(WMAppManifestOutput)` from `Properties/WMAppManifest.xml`.
 
 </details>
 
-## Limiti noti
+## Known limits
 
-- **15 metodi async** non sono stati decompilati automaticamente (state machine
-  di `CameraView`, `FBGeoLocator`, `SingleInputPaneHelper`). Restano come stub
-  con `NotImplementedException` e il rimando a `recovered/il/`.
-- **Nomi delle variabili locali sintetici**: il pacchetto non contiene PDB, quindi
-  i campi hanno i nomi veri ma le locali si chiamano `num`, `text`, `flag`.
-- **Localizzazioni parziali**: le 60 assembly satellite sono in `extracted/`; solo
-  tre string library sono state convertite in `.resx`.
-- **Senza packaging** non c'è uno `.xap` installabile: il codice si compila e si
-  legge, non si distribuisce.
-- Il progetto è pensato per **aprire i sorgenti in Visual Studio**; il designer
-  XAML funziona solo con questi progetti caricati e compilati una volta.
+- **15 async methods** were not decompiled automatically (state machines in
+  `CameraView`, `FBGeoLocator`, `SingleInputPaneHelper`). They stay as stubs that
+  throw, with a pointer to `recovered/il/`.
+- **Local variable names are synthetic.** The package has no PDB, so fields kept
+  their real names but locals are `num`, `text`, `flag`.
+- **Localization is partial**: the 60 satellite assemblies sit in `extracted/`;
+  only three string libraries were turned into `.resx`.
+- **No installable `.xap` yet**, so the code compiles and reads, but cannot be
+  deployed to a device from here.
+- The XAML designer needs these projects loaded and built once; designer errors
+  about `LocalizedStrings` or `StaticResource` mean the app assembly was not
+  resolved in the design-time build, not that the type is missing.
 
-## Note legali
+## Legal
 
-Il codice è proprietà di Facebook/Meta ed è qui conservato a scopo di studio e
-interoperabilità. Il repository è privato e non va reso pubblico né ridistribuito
-in altra forma. `decompiled/`, `recovered/` e `localization/` sono materiale di
-analisi, non codice di cui questo repository detenga i diritti.
+The code belongs to Facebook/Meta. It is kept here for study and interoperability
+only. The repository is private: do not publish it, do not redistribute it in
+another form. `decompiled/`, `recovered/` and `localization/` are analysis
+material, not code this repository holds rights to.
 
-Nessuna licenza è concessa: i termini d'uso sono quelli del software originale.
+No license is granted. The terms of the original software apply.

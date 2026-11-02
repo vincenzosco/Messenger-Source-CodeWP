@@ -172,5 +172,16 @@ namespace Facebook.Messenger.WP8.Pages
 			_okButton.IsEnabled = ApprovalTextBox.Text.Any();
 		}
 
+
+		private void ResendApprovalCode_OnClick(object sender, RoutedEventArgs e)
+		{
+			WithViewModel((LoginViewModel vm) =>
+			{
+				if (vm.ResendApprovalCodeCommand.CanExecute(null))
+				{
+					vm.ResendApprovalCodeCommand.Execute(null);
+				}
+			});
+		}
 	}
 }
