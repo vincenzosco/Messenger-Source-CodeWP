@@ -14,7 +14,13 @@ namespace ImageTools
 
 		private int _y;
 
-		public int Bottom => _y + _height;
+		public int Bottom
+		{
+			get
+			{
+				return _y + _height;
+			}
+		}
 
 		public int Height
 		{
@@ -28,11 +34,29 @@ namespace ImageTools
 			}
 		}
 
-		public int Left => _x;
+		public int Left
+		{
+			get
+			{
+				return _x;
+			}
+		}
 
-		public int Right => _x + _width;
+		public int Right
+		{
+			get
+			{
+				return _x + _width;
+			}
+		}
 
-		public int Top => _y;
+		public int Top
+		{
+			get
+			{
+				return _y;
+			}
+		}
 
 		public int Width
 		{

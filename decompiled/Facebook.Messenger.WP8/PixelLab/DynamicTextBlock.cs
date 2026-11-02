@@ -67,7 +67,13 @@ namespace PixelLab
 			}
 		}
 
-		public string EllipsizedText => textBlock.Text;
+		public string EllipsizedText
+		{
+			get
+			{
+				return textBlock.Text;
+			}
+		}
 
 		private static void OnTextChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
 		{

@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <ProjectGuid>{FF453889-E8E6-43D0-A006-309EFBB0DD10}</ProjectGuid>
+    <ProjectGuid>{3C687048-DEFB-4565-B59B-6C2E32DF4B6C}</ProjectGuid>
     <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <OutputType>Library</OutputType>
-    <LangVersion>6</LangVersion>
+    <LangVersion>5</LangVersion>
     <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
     <AssemblyName>ThriftPortable</AssemblyName>
     <TargetFrameworkIdentifier>.NETPortable</TargetFrameworkIdentifier>
@@ -46,43 +46,43 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="System\IO\BufferedStream.cs" />
+    <Compile Include="System.IO\BufferedStream.cs" />
     <Compile Include="THashSet.cs" />
-    <Compile Include="ThriftPortable\Extensions\ISocket.cs" />
-    <Compile Include="Thrift\Collections\TCollections.cs" />
-    <Compile Include="Thrift\Protocol\TAbstractBase.cs" />
-    <Compile Include="Thrift\Protocol\TBase.cs" />
-    <Compile Include="Thrift\Protocol\TBase64Utils.cs" />
-    <Compile Include="Thrift\Protocol\TBinaryProtocol.cs" />
-    <Compile Include="Thrift\Protocol\TCompactProtocol.cs" />
-    <Compile Include="Thrift\Protocol\TField.cs" />
-    <Compile Include="Thrift\Protocol\TJSONProtocol.cs" />
-    <Compile Include="Thrift\Protocol\TList.cs" />
-    <Compile Include="Thrift\Protocol\TMap.cs" />
-    <Compile Include="Thrift\Protocol\TMessage.cs" />
-    <Compile Include="Thrift\Protocol\TMessageType.cs" />
-    <Compile Include="Thrift\Protocol\TMultiplexedProcessor.cs" />
-    <Compile Include="Thrift\Protocol\TMultiplexedProtocol.cs" />
-    <Compile Include="Thrift\Protocol\TProtocol.cs" />
-    <Compile Include="Thrift\Protocol\TProtocolDecorator.cs" />
-    <Compile Include="Thrift\Protocol\TProtocolException.cs" />
-    <Compile Include="Thrift\Protocol\TProtocolFactory.cs" />
-    <Compile Include="Thrift\Protocol\TProtocolUtil.cs" />
-    <Compile Include="Thrift\Protocol\TSet.cs" />
-    <Compile Include="Thrift\Protocol\TStruct.cs" />
-    <Compile Include="Thrift\Protocol\TType.cs" />
+    <Compile Include="Thrift.Collections\TCollections.cs" />
+    <Compile Include="Thrift.Protocol\TAbstractBase.cs" />
+    <Compile Include="Thrift.Protocol\TBase.cs" />
+    <Compile Include="Thrift.Protocol\TBase64Utils.cs" />
+    <Compile Include="Thrift.Protocol\TBinaryProtocol.cs" />
+    <Compile Include="Thrift.Protocol\TCompactProtocol.cs" />
+    <Compile Include="Thrift.Protocol\TField.cs" />
+    <Compile Include="Thrift.Protocol\TJSONProtocol.cs" />
+    <Compile Include="Thrift.Protocol\TList.cs" />
+    <Compile Include="Thrift.Protocol\TMap.cs" />
+    <Compile Include="Thrift.Protocol\TMessage.cs" />
+    <Compile Include="Thrift.Protocol\TMessageType.cs" />
+    <Compile Include="Thrift.Protocol\TMultiplexedProcessor.cs" />
+    <Compile Include="Thrift.Protocol\TMultiplexedProtocol.cs" />
+    <Compile Include="Thrift.Protocol\TProtocol.cs" />
+    <Compile Include="Thrift.Protocol\TProtocolDecorator.cs" />
+    <Compile Include="Thrift.Protocol\TProtocolException.cs" />
+    <Compile Include="Thrift.Protocol\TProtocolFactory.cs" />
+    <Compile Include="Thrift.Protocol\TProtocolUtil.cs" />
+    <Compile Include="Thrift.Protocol\TSet.cs" />
+    <Compile Include="Thrift.Protocol\TStruct.cs" />
+    <Compile Include="Thrift.Protocol\TType.cs" />
+    <Compile Include="Thrift.Transport\TBufferedTransport.cs" />
+    <Compile Include="Thrift.Transport\TFramedTransport.cs" />
+    <Compile Include="Thrift.Transport\THttpClient.cs" />
+    <Compile Include="Thrift.Transport\TMemoryBuffer.cs" />
+    <Compile Include="Thrift.Transport\TSocket.cs" />
+    <Compile Include="Thrift.Transport\TStreamTransport.cs" />
+    <Compile Include="Thrift.Transport\TTransport.cs" />
+    <Compile Include="Thrift.Transport\TTransportException.cs" />
+    <Compile Include="Thrift.Transport\TTransportFactory.cs" />
+    <Compile Include="ThriftPortable.Extensions\ISocket.cs" />
     <Compile Include="Thrift\TApplicationException.cs" />
     <Compile Include="Thrift\TException.cs" />
     <Compile Include="Thrift\TProcessor.cs" />
-    <Compile Include="Thrift\Transport\TBufferedTransport.cs" />
-    <Compile Include="Thrift\Transport\TFramedTransport.cs" />
-    <Compile Include="Thrift\Transport\THttpClient.cs" />
-    <Compile Include="Thrift\Transport\TMemoryBuffer.cs" />
-    <Compile Include="Thrift\Transport\TSocket.cs" />
-    <Compile Include="Thrift\Transport\TStreamTransport.cs" />
-    <Compile Include="Thrift\Transport\TTransport.cs" />
-    <Compile Include="Thrift\Transport\TTransportException.cs" />
-    <Compile Include="Thrift\Transport\TTransportFactory.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
 </Project>

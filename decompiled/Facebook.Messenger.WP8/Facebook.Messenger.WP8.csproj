@@ -5,7 +5,7 @@
     <TargetFramework>wp81</TargetFramework>
   </PropertyGroup>
   <PropertyGroup>
-    <LangVersion>6</LangVersion>
+    <LangVersion>5</LangVersion>
     <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
     <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
   </PropertyGroup>
@@ -252,7 +252,7 @@
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System.Windows">
-      <HintPath>..\..\..\..\..\..\WINDOWS\Microsoft.NET\Framework64\v4.0.30319\System.Windows.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\..\WINDOWS\Microsoft.NET\Framework64\v4.0.30319\System.Windows.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Phone" />
     <Reference Include="Facebook-Services">
@@ -281,17 +281,17 @@
     </Reference>
     <Reference Include="Microsoft.Phone.Maps" />
     <Reference Include="System.Device">
-      <HintPath>..\..\..\..\..\..\WINDOWS\Microsoft.NET\Framework64\v4.0.30319\System.Device.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\..\WINDOWS\Microsoft.NET\Framework64\v4.0.30319\System.Device.dll</HintPath>
     </Reference>
     <Reference Include="Facebook-Messenger-Localization">
       <HintPath>extracted/Facebook-Messenger-Localization.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Devices.Sensors" />
     <Reference Include="System.Core">
-      <HintPath>..\..\..\..\..\..\WINDOWS\Microsoft.NET\Framework64\v4.0.30319\System.Core.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\..\WINDOWS\Microsoft.NET\Framework64\v4.0.30319\System.Core.dll</HintPath>
     </Reference>
     <Reference Include="System.Net">
-      <HintPath>..\..\..\..\..\..\WINDOWS\Microsoft.NET\Framework64\v4.0.30319\System.Net.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\..\WINDOWS\Microsoft.NET\Framework64\v4.0.30319\System.Net.dll</HintPath>
     </Reference>
     <Reference Include="Google.PhoneNumbers">
       <HintPath>extracted/Google.PhoneNumbers.dll</HintPath>
@@ -304,7 +304,7 @@
       <HintPath>extracted/JeffWilcox.PhoneThemeManager.dll</HintPath>
     </Reference>
     <Reference Include="System.Runtime.Serialization">
-      <HintPath>..\..\..\..\..\..\WINDOWS\Microsoft.NET\Framework64\v4.0.30319\System.Runtime.Serialization.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\..\WINDOWS\Microsoft.NET\Framework64\v4.0.30319\System.Runtime.Serialization.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>extracted/Newtonsoft.Json.dll</HintPath>

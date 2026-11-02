@@ -223,7 +223,11 @@ namespace ShakeGestures
 			}
 			if (shakeType.HasValue)
 			{
-				ShakeGesture?.Invoke(this, new ShakeGestureEventArgs(shakeType.Value));
+				EventHandler<ShakeGestureEventArgs> shakeGesture = ShakeGesture;
+				if (shakeGesture != null)
+				{
+					shakeGesture(this, new ShakeGestureEventArgs(shakeType.Value));
+				}
 				return true;
 			}
 			return false;

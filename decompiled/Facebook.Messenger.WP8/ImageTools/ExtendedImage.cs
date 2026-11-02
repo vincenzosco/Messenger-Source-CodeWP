@@ -62,11 +62,29 @@ namespace ImageTools
 			}
 		}
 
-		public bool IsAnimated => _frames.Count > 0;
+		public bool IsAnimated
+		{
+			get
+			{
+				return _frames.Count > 0;
+			}
+		}
 
-		public ImageFrameCollection Frames => _frames;
+		public ImageFrameCollection Frames
+		{
+			get
+			{
+				return _frames;
+			}
+		}
 
-		public ImagePropertyCollection Properties => _properties;
+		public ImagePropertyCollection Properties
+		{
+			get
+			{
+				return _properties;
+			}
+		}
 
 		public Uri UriSource
 		{
@@ -97,22 +115,38 @@ namespace ImageTools
 
 		private void OnDownloadCompleted(OpenReadCompletedEventArgs e)
 		{
-			DownloadCompleted?.Invoke(this, e);
+			OpenReadCompletedEventHandler downloadCompleted = DownloadCompleted;
+			if (downloadCompleted != null)
+			{
+				downloadCompleted(this, e);
+			}
 		}
 
 		private void OnDownloadProgress(DownloadProgressChangedEventArgs e)
 		{
-			DownloadProgress?.Invoke(this, e);
+			DownloadProgressChangedEventHandler downloadProgress = DownloadProgress;
+			if (downloadProgress != null)
+			{
+				downloadProgress(this, e);
+			}
 		}
 
 		private void OnLoadingCompleted(EventArgs e)
 		{
-			LoadingCompleted?.Invoke(this, e);
+			EventHandler loadingCompleted = LoadingCompleted;
+			if (loadingCompleted != null)
+			{
+				loadingCompleted(this, e);
+			}
 		}
 
 		private void OnLoadingFailed(UnhandledExceptionEventArgs e)
 		{
-			LoadingFailed?.Invoke(this, e);
+			EventHandler<UnhandledExceptionEventArgs> loadingFailed = LoadingFailed;
+			if (loadingFailed != null)
+			{
+				loadingFailed(this, e);
+			}
 		}
 
 		public ExtendedImage(int width, int height)

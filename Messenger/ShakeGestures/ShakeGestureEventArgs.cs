@@ -6,7 +6,13 @@ namespace ShakeGestures
 	{
 		private ShakeType _shakeType;
 
-		public ShakeType ShakeType => _shakeType;
+		public ShakeType ShakeType
+		{
+			get
+			{
+				return _shakeType;
+			}
+		}
 
 		public ShakeGestureEventArgs(ShakeType shakeType)
 		{

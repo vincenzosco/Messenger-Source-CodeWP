@@ -241,6 +241,7 @@ MEDIA_SOURCE_APP = "using MediaSource = Facebook.Models.MediaSource;"
 APP_MEDIA_FILES = ("MessageBaseViewModel.cs", "MessageComposerViewModel.cs")
 
 OUT_PARAM = re.compile(r'TryGetValue\(("[^"]+"), ref ')
+OUT_PARAM_GENERIC = re.compile(r'(TryGetValue(?:<[^>]+>)?\()(\w+), ref ')
 
 STUB_MARKER = "// ILSpy could not decompile this member: "
 
@@ -351,15 +352,32 @@ def apply_media_source_alias():
                 print("alias MediaSource -> app: " + path.name)
 
 
-def apply_out_parameters():
-    for path in ROOT.joinpath("Messenger").rglob("*.cs"):
-        if "obj" in path.parts:
-            continue
-        text = read(path)
-        updated = OUT_PARAM.sub(lambda m: "TryGetValue(" + m.group(1) + ", out ", text)
-        if updated != text:
-            write(path, updated)
+def apply_socket_protection():
+    # `(SocketProtectionLevel)(!UseUnsecureConnection)` nel IL e' un cast da
+    # bool a enum: 0 = PlainSocket, 1 = Ssl.
+    old = "SocketProtectionLevel socketProtection = (SocketProtectionLevel)(!Parameters.UseUnsecureConnection);"
+    new = ("SocketProtectionLevel socketProtection = Parameters.UseUnsecureConnection"
+           " ? SocketProtectionLevel.PlainSocket : SocketProtectionLevel.Ssl;")
+    for base in (ROOT / "Messenger", ROOT / "src"):
+        for path in base.rglob("MqttClient.cs"):
+            if "obj" in path.parts:
+                continue
+            text = read(path)
+            if old in text:
+                write(path, text.replace(old, new))
+                print("SocketProtectionLevel: " + path.name)
 
+
+def apply_out_parameters():
+    for base in (ROOT / "Messenger", ROOT / "src"):
+        for path in base.rglob("*.cs"):
+            if "obj" in path.parts:
+                continue
+            text = read(path)
+            updated = OUT_PARAM.sub(lambda m: "TryGetValue(" + m.group(1) + ", out ", text)
+            updated = OUT_PARAM_GENERIC.sub(lambda m: m.group(1) + m.group(2) + ", out ", updated)
+            if updated != text:
+                write(path, updated)
 
 def apply_stub_bodies():
     # I metodi che ILSpy non ha decompilato restano senza corpo: un throw
@@ -409,6 +427,7 @@ if __name__ == "__main__":
     apply_missing_events()
     apply_media_source_alias()
     apply_gesture_alias()
+    apply_socket_protection()
     apply_out_parameters()
     apply_stub_bodies()
     apply_base_casts()

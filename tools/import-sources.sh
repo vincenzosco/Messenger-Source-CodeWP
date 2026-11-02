@@ -184,7 +184,7 @@ emit_csproj() {
     <TargetFrameworkIdentifier>WindowsPhone</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v8.1</TargetFrameworkVersion>
     <SilverlightVersion>v8.1</SilverlightVersion>
-    <LangVersion>6</LangVersion>
+    <LangVersion>5</LangVersion>
     <FileAlignment>512</FileAlignment>
     <MinimumVisualStudioVersion>12</MinimumVisualStudioVersion>
     <NoWarn>1591</NoWarn>

@@ -39,13 +39,37 @@ namespace ImageTools
 			}
 		}
 
-		public bool IsFilled => _isFilled;
+		public bool IsFilled
+		{
+			get
+			{
+				return _isFilled;
+			}
+		}
 
-		public byte[] Pixels => _pixels;
+		public byte[] Pixels
+		{
+			get
+			{
+				return _pixels;
+			}
+		}
 
-		public int PixelHeight => _pixelHeight;
+		public int PixelHeight
+		{
+			get
+			{
+				return _pixelHeight;
+			}
+		}
 
-		public int PixelWidth => _pixelWidth;
+		public int PixelWidth
+		{
+			get
+			{
+				return _pixelWidth;
+			}
+		}
 
 		public double PixelRatio
 		{
@@ -89,7 +113,13 @@ namespace ImageTools
 			}
 		}
 
-		public Rectangle Bounds => new Rectangle(0, 0, PixelWidth, PixelHeight);
+		public Rectangle Bounds
+		{
+			get
+			{
+				return new Rectangle(0, 0, PixelWidth, PixelHeight);
+			}
+		}
 
 		public BitmapSource BitmapSource
 		{
