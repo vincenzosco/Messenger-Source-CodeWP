@@ -1,0 +1,38 @@
+﻿<pages:WebViewViewModelPage
+    x:Class="Facebook.Messenger.WP8.Pages.WebViewPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:pages="clr-namespace:Facebook.Messenger.WP8.Pages"
+    xmlns:viewModels="clr-namespace:Facebook.Messenger.WP8.ViewModels"
+    xmlns:controls="clr-namespace:Facebook.Messenger.WP8.Controls"
+    d:DataContext="{d:DesignInstance viewModels:WebViewViewModel}"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    Loaded="WebViewPage_OnLoaded"
+    Unloaded="WebViewPage_OnUnloaded"
+    mc:Ignorable="d"
+    FlowDirection="LeftToRight">
+
+    <Grid
+        x:Name="LayoutRoot"
+        Background="Transparent">
+        
+        <phone:WebBrowser
+            x:Name="WebBrowser"
+            Navigating="WebBrowser_OnNavigating"
+            Navigated="WebBrowser_OnNavigated"
+            NavigationFailed="WebBrowser_OnNavigationFailed"
+            Source="{Binding ContentUri}"/>
+
+        <controls:FBMessengerProgressBar 
+            x:Name="LoadingBar"
+            VerticalAlignment="Top"/>
+
+    </Grid>
+
+</pages:WebViewViewModelPage>

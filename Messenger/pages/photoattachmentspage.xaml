@@ -1,0 +1,51 @@
+﻿<pages:PhotoAttachmentsViewModelPage
+    x:Class="Facebook.Messenger.WP8.Pages.PhotoAttachmentsPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:pages="clr-namespace:Facebook.Messenger.WP8.Pages"
+    xmlns:controls="clr-namespace:Facebook.Messenger.WP8.Controls"
+    xmlns:mediaViewer="clr-namespace:Microsoft.Phone.Controls"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    shell:SystemTray.IsVisible="false"
+    SupportedOrientations="PortraitOrLandscape" Orientation="Portrait"
+    mc:Ignorable="d">
+    
+    <Grid x:Name="LayoutRoot" 
+          Background="{StaticResource MessengerWhiteBrush}">
+
+        <mediaViewer:MediaViewer  x:Name="PhotoCarousel"
+                                  Items="{Binding ImageCollection}"
+                                  ItemDisplayed="MediaViewer_ItemDisplayed"
+                                  InitiallyDisplayedIndex="{Binding SelectedIndex}">
+
+        </mediaViewer:MediaViewer>
+        <Grid Background ="{StaticResource MessengerTransparentWhiteBrush}"
+              Margin="15"
+              VerticalAlignment="Top"
+              Visibility ="{Binding IndicatorString, Converter={StaticResource StringLengthToVisibilityConverter}}">
+            <TextBlock VerticalAlignment="Center"
+                       HorizontalAlignment="Center"
+                       Text = "{Binding IndicatorString}"
+                       Foreground="{StaticResource MessengerBlackBrush}"
+                       TextAlignment="Center"/>
+        </Grid>
+        <controls:StateIndicatingProgressBar x:Name="StatusProgressBar"
+                                             FontColor="{StaticResource MessengerBlueBrush}"
+                                             VerticalAlignment="Top"
+                                             IsIndeterminate="{Binding IsImageLoading}"/>
+    </Grid>
+
+    <phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar
+             ForegroundColor="{StaticResource MessengerAppBarWhite}"
+             BackgroundColor="{StaticResource MessengerBlue}"
+             Opacity="0.84">
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>
+</pages:PhotoAttachmentsViewModelPage>

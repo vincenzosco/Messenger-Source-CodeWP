@@ -1,0 +1,41 @@
+﻿<controls:ComposerDrawer x:Class="Facebook.Messenger.WP8.Controls.LocationDrawer"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:controls="clr-namespace:Facebook.Messenger.WP8.Controls"
+    xmlns:mapping="clr-namespace:Microsoft.Phone.Maps.Controls;assembly=Microsoft.Phone.Maps"
+    mc:Ignorable="d"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}">
+
+    <Grid Background="{StaticResource MessengerBackgroundGreyBrush}"
+          Width="480"
+          Height="484"
+          VerticalAlignment="Center"
+          HorizontalAlignment="Center">
+        
+        <mapping:Map
+            x:Name="MapDisplay"
+            Tap="MapDisplay_OnTap"
+            VerticalAlignment="Stretch"
+            HorizontalAlignment="Stretch">
+            <mapping:Map.Layers>
+                <mapping:MapLayer>
+                    <mapping:MapOverlay
+                        x:Name="PositionOverlay"
+                        PositionOrigin="0.5, 0.5">
+                        <Ellipse
+                            Width="20"
+                            Height="20"
+                            Fill="Blue"
+                            Opacity="50"/>
+                    </mapping:MapOverlay>
+                </mapping:MapLayer>
+            </mapping:Map.Layers>
+        </mapping:Map>
+
+    </Grid>
+
+</controls:ComposerDrawer>

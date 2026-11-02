@@ -1,0 +1,28 @@
+﻿<UserControl x:Class="Facebook.Messenger.WP8.Controls.Internal.SyncProtocol"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:internal="clr-namespace:Facebook.Messenger.WP8.ViewModels.Internal"
+    mc:Ignorable="d"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    d:DataContext="{d:DesignInstance internal:BuildDetailsViewModel}"
+    d:DesignHeight="480" d:DesignWidth="480">
+
+    <ScrollViewer>
+        <StackPanel>
+            <Button Content="{Binding InternalStringsLibrary.Internal_Settings_Sync_SimulateError, Source={StaticResource LocalizedStrings}}"
+                    Click="SimulateErrorButton_OnClick"
+                    Height="100"
+                    Width="300"/>
+
+            <Button Content="{Binding InternalStringsLibrary.Internal_Settings_Sync_ClearInboxCache, Source={StaticResource LocalizedStrings}}"
+                    Click="ClearThreadCacheButton_OnClick"
+                    Height="100"
+                    Width="300"/>
+        </StackPanel>
+    </ScrollViewer>
+
+</UserControl>

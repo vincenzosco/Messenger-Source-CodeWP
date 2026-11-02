@@ -1,0 +1,158 @@
+﻿<pages:LoginViewModelPage
+    x:Class="Facebook.Messenger.WP8.Pages.LoginPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    Loaded="OnLoaded"
+    Unloaded="OnUnLoaded"
+    mc:Ignorable="d"
+    xmlns:controls="clr-namespace:Facebook.Messenger.WP8.Controls"
+    xmlns:pages="clr-namespace:Facebook.Messenger.WP8.Pages"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    shell:SystemTray.IsVisible="false"
+    Background="{StaticResource MessengerWhiteBrush}">
+
+    <pages:LoginViewModelPage.Resources>
+
+        <Storyboard x:Name="FadeIn">
+            <DoubleAnimation Storyboard.TargetName="Logo"
+                         Storyboard.TargetProperty="Opacity" From="0.0"
+                         To="1.0" Duration="0:0:0.4" />
+            <DoubleAnimation Storyboard.TargetName="TitleTopMargin"
+                         Storyboard.TargetProperty="Height" From="0.0"
+                         To="186" Duration="0:0:0.2" />
+        </Storyboard>
+        <Storyboard x:Name="FadeOut">
+            <DoubleAnimation Storyboard.TargetName="Logo"
+                         Storyboard.TargetProperty="Opacity" From="1.0"
+                         To="0.0" Duration="0:0:0.2" />
+            <DoubleAnimation Storyboard.TargetName="TitleTopMargin"
+                         Storyboard.TargetProperty="Height" From="150.0"
+                         To="0.0" Duration="0:0:0.3" />
+        </Storyboard>
+    </pages:LoginViewModelPage.Resources>
+
+    <Grid Name="LayoutRoot"
+              Background="{StaticResource MessengerWhiteBrush}"
+              Margin="24,0"
+              HorizontalAlignment="Stretch"
+              VerticalAlignment="Stretch">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <controls:StateIndicatingProgressBar x:Name="StateProgressBar"
+                                             IsIndeterminate="{Binding IsLoading}"
+                                             HorizontalAlignment="Center"
+                                             VerticalAlignment="Top"
+                                             Width="432"/>
+        
+        <Border Name="TitleTopMargin" 
+                Margin="0,56,0,0"
+                Height="186">
+            <Image
+                    Margin="0,12,0,0"
+                    Name="Logo"
+                    Source="/Assets/XMessengerIcon.png" 
+                    Stretch="None"
+                    VerticalAlignment="Top"
+                    />
+        </Border>
+        <TextBlock
+                    Name="SignInTitle"
+                    Grid.Row="1"
+                    Text="{Binding StringLibrary.Login_Title_SignIn, Source={StaticResource LocalizedStrings}}"
+                    Foreground="Black"
+                    FontSize="38"
+                    FontFamily="Segoe WP SemiLight"
+                    Visibility="Collapsed"
+                    HorizontalAlignment="Center"
+                    TextWrapping="Wrap"
+                    TextAlignment="Center"/>
+        <TextBlock
+                    Grid.Row="1"
+                    Name="WelcomeTitle"
+                    Text="{Binding StringLibrary.Login_Title_Welcome, Source={StaticResource LocalizedStrings}}"
+                    Foreground="{StaticResource MessengerBlackBrush}"
+                    FontSize="38"
+                    FontFamily="Segoe WP SemiLight"
+                    HorizontalAlignment="Center"
+                    TextWrapping="Wrap"
+                    TextAlignment="Center"/>
+        <Grid Grid.Row="2"
+                  VerticalAlignment="Top"
+                  Margin="0,30,0,0"
+                  Name="LoginFormContainer"
+                  GotFocus="LoginForm_OnGotFocus"
+                  LostFocus="LoginForm_OnLostFocus" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <TextBlock
+                Grid.Row="0"
+                Margin="0,0,0,5"
+                Foreground="{StaticResource MessengerTextLightGreyBrush}"
+                Text="{Binding StringLibrary.Login_TextboxHint_EmailOrPhone, Source={StaticResource LocalizedStrings}}"/>
+            <TextBox x:Name="UsernameTextBox"
+                              Grid.Row="1"
+                              Text="{Binding Username, Mode=TwoWay}"
+                              Style="{StaticResource LoginTextBoxStyle2}"
+                              KeyUp="TextBoxKeyUp"
+                              IsEnabled="{Binding IsLoading, Converter={StaticResource InverseBoolConverter}}"
+                              InputScope="EmailNameOrAddress"/>
+            <TextBlock
+                Grid.Row="2"
+                Margin="0,25,0,5"
+                Foreground="{StaticResource MessengerTextLightGreyBrush}"
+                Text="{Binding StringLibrary.Login_TextboxHint_Password, Source={StaticResource LocalizedStrings}}"/>
+            <PasswordBox x:Name="PasswordTextBox"
+                              Grid.Row="3"
+                              Password="{Binding Password, Mode=TwoWay}"
+                              Style="{StaticResource PasswordBoxStyle2}"
+                              KeyUp="TextBoxKeyUp"
+                              IsEnabled="{Binding IsLoading, Converter={StaticResource InverseBoolConverter}}"/>
+        </Grid>
+        
+        <StackPanel Grid.Row="3"
+                    Margin="0,20,0,0">
+            <HyperlinkButton
+                    Style="{StaticResource HyperlinkButtonStyle}"
+                    Foreground="Black"
+                    FontSize="20"
+                    Padding="0,10,0,12"
+                    Margin="-12,0,0,0"
+                    Command="{Binding NavigateToPasswordRecoveryCommand}"
+                    IsEnabled="{Binding IsLoading, Converter={StaticResource InverseBoolConverter}}"
+                    Content="{Binding StringLibrary.Login_RecoverPassword, Source={StaticResource LocalizedStrings}}"
+                    HorizontalAlignment="Left"/>
+            <HyperlinkButton
+                    Style="{StaticResource HyperlinkButtonStyle}"
+                    Foreground="Black"
+                    Padding="0,12,0,10"
+                    Margin="-12,0,0,0"
+                    FontSize="20"
+                    Command="{Binding NavigateToRegisterCommand}"
+                    IsEnabled="{Binding IsLoading, Converter={StaticResource InverseBoolConverter}}"
+                    Content="{Binding StringLibrary.Login_NotOnFacebook, Source={StaticResource LocalizedStrings}}"
+                    HorizontalAlignment="Left"/>
+            
+        </StackPanel>
+    </Grid>
+
+    <phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar ForegroundColor="{StaticResource MessengerAppBarWhite}"
+                              BackgroundColor="{StaticResource MessengerBlue}" />
+    </phone:PhoneApplicationPage.ApplicationBar>
+</pages:LoginViewModelPage>

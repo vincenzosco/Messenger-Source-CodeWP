@@ -1,0 +1,48 @@
+﻿<controls:ActiveUsersItemControl
+    x:Class="Facebook.Messenger.WP8.Controls.ActiveUsersControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:controls="clr-namespace:Facebook.Messenger.WP8.Controls"
+    xmlns:pixelLab="clr-namespace:PixelLab"
+    xmlns:ex="clr-namespace:Facebook.Messenger.WP8.Extensions"
+    ex:TiltEffect.IsTiltEnabled="True"
+    mc:Ignorable="d"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"    
+    d:DesignHeight="480" d:DesignWidth="480"
+    x:Name="ActiveUserControl">
+
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid
+            Margin="2,0,0,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <controls:UserTile
+                Name="UserTile"
+                Style="{StaticResource ActiveUserTileLayout}"
+                IndicatorDiameter="20"
+                Grid.Column="0"/>
+            <StackPanel
+                Grid.Column="1"
+                VerticalAlignment="Center">
+                <pixelLab:DynamicTextBlock
+                    x:Name="NameTextBlock"
+                    Style="{StaticResource ActiveUserDynamicTextBlockStyle}"
+                    Margin="0,0"
+                    Text="{Binding Name}"/>
+                <TextBlock
+                    x:Name="ClientTypeTextBlock"
+                    Style="{StaticResource ActiveUserClientTypeTextBlockStyle}"
+                    VerticalAlignment="Top"
+                    Visibility="Visible"
+                    Text="{Binding ClientType, Converter={StaticResource ClientTypeEnumToStringConverter}}"/>
+            </StackPanel>
+        </Grid>
+    </Grid>
+    
+</controls:ActiveUsersItemControl>

@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+<resheader name="resmimetype"><value>text/microsoft-resx</value></resheader><resheader name="version"><value>1.3</value></resheader><resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><data name="Internal_Storage_Settings_File_Options_Report_Problem" xml:space="preserve"><value>Report a problem?</value></data>
+  <data name="Internal_Details_Settings_Title" xml:space="preserve"><value>details</value></data>
+  <data name="Internal_Details_Settings_Cache" xml:space="preserve"><value>in memory cache enabled</value></data>
+  <data name="Internal_Details_Settings_Debug" xml:space="preserve"><value>debug build</value></data>
+  <data name="FeatureNotImplemented" xml:space="preserve"><value>Feature not implemented</value></data>
+  <data name="Internal_Details_Settings_Dogfood" xml:space="preserve"><value>dogfood build</value></data>
+  <data name="Crash_Dialog_Existing_Title" xml:space="preserve"><value>application didn't close properly</value></data>
+  <data name="Settings_Internal_Settings" xml:space="preserve"><value>internal settings</value></data>
+  <data name="Internal_Settings_Audio_Copy_Completed" xml:space="preserve"><value>copied to clipboard</value></data>
+  <data name="Internal_Settings_Sync_ClearInboxCache" xml:space="preserve"><value>Clear thread cache</value></data>
+  <data name="Crash_Dialog_Ignore" xml:space="preserve"><value>ignore</value></data>
+  <data name="Internal_Network_Settings_ConnectionState" xml:space="preserve"><value>state:</value></data>
+  <data name="Internal_Settings_Audio_Volume_Error" xml:space="preserve"><value>Volume must be between 0.0 and 1.0</value></data>
+  <data name="Internal_Details_Settings_Employee" xml:space="preserve"><value>employee</value></data>
+  <data name="Settings_Crash" xml:space="preserve"><value>crash</value></data>
+  <data name="Crash_Dialog_Report" xml:space="preserve"><value>report</value></data>
+  <data name="Rage_Shake_Button_Message" xml:space="preserve"><value>Message</value></data>
+  <data name="Settings_Logout" xml:space="preserve"><value>logout</value></data>
+  <data name="Temporary_StickerStore" xml:space="preserve"><value>sticker store</value></data>
+  <data name="Internal_Network_Settings_Title" xml:space="preserve"><value>network</value></data>
+  <data name="Internal_Audio_Settings_Title" xml:space="preserve"><value>audio</value></data>
+  <data name="Internal_Storage_Settings_File_Options" xml:space="preserve"><value>File Options</value></data>
+  <data name="Internal_Details_Settings_Quality_Assurance" xml:space="preserve"><value>QA build</value></data>
+  <data name="Rage_Shake_Button_Cancel" xml:space="preserve"><value>Cancel</value></data>
+  <data name="Internal_Settings_Audio_Copy" xml:space="preserve"><value>copy to clipboard</value></data>
+  <data name="Internal_Settings_Audio_Play" xml:space="preserve"><value>play</value></data>
+  <data name="Crash_Dialog_Title" xml:space="preserve"><value>something unexpected happened!</value></data>
+  <data name="Internal_Storage_Settings_Title" xml:space="preserve"><value>storage</value></data>
+  <data name="Internal_Settings_Sync_SimulateError" xml:space="preserve"><value>Simulate sync error</value></data>
+  <data name="Rage_Shake_HintText" xml:space="preserve"><value>what did you see?</value></data>
+  <data name="Internal_Network_Settings_Bandwidth" xml:space="preserve"><value>bandwidth:</value></data>
+  <data name="Crash_Dialog_Body" xml:space="preserve"><value>do you mind reporting it?</value></data>
+  <data name="Rage_Shake_Button_Email" xml:space="preserve"><value>Email</value></data>
+  <data name="Internal_Network_Settings_InterfaceName" xml:space="preserve"><value>name:</value></data>
+  <data name="Internal_Network_Settings_InterfaceType" xml:space="preserve"><value>type:</value></data>
+  <data name="Internal_Network_Settings_Subtype" xml:space="preserve"><value>subtype:</value></data>
+  <data name="Rage_Shake_Body" xml:space="preserve"><value>do you want to report a problem?</value></data>
+  <data name="Internal_Settings_Audio_Volume" xml:space="preserve"><value>volume:</value></data>
+  <data name="Crash_Dialog_Existing_Body" xml:space="preserve"><value>do you mind reporting it?</value></data>
+  <data name="Internal_Sync_Protocol_Title" xml:space="preserve"><value>sync</value></data>
+  <data name="Rage_Shake_Title" xml:space="preserve"><value>rage shake</value></data>
+  <data name="Internal_Settings_Title" xml:space="preserve"><value>INTERNAL SETTINGS</value></data>
+  </root>

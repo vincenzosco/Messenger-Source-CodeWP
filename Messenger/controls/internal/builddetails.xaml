@@ -1,0 +1,40 @@
+﻿<UserControl x:Class="Facebook.Messenger.WP8.Controls.Internal.BuildDetails"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:internal="clr-namespace:Facebook.Messenger.WP8.ViewModels.Internal"
+    mc:Ignorable="d"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    d:DataContext="{d:DesignInstance internal:BuildDetailsViewModel}"
+    d:DesignHeight="480" d:DesignWidth="480">
+
+    <ScrollViewer>
+        <StackPanel Orientation="Vertical">
+
+            <CheckBox
+                IsEnabled="False"
+                IsChecked="{Binding IsQualityAssuranceBuild}"
+                Content="{Binding InternalStringsLibrary.Internal_Details_Settings_Quality_Assurance, Source={StaticResource LocalizedStrings}}"/>
+
+            <CheckBox
+                IsEnabled="False"
+                IsChecked="{Binding IsDebugBuild}"
+                Content="{Binding InternalStringsLibrary.Internal_Details_Settings_Debug, Source={StaticResource LocalizedStrings}}"/>
+
+            <CheckBox
+                IsEnabled="False"
+                IsChecked="{Binding IsDogfoodBuild}"
+                Content="{Binding InternalStringsLibrary.Internal_Details_Settings_Dogfood, Source={StaticResource LocalizedStrings}}"/>
+
+            <CheckBox
+                IsEnabled="False"
+                IsChecked="{Binding IsEmployee}"
+                Content="{Binding InternalStringsLibrary.Internal_Details_Settings_Employee, Source={StaticResource LocalizedStrings}}"/>
+
+        </StackPanel>
+    </ScrollViewer>
+
+</UserControl>

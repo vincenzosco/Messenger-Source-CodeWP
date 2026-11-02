@@ -1,0 +1,113 @@
+﻿<controls:ComposerDrawer x:Class="Facebook.Messenger.WP8.Controls.ViewfinderDrawer"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:controls="clr-namespace:Facebook.Messenger.WP8.Controls"
+    mc:Ignorable="d"
+    d:DesignHeight="408"
+    d:DesignWidth="480">
+    
+    <Grid x:Name="LayoutRoot">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <controls:CameraView
+            x:Name="CameraControl"
+            Grid.RowSpan="2"
+            FlashOnCapture="True"
+            StateChanged="CameraControl_OnStateChanged"/>
+
+        <Grid x:Name="DeleteGrid"
+              Grid.Row="0"
+              Grid.RowSpan="2"
+              Background="{StaticResource MessengerProgressRedBrush}"
+              Opacity="0.5"
+              Visibility="Collapsed"/>
+
+        <TextBlock x:Name="HelpTextBlock"
+                   Grid.Row="0"
+                   Grid.RowSpan="2"
+                   VerticalAlignment="Top"
+                   TextAlignment="Center"
+                   TextWrapping="Wrap"
+                   Margin="70,20"
+                   Visibility="Collapsed"
+                   Foreground="{StaticResource MessengerWhiteBrush}"/>
+
+        <Rectangle Grid.Row="1"
+                       x:Name="ProgressRectangle"
+                       Height="108"
+                       Width="0"
+                       HorizontalAlignment="Left">
+            <Rectangle.Fill>
+                <SolidColorBrush x:Name="ProgressColorBrush" Color="{StaticResource MessengerTransparentBlue}"/>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <TextBlock Grid.Row="1"
+                    Margin="20,0"
+                    VerticalAlignment="Center"
+                    x:Name="ProgressText"
+                    FontFamily="Segoe WP SemiLight"
+                    FontSize="{StaticResource PhoneFontSizeLarge}"
+                    Visibility="Collapsed"
+                    Text="0:00"
+                    Foreground="{StaticResource MessengerWhiteBrush}"/>
+
+        <controls:ImageButton Height="88"
+            Width="{Binding Height, RelativeSource={RelativeSource Self}}"
+            Margin="10"
+            Grid.Row="1"
+            VerticalAlignment="Bottom"
+            x:Name="CapturePhotoButton"
+            Style="{StaticResource TiltingImageButton}"
+            Visibility="Collapsed"
+            ManipulationDelta="CapturePhotoButton_OnManipulationDelta"
+            BackgroundSource="\Assets\Camera\ViewfinderButtonBackground.png"
+            SelectedSource="\Assets\Camera\ViewfinderButtonBackgroundSelected.png"
+            Source="\Assets\Camera\SendPhotoButton.png"/>
+
+        <controls:ImageButton
+            Height="{Binding Height, ElementName=CapturePhotoButton}"
+            Width="{Binding Height, ElementName=CapturePhotoButton}"
+            x:Name="ReinitializeCameraButton"
+            Tap="ReinitializeCameraButton_OnTap"
+            Visibility="Collapsed"
+            Style="{StaticResource TiltingImageButton}"
+            BackgroundSource="\Assets\Camera\ViewfinderButtonBackground.png"
+            Source="\Assets\Camera\ViewfinderRetryButton.png"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"/>
+        
+        <Grid Grid.Row="0"
+            Margin="13"
+            VerticalAlignment="Top"
+            HorizontalAlignment="Right">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+            </Grid.RowDefinitions>
+
+            <controls:CircledIcon x:Name="RotateCameraButton"
+                                  Tap="RotateCameraButton_OnTap"
+                                  Grid.Row="0"
+                                  Style="{StaticResource TiltingImageButton}"
+                                  BackgroundSource="\Assets\AppBar\BaseCircleShaded.png"
+                                  Source="\Assets\Camera\Flip.png" 
+                                  SelectedSource="\Assets\Camera\FlipSelected.png"/>
+
+            <controls:CircledIcon x:Name="ExternalCameraButton"
+                                  Grid.Row="1"
+                                  Margin="0 13"
+                                  Tap="CameraButton_Tap"
+                                  Style="{StaticResource TiltingImageButton}"
+                                  BackgroundSource="\Assets\AppBar\BaseCircleShaded.png"
+                                  Source="\Assets\Camera\Camera.png" 
+                                  SelectedSource="\Assets\Camera\CameraSelected.png"/>
+        </Grid>
+
+    </Grid>
+</controls:ComposerDrawer>

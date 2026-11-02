@@ -1,0 +1,124 @@
+﻿<controls:ImageDrawerListItem x:Class="Facebook.Messenger.WP8.Controls.ImageDrawerDrawerItem"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:controls="clr-namespace:Facebook.Messenger.WP8.Controls"
+    xmlns:ex="clr-namespace:Facebook.Messenger.WP8.Extensions"
+    mc:Ignorable="d"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}">
+
+    <controls:ImageDrawerListItem.Resources>
+        <Storyboard x:Name="FadeOut">
+            <DoubleAnimation
+                            To="0"
+                            From="0.3"
+                            Duration="00:00:0.15"
+                            Storyboard.TargetName="Overlay"
+                            Storyboard.TargetProperty="Opacity"/>
+            <DoubleAnimation
+                            To="0"
+                            From="1"
+                            Duration="00:00:0.15"
+                            Storyboard.TargetName="ButtonGrid"
+                            Storyboard.TargetProperty="Opacity"/>
+
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Visibility" Storyboard.TargetName="Overlay">
+                <DiscreteObjectKeyFrame KeyTime="00:00:0.15">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Collapsed</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Visibility" Storyboard.TargetName="ButtonGrid">
+                <DiscreteObjectKeyFrame KeyTime="00:00:0.15">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Collapsed</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+        </Storyboard>
+
+        <Storyboard x:Name="FadeIn">
+            <DoubleAnimation
+                            To="0.3"
+                            From="0"
+                            Duration="00:00:0.15"
+                            Storyboard.TargetName="Overlay"
+                            Storyboard.TargetProperty="Opacity"/>
+            <DoubleAnimation
+                            To="1"
+                            From="0"
+                            Duration="00:00:0.15"
+                            Storyboard.TargetName="ButtonGrid"
+                            Storyboard.TargetProperty="Opacity"/>
+
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Visibility" Storyboard.TargetName="Overlay">
+                <DiscreteObjectKeyFrame KeyTime="0">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Visible</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Visibility" Storyboard.TargetName="ButtonGrid">
+                <DiscreteObjectKeyFrame KeyTime="0">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Visible</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+        </Storyboard>
+    </controls:ImageDrawerListItem.Resources>
+
+    <Grid x:Name="LayoutRoot"
+          Background="Transparent"
+          Margin="0,0,4,0"
+          Height="339"
+          Width="{Binding Height, RelativeSource={RelativeSource Self}}">
+
+        <Image x:Name="Photo"
+               Stretch="UniformToFill"
+               VerticalAlignment="Center"
+               HorizontalAlignment="Center"/>
+
+        <Grid x:Name="Overlay"
+              Background="Black"
+              Tap="Overlay_OnTap"
+              Visibility="Collapsed"
+              Opacity="0"/>
+
+        <Grid x:Name="ButtonGrid"
+              Visibility="Collapsed"
+              Opacity="0">
+
+            <StackPanel Orientation="Horizontal" 
+                        HorizontalAlignment="Center">
+                <controls:ImageButton 
+                    Height="88"
+                    Width="88"
+                    x:Name="EditPhotoButton"
+                    Style="{StaticResource TiltingImageButton}"
+                    Tap="EditPhotoButton_OnTap"
+                    BackgroundSource="\Assets\Camera\ViewfinderButtonBackground.png"
+                    Margin="10,0"
+                    Source="\Assets\Icons\EditPhotoButton.png"
+                    SelectedSource="\Assets\Icons\EditPhotoButtonSelected.png"/>
+
+                <controls:ImageButton 
+                    Height="88"
+                    Width="88"
+                    x:Name="SendPhotoButton"
+                    Style="{StaticResource TiltingImageButton}"
+                    Tap="SendPhotoButton_OnTap"
+                    BackgroundSource="\Assets\Camera\ViewfinderButtonBackground.png"
+                    SelectedSource="\Assets\Camera\ViewfinderButtonBackgroundSelected.png"
+                    Margin="10,0"
+                    Source="\Assets\Camera\SendPhotoButton.png"/>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</controls:ImageDrawerListItem>

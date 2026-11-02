@@ -1,0 +1,9 @@
+﻿<UserControl xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="Facebook.Messenger.WP8.Controls.DrawerContainer">
+    
+    <Grid x:Name="RootGrid">
+        <Grid x:Name="ContainerGrid"
+              VerticalAlignment="Bottom"/>
+    </Grid>
+</UserControl>

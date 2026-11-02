@@ -1,7 +1,27 @@
 ﻿<Application
-    x:Class="Messenger.App"
+    x:Class="Facebook.Messenger.WP8.App"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:Messenger">
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:wp8="clr-namespace:Facebook.Messenger.WP8"
+    xmlns:localization="clr-namespace:Facebook.Messenger.WP8.Localization">
 
+    <!--Application Resources-->
+    <Application.Resources>
+        <ResourceDictionary>
+            <localization:LocalizedStrings x:Key="LocalizedStrings" />
+
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Styles/LoginStyles.xaml" />
+                <ResourceDictionary Source="Converters/Converters.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+
+    <Application.ApplicationLifetimeObjects>
+        <!--Required object that handles lifetime events for the application-->
+        <shell:PhoneApplicationService
+            Launching="Application_Launching" Closing="Application_Closing"
+            Activated="Application_Activated" Deactivated="Application_Deactivated" />
+    </Application.ApplicationLifetimeObjects>
 </Application>

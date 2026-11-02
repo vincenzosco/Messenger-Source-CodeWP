@@ -1,0 +1,36 @@
+﻿<controls:ComposerDrawer x:Class="Facebook.Messenger.WP8.Controls.ImageSearchDrawer"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:controls="clr-namespace:Facebook.Messenger.WP8.Controls"
+    mc:Ignorable="d"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}">
+
+    <Grid Background="{StaticResource MessengerBackgroundGreyBrush}"
+          Width="480"
+          Height="484"
+          VerticalAlignment="Center"
+          HorizontalAlignment="Center">
+
+        <controls:ImageDrawer
+            x:Name="SearchImageDrawer"
+            EmptyListText="{Binding StringLibrary.Image_Search_Empty_Results, Source={StaticResource LocalizedStrings}}"
+            EditClicked="SearchImageDrawer_OnEditClicked"
+            SendClicked="SearchImageDrawer_OnSendClicked"/>
+        
+        <controls:CircledIcon 
+            Margin="13,84,13,13"
+            VerticalAlignment="Top"
+            HorizontalAlignment="Right"
+            Tap="SearchButton_Tap"
+            Style="{StaticResource TiltingImageButton}"
+            BackgroundSource="\Assets\AppBar\BaseCircleShaded.png"
+            Source="\Assets\AppBar\Search.png"
+            SelectedSource="\Assets\AppBar\SearchSelected.png"/>
+
+    </Grid>
+
+</controls:ComposerDrawer>

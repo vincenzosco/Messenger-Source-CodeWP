@@ -1,0 +1,71 @@
+﻿using System;
+using System.Collections.ObjectModel;
+using System.Diagnostics;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Input;
+using Facebook.Messenger.Localization.Resources;
+using Facebook.Messenger.WP8.Controls.Base;
+using Facebook.Models;
+using Microsoft.Phone.Controls;
+using GestureEventArgs = Microsoft.Phone.Controls.GestureEventArgs;
+
+namespace Facebook.Messenger.WP8.Controls.Contacts
+{
+	public partial class FoundContactsPopup : FacebookPopup
+	{
+
+
+
+
+		public event EventHandler<FacebookUser> ContactTapped;
+
+		public event EventHandler<FacebookUser> ContactCardTapped;
+
+		public FoundContactsPopup()
+		{
+			//IL_0014: Unknown result type (might be due to invalid IL or missing references)
+			//IL_001e: Expected Obj, but got Unknown
+			InitializeComponent();
+			base.Loaded += OnLoaded;
+		}
+
+		private void OnLoaded(object sender, RoutedEventArgs e)
+		{
+			((FrameworkElement)FoundContactPopupControl).Width = MaxContentPanelWidth;
+			((FrameworkElement)FoundContactPopupControl).Height = MaxContentPanelHeight;
+		}
+
+		protected override void ViewModelUpdated(object oldViewModel)
+		{
+			base.ViewModelUpdated(oldViewModel);
+			ObservableCollection<FacebookUser> observableCollection = ViewModel as ObservableCollection<FacebookUser>;
+			if (observableCollection != null)
+			{
+				((LongListSelector)FoundContactsList).ItemsSource = observableCollection;
+				FoundContactsHeader.Text = string.Format(StringLibrary.NewContacts_Header_FoundContacts, observableCollection.Count);
+			}
+		}
+
+		private void Contact_OnTap(object sender, GestureEventArgs e)
+		{
+			if (ContactTapped != null)
+			{
+				ContactPhoneUserControl contactPhoneUserControl = sender as ContactPhoneUserControl;
+				if (contactPhoneUserControl != null)
+				{
+					ContactTapped(this, ((FrameworkElement)contactPhoneUserControl).DataContext as FacebookUser);
+				}
+			}
+		}
+
+		private void Contact_OnContactCardTap(object sender, FacebookUser user)
+		{
+			if (ContactCardTapped != null)
+			{
+				ContactCardTapped(this, user);
+			}
+		}
+
+	}
+}

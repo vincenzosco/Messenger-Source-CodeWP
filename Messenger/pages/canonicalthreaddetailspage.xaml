@@ -1,0 +1,71 @@
+﻿<pages:CanonicalThreadDetailsViewModelPage
+    x:Class="Facebook.Messenger.WP8.Pages.CanonicalThreadDetailsPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:pages="clr-namespace:Facebook.Messenger.WP8.Pages"
+    xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+    xmlns:controls="clr-namespace:Facebook.Messenger.WP8.Controls"
+    xmlns:viewModels="clr-namespace:Facebook.Messenger.WP8.ViewModels"
+    xmlns:extensions="clr-namespace:Facebook.Messenger.WP8.Extensions"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d"
+    d:DataContext="{d:DesignInstance viewModels:CanonicalThreadDetailsViewModel}">
+    
+    <Grid 
+        x:Name="LayoutRoot"
+        Background="Transparent"
+        Margin="22,18">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <TextBlock 
+            Text="{Binding StringLibrary.CanonicalThreadDetailsPage_Title, Source={StaticResource LocalizedStrings}}"
+            Grid.Row="0"
+            Margin="0,0,0,8"
+            FontSize="66"
+            CharacterSpacing="-20"
+            FontFamily="{StaticResource PhoneFontFamilySemiLight}"
+            Foreground="{StaticResource MessengerBlackBrush}"/>
+        <StackPanel 
+            x:Name="RootPanel"
+            Grid.Row="1">
+            <controls:UserTile
+                x:Name="UserTile"
+                Height="160"
+                Width="160"
+                IndicatorDiameter="50"
+                Margin="0,20,0,0"
+                DataContext="{Binding Thread.CanonicalParticipant}"/>
+            <TextBlock
+                x:Name="NameTextBlock"
+                Margin="0,5,0,5"
+                FontSize="37"
+                Foreground="{StaticResource MessengerBlackBrush}"
+                Text="{Binding Thread.CanonicalParticipant.Name}"
+                TextWrapping="Wrap"
+                TextAlignment="Center"/>
+            <TextBlock
+                x:Name="LastActiveTextBlock"
+                Foreground="{StaticResource MessengerTextLightGreyBrush}"
+                FontSize="22"
+                Text="{Binding LastActiveText}"
+                TextWrapping="Wrap"
+                TextAlignment="Center"
+                Visibility="{Binding LastActiveText, Converter={StaticResource StringLengthToVisibilityConverter}}"/>
+        </StackPanel>
+    </Grid>
+    <phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar 
+            ForegroundColor="{StaticResource MessengerAppBarWhite}"
+            BackgroundColor="{StaticResource MessengerBlue}"/>
+    </phone:PhoneApplicationPage.ApplicationBar>
+
+</pages:CanonicalThreadDetailsViewModelPage>

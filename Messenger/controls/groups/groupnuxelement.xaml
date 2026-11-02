@@ -1,0 +1,71 @@
+﻿<UserControl x:Class="Facebook.Messenger.WP8.Controls.Groups.GroupNuxElement"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:controls="clr-namespace:Facebook.Messenger.WP8.Controls"
+    xmlns:pixelLab="clr-namespace:PixelLab"
+    mc:Ignorable="d"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    d:DesignHeight="480" d:DesignWidth="480"
+    x:Name="GroupNuxElementRoot">
+    
+    <StackPanel RenderTransformOrigin="0.5,0.5"
+                Width="156"
+                Background="{StaticResource MessengerBorderGreyBrush}"
+                Margin="0,0,10,10">
+
+        <StackPanel.RenderTransform>
+            <ScaleTransform />
+        </StackPanel.RenderTransform>
+
+        <controls:RoundImageControl ImageUri="{Binding ElementName=GroupNuxElementRoot, Path=ImageUri}"
+                                    x:Name="GroupImage"
+                                    Margin="0,17,0,10"
+                                    HorizontalAlignment="Center"
+                                    HorizontalContentAlignment="Center"
+                                    Height="64"
+                                    Width="64"
+                                    FlowDirection="LeftToRight"/>
+
+        <pixelLab:DynamicTextBlock Height="21"
+                                   MaxWidth="127"
+                                   x:Name="GroupNameTextBlock"
+                                   Text= "{Binding ElementName=GroupNuxElementRoot, Path=GroupName}"
+                                   FontSize="15"
+                                   FontWeight="SemiBold"
+                                   HorizontalAlignment="Center" />
+
+        <TextBlock Height="24"
+                   MaxWidth="136"
+                   TextAlignment="Center"
+                   Foreground="{StaticResource MessengerTextDarkGreyBrush}"
+                   x:Name="ActivityTextBlock"
+                   Text="{Binding ElementName=GroupNuxElementRoot, Path=ActivityLabel}"
+                   FontSize="12"
+                   FontWeight="Normal"
+                   HorizontalAlignment="Center" />
+
+        <Rectangle Width="136"
+                   Height="1"
+                   Fill="#FFE1E1E1"
+                   Margin="0,5,0,5" />
+
+        <Grid>
+            <pixelLab:DynamicTextBlock Height="24"
+                                       x:Name="GroupMembersTextBlock"
+                                       Text="{Binding ElementName=GroupNuxElementRoot, Path=Members}"
+                                       FontSize="12"
+                                       MaxWidth="136"
+                                       Foreground="{StaticResource MessengerTextLightGreyBrush}"
+                                       FontWeight="Normal"
+                                       VerticalAlignment="Center"
+                                       VerticalContentAlignment="Center"
+                                       HorizontalAlignment="Center"
+                                       Margin="0,13,0,20" />
+        </Grid>
+    </StackPanel>
+
+</UserControl>

@@ -1,0 +1,38 @@
+﻿<base:BaseControl x:Class="Facebook.Messenger.WP8.Controls.Base.HintTextBox"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:base="clr-namespace:Facebook.Messenger.WP8.Controls.Base"
+    mc:Ignorable="d"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    d:DesignHeight="480" d:DesignWidth="480">
+
+    <Grid x:Name="LayoutRoot"
+          GotFocus="LayoutRoot_OnGotFocus">
+        <TextBox x:Name="TextBox" 
+                    Text="{Binding Text, Mode=TwoWay}" 
+                    Style="{Binding TextBoxStyle}"
+                    TextChanged="TextChanged"
+                    BorderThickness="{Binding HintBorderThickness}"
+                    Visibility="{Binding IsPassword, Converter={StaticResource BoolToVisibilityConverter}, ConverterParameter=1}" 
+                    InputScope="{Binding InputScope}"
+                    TextWrapping="{Binding TextWrapping}"
+                    LineStackingStrategy="BaselineToBaseline"
+                    AcceptsReturn="{Binding AcceptsReturn}"/>
+        <PasswordBox x:Name="PasswordBox" 
+                    Password="{Binding Text, Mode=TwoWay}"
+                    PasswordChanged="PasswordChanged"
+                    Style="{Binding PasswordBoxStyle}"
+                    BorderThickness="{Binding HintBorderThickness}"
+                    Visibility="{Binding IsPassword, Converter={StaticResource BoolToVisibilityConverter}}" />
+        <TextBlock x:Name="HintBox"
+                    Text="{Binding Hint}"
+                    Style="{Binding HintStyle}"                                       
+                    Foreground="{StaticResource MessengerTextLightGreyBrush}"
+                    Tap="HintTextBlock_OnTap"
+                    VerticalAlignment="Center"/>
+    </Grid>
+</base:BaseControl>

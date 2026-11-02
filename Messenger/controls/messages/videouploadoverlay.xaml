@@ -1,0 +1,43 @@
+﻿<UserControl x:Class="Facebook.Messenger.WP8.Controls.Messages.VideoUploadOverlay"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:extensions="clr-namespace:Facebook.Messenger.WP8.Extensions"
+    mc:Ignorable="d"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    d:DesignHeight="480" d:DesignWidth="480">
+
+    <Grid x:Name="OverlayGrid"
+              VerticalAlignment="Center"
+              HorizontalAlignment="Stretch"
+              Margin="8,0"
+              Visibility="Collapsed"
+              extensions:TiltEffect.IsTiltEnabled="True">
+        <Ellipse Width="88"
+                     Height="88"
+                     VerticalAlignment="Center"
+                     HorizontalAlignment="Center"
+                     Opacity ="0.3"
+                     Fill="{StaticResource MessengerTextDarkGreyBrush}"
+                     Tap ="CancelButton_OnClick"/>
+
+        <TextBlock x:Name="CancelTextBlock"
+                       FontFamily="Segoe UI Symbol"
+                       Text=""
+                       FontSize="34"
+                       Foreground="{StaticResource MessengerWhiteBrush}"
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Center"
+                       IsHitTestVisible="False"
+                       Visibility="Collapsed"/>
+
+        <ProgressBar x:Name="UploadProgressBar"
+                         Foreground="{StaticResource MessengerWhiteBrush}"
+                         Width="84"
+                         Height="84"
+                         Style="{StaticResource UploadProgressRingStyle}"/>
+    </Grid>
+</UserControl>

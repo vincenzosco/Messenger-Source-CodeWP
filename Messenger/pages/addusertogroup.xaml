@@ -1,0 +1,157 @@
+﻿<pages:GroupContactsViewModelPage
+    x:Class="Facebook.Messenger.WP8.Pages.AddUserToGroup"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:pages="clr-namespace:Facebook.Messenger.WP8.Pages"
+    xmlns:controls="clr-namespace:Facebook.Messenger.WP8.Controls"
+    xmlns:base="clr-namespace:Facebook.Messenger.WP8.Controls.Base"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d">
+
+    <pages:GroupContactsViewModelPage.Resources>
+        <Storyboard x:Key="AnimateContactSearchIn">
+            <DoubleAnimation Storyboard.TargetName="ContactSearch"
+                             Storyboard.TargetProperty="(UIElement.RenderTransform).(TranslateTransform.Y)"
+                             Duration="0:0:0.25"
+                             From="-110"
+                             To="0">
+                <DoubleAnimation.EasingFunction>
+                    <CubicEase EasingMode="EaseOut" />
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+        </Storyboard>
+
+        <Storyboard x:Key="AnimateContactSearchOut">
+            <DoubleAnimation Storyboard.TargetName="ContactSearch"
+                             Storyboard.TargetProperty="(UIElement.RenderTransform).(TranslateTransform.Y)"
+                             Duration="0:0:0.4"
+                             From="0"
+                             To="-110">
+                <DoubleAnimation.EasingFunction>
+                    <CubicEase EasingMode="EaseOut" />
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+        </Storyboard>
+    </pages:GroupContactsViewModelPage.Resources>
+    
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" 
+          Background="Transparent">
+        <Grid Margin="20,0">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="90"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <controls:FBMessengerProgressBar 
+                Visibility="{Binding IsLoading, Converter={StaticResource BoolToVisibilityConverter}}"
+                IsIndeterminate="{Binding IsLoading}"
+                HorizontalAlignment="Center" 
+                VerticalAlignment="Top"
+                Width="400"
+                Grid.Row="0" 
+                Height="10" />
+
+            <TextBlock 
+                Text="{Binding StringLibrary.Group_AddPeople_Title, Source={StaticResource LocalizedStrings}}"
+                Style="{StaticResource MessengerAddToGroupHeaderBlockStyle}"
+                Grid.Row="0"
+                Margin="0,35,0,15"/>
+            
+            <TextBlock 
+                Grid.Row="1"
+                TextWrapping="Wrap"
+                Visibility="Collapsed"
+                x:Name="NoFriendsTextBlock"
+                Text="{Binding StringLibrary.Group_AddPeople_Search, Source={StaticResource LocalizedStrings}}"/>
+            
+            <controls:ContactListUserControl Grid.Row="1"
+                x:Name="ContactList"
+                ContactSourceChanged="ContactList_OnContactSourceChanged"
+                AllowSelection="True"/>
+        </Grid>
+
+        <Grid 
+            x:Name="SearchGrid" 
+            Margin="0,15,0,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Border 
+                x:Name="ContactSearch"
+                VerticalAlignment="Top"
+                Background="White"
+                Grid.Row="0"
+                Height="75">
+
+                <TextBox 
+                    x:Name="SearchTextBox"
+                    VerticalAlignment="Top"
+                    Margin="15, 10, 15, 0"
+                    Height="60"
+                    Style="{StaticResource ContactSearchTextBoxStyle}"
+                    TextChanged="ContactSearchFilterChanged"
+                    GotFocus="SearchTextBox_OnGotFocus"
+                    LostFocus="SearchTextBox_OnLostFocus"
+                    Text="{Binding Filter, Mode=TwoWay, UpdateSourceTrigger=Explicit}"/>
+
+                <Border.RenderTransform>
+                    <TranslateTransform Y="-90" />
+                </Border.RenderTransform>
+            </Border>
+
+            <Grid x:Name="SearchOverlayGrid"
+                  IsHitTestVisible="True"
+                  Grid.Row="1"
+                  Tap="OnOverlayGridTapped"
+                  Visibility="{Binding Path=IsSearching, Converter={StaticResource BoolToVisibilityConverter}}"
+                  Background="#a0ffffff"/>
+
+            <Border 
+                Background="White" 
+                Margin="0"
+                Grid.Row="1"
+                Visibility="{Binding Path=Filter, Converter={StaticResource StringLengthToVisibilityConverter}}">
+
+                <base:FacebookListView 
+                    x:Name="ContactsSearchResults"
+                    ItemsSource="{Binding SearchResults}"
+                    IsGroupingEnabled="True"
+                    GroupHeaderTemplate="{StaticResource ContactGroupHeaderTemplate}"
+                    HideEmptyGroups="True"
+                    Margin="20,0,0,0"
+                    VerticalAlignment="Top"
+                    Visibility="{Binding Path=Filter, Converter={StaticResource StringLengthToVisibilityConverter}}">
+
+                    <base:FacebookListView.ItemTemplate>
+                        <DataTemplate>
+                            <controls:ContactUserControl
+                                NameFontSize="{StaticResource PhoneFontSizeLarge}"
+                                ImageSize="62"
+                                Tap="OnItemTapped" />
+                        </DataTemplate>
+                    </base:FacebookListView.ItemTemplate>
+                    <base:FacebookListView.ListFooter>
+                        <Border Background="White" Height="12"></Border>
+                    </base:FacebookListView.ListFooter>
+                </base:FacebookListView>
+            </Border>
+        </Grid>
+
+    </Grid>
+    
+
+    <phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar ForegroundColor="{StaticResource MessengerAppBarWhite}"
+                              BackgroundColor="{StaticResource MessengerBlue}"/>
+    </phone:PhoneApplicationPage.ApplicationBar>
+</pages:GroupContactsViewModelPage>

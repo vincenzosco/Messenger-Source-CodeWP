@@ -1,0 +1,69 @@
+﻿<pages:ProfilePicConfirmationViewModelPage
+    x:Class="Facebook.Messenger.WP8.Pages.ProfilePicConfirmationPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:pages="clr-namespace:Facebook.Messenger.WP8.Pages"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:extensions="clr-namespace:Facebook.Messenger.WP8.Extensions"
+    xmlns:controls="clr-namespace:Facebook.Messenger.WP8.Controls"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d"
+    Background="{StaticResource MessengerWhiteBrush}"
+    shell:SystemTray.IsVisible="False">
+
+    <Grid
+        x:Name="RootGrid">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Border 
+            Name="TitleTopMargin"
+            Width="212"
+            Height="212"
+            Margin="0,200,0,0">
+            <Image Name="ProfilePhoto"
+                Stretch="UniformToFill"
+                extensions:ImageCacheExtensions.ImageUri="{Binding ProfilePicUri}"
+                extensions:ImageCacheExtensions.PlaceholderUri="/Assets/Messages/Silhouette.png"
+                extensions:RoundContentExtension.Radius="106"/>
+        </Border>
+
+        <TextBlock
+            Grid.Row="1"
+            Margin="20,35"
+            Text="{Binding StringLibrary.ProfilePic_Confirmation_Title, Source={StaticResource LocalizedStrings}}"
+            Foreground="{StaticResource MessengerBlackBrush}"
+            FontSize="38"
+            LineHeight="42"
+            LineStackingStrategy="BlockLineHeight"
+            FontFamily="Segoe WP SemiLight"
+            TextWrapping="Wrap"
+            HorizontalAlignment="Center"
+            TextAlignment="Center"/>
+
+        <controls:FBMessengerProgressBar 
+                    Visibility="{Binding IsLoading, Converter={StaticResource BoolToVisibilityConverter}}"
+                    IsIndeterminate="{Binding IsLoading}"
+                    HorizontalAlignment="Center" 
+                    Width="400"
+                    Grid.Row="0" 
+                    VerticalAlignment="Top"
+                    Height="10" />
+    </Grid>
+
+    <phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar 
+            Opacity="0.99"
+             ForegroundColor="{StaticResource MessengerAppBarWhite}"
+             BackgroundColor="{StaticResource MessengerBlue}" />
+    </phone:PhoneApplicationPage.ApplicationBar>
+
+</pages:ProfilePicConfirmationViewModelPage>

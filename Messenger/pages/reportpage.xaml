@@ -1,0 +1,82 @@
+﻿<pages:ReportProblemViewModelPage
+    x:Class="Facebook.Messenger.WP8.Pages.ReportPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:pages="clr-namespace:Facebook.Messenger.WP8.Pages"
+    xmlns:controls="clr-namespace:Facebook.Messenger.WP8.Controls"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d"
+    Loaded="ReportPage_OnLoaded"
+    Unloaded="ReportPage_OnUnloaded">
+
+    <Grid x:Name="LayoutRoot" 
+          Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <controls:FBMessengerProgressBar 
+                    Visibility="{Binding IsLoading, Converter={StaticResource BoolToVisibilityConverter}}"
+                    IsIndeterminate="{Binding IsLoading}"
+                    HorizontalAlignment="Stretch"
+                    VerticalAlignment="Top"
+                    Name="ProgressBar"
+                    Height="10" />
+
+        <TextBlock Grid.Row="0"
+                   Name="ReportProblemLabel"
+                   Margin="24, 20"
+                   Text="{Binding StringLibrary.FlyTrap_Title_ReportProblem, Source={StaticResource LocalizedStrings}}"
+                   Foreground="{StaticResource MessengerBlackBrush}"
+                   FontSize="22"
+                   FontWeight="Medium"
+                   TextWrapping="Wrap"/>
+
+        <TextBlock Grid.Row="1"
+                   Margin="24, 0, 24, 20"
+                   TextWrapping="Wrap"
+                   Text="{Binding StringLibrary.FlyTrap_Label_Instructions, Source={StaticResource LocalizedStrings}}"/>
+
+        <ScrollViewer Grid.Row="2"
+                      Margin="24,0"
+                      VerticalAlignment="Stretch"
+                      Name="ReportProblemScrollViewer"
+                      BorderBrush="{StaticResource MessengerBlackBrush}"
+                      BorderThickness="3">
+            <TextBox Name="ReportProblemTextBox"
+                     Margin="4"
+                     Style="{StaticResource ComposerText}"
+                     InputScope="Text"
+                     BorderThickness="0"
+                     Text="{Binding ReportText, Mode=TwoWay}"
+                     TextWrapping="Wrap"
+                     TextChanged="ReportProblemTextBox_OnTextChanged"
+                     HorizontalAlignment="Stretch"
+                     VerticalAlignment="Stretch"
+                     AcceptsReturn="True"
+                     GotFocus="ReportProblemTextBox_OnGotFocus"
+                     LostFocus="ReportProblemTextBox_OnLostFocus"/>
+        </ScrollViewer>
+
+        <RichTextBox Grid.Row="3"
+                     Margin="14, 10">
+            <Paragraph x:Name="Disclaimer"/>
+        </RichTextBox>
+    </Grid>
+
+    <phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar ForegroundColor="{StaticResource MessengerAppBarWhite}"
+                              BackgroundColor="{StaticResource MessengerBlue}"/>
+    </phone:PhoneApplicationPage.ApplicationBar>
+
+</pages:ReportProblemViewModelPage>

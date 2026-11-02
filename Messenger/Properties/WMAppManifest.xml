@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Ricostruito da AppManifest.xaml + AppxManifest.xml del pacchetto: il
+     WMAppManifest originale non è distribuito nel XAP, viene generato in build. -->
+<Deployment xmlns="http://schemas.microsoft.com/windowsphone/2014/deployment" AppPlatformVersion="8.1">
+  <DefaultLanguage xmlns="" code="en-US" />
+  <App xmlns="" ProductID="{317180b0-bb48-6110-0000-000000000000}"
+       Title="Messenger" RuntimeType="Silverlight" Version="11.0.1.0"
+       Genre="apps.normal" Author="Facebook" Description="Messenger"
+       Publisher="Facebook" PublisherID="{6e08453f-9ba7-4311-999c-d22fba2fb1b8}">
+    <IconPath IsRelative="true" IsResource="false">Assets\ApplicationIcon.png</IconPath>
+    <Capabilities>
+      <Capability Name="ID_CAP_NETWORKING" />
+      <Capability Name="ID_CAP_IDENTITY_DEVICE" />
+      <Capability Name="ID_CAP_MEDIALIB_PHOTO" />
+      <Capability Name="ID_CAP_MICROPHONE" />
+      <Capability Name="ID_CAP_ISV_CAMERA" />
+      <Capability Name="ID_CAP_LOCATION" />
+      <Capability Name="ID_CAP_CONTACTS" />
+      <Capability Name="ID_CAP_PHONEDIALER" />
+      <Capability Name="ID_CAP_MEDIALIB_AUDIO" />
+      <Capability Name="ID_CAP_MEDIALIB_PLAYBACK" />
+      <Capability Name="ID_CAP_SPEECH_RECOGNITION" />
+      <Capability Name="ID_CAP_SENSORS" />
+      <Capability Name="ID_CAP_WEBBROWSERCOMPONENT" />
+    </Capabilities>
+    <Tasks>
+      <DefaultTask Name="_default" NavigationPage="pages/loginpage.xaml" />
+    </Tasks>
+    <Tokens>
+      <PrimaryToken TokenID="FacebookMessengerToken" TaskName="_default">
+        <TemplateFlip>
+          <SmallImageURI IsRelative="true" IsResource="false">Assets\Logo.png</SmallImageURI>
+          <Count>0</Count>
+          <BackgroundImageURI IsRelative="true" IsResource="false">Assets\Logo.png</BackgroundImageURI>
+          <Title>Messenger</Title>
+        </TemplateFlip>
+      </PrimaryToken>
+    </Tokens>
+  </App>
+</Deployment>

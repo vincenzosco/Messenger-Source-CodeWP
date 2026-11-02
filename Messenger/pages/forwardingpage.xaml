@@ -1,0 +1,175 @@
+﻿<pages:ForwardingViewModelPage
+    x:Class="Facebook.Messenger.WP8.Pages.ForwardingPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:pages="clr-namespace:Facebook.Messenger.WP8.Pages"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:base="clr-namespace:Facebook.Messenger.WP8.Controls.Base"
+    xmlns:controls="clr-namespace:Facebook.Messenger.WP8.Controls"
+    xmlns:extensions="clr-namespace:Facebook.Messenger.WP8.Extensions"
+    xmlns:vm="clr-namespace:Facebook.Messenger.WP8.ViewModels"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:common="clr-namespace:Facebook.Messenger.WP8.Controls.Common"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d"
+    d:DataContext="{d:DesignInstance vm:ForwardingViewModel}">
+
+    <pages:ForwardingViewModelPage.Resources>
+        <Style x:Key="SearchBoxText" TargetType="TextBox" BasedOn="{StaticResource LoginTextBoxStyle2}">
+            <Setter Property="FontSize" Value="{StaticResource PhoneFontSizeMedium}"/>
+            <Setter Property="Padding"  Value="8,9,3,2"/>
+        </Style>
+
+        <Style x:Key="SearchHintText" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="{StaticResource PhoneFontSizeMedium}"/>
+            <Setter Property="Margin" Value="10,0,0,0" />
+        </Style>
+    </pages:ForwardingViewModelPage.Resources>
+
+    <Grid x:Name="LayoutRoot">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <controls:FBMessengerProgressBar 
+                    DataContext="{Binding SearchViewModel}"
+                    Visibility="{Binding IsLoading, Converter={StaticResource BoolToVisibilityConverter}}"
+                    IsIndeterminate="{Binding IsLoading}"
+                    HorizontalAlignment="Stretch"
+                    VerticalAlignment="Top"
+                    Height="10"/>
+
+        <TextBlock x:Name="TitleTextBlock"
+                   Grid.Row="0"
+                   Margin="24,56,24,0"
+                   Text="{Binding StringLibrary.Forwarding_Title_Label, Source={StaticResource LocalizedStrings}}"
+                   Foreground="{StaticResource MessengerBlackBrush}"
+                   FontSize="22"
+                   FontWeight="Medium"/>
+        
+        <base:FacebookListView
+            x:Name="ThreadList"
+            Grid.Row="2"
+            Margin="20,7,20,0"
+            Style="{StaticResource FloatingScrollbarStyle}"
+            ItemsSource="{Binding Threads}">
+
+            <base:FacebookListView.ItemTemplate>
+                <DataTemplate>
+                    <controls:ThreadParticipantControl
+                        Tap="OnThreadTapped"/>
+                </DataTemplate>
+            </base:FacebookListView.ItemTemplate>
+
+        </base:FacebookListView>
+
+        <!--Search UI-->
+        <base:HintTextBox x:Name="SearchTextBox"
+                          DataContext="{Binding SearchViewModel}"
+                          Grid.Row="1"
+                          Margin="20,10,20,0"
+                          Hint="{Binding StringLibrary.Forwarding_SearchBox_HintText, Source={StaticResource LocalizedStrings}}"
+                          TextBoxStyle="{StaticResource SearchBoxText}"
+                          HintStyle="{StaticResource SearchHintText}"
+                          TextBoxTextChanged="SearchFilterChanged"
+                          GotFocus="SearchTextBox_OnGotFocus"
+                          LostFocus="SearchTextBox_OnLostFocus"
+                          HintBorderThickness="3"/>
+
+        <Grid x:Name="SearchOverlayGrid"
+              DataContext="{Binding SearchViewModel}"
+              IsHitTestVisible="True"
+              Grid.Row="2"
+              Tap="OnOverlayGridTapped"
+              Visibility="{Binding IsSearching, Converter={StaticResource BoolToVisibilityConverter}}"
+              Background="#a0ffffff" />
+
+        <Border x:Name="SearchResultsBorder"
+                Background="White" 
+                DataContext="{Binding SearchViewModel}"
+                Grid.Row="2">
+
+            <base:FacebookListView x:Name="ContactsSearchResults"
+                               ItemsSource="{Binding GroupAndContactSearchResults}"
+                               GroupHeaderTemplate="{StaticResource ContactGroupHeaderTemplate}"
+                               IsGroupingEnabled="True"
+                               HideEmptyGroups="True"
+                               Margin="20,0,0,0"
+                               VerticalAlignment="Top">
+
+                <base:FacebookListView.ItemTemplate>
+                    <DataTemplate>
+                        <controls:SearchResultControl OnContactTapped="OnContactItemTapped"
+                                                  OnGroupTapped="OnGroupItemTapped"/>
+                    </DataTemplate>
+                </base:FacebookListView.ItemTemplate>
+                <base:FacebookListView.ListFooter>
+                    <Border Background="White"
+                        Height="6" />
+                </base:FacebookListView.ListFooter>
+            </base:FacebookListView>
+        </Border>
+        <!--Search UI-->
+        
+        <Grid
+            x:Name="SelectedRecipientsViewer"
+            Grid.Row="3"
+            Height="100"
+            Background="{StaticResource MessengerBlueBrush}"
+            Visibility="{Binding SelectedRecipients.Count, Converter={StaticResource BoolToVisibilityConverter}}">
+
+            <ScrollViewer
+                x:Name="RecipientScrollViewer"
+                HorizontalScrollBarVisibility="Hidden"
+                VerticalScrollBarVisibility="Disabled">
+                <ItemsControl
+                    ItemsSource="{Binding SelectedRecipients}">
+                        <ItemsControl.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <StackPanel
+                                    Orientation="Horizontal"
+                                    Height="80"/>
+                            </ItemsPanelTemplate>
+                        </ItemsControl.ItemsPanel>
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <Grid>
+                                <controls:FaceMash
+                                    Height="68"
+                                    Width="{Binding Height, RelativeSource={RelativeSource Self}}"
+                                    Margin="7,0,5,0" 
+                                    Tap="OnSelectionTapped"/>
+                                <Grid Background="{StaticResource MessengerTransparentGreyBrush}"
+                                      IsHitTestVisible="False"
+                                      extensions:RoundContentExtension.Radius="34">
+                                
+                                    <Image Source="/Assets/Generic/WhiteCheck.png"
+                                           Margin="5"/>
+                                </Grid>
+                            </Grid>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+            </ScrollViewer>
+        </Grid>
+        <common:FullscreenProgressIndicator
+            Grid.Row="0"
+            Grid.RowSpan="4"
+            x:Name="FullscreenProgressIndicator"
+            Text="{Binding StringLibrary.Composer_SendingMessage, Source={StaticResource LocalizedStrings}}"
+            Visibility="Collapsed"/>
+    </Grid>
+
+    <phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar ForegroundColor="{StaticResource MessengerAppBarWhite}"
+                              BackgroundColor="{StaticResource MessengerBlue}" />
+    </phone:PhoneApplicationPage.ApplicationBar>
+</pages:ForwardingViewModelPage>

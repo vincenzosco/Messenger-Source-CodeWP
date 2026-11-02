@@ -1,0 +1,57 @@
+﻿<base:BaseControl
+    x:Class="Facebook.Messenger.WP8.Controls.PinnedThreadsControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:base="clr-namespace:Facebook.Messenger.WP8.Controls.Base"
+    xmlns:controls="clr-namespace:Facebook.Messenger.WP8.Controls"
+    xmlns:viewModels="clr-namespace:Facebook.Messenger.WP8.ViewModels"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    d:DataContext="{viewModels:PinnedThreadsViewModel}"
+    mc:Ignorable="d">
+
+    <base:BaseControl.Resources>
+        <CubicEase x:Name="ZoomEase" EasingMode="EaseOut"/>
+        
+        <Storyboard x:Name="FadeNuxAway" Duration="00:00:00.5" Completed="FadeNuxAway_OnCompleted">
+            <DoubleAnimation
+                To="0"
+                From="1"
+                EasingFunction="{StaticResource ZoomEase}"
+                Storyboard.TargetName="GroupsNuxPresenter"
+                Storyboard.TargetProperty="Opacity"/>
+        </Storyboard>
+
+        <DataTemplate x:Key="PinnedGroupItemTemplate">
+            <controls:GroupTileControl
+                ThreadTap="PinnedThread_OnTap"
+                UnpinTap="UnpinOverlay_OnTap"
+                />
+        </DataTemplate>
+
+    </base:BaseControl.Resources>
+    
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" 
+          Background="Transparent"
+          UseOptimizedManipulationRouting="False"
+          ManipulationStarted="LayoutRoot_OnManipulationStarted"
+          ManipulationCompleted="LayoutRoot_OnManipulationCompleted"
+          ManipulationDelta="LayoutRoot_OnManipulationDelta">
+
+        <controls:PinnedThreadGridView
+            x:Name="List"
+            VerticalAlignment="Top"
+            GridCellSize="205,264"
+            PinRemoved="List_OnPinRemoved"
+            IsRearranging="{Binding IsRearranging, Mode=TwoWay}"
+            ItemsSource="{Binding PinnedThreads}"
+            ItemTemplate="{StaticResource PinnedGroupItemTemplate}"/>
+
+        <ContentPresenter x:Name="GroupsNuxPresenter"                         
+                          Visibility="{Binding ShowGroupsNux, Converter={StaticResource BoolToVisibilityConverter}}"/>
+    </Grid>
+</base:BaseControl>

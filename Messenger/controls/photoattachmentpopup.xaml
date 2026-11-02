@@ -1,0 +1,137 @@
+﻿<controls:FacebookPopup x:Class="Facebook.Messenger.WP8.Controls.PhotoAttachmentPopup"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+    xmlns:controls="clr-namespace:Facebook.Messenger.WP8.Controls"
+    mc:Ignorable="d"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    x:Name="RootControl">
+    
+    <Grid x:Name="AddPhotosControl"
+            Background="{StaticResource MessengerBlueBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <TextBlock Margin="20,40,20,20"
+                        Grid.Row="0"
+                        Foreground="White"
+                        FontSize="22"
+                        FontWeight="Medium"
+                        TextWrapping="Wrap"
+                        x:Name="PhotoChooserPopupTitle"
+                        Text="{Binding PopupTitle, ElementName=RootControl}"/>
+
+        <Button Grid.Row="1"
+                    x:Name="TakePhotoButton"
+                    HorizontalAlignment="Stretch"
+                    Margin="18,16"
+                    Tap="TakePhoto_OnTap"
+                    Style="{StaticResource BareTiltButton}"
+                    HorizontalContentAlignment="Left">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="50"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <controls:CircledIcon
+                    x:Name ="TakePhotoIconWhite"
+                    Source="/Assets/AppBar/Camera.png"
+                    Grid.Column="0"/>
+
+                <Image
+                    x:Name="TakePhotoIconBlack"
+                    Grid.Column="0"
+                    Visibility="Collapsed"
+                    Source="/Assets/Groups/photoFromCamera.png" />
+
+                <TextBlock x:Name="TakePhotoText"
+                            Margin="20,0,20,0"
+                                Grid.Column="1"
+                                Foreground="White"
+                                Text="{Binding StringLibrary.AddPhotos_Menu_TakePhoto, Source={StaticResource LocalizedStrings}}"
+                                FontWeight="Light"
+                                FontSize="38"
+                                TextWrapping="Wrap"/>
+            </Grid>
+        </Button>
+
+        <Button Grid.Row="2"
+                    HorizontalAlignment="Stretch"
+                    HorizontalContentAlignment="Left"
+                    Margin="18,16"
+                    Tap="ChoosePhoto_OnTap"
+                    Style="{StaticResource BareTiltButton}">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="50"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                    
+                <controls:CircledIcon
+                    x:Name ="AttachImageIconWhite"
+                    Source="/Assets/AppBar/Attach.png"
+                    Grid.Column="0"/>
+
+                <Image
+                    x:Name="AttachImageIconBlack"
+                    Grid.Column="0"
+                    Visibility="Collapsed"
+                    Source="/Assets/Groups/photoFromGallery.png" />
+
+                <TextBlock x:Name="AttachImageText"
+                            Margin="20,0,20,0"
+                            Grid.Column="1"
+                            Foreground="White"
+                            Text="{Binding StringLibrary.AddPhotos_Menu_ChooseFromAlbum, Source={StaticResource LocalizedStrings}}"
+                            FontWeight="Light"
+                            FontSize="38"
+                            TextWrapping="Wrap"/>
+            </Grid>
+        </Button>
+
+        <Button Grid.Row="3"
+                    HorizontalAlignment="Stretch"
+                    HorizontalContentAlignment="Left"
+                    Margin="18,16"
+                    Tap="RemovePhoto_OnTap"
+                    Visibility="{Binding ShowRemovePhotoOption, ElementName=RootControl, Converter={StaticResource BoolToVisibilityConverter}}"
+                    Style="{StaticResource BareTiltButton}">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="50"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <controls:CircledIcon
+                    x:Name ="RemoveImageIconWhite"
+                    Source="/Assets/AppBar/Skip.png"
+                    Grid.Column="0"/>
+
+                <Image
+                    x:Name="RemoveImageIconBlack"
+                    Grid.Column="0"
+                    Visibility="Collapsed"
+                    Source="/Assets/Generic/RemoveBlack.png" />
+                    
+                <TextBlock x:Name="RemoveImageText"
+                            Margin="20,0,20,0"
+                            Grid.Column="1"
+                            Foreground="White"
+                            Text="{Binding StringLibrary.AddPhotos_Menu_RemovePhotos, Source={StaticResource LocalizedStrings}}"
+                            FontWeight="Light"
+                            FontSize="38"
+                            TextWrapping="Wrap"/>
+            </Grid>
+        </Button>
+    </Grid>
+</controls:FacebookPopup>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{AB250D2F-0CC4-F529-90CF-CEBF06DFA9E5}</ProjectGuid>
+    <ProjectTypeGuids>{C089C8C0-30E0-4E22-80C0-CE093F111A43};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Facebook_Messenger_WP8_Agents</RootNamespace>
+    <AssemblyName>Facebook-Messenger-WP8-Agents</AssemblyName>
+    <TargetFrameworkIdentifier>WindowsPhone</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>v8.1</TargetFrameworkVersion>
+    <SilverlightVersion>v8.1</SilverlightVersion>
+    <LangVersion>6</LangVersion>
+    <FileAlignment>512</FileAlignment>
+    <MinimumVisualStudioVersion>12</MinimumVisualStudioVersion>
+    <NoWarn>1591</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT;WINDOWS_PHONE;WINDOWS_PHONE8_1</DefineConstants>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT;WINDOWS_PHONE;WINDOWS_PHONE8_1</DefineConstants>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\\..\\src/Facebook-Base/Facebook-Base.csproj">
+      <Project>{672E82DE-0BD2-223E-0A24-306D577D1DA1}</Project>
+      <Name>Facebook-Base</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\\..\\src/Facebook-Messenger-WP8-Base/Facebook-Messenger-WP8-Base.csproj">
+      <Project>{F386C0AF-B565-F97B-5B0E-4676B77B7BFC}</Project>
+      <Name>Facebook-Messenger-WP8-Base</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\\..\\src/Facebook-Models/Facebook-Models.csproj">
+      <Project>{B78A527B-1450-2CD4-7EA6-F524D0C742CD}</Project>
+      <Name>Facebook-Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\\..\\src/Facebook-Services/Facebook-Services.csproj">
+      <Project>{04CC4F6A-D59E-22D4-8F1C-459799B6EFE5}</Project>
+      <Name>Facebook-Services</Name>
+    </ProjectReference>
+    <Reference Include="GalaSoft.MvvmLight">
+      <HintPath>..\\..\\lib\GalaSoft.MvvmLight.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Phone" />
+    <Reference Include="Microsoft.Phone.Reactive" />
+    <Reference Include="Microsoft.Practices.ServiceLocation">
+      <HintPath>..\\..\\lib\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows" />
+    <Reference Include="Windows" />  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="**\*.cs" Exclude="bin\**;obj\**" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsPhone\v8.1\Microsoft.WindowsPhone.CSharp.targets" />
+</Project>

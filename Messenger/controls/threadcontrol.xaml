@@ -1,0 +1,113 @@
+﻿<controls:ThreadListItemControl
+    x:Class="Facebook.Messenger.WP8.Controls.ThreadControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:controls="clr-namespace:Facebook.Messenger.WP8.Controls"
+    xmlns:pixelLab="clr-namespace:PixelLab"
+    xmlns:ex="clr-namespace:Facebook.Messenger.WP8.Extensions"
+    ex:TiltEffect.IsTiltEnabled="True"
+    mc:Ignorable="d"
+    xmlns:viewModels="clr-namespace:Facebook.Messenger.WP8.ViewModels"
+    d:DataContext="{d:DesignInstance viewModels:ThreadViewModel}"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    Height="110" d:DesignWidth="480">
+
+    <Grid 
+        x:Name="LayoutRoot" 
+        VerticalAlignment="Top" 
+        Background="Transparent">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid 
+            Grid.Column="0"
+            Grid.RowSpan="2"
+            Margin="0,6,14,0"
+            VerticalAlignment="Top"
+            HorizontalAlignment="Left">
+
+            <controls:FaceMash
+                x:Name="FaceMash"
+                Height="100"
+                Width="100"/>
+
+            <controls:ProfileIndicatorControl 
+                x:Name="IndicatorControl"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Bottom"
+                Height="31"
+                Width="31"
+                ImageBorderThickness="3" />
+        </Grid>
+        <Grid 
+            Grid.Column="1"
+            Grid.Row ="0"
+            Margin="0, 14, 0, 0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <pixelLab:DynamicTextBlock 
+                x:Name="ThreadTitle"
+                Foreground="Black"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Bottom"
+                Grid.Column="0"
+                FontSize="37.33"
+                FontFamily="Segoe WP SemiLight"
+                Margin="0,0,10,0"/>
+            <TextBlock
+                x:Name="Timestamp"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Bottom"
+                Grid.Column="1"
+                Margin="0,0,0,5"
+                FontSize="18.67"
+                Foreground="Black"/>
+        </Grid>
+        <Grid 
+            Grid.Column="1"
+            Grid.Row="1"
+            Margin="0,-5,0,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+
+            <RichTextBox
+                x:Name="SnippetTextBox"
+                Margin="-7,0"
+                MinHeight="31"
+                Foreground="Black"
+                FontSize="20"
+                VerticalAlignment="Top"
+                HorizontalAlignment="Left"
+                TextWrapping="NoWrap"
+                Padding="0,0,5,0"/>
+
+            <Image 
+                x:Name="ThreadStatus"
+                VerticalAlignment="Top"
+                Grid.Column="1"
+                Width="20"
+                Stretch="Fill"
+                Margin="0,5,0,0"/>
+            
+            <controls:SeenHeadsControl
+                Grid.Column="1"
+                x:Name="SeenHeadsControl"
+                MaxSeenHeads="3"/>
+            
+        </Grid>
+    </Grid>
+</controls:ThreadListItemControl>
+    

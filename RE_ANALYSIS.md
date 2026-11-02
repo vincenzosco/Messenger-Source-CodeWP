@@ -98,6 +98,20 @@ for a in Facebook.Messenger.WP8 Facebook-Messenger-WP8-Base \
 done
 ```
 
+## Import nel progetto e build
+
+I sorgenti sono stati importati come otto progetti WP8.1 (`Messenger/` per l'app,
+`src/<assembly>/` per le altre) più le DLL di terze parti in `lib/`. La
+rigenerazione completa è in `tools/import-sources.sh`: ricopia `decompiled/`,
+riscrive i `.csproj` e i manifest, e applica i fixup necessari a rendere
+compilabile ciò che il decompilatore emette in forma non valida (namespace
+file-scoped, campi rigenerati dal XAML, `Nullable` senza argomento, cast a `this`).
+
+```bash
+bash tools/import-sources.sh                       # import + fixup
+MSBuild.exe Messenger.sln -p:Configuration=Debug -p:Platform="Any CPU"
+```
+
 ## Nota d'uso
 
 Il codice decompilato è proprietà di Facebook/Meta ed è qui conservato a solo

@@ -1,0 +1,188 @@
+﻿<pages:MessageComposerViewModelPage
+    x:Class="Facebook.Messenger.WP8.Pages.ComposerBarPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:base="clr-namespace:Facebook.Messenger.WP8.Controls.Base"
+    xmlns:pages="clr-namespace:Facebook.Messenger.WP8.Pages"
+    xmlns:controls="clr-namespace:Facebook.Messenger.WP8.Controls"
+    xmlns:converters="clr-namespace:Facebook.Messenger.WP8.Converters"
+    xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:common="clr-namespace:Facebook.Messenger.WP8.Controls.Common"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d">
+
+    <pages:MessageComposerViewModelPage.Resources>
+        <converters:InverseBoolConverter x:Key="InverseBoolConverter"/>
+    </pages:MessageComposerViewModelPage.Resources>
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">        
+        <Grid x:Name="SecondLayoutRoot">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <controls:FBMessengerProgressBar
+                    x:Name="SearchProgressBar"
+                    VerticalAlignment="Top"
+                    IsIndeterminate="{Binding IsLoading}"
+                    Visibility="{Binding IsLoading, Converter={StaticResource BoolToVisibilityConverter}}"
+                    Height="15" />
+
+            <Border x:Name="RecipientsBorder"
+                    Grid.Row="0"
+                    Margin="21,34,21,0"
+                    Tap="OnRecipientBorderTapped"
+                    BorderThickness="0"
+                    BorderBrush="Black">
+                <ScrollViewer
+                    x:Name="RecipientScrollViewer"
+                    MaxHeight="120">
+                    <Grid Margin="0,10,10,5">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <TextBox 
+                            x:Name="TokenKeyboardTextBox"
+                            Visibility="Visible" 
+                            KeyDown="OnInvisibleTextBoxKeyDown"
+                            GotFocus="SearchTextBoxGotFocus"
+                            LostFocus="SearchTextBoxLostFocus"
+                            Opacity="0.0"
+                            Height="0" Margin="0,18,0,17"/>
+                        <TextBlock 
+                            Grid.Column="0"
+                            TextAlignment="Left"
+                            Margin="0,4,0,0"
+                            Text="{Binding StringLibrary.Composer_To, Source={StaticResource LocalizedStrings}}"
+                            FontSize="{StaticResource PhoneFontSizeMedium}"
+                            FontWeight="SemiBold"
+                            Foreground="Black"
+                            VerticalAlignment="Top"/>
+                        <toolkit:WrapPanel
+                            Margin="-6,0,0,0"
+                            x:Name="RecipientList"
+                            Grid.Column="1"
+                            Background="White">
+                        </toolkit:WrapPanel>
+
+                    </Grid>
+                </ScrollViewer>
+            </Border>
+
+            <Border x:Name="SearchListBorder"
+                    Grid.Row="1"
+                    Margin="21,0,21,0"
+                    Padding="10,0,11,0"
+                    BorderThickness="3"
+                    BorderBrush="{StaticResource MessengerBlueBrush}"
+                    Background="White"
+                    VerticalAlignment="Stretch">
+                <Grid>
+                    <base:FacebookListView
+                        x:Name="SearchList"
+                        IsGroupingEnabled="True"
+                        HideEmptyGroups="True"
+                        GroupHeaderTemplate="{StaticResource ContactGroupHeaderTemplate}"
+                        IsEnabled="{Binding SendingMessage, Converter={StaticResource InverseBoolConverter}}"
+                        ItemsSource="{Binding GroupedContactList}" >
+
+                        <base:FacebookListView.ItemTemplate>
+                            <DataTemplate>
+                                <controls:ContactUserControl 
+                                    NameFontSize="{StaticResource PhoneFontSizeLarge}"
+                                    ImageSize="62"
+                                    Tap="OnItemTapped"/>
+                            </DataTemplate>
+                        </base:FacebookListView.ItemTemplate>
+
+                    </base:FacebookListView>
+                </Grid>
+            </Border>
+
+            <Grid Grid.Row="2"
+                  x:Name="BubbleGrid"
+                  Background="White">
+                
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                
+                <controls:LocationNuxControl
+                    Name="LocationWarning"
+                    Grid.Row="0"
+                    Grid.ColumnSpan="2"
+                    Visibility="{Binding ShowLocationWarning, Converter={StaticResource BoolToVisibilityConverter}}"
+                    Margin="0,6,0,0"/>
+
+                <Button
+                    Name="LocationButton"
+                    Grid.Column="0"
+                    Grid.Row="1"
+                    Click="LocationButtonOnClick"
+                    Style="{StaticResource BareTiltButton}"
+                    HorizontalAlignment="Right"
+                    VerticalAlignment="Center"
+                    Margin="0, 0, 6, 16"
+                    Height="40"
+                    Width="40">
+                    <Grid>
+                        <Image
+                            x:Name="LocationButtonDisabledImage"
+                            Source="../Assets/Messages/LocationDisabled.png"
+                            Stretch="None"
+                            Visibility="{Binding SendLocationEnabled, Converter={StaticResource BoolToVisibilityConverter}, ConverterParameter=1}"/>
+                        <Image
+                            x:Name="LocationButtonEnabledImage"
+                            Source="../Assets/Messages/LocationEnabled.png"
+                            Stretch="None" 
+                            Visibility="{Binding SendLocationEnabled, Converter={StaticResource BoolToVisibilityConverter}}"/>
+                    </Grid>
+                </Button>
+
+                <controls:MessageComposerBubble
+                    Grid.Column="1"
+                    Grid.Row="1"
+                    Margin="0,10,0,0"
+                    x:Name="MessageComposerBubble"
+                    VerticalAlignment="Bottom"/>
+            </Grid>
+
+            <Grid x:Name="DrawerPaddingElement"
+                  Grid.Row="2"/>
+            
+            <controls:DrawerContainer x:Name="DrawerContainer"
+                                      Grid.Row="0"
+                                      Grid.RowSpan="3"/>
+
+        </Grid>
+        
+        <common:FullscreenProgressIndicator
+            Visibility="{Binding SendingMessage, Converter={StaticResource BoolToVisibilityConverter}}" 
+            Text="{Binding StringLibrary.Composer_SendingMessage, Source={StaticResource LocalizedStrings}}"/>
+        
+    </Grid>
+
+    <phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar
+            ForegroundColor="{StaticResource MessengerAppBarWhite}"
+            BackgroundColor="{StaticResource MessengerBlue}"/>
+    </phone:PhoneApplicationPage.ApplicationBar>
+</pages:MessageComposerViewModelPage>
