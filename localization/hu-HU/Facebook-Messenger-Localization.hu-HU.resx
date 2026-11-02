@@ -1,0 +1,395 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Active_AppBar_Chat" xml:space="preserve"><value>chat</value></data>
+  <data name="AddContact_Contact_Already_Exists" xml:space="preserve"><value>Ez a telefonszám már szerepel a névjegyzékben.</value></data>
+  <data name="AddContact_FBUser_Already_Exists" xml:space="preserve"><value>{0} már szerepel a névjegyzékben.</value></data>
+  <data name="AddContact_Invite_Button" xml:space="preserve"><value>ajánlom</value></data>
+  <data name="AddContact_MatchedExistingUser_Label" xml:space="preserve"><value>{0} már szerepel a névjegyzékedben a Messengerben.</value></data>
+  <data name="AddContact_MatchingUser_Label" xml:space="preserve"><value>{0} belekerült a Messenger névjegyzékébe.</value></data>
+  <data name="AddContact_Message_Button" xml:space="preserve"><value>üzenetküldés {0} számára</value></data>
+  <data name="AddContact_PhoneNumber_Description" xml:space="preserve"><value>Ha valakit szeretnél megkeresni a Messengeren, add meg a telefonszámát.</value></data>
+  <data name="AddContact_PhoneNumber_Title" xml:space="preserve"><value>NÉVJEGY HOZZÁADÁSA</value></data>
+  <data name="AddContact_Remove_Contact_Warning" xml:space="preserve"><value>{0} törölve lesz a Messenger névjegyzékéből.</value></data>
+  <data name="AddContact_Remove_MessageBox_Title" xml:space="preserve"><value>Névjegy eltávolítása</value></data>
+  <data name="AddPhotos_Menu_ChooseFromAlbum" xml:space="preserve"><value>Választás az albumok közül</value></data>
+  <data name="AddPhotos_Menu_RemovePhotos" xml:space="preserve"><value>Fénykép eltávolítása</value></data>
+  <data name="AddPhotos_Menu_TakePhoto" xml:space="preserve"><value>Fénykép készítése</value></data>
+  <data name="AddPhotos_Title_EditProfilePicture" xml:space="preserve"><value>PROFILKÉP SZERKESZTÉSE</value></data>
+  <data name="AddPhotos_Title_SetGroupPhoto" xml:space="preserve"><value>CSOPORT FÉNYKÉPÉNEK BEÁLLÍTÁSA</value></data>
+  <data name="Add_Phone_Number_Label" xml:space="preserve"><value>Telefonszám megadása</value></data>
+  <data name="AppBar_Cancel" xml:space="preserve"><value>mégsem</value></data>
+  <data name="AppBar_No" xml:space="preserve"><value>nem</value></data>
+  <data name="AppBar_Ok" xml:space="preserve"><value>ok</value></data>
+  <data name="AppBar_Remove" xml:space="preserve"><value>eltávolítás</value></data>
+  <data name="AppBar_Undo" xml:space="preserve"><value>visszavonás</value></data>
+  <data name="AppBar_Yes" xml:space="preserve"><value>igen</value></data>
+  <data name="AppUpdate_Description" xml:space="preserve"><value>Frissítsd a Messengert, hogy elérhetővé váljanak az új funkciók és fejlesztések.</value></data>
+  <data name="AppUpdate_NotNowButton" xml:space="preserve"><value>Most nem</value></data>
+  <data name="AppUpdate_Title" xml:space="preserve"><value>Frissítés érhető el a Messengerhez</value></data>
+  <data name="AppUpdate_UpdateAppButton" xml:space="preserve"><value>Frissítés</value></data>
+  <data name="App_Location_Services_Enable" xml:space="preserve"><value>Ha az üzeneteidben szeretnéd megosztani a tartózkodási helyedet, nyisd meg a Messenger beállításait.</value></data>
+  <data name="App_Quit_Caption" xml:space="preserve"><value>Kilépés a Messengerből</value></data>
+  <data name="Attachments_AppBar_Next" xml:space="preserve"><value>következő</value></data>
+  <data name="Attachments_AppBar_Previous" xml:space="preserve"><value>előző</value></data>
+  <data name="Attachments_AppBar_Skip" xml:space="preserve"><value>kihagyás</value></data>
+  <data name="BackgroundToast_LeavingApp_Title" xml:space="preserve"><value>Messenger</value></data>
+  <data name="BackgroundToast_LeavingApp_Warning" xml:space="preserve"><value>Egyes üzeneteid elküldése nem történt meg a Messenger bezárása előtt. Nyisd meg a Messengert, ha szeretnél biztos lenni benne, hogy elmentek az üzenetek.</value></data>
+  <data name="ButtonLabelRetry" xml:space="preserve"><value>Újra</value></data>
+  <data name="Button_Continue" xml:space="preserve"><value>Folytatás</value></data>
+  <data name="CanonicalThreadDetailsPage_Start_Group" xml:space="preserve"><value>csoport létrehozása</value></data>
+  <data name="CanonicalThreadDetailsPage_Title" xml:space="preserve"><value>részletek</value></data>
+  <data name="Chat_Is_Off" xml:space="preserve"><value>A chat ki van kapcsolva.</value></data>
+  <data name="Chat_Is_Off_Details_Label" xml:space="preserve"><value>A chat kikapcsolt állapotában is megkapod az összes üzenetedet, de ha bekapcsolod, láthatod, hogy ki aktív a Facebookon.</value></data>
+  <data name="Client_Type_Mobile" xml:space="preserve"><value>Mobil</value></data>
+  <data name="Client_Type_Web" xml:space="preserve"><value>Web</value></data>
+  <data name="Composer_Exit_Warning" xml:space="preserve"><value>Mégsem küldöd el az üzenetet?</value></data>
+  <data name="Composer_Groups_Search_Header" xml:space="preserve"><value>CSOPORTOK</value></data>
+  <data name="Composer_More_People_Search_Header" xml:space="preserve"><value>TOVÁBBI EMBEREK</value></data>
+  <data name="Composer_SendingMessage" xml:space="preserve"><value>üzenet küldése...</value></data>
+  <data name="Composer_To" xml:space="preserve"><value>Címzett:</value></data>
+  <data name="Confirm_Phone_Number_Label" xml:space="preserve"><value>Szám megerősítése</value></data>
+  <data name="ContactCard_MenuLabel_CreateGroup" xml:space="preserve"><value>csoport létrehozása {0} részvételével</value></data>
+  <data name="ContactCard_MenuLabel_RemoveContact" xml:space="preserve"><value>névjegy eltávolítása</value></data>
+  <data name="ContactCard_MenuLabel_SendMessage" xml:space="preserve"><value>üzenetküldés {0} számára</value></data>
+  <data name="ContactList_Header_ContactsFound" xml:space="preserve"><value>{0} névjegy található</value></data>
+  <data name="ContactList_Header_Failed" xml:space="preserve"><value>sikertelen névjegyfeltöltés. megpróbálod újra?</value></data>
+  <data name="ContactList_Header_FindContacts" xml:space="preserve"><value>névjegyek keresése</value></data>
+  <data name="ContactList_Header_ShowAll" xml:space="preserve"><value>az összes megjelenítése</value></data>
+  <data name="ContactList_Header_SyncingContacts" xml:space="preserve"><value>nevek szinkronizálása...</value></data>
+  <data name="ContactList_Nux_Label_EmptyList" xml:space="preserve"><value>A névjegyek szinkronizálásával láthatod, hogy ki az, akit már ismersz a Messengerben.</value></data>
+  <data name="ContactList_Nux_Label_NoMatchingContacts" xml:space="preserve"><value>Itt fogod látni a neveket. Ha valakit szeretnél felvenni, csak koppints a névjegy ikonra.</value></data>
+  <data name="Contact_Search_No_Results" xml:space="preserve"><value>Nincs találat</value></data>
+  <data name="Contacts_Find_Button_Label" xml:space="preserve"><value>névjegyek keresése</value></data>
+  <data name="Contacts_Invite_Button_Label" xml:space="preserve"><value>ajánlás másoknak</value></data>
+  <data name="Conversation_AppBar_AttachPhoto" xml:space="preserve"><value>fényképek</value></data>
+  <data name="Conversation_AppBar_Camera" xml:space="preserve"><value>kamera</value></data>
+  <data name="Conversation_AppBar_ChangePhoto" xml:space="preserve"><value>fénykép</value></data>
+  <data name="Conversation_AppBar_Like" xml:space="preserve"><value>tetszik</value></data>
+  <data name="Conversation_AppBar_Send" xml:space="preserve"><value>küldés</value></data>
+  <data name="Conversation_AppBar_Text" xml:space="preserve"><value>szöveg</value></data>
+  <data name="Conversation_ContextMenu_RemoveAttachment" xml:space="preserve"><value>kép eltávolítása</value></data>
+  <data name="Conversation_MenuItem_Rename" xml:space="preserve"><value>név</value></data>
+  <data name="CreateGroup_TextBox_Label" xml:space="preserve"><value>Csoport neve</value></data>
+  <data name="CreateGroup_Title" xml:space="preserve"><value>ÚJ CSOPORT</value></data>
+  <data name="Device_Location_Services_Enable" xml:space="preserve"><value>Ha szeretnéd az üzeneteidben megosztani a helymeghatározási adatokat, nyisd meg a telefon beállításai között a helymeghatározási beállításokat.</value></data>
+  <data name="Empty_Conversation_Placeholder_Text" xml:space="preserve"><value>{0} a Messengeren van, és az üzeneteidet azonnal megkapja.</value></data>
+  <data name="Empty_Conversation_Placeholder_Text_For_Non_Messenger_User" xml:space="preserve"><value>{0} nincs a Messengeren, de a Facebookon megkapja az üzenetedet.</value></data>
+  <data name="Empty_Conversation_Placeholder_Title" xml:space="preserve"><value>A beszélgetés megindítása</value></data>
+  <data name="Error_Cannot_Attach_File" xml:space="preserve"><value>A fájlt nem sikerült csatolni. Kérjük, próbáld meg újra.</value></data>
+  <data name="Error_Cannot_Fetch_Conversations" xml:space="preserve"><value>Sajnos jelenleg nem lehet megjeleníteni az üzeneteket. Kérjük, próbáld meg újra.</value></data>
+  <data name="Error_Cannot_Fetch_Messages" xml:space="preserve"><value>Sajnos jelenleg nem lehet megjeleníteni az üzeneteket. Kérjük, próbáld meg újra.</value></data>
+  <data name="Error_Cannot_Fetch_Sticker_Packs" xml:space="preserve"><value>Sajnos jelenleg nem lehet megjeleníteni a matricacsomagokat.</value></data>
+  <data name="Error_Changing_Mute" xml:space="preserve"><value>Nem sikerült a némítás. Kérjük, próbáld meg újra.</value></data>
+  <data name="Error_Changing_Unmute" xml:space="preserve"><value>Nem sikerült visszakapcsolni a hangot. Kérjük, próbáld meg újra.</value></data>
+  <data name="Error_Gallery_Out_Of_Memory" xml:space="preserve"><value>Ilyen méretű képet nem tudunk csatolni.</value></data>
+  <data name="Error_Invalid_Phone_Number" xml:space="preserve"><value>Kérjük, érvényes telefonszámot adj meg.</value></data>
+  <data name="Error_Invalid_Phone_Prefix" xml:space="preserve"><value>Kérjük, adj meg érvényes országkódot.</value></data>
+  <data name="Error_Max_File_Attachment_Exceeded" xml:space="preserve"><value>Ehhez az üzenethez nem tudsz több fényképet csatolni.</value></data>
+  <data name="Error_No_Connection" xml:space="preserve"><value>Nincs internetkapcsolat</value></data>
+  <data name="Error_No_Conversations" xml:space="preserve"><value>Még nincs egy beszélgetés sem.</value></data>
+  <data name="ExistingUser_Create_Account_Button" xml:space="preserve"><value>új fiók létrehozása</value></data>
+  <data name="ExistingUser_Description" xml:space="preserve"><value>Ez a szám {0} {1} Facebook-fiókjának felel meg.</value></data>
+  <data name="ExistingUser_LoginAs_Button" xml:space="preserve"><value>belépés mint {0}</value></data>
+  <data name="ExistingUser_Title" xml:space="preserve"><value>Bejelentkezel a Facebookkal?</value></data>
+  <data name="FetchingDataFromServerFailed" xml:space="preserve"><value>Az adataidat nem sikerült betölteni. Kérjük, próbáld meg újból.</value></data>
+  <data name="FlyTrap_Error_Generic" xml:space="preserve"><value>A jelentést nem sikerült megjeleníteni.</value></data>
+  <data name="FlyTrap_Label_Disclaimer" xml:space="preserve"><value>A telefonoddal és ezzel az alkalmazással kapcsolatos információ automatikusan szerepelni fog. Az ilyen adatok felhasználásával kapcsolatos további tájékoztatás: {0}</value></data>
+  <data name="FlyTrap_Label_Disclaimer_DataUsePolicyLink" xml:space="preserve"><value>Adatfelhasználási szabályzat</value></data>
+  <data name="FlyTrap_Label_Instructions" xml:space="preserve"><value>Kérjük, írd le, hogy mivel próbálkoztál, és mi volt a baj.</value></data>
+  <data name="FlyTrap_Label_Screenshot" xml:space="preserve"><value>Képernyőfelvétel</value></data>
+  <data name="FlyTrap_MenuItem_ReportProblem" xml:space="preserve"><value>probléma bejelentése</value></data>
+  <data name="FlyTrap_TextboxHint_Problem" xml:space="preserve"><value>a probléma ismertetése</value></data>
+  <data name="FlyTrap_Title_ReportProblem" xml:space="preserve"><value>PROBLÉMA BEJELENTÉSE</value></data>
+  <data name="Forwarding_SearchBox_HintText" xml:space="preserve"><value>személyek keresése</value></data>
+  <data name="Forwarding_Title_Label" xml:space="preserve"><value>ÜZENET TOVÁBBÍTÁSA</value></data>
+  <data name="Friends_AppBar_AddContact" xml:space="preserve"><value>név hozzáadása</value></data>
+  <data name="Global_Notifcation_Off_Until" xml:space="preserve"><value>Kikapcsolva eddig: {0}</value></data>
+  <data name="Global_Notification_Off" xml:space="preserve"><value>Ki</value></data>
+  <data name="Global_Notification_On" xml:space="preserve"><value>Be</value></data>
+  <data name="GroupDetailsPage_AppBar_LeaveGroup" xml:space="preserve"><value>kilépés a csoportból</value></data>
+  <data name="GroupDetailsPage_AppBar_RemoveGroupName" xml:space="preserve"><value>név eltávolítása</value></data>
+  <data name="GroupDetailsPage_AppBar_RemoveGroupPhoto" xml:space="preserve"><value>csoportkép eltávolítása</value></data>
+  <data name="GroupDetailsPage_Title" xml:space="preserve"><value>csoport</value></data>
+  <data name="GroupMember_Context_Menu_Remove_Member" xml:space="preserve"><value>eltávolítás</value></data>
+  <data name="GroupTile_Date_ActiveDaysAgo" xml:space="preserve"><value>Utolsó aktivitás: {0} napja</value></data>
+  <data name="GroupTile_Date_ActiveLastMonth" xml:space="preserve"><value>Utolsó aktivitás: múlt hónapban</value></data>
+  <data name="GroupTile_Date_ActiveLastYear" xml:space="preserve"><value>Utolsó aktivitás: tavaly</value></data>
+  <data name="GroupTile_Date_ActiveMonthsAgo" xml:space="preserve"><value>Utolsó aktivitás: {0} hónapja</value></data>
+  <data name="GroupTile_Date_ActiveToday" xml:space="preserve"><value>Utolsó aktivitás: ma</value></data>
+  <data name="GroupTile_Date_ActiveYearsAgo" xml:space="preserve"><value>Utolsó aktivitás: {0} éve</value></data>
+  <data name="GroupTile_Date_ActiveYesterday" xml:space="preserve"><value>Utolsó aktivitás: tegnap</value></data>
+  <data name="Group_AddPeople_Search" xml:space="preserve"><value>Emberek keresése</value></data>
+  <data name="Group_AddPeople_Title" xml:space="preserve"><value>Emberek hozzáadása</value></data>
+  <data name="Group_AddingParticipants_Failed_Message" xml:space="preserve"><value>Az embereket nem sikerült felvenni a csoportba. Kérjük, próbáld meg újra.</value></data>
+  <data name="Group_AddingParticipants_Failed_Title" xml:space="preserve"><value>Az embereket nem sikerült felvenni.</value></data>
+  <data name="Group_AppBar_SelectMany" xml:space="preserve"><value>Több elem kiválasztása</value></data>
+  <data name="Group_RemovingParticipants_Failed_Message" xml:space="preserve"><value>Nem sikerült az embereket eltávolítani. Kérjük, próbáld meg újra.</value></data>
+  <data name="Group_RemovingParticipants_Failed_Title" xml:space="preserve"><value>Nem sikerült az embereket eltávolítani.</value></data>
+  <data name="Groups_AppBar_Add" xml:space="preserve"><value>rögzítés</value></data>
+  <data name="Groups_AppBar_Create" xml:space="preserve"><value>létrehozás</value></data>
+  <data name="Groups_AppBar_Next" xml:space="preserve"><value>tovább</value></data>
+  <data name="Groups_NUX_Button_Text" xml:space="preserve"><value>Az első lépések</value></data>
+  <data name="Groups_NUX_Help_Title" xml:space="preserve"><value>A csoportok rögzítésével könnyebben visszajuthatsz hozzájuk.</value></data>
+  <data name="Groups_NUX_NoThread_Button_Text" xml:space="preserve"><value>Új csoport létrehozása</value></data>
+  <data name="Groups_NUX_PlaceholderActive_LastWeek" xml:space="preserve"><value>Utolsó aktivitás: múlt héten</value></data>
+  <data name="Groups_NUX_PlaceholderActive_Yesterday" xml:space="preserve"><value>Utolsó aktivitás: tegnap</value></data>
+  <data name="Groups_NUX_PlaceholderFour_Members" xml:space="preserve"><value>Sen, Pin</value></data>
+  <data name="Groups_NUX_PlaceholderFour_Title" xml:space="preserve"><value>Haverok melóból</value></data>
+  <data name="Groups_NUX_PlaceholderOne_Members" xml:space="preserve"><value>Péter, Simon</value></data>
+  <data name="Groups_NUX_PlaceholderOne_Title" xml:space="preserve"><value>Szobatársak</value></data>
+  <data name="Groups_NUX_PlaceholderThree_Members" xml:space="preserve"><value>Dávid, Bence</value></data>
+  <data name="Groups_NUX_PlaceholderThree_Title" xml:space="preserve"><value>Hétvégi csapat</value></data>
+  <data name="Groups_NUX_PlaceholderTwo_Members" xml:space="preserve"><value>Ali, Ádám, Hajnalka, Miki</value></data>
+  <data name="Groups_NUX_PlaceholderTwo_Title" xml:space="preserve"><value>Család</value></data>
+  <data name="Image_Search_Empty_Results" xml:space="preserve"><value>Nem található egy kép sem.</value></data>
+  <data name="Image_Search_Menu_Item" xml:space="preserve"><value>kép keresése</value></data>
+  <data name="Image_Search_Popup_Cancel" xml:space="preserve"><value>Mégsem</value></data>
+  <data name="Image_Search_Popup_Message" xml:space="preserve"><value>Mit keresel?</value></data>
+  <data name="Image_Search_Popup_Search" xml:space="preserve"><value>Keresés</value></data>
+  <data name="Image_Search_Popup_Title" xml:space="preserve"><value>Képek keresése</value></data>
+  <data name="Invite_Contact_ToMessenger" xml:space="preserve"><value>Próbáld ki a Messengert: {0}</value></data>
+  <data name="Location_Menu_Item" xml:space="preserve"><value>helyadatok elküldése</value></data>
+  <data name="Location_Services_Disabled" xml:space="preserve"><value>A helymeghatározás kikapcsolva</value></data>
+  <data name="Location_Warning_Body" xml:space="preserve"><value>Az ebben a beszélgetésben szereplő emberek láthatják a térképen a tartózkodási helyedet. Koppintással kapcsolhatod ki vagy be ezt a beállítást.</value></data>
+  <data name="LoginApproval_ResendCode" xml:space="preserve"><value>újraküldés</value></data>
+  <data name="LoginApproval_Title_EnterCode" xml:space="preserve"><value>Kérjük, írd be a telefonodra elküldött kódot.</value></data>
+  <data name="Login_Approval_Security_Code" xml:space="preserve"><value>Ellenőrző kód</value></data>
+  <data name="Login_NotOnFacebook" xml:space="preserve"><value>Nem vagy a Facebookon?</value></data>
+  <data name="Login_RecoverPassword" xml:space="preserve"><value>Elfelejtetted a jelszavad?</value></data>
+  <data name="Login_SigningIn" xml:space="preserve"><value>bejelentkezés folyamatban</value></data>
+  <data name="Login_TextboxHint_EmailOrPhone" xml:space="preserve"><value>E-mail cím vagy telefonszám</value></data>
+  <data name="Login_TextboxHint_Password" xml:space="preserve"><value>Jelszó</value></data>
+  <data name="Login_Title_SignIn" xml:space="preserve"><value>Bejelentkezés a Facebookkal</value></data>
+  <data name="Login_Title_Welcome" xml:space="preserve"><value>Üdvözöl a Messenger!</value></data>
+  <data name="Login_With_Facebook" xml:space="preserve"><value>Bejelentkezés a Facebookkal</value></data>
+  <data name="MainPage_Active_Chat_Popup" xml:space="preserve"><value>CHAT</value></data>
+  <data name="MainPage_Active_Disable_Chat" xml:space="preserve"><value>chat kikapcsolása</value></data>
+  <data name="MainPage_Active_Enable_Chat" xml:space="preserve"><value>chat bekapcsolása</value></data>
+  <data name="MainPage_AppBar_Mute_Button" xml:space="preserve"><value>némítás</value></data>
+  <data name="MainPage_AppBar_UnMute_Button" xml:space="preserve"><value>némítás kikapcsolása</value></data>
+  <data name="MainPage_AppMenu_OtherFolder" xml:space="preserve"><value>egyéb mappa</value></data>
+  <data name="MainPage_AppMenu_Settings" xml:space="preserve"><value>beállítások</value></data>
+  <data name="MainPage_Pivot_Title_Active" xml:space="preserve"><value>aktív</value></data>
+  <data name="MainPage_Pivot_Title_Friends" xml:space="preserve"><value>messenger</value></data>
+  <data name="MainPage_Pivot_Title_Groups" xml:space="preserve"><value>csoportok</value></data>
+  <data name="MainPage_Pivot_Title_Recent_Threads" xml:space="preserve"><value>mostanában</value></data>
+  <data name="Matching_Contact_NotFound_Message" xml:space="preserve"><value>{0} nem feleltethető meg senkinek a Messengerben.</value></data>
+  <data name="MessageBox_Description_ArchiveThread" xml:space="preserve"><value>Az archivált beszélgetések megtekintéséhez be kell jelentkezned a Facebook weboldalára.</value></data>
+  <data name="MessageBox_Description_DeleteThread" xml:space="preserve"><value>Ezzel végleg törlöd a beszélgetést.</value></data>
+  <data name="MessageBox_Description_FlyTrapSuccess" xml:space="preserve"><value>Köszönjük a visszajelzésedet.</value></data>
+  <data name="MessageBox_Description_LeaveThread" xml:space="preserve"><value>Ha kilépsz a beszélgetésből, nem fogod megkapni az újabb üzeneteket.</value></data>
+  <data name="MessageBox_Description_SpamThread" xml:space="preserve"><value>Ha kéretlenként jelölsz meg egy beszélgetést, nem fog megjelenni a legutóbbi üzenetek között.</value></data>
+  <data name="MessageBox_Label_ArchiveThread" xml:space="preserve"><value>archiválod ezt a beszélgetést?</value></data>
+  <data name="MessageBox_Label_AuthenticateWithBrowser" xml:space="preserve"><value>A kapcsolódáshoz nyiss meg egy webböngészőt.</value></data>
+  <data name="MessageBox_Label_BypassLogin2Fac" xml:space="preserve"><value>Be van kapcsolva nálad a bejelentkezés-jóváhagyási funkció. Kérjük, a folytatáshoz add meg a jelszót.</value></data>
+  <data name="MessageBox_Label_BypassLoginFail" xml:space="preserve"><value>A telefonszámot nem sikerült megerősíteni. Kérjük, próbáld meg újra.</value></data>
+  <data name="MessageBox_Label_ClearThreadPhotoFailed" xml:space="preserve"><value>A csoport képét nem sikerült eltávolítani.</value></data>
+  <data name="MessageBox_Label_ConfirmPhoneNumberFailed" xml:space="preserve"><value>A számodat nem sikerült megerősíteni.</value></data>
+  <data name="MessageBox_Label_ConfirmationCodeInvalid" xml:space="preserve"><value>Érvénytelen megerősítő kód.</value></data>
+  <data name="MessageBox_Label_CreateGroupFailed" xml:space="preserve"><value>A csoportot nem sikerült létrehozni.</value></data>
+  <data name="MessageBox_Label_DeleteThread" xml:space="preserve"><value>Törlöd a beszélgetést?</value></data>
+  <data name="MessageBox_Label_ForwardingFailed" xml:space="preserve"><value>Az üzenetet nem sikerült minden címzettnek továbbítani.</value></data>
+  <data name="MessageBox_Label_LeaveThread" xml:space="preserve"><value>Kilépsz a csoportból?</value></data>
+  <data name="MessageBox_Label_LoginFailed" xml:space="preserve"><value>Pillanatnyilag nem tudsz belépni.</value></data>
+  <data name="MessageBox_Label_NamingConversation_Error" xml:space="preserve"><value>A beszélgetést nem sikerült átnevezni.</value></data>
+  <data name="MessageBox_Label_NoInternet" xml:space="preserve"><value>Nincs internetkapcsolat</value></data>
+  <data name="MessageBox_Label_PinGroupFailed" xml:space="preserve"><value>A csoportot nem sikerült rögzíteni.</value></data>
+  <data name="MessageBox_Label_SetThreadPhotoFailed" xml:space="preserve"><value>Nem sikerült beállítani a csoport képét.</value></data>
+  <data name="MessageBox_Label_SpamThread" xml:space="preserve"><value>megjelölöd levélszemétként?</value></data>
+  <data name="MessageBox_Label_UpdatePhoneNumberFailed" xml:space="preserve"><value>A számot nem sikerült frissíteni.</value></data>
+  <data name="MessageBox_Label_UploadProfilePic_Failed" xml:space="preserve"><value>A profilképet nem sikerült beállítani.</value></data>
+  <data name="MessageBox_Popup_Cancel" xml:space="preserve"><value>Mégsem</value></data>
+  <data name="MessageBox_Title_AddContactFailed" xml:space="preserve"><value>Jelenleg nem található névjegy.</value></data>
+  <data name="MessageBox_Title_FlyTrapSuccess" xml:space="preserve"><value>Jelentés elküldve</value></data>
+  <data name="MessageBox_Title_LoginFailed" xml:space="preserve"><value>Pillanatnyilag nem tudsz belépni.</value></data>
+  <data name="MessageComposer_EmptyGallery_Text" xml:space="preserve"><value>Még nincs fénykép a képtáradban.</value></data>
+  <data name="MessageDetails_Error_Unexpected" xml:space="preserve"><value>Sajnos az üzenet részleteit jelenleg nem lehet megjeleníteni. Kérjük, próbáld meg újból.</value></data>
+  <data name="MessageDetails_Label_SeenBy" xml:space="preserve"><value>Látta:</value></data>
+  <data name="MessageSnippetAudioClipLoggedInUser" xml:space="preserve"><value>Elküldtél egy hangfájlt.</value></data>
+  <data name="MessageSnippetAudioClipOtherUser" xml:space="preserve"><value>{0} egy hangfájlt küldött.</value></data>
+  <data name="MessageSnippetGenericLoggedInUser" xml:space="preserve"><value>Elküldtél egy üzenetet.</value></data>
+  <data name="MessageSnippetGenericOtherUser" xml:space="preserve"><value>{0} üzenetet küldött.</value></data>
+  <data name="MessageSnippetPhotoLoggedInUser" xml:space="preserve"><value>Elküldtél egy képet.</value></data>
+  <data name="MessageSnippetPhotoOtherUser" xml:space="preserve"><value>{0} egy képet küldött.</value></data>
+  <data name="MessageSnippetStickerLoggedInUser" xml:space="preserve"><value>Elküldtél egy matricát.</value></data>
+  <data name="MessageSnippetStickerOtherUser" xml:space="preserve"><value>{0} matricát küldött.</value></data>
+  <data name="MessageSnippetVideoLoggedInUser" xml:space="preserve"><value>Elküldtél egy videót.</value></data>
+  <data name="MessageSnippetVideoOtherUser" xml:space="preserve"><value>{0} egy videót küldött.</value></data>
+  <data name="MessageSnippetWhenSenderIsTheLoggedInUser" xml:space="preserve"><value>Te</value></data>
+  <data name="MessageStatus_Location_City" xml:space="preserve"><value>Küldés helye: {0}</value></data>
+  <data name="MessageStatus_Location_CityCountry" xml:space="preserve"><value>Küldés helye: {0}, {1}</value></data>
+  <data name="MessageStatus_Location_CityState" xml:space="preserve"><value>Küldés helye: {0}, {1}</value></data>
+  <data name="MessageStatus_Location_DistrictCity" xml:space="preserve"><value>Küldés helye: {0}, {1}</value></data>
+  <data name="MessageStatus_Origin_Messenger" xml:space="preserve"><value>Messengerből küldve</value></data>
+  <data name="MessageStatus_Origin_Mobile" xml:space="preserve"><value>Mobileszközről küldve</value></data>
+  <data name="MessageStatus_Origin_Web" xml:space="preserve"><value>Webes felületről küldve</value></data>
+  <data name="MessageStatus_SeenBy_1" xml:space="preserve"><value>Látta: {0}</value></data>
+  <data name="MessageStatus_SeenBy_2" xml:space="preserve"><value>Látta: {0} és {1}</value></data>
+  <data name="MessageStatus_SeenBy_3" xml:space="preserve"><value>Látta: {0}, {1} és {2}</value></data>
+  <data name="MessageStatus_SeenBy_4" xml:space="preserve"><value>Látta: {0}, {1}, {2} és {3}</value></data>
+  <data name="MessageStatus_SeenBy_Everyone" xml:space="preserve"><value>Mindenki látta</value></data>
+  <data name="MessageStatus_SeenBy_Others" xml:space="preserve"><value>{0}, {1}, {2} és további {3} ember látta</value></data>
+  <data name="MessageStatus_Seen_Timestamp" xml:space="preserve"><value>Látta: {0}</value></data>
+  <data name="Message_Delete_Caption" xml:space="preserve"><value>Üzenet törlése</value></data>
+  <data name="Message_Delete_Text" xml:space="preserve"><value>Végleg törölni szeretnéd ezt az üzenetet?</value></data>
+  <data name="Message_Sending_Failed" xml:space="preserve"><value>Az üzenetet nem sikerült elküldeni.</value></data>
+  <data name="Message_Sending_Failed_App_Exited_Description" xml:space="preserve"><value>Az alkalmazás bezáródott az üzenet elküldése előtt. Kérjük, újra próbáld meg elküldeni.</value></data>
+  <data name="Message_Sending_Failed_Permission_Description" xml:space="preserve"><value>Sajnos ennek a személynek nem tudsz üzenetet küldeni.</value></data>
+  <data name="Messages_Active_1m_Ago" xml:space="preserve"><value>utoljára elérhető: 1 perce</value></data>
+  <data name="Messages_Active_Now" xml:space="preserve"><value>éppen aktív</value></data>
+  <data name="Messages_Active_Xd_Ago" xml:space="preserve"><value>utoljára aktív: {0} napja</value></data>
+  <data name="Messages_Active_Xh_Ago" xml:space="preserve"><value>utoljára aktív: {0} órája</value></data>
+  <data name="Messages_Active_Xm_Ago" xml:space="preserve"><value>utoljára elérhető: {0} perce</value></data>
+  <data name="Messages_AppBar_Send_Sticker" xml:space="preserve"><value>matricák</value></data>
+  <data name="Messages_ContextMenu_Copy" xml:space="preserve"><value>szöveg másolása</value></data>
+  <data name="Messages_ContextMenu_Delete" xml:space="preserve"><value>törlés</value></data>
+  <data name="Messages_ContextMenu_Forward" xml:space="preserve"><value>továbbítás</value></data>
+  <data name="Messages_ContextMenu_Retry" xml:space="preserve"><value>újrapróbálkozás</value></data>
+  <data name="Messages_Context_Menu_View_Details" xml:space="preserve"><value>részletek megtekintése</value></data>
+  <data name="Messages_Group_Message" xml:space="preserve"><value>CSOPORT</value></data>
+  <data name="Messages_Hint_Text" xml:space="preserve"><value>írj be üzenetet.</value></data>
+  <data name="Messages_On_Facebook" xml:space="preserve"><value>Facebook</value></data>
+  <data name="Messages_On_Messenger" xml:space="preserve"><value>Messenger</value></data>
+  <data name="Messages_On_Mobile" xml:space="preserve"><value>mobilon</value></data>
+  <data name="Messages_Refreshing_Failed_StateIndicator" xml:space="preserve"><value>A frissítés sikertelen volt. Kérjük, ellenőrizd a kapcsolatot.</value></data>
+  <data name="Messages_Refreshing_StateIndicator" xml:space="preserve"><value>Tartalom frissítése folyamatban...</value></data>
+  <data name="Messages_Refreshing_Success_Stateindicator" xml:space="preserve"><value>Frissítve</value></data>
+  <data name="Messages_Share_Not_Viewable" xml:space="preserve"><value>Ezt vagy eltávolították, vagy nincs jogosultságod a megtekintéséhez.</value></data>
+  <data name="Mute_Conversation_For_An_Hour" xml:space="preserve"><value>némítás 1 órára</value></data>
+  <data name="Mute_Conversation_Forever" xml:space="preserve"><value>némítás</value></data>
+  <data name="Mute_Conversation_Menu_Item" xml:space="preserve"><value>némítás</value></data>
+  <data name="Mute_Conversation_Until_8AM" xml:space="preserve"><value>némítás reggel 8-ig</value></data>
+  <data name="NameConversation_Menu_Clear" xml:space="preserve"><value>név törlése</value></data>
+  <data name="NameConversation_Title" xml:space="preserve"><value>A CSOPORT ELNEVEZÉSE</value></data>
+  <data name="NetworkStatus_Banner_Connected" xml:space="preserve"><value>Kapcsolódva</value></data>
+  <data name="NetworkStatus_Banner_Connecting" xml:space="preserve"><value>Kapcsolódás...</value></data>
+  <data name="NetworkStatus_Banner_Disconnected" xml:space="preserve"><value>Várakozás a hálózatra</value></data>
+  <data name="NetworkStatus_Banner_No_Internet" xml:space="preserve"><value>Nincs internetkapcsolat</value></data>
+  <data name="NetworkStatus_Banner_Syncing" xml:space="preserve"><value>Szinkronizálás...</value></data>
+  <data name="NetworkStatus_Banner_UpToDate" xml:space="preserve"><value>Naprakész</value></data>
+  <data name="NewContacts_Header_FoundContacts" xml:space="preserve"><value>{0} ÚJ NÉV</value></data>
+  <data name="Notifications_Turn_Off_For_An_Hour" xml:space="preserve"><value>kikapcsolás 1 órára</value></data>
+  <data name="Notifications_Turn_On" xml:space="preserve"><value>bekapcsolás</value></data>
+  <data name="Notifications_Turn_Until_8AM" xml:space="preserve"><value>kikapcsolás reggel 8-ig</value></data>
+  <data name="Nux_Title_OnMessenger" xml:space="preserve"><value>Rajta is vagy a Messengeren!</value></data>
+  <data name="Nux_Title_OnMessenger_Message" xml:space="preserve"><value>Akinél a kék Messenger-ikon látható, azonnal elérhető.</value></data>
+  <data name="People_AppBar_AddContact" xml:space="preserve"><value>személyek hozzáadása</value></data>
+  <data name="People_AppBar_Search" xml:space="preserve"><value>keresés</value></data>
+  <data name="PhoneNumber_Box_Title" xml:space="preserve"><value>Országkód és telefonszám</value></data>
+  <data name="PhoneNumber_ListpickerLabel_CountryCode" xml:space="preserve"><value>ORSZÁG VÁLASZTÁSA</value></data>
+  <data name="PhoneNumber_Registration_Welcome_Message" xml:space="preserve"><value>Az első lépésekhez elég megadnod a telefonszámodat.</value></data>
+  <data name="PhoneNumber_Select_Country" xml:space="preserve"><value>Ország</value></data>
+  <data name="PhotoAttachment_IndexDisplay_Label" xml:space="preserve"><value>{0}/{1}. fénykép</value></data>
+  <data name="PhotoEdit_AppBar_Draw" xml:space="preserve"><value>rajzolás</value></data>
+  <data name="PhotoEdit_AppBar_Send" xml:space="preserve"><value>küldés</value></data>
+  <data name="PhotoEdit_AppBar_Undo" xml:space="preserve"><value>visszavonás</value></data>
+  <data name="PhotoEdit_AppBar_Write" xml:space="preserve"><value>írás</value></data>
+  <data name="PhotoEdit_Nux_Text" xml:space="preserve"><value>Szöveg hozzáadásához koppints a fényképre.</value></data>
+  <data name="Photos_SavePhoto_Error_StateIndicator" xml:space="preserve"><value>A fényképet nem sikerült menteni.</value></data>
+  <data name="Photos_SavePhoto_MenuItem" xml:space="preserve"><value>fénykép mentése</value></data>
+  <data name="Photos_SavePhoto_Saving_StateIndicator" xml:space="preserve"><value>Fénykép mentése...</value></data>
+  <data name="Photos_SavePhoto_Success_StateIndicator" xml:space="preserve"><value>Fénykép mentve.</value></data>
+  <data name="Power_Saver_Mode_Warning" xml:space="preserve"><value>Energiatakarékos módban vagy, így nem kapsz értesítéseket.</value></data>
+  <data name="ProfilePic_Confirmation_Title" xml:space="preserve"><value>Jó lesz?</value></data>
+  <data name="ProfilePic_Label_Camera_Button" xml:space="preserve"><value>Fénykép készítése</value></data>
+  <data name="ProfilePic_Label_Gallery_Button" xml:space="preserve"><value>Választás az albumokból</value></data>
+  <data name="ProfilePic_Subtitle_Text" xml:space="preserve"><value>Állíts be fényképet, hogy az emberek rád tudjanak ismerni.</value></data>
+  <data name="ProfilePic_Title_Text" xml:space="preserve"><value>Szeretnél fényképet beállítani?</value></data>
+  <data name="RecentThreadList_Nux_EmptyList_Message" xml:space="preserve"><value>Ha elkezdesz csevegni, az összes üzeneted itt lesz megtalálható.</value></data>
+  <data name="Recent_ContextMenu_Archive" xml:space="preserve"><value>archiválás</value></data>
+  <data name="Recent_ContextMenu_Delete" xml:space="preserve"><value>törlés</value></data>
+  <data name="Recent_ContextMenu_Leave" xml:space="preserve"><value>kilépés a csoportból</value></data>
+  <data name="Recent_ContextMenu_MarkUnread" xml:space="preserve"><value>megjelölés olvasatlanként</value></data>
+  <data name="Recent_ContextMenu_Spam" xml:space="preserve"><value>megjelölés kéretlenként</value></data>
+  <data name="Registration_TextboxHint_FirstName" xml:space="preserve"><value>Utónév</value></data>
+  <data name="Registration_TextboxHint_LastName" xml:space="preserve"><value>Vezetéknév</value></data>
+  <data name="Registration_Title2" xml:space="preserve"><value>Használd a valódi nevedet, hogy az emberek tudják, te vagy az.</value></data>
+  <data name="ResourceLanguage" xml:space="preserve"><value>hu-HU</value></data>
+  <data name="Session_Expired_Caption" xml:space="preserve"><value>Kérjük, jelentkezz be a Messenger használatához.</value></data>
+  <data name="Session_Expired_Title" xml:space="preserve"><value>befejeződött munkamenet</value></data>
+  <data name="SettingsPage_Title" xml:space="preserve"><value>beállítások</value></data>
+  <data name="Settings_Help" xml:space="preserve"><value>Súgó</value></data>
+  <data name="Settings_Help_Title" xml:space="preserve"><value>Infó</value></data>
+  <data name="Settings_In_App_Audio_Title" xml:space="preserve"><value>Alkalmazás hangjai</value></data>
+  <data name="Settings_In_App_Contact_Sync_Title" xml:space="preserve"><value>Nevek szinkronizálása</value></data>
+  <data name="Settings_In_App_Vibration_Title" xml:space="preserve"><value>Alkalmazás rezgései</value></data>
+  <data name="Settings_Licenses" xml:space="preserve"><value>Licencek</value></data>
+  <data name="Settings_Location_Title" xml:space="preserve"><value>Helymeghatározás</value></data>
+  <data name="Settings_Notification_Title" xml:space="preserve"><value>Értesítések</value></data>
+  <data name="Settings_PhoneNumber_VerificationNeeded" xml:space="preserve"><value>(Erősítsd meg a számot.)</value></data>
+  <data name="Settings_Privacy_And_Terms" xml:space="preserve"><value>Adatvédelem és feltételek</value></data>
+  <data name="Settings_Remove_Contacts_Body" xml:space="preserve"><value>A korábban szinkronizált névjegyek el lesznek távolítva.</value></data>
+  <data name="Settings_Remove_Contacts_Confirm" xml:space="preserve"><value>Eltávolítás</value></data>
+  <data name="Settings_Remove_Contacts_Title" xml:space="preserve"><value>Eltávolítod a névjegyeket?</value></data>
+  <data name="Settings_SendOnEnter_Title" xml:space="preserve"><value>Küldés Enterrel</value></data>
+  <data name="Settings_Sync_Contacts_Body" xml:space="preserve"><value>Elindítod a szinkronizálást? A névjegyzék folyamatosan lesz szinkronizálva a kiszolgálóinkkal.</value></data>
+  <data name="Settings_Sync_Contacts_Confirmation" xml:space="preserve"><value>Szinkronizálás</value></data>
+  <data name="Settings_Sync_Contacts_Title" xml:space="preserve"><value>Nevek szinkronizálása</value></data>
+  <data name="Settings_Version_Number" xml:space="preserve"><value>{0} verzió</value></data>
+  <data name="Start_Group_Menu_Item" xml:space="preserve"><value>csoport létrehozása vele: {0}</value></data>
+  <data name="Sticker_Drawer_RecentStickers" xml:space="preserve"><value>Aktuális matricák</value></data>
+  <data name="Sticker_Pack_Download" xml:space="preserve"><value>letöltés</value></data>
+  <data name="Sticker_Pack_Download_Failed" xml:space="preserve"><value>A matricacsomag letöltése nem sikerült.</value></data>
+  <data name="Sticker_Pack_Downloaded" xml:space="preserve"><value>letöltve</value></data>
+  <data name="Sticker_Pack_Downloading" xml:space="preserve"><value>letöltés folyamatban</value></data>
+  <data name="Sticker_Pack_Share" xml:space="preserve"><value>megosztás</value></data>
+  <data name="Sticker_Store_ContextMenu_Remove" xml:space="preserve"><value>eltávolítás</value></data>
+  <data name="Sticker_Store_Menu_Item" xml:space="preserve"><value>matricabolt</value></data>
+  <data name="Sticker_Store_Remove_Error" xml:space="preserve"><value>A matricacsomagot nem sikerült eltávolítani.</value></data>
+  <data name="Sticker_Store_Tab_All" xml:space="preserve"><value>összes</value></data>
+  <data name="Sticker_Store_Tab_Featured" xml:space="preserve"><value>ajánlatok</value></data>
+  <data name="Sticker_Store_Tab_Owned" xml:space="preserve"><value>a te matricáid</value></data>
+  <data name="Sticker_Store_Title" xml:space="preserve"><value>MATRICABOLT</value></data>
+  <data name="SuggestedPins_Pinning_StateIndicator" xml:space="preserve"><value>Rögzítés folyamatban...</value></data>
+  <data name="SuggestedPins_SearchBox_Hint" xml:space="preserve"><value>csoportok keresése</value></data>
+  <data name="SuggestedPins_Title_PinGroup" xml:space="preserve"><value>CSOPORT RÖGZÍTÉSE</value></data>
+  <data name="SyncContact_Button_LearnMore" xml:space="preserve"><value>További tudnivalók</value></data>
+  <data name="SyncContact_ErrorMessage_UnableToToggle" xml:space="preserve"><value>A beállítást nem sikerült megváltoztatni. Kérjük, ellenőrizd az internetkapcsolatot, majd próbáld meg újra.</value></data>
+  <data name="SyncContact_Subtitle" xml:space="preserve"><value>A névjegyek szinkronizálásával láthatod, hogy ki érhető még el a Messengeren. A névjegyzéket a folyamatos szinkronizálás naprakészen tartja.</value></data>
+  <data name="SyncContact_Title" xml:space="preserve"><value>Szöveges üzenet bárkinek, aki a telefonodon van</value></data>
+  <data name="SyncContacts_MessageBox_LinkLabel" xml:space="preserve"><value>További tudnivalók</value></data>
+  <data name="Thread_AppBar_Details" xml:space="preserve"><value>részletek</value></data>
+  <data name="Thread_AppBar_View_Members" xml:space="preserve"><value>emberek megtekintése</value></data>
+  <data name="Thread_Name_NoParticipant_Title" xml:space="preserve"><value>még nincsenek emberek</value></data>
+  <data name="Thread_UnnamedUserPlaceholder_Title" xml:space="preserve"><value>Valaki a Facebookon</value></data>
+  <data name="Threads_AppBar_Compose" xml:space="preserve"><value>új</value></data>
+  <data name="Threads_AppBar_Refresh" xml:space="preserve"><value>frissítés</value></data>
+  <data name="UnMute_Conversation_Menu_Item" xml:space="preserve"><value>némítás kikapcsolása</value></data>
+  <data name="Unsent_Message_Warning" xml:space="preserve"><value>Kilépsz a Messengerből? Még nem küldted el az üzeneteidet.</value></data>
+  <data name="Verify_PhoneNumber_Box_Title" xml:space="preserve"><value>Telefonszám</value></data>
+  <data name="VideoRecorder_HelpText_Cancel" xml:space="preserve"><value>Törlés és újrakezdés a gomb elengedésével.</value></data>
+  <data name="VideoRecorder_HelpText_HoldToSend" xml:space="preserve"><value>Lenyomva tartás: videó, koppintás: fénykép</value></data>
+  <data name="VideoRecorder_HelpText_Send" xml:space="preserve"><value>A megszakításhoz húzd le az ujjadat a Küldés gombról.</value></data>
+  <data name="View_Timeline_Menu_Item" xml:space="preserve"><value>idővonal</value></data>
+  <data name="Voice_Clip_Hold_Instruction" xml:space="preserve"><value>Hang felvételéhez és elküldéséhez tartsd lenyomva.</value></data>
+  <data name="Voice_Clip_Length_Limit" xml:space="preserve"><value>Elérted az időkorlátot, a küldéshez engedd fel.</value></data>
+  <data name="Voice_Clip_Menu_Item" xml:space="preserve"><value>hangfájl küldése</value></data>
+  <data name="Voice_Clip_NUX_Instruction" xml:space="preserve"><value>A küldéshez engedd fel, a megszakításhoz pöccintsd le.</value></data>
+  <data name="Voice_Clip_Record" xml:space="preserve"><value>felvétel</value></data>
+  <data name="Voice_Clip_Release_Cancel" xml:space="preserve"><value>A felvétel megszakításához engedd fel.</value></data>
+  <data name="orca_neue_nux_add_phone_body1_searchable_all_not_verified" xml:space="preserve"><value>Az emberek akkor adhatnak meg téged partnerként, ha már megvan nekik a telefonszámod, de ezt a számot a Facebookon csak te láthatod.</value></data>
+  <data name="orca_neue_nux_add_phone_body1_searchable_all_visible_all" xml:space="preserve"><value>Az emberek akkor adhatnak meg téged partnerként, ha már megvan nekik a telefonszámod.</value></data>
+  <data name="orca_neue_nux_add_phone_body1_searchable_all_visible_custom" xml:space="preserve"><value>Az emberek akkor vehetnek fel partnerként, ha már megvan nekik a telefonszámod, de ez nem változtat azon, hogy a Facebookon ki láthatja a számodat.</value></data>
+  <data name="orca_neue_nux_add_phone_body1_searchable_all_visible_friends" xml:space="preserve"><value>Az emberek akkor adhatnak meg téged partnerként, ha már megvan nekik a telefonszámod, de ezt a számot a Facebookon csak az ismerőseid láthatják.</value></data>
+  <data name="orca_neue_nux_add_phone_body1_searchable_all_visible_self" xml:space="preserve"><value>Az emberek akkor adhatnak meg téged partnerként, ha már megvan nekik a telefonszámod, de ezt a számot a Facebookon csak te láthatod.</value></data>
+  <data name="orca_neue_nux_add_phone_body1_searchable_fof" xml:space="preserve"><value>Nincs olyan Facebook-ismerősöd, akivel érintkezésbe léphetnél, így a Facebookon a beállításod úgy bővül, hogy bárki, akinek megvan a számod, megkereshessen annak alapján.</value></data>
+  <data name="orca_neue_nux_add_phone_body2_not_verified" xml:space="preserve"><value>Ezt a számot csak a te láthatod a Facebookon.</value></data>
+  <data name="orca_neue_nux_add_phone_body2_visible_custom" xml:space="preserve"><value>Ez nem változtat azon, hogy a Facebookon ki láthatja a számodat.</value></data>
+  <data name="orca_neue_nux_add_phone_body2_visible_friends" xml:space="preserve"><value>Ezt a számot csak az ismerőseid láthatják a Facebookon.</value></data>
+  <data name="orca_neue_nux_add_phone_body2_visible_self" xml:space="preserve"><value>Ezt a számot csak a te láthatod a Facebookon.</value></data>
+  <data name="orca_neue_nux_add_phone_title_no_verified_number" xml:space="preserve"><value>Milyen számon érhetnek el az emberek?</value></data>
+  <data name="orca_neue_nux_add_phone_title_verified_long" xml:space="preserve"><value>Ezen a számon érhetnek el az emberek?</value></data>
+  <data name="orca_neue_nux_add_phone_title_verified_short" xml:space="preserve"><value>A számod aktuális?</value></data>
+</root>

@@ -1,0 +1,395 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Active_AppBar_Chat" xml:space="preserve"><value>聊天</value></data>
+  <data name="AddContact_Contact_Already_Exists" xml:space="preserve"><value>已将这个号码加为联系人。</value></data>
+  <data name="AddContact_FBUser_Already_Exists" xml:space="preserve"><value>{0} 已经是联系人了。</value></data>
+  <data name="AddContact_Invite_Button" xml:space="preserve"><value>邀请</value></data>
+  <data name="AddContact_MatchedExistingUser_Label" xml:space="preserve"><value>{0} 已经是 Messenger 联系人了</value></data>
+  <data name="AddContact_MatchingUser_Label" xml:space="preserve"><value>{0} 已经是 Messenger 联系人了。</value></data>
+  <data name="AddContact_Message_Button" xml:space="preserve"><value>向 {0} 发消息</value></data>
+  <data name="AddContact_PhoneNumber_Description" xml:space="preserve"><value>输入朋友手机号，看看对方是否在用 Messenger。</value></data>
+  <data name="AddContact_PhoneNumber_Title" xml:space="preserve"><value>添加联系人</value></data>
+  <data name="AddContact_Remove_Contact_Warning" xml:space="preserve"><value>{0} 将从 Messenger 联系人中移除。</value></data>
+  <data name="AddContact_Remove_MessageBox_Title" xml:space="preserve"><value>移除联系人</value></data>
+  <data name="AddPhotos_Menu_ChooseFromAlbum" xml:space="preserve"><value>从相册选择</value></data>
+  <data name="AddPhotos_Menu_RemovePhotos" xml:space="preserve"><value>移除照片</value></data>
+  <data name="AddPhotos_Menu_TakePhoto" xml:space="preserve"><value>拍照</value></data>
+  <data name="AddPhotos_Title_EditProfilePicture" xml:space="preserve"><value>编辑头像</value></data>
+  <data name="AddPhotos_Title_SetGroupPhoto" xml:space="preserve"><value>设置小组图片</value></data>
+  <data name="Add_Phone_Number_Label" xml:space="preserve"><value>添加电话号码</value></data>
+  <data name="AppBar_Cancel" xml:space="preserve"><value>取消</value></data>
+  <data name="AppBar_No" xml:space="preserve"><value>否</value></data>
+  <data name="AppBar_Ok" xml:space="preserve"><value>确定</value></data>
+  <data name="AppBar_Remove" xml:space="preserve"><value>移除</value></data>
+  <data name="AppBar_Undo" xml:space="preserve"><value>撤销</value></data>
+  <data name="AppBar_Yes" xml:space="preserve"><value>是</value></data>
+  <data name="AppUpdate_Description" xml:space="preserve"><value>更新 Messenger，获取最新功能。</value></data>
+  <data name="AppUpdate_NotNowButton" xml:space="preserve"><value>暂不</value></data>
+  <data name="AppUpdate_Title" xml:space="preserve"><value>Messenger 有新版本可下载。</value></data>
+  <data name="AppUpdate_UpdateAppButton" xml:space="preserve"><value>更新</value></data>
+  <data name="App_Location_Services_Enable" xml:space="preserve"><value>在消息中分享位置，请转到 Messenger 设置。</value></data>
+  <data name="App_Quit_Caption" xml:space="preserve"><value>退出 Messenger</value></data>
+  <data name="Attachments_AppBar_Next" xml:space="preserve"><value>下一张</value></data>
+  <data name="Attachments_AppBar_Previous" xml:space="preserve"><value>上一张</value></data>
+  <data name="Attachments_AppBar_Skip" xml:space="preserve"><value>跳过</value></data>
+  <data name="BackgroundToast_LeavingApp_Title" xml:space="preserve"><value>Messenger</value></data>
+  <data name="BackgroundToast_LeavingApp_Warning" xml:space="preserve"><value>一些消息在 Messenger 关闭前未发出。打开 Messenger，确保消息均已发出。</value></data>
+  <data name="ButtonLabelRetry" xml:space="preserve"><value>重试</value></data>
+  <data name="Button_Continue" xml:space="preserve"><value>继续</value></data>
+  <data name="CanonicalThreadDetailsPage_Start_Group" xml:space="preserve"><value>创建群聊小组</value></data>
+  <data name="CanonicalThreadDetailsPage_Title" xml:space="preserve"><value>详细信息</value></data>
+  <data name="Chat_Is_Off" xml:space="preserve"><value>聊天已关闭</value></data>
+  <data name="Chat_Is_Off_Details_Label" xml:space="preserve"><value>关闭聊天后仍可接收消息，但开启聊天可查看哪些好友在线。</value></data>
+  <data name="Client_Type_Mobile" xml:space="preserve"><value>手机</value></data>
+  <data name="Client_Type_Web" xml:space="preserve"><value>网页</value></data>
+  <data name="Composer_Exit_Warning" xml:space="preserve"><value>放弃编写消息？</value></data>
+  <data name="Composer_Groups_Search_Header" xml:space="preserve"><value>小组</value></data>
+  <data name="Composer_More_People_Search_Header" xml:space="preserve"><value>更多用户</value></data>
+  <data name="Composer_SendingMessage" xml:space="preserve"><value>正在发送消息…</value></data>
+  <data name="Composer_To" xml:space="preserve"><value>收件人：</value></data>
+  <data name="Confirm_Phone_Number_Label" xml:space="preserve"><value>确认手机号码</value></data>
+  <data name="ContactCard_MenuLabel_CreateGroup" xml:space="preserve"><value>创建属于你和 {0} 的小组</value></data>
+  <data name="ContactCard_MenuLabel_RemoveContact" xml:space="preserve"><value>移除联系人</value></data>
+  <data name="ContactCard_MenuLabel_SendMessage" xml:space="preserve"><value>向 {0} 发消息</value></data>
+  <data name="ContactList_Header_ContactsFound" xml:space="preserve"><value>找到了 {0} 位联系人</value></data>
+  <data name="ContactList_Header_Failed" xml:space="preserve"><value>联系人上传失败。重试？</value></data>
+  <data name="ContactList_Header_FindContacts" xml:space="preserve"><value>查找联系人</value></data>
+  <data name="ContactList_Header_ShowAll" xml:space="preserve"><value>全部</value></data>
+  <data name="ContactList_Header_SyncingContacts" xml:space="preserve"><value>同步通讯录...</value></data>
+  <data name="ContactList_Nux_Label_EmptyList" xml:space="preserve"><value>你可以同步手机通讯录，看看哪些认识的人在用 Messenger。</value></data>
+  <data name="ContactList_Nux_Label_NoMatchingContacts" xml:space="preserve"><value>你的联系人都显示在这里，点击联系人图标即可添加用户。</value></data>
+  <data name="Contact_Search_No_Results" xml:space="preserve"><value>无结果</value></data>
+  <data name="Contacts_Find_Button_Label" xml:space="preserve"><value>查找联系人</value></data>
+  <data name="Contacts_Invite_Button_Label" xml:space="preserve"><value>邀请用户</value></data>
+  <data name="Conversation_AppBar_AttachPhoto" xml:space="preserve"><value>照片</value></data>
+  <data name="Conversation_AppBar_Camera" xml:space="preserve"><value>相机</value></data>
+  <data name="Conversation_AppBar_ChangePhoto" xml:space="preserve"><value>照片</value></data>
+  <data name="Conversation_AppBar_Like" xml:space="preserve"><value>赞</value></data>
+  <data name="Conversation_AppBar_Send" xml:space="preserve"><value>发送</value></data>
+  <data name="Conversation_AppBar_Text" xml:space="preserve"><value>消息内容</value></data>
+  <data name="Conversation_ContextMenu_RemoveAttachment" xml:space="preserve"><value>删除图片</value></data>
+  <data name="Conversation_MenuItem_Rename" xml:space="preserve"><value>名称</value></data>
+  <data name="CreateGroup_TextBox_Label" xml:space="preserve"><value>小组名称</value></data>
+  <data name="CreateGroup_Title" xml:space="preserve"><value>新小组</value></data>
+  <data name="Device_Location_Services_Enable" xml:space="preserve"><value>在消息中开启位置分享功能，请前往手机设置中的定位服务。</value></data>
+  <data name="Empty_Conversation_Placeholder_Text" xml:space="preserve"><value>{0} 在用 Messenger ，可即时收到你的消息。</value></data>
+  <data name="Empty_Conversation_Placeholder_Text_For_Non_Messenger_User" xml:space="preserve"><value>{0} 尚未使用 Messenger，但登录 Facebook 时会收到你的消息。</value></data>
+  <data name="Empty_Conversation_Placeholder_Title" xml:space="preserve"><value>开始对话</value></data>
+  <data name="Error_Cannot_Attach_File" xml:space="preserve"><value>无法添加文件，请重试。</value></data>
+  <data name="Error_Cannot_Fetch_Conversations" xml:space="preserve"><value>抱歉，无法显示消息。请重试。</value></data>
+  <data name="Error_Cannot_Fetch_Messages" xml:space="preserve"><value>抱歉，暂时无法显示消息，请重试。</value></data>
+  <data name="Error_Cannot_Fetch_Sticker_Packs" xml:space="preserve"><value>抱歉，无法显示贴图。</value></data>
+  <data name="Error_Changing_Mute" xml:space="preserve"><value>无法设置静音，请重试。</value></data>
+  <data name="Error_Changing_Unmute" xml:space="preserve"><value>无法取消静音，请重试。</value></data>
+  <data name="Error_Gallery_Out_Of_Memory" xml:space="preserve"><value>图像尺寸不符合附件要求</value></data>
+  <data name="Error_Invalid_Phone_Number" xml:space="preserve"><value>请输入有效手机号。</value></data>
+  <data name="Error_Invalid_Phone_Prefix" xml:space="preserve"><value>请使用有效的国家代码。</value></data>
+  <data name="Error_Max_File_Attachment_Exceeded" xml:space="preserve"><value>无法添加更多照片。</value></data>
+  <data name="Error_No_Connection" xml:space="preserve"><value>无网络连接</value></data>
+  <data name="Error_No_Conversations" xml:space="preserve"><value>尚无任何对话。</value></data>
+  <data name="ExistingUser_Create_Account_Button" xml:space="preserve"><value>新建帐户</value></data>
+  <data name="ExistingUser_Description" xml:space="preserve"><value>这个号码已与 {0} {1} 的 Facebook 帐户绑定。</value></data>
+  <data name="ExistingUser_LoginAs_Button" xml:space="preserve"><value>以 {0} 的身份登录</value></data>
+  <data name="ExistingUser_Title" xml:space="preserve"><value>用 Facebook 登录？</value></data>
+  <data name="FetchingDataFromServerFailed" xml:space="preserve"><value>无法加载你的信息。请重试。</value></data>
+  <data name="FlyTrap_Error_Generic" xml:space="preserve"><value>无法显示报告。</value></data>
+  <data name="FlyTrap_Label_Disclaimer" xml:space="preserve"><value>手机和此应用的信息将自动纳入。要了解如何使用这些信息，请访问 {0}</value></data>
+  <data name="FlyTrap_Label_Disclaimer_DataUsePolicyLink" xml:space="preserve"><value>《数据使用政策》</value></data>
+  <data name="FlyTrap_Label_Instructions" xml:space="preserve"><value>请描述你的操作过程，以及出现的问题。</value></data>
+  <data name="FlyTrap_Label_Screenshot" xml:space="preserve"><value>截图</value></data>
+  <data name="FlyTrap_MenuItem_ReportProblem" xml:space="preserve"><value>报告问题</value></data>
+  <data name="FlyTrap_TextboxHint_Problem" xml:space="preserve"><value>描述问题</value></data>
+  <data name="FlyTrap_Title_ReportProblem" xml:space="preserve"><value>报告问题</value></data>
+  <data name="Forwarding_SearchBox_HintText" xml:space="preserve"><value>搜索用户</value></data>
+  <data name="Forwarding_Title_Label" xml:space="preserve"><value>转发消息</value></data>
+  <data name="Friends_AppBar_AddContact" xml:space="preserve"><value>添加联系人</value></data>
+  <data name="Global_Notifcation_Off_Until" xml:space="preserve"><value>关闭至 {0}</value></data>
+  <data name="Global_Notification_Off" xml:space="preserve"><value>已关闭</value></data>
+  <data name="Global_Notification_On" xml:space="preserve"><value>已开启</value></data>
+  <data name="GroupDetailsPage_AppBar_LeaveGroup" xml:space="preserve"><value>退出小组</value></data>
+  <data name="GroupDetailsPage_AppBar_RemoveGroupName" xml:space="preserve"><value>移除名称</value></data>
+  <data name="GroupDetailsPage_AppBar_RemoveGroupPhoto" xml:space="preserve"><value>删除小组照片</value></data>
+  <data name="GroupDetailsPage_Title" xml:space="preserve"><value>小组</value></data>
+  <data name="GroupMember_Context_Menu_Remove_Member" xml:space="preserve"><value>移除</value></data>
+  <data name="GroupTile_Date_ActiveDaysAgo" xml:space="preserve"><value>{0} 天前在线</value></data>
+  <data name="GroupTile_Date_ActiveLastMonth" xml:space="preserve"><value>上个月在线</value></data>
+  <data name="GroupTile_Date_ActiveLastYear" xml:space="preserve"><value>去年在线</value></data>
+  <data name="GroupTile_Date_ActiveMonthsAgo" xml:space="preserve"><value>{0} 个月前在线</value></data>
+  <data name="GroupTile_Date_ActiveToday" xml:space="preserve"><value>今天在线</value></data>
+  <data name="GroupTile_Date_ActiveYearsAgo" xml:space="preserve"><value>{0} 年前在线</value></data>
+  <data name="GroupTile_Date_ActiveYesterday" xml:space="preserve"><value>昨天在线</value></data>
+  <data name="Group_AddPeople_Search" xml:space="preserve"><value>搜索用户</value></data>
+  <data name="Group_AddPeople_Title" xml:space="preserve"><value>添加成员</value></data>
+  <data name="Group_AddingParticipants_Failed_Message" xml:space="preserve"><value>无法向小组添加成员，请重试。</value></data>
+  <data name="Group_AddingParticipants_Failed_Title" xml:space="preserve"><value>无法添加成员</value></data>
+  <data name="Group_AppBar_SelectMany" xml:space="preserve"><value>选择多项</value></data>
+  <data name="Group_RemovingParticipants_Failed_Message" xml:space="preserve"><value>无法移除成员，请重试。</value></data>
+  <data name="Group_RemovingParticipants_Failed_Title" xml:space="preserve"><value>无法移除成员。</value></data>
+  <data name="Groups_AppBar_Add" xml:space="preserve"><value>置顶</value></data>
+  <data name="Groups_AppBar_Create" xml:space="preserve"><value>创建</value></data>
+  <data name="Groups_AppBar_Next" xml:space="preserve"><value>继续</value></data>
+  <data name="Groups_NUX_Button_Text" xml:space="preserve"><value>开始使用</value></data>
+  <data name="Groups_NUX_Help_Title" xml:space="preserve"><value>钉选小组，轻松互动。</value></data>
+  <data name="Groups_NUX_NoThread_Button_Text" xml:space="preserve"><value>创建新小组</value></data>
+  <data name="Groups_NUX_PlaceholderActive_LastWeek" xml:space="preserve"><value>上周在线</value></data>
+  <data name="Groups_NUX_PlaceholderActive_Yesterday" xml:space="preserve"><value>昨天在线</value></data>
+  <data name="Groups_NUX_PlaceholderFour_Members" xml:space="preserve"><value>林希依、Joey</value></data>
+  <data name="Groups_NUX_PlaceholderFour_Title" xml:space="preserve"><value>工作伙伴</value></data>
+  <data name="Groups_NUX_PlaceholderOne_Members" xml:space="preserve"><value>柯涵、Simon</value></data>
+  <data name="Groups_NUX_PlaceholderOne_Title" xml:space="preserve"><value>室友</value></data>
+  <data name="Groups_NUX_PlaceholderThree_Members" xml:space="preserve"><value>陈馨、Ben</value></data>
+  <data name="Groups_NUX_PlaceholderThree_Title" xml:space="preserve"><value>周末一族</value></data>
+  <data name="Groups_NUX_PlaceholderTwo_Members" xml:space="preserve"><value>Megan、王一晨、李韬、Mike</value></data>
+  <data name="Groups_NUX_PlaceholderTwo_Title" xml:space="preserve"><value>家人</value></data>
+  <data name="Image_Search_Empty_Results" xml:space="preserve"><value>找不到图片</value></data>
+  <data name="Image_Search_Menu_Item" xml:space="preserve"><value>搜索图片</value></data>
+  <data name="Image_Search_Popup_Cancel" xml:space="preserve"><value>取消</value></data>
+  <data name="Image_Search_Popup_Message" xml:space="preserve"><value>你想找什么？</value></data>
+  <data name="Image_Search_Popup_Search" xml:space="preserve"><value>搜索</value></data>
+  <data name="Image_Search_Popup_Title" xml:space="preserve"><value>搜索图像</value></data>
+  <data name="Invite_Contact_ToMessenger" xml:space="preserve"><value>试试 Messenger 吧：{0}</value></data>
+  <data name="Location_Menu_Item" xml:space="preserve"><value>发送地点</value></data>
+  <data name="Location_Services_Disabled" xml:space="preserve"><value>定位功能处于关闭状态</value></data>
+  <data name="Location_Warning_Body" xml:space="preserve"><value>参与此对话的成员可看到你在地图上的位置。点击可显示或隐藏位置信息。</value></data>
+  <data name="LoginApproval_ResendCode" xml:space="preserve"><value>重新发送</value></data>
+  <data name="LoginApproval_Title_EnterCode" xml:space="preserve"><value>请输入发送至你手机的验证码。</value></data>
+  <data name="Login_Approval_Security_Code" xml:space="preserve"><value>验证码</value></data>
+  <data name="Login_NotOnFacebook" xml:space="preserve"><value>还没使用 Facebook？</value></data>
+  <data name="Login_RecoverPassword" xml:space="preserve"><value>忘记密码？</value></data>
+  <data name="Login_SigningIn" xml:space="preserve"><value>正在登录</value></data>
+  <data name="Login_TextboxHint_EmailOrPhone" xml:space="preserve"><value>邮箱或手机号</value></data>
+  <data name="Login_TextboxHint_Password" xml:space="preserve"><value>密码</value></data>
+  <data name="Login_Title_SignIn" xml:space="preserve"><value>使用 Facebook 登录</value></data>
+  <data name="Login_Title_Welcome" xml:space="preserve"><value>欢迎使用 Messenger</value></data>
+  <data name="Login_With_Facebook" xml:space="preserve"><value>使用 Facebook 登录</value></data>
+  <data name="MainPage_Active_Chat_Popup" xml:space="preserve"><value>聊天</value></data>
+  <data name="MainPage_Active_Disable_Chat" xml:space="preserve"><value>关闭聊天功能</value></data>
+  <data name="MainPage_Active_Enable_Chat" xml:space="preserve"><value>打开聊天功能</value></data>
+  <data name="MainPage_AppBar_Mute_Button" xml:space="preserve"><value>静音</value></data>
+  <data name="MainPage_AppBar_UnMute_Button" xml:space="preserve"><value>取消静音</value></data>
+  <data name="MainPage_AppMenu_OtherFolder" xml:space="preserve"><value>其他文件夹</value></data>
+  <data name="MainPage_AppMenu_Settings" xml:space="preserve"><value>设置</value></data>
+  <data name="MainPage_Pivot_Title_Active" xml:space="preserve"><value>在线</value></data>
+  <data name="MainPage_Pivot_Title_Friends" xml:space="preserve"><value>Messenger</value></data>
+  <data name="MainPage_Pivot_Title_Groups" xml:space="preserve"><value>小组</value></data>
+  <data name="MainPage_Pivot_Title_Recent_Threads" xml:space="preserve"><value>最近</value></data>
+  <data name="Matching_Contact_NotFound_Message" xml:space="preserve"><value>找不到名叫“{0}”的 Messenger 联系人</value></data>
+  <data name="MessageBox_Description_ArchiveThread" xml:space="preserve"><value>请登录 Facebook 网站查看已存档的对话。</value></data>
+  <data name="MessageBox_Description_DeleteThread" xml:space="preserve"><value>此操作将永久删除对话。</value></data>
+  <data name="MessageBox_Description_FlyTrapSuccess" xml:space="preserve"><value>谢谢反馈！</value></data>
+  <data name="MessageBox_Description_LeaveThread" xml:space="preserve"><value>离开对话后将不会接到新消息。</value></data>
+  <data name="MessageBox_Description_SpamThread" xml:space="preserve"><value>一旦标记为垃圾，此对话将不再出现在近期对话中。</value></data>
+  <data name="MessageBox_Label_ArchiveThread" xml:space="preserve"><value>将此对话存档？</value></data>
+  <data name="MessageBox_Label_AuthenticateWithBrowser" xml:space="preserve"><value>打开浏览器</value></data>
+  <data name="MessageBox_Label_BypassLogin2Fac" xml:space="preserve"><value>你启用了登录许可，请输入密码并继续。</value></data>
+  <data name="MessageBox_Label_BypassLoginFail" xml:space="preserve"><value>无法验证手机号，请重试。</value></data>
+  <data name="MessageBox_Label_ClearThreadPhotoFailed" xml:space="preserve"><value>无法移除群聊照片。</value></data>
+  <data name="MessageBox_Label_ConfirmPhoneNumberFailed" xml:space="preserve"><value>无法确认号码</value></data>
+  <data name="MessageBox_Label_ConfirmationCodeInvalid" xml:space="preserve"><value>验证码无效</value></data>
+  <data name="MessageBox_Label_CreateGroupFailed" xml:space="preserve"><value>无法创建小组</value></data>
+  <data name="MessageBox_Label_DeleteThread" xml:space="preserve"><value>删除对话？</value></data>
+  <data name="MessageBox_Label_ForwardingFailed" xml:space="preserve"><value>无法将消息转发给所有接收者。</value></data>
+  <data name="MessageBox_Label_LeaveThread" xml:space="preserve"><value>退出群聊？</value></data>
+  <data name="MessageBox_Label_LoginFailed" xml:space="preserve"><value>无法登录。</value></data>
+  <data name="MessageBox_Label_NamingConversation_Error" xml:space="preserve"><value>无法为对话重命名。</value></data>
+  <data name="MessageBox_Label_NoInternet" xml:space="preserve"><value>无网络连接</value></data>
+  <data name="MessageBox_Label_PinGroupFailed" xml:space="preserve"><value>无法钉选小组。</value></data>
+  <data name="MessageBox_Label_SetThreadPhotoFailed" xml:space="preserve"><value>无法设置图片。</value></data>
+  <data name="MessageBox_Label_SpamThread" xml:space="preserve"><value>标记为垃圾信息</value></data>
+  <data name="MessageBox_Label_UpdatePhoneNumberFailed" xml:space="preserve"><value>无法更新号码。</value></data>
+  <data name="MessageBox_Label_UploadProfilePic_Failed" xml:space="preserve"><value>头像设置失败。</value></data>
+  <data name="MessageBox_Popup_Cancel" xml:space="preserve"><value>取消</value></data>
+  <data name="MessageBox_Title_AddContactFailed" xml:space="preserve"><value>找不到联系人</value></data>
+  <data name="MessageBox_Title_FlyTrapSuccess" xml:space="preserve"><value>报告已发送</value></data>
+  <data name="MessageBox_Title_LoginFailed" xml:space="preserve"><value>无法登录。</value></data>
+  <data name="MessageComposer_EmptyGallery_Text" xml:space="preserve"><value>暂时没有照片。</value></data>
+  <data name="MessageDetails_Error_Unexpected" xml:space="preserve"><value>很抱歉，暂时无法显示消息详情。请重试。</value></data>
+  <data name="MessageDetails_Label_SeenBy" xml:space="preserve"><value>已读成员：</value></data>
+  <data name="MessageSnippetAudioClipLoggedInUser" xml:space="preserve"><value>你发送了语音留言</value></data>
+  <data name="MessageSnippetAudioClipOtherUser" xml:space="preserve"><value>{0} 发送了语音留言</value></data>
+  <data name="MessageSnippetGenericLoggedInUser" xml:space="preserve"><value>你发送了消息。</value></data>
+  <data name="MessageSnippetGenericOtherUser" xml:space="preserve"><value>{0} 发送了消息。</value></data>
+  <data name="MessageSnippetPhotoLoggedInUser" xml:space="preserve"><value>你发送了图片。</value></data>
+  <data name="MessageSnippetPhotoOtherUser" xml:space="preserve"><value>{0} 发送了图片。</value></data>
+  <data name="MessageSnippetStickerLoggedInUser" xml:space="preserve"><value>你发送了贴图。</value></data>
+  <data name="MessageSnippetStickerOtherUser" xml:space="preserve"><value>{0} 发送了贴图。</value></data>
+  <data name="MessageSnippetVideoLoggedInUser" xml:space="preserve"><value>你发送了视频。</value></data>
+  <data name="MessageSnippetVideoOtherUser" xml:space="preserve"><value>{0} 发送了视频。</value></data>
+  <data name="MessageSnippetWhenSenderIsTheLoggedInUser" xml:space="preserve"><value>你</value></data>
+  <data name="MessageStatus_Location_City" xml:space="preserve"><value>发送自 {0}</value></data>
+  <data name="MessageStatus_Location_CityCountry" xml:space="preserve"><value>发送自 {1} - {0}</value></data>
+  <data name="MessageStatus_Location_CityState" xml:space="preserve"><value>发送自 {1} - {0}</value></data>
+  <data name="MessageStatus_Location_DistrictCity" xml:space="preserve"><value>发送自 {1} - {0}</value></data>
+  <data name="MessageStatus_Origin_Messenger" xml:space="preserve"><value>发送自 Messenger</value></data>
+  <data name="MessageStatus_Origin_Mobile" xml:space="preserve"><value>发送自手机</value></data>
+  <data name="MessageStatus_Origin_Web" xml:space="preserve"><value>发送自网页</value></data>
+  <data name="MessageStatus_SeenBy_1" xml:space="preserve"><value>{0} 已读</value></data>
+  <data name="MessageStatus_SeenBy_2" xml:space="preserve"><value>{0} 和 {1} 已读</value></data>
+  <data name="MessageStatus_SeenBy_3" xml:space="preserve"><value>{0} 、 {1} 和 {2} 已读</value></data>
+  <data name="MessageStatus_SeenBy_4" xml:space="preserve"><value>{0} 、 {1} 、 {2} 和 {3} 已读</value></data>
+  <data name="MessageStatus_SeenBy_Everyone" xml:space="preserve"><value>所有成员已读</value></data>
+  <data name="MessageStatus_SeenBy_Others" xml:space="preserve"><value>{0} 、 {1} 、 {2} 和 {3} 已读</value></data>
+  <data name="MessageStatus_Seen_Timestamp" xml:space="preserve"><value>{0} 已读</value></data>
+  <data name="Message_Delete_Caption" xml:space="preserve"><value>删除消息</value></data>
+  <data name="Message_Delete_Text" xml:space="preserve"><value>希望永久删除此消息？</value></data>
+  <data name="Message_Sending_Failed" xml:space="preserve"><value>消息无法发送。</value></data>
+  <data name="Message_Sending_Failed_App_Exited_Description" xml:space="preserve"><value>发送消息时客户端被关闭。请重新发送消息。</value></data>
+  <data name="Message_Sending_Failed_Permission_Description" xml:space="preserve"><value>抱歉，你无法向此用户发送消息。</value></data>
+  <data name="Messages_Active_1m_Ago" xml:space="preserve"><value>1 分钟前在线</value></data>
+  <data name="Messages_Active_Now" xml:space="preserve"><value>在线</value></data>
+  <data name="Messages_Active_Xd_Ago" xml:space="preserve"><value>{0} 天前在线</value></data>
+  <data name="Messages_Active_Xh_Ago" xml:space="preserve"><value>{0} 小时前在线</value></data>
+  <data name="Messages_Active_Xm_Ago" xml:space="preserve"><value>{0} 分钟前在线</value></data>
+  <data name="Messages_AppBar_Send_Sticker" xml:space="preserve"><value>贴图</value></data>
+  <data name="Messages_ContextMenu_Copy" xml:space="preserve"><value>复制文本</value></data>
+  <data name="Messages_ContextMenu_Delete" xml:space="preserve"><value>删除</value></data>
+  <data name="Messages_ContextMenu_Forward" xml:space="preserve"><value>转发</value></data>
+  <data name="Messages_ContextMenu_Retry" xml:space="preserve"><value>重试</value></data>
+  <data name="Messages_Context_Menu_View_Details" xml:space="preserve"><value>查看详情</value></data>
+  <data name="Messages_Group_Message" xml:space="preserve"><value>群聊</value></data>
+  <data name="Messages_Hint_Text" xml:space="preserve"><value>请输入信息</value></data>
+  <data name="Messages_On_Facebook" xml:space="preserve"><value>Facebook</value></data>
+  <data name="Messages_On_Messenger" xml:space="preserve"><value>Messenger</value></data>
+  <data name="Messages_On_Mobile" xml:space="preserve"><value>手机</value></data>
+  <data name="Messages_Refreshing_Failed_StateIndicator" xml:space="preserve"><value>无法更新，请检查连接</value></data>
+  <data name="Messages_Refreshing_StateIndicator" xml:space="preserve"><value>正在刷新...</value></data>
+  <data name="Messages_Refreshing_Success_Stateindicator" xml:space="preserve"><value>已更新</value></data>
+  <data name="Messages_Share_Not_Viewable" xml:space="preserve"><value>内容已移除，或您没有浏览权限。</value></data>
+  <data name="Mute_Conversation_For_An_Hour" xml:space="preserve"><value>静音 1 小时</value></data>
+  <data name="Mute_Conversation_Forever" xml:space="preserve"><value>静音</value></data>
+  <data name="Mute_Conversation_Menu_Item" xml:space="preserve"><value>静音</value></data>
+  <data name="Mute_Conversation_Until_8AM" xml:space="preserve"><value>静音至上午 8 点</value></data>
+  <data name="NameConversation_Menu_Clear" xml:space="preserve"><value>清除名称</value></data>
+  <data name="NameConversation_Title" xml:space="preserve"><value>为群聊命名</value></data>
+  <data name="NetworkStatus_Banner_Connected" xml:space="preserve"><value>已连接</value></data>
+  <data name="NetworkStatus_Banner_Connecting" xml:space="preserve"><value>正在连接...</value></data>
+  <data name="NetworkStatus_Banner_Disconnected" xml:space="preserve"><value>等待网络连接</value></data>
+  <data name="NetworkStatus_Banner_No_Internet" xml:space="preserve"><value>无网络连接</value></data>
+  <data name="NetworkStatus_Banner_Syncing" xml:space="preserve"><value>正在同步...</value></data>
+  <data name="NetworkStatus_Banner_UpToDate" xml:space="preserve"><value>已是最新</value></data>
+  <data name="NewContacts_Header_FoundContacts" xml:space="preserve"><value>{0} 位新联系人</value></data>
+  <data name="Notifications_Turn_Off_For_An_Hour" xml:space="preserve"><value>关闭 1 小时</value></data>
+  <data name="Notifications_Turn_On" xml:space="preserve"><value>打开</value></data>
+  <data name="Notifications_Turn_Until_8AM" xml:space="preserve"><value>关闭至上午 8 点</value></data>
+  <data name="Nux_Title_OnMessenger" xml:space="preserve"><value>开始使用 Messenger！</value></data>
+  <data name="Nux_Title_OnMessenger_Message" xml:space="preserve"><value>有蓝色 Messenger 标记的用户均可即时联系。</value></data>
+  <data name="People_AppBar_AddContact" xml:space="preserve"><value>添加用户</value></data>
+  <data name="People_AppBar_Search" xml:space="preserve"><value>搜索</value></data>
+  <data name="PhoneNumber_Box_Title" xml:space="preserve"><value>国家代码及电话号码</value></data>
+  <data name="PhoneNumber_ListpickerLabel_CountryCode" xml:space="preserve"><value>选择国家/地区</value></data>
+  <data name="PhoneNumber_Registration_Welcome_Message" xml:space="preserve"><value>首先，输入手机号。</value></data>
+  <data name="PhoneNumber_Select_Country" xml:space="preserve"><value>国家/地区</value></data>
+  <data name="PhotoAttachment_IndexDisplay_Label" xml:space="preserve"><value>{0} / {1} 张照片</value></data>
+  <data name="PhotoEdit_AppBar_Draw" xml:space="preserve"><value>画图</value></data>
+  <data name="PhotoEdit_AppBar_Send" xml:space="preserve"><value>发送</value></data>
+  <data name="PhotoEdit_AppBar_Undo" xml:space="preserve"><value>撤销</value></data>
+  <data name="PhotoEdit_AppBar_Write" xml:space="preserve"><value>输入文本</value></data>
+  <data name="PhotoEdit_Nux_Text" xml:space="preserve"><value>轻触照片，添加文本</value></data>
+  <data name="Photos_SavePhoto_Error_StateIndicator" xml:space="preserve"><value>无法保存照片</value></data>
+  <data name="Photos_SavePhoto_MenuItem" xml:space="preserve"><value>保存照片</value></data>
+  <data name="Photos_SavePhoto_Saving_StateIndicator" xml:space="preserve"><value>正在保存照片...</value></data>
+  <data name="Photos_SavePhoto_Success_StateIndicator" xml:space="preserve"><value>照片已保存</value></data>
+  <data name="Power_Saver_Mode_Warning" xml:space="preserve"><value>手机处于节电模式，因此不会收到推送通知。</value></data>
+  <data name="ProfilePic_Confirmation_Title" xml:space="preserve"><value>满意吗？</value></data>
+  <data name="ProfilePic_Label_Camera_Button" xml:space="preserve"><value>拍照</value></data>
+  <data name="ProfilePic_Label_Gallery_Button" xml:space="preserve"><value>从相册选择</value></data>
+  <data name="ProfilePic_Subtitle_Text" xml:space="preserve"><value>设置头像，让朋友认出是你。</value></data>
+  <data name="ProfilePic_Title_Text" xml:space="preserve"><value>添加照片？</value></data>
+  <data name="RecentThreadList_Nux_EmptyList_Message" xml:space="preserve"><value>所有聊天消息都会显示在这里。</value></data>
+  <data name="Recent_ContextMenu_Archive" xml:space="preserve"><value>存档</value></data>
+  <data name="Recent_ContextMenu_Delete" xml:space="preserve"><value>删除</value></data>
+  <data name="Recent_ContextMenu_Leave" xml:space="preserve"><value>退出群聊</value></data>
+  <data name="Recent_ContextMenu_MarkUnread" xml:space="preserve"><value>标记为未读</value></data>
+  <data name="Recent_ContextMenu_Spam" xml:space="preserve"><value>标记为垃圾信息</value></data>
+  <data name="Registration_TextboxHint_FirstName" xml:space="preserve"><value>名</value></data>
+  <data name="Registration_TextboxHint_LastName" xml:space="preserve"><value>姓</value></data>
+  <data name="Registration_Title2" xml:space="preserve"><value>使用真实姓名，让朋友知道是你。</value></data>
+  <data name="ResourceLanguage" xml:space="preserve"><value>zh_CN</value></data>
+  <data name="Session_Expired_Caption" xml:space="preserve"><value>请重新登录后再使用 Messenger。</value></data>
+  <data name="Session_Expired_Title" xml:space="preserve"><value>会话已结束</value></data>
+  <data name="SettingsPage_Title" xml:space="preserve"><value>设置</value></data>
+  <data name="Settings_Help" xml:space="preserve"><value>帮助</value></data>
+  <data name="Settings_Help_Title" xml:space="preserve"><value>信息</value></data>
+  <data name="Settings_In_App_Audio_Title" xml:space="preserve"><value>应用内置音效</value></data>
+  <data name="Settings_In_App_Contact_Sync_Title" xml:space="preserve"><value>同步通讯录</value></data>
+  <data name="Settings_In_App_Vibration_Title" xml:space="preserve"><value>应用内置振动</value></data>
+  <data name="Settings_Licenses" xml:space="preserve"><value>许可证</value></data>
+  <data name="Settings_Location_Title" xml:space="preserve"><value>位置</value></data>
+  <data name="Settings_Notification_Title" xml:space="preserve"><value>通知</value></data>
+  <data name="Settings_PhoneNumber_VerificationNeeded" xml:space="preserve"><value>（验证手机号）</value></data>
+  <data name="Settings_Privacy_And_Terms" xml:space="preserve"><value>隐私权与条款</value></data>
+  <data name="Settings_Remove_Contacts_Body" xml:space="preserve"><value>你之前同步的联系人将全部移除。</value></data>
+  <data name="Settings_Remove_Contacts_Confirm" xml:space="preserve"><value>移除</value></data>
+  <data name="Settings_Remove_Contacts_Title" xml:space="preserve"><value>移除联系人？</value></data>
+  <data name="Settings_SendOnEnter_Title" xml:space="preserve"><value>按 Enter 发消息</value></data>
+  <data name="Settings_Sync_Contacts_Body" xml:space="preserve"><value>开始同步？通讯录将持续同步至服务器。</value></data>
+  <data name="Settings_Sync_Contacts_Confirmation" xml:space="preserve"><value>同步</value></data>
+  <data name="Settings_Sync_Contacts_Title" xml:space="preserve"><value>同步通讯录</value></data>
+  <data name="Settings_Version_Number" xml:space="preserve"><value>版本 {0}</value></data>
+  <data name="Start_Group_Menu_Item" xml:space="preserve"><value>创建小组，与 {0} 对话</value></data>
+  <data name="Sticker_Drawer_RecentStickers" xml:space="preserve"><value>近期贴图</value></data>
+  <data name="Sticker_Pack_Download" xml:space="preserve"><value>下载</value></data>
+  <data name="Sticker_Pack_Download_Failed" xml:space="preserve"><value>贴图包下载失败</value></data>
+  <data name="Sticker_Pack_Downloaded" xml:space="preserve"><value>已下载</value></data>
+  <data name="Sticker_Pack_Downloading" xml:space="preserve"><value>正在下载</value></data>
+  <data name="Sticker_Pack_Share" xml:space="preserve"><value>分享</value></data>
+  <data name="Sticker_Store_ContextMenu_Remove" xml:space="preserve"><value>移除</value></data>
+  <data name="Sticker_Store_Menu_Item" xml:space="preserve"><value>贴图商店</value></data>
+  <data name="Sticker_Store_Remove_Error" xml:space="preserve"><value>无法移除贴图包。</value></data>
+  <data name="Sticker_Store_Tab_All" xml:space="preserve"><value>全部</value></data>
+  <data name="Sticker_Store_Tab_Featured" xml:space="preserve"><value>精选</value></data>
+  <data name="Sticker_Store_Tab_Owned" xml:space="preserve"><value>你的</value></data>
+  <data name="Sticker_Store_Title" xml:space="preserve"><value>贴图商店</value></data>
+  <data name="SuggestedPins_Pinning_StateIndicator" xml:space="preserve"><value>正在置顶...</value></data>
+  <data name="SuggestedPins_SearchBox_Hint" xml:space="preserve"><value>搜索小组</value></data>
+  <data name="SuggestedPins_Title_PinGroup" xml:space="preserve"><value>钉选小组</value></data>
+  <data name="SyncContact_Button_LearnMore" xml:space="preserve"><value>[了解详情]</value></data>
+  <data name="SyncContact_ErrorMessage_UnableToToggle" xml:space="preserve"><value>无法修改设置，请检查网络连接并重试。</value></data>
+  <data name="SyncContact_Subtitle" xml:space="preserve"><value>同步通讯录，查看哪些联系人在用 Messenger。你的通讯录将持续同步并更新。</value></data>
+  <data name="SyncContact_Title" xml:space="preserve"><value>使用手机尽情发消息</value></data>
+  <data name="SyncContacts_MessageBox_LinkLabel" xml:space="preserve"><value>了解详情</value></data>
+  <data name="Thread_AppBar_Details" xml:space="preserve"><value>详细信息</value></data>
+  <data name="Thread_AppBar_View_Members" xml:space="preserve"><value>查看对话成员</value></data>
+  <data name="Thread_Name_NoParticipant_Title" xml:space="preserve"><value>暂无成员</value></data>
+  <data name="Thread_UnnamedUserPlaceholder_Title" xml:space="preserve"><value>Facebook 用户</value></data>
+  <data name="Threads_AppBar_Compose" xml:space="preserve"><value>写新消息</value></data>
+  <data name="Threads_AppBar_Refresh" xml:space="preserve"><value>刷新</value></data>
+  <data name="UnMute_Conversation_Menu_Item" xml:space="preserve"><value>取消静音</value></data>
+  <data name="Unsent_Message_Warning" xml:space="preserve"><value>消息尚未发送，确定要离开 Messenger 吗？</value></data>
+  <data name="Verify_PhoneNumber_Box_Title" xml:space="preserve"><value>手机号码</value></data>
+  <data name="VideoRecorder_HelpText_Cancel" xml:space="preserve"><value>松开以删除并重录</value></data>
+  <data name="VideoRecorder_HelpText_HoldToSend" xml:space="preserve"><value>长按录视频，轻触拍照片</value></data>
+  <data name="VideoRecorder_HelpText_Send" xml:space="preserve"><value>手指放开“发送”，即可取消</value></data>
+  <data name="View_Timeline_Menu_Item" xml:space="preserve"><value>时间线</value></data>
+  <data name="Voice_Clip_Hold_Instruction" xml:space="preserve"><value>按住录音并发送</value></data>
+  <data name="Voice_Clip_Length_Limit" xml:space="preserve"><value>已达录音时限，松开发送</value></data>
+  <data name="Voice_Clip_Menu_Item" xml:space="preserve"><value>发送语音留言</value></data>
+  <data name="Voice_Clip_NUX_Instruction" xml:space="preserve"><value>松开发送，滑动取消</value></data>
+  <data name="Voice_Clip_Record" xml:space="preserve"><value>录制</value></data>
+  <data name="Voice_Clip_Release_Cancel" xml:space="preserve"><value>松开取消录制</value></data>
+  <data name="orca_neue_nux_add_phone_body1_searchable_all_not_verified" xml:space="preserve"><value>已有你电话号码的用户可以将你添加为联系人，但此号码在 Facebook 仅对你可见。</value></data>
+  <data name="orca_neue_nux_add_phone_body1_searchable_all_visible_all" xml:space="preserve"><value>已有你电话号码的用户可以将你添加为联系人。</value></data>
+  <data name="orca_neue_nux_add_phone_body1_searchable_all_visible_custom" xml:space="preserve"><value>已有你电话号码的用户可以将你添加为联系人，但谁可以在 Facebook 上看到你号码的设置并不会因此更改。</value></data>
+  <data name="orca_neue_nux_add_phone_body1_searchable_all_visible_friends" xml:space="preserve"><value>已有你电话号码的用户可以将你添加为联系人，但此号码在 Facebook 仅对好友可见。</value></data>
+  <data name="orca_neue_nux_add_phone_body1_searchable_all_visible_self" xml:space="preserve"><value>已有你电话号码的用户可以将你添加为联系人，但此号码在 Facebook 仅对你可见。</value></data>
+  <data name="orca_neue_nux_add_phone_body1_searchable_fof" xml:space="preserve"><value>Facebook 设置能使有你电话的人通过号码找到你，让彼此即使不是 Facebook 好友也可互相联系。</value></data>
+  <data name="orca_neue_nux_add_phone_body2_not_verified" xml:space="preserve"><value>此号码在 Facebook 仅对你可见。</value></data>
+  <data name="orca_neue_nux_add_phone_body2_visible_custom" xml:space="preserve"><value>谁可以在 Facebook 上看到你号码的设置并不会因此更改。</value></data>
+  <data name="orca_neue_nux_add_phone_body2_visible_friends" xml:space="preserve"><value>号码在 Facebook 仅对好友可见。</value></data>
+  <data name="orca_neue_nux_add_phone_body2_visible_self" xml:space="preserve"><value>此号码在 Facebook 仅对你可见。</value></data>
+  <data name="orca_neue_nux_add_phone_title_no_verified_number" xml:space="preserve"><value>哪个号码可以联系到你？</value></data>
+  <data name="orca_neue_nux_add_phone_title_verified_long" xml:space="preserve"><value>这是你常用的联系号码吗？</value></data>
+  <data name="orca_neue_nux_add_phone_title_verified_short" xml:space="preserve"><value>这是你目前的手机号吗？</value></data>
+</root>

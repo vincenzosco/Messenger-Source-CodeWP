@@ -1,0 +1,395 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Active_AppBar_Chat" xml:space="preserve"><value>chatt</value></data>
+  <data name="AddContact_Contact_Already_Exists" xml:space="preserve"><value>Det här telefonnumret har redan lagts till som en kontakt.</value></data>
+  <data name="AddContact_FBUser_Already_Exists" xml:space="preserve"><value>{0} har redan lagts till som en kontakt.</value></data>
+  <data name="AddContact_Invite_Button" xml:space="preserve"><value>bjud in</value></data>
+  <data name="AddContact_MatchedExistingUser_Label" xml:space="preserve"><value>{0} finns redan bland dina kontakter på Messenger</value></data>
+  <data name="AddContact_MatchingUser_Label" xml:space="preserve"><value>{0} har lagts till i dina Messenger-kontakter</value></data>
+  <data name="AddContact_Message_Button" xml:space="preserve"><value>skicka ett meddelande till {0}</value></data>
+  <data name="AddContact_PhoneNumber_Description" xml:space="preserve"><value>Ange ett telefonnummer om du vill söka efter personen på Messenger.</value></data>
+  <data name="AddContact_PhoneNumber_Title" xml:space="preserve"><value>LÄGG TILL KONTAKT</value></data>
+  <data name="AddContact_Remove_Contact_Warning" xml:space="preserve"><value>{0} tas bort från dina Messenger-kontakter.</value></data>
+  <data name="AddContact_Remove_MessageBox_Title" xml:space="preserve"><value>Ta bort kontakt</value></data>
+  <data name="AddPhotos_Menu_ChooseFromAlbum" xml:space="preserve"><value>Välj i album</value></data>
+  <data name="AddPhotos_Menu_RemovePhotos" xml:space="preserve"><value>Ta bort fotot</value></data>
+  <data name="AddPhotos_Menu_TakePhoto" xml:space="preserve"><value>Ta foto</value></data>
+  <data name="AddPhotos_Title_EditProfilePicture" xml:space="preserve"><value>REDIGERA PROFILBILD</value></data>
+  <data name="AddPhotos_Title_SetGroupPhoto" xml:space="preserve"><value>ANGE GRUPPFOTO</value></data>
+  <data name="Add_Phone_Number_Label" xml:space="preserve"><value>Lägg till telefonnummer</value></data>
+  <data name="AppBar_Cancel" xml:space="preserve"><value>avbryt</value></data>
+  <data name="AppBar_No" xml:space="preserve"><value>nej</value></data>
+  <data name="AppBar_Ok" xml:space="preserve"><value>ok</value></data>
+  <data name="AppBar_Remove" xml:space="preserve"><value>ta bort</value></data>
+  <data name="AppBar_Undo" xml:space="preserve"><value>ångra</value></data>
+  <data name="AppBar_Yes" xml:space="preserve"><value>ja</value></data>
+  <data name="AppUpdate_Description" xml:space="preserve"><value>Uppdatera Messenger för att få tillgång till nya funktioner och förbättringar.</value></data>
+  <data name="AppUpdate_NotNowButton" xml:space="preserve"><value>Inte nu</value></data>
+  <data name="AppUpdate_Title" xml:space="preserve"><value>Det finns en uppdatering för Messenger</value></data>
+  <data name="AppUpdate_UpdateAppButton" xml:space="preserve"><value>Uppdatera</value></data>
+  <data name="App_Location_Services_Enable" xml:space="preserve"><value>Gå till Messenger-inställningarna för att dela din plats i dina meddelanden.</value></data>
+  <data name="App_Quit_Caption" xml:space="preserve"><value>Lämna Messenger</value></data>
+  <data name="Attachments_AppBar_Next" xml:space="preserve"><value>nästa</value></data>
+  <data name="Attachments_AppBar_Previous" xml:space="preserve"><value>föregående</value></data>
+  <data name="Attachments_AppBar_Skip" xml:space="preserve"><value>hoppa över</value></data>
+  <data name="BackgroundToast_LeavingApp_Title" xml:space="preserve"><value>Messenger</value></data>
+  <data name="BackgroundToast_LeavingApp_Warning" xml:space="preserve"><value>Vissa meddelanden skickades inte innan Messenger stängdes. Öppna Messenger för att kontrollera att meddelandena har skickats.</value></data>
+  <data name="ButtonLabelRetry" xml:space="preserve"><value>Försök igen</value></data>
+  <data name="Button_Continue" xml:space="preserve"><value>Fortsätt</value></data>
+  <data name="CanonicalThreadDetailsPage_Start_Group" xml:space="preserve"><value>starta grupp</value></data>
+  <data name="CanonicalThreadDetailsPage_Title" xml:space="preserve"><value>detaljerad information</value></data>
+  <data name="Chat_Is_Off" xml:space="preserve"><value>Chatten är av</value></data>
+  <data name="Chat_Is_Off_Details_Label" xml:space="preserve"><value>Du kommer fortfarande att få alla dina meddelanden om chatten är avstängd, men du kan slå på den om du vill se vem som är aktiv på Facebook.</value></data>
+  <data name="Client_Type_Mobile" xml:space="preserve"><value>Mobil</value></data>
+  <data name="Client_Type_Web" xml:space="preserve"><value>Webb</value></data>
+  <data name="Composer_Exit_Warning" xml:space="preserve"><value>Vill du ta bort meddelandet?</value></data>
+  <data name="Composer_Groups_Search_Header" xml:space="preserve"><value>GRUPPER</value></data>
+  <data name="Composer_More_People_Search_Header" xml:space="preserve"><value>FLER PERSONER</value></data>
+  <data name="Composer_SendingMessage" xml:space="preserve"><value>skickar meddelande ...</value></data>
+  <data name="Composer_To" xml:space="preserve"><value>Till:</value></data>
+  <data name="Confirm_Phone_Number_Label" xml:space="preserve"><value>Bekräfta numret</value></data>
+  <data name="ContactCard_MenuLabel_CreateGroup" xml:space="preserve"><value>skapa en grupp med {0}</value></data>
+  <data name="ContactCard_MenuLabel_RemoveContact" xml:space="preserve"><value>ta bort kontakt</value></data>
+  <data name="ContactCard_MenuLabel_SendMessage" xml:space="preserve"><value>skicka ett meddelande till {0}</value></data>
+  <data name="ContactList_Header_ContactsFound" xml:space="preserve"><value>{0} kontakter hittades</value></data>
+  <data name="ContactList_Header_Failed" xml:space="preserve"><value>kontaktuppladdningen misslyckades. försök igen?</value></data>
+  <data name="ContactList_Header_FindContacts" xml:space="preserve"><value>hitta kontakter</value></data>
+  <data name="ContactList_Header_ShowAll" xml:space="preserve"><value>visa alla</value></data>
+  <data name="ContactList_Header_SyncingContacts" xml:space="preserve"><value>synkroniserar kontakter ...</value></data>
+  <data name="ContactList_Nux_Label_EmptyList" xml:space="preserve"><value>Du kan synka dina kontakter och se vilka du redan känner på Messenger.</value></data>
+  <data name="ContactList_Nux_Label_NoMatchingContacts" xml:space="preserve"><value>Du ser dina kontakter här. Tryck bara på kontaktikonen om du vill lägga till någon.</value></data>
+  <data name="Contact_Search_No_Results" xml:space="preserve"><value>Inga resultat</value></data>
+  <data name="Contacts_Find_Button_Label" xml:space="preserve"><value>hitta kontakter</value></data>
+  <data name="Contacts_Invite_Button_Label" xml:space="preserve"><value>bjud in andra</value></data>
+  <data name="Conversation_AppBar_AttachPhoto" xml:space="preserve"><value>foton</value></data>
+  <data name="Conversation_AppBar_Camera" xml:space="preserve"><value>kamera</value></data>
+  <data name="Conversation_AppBar_ChangePhoto" xml:space="preserve"><value>foto</value></data>
+  <data name="Conversation_AppBar_Like" xml:space="preserve"><value>gilla</value></data>
+  <data name="Conversation_AppBar_Send" xml:space="preserve"><value>skicka</value></data>
+  <data name="Conversation_AppBar_Text" xml:space="preserve"><value>text</value></data>
+  <data name="Conversation_ContextMenu_RemoveAttachment" xml:space="preserve"><value>ta bort bild</value></data>
+  <data name="Conversation_MenuItem_Rename" xml:space="preserve"><value>namn</value></data>
+  <data name="CreateGroup_TextBox_Label" xml:space="preserve"><value>Gruppnamn</value></data>
+  <data name="CreateGroup_Title" xml:space="preserve"><value>NY GRUPP</value></data>
+  <data name="Device_Location_Services_Enable" xml:space="preserve"><value>Om du vill dela med dig av platsinformation i dina meddelanden måste du gå till platsinställningarna i din telefon.</value></data>
+  <data name="Empty_Conversation_Placeholder_Text" xml:space="preserve"><value>{0} använder Messenger och får dina meddelanden direkt.</value></data>
+  <data name="Empty_Conversation_Placeholder_Text_For_Non_Messenger_User" xml:space="preserve"><value>{0} finns inte på Messenger, men får ditt meddelande på Facebook.</value></data>
+  <data name="Empty_Conversation_Placeholder_Title" xml:space="preserve"><value>Starta konversationen</value></data>
+  <data name="Error_Cannot_Attach_File" xml:space="preserve"><value>Det gick inte att lägga till filen som bilaga. Försök igen.</value></data>
+  <data name="Error_Cannot_Fetch_Conversations" xml:space="preserve"><value>Det går tyvärr inte att visa meddelanden just nu. Försök igen.</value></data>
+  <data name="Error_Cannot_Fetch_Messages" xml:space="preserve"><value>Det går tyvärr inte att skicka meddelanden just nu. Försök igen.</value></data>
+  <data name="Error_Cannot_Fetch_Sticker_Packs" xml:space="preserve"><value>Det går tyvärr inte att visa några dekalpaket just nu.</value></data>
+  <data name="Error_Changing_Mute" xml:space="preserve"><value>Det gick inte att inaktivera. Försök igen.</value></data>
+  <data name="Error_Changing_Unmute" xml:space="preserve"><value>Det gick inte att inaktivera ljudet. Försök igen.</value></data>
+  <data name="Error_Gallery_Out_Of_Memory" xml:space="preserve"><value>Det går inte att bifoga en bild av den här storleken.</value></data>
+  <data name="Error_Invalid_Phone_Number" xml:space="preserve"><value>Ange ett giltigt telefonnummer.</value></data>
+  <data name="Error_Invalid_Phone_Prefix" xml:space="preserve"><value>Använd en giltig landskod.</value></data>
+  <data name="Error_Max_File_Attachment_Exceeded" xml:space="preserve"><value>Du kan inte lägga till fler bilder som bilaga till meddelandet.</value></data>
+  <data name="Error_No_Connection" xml:space="preserve"><value>Ingen internetanslutning</value></data>
+  <data name="Error_No_Conversations" xml:space="preserve"><value>Du har inga konversationer ännu.</value></data>
+  <data name="ExistingUser_Create_Account_Button" xml:space="preserve"><value>skapa nytt konto</value></data>
+  <data name="ExistingUser_Description" xml:space="preserve"><value>Det här numret matchar ett Facebook-konto för {0} {1}.</value></data>
+  <data name="ExistingUser_LoginAs_Button" xml:space="preserve"><value>logga in som {0}</value></data>
+  <data name="ExistingUser_Title" xml:space="preserve"><value>Logga in med Facebook?</value></data>
+  <data name="FetchingDataFromServerFailed" xml:space="preserve"><value>Det gick inte att ladda din information. Försök igen.</value></data>
+  <data name="FlyTrap_Error_Generic" xml:space="preserve"><value>Det gick inte att visa rapporten.</value></data>
+  <data name="FlyTrap_Label_Disclaimer" xml:space="preserve"><value>Info om ditt telefonnummer och den här appen inkluderas automatiskt. Läs mer om hur informationen används finns på {0}</value></data>
+  <data name="FlyTrap_Label_Disclaimer_DataUsePolicyLink" xml:space="preserve"><value>Policy för dataanvändning</value></data>
+  <data name="FlyTrap_Label_Instructions" xml:space="preserve"><value>Beskriv vad du försökte göra och vad som gick fel.</value></data>
+  <data name="FlyTrap_Label_Screenshot" xml:space="preserve"><value>Skärmdump</value></data>
+  <data name="FlyTrap_MenuItem_ReportProblem" xml:space="preserve"><value>rapportera ett problem</value></data>
+  <data name="FlyTrap_TextboxHint_Problem" xml:space="preserve"><value>beskriv problemet</value></data>
+  <data name="FlyTrap_Title_ReportProblem" xml:space="preserve"><value>Rapportera ett problem</value></data>
+  <data name="Forwarding_SearchBox_HintText" xml:space="preserve"><value>sök efter personer</value></data>
+  <data name="Forwarding_Title_Label" xml:space="preserve"><value>VIDAREBEFORDRA MEDDELANDE</value></data>
+  <data name="Friends_AppBar_AddContact" xml:space="preserve"><value>lägg till kontakt</value></data>
+  <data name="Global_Notifcation_Off_Until" xml:space="preserve"><value>Avstängd till {0}</value></data>
+  <data name="Global_Notification_Off" xml:space="preserve"><value>Av</value></data>
+  <data name="Global_Notification_On" xml:space="preserve"><value>På</value></data>
+  <data name="GroupDetailsPage_AppBar_LeaveGroup" xml:space="preserve"><value>lämna grupp</value></data>
+  <data name="GroupDetailsPage_AppBar_RemoveGroupName" xml:space="preserve"><value>ta bort namnet</value></data>
+  <data name="GroupDetailsPage_AppBar_RemoveGroupPhoto" xml:space="preserve"><value>ta bort gruppfoto</value></data>
+  <data name="GroupDetailsPage_Title" xml:space="preserve"><value>grupp</value></data>
+  <data name="GroupMember_Context_Menu_Remove_Member" xml:space="preserve"><value>ta bort</value></data>
+  <data name="GroupTile_Date_ActiveDaysAgo" xml:space="preserve"><value>Aktiv för {0} sedan</value></data>
+  <data name="GroupTile_Date_ActiveLastMonth" xml:space="preserve"><value>Aktiv förra månaden</value></data>
+  <data name="GroupTile_Date_ActiveLastYear" xml:space="preserve"><value>Aktiv förra året</value></data>
+  <data name="GroupTile_Date_ActiveMonthsAgo" xml:space="preserve"><value>Aktiv för {0} sedan</value></data>
+  <data name="GroupTile_Date_ActiveToday" xml:space="preserve"><value>Aktiv idag</value></data>
+  <data name="GroupTile_Date_ActiveYearsAgo" xml:space="preserve"><value>Aktiv för {0} år sedan</value></data>
+  <data name="GroupTile_Date_ActiveYesterday" xml:space="preserve"><value>Aktiv igår</value></data>
+  <data name="Group_AddPeople_Search" xml:space="preserve"><value>Sök efter personer</value></data>
+  <data name="Group_AddPeople_Title" xml:space="preserve"><value>LÄGG TILL PERSONER</value></data>
+  <data name="Group_AddingParticipants_Failed_Message" xml:space="preserve"><value>Det går inte att lägga till personer i gruppen. Försök igen.</value></data>
+  <data name="Group_AddingParticipants_Failed_Title" xml:space="preserve"><value>Det går inte att lägga till personer</value></data>
+  <data name="Group_AppBar_SelectMany" xml:space="preserve"><value>Välj flera</value></data>
+  <data name="Group_RemovingParticipants_Failed_Message" xml:space="preserve"><value>Det gick inte att ta bort några personer. Försök igen.</value></data>
+  <data name="Group_RemovingParticipants_Failed_Title" xml:space="preserve"><value>Det gick inte att ta bort några personer.</value></data>
+  <data name="Groups_AppBar_Add" xml:space="preserve"><value>fäst</value></data>
+  <data name="Groups_AppBar_Create" xml:space="preserve"><value>skapa</value></data>
+  <data name="Groups_AppBar_Next" xml:space="preserve"><value>nästa</value></data>
+  <data name="Groups_NUX_Button_Text" xml:space="preserve"><value>Kom igång</value></data>
+  <data name="Groups_NUX_Help_Title" xml:space="preserve"><value>Fäst grupper så hittar du snabbt tillbaka till dem.</value></data>
+  <data name="Groups_NUX_NoThread_Button_Text" xml:space="preserve"><value>Skapa ny grupp</value></data>
+  <data name="Groups_NUX_PlaceholderActive_LastWeek" xml:space="preserve"><value>Aktiv förra veckan</value></data>
+  <data name="Groups_NUX_PlaceholderActive_Yesterday" xml:space="preserve"><value>Aktiv igår</value></data>
+  <data name="Groups_NUX_PlaceholderFour_Members" xml:space="preserve"><value>Sigge, Jonas</value></data>
+  <data name="Groups_NUX_PlaceholderFour_Title" xml:space="preserve"><value>Arbetskamrater</value></data>
+  <data name="Groups_NUX_PlaceholderOne_Members" xml:space="preserve"><value>Brandon, Simon</value></data>
+  <data name="Groups_NUX_PlaceholderOne_Title" xml:space="preserve"><value>Rumskamrater</value></data>
+  <data name="Groups_NUX_PlaceholderThree_Members" xml:space="preserve"><value>Mattias, Benny</value></data>
+  <data name="Groups_NUX_PlaceholderThree_Title" xml:space="preserve"><value>Helghäng</value></data>
+  <data name="Groups_NUX_PlaceholderTwo_Members" xml:space="preserve"><value>Anja, Adam, Maria, Mikael</value></data>
+  <data name="Groups_NUX_PlaceholderTwo_Title" xml:space="preserve"><value>Familj</value></data>
+  <data name="Image_Search_Empty_Results" xml:space="preserve"><value>Inga bilder hittades.</value></data>
+  <data name="Image_Search_Menu_Item" xml:space="preserve"><value>sök efter bild</value></data>
+  <data name="Image_Search_Popup_Cancel" xml:space="preserve"><value>Avbryt</value></data>
+  <data name="Image_Search_Popup_Message" xml:space="preserve"><value>Vad söker du efter?</value></data>
+  <data name="Image_Search_Popup_Search" xml:space="preserve"><value>Sök</value></data>
+  <data name="Image_Search_Popup_Title" xml:space="preserve"><value>Sök efter bilder</value></data>
+  <data name="Invite_Contact_ToMessenger" xml:space="preserve"><value>Testa Messenger: {0}</value></data>
+  <data name="Location_Menu_Item" xml:space="preserve"><value>skicka plats</value></data>
+  <data name="Location_Services_Disabled" xml:space="preserve"><value>Plats är inaktiverat</value></data>
+  <data name="Location_Warning_Body" xml:space="preserve"><value>Personer i den här konversationen kan se var du befinner dig på kartan. Tryck för att stänga av platsangivelsen.</value></data>
+  <data name="LoginApproval_ResendCode" xml:space="preserve"><value>skicka igen</value></data>
+  <data name="LoginApproval_Title_EnterCode" xml:space="preserve"><value>Ange koden som skickades till din telefon.</value></data>
+  <data name="Login_Approval_Security_Code" xml:space="preserve"><value>Bekräftelsekod</value></data>
+  <data name="Login_NotOnFacebook" xml:space="preserve"><value>Inte på Facebook?</value></data>
+  <data name="Login_RecoverPassword" xml:space="preserve"><value>Glömt lösenordet?</value></data>
+  <data name="Login_SigningIn" xml:space="preserve"><value>loggar in</value></data>
+  <data name="Login_TextboxHint_EmailOrPhone" xml:space="preserve"><value>E-post eller telefon</value></data>
+  <data name="Login_TextboxHint_Password" xml:space="preserve"><value>Lösenord</value></data>
+  <data name="Login_Title_SignIn" xml:space="preserve"><value>Logga in med Facebook</value></data>
+  <data name="Login_Title_Welcome" xml:space="preserve"><value>Välkommen till Messenger</value></data>
+  <data name="Login_With_Facebook" xml:space="preserve"><value>Logga in med Facebook</value></data>
+  <data name="MainPage_Active_Chat_Popup" xml:space="preserve"><value>CHATT</value></data>
+  <data name="MainPage_Active_Disable_Chat" xml:space="preserve"><value>stäng av chatten</value></data>
+  <data name="MainPage_Active_Enable_Chat" xml:space="preserve"><value>slå på chatten</value></data>
+  <data name="MainPage_AppBar_Mute_Button" xml:space="preserve"><value>inaktivera</value></data>
+  <data name="MainPage_AppBar_UnMute_Button" xml:space="preserve"><value>återaktivera</value></data>
+  <data name="MainPage_AppMenu_OtherFolder" xml:space="preserve"><value>övrigt-mapp</value></data>
+  <data name="MainPage_AppMenu_Settings" xml:space="preserve"><value>inställningar</value></data>
+  <data name="MainPage_Pivot_Title_Active" xml:space="preserve"><value>aktiv</value></data>
+  <data name="MainPage_Pivot_Title_Friends" xml:space="preserve"><value>messenger</value></data>
+  <data name="MainPage_Pivot_Title_Groups" xml:space="preserve"><value>grupper</value></data>
+  <data name="MainPage_Pivot_Title_Recent_Threads" xml:space="preserve"><value>senaste</value></data>
+  <data name="Matching_Contact_NotFound_Message" xml:space="preserve"><value>Det gick inte att matcha {0} med en person på Messenger</value></data>
+  <data name="MessageBox_Description_ArchiveThread" xml:space="preserve"><value>Om du vill se arkiverad meddelandehistorik måste du logga in på Facebooks webbplats.</value></data>
+  <data name="MessageBox_Description_DeleteThread" xml:space="preserve"><value>Om du gör detta tas meddelandehistoriken bort permanent.</value></data>
+  <data name="MessageBox_Description_FlyTrapSuccess" xml:space="preserve"><value>Tack för dina synpunkter!</value></data>
+  <data name="MessageBox_Description_LeaveThread" xml:space="preserve"><value>Om du lämnar konversationen kommer du inte att få några fler nya meddelanden.</value></data>
+  <data name="MessageBox_Description_SpamThread" xml:space="preserve"><value>När du markerar något som skräppost ser du det inte längre bland dina nya meddelanden.</value></data>
+  <data name="MessageBox_Label_ArchiveThread" xml:space="preserve"><value>vill du arkivera meddelandehistoriken?</value></data>
+  <data name="MessageBox_Label_AuthenticateWithBrowser" xml:space="preserve"><value>Öppnas i en webbläsare</value></data>
+  <data name="MessageBox_Label_BypassLogin2Fac" xml:space="preserve"><value>Inloggningsgodkännanden är aktiverat. Ange ditt lösenord om du vill fortsätta.</value></data>
+  <data name="MessageBox_Label_BypassLoginFail" xml:space="preserve"><value>Det går inte att bekräfta telefonnumret. Försök igen.</value></data>
+  <data name="MessageBox_Label_ClearThreadPhotoFailed" xml:space="preserve"><value>Det gick inte att ta bort gruppfotot.</value></data>
+  <data name="MessageBox_Label_ConfirmPhoneNumberFailed" xml:space="preserve"><value>Det gick inte att bekräfta ditt nummer</value></data>
+  <data name="MessageBox_Label_ConfirmationCodeInvalid" xml:space="preserve"><value>Ogiltig bekräftelsekod.</value></data>
+  <data name="MessageBox_Label_CreateGroupFailed" xml:space="preserve"><value>Det gick inte att skapa gruppen</value></data>
+  <data name="MessageBox_Label_DeleteThread" xml:space="preserve"><value>Vill du ta bort meddelandehistoriken?</value></data>
+  <data name="MessageBox_Label_ForwardingFailed" xml:space="preserve"><value>Det gick inte att vidarebefordra meddelandet till alla mottagare.</value></data>
+  <data name="MessageBox_Label_LeaveThread" xml:space="preserve"><value>Vill du lämna gruppen?</value></data>
+  <data name="MessageBox_Label_LoginFailed" xml:space="preserve"><value>Det går inte att logga in just nu.</value></data>
+  <data name="MessageBox_Label_NamingConversation_Error" xml:space="preserve"><value>Det gick inte att namnge meddelandehistoriken.</value></data>
+  <data name="MessageBox_Label_NoInternet" xml:space="preserve"><value>Ingen internetanslutning</value></data>
+  <data name="MessageBox_Label_PinGroupFailed" xml:space="preserve"><value>Det gick inte att fästa gruppen.</value></data>
+  <data name="MessageBox_Label_SetThreadPhotoFailed" xml:space="preserve"><value>Det gick inte att ange något gruppfoto.</value></data>
+  <data name="MessageBox_Label_SpamThread" xml:space="preserve"><value>markera som skräppost?</value></data>
+  <data name="MessageBox_Label_UpdatePhoneNumberFailed" xml:space="preserve"><value>Det gick inte att uppdatera numret.</value></data>
+  <data name="MessageBox_Label_UploadProfilePic_Failed" xml:space="preserve"><value>Det går inte att ange en profilbild.</value></data>
+  <data name="MessageBox_Popup_Cancel" xml:space="preserve"><value>Avbryt</value></data>
+  <data name="MessageBox_Title_AddContactFailed" xml:space="preserve"><value>Det går inte att hitta kontakten just nu.</value></data>
+  <data name="MessageBox_Title_FlyTrapSuccess" xml:space="preserve"><value>Rapporten har skickats</value></data>
+  <data name="MessageBox_Title_LoginFailed" xml:space="preserve"><value>Det går inte att logga in just nu.</value></data>
+  <data name="MessageComposer_EmptyGallery_Text" xml:space="preserve"><value>Det finns inga foton i ditt galleri ännu.</value></data>
+  <data name="MessageDetails_Error_Unexpected" xml:space="preserve"><value>Det går inte att visa information om meddelandet just nu. Försök igen.</value></data>
+  <data name="MessageDetails_Label_SeenBy" xml:space="preserve"><value>Läst av:</value></data>
+  <data name="MessageSnippetAudioClipLoggedInUser" xml:space="preserve"><value>Du har skickat ett röstklipp.</value></data>
+  <data name="MessageSnippetAudioClipOtherUser" xml:space="preserve"><value>{0} har skickat ett röstklipp.</value></data>
+  <data name="MessageSnippetGenericLoggedInUser" xml:space="preserve"><value>Du har skickat ett meddelande.</value></data>
+  <data name="MessageSnippetGenericOtherUser" xml:space="preserve"><value>{0} har skickat ett meddelande.</value></data>
+  <data name="MessageSnippetPhotoLoggedInUser" xml:space="preserve"><value>Du har skickat en bild.</value></data>
+  <data name="MessageSnippetPhotoOtherUser" xml:space="preserve"><value>{0} har skickat en bild.</value></data>
+  <data name="MessageSnippetStickerLoggedInUser" xml:space="preserve"><value>Du har skickat en dekal.</value></data>
+  <data name="MessageSnippetStickerOtherUser" xml:space="preserve"><value>{0} har skickat en dekal.</value></data>
+  <data name="MessageSnippetVideoLoggedInUser" xml:space="preserve"><value>Du har skickat ett filmklipp.</value></data>
+  <data name="MessageSnippetVideoOtherUser" xml:space="preserve"><value>{0} har skickat ett filmklipp.</value></data>
+  <data name="MessageSnippetWhenSenderIsTheLoggedInUser" xml:space="preserve"><value>Du</value></data>
+  <data name="MessageStatus_Location_City" xml:space="preserve"><value>Skickat från {0}</value></data>
+  <data name="MessageStatus_Location_CityCountry" xml:space="preserve"><value>Skickat från {0}, {1}</value></data>
+  <data name="MessageStatus_Location_CityState" xml:space="preserve"><value>Skickat från {0}, {1}</value></data>
+  <data name="MessageStatus_Location_DistrictCity" xml:space="preserve"><value>Skickat från {0}, {1}</value></data>
+  <data name="MessageStatus_Origin_Messenger" xml:space="preserve"><value>Skickat från Messenger</value></data>
+  <data name="MessageStatus_Origin_Mobile" xml:space="preserve"><value>Skickat via mobilen</value></data>
+  <data name="MessageStatus_Origin_Web" xml:space="preserve"><value>Skickat via internet</value></data>
+  <data name="MessageStatus_SeenBy_1" xml:space="preserve"><value>Läst av {0}</value></data>
+  <data name="MessageStatus_SeenBy_2" xml:space="preserve"><value>Läst av {0} och {1}</value></data>
+  <data name="MessageStatus_SeenBy_3" xml:space="preserve"><value>Läst av {0}, {1} och {2}</value></data>
+  <data name="MessageStatus_SeenBy_4" xml:space="preserve"><value>Läst av {0}, {1}, {2} och {3}</value></data>
+  <data name="MessageStatus_SeenBy_Everyone" xml:space="preserve"><value>Läst av alla</value></data>
+  <data name="MessageStatus_SeenBy_Others" xml:space="preserve"><value>Har setts av {0}, {1}, {2} och {3} andra</value></data>
+  <data name="MessageStatus_Seen_Timestamp" xml:space="preserve"><value>Visat {0}</value></data>
+  <data name="Message_Delete_Caption" xml:space="preserve"><value>Ta bort meddelande</value></data>
+  <data name="Message_Delete_Text" xml:space="preserve"><value>Vill du ta bort meddelandet permanent?</value></data>
+  <data name="Message_Sending_Failed" xml:space="preserve"><value>Det gick inte att skicka meddelandet.</value></data>
+  <data name="Message_Sending_Failed_App_Exited_Description" xml:space="preserve"><value>Appen stängdes innan ditt meddelande hann skickas. Försök skicka det på nytt.</value></data>
+  <data name="Message_Sending_Failed_Permission_Description" xml:space="preserve"><value>Du kan tyvärr inte skicka meddelanden till den här personen.</value></data>
+  <data name="Messages_Active_1m_Ago" xml:space="preserve"><value>aktiv för 1 minut sedan</value></data>
+  <data name="Messages_Active_Now" xml:space="preserve"><value>aktiva nu</value></data>
+  <data name="Messages_Active_Xd_Ago" xml:space="preserve"><value>aktiv för {0} dag/dagar sedan</value></data>
+  <data name="Messages_Active_Xh_Ago" xml:space="preserve"><value>aktiv för {0} timme/timmar sedan</value></data>
+  <data name="Messages_Active_Xm_Ago" xml:space="preserve"><value>aktiv för {0} minut/minuter sedan</value></data>
+  <data name="Messages_AppBar_Send_Sticker" xml:space="preserve"><value>dekaler</value></data>
+  <data name="Messages_ContextMenu_Copy" xml:space="preserve"><value>kopiera text</value></data>
+  <data name="Messages_ContextMenu_Delete" xml:space="preserve"><value>ta bort</value></data>
+  <data name="Messages_ContextMenu_Forward" xml:space="preserve"><value>vidarebefordra</value></data>
+  <data name="Messages_ContextMenu_Retry" xml:space="preserve"><value>försök igen</value></data>
+  <data name="Messages_Context_Menu_View_Details" xml:space="preserve"><value>visa detaljer</value></data>
+  <data name="Messages_Group_Message" xml:space="preserve"><value>GRUPP</value></data>
+  <data name="Messages_Hint_Text" xml:space="preserve"><value>skriv ett meddelande</value></data>
+  <data name="Messages_On_Facebook" xml:space="preserve"><value>Facebook</value></data>
+  <data name="Messages_On_Messenger" xml:space="preserve"><value>Messenger</value></data>
+  <data name="Messages_On_Mobile" xml:space="preserve"><value>på mobilen</value></data>
+  <data name="Messages_Refreshing_Failed_StateIndicator" xml:space="preserve"><value>Det gick inte att uppdatera. Kontrollera din anslutning.</value></data>
+  <data name="Messages_Refreshing_StateIndicator" xml:space="preserve"><value>Uppdaterar ...</value></data>
+  <data name="Messages_Refreshing_Success_Stateindicator" xml:space="preserve"><value>Uppdaterad</value></data>
+  <data name="Messages_Share_Not_Viewable" xml:space="preserve"><value>Materialet kan ha tagits bort eller så saknar du behörighet att visa det.</value></data>
+  <data name="Mute_Conversation_For_An_Hour" xml:space="preserve"><value>inaktivera i 1 h</value></data>
+  <data name="Mute_Conversation_Forever" xml:space="preserve"><value>inaktivera</value></data>
+  <data name="Mute_Conversation_Menu_Item" xml:space="preserve"><value>inaktivera</value></data>
+  <data name="Mute_Conversation_Until_8AM" xml:space="preserve"><value>inaktivera till 08:00</value></data>
+  <data name="NameConversation_Menu_Clear" xml:space="preserve"><value>rensa namn</value></data>
+  <data name="NameConversation_Title" xml:space="preserve"><value>NAMNGE GRUPP</value></data>
+  <data name="NetworkStatus_Banner_Connected" xml:space="preserve"><value>Ansluten</value></data>
+  <data name="NetworkStatus_Banner_Connecting" xml:space="preserve"><value>Ansluter ...</value></data>
+  <data name="NetworkStatus_Banner_Disconnected" xml:space="preserve"><value>Väntar på nätverk</value></data>
+  <data name="NetworkStatus_Banner_No_Internet" xml:space="preserve"><value>Ingen internetanslutning</value></data>
+  <data name="NetworkStatus_Banner_Syncing" xml:space="preserve"><value>Synkroniserar ...</value></data>
+  <data name="NetworkStatus_Banner_UpToDate" xml:space="preserve"><value>Uppdaterad</value></data>
+  <data name="NewContacts_Header_FoundContacts" xml:space="preserve"><value>{0} NYA KONTAKTER</value></data>
+  <data name="Notifications_Turn_Off_For_An_Hour" xml:space="preserve"><value>stäng av i 1 timme</value></data>
+  <data name="Notifications_Turn_On" xml:space="preserve"><value>slå på</value></data>
+  <data name="Notifications_Turn_Until_8AM" xml:space="preserve"><value>stäng av till 08:00</value></data>
+  <data name="Nux_Title_OnMessenger" xml:space="preserve"><value>Du är på Messenger!</value></data>
+  <data name="Nux_Title_OnMessenger_Message" xml:space="preserve"><value>Alla med det blå Messenger-märket kan nås direkt.</value></data>
+  <data name="People_AppBar_AddContact" xml:space="preserve"><value>lägg till personer</value></data>
+  <data name="People_AppBar_Search" xml:space="preserve"><value>sök</value></data>
+  <data name="PhoneNumber_Box_Title" xml:space="preserve"><value>Landskod och telefonnummer</value></data>
+  <data name="PhoneNumber_ListpickerLabel_CountryCode" xml:space="preserve"><value>VÄLJ LAND</value></data>
+  <data name="PhoneNumber_Registration_Welcome_Message" xml:space="preserve"><value>Ange ditt telefonnummer för att komma igång.</value></data>
+  <data name="PhoneNumber_Select_Country" xml:space="preserve"><value>Land</value></data>
+  <data name="PhotoAttachment_IndexDisplay_Label" xml:space="preserve"><value>{0}/{1} foton</value></data>
+  <data name="PhotoEdit_AppBar_Draw" xml:space="preserve"><value>rita</value></data>
+  <data name="PhotoEdit_AppBar_Send" xml:space="preserve"><value>skicka</value></data>
+  <data name="PhotoEdit_AppBar_Undo" xml:space="preserve"><value>ångra</value></data>
+  <data name="PhotoEdit_AppBar_Write" xml:space="preserve"><value>skriv</value></data>
+  <data name="PhotoEdit_Nux_Text" xml:space="preserve"><value>Tryck på fotot och lägg till text</value></data>
+  <data name="Photos_SavePhoto_Error_StateIndicator" xml:space="preserve"><value>Det gick inte att spara fotot.</value></data>
+  <data name="Photos_SavePhoto_MenuItem" xml:space="preserve"><value>spara foto</value></data>
+  <data name="Photos_SavePhoto_Saving_StateIndicator" xml:space="preserve"><value>Sparar foto ...</value></data>
+  <data name="Photos_SavePhoto_Success_StateIndicator" xml:space="preserve"><value>Fotot har sparats</value></data>
+  <data name="Power_Saver_Mode_Warning" xml:space="preserve"><value>Du befinner dig i batterisparläge och får därför inga aviseringar.</value></data>
+  <data name="ProfilePic_Confirmation_Title" xml:space="preserve"><value>Ser det bra ut?</value></data>
+  <data name="ProfilePic_Label_Camera_Button" xml:space="preserve"><value>Ta foto</value></data>
+  <data name="ProfilePic_Label_Gallery_Button" xml:space="preserve"><value>Välj i album</value></data>
+  <data name="ProfilePic_Subtitle_Text" xml:space="preserve"><value>Lägg till ett foto så att andra känner igen dig.</value></data>
+  <data name="ProfilePic_Title_Text" xml:space="preserve"><value>Vill du lägga till ett foto?</value></data>
+  <data name="RecentThreadList_Nux_EmptyList_Message" xml:space="preserve"><value>När du börjar chatta kommer alla dina meddelanden att finnas här.</value></data>
+  <data name="Recent_ContextMenu_Archive" xml:space="preserve"><value>arkivera</value></data>
+  <data name="Recent_ContextMenu_Delete" xml:space="preserve"><value>ta bort</value></data>
+  <data name="Recent_ContextMenu_Leave" xml:space="preserve"><value>lämna grupp</value></data>
+  <data name="Recent_ContextMenu_MarkUnread" xml:space="preserve"><value>markera som oläst</value></data>
+  <data name="Recent_ContextMenu_Spam" xml:space="preserve"><value>markera som skräppost</value></data>
+  <data name="Registration_TextboxHint_FirstName" xml:space="preserve"><value>Förnamn</value></data>
+  <data name="Registration_TextboxHint_LastName" xml:space="preserve"><value>Efternamn</value></data>
+  <data name="Registration_Title2" xml:space="preserve"><value>Använd ditt riktiga namn så att andra känner igen dig.</value></data>
+  <data name="ResourceLanguage" xml:space="preserve"><value>sv-SE</value></data>
+  <data name="Session_Expired_Caption" xml:space="preserve"><value>Logga in igen om du vill använda Messenger.</value></data>
+  <data name="Session_Expired_Title" xml:space="preserve"><value>sessionen har löpt ut</value></data>
+  <data name="SettingsPage_Title" xml:space="preserve"><value>inställningar</value></data>
+  <data name="Settings_Help" xml:space="preserve"><value>Hjälp</value></data>
+  <data name="Settings_Help_Title" xml:space="preserve"><value>Info</value></data>
+  <data name="Settings_In_App_Audio_Title" xml:space="preserve"><value>Ljud i appen</value></data>
+  <data name="Settings_In_App_Contact_Sync_Title" xml:space="preserve"><value>Synka kontakter</value></data>
+  <data name="Settings_In_App_Vibration_Title" xml:space="preserve"><value>Vibration i appen</value></data>
+  <data name="Settings_Licenses" xml:space="preserve"><value>Licenser</value></data>
+  <data name="Settings_Location_Title" xml:space="preserve"><value>Plats</value></data>
+  <data name="Settings_Notification_Title" xml:space="preserve"><value>Aviseringar</value></data>
+  <data name="Settings_PhoneNumber_VerificationNeeded" xml:space="preserve"><value>(Bekräfta numret)</value></data>
+  <data name="Settings_Privacy_And_Terms" xml:space="preserve"><value>Sekretess och villkor</value></data>
+  <data name="Settings_Remove_Contacts_Body" xml:space="preserve"><value>Kontakter som du har synkat tidigare tas bort.</value></data>
+  <data name="Settings_Remove_Contacts_Confirm" xml:space="preserve"><value>Ta bort</value></data>
+  <data name="Settings_Remove_Contacts_Title" xml:space="preserve"><value>Vill du ta bort kontakter?</value></data>
+  <data name="Settings_SendOnEnter_Title" xml:space="preserve"><value>Skicka med tryck på Retur</value></data>
+  <data name="Settings_Sync_Contacts_Body" xml:space="preserve"><value>Vill du börja synkronisera? Dina kontakter kommer att synkroniseras regelbundet med våra servrar.</value></data>
+  <data name="Settings_Sync_Contacts_Confirmation" xml:space="preserve"><value>Synkronisera</value></data>
+  <data name="Settings_Sync_Contacts_Title" xml:space="preserve"><value>Synka kontakter</value></data>
+  <data name="Settings_Version_Number" xml:space="preserve"><value>Version {0}</value></data>
+  <data name="Start_Group_Menu_Item" xml:space="preserve"><value>skapa grupp med {0}</value></data>
+  <data name="Sticker_Drawer_RecentStickers" xml:space="preserve"><value>Senaste dekalerna</value></data>
+  <data name="Sticker_Pack_Download" xml:space="preserve"><value>ladda ned</value></data>
+  <data name="Sticker_Pack_Download_Failed" xml:space="preserve"><value>Det gick inte att ladda ned dekalpaket</value></data>
+  <data name="Sticker_Pack_Downloaded" xml:space="preserve"><value>nedladdat</value></data>
+  <data name="Sticker_Pack_Downloading" xml:space="preserve"><value>laddar ned</value></data>
+  <data name="Sticker_Pack_Share" xml:space="preserve"><value>dela</value></data>
+  <data name="Sticker_Store_ContextMenu_Remove" xml:space="preserve"><value>ta bort</value></data>
+  <data name="Sticker_Store_Menu_Item" xml:space="preserve"><value>dekalbutik</value></data>
+  <data name="Sticker_Store_Remove_Error" xml:space="preserve"><value>Det gick inte att ta bort dekalpaketet.</value></data>
+  <data name="Sticker_Store_Tab_All" xml:space="preserve"><value>alla</value></data>
+  <data name="Sticker_Store_Tab_Featured" xml:space="preserve"><value>utvalda</value></data>
+  <data name="Sticker_Store_Tab_Owned" xml:space="preserve"><value>dina</value></data>
+  <data name="Sticker_Store_Title" xml:space="preserve"><value>DEKALBUTIKEN</value></data>
+  <data name="SuggestedPins_Pinning_StateIndicator" xml:space="preserve"><value>Fäster ...</value></data>
+  <data name="SuggestedPins_SearchBox_Hint" xml:space="preserve"><value>sök efter grupper</value></data>
+  <data name="SuggestedPins_Title_PinGroup" xml:space="preserve"><value>FÄST GRUPP</value></data>
+  <data name="SyncContact_Button_LearnMore" xml:space="preserve"><value>Läs mer</value></data>
+  <data name="SyncContact_ErrorMessage_UnableToToggle" xml:space="preserve"><value>Det gick inte att ändra inställningen, kontrollera internetanslutningen och försök igen.</value></data>
+  <data name="SyncContact_Subtitle" xml:space="preserve"><value>Synkronisera kontakterna och se vilka andra som är på Messenger. Dina kontakter synkroniseras kontinuerligt och hålls uppdaterade.</value></data>
+  <data name="SyncContact_Title" xml:space="preserve"><value>Skicka meddelanden till vem du vill i telefonen</value></data>
+  <data name="SyncContacts_MessageBox_LinkLabel" xml:space="preserve"><value>Läs mer</value></data>
+  <data name="Thread_AppBar_Details" xml:space="preserve"><value>detaljerad information</value></data>
+  <data name="Thread_AppBar_View_Members" xml:space="preserve"><value>visa användare</value></data>
+  <data name="Thread_Name_NoParticipant_Title" xml:space="preserve"><value>inga deltagare ännu</value></data>
+  <data name="Thread_UnnamedUserPlaceholder_Title" xml:space="preserve"><value>Person på Facebook</value></data>
+  <data name="Threads_AppBar_Compose" xml:space="preserve"><value>ny</value></data>
+  <data name="Threads_AppBar_Refresh" xml:space="preserve"><value>uppdatera</value></data>
+  <data name="UnMute_Conversation_Menu_Item" xml:space="preserve"><value>återaktivera</value></data>
+  <data name="Unsent_Message_Warning" xml:space="preserve"><value>Vill du avsluta Messenger? Du har ännu inte skickat dina meddelanden.</value></data>
+  <data name="Verify_PhoneNumber_Box_Title" xml:space="preserve"><value>Telefonnummer</value></data>
+  <data name="VideoRecorder_HelpText_Cancel" xml:space="preserve"><value>Vi tar och tar bort detta och börjar om</value></data>
+  <data name="VideoRecorder_HelpText_HoldToSend" xml:space="preserve"><value>Håll in för filmklipp, tryck för foto</value></data>
+  <data name="VideoRecorder_HelpText_Send" xml:space="preserve"><value>Avbryt genom att ta bort fingret från Skicka</value></data>
+  <data name="View_Timeline_Menu_Item" xml:space="preserve"><value>tidslinje</value></data>
+  <data name="Voice_Clip_Hold_Instruction" xml:space="preserve"><value>Tryck och håll in för att spela in och skicka ljud</value></data>
+  <data name="Voice_Clip_Length_Limit" xml:space="preserve"><value>Tidsgränsen har nåtts, släpp för att skicka</value></data>
+  <data name="Voice_Clip_Menu_Item" xml:space="preserve"><value>skicka röstklipp</value></data>
+  <data name="Voice_Clip_NUX_Instruction" xml:space="preserve"><value>Släpp för att skicka, dra bort fingret för att avbryta</value></data>
+  <data name="Voice_Clip_Record" xml:space="preserve"><value>spela in</value></data>
+  <data name="Voice_Clip_Release_Cancel" xml:space="preserve"><value>Släpp för att avbryta inspelningen</value></data>
+  <data name="orca_neue_nux_add_phone_body1_searchable_all_not_verified" xml:space="preserve"><value>Andra kan lägga till dig som kontakt om de redan har ditt telefonnummer, men bara du kan se numret på Facebook.</value></data>
+  <data name="orca_neue_nux_add_phone_body1_searchable_all_visible_all" xml:space="preserve"><value>Andra kan lägga till dig som kontakt om de redan har ditt telefonnummer.</value></data>
+  <data name="orca_neue_nux_add_phone_body1_searchable_all_visible_custom" xml:space="preserve"><value>Andra kan lägga till dig som kontakt om de redan har ditt telefonnummer, men detta påverkar inte vilka som kan se ditt nummer på Facebook.</value></data>
+  <data name="orca_neue_nux_add_phone_body1_searchable_all_visible_friends" xml:space="preserve"><value>Andra kan lägga till dig som kontakt om de redan har ditt telefonnummer, men bara vänner kan se numret på Facebook.</value></data>
+  <data name="orca_neue_nux_add_phone_body1_searchable_all_visible_self" xml:space="preserve"><value>Andra kan lägga till dig som kontakt om de redan har ditt telefonnummer, men bara du kan se numret på Facebook.</value></data>
+  <data name="orca_neue_nux_add_phone_body1_searchable_fof" xml:space="preserve"><value>Ni behöver inte vara vänner på Facebook för att kontakta varandra. Din Facebook-inställning kommer utökas så att alla som har ditt nummer kan söka efter dig med det.</value></data>
+  <data name="orca_neue_nux_add_phone_body2_not_verified" xml:space="preserve"><value>Bara du kan se det här numret på Facebook.</value></data>
+  <data name="orca_neue_nux_add_phone_body2_visible_custom" xml:space="preserve"><value>Detta påverkar inte vilka som kan se ditt nummer på Facebook.</value></data>
+  <data name="orca_neue_nux_add_phone_body2_visible_friends" xml:space="preserve"><value>Bara vänner kan se det här numret på Facebook.</value></data>
+  <data name="orca_neue_nux_add_phone_body2_visible_self" xml:space="preserve"><value>Bara du kan se det här numret på Facebook.</value></data>
+  <data name="orca_neue_nux_add_phone_title_no_verified_number" xml:space="preserve"><value>Vilket nummer kan användas för att nå dig?</value></data>
+  <data name="orca_neue_nux_add_phone_title_verified_long" xml:space="preserve"><value>Kan det här numret användas för att nå dig?</value></data>
+  <data name="orca_neue_nux_add_phone_title_verified_short" xml:space="preserve"><value>Stämmer ditt nummer?</value></data>
+</root>

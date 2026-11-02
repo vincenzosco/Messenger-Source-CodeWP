@@ -1,0 +1,395 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Active_AppBar_Chat" xml:space="preserve"><value>trò chuyện</value></data>
+  <data name="AddContact_Contact_Already_Exists" xml:space="preserve"><value>Số điện thoại này đã được thêm là liên hệ.</value></data>
+  <data name="AddContact_FBUser_Already_Exists" xml:space="preserve"><value>{0} đã được thêm là một liên hệ.</value></data>
+  <data name="AddContact_Invite_Button" xml:space="preserve"><value>mời</value></data>
+  <data name="AddContact_MatchedExistingUser_Label" xml:space="preserve"><value>{0} đã có trong danh bạ của bạn trên Messenger</value></data>
+  <data name="AddContact_MatchingUser_Label" xml:space="preserve"><value>{0} đã được thêm vào danh bạ trên Messenger của bạn</value></data>
+  <data name="AddContact_Message_Button" xml:space="preserve"><value>gửi tin nhắn cho {0}</value></data>
+  <data name="AddContact_PhoneNumber_Description" xml:space="preserve"><value>Nhập số điện thoại của ai đó để tìm họ trên Messenger.</value></data>
+  <data name="AddContact_PhoneNumber_Title" xml:space="preserve"><value>THÊM LIÊN HỆ</value></data>
+  <data name="AddContact_Remove_Contact_Warning" xml:space="preserve"><value>{0} sẽ bị xóa khỏi danh bạ trên Messenger của bạn.</value></data>
+  <data name="AddContact_Remove_MessageBox_Title" xml:space="preserve"><value>Xóa liên hệ</value></data>
+  <data name="AddPhotos_Menu_ChooseFromAlbum" xml:space="preserve"><value>Chọn từ album</value></data>
+  <data name="AddPhotos_Menu_RemovePhotos" xml:space="preserve"><value>Xóa ảnh</value></data>
+  <data name="AddPhotos_Menu_TakePhoto" xml:space="preserve"><value>Chụp ảnh</value></data>
+  <data name="AddPhotos_Title_EditProfilePicture" xml:space="preserve"><value>CHỈNH SỬA ẢNH ĐẠI DIỆN</value></data>
+  <data name="AddPhotos_Title_SetGroupPhoto" xml:space="preserve"><value>ĐẶT ẢNH NHÓM</value></data>
+  <data name="Add_Phone_Number_Label" xml:space="preserve"><value>Thêm số điện thoại</value></data>
+  <data name="AppBar_Cancel" xml:space="preserve"><value>hủy</value></data>
+  <data name="AppBar_No" xml:space="preserve"><value>không</value></data>
+  <data name="AppBar_Ok" xml:space="preserve"><value>ok</value></data>
+  <data name="AppBar_Remove" xml:space="preserve"><value>xóa</value></data>
+  <data name="AppBar_Undo" xml:space="preserve"><value>hoàn tác</value></data>
+  <data name="AppBar_Yes" xml:space="preserve"><value>có</value></data>
+  <data name="AppUpdate_Description" xml:space="preserve"><value>Cập nhật Messenger để nhận mọi tính năng và cải tiến mới.</value></data>
+  <data name="AppUpdate_NotNowButton" xml:space="preserve"><value>Không phải Bây giờ</value></data>
+  <data name="AppUpdate_Title" xml:space="preserve"><value>Hiện có bản cập nhật cho Messenger</value></data>
+  <data name="AppUpdate_UpdateAppButton" xml:space="preserve"><value>Cập nhật</value></data>
+  <data name="App_Location_Services_Enable" xml:space="preserve"><value>Để chia sẻ vị trí trong tin nhắn của bạn, hãy đi tới thiết lập Tin nhắn.</value></data>
+  <data name="App_Quit_Caption" xml:space="preserve"><value>Rời khỏi Messenger</value></data>
+  <data name="Attachments_AppBar_Next" xml:space="preserve"><value>tiếp theo</value></data>
+  <data name="Attachments_AppBar_Previous" xml:space="preserve"><value>trước</value></data>
+  <data name="Attachments_AppBar_Skip" xml:space="preserve"><value>bỏ qua</value></data>
+  <data name="BackgroundToast_LeavingApp_Title" xml:space="preserve"><value>Messenger</value></data>
+  <data name="BackgroundToast_LeavingApp_Warning" xml:space="preserve"><value>Một số tin nhắn chưa được gửi trước khi Messenger đóng. Hãy mở Messenger để đảm bảo tin nhắn của bạn được gửi.</value></data>
+  <data name="ButtonLabelRetry" xml:space="preserve"><value>Thử lại</value></data>
+  <data name="Button_Continue" xml:space="preserve"><value>Tiếp tục</value></data>
+  <data name="CanonicalThreadDetailsPage_Start_Group" xml:space="preserve"><value>tạo nhóm</value></data>
+  <data name="CanonicalThreadDetailsPage_Title" xml:space="preserve"><value>chi tiết</value></data>
+  <data name="Chat_Is_Off" xml:space="preserve"><value>Đã tắt trò chuyện</value></data>
+  <data name="Chat_Is_Off_Details_Label" xml:space="preserve"><value>Bạn vẫn sẽ nhận được tất cả tin nhắn nếu chat tắt, nhưng bạn có thể bật tính năng này lên để xem ai đang online trên Facebook.</value></data>
+  <data name="Client_Type_Mobile" xml:space="preserve"><value>Di động</value></data>
+  <data name="Client_Type_Web" xml:space="preserve"><value>Web</value></data>
+  <data name="Composer_Exit_Warning" xml:space="preserve"><value>Hủy tin nhắn?</value></data>
+  <data name="Composer_Groups_Search_Header" xml:space="preserve"><value>NHÓM</value></data>
+  <data name="Composer_More_People_Search_Header" xml:space="preserve"><value>NGƯỜI KHÁC</value></data>
+  <data name="Composer_SendingMessage" xml:space="preserve"><value>đang gửi tin nhắn...</value></data>
+  <data name="Composer_To" xml:space="preserve"><value>Tới:</value></data>
+  <data name="Confirm_Phone_Number_Label" xml:space="preserve"><value>Xác nhận Số điện thoại</value></data>
+  <data name="ContactCard_MenuLabel_CreateGroup" xml:space="preserve"><value>tạo một nhóm với {0}</value></data>
+  <data name="ContactCard_MenuLabel_RemoveContact" xml:space="preserve"><value>xóa liên hệ</value></data>
+  <data name="ContactCard_MenuLabel_SendMessage" xml:space="preserve"><value>gửi tin nhắn cho {0}</value></data>
+  <data name="ContactList_Header_ContactsFound" xml:space="preserve"><value>Đã tìm thấy {0} liên hệ</value></data>
+  <data name="ContactList_Header_Failed" xml:space="preserve"><value>Tải liên hệ lên không thành công. Thử lại?</value></data>
+  <data name="ContactList_Header_FindContacts" xml:space="preserve"><value>tìm liên hệ</value></data>
+  <data name="ContactList_Header_ShowAll" xml:space="preserve"><value>hiển thị tất cả</value></data>
+  <data name="ContactList_Header_SyncingContacts" xml:space="preserve"><value>đang đồng bộ danh bạ...</value></data>
+  <data name="ContactList_Nux_Label_EmptyList" xml:space="preserve"><value>Bạn có thể đồng bộ danh bạ của mình để xem bạn đã biết những ai trên Messenger.</value></data>
+  <data name="ContactList_Nux_Label_NoMatchingContacts" xml:space="preserve"><value>Bạn sẽ nhìn thấy liên hệ của mình tại đây. Chỉ cần nhấn vào biểu tượng liên hệ để thêm ai đó.</value></data>
+  <data name="Contact_Search_No_Results" xml:space="preserve"><value>Không có kết quả</value></data>
+  <data name="Contacts_Find_Button_Label" xml:space="preserve"><value>tìm liên hệ</value></data>
+  <data name="Contacts_Invite_Button_Label" xml:space="preserve"><value>mời mọi người</value></data>
+  <data name="Conversation_AppBar_AttachPhoto" xml:space="preserve"><value>ảnh</value></data>
+  <data name="Conversation_AppBar_Camera" xml:space="preserve"><value>máy ảnh</value></data>
+  <data name="Conversation_AppBar_ChangePhoto" xml:space="preserve"><value>ảnh</value></data>
+  <data name="Conversation_AppBar_Like" xml:space="preserve"><value>thích</value></data>
+  <data name="Conversation_AppBar_Send" xml:space="preserve"><value>gửi</value></data>
+  <data name="Conversation_AppBar_Text" xml:space="preserve"><value>văn bản</value></data>
+  <data name="Conversation_ContextMenu_RemoveAttachment" xml:space="preserve"><value>xóa ảnh</value></data>
+  <data name="Conversation_MenuItem_Rename" xml:space="preserve"><value>tên</value></data>
+  <data name="CreateGroup_TextBox_Label" xml:space="preserve"><value>Tên nhóm</value></data>
+  <data name="CreateGroup_Title" xml:space="preserve"><value>NHÓM MỚI</value></data>
+  <data name="Device_Location_Services_Enable" xml:space="preserve"><value>Để chia sẻ vị trí trong tin nhắn của bạn, đi tới thiết lập vị trí trên thiết lập điện thoại của bạn.</value></data>
+  <data name="Empty_Conversation_Placeholder_Text" xml:space="preserve"><value>{0} đang ở trên Messenger và sẽ nhận được tin nhắn của bạn ngay lập tức.</value></data>
+  <data name="Empty_Conversation_Placeholder_Text_For_Non_Messenger_User" xml:space="preserve"><value>{0} không ở trên Messenger nhưng sẽ nhận được tin nhắn của bạn trên Facebook.</value></data>
+  <data name="Empty_Conversation_Placeholder_Title" xml:space="preserve"><value>Bắt đầu cuộc trò chuyện</value></data>
+  <data name="Error_Cannot_Attach_File" xml:space="preserve"><value>Không thể đính kèm tệp. Vui lòng thử lại.</value></data>
+  <data name="Error_Cannot_Fetch_Conversations" xml:space="preserve"><value>Rất tiếc, không thể hiển thị tin nhắn ngay bây giờ. Vui lòng thử lại.</value></data>
+  <data name="Error_Cannot_Fetch_Messages" xml:space="preserve"><value>Rất tiếc, không thể hiển thị tin nhắn ngay bây giờ. Vui lòng thử lại.</value></data>
+  <data name="Error_Cannot_Fetch_Sticker_Packs" xml:space="preserve"><value>Rất tiếc, không thể hiển thị bộ nhãn dán ngay bây giờ.</value></data>
+  <data name="Error_Changing_Mute" xml:space="preserve"><value>Không thể tắt tiếng. Vui lòng thử lại.</value></data>
+  <data name="Error_Changing_Unmute" xml:space="preserve"><value>Không thể bật tiếng. Vui lòng thử lại.</value></data>
+  <data name="Error_Gallery_Out_Of_Memory" xml:space="preserve"><value>Chúng tôi không thể đính kèm hình ảnh kích thước này.</value></data>
+  <data name="Error_Invalid_Phone_Number" xml:space="preserve"><value>Vui lòng nhập số điện thoại hợp lệ.</value></data>
+  <data name="Error_Invalid_Phone_Prefix" xml:space="preserve"><value>Vui lòng sử dụng mã quốc gia hợp lệ.</value></data>
+  <data name="Error_Max_File_Attachment_Exceeded" xml:space="preserve"><value>Bạn không thể đính kèm bất kỳ ảnh nào nữa vào tin nhắn này.</value></data>
+  <data name="Error_No_Connection" xml:space="preserve"><value>Không có kết nối internet</value></data>
+  <data name="Error_No_Conversations" xml:space="preserve"><value>Bạn chưa có cuộc trò chuyện nào.</value></data>
+  <data name="ExistingUser_Create_Account_Button" xml:space="preserve"><value>tạo tài khoản mới</value></data>
+  <data name="ExistingUser_Description" xml:space="preserve"><value>Số này khớp với một tài khoản Facebook của {0} {1}.</value></data>
+  <data name="ExistingUser_LoginAs_Button" xml:space="preserve"><value>đăng nhập với tư cách {0}</value></data>
+  <data name="ExistingUser_Title" xml:space="preserve"><value>Đăng nhập bằng Facebook?</value></data>
+  <data name="FetchingDataFromServerFailed" xml:space="preserve"><value>Không thể tải thông tin của bạn. Vui lòng thử lại.</value></data>
+  <data name="FlyTrap_Error_Generic" xml:space="preserve"><value>Không thể hiển thị báo cáo.</value></data>
+  <data name="FlyTrap_Label_Disclaimer" xml:space="preserve"><value>Thông tin về điện thoại của bạn và ứng dụng này sẽ được thêm vào tự động. Để tìm hiểu thêm về cách thông tin được sử dụng, hãy truy cập {0} của chúng tôi</value></data>
+  <data name="FlyTrap_Label_Disclaimer_DataUsePolicyLink" xml:space="preserve"><value>Chính sách sử dụng dữ liệu</value></data>
+  <data name="FlyTrap_Label_Instructions" xml:space="preserve"><value>Vui lòng mô tả việc bạn đang cố gắng thực hiện và lỗi đã xảy ra.</value></data>
+  <data name="FlyTrap_Label_Screenshot" xml:space="preserve"><value>Ảnh chụp màn hình</value></data>
+  <data name="FlyTrap_MenuItem_ReportProblem" xml:space="preserve"><value>báo cáo sự cố</value></data>
+  <data name="FlyTrap_TextboxHint_Problem" xml:space="preserve"><value>mô tả sự cố</value></data>
+  <data name="FlyTrap_Title_ReportProblem" xml:space="preserve"><value>BÁO CÁO SỰ CỐ</value></data>
+  <data name="Forwarding_SearchBox_HintText" xml:space="preserve"><value>tìm kiếm người</value></data>
+  <data name="Forwarding_Title_Label" xml:space="preserve"><value>CHUYỂN TIẾP TIN NHẮN</value></data>
+  <data name="Friends_AppBar_AddContact" xml:space="preserve"><value>thêm liên hệ</value></data>
+  <data name="Global_Notifcation_Off_Until" xml:space="preserve"><value>Tắt đến {0}</value></data>
+  <data name="Global_Notification_Off" xml:space="preserve"><value>Tắt</value></data>
+  <data name="Global_Notification_On" xml:space="preserve"><value>Bật</value></data>
+  <data name="GroupDetailsPage_AppBar_LeaveGroup" xml:space="preserve"><value>rời khỏi nhóm</value></data>
+  <data name="GroupDetailsPage_AppBar_RemoveGroupName" xml:space="preserve"><value>xóa tên</value></data>
+  <data name="GroupDetailsPage_AppBar_RemoveGroupPhoto" xml:space="preserve"><value>xóa ảnh nhóm</value></data>
+  <data name="GroupDetailsPage_Title" xml:space="preserve"><value>nhóm</value></data>
+  <data name="GroupMember_Context_Menu_Remove_Member" xml:space="preserve"><value>xóa</value></data>
+  <data name="GroupTile_Date_ActiveDaysAgo" xml:space="preserve"><value>Hoạt động {0} ngày trước</value></data>
+  <data name="GroupTile_Date_ActiveLastMonth" xml:space="preserve"><value>Hoạt động tháng trước</value></data>
+  <data name="GroupTile_Date_ActiveLastYear" xml:space="preserve"><value>Hoạt động năm ngoái</value></data>
+  <data name="GroupTile_Date_ActiveMonthsAgo" xml:space="preserve"><value>Hoạt động {0} tháng trước</value></data>
+  <data name="GroupTile_Date_ActiveToday" xml:space="preserve"><value>Hoạt động hôm nay</value></data>
+  <data name="GroupTile_Date_ActiveYearsAgo" xml:space="preserve"><value>Hoạt động {0} ngày trước</value></data>
+  <data name="GroupTile_Date_ActiveYesterday" xml:space="preserve"><value>Hoạt động hôm qua</value></data>
+  <data name="Group_AddPeople_Search" xml:space="preserve"><value>Tìm kiếm người</value></data>
+  <data name="Group_AddPeople_Title" xml:space="preserve"><value>THÊM NGƯỜI</value></data>
+  <data name="Group_AddingParticipants_Failed_Message" xml:space="preserve"><value>Không thể thêm người vào nhóm. Vui lòng thử lại.</value></data>
+  <data name="Group_AddingParticipants_Failed_Title" xml:space="preserve"><value>Không thể thêm người</value></data>
+  <data name="Group_AppBar_SelectMany" xml:space="preserve"><value>Chọn nhiều mục</value></data>
+  <data name="Group_RemovingParticipants_Failed_Message" xml:space="preserve"><value>Không thể xóa người. Vui lòng thử lại.</value></data>
+  <data name="Group_RemovingParticipants_Failed_Title" xml:space="preserve"><value>Không thể xóa người.</value></data>
+  <data name="Groups_AppBar_Add" xml:space="preserve"><value>ghim</value></data>
+  <data name="Groups_AppBar_Create" xml:space="preserve"><value>tạo</value></data>
+  <data name="Groups_AppBar_Next" xml:space="preserve"><value>tiếp</value></data>
+  <data name="Groups_NUX_Button_Text" xml:space="preserve"><value>Bắt đầu</value></data>
+  <data name="Groups_NUX_Help_Title" xml:space="preserve"><value>Bây giờ bạn có thể ghim các nhóm để quay lại dễ dàng.</value></data>
+  <data name="Groups_NUX_NoThread_Button_Text" xml:space="preserve"><value>Tạo nhóm mới</value></data>
+  <data name="Groups_NUX_PlaceholderActive_LastWeek" xml:space="preserve"><value>Hoạt động tuần trước</value></data>
+  <data name="Groups_NUX_PlaceholderActive_Yesterday" xml:space="preserve"><value>Hoạt động hôm qua</value></data>
+  <data name="Groups_NUX_PlaceholderFour_Members" xml:space="preserve"><value>Shenwei, Joey</value></data>
+  <data name="Groups_NUX_PlaceholderFour_Title" xml:space="preserve"><value>Đồng nghiệp</value></data>
+  <data name="Groups_NUX_PlaceholderOne_Members" xml:space="preserve"><value>Brandon, Simon</value></data>
+  <data name="Groups_NUX_PlaceholderOne_Title" xml:space="preserve"><value>Bạn cùng phòng</value></data>
+  <data name="Groups_NUX_PlaceholderThree_Members" xml:space="preserve"><value>Mac, Ben</value></data>
+  <data name="Groups_NUX_PlaceholderThree_Title" xml:space="preserve"><value>Nhóm cuối tuần</value></data>
+  <data name="Groups_NUX_PlaceholderTwo_Members" xml:space="preserve"><value>Alli, Adam, Megan, Mike</value></data>
+  <data name="Groups_NUX_PlaceholderTwo_Title" xml:space="preserve"><value>Gia đình</value></data>
+  <data name="Image_Search_Empty_Results" xml:space="preserve"><value>Không tìm thấy hình ảnh.</value></data>
+  <data name="Image_Search_Menu_Item" xml:space="preserve"><value>tìm kiếm hình ảnh</value></data>
+  <data name="Image_Search_Popup_Cancel" xml:space="preserve"><value>Hủy</value></data>
+  <data name="Image_Search_Popup_Message" xml:space="preserve"><value>Bạn đang tìm kiếm gì?</value></data>
+  <data name="Image_Search_Popup_Search" xml:space="preserve"><value>Tìm kiếm</value></data>
+  <data name="Image_Search_Popup_Title" xml:space="preserve"><value>Tìm kiếm hình ảnh</value></data>
+  <data name="Invite_Contact_ToMessenger" xml:space="preserve"><value>Hãy dùng thử Messenger: {0}</value></data>
+  <data name="Location_Menu_Item" xml:space="preserve"><value>gửi vị trí</value></data>
+  <data name="Location_Services_Disabled" xml:space="preserve"><value>Vị trí đã tắt</value></data>
+  <data name="Location_Warning_Body" xml:space="preserve"><value>Mọi người trong cuộc trò chuyện này có thể nhìn thấy vị trí của bạn trên bản đồ. Nhấn để bật và tắt vị trí của bạn.</value></data>
+  <data name="LoginApproval_ResendCode" xml:space="preserve"><value>gửi lại</value></data>
+  <data name="LoginApproval_Title_EnterCode" xml:space="preserve"><value>Vui lòng nhập mã đã được gửi đến điện thoại của bạn.</value></data>
+  <data name="Login_Approval_Security_Code" xml:space="preserve"><value>Mã xác nhận</value></data>
+  <data name="Login_NotOnFacebook" xml:space="preserve"><value>Chưa tham gia Facebook?</value></data>
+  <data name="Login_RecoverPassword" xml:space="preserve"><value>Quên mật khẩu?</value></data>
+  <data name="Login_SigningIn" xml:space="preserve"><value>đang đăng nhập</value></data>
+  <data name="Login_TextboxHint_EmailOrPhone" xml:space="preserve"><value>Email hoặc điện thoại</value></data>
+  <data name="Login_TextboxHint_Password" xml:space="preserve"><value>Mật khẩu</value></data>
+  <data name="Login_Title_SignIn" xml:space="preserve"><value>Đăng nhập bằng Facebook</value></data>
+  <data name="Login_Title_Welcome" xml:space="preserve"><value>Chào mừng bạn đến với Messenger</value></data>
+  <data name="Login_With_Facebook" xml:space="preserve"><value>Đăng nhập bằng Facebook</value></data>
+  <data name="MainPage_Active_Chat_Popup" xml:space="preserve"><value>TRÒ CHUYỆN</value></data>
+  <data name="MainPage_Active_Disable_Chat" xml:space="preserve"><value>tắt trò chuyện</value></data>
+  <data name="MainPage_Active_Enable_Chat" xml:space="preserve"><value>bật trò chuyện</value></data>
+  <data name="MainPage_AppBar_Mute_Button" xml:space="preserve"><value>tắt</value></data>
+  <data name="MainPage_AppBar_UnMute_Button" xml:space="preserve"><value>bật tiếng</value></data>
+  <data name="MainPage_AppMenu_OtherFolder" xml:space="preserve"><value>thư mục khác</value></data>
+  <data name="MainPage_AppMenu_Settings" xml:space="preserve"><value>cài đặt</value></data>
+  <data name="MainPage_Pivot_Title_Active" xml:space="preserve"><value>đang hoạt động</value></data>
+  <data name="MainPage_Pivot_Title_Friends" xml:space="preserve"><value>messenger</value></data>
+  <data name="MainPage_Pivot_Title_Groups" xml:space="preserve"><value>nhóm</value></data>
+  <data name="MainPage_Pivot_Title_Recent_Threads" xml:space="preserve"><value>gần đây</value></data>
+  <data name="Matching_Contact_NotFound_Message" xml:space="preserve"><value>Không thể khớp {0} với người nào trên Messenger</value></data>
+  <data name="MessageBox_Description_ArchiveThread" xml:space="preserve"><value>Để xem cuộc trò chuyện đã lưu trữ, bạn cần phải đăng nhập vào trang web Facebook.</value></data>
+  <data name="MessageBox_Description_DeleteThread" xml:space="preserve"><value>Thao tác này sẽ xóa vĩnh viễn cuộc trò chuyện.</value></data>
+  <data name="MessageBox_Description_FlyTrapSuccess" xml:space="preserve"><value>Cảm ơn phản hồi của bạn!</value></data>
+  <data name="MessageBox_Description_LeaveThread" xml:space="preserve"><value>Nếu bạn rời cuộc trò chuyện, bạn sẽ không nhận được bất kỳ tin nhắn mới nào.</value></data>
+  <data name="MessageBox_Description_SpamThread" xml:space="preserve"><value>Khi bạn đánh dấu nội dung nào đó là spam, bạn sẽ không còn thấy nội dung đó trong tin nhắn gần đây của bạn nữa.</value></data>
+  <data name="MessageBox_Label_ArchiveThread" xml:space="preserve"><value>lưu trữ cuộc trò chuyện này?</value></data>
+  <data name="MessageBox_Label_AuthenticateWithBrowser" xml:space="preserve"><value>Mở một trình duyệt web để kết nối</value></data>
+  <data name="MessageBox_Label_BypassLogin2Fac" xml:space="preserve"><value>Bạn đã bật phê duyệt đăng nhập. Vui lòng nhập mật khẩu của bạn để tiếp tục.</value></data>
+  <data name="MessageBox_Label_BypassLoginFail" xml:space="preserve"><value>Không thể xác nhận số điện thoại. Vui lòng thử lại.</value></data>
+  <data name="MessageBox_Label_ClearThreadPhotoFailed" xml:space="preserve"><value>Không thể xóa ảnh nhóm.</value></data>
+  <data name="MessageBox_Label_ConfirmPhoneNumberFailed" xml:space="preserve"><value>Không thể xác nhận số điện thoại của bạn</value></data>
+  <data name="MessageBox_Label_ConfirmationCodeInvalid" xml:space="preserve"><value>Mã xác nhận không hợp lệ.</value></data>
+  <data name="MessageBox_Label_CreateGroupFailed" xml:space="preserve"><value>Không thể tạo nhóm</value></data>
+  <data name="MessageBox_Label_DeleteThread" xml:space="preserve"><value>Xóa cuộc trò chuyện?</value></data>
+  <data name="MessageBox_Label_ForwardingFailed" xml:space="preserve"><value>Không thể chuyển tiếp tin nhắn này tới tất cả người nhận.</value></data>
+  <data name="MessageBox_Label_LeaveThread" xml:space="preserve"><value>Rời khỏi nhóm?</value></data>
+  <data name="MessageBox_Label_LoginFailed" xml:space="preserve"><value>Không thể đăng nhập ngay bây giờ.</value></data>
+  <data name="MessageBox_Label_NamingConversation_Error" xml:space="preserve"><value>Không thể đổi tên cuộc trò chuyện.</value></data>
+  <data name="MessageBox_Label_NoInternet" xml:space="preserve"><value>Không có kết nối internet</value></data>
+  <data name="MessageBox_Label_PinGroupFailed" xml:space="preserve"><value>Không thể ghim nhóm.</value></data>
+  <data name="MessageBox_Label_SetThreadPhotoFailed" xml:space="preserve"><value>Không thể đặt ảnh nhóm.</value></data>
+  <data name="MessageBox_Label_SpamThread" xml:space="preserve"><value>đánh dấu là spam?</value></data>
+  <data name="MessageBox_Label_UpdatePhoneNumberFailed" xml:space="preserve"><value>Không thể cập nhật số điện thoại.</value></data>
+  <data name="MessageBox_Label_UploadProfilePic_Failed" xml:space="preserve"><value>Không thể đặt ảnh đại diện.</value></data>
+  <data name="MessageBox_Popup_Cancel" xml:space="preserve"><value>Hủy</value></data>
+  <data name="MessageBox_Title_AddContactFailed" xml:space="preserve"><value>Không thể tìm liên hệ ngay bây giờ.</value></data>
+  <data name="MessageBox_Title_FlyTrapSuccess" xml:space="preserve"><value>Đã gửi báo cáo</value></data>
+  <data name="MessageBox_Title_LoginFailed" xml:space="preserve"><value>Không thể đăng nhập ngay bây giờ.</value></data>
+  <data name="MessageComposer_EmptyGallery_Text" xml:space="preserve"><value>Không có ảnh nào trong thư viện của bạn.</value></data>
+  <data name="MessageDetails_Error_Unexpected" xml:space="preserve"><value>Rất tiếc, không thể hiển thị chi tiết về tin nhắn lúc này. Vui lòng thử lại.</value></data>
+  <data name="MessageDetails_Label_SeenBy" xml:space="preserve"><value>Được xem bởi:</value></data>
+  <data name="MessageSnippetAudioClipLoggedInUser" xml:space="preserve"><value>Bạn đã gửi một clip thoại.</value></data>
+  <data name="MessageSnippetAudioClipOtherUser" xml:space="preserve"><value>{0} đã gửi một clip thoại.</value></data>
+  <data name="MessageSnippetGenericLoggedInUser" xml:space="preserve"><value>Bạn đã gửi một tin nhắn.</value></data>
+  <data name="MessageSnippetGenericOtherUser" xml:space="preserve"><value>{0} đã gửi một tin nhắn.</value></data>
+  <data name="MessageSnippetPhotoLoggedInUser" xml:space="preserve"><value>Bạn đã gửi một hình ảnh.</value></data>
+  <data name="MessageSnippetPhotoOtherUser" xml:space="preserve"><value>{0} đã gửi một hình ảnh.</value></data>
+  <data name="MessageSnippetStickerLoggedInUser" xml:space="preserve"><value>Bạn đã gửi một nhãn dán.</value></data>
+  <data name="MessageSnippetStickerOtherUser" xml:space="preserve"><value>{0} đã gửi một nhãn dán.</value></data>
+  <data name="MessageSnippetVideoLoggedInUser" xml:space="preserve"><value>Bạn đã gửi một video.</value></data>
+  <data name="MessageSnippetVideoOtherUser" xml:space="preserve"><value>{0} đã gửi một video.</value></data>
+  <data name="MessageSnippetWhenSenderIsTheLoggedInUser" xml:space="preserve"><value>Bạn</value></data>
+  <data name="MessageStatus_Location_City" xml:space="preserve"><value>Được gửi từ {0}</value></data>
+  <data name="MessageStatus_Location_CityCountry" xml:space="preserve"><value>Được gửi từ {0}, {1}</value></data>
+  <data name="MessageStatus_Location_CityState" xml:space="preserve"><value>Được gửi từ {0}, {1}</value></data>
+  <data name="MessageStatus_Location_DistrictCity" xml:space="preserve"><value>Được gửi từ {0}, {1}</value></data>
+  <data name="MessageStatus_Origin_Messenger" xml:space="preserve"><value>Được gửi từ Messenger</value></data>
+  <data name="MessageStatus_Origin_Mobile" xml:space="preserve"><value>Được gửi từ điện thoại di động</value></data>
+  <data name="MessageStatus_Origin_Web" xml:space="preserve"><value>Được gửi từ web</value></data>
+  <data name="MessageStatus_SeenBy_1" xml:space="preserve"><value>{0} đã xem</value></data>
+  <data name="MessageStatus_SeenBy_2" xml:space="preserve"><value>{0} và {1} đã xem</value></data>
+  <data name="MessageStatus_SeenBy_3" xml:space="preserve"><value>{0}, {1} và {2} đã xem</value></data>
+  <data name="MessageStatus_SeenBy_4" xml:space="preserve"><value>{0}, {1}, {2} và {3} đã xem</value></data>
+  <data name="MessageStatus_SeenBy_Everyone" xml:space="preserve"><value>Mọi người đã xem</value></data>
+  <data name="MessageStatus_SeenBy_Others" xml:space="preserve"><value>{0}, {1}, {2} và {3} người khác đã xem</value></data>
+  <data name="MessageStatus_Seen_Timestamp" xml:space="preserve"><value>Đã xem {0}</value></data>
+  <data name="Message_Delete_Caption" xml:space="preserve"><value>Xóa Tin nhắn</value></data>
+  <data name="Message_Delete_Text" xml:space="preserve"><value>Bạn có muốn xóa vĩnh viễn tin nhắn này không?</value></data>
+  <data name="Message_Sending_Failed" xml:space="preserve"><value>Không thể gửi tin nhắn.</value></data>
+  <data name="Message_Sending_Failed_App_Exited_Description" xml:space="preserve"><value>Ứng dụng bị đóng trước khi tin nhắn của bạn được gửi. Vui lòng thử gửi lại sau.</value></data>
+  <data name="Message_Sending_Failed_Permission_Description" xml:space="preserve"><value>Rất tiếc, bạn không thể gửi tin nhắn cho người này.</value></data>
+  <data name="Messages_Active_1m_Ago" xml:space="preserve"><value>online 1 phút trước</value></data>
+  <data name="Messages_Active_Now" xml:space="preserve"><value>đang online</value></data>
+  <data name="Messages_Active_Xd_Ago" xml:space="preserve"><value>online {0} ngày trước</value></data>
+  <data name="Messages_Active_Xh_Ago" xml:space="preserve"><value>online {0} giờ trước</value></data>
+  <data name="Messages_Active_Xm_Ago" xml:space="preserve"><value>online {0} phút trước</value></data>
+  <data name="Messages_AppBar_Send_Sticker" xml:space="preserve"><value>nhãn dán</value></data>
+  <data name="Messages_ContextMenu_Copy" xml:space="preserve"><value>sao chép văn bản</value></data>
+  <data name="Messages_ContextMenu_Delete" xml:space="preserve"><value>xóa</value></data>
+  <data name="Messages_ContextMenu_Forward" xml:space="preserve"><value>chuyển tiếp</value></data>
+  <data name="Messages_ContextMenu_Retry" xml:space="preserve"><value>thử lại</value></data>
+  <data name="Messages_Context_Menu_View_Details" xml:space="preserve"><value>xem chi tiết</value></data>
+  <data name="Messages_Group_Message" xml:space="preserve"><value>NHÓM</value></data>
+  <data name="Messages_Hint_Text" xml:space="preserve"><value>nhập tin nhắn</value></data>
+  <data name="Messages_On_Facebook" xml:space="preserve"><value>Facebook</value></data>
+  <data name="Messages_On_Messenger" xml:space="preserve"><value>Messenger</value></data>
+  <data name="Messages_On_Mobile" xml:space="preserve"><value>trên điện thoại di động</value></data>
+  <data name="Messages_Refreshing_Failed_StateIndicator" xml:space="preserve"><value>Không thể cập nhật, vui lòng kiểm tra kết nối</value></data>
+  <data name="Messages_Refreshing_StateIndicator" xml:space="preserve"><value>Đang làm mới...</value></data>
+  <data name="Messages_Refreshing_Success_Stateindicator" xml:space="preserve"><value>Đã cập nhật</value></data>
+  <data name="Messages_Share_Not_Viewable" xml:space="preserve"><value>Nội dung này có thể đã bị xóa hoặc bạn không có quyền xem nội dung.</value></data>
+  <data name="Mute_Conversation_For_An_Hour" xml:space="preserve"><value>tắt trong vòng 1 giờ</value></data>
+  <data name="Mute_Conversation_Forever" xml:space="preserve"><value>tắt</value></data>
+  <data name="Mute_Conversation_Menu_Item" xml:space="preserve"><value>tắt</value></data>
+  <data name="Mute_Conversation_Until_8AM" xml:space="preserve"><value>tắt cho đến 8 giờ sáng</value></data>
+  <data name="NameConversation_Menu_Clear" xml:space="preserve"><value>xóa tên</value></data>
+  <data name="NameConversation_Title" xml:space="preserve"><value>ĐẶT TÊN NHÓM</value></data>
+  <data name="NetworkStatus_Banner_Connected" xml:space="preserve"><value>Đã kết nối</value></data>
+  <data name="NetworkStatus_Banner_Connecting" xml:space="preserve"><value>Đang kết nối...</value></data>
+  <data name="NetworkStatus_Banner_Disconnected" xml:space="preserve"><value>Đang đợi mạng</value></data>
+  <data name="NetworkStatus_Banner_No_Internet" xml:space="preserve"><value>Không có kết nối Internet</value></data>
+  <data name="NetworkStatus_Banner_Syncing" xml:space="preserve"><value>Đang đồng bộ hóa...</value></data>
+  <data name="NetworkStatus_Banner_UpToDate" xml:space="preserve"><value>Cập nhật</value></data>
+  <data name="NewContacts_Header_FoundContacts" xml:space="preserve"><value>{0} LIÊN HỆ MỚI</value></data>
+  <data name="Notifications_Turn_Off_For_An_Hour" xml:space="preserve"><value>tắt trong 1 giờ</value></data>
+  <data name="Notifications_Turn_On" xml:space="preserve"><value>bật</value></data>
+  <data name="Notifications_Turn_Until_8AM" xml:space="preserve"><value>tắt cho đến 8 giờ sáng</value></data>
+  <data name="Nux_Title_OnMessenger" xml:space="preserve"><value>Bạn đang dùng Messenger!</value></data>
+  <data name="Nux_Title_OnMessenger_Message" xml:space="preserve"><value>Bạn có thể liên hệ ngay lập tức với bất kỳ ai có biểu tượng Messenger màu xanh.</value></data>
+  <data name="People_AppBar_AddContact" xml:space="preserve"><value>thêm người</value></data>
+  <data name="People_AppBar_Search" xml:space="preserve"><value>tìm kiếm</value></data>
+  <data name="PhoneNumber_Box_Title" xml:space="preserve"><value>Mã quốc gia và số điện thoại</value></data>
+  <data name="PhoneNumber_ListpickerLabel_CountryCode" xml:space="preserve"><value>CHỌN QUỐC GIA</value></data>
+  <data name="PhoneNumber_Registration_Welcome_Message" xml:space="preserve"><value>Chỉ cần nhập số điện thoại của bạn để bắt đầu.</value></data>
+  <data name="PhoneNumber_Select_Country" xml:space="preserve"><value>Quốc gia</value></data>
+  <data name="PhotoAttachment_IndexDisplay_Label" xml:space="preserve"><value>{0} / {1} ảnh</value></data>
+  <data name="PhotoEdit_AppBar_Draw" xml:space="preserve"><value>vẽ</value></data>
+  <data name="PhotoEdit_AppBar_Send" xml:space="preserve"><value>gửi</value></data>
+  <data name="PhotoEdit_AppBar_Undo" xml:space="preserve"><value>hoàn tác</value></data>
+  <data name="PhotoEdit_AppBar_Write" xml:space="preserve"><value>viết</value></data>
+  <data name="PhotoEdit_Nux_Text" xml:space="preserve"><value>Nhấn vào ảnh để thêm văn bản</value></data>
+  <data name="Photos_SavePhoto_Error_StateIndicator" xml:space="preserve"><value>Không thể lưu ảnh.</value></data>
+  <data name="Photos_SavePhoto_MenuItem" xml:space="preserve"><value>lưu ảnh</value></data>
+  <data name="Photos_SavePhoto_Saving_StateIndicator" xml:space="preserve"><value>Đang lưu ảnh...</value></data>
+  <data name="Photos_SavePhoto_Success_StateIndicator" xml:space="preserve"><value>Đã lưu ảnh</value></data>
+  <data name="Power_Saver_Mode_Warning" xml:space="preserve"><value>Bạn đang ở chế độ Tiết kiệm pin, vì vậy bạn sẽ không nhận được thông báo.</value></data>
+  <data name="ProfilePic_Confirmation_Title" xml:space="preserve"><value>Trông đẹp chứ?</value></data>
+  <data name="ProfilePic_Label_Camera_Button" xml:space="preserve"><value>Chụp ảnh</value></data>
+  <data name="ProfilePic_Label_Gallery_Button" xml:space="preserve"><value>Chọn từ album</value></data>
+  <data name="ProfilePic_Subtitle_Text" xml:space="preserve"><value>Đặt một ảnh để mọi người có thể nhận ra bạn.</value></data>
+  <data name="ProfilePic_Title_Text" xml:space="preserve"><value>Bạn muốn thêm ảnh?</value></data>
+  <data name="RecentThreadList_Nux_EmptyList_Message" xml:space="preserve"><value>Sau khi bạn bắt đầu trò chuyện, tất cả tin nhắn của bạn sẽ ở đây.</value></data>
+  <data name="Recent_ContextMenu_Archive" xml:space="preserve"><value>lưu trữ</value></data>
+  <data name="Recent_ContextMenu_Delete" xml:space="preserve"><value>xóa</value></data>
+  <data name="Recent_ContextMenu_Leave" xml:space="preserve"><value>rời khỏi nhóm</value></data>
+  <data name="Recent_ContextMenu_MarkUnread" xml:space="preserve"><value>đánh dấu là chưa đọc</value></data>
+  <data name="Recent_ContextMenu_Spam" xml:space="preserve"><value>đánh dấu là spam</value></data>
+  <data name="Registration_TextboxHint_FirstName" xml:space="preserve"><value>Tên</value></data>
+  <data name="Registration_TextboxHint_LastName" xml:space="preserve"><value>Họ</value></data>
+  <data name="Registration_Title2" xml:space="preserve"><value>Sử dụng tên thật của bạn để mọi người biết đó là bạn.</value></data>
+  <data name="ResourceLanguage" xml:space="preserve"><value>vi-VN</value></data>
+  <data name="Session_Expired_Caption" xml:space="preserve"><value>Vui lòng đăng nhập lại để sử dụng Messenger.</value></data>
+  <data name="Session_Expired_Title" xml:space="preserve"><value>phiên đã kết thúc</value></data>
+  <data name="SettingsPage_Title" xml:space="preserve"><value>cài đặt</value></data>
+  <data name="Settings_Help" xml:space="preserve"><value>Trợ giúp</value></data>
+  <data name="Settings_Help_Title" xml:space="preserve"><value>Thông tin</value></data>
+  <data name="Settings_In_App_Audio_Title" xml:space="preserve"><value>Âm thanh trong ứng dụng</value></data>
+  <data name="Settings_In_App_Contact_Sync_Title" xml:space="preserve"><value>Đồng bộ danh bạ</value></data>
+  <data name="Settings_In_App_Vibration_Title" xml:space="preserve"><value>Rung trong ứng dụng</value></data>
+  <data name="Settings_Licenses" xml:space="preserve"><value>Giấy phép</value></data>
+  <data name="Settings_Location_Title" xml:space="preserve"><value>Vị trí</value></data>
+  <data name="Settings_Notification_Title" xml:space="preserve"><value>Thông báo</value></data>
+  <data name="Settings_PhoneNumber_VerificationNeeded" xml:space="preserve"><value>(Xác nhận số điện thoại)</value></data>
+  <data name="Settings_Privacy_And_Terms" xml:space="preserve"><value>Quyền riêng tư và các Điều khoản</value></data>
+  <data name="Settings_Remove_Contacts_Body" xml:space="preserve"><value>Bất kỳ liên hệ nào bạn đã đồng bộ hóa trước đó sẽ bị xóa.</value></data>
+  <data name="Settings_Remove_Contacts_Confirm" xml:space="preserve"><value>Xóa</value></data>
+  <data name="Settings_Remove_Contacts_Title" xml:space="preserve"><value>Xóa danh bạ?</value></data>
+  <data name="Settings_SendOnEnter_Title" xml:space="preserve"><value>Gửi khi nhấn Enter</value></data>
+  <data name="Settings_Sync_Contacts_Body" xml:space="preserve"><value>Bắt đầu đồng bộ? Danh bạ của bạn sẽ được đồng bộ liên tục với máy chủ của chúng tôi.</value></data>
+  <data name="Settings_Sync_Contacts_Confirmation" xml:space="preserve"><value>Đồng bộ hóa</value></data>
+  <data name="Settings_Sync_Contacts_Title" xml:space="preserve"><value>Đồng bộ danh bạ</value></data>
+  <data name="Settings_Version_Number" xml:space="preserve"><value>Phiên bản {0}</value></data>
+  <data name="Start_Group_Menu_Item" xml:space="preserve"><value>tạo nhóm với {0}</value></data>
+  <data name="Sticker_Drawer_RecentStickers" xml:space="preserve"><value>Nhãn dãn gần đây</value></data>
+  <data name="Sticker_Pack_Download" xml:space="preserve"><value>tải xuống</value></data>
+  <data name="Sticker_Pack_Download_Failed" xml:space="preserve"><value>Tải xuống gói nhãn dán không thành công</value></data>
+  <data name="Sticker_Pack_Downloaded" xml:space="preserve"><value>đã tải xuống</value></data>
+  <data name="Sticker_Pack_Downloading" xml:space="preserve"><value>đang tải xuống</value></data>
+  <data name="Sticker_Pack_Share" xml:space="preserve"><value>chia sẻ</value></data>
+  <data name="Sticker_Store_ContextMenu_Remove" xml:space="preserve"><value>xóa</value></data>
+  <data name="Sticker_Store_Menu_Item" xml:space="preserve"><value>cửa hàng nhãn dán</value></data>
+  <data name="Sticker_Store_Remove_Error" xml:space="preserve"><value>Không thể xóa bộ nhãn dán.</value></data>
+  <data name="Sticker_Store_Tab_All" xml:space="preserve"><value>tất cả</value></data>
+  <data name="Sticker_Store_Tab_Featured" xml:space="preserve"><value>nổi bật</value></data>
+  <data name="Sticker_Store_Tab_Owned" xml:space="preserve"><value>của bạn</value></data>
+  <data name="Sticker_Store_Title" xml:space="preserve"><value>CỬA HÀNG NHÃN DÁN</value></data>
+  <data name="SuggestedPins_Pinning_StateIndicator" xml:space="preserve"><value>Đang ghim...</value></data>
+  <data name="SuggestedPins_SearchBox_Hint" xml:space="preserve"><value>tìm kiếm nhóm</value></data>
+  <data name="SuggestedPins_Title_PinGroup" xml:space="preserve"><value>GHIM NHÓM</value></data>
+  <data name="SyncContact_Button_LearnMore" xml:space="preserve"><value>Tìm hiểu thêm</value></data>
+  <data name="SyncContact_ErrorMessage_UnableToToggle" xml:space="preserve"><value>Không thể thay đổi cài đặt, vui lòng kiểm tra kết nối Internet và thử lại.</value></data>
+  <data name="SyncContact_Subtitle" xml:space="preserve"><value>Đồng bộ danh bạ để xem ai khác đang sử dụng Messenger. Danh bạ sẽ được đồng bộ và cập nhật liên tục.</value></data>
+  <data name="SyncContact_Title" xml:space="preserve"><value>Gửi tin nhắn văn bản cho bất kỳ ai trong điện thoại của bạn</value></data>
+  <data name="SyncContacts_MessageBox_LinkLabel" xml:space="preserve"><value>Tìm hiểu thêm</value></data>
+  <data name="Thread_AppBar_Details" xml:space="preserve"><value>chi tiết</value></data>
+  <data name="Thread_AppBar_View_Members" xml:space="preserve"><value>xem mọi người</value></data>
+  <data name="Thread_Name_NoParticipant_Title" xml:space="preserve"><value>không có người nào</value></data>
+  <data name="Thread_UnnamedUserPlaceholder_Title" xml:space="preserve"><value>Người trên Facebook</value></data>
+  <data name="Threads_AppBar_Compose" xml:space="preserve"><value>mới</value></data>
+  <data name="Threads_AppBar_Refresh" xml:space="preserve"><value>làm mới</value></data>
+  <data name="UnMute_Conversation_Menu_Item" xml:space="preserve"><value>bật tiếng</value></data>
+  <data name="Unsent_Message_Warning" xml:space="preserve"><value>Rời khỏi Messenger? Bạn chưa gửi tin nhắn của mình.</value></data>
+  <data name="Verify_PhoneNumber_Box_Title" xml:space="preserve"><value>Số điện thoại</value></data>
+  <data name="VideoRecorder_HelpText_Cancel" xml:space="preserve"><value>Hãy đi tới xóa và bắt đầu lại</value></data>
+  <data name="VideoRecorder_HelpText_HoldToSend" xml:space="preserve"><value>Giữ đối với video, nhấn đối với ảnh</value></data>
+  <data name="VideoRecorder_HelpText_Send" xml:space="preserve"><value>Để hủy, hãy kéo ngón tay bạn khỏi Gửi</value></data>
+  <data name="View_Timeline_Menu_Item" xml:space="preserve"><value>dòng thời gian</value></data>
+  <data name="Voice_Clip_Hold_Instruction" xml:space="preserve"><value>Nhấn và giữ để ghi và gửi âm thanh</value></data>
+  <data name="Voice_Clip_Length_Limit" xml:space="preserve"><value>Đã đạt tới giới hạn thời gian, nhả để gửi</value></data>
+  <data name="Voice_Clip_Menu_Item" xml:space="preserve"><value>gửi clip âm thanh</value></data>
+  <data name="Voice_Clip_NUX_Instruction" xml:space="preserve"><value>Nhả để gửi, vuốt ra ngoài để hủy</value></data>
+  <data name="Voice_Clip_Record" xml:space="preserve"><value>ghi</value></data>
+  <data name="Voice_Clip_Release_Cancel" xml:space="preserve"><value>Nhả để hủy ghi âm</value></data>
+  <data name="orca_neue_nux_add_phone_body1_searchable_all_not_verified" xml:space="preserve"><value>Mọi người có thể thêm bạn như một liên hệ nếu họ đã có số điện thoại của bạn, nhưng chỉ bạn mới có thể nhìn thấy số này trên Facebook.</value></data>
+  <data name="orca_neue_nux_add_phone_body1_searchable_all_visible_all" xml:space="preserve"><value>Mọi người có thể thêm bạn như một liên hệ nếu họ đã có số điện thoại của bạn.</value></data>
+  <data name="orca_neue_nux_add_phone_body1_searchable_all_visible_custom" xml:space="preserve"><value>Mọi người có thể thêm bạn như một liên hệ nếu họ đã có số điện thoại của bạn, nhưng điều này sẽ không thay đổi người có thể nhìn thấy số của bạn trên Facebook.</value></data>
+  <data name="orca_neue_nux_add_phone_body1_searchable_all_visible_friends" xml:space="preserve"><value>Mọi người có thể thêm bạn như một liên hệ nếu họ đã có số điện thoại của bạn, nhưng chỉ bạn bè mới có thể nhìn thấy số này trên Facebook.</value></data>
+  <data name="orca_neue_nux_add_phone_body1_searchable_all_visible_self" xml:space="preserve"><value>Mọi người có thể thêm bạn như một liên hệ nếu họ đã có số điện thoại của bạn, nhưng chỉ bạn mới có thể nhìn thấy số này trên Facebook.</value></data>
+  <data name="orca_neue_nux_add_phone_body1_searchable_fof" xml:space="preserve"><value>Các bạn không cần phải là bạn bè trên Facebook để liên hệ, vì vậy thiết lập Facebook của bạn sẽ mở rộng để cho phép bất kỳ ai có số của bạn tìm kiếm bạn theo số đó.</value></data>
+  <data name="orca_neue_nux_add_phone_body2_not_verified" xml:space="preserve"><value>Chỉ bạn có thể nhìn thấy số này trên Facebook.</value></data>
+  <data name="orca_neue_nux_add_phone_body2_visible_custom" xml:space="preserve"><value>Điều này sẽ không thay đổi người có thể nhìn thấy số của bạn trên Facebook.</value></data>
+  <data name="orca_neue_nux_add_phone_body2_visible_friends" xml:space="preserve"><value>Chỉ bạn bè có thể nhìn thấy số này trên Facebook.</value></data>
+  <data name="orca_neue_nux_add_phone_body2_visible_self" xml:space="preserve"><value>Chỉ bạn có thể nhìn thấy số này trên Facebook.</value></data>
+  <data name="orca_neue_nux_add_phone_title_no_verified_number" xml:space="preserve"><value>Mọi người có thể dùng số điện thoại nào để liên lạc với bạn?</value></data>
+  <data name="orca_neue_nux_add_phone_title_verified_long" xml:space="preserve"><value>Đây có phải là số mà mọi người có thể dùng để liên hệ với bạn không?</value></data>
+  <data name="orca_neue_nux_add_phone_title_verified_short" xml:space="preserve"><value>Đây có phải là số điện thoại đúng của bạn không?</value></data>
+</root>

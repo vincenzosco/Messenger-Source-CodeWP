@@ -1,0 +1,395 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Active_AppBar_Chat" xml:space="preserve"><value>keskustelu</value></data>
+  <data name="AddContact_Contact_Already_Exists" xml:space="preserve"><value>Puhelinnumero on jo lisätty yhteystietoihin.</value></data>
+  <data name="AddContact_FBUser_Already_Exists" xml:space="preserve"><value>{0} on jo lisätty yhteystietoihin.</value></data>
+  <data name="AddContact_Invite_Button" xml:space="preserve"><value>kutsu</value></data>
+  <data name="AddContact_MatchedExistingUser_Label" xml:space="preserve"><value>{0} on jo Messengerin yhteystiedoissa</value></data>
+  <data name="AddContact_MatchingUser_Label" xml:space="preserve"><value>{0} lisättiin Messengerin yhteystietoihin</value></data>
+  <data name="AddContact_Message_Button" xml:space="preserve"><value>lähetä viesti käyttäjälle {0}</value></data>
+  <data name="AddContact_PhoneNumber_Description" xml:space="preserve"><value>Etsi ihmisiä Messengeristä puhelinnumeron avulla.</value></data>
+  <data name="AddContact_PhoneNumber_Title" xml:space="preserve"><value>LISÄÄ YHTEYSTIETO</value></data>
+  <data name="AddContact_Remove_Contact_Warning" xml:space="preserve"><value>{0} poistetaan Messengerin yhteystiedoista.</value></data>
+  <data name="AddContact_Remove_MessageBox_Title" xml:space="preserve"><value>Poista yhteystieto</value></data>
+  <data name="AddPhotos_Menu_ChooseFromAlbum" xml:space="preserve"><value>Valitse albumeista</value></data>
+  <data name="AddPhotos_Menu_RemovePhotos" xml:space="preserve"><value>Poista kuva</value></data>
+  <data name="AddPhotos_Menu_TakePhoto" xml:space="preserve"><value>Ota kuva</value></data>
+  <data name="AddPhotos_Title_EditProfilePicture" xml:space="preserve"><value>MUOKKAA PROFIILIKUVAA</value></data>
+  <data name="AddPhotos_Title_SetGroupPhoto" xml:space="preserve"><value>MÄÄRITÄ RYHMÄN KUVA</value></data>
+  <data name="Add_Phone_Number_Label" xml:space="preserve"><value>Lisää puhelinnumero</value></data>
+  <data name="AppBar_Cancel" xml:space="preserve"><value>peruuta</value></data>
+  <data name="AppBar_No" xml:space="preserve"><value>ei</value></data>
+  <data name="AppBar_Ok" xml:space="preserve"><value>ok</value></data>
+  <data name="AppBar_Remove" xml:space="preserve"><value>poista</value></data>
+  <data name="AppBar_Undo" xml:space="preserve"><value>kumoa</value></data>
+  <data name="AppBar_Yes" xml:space="preserve"><value>kyllä</value></data>
+  <data name="AppUpdate_Description" xml:space="preserve"><value>Hanki uudet toiminnot ja parannukset päivittämällä Messenger.</value></data>
+  <data name="AppUpdate_NotNowButton" xml:space="preserve"><value>Ei nyt</value></data>
+  <data name="AppUpdate_Title" xml:space="preserve"><value>Messengerin päivitys on saatavilla</value></data>
+  <data name="AppUpdate_UpdateAppButton" xml:space="preserve"><value>Päivitä</value></data>
+  <data name="App_Location_Services_Enable" xml:space="preserve"><value>Siirry Messengerin asetuksiin, jos haluat jakaa sijaintisi viesteissä.</value></data>
+  <data name="App_Quit_Caption" xml:space="preserve"><value>Poistu Messengeristä</value></data>
+  <data name="Attachments_AppBar_Next" xml:space="preserve"><value>seuraava</value></data>
+  <data name="Attachments_AppBar_Previous" xml:space="preserve"><value>edellinen</value></data>
+  <data name="Attachments_AppBar_Skip" xml:space="preserve"><value>ohita</value></data>
+  <data name="BackgroundToast_LeavingApp_Title" xml:space="preserve"><value>Messenger</value></data>
+  <data name="BackgroundToast_LeavingApp_Warning" xml:space="preserve"><value>Kaikkia viestejä ei lähetetty ennen Messengerin sulkemista. Avaa Messenger ja varmista, että viestit lähetettiin.</value></data>
+  <data name="ButtonLabelRetry" xml:space="preserve"><value>Yritä uudelleen</value></data>
+  <data name="Button_Continue" xml:space="preserve"><value>Jatka</value></data>
+  <data name="CanonicalThreadDetailsPage_Start_Group" xml:space="preserve"><value>luo ryhmä</value></data>
+  <data name="CanonicalThreadDetailsPage_Title" xml:space="preserve"><value>tiedot</value></data>
+  <data name="Chat_Is_Off" xml:space="preserve"><value>Keskustelu on poissa käytöstä</value></data>
+  <data name="Chat_Is_Off_Details_Label" xml:space="preserve"><value>Näet edelleen kaikki viestisi, vaikka keskustelu olisikin poissa käytöstä. Jos haluat nähdä, ketkä ovat aktiviisia Facebookissa, ota keskustelu käyttöön.</value></data>
+  <data name="Client_Type_Mobile" xml:space="preserve"><value>Mobiili</value></data>
+  <data name="Client_Type_Web" xml:space="preserve"><value>Internet</value></data>
+  <data name="Composer_Exit_Warning" xml:space="preserve"><value>Peruutetaanko viesti?</value></data>
+  <data name="Composer_Groups_Search_Header" xml:space="preserve"><value>RYHMÄT</value></data>
+  <data name="Composer_More_People_Search_Header" xml:space="preserve"><value>LISÄÄ IHMISIÄ</value></data>
+  <data name="Composer_SendingMessage" xml:space="preserve"><value>lähetetään viestiä…</value></data>
+  <data name="Composer_To" xml:space="preserve"><value>Vastaanottajat:</value></data>
+  <data name="Confirm_Phone_Number_Label" xml:space="preserve"><value>Vahvista numero</value></data>
+  <data name="ContactCard_MenuLabel_CreateGroup" xml:space="preserve"><value>luo ryhmä henkilön {0} kanssa</value></data>
+  <data name="ContactCard_MenuLabel_RemoveContact" xml:space="preserve"><value>poista yhteystieto</value></data>
+  <data name="ContactCard_MenuLabel_SendMessage" xml:space="preserve"><value>lähetä viesti käyttäjälle {0}</value></data>
+  <data name="ContactList_Header_ContactsFound" xml:space="preserve"><value>Löytyi {0} yhteystietoa</value></data>
+  <data name="ContactList_Header_Failed" xml:space="preserve"><value>Yhteystietojen lataus epäonnistui. Yritetäänkö uudelleen?</value></data>
+  <data name="ContactList_Header_FindContacts" xml:space="preserve"><value>etsi yhteystietoja</value></data>
+  <data name="ContactList_Header_ShowAll" xml:space="preserve"><value>näytä kaikki</value></data>
+  <data name="ContactList_Header_SyncingContacts" xml:space="preserve"><value>yhteystietoja synkronoidaan…</value></data>
+  <data name="ContactList_Nux_Label_EmptyList" xml:space="preserve"><value>Näet Messengerissä olevat tuttusi synkronoimalla yhteystiedot.</value></data>
+  <data name="ContactList_Nux_Label_NoMatchingContacts" xml:space="preserve"><value>Näet yhteystietosi täällä. Voit lisätä yhteystietoja yhteystietokuvaketta napauttamalla.</value></data>
+  <data name="Contact_Search_No_Results" xml:space="preserve"><value>Ei tuloksia</value></data>
+  <data name="Contacts_Find_Button_Label" xml:space="preserve"><value>etsi yhteystietoja</value></data>
+  <data name="Contacts_Invite_Button_Label" xml:space="preserve"><value>kutsu ihmisiä</value></data>
+  <data name="Conversation_AppBar_AttachPhoto" xml:space="preserve"><value>kuvat</value></data>
+  <data name="Conversation_AppBar_Camera" xml:space="preserve"><value>kamera</value></data>
+  <data name="Conversation_AppBar_ChangePhoto" xml:space="preserve"><value>kuva</value></data>
+  <data name="Conversation_AppBar_Like" xml:space="preserve"><value>tykkää</value></data>
+  <data name="Conversation_AppBar_Send" xml:space="preserve"><value>lähetä</value></data>
+  <data name="Conversation_AppBar_Text" xml:space="preserve"><value>teksti</value></data>
+  <data name="Conversation_ContextMenu_RemoveAttachment" xml:space="preserve"><value>poista kuva</value></data>
+  <data name="Conversation_MenuItem_Rename" xml:space="preserve"><value>nimi</value></data>
+  <data name="CreateGroup_TextBox_Label" xml:space="preserve"><value>Ryhmän nimi</value></data>
+  <data name="CreateGroup_Title" xml:space="preserve"><value>UUSI RYHMÄ</value></data>
+  <data name="Device_Location_Services_Enable" xml:space="preserve"><value>Jaa sijaintisi viesteissä siirtymällä puhelimen asetusten sijaintiasetuksiin.</value></data>
+  <data name="Empty_Conversation_Placeholder_Text" xml:space="preserve"><value>{0} on Messengerissä ja saa viestisi välittömästi.</value></data>
+  <data name="Empty_Conversation_Placeholder_Text_For_Non_Messenger_User" xml:space="preserve"><value>{0} ei ole Messengerissä, mutta saa viestisi Facebookissa.</value></data>
+  <data name="Empty_Conversation_Placeholder_Title" xml:space="preserve"><value>Aloita viestiketju</value></data>
+  <data name="Error_Cannot_Attach_File" xml:space="preserve"><value>Tiedostoa ei voi liittää. Yritä uudelleen.</value></data>
+  <data name="Error_Cannot_Fetch_Conversations" xml:space="preserve"><value>Viestejä ei voi juuri nyt näyttää. Yritä uudelleen.</value></data>
+  <data name="Error_Cannot_Fetch_Messages" xml:space="preserve"><value>Viestejä ei voi juuri nyt näyttää. Yritä uudelleen.</value></data>
+  <data name="Error_Cannot_Fetch_Sticker_Packs" xml:space="preserve"><value>Tarrapaketteja ei voi näyttää juuri nyt.</value></data>
+  <data name="Error_Changing_Mute" xml:space="preserve"><value>Ei voitu mykistää. Yritä uudelleen.</value></data>
+  <data name="Error_Changing_Unmute" xml:space="preserve"><value>Mykistyksen kumoaminen epäonnistui. Yritä uudelleen.</value></data>
+  <data name="Error_Gallery_Out_Of_Memory" xml:space="preserve"><value>Tämän kokoista kuvaa ei voi liittää.</value></data>
+  <data name="Error_Invalid_Phone_Number" xml:space="preserve"><value>Kirjoita kelvollinen puhelinnumero.</value></data>
+  <data name="Error_Invalid_Phone_Prefix" xml:space="preserve"><value>Käytä kelvollista maatunnusta.</value></data>
+  <data name="Error_Max_File_Attachment_Exceeded" xml:space="preserve"><value>Et voi liittää lisää kuvia tähän viestiin.</value></data>
+  <data name="Error_No_Connection" xml:space="preserve"><value>Ei internetyhteyttä</value></data>
+  <data name="Error_No_Conversations" xml:space="preserve"><value>Sinulla ei vielä ole viestiketjuja.</value></data>
+  <data name="ExistingUser_Create_Account_Button" xml:space="preserve"><value>luo uusi tili</value></data>
+  <data name="ExistingUser_Description" xml:space="preserve"><value>Tämä numero vastaa Facebook-käyttäjätiliä, jonka omistaa {0} {1}.</value></data>
+  <data name="ExistingUser_LoginAs_Button" xml:space="preserve"><value>kirjaudu sisään nimellä {0}</value></data>
+  <data name="ExistingUser_Title" xml:space="preserve"><value>Kirjaudutaanko Facebook-tunnuksilla?</value></data>
+  <data name="FetchingDataFromServerFailed" xml:space="preserve"><value>Tietojasi ei voi ladata. Yritä uudelleen.</value></data>
+  <data name="FlyTrap_Error_Generic" xml:space="preserve"><value>Raporttia ei voitu näyttää.</value></data>
+  <data name="FlyTrap_Label_Disclaimer" xml:space="preserve"><value>Puhelimesi ja tämän sovelluksen tiedot sisällytetään automaattisesti. Tutustu tietojen käyttöön siirtymällä kohteeseen {0}.</value></data>
+  <data name="FlyTrap_Label_Disclaimer_DataUsePolicyLink" xml:space="preserve"><value>Tietojenkäyttökäytäntö</value></data>
+  <data name="FlyTrap_Label_Instructions" xml:space="preserve"><value>Kerro, mitä yritit tehdä ja mikä meni pieleen.</value></data>
+  <data name="FlyTrap_Label_Screenshot" xml:space="preserve"><value>Näyttökuva</value></data>
+  <data name="FlyTrap_MenuItem_ReportProblem" xml:space="preserve"><value>ilmoita ongelmasta</value></data>
+  <data name="FlyTrap_TextboxHint_Problem" xml:space="preserve"><value>kuvaile ongelmaa</value></data>
+  <data name="FlyTrap_Title_ReportProblem" xml:space="preserve"><value>ILMOITA ONGELMASTA</value></data>
+  <data name="Forwarding_SearchBox_HintText" xml:space="preserve"><value>etsi henkilöitä</value></data>
+  <data name="Forwarding_Title_Label" xml:space="preserve"><value>Välitä viesti</value></data>
+  <data name="Friends_AppBar_AddContact" xml:space="preserve"><value>lisää yhteystieto</value></data>
+  <data name="Global_Notifcation_Off_Until" xml:space="preserve"><value>Pois käytöstä klo {0} saakka</value></data>
+  <data name="Global_Notification_Off" xml:space="preserve"><value>Pois käytöstä</value></data>
+  <data name="Global_Notification_On" xml:space="preserve"><value>Käytössä</value></data>
+  <data name="GroupDetailsPage_AppBar_LeaveGroup" xml:space="preserve"><value>eroa ryhmästä</value></data>
+  <data name="GroupDetailsPage_AppBar_RemoveGroupName" xml:space="preserve"><value>poista nimi</value></data>
+  <data name="GroupDetailsPage_AppBar_RemoveGroupPhoto" xml:space="preserve"><value>poista ryhmäkuva</value></data>
+  <data name="GroupDetailsPage_Title" xml:space="preserve"><value>ryhmä</value></data>
+  <data name="GroupMember_Context_Menu_Remove_Member" xml:space="preserve"><value>poista</value></data>
+  <data name="GroupTile_Date_ActiveDaysAgo" xml:space="preserve"><value>Aktiivinen {0} päivää sitten</value></data>
+  <data name="GroupTile_Date_ActiveLastMonth" xml:space="preserve"><value>Aktiivinen viime kuussa</value></data>
+  <data name="GroupTile_Date_ActiveLastYear" xml:space="preserve"><value>Aktiivinen viime vuonna</value></data>
+  <data name="GroupTile_Date_ActiveMonthsAgo" xml:space="preserve"><value>Aktiivinen {0} kk sitten</value></data>
+  <data name="GroupTile_Date_ActiveToday" xml:space="preserve"><value>Aktiivinen tänään</value></data>
+  <data name="GroupTile_Date_ActiveYearsAgo" xml:space="preserve"><value>Aktiivinen {0} vuotta sitten</value></data>
+  <data name="GroupTile_Date_ActiveYesterday" xml:space="preserve"><value>Aktiivinen eilen</value></data>
+  <data name="Group_AddPeople_Search" xml:space="preserve"><value>Etsi henkilöitä</value></data>
+  <data name="Group_AddPeople_Title" xml:space="preserve"><value>LISÄÄ HENKILÖITÄ</value></data>
+  <data name="Group_AddingParticipants_Failed_Message" xml:space="preserve"><value>Ryhmään ei voitu lisätä ihmisiä. Yritä uudelleen.</value></data>
+  <data name="Group_AddingParticipants_Failed_Title" xml:space="preserve"><value>Ihmisiä ei voitu lisätä</value></data>
+  <data name="Group_AppBar_SelectMany" xml:space="preserve"><value>Valitse useita</value></data>
+  <data name="Group_RemovingParticipants_Failed_Message" xml:space="preserve"><value>Ihmisiä ei voitu poistaa. Yritä uudelleen.</value></data>
+  <data name="Group_RemovingParticipants_Failed_Title" xml:space="preserve"><value>Ihmisiä ei voitu poistaa.</value></data>
+  <data name="Groups_AppBar_Add" xml:space="preserve"><value>kiinnitä</value></data>
+  <data name="Groups_AppBar_Create" xml:space="preserve"><value>luo</value></data>
+  <data name="Groups_AppBar_Next" xml:space="preserve"><value>seuraava</value></data>
+  <data name="Groups_NUX_Button_Text" xml:space="preserve"><value>Aloita</value></data>
+  <data name="Groups_NUX_Help_Title" xml:space="preserve"><value>Voit nyt palata ryhmiin helposti kiinnittämällä ne.</value></data>
+  <data name="Groups_NUX_NoThread_Button_Text" xml:space="preserve"><value>Luo uusi ryhmä</value></data>
+  <data name="Groups_NUX_PlaceholderActive_LastWeek" xml:space="preserve"><value>Aktiivinen viime viikolla</value></data>
+  <data name="Groups_NUX_PlaceholderActive_Yesterday" xml:space="preserve"><value>Aktiivinen eilen</value></data>
+  <data name="Groups_NUX_PlaceholderFour_Members" xml:space="preserve"><value>Shenwei, Joey</value></data>
+  <data name="Groups_NUX_PlaceholderFour_Title" xml:space="preserve"><value>Työkaverit</value></data>
+  <data name="Groups_NUX_PlaceholderOne_Members" xml:space="preserve"><value>Brandon, Simon</value></data>
+  <data name="Groups_NUX_PlaceholderOne_Title" xml:space="preserve"><value>Kämppäkaverit</value></data>
+  <data name="Groups_NUX_PlaceholderThree_Members" xml:space="preserve"><value>Mac, Ben</value></data>
+  <data name="Groups_NUX_PlaceholderThree_Title" xml:space="preserve"><value>Juhlatyypit</value></data>
+  <data name="Groups_NUX_PlaceholderTwo_Members" xml:space="preserve"><value>Alli, Adam, Megan, Mike</value></data>
+  <data name="Groups_NUX_PlaceholderTwo_Title" xml:space="preserve"><value>Perhe</value></data>
+  <data name="Image_Search_Empty_Results" xml:space="preserve"><value>Kuvia ei löytynyt.</value></data>
+  <data name="Image_Search_Menu_Item" xml:space="preserve"><value>hae kuvaa</value></data>
+  <data name="Image_Search_Popup_Cancel" xml:space="preserve"><value>Peruuta</value></data>
+  <data name="Image_Search_Popup_Message" xml:space="preserve"><value>Mitä etsit?</value></data>
+  <data name="Image_Search_Popup_Search" xml:space="preserve"><value>Haku</value></data>
+  <data name="Image_Search_Popup_Title" xml:space="preserve"><value>Hae kuvia</value></data>
+  <data name="Invite_Contact_ToMessenger" xml:space="preserve"><value>Kokeile Messengeriä: {0}</value></data>
+  <data name="Location_Menu_Item" xml:space="preserve"><value>lähetä sijainti</value></data>
+  <data name="Location_Services_Disabled" xml:space="preserve"><value>Sijainti pois käytöstä</value></data>
+  <data name="Location_Warning_Body" xml:space="preserve"><value>Tämän viestiketjun jäsenet näkevät kartalla, missä olet. Ota sijainti käyttöön tai poista se käytöstä napauttamalla.</value></data>
+  <data name="LoginApproval_ResendCode" xml:space="preserve"><value>lähetä uudelleen</value></data>
+  <data name="LoginApproval_Title_EnterCode" xml:space="preserve"><value>Kirjoita koodi, joka lähetettiin puhelimeesi.</value></data>
+  <data name="Login_Approval_Security_Code" xml:space="preserve"><value>Vahvistuskoodi</value></data>
+  <data name="Login_NotOnFacebook" xml:space="preserve"><value>Etkö ole Facebookissa?</value></data>
+  <data name="Login_RecoverPassword" xml:space="preserve"><value>Unohditko salasanasi?</value></data>
+  <data name="Login_SigningIn" xml:space="preserve"><value>kirjaudutaan sisään</value></data>
+  <data name="Login_TextboxHint_EmailOrPhone" xml:space="preserve"><value>Sähköpostiosoite tai puhelinnumero</value></data>
+  <data name="Login_TextboxHint_Password" xml:space="preserve"><value>Salasana</value></data>
+  <data name="Login_Title_SignIn" xml:space="preserve"><value>Kirjaudu Facebookin kautta</value></data>
+  <data name="Login_Title_Welcome" xml:space="preserve"><value>Tervetuloa Messengeriin!</value></data>
+  <data name="Login_With_Facebook" xml:space="preserve"><value>Kirjaudu Facebook-tunnuksilla</value></data>
+  <data name="MainPage_Active_Chat_Popup" xml:space="preserve"><value>KESKUSTELU</value></data>
+  <data name="MainPage_Active_Disable_Chat" xml:space="preserve"><value>poista keskustelu käytöstä</value></data>
+  <data name="MainPage_Active_Enable_Chat" xml:space="preserve"><value>ota keskustelu käyttöön</value></data>
+  <data name="MainPage_AppBar_Mute_Button" xml:space="preserve"><value>mykistä</value></data>
+  <data name="MainPage_AppBar_UnMute_Button" xml:space="preserve"><value>poista mykistys</value></data>
+  <data name="MainPage_AppMenu_OtherFolder" xml:space="preserve"><value>muut-kansio</value></data>
+  <data name="MainPage_AppMenu_Settings" xml:space="preserve"><value>asetukset</value></data>
+  <data name="MainPage_Pivot_Title_Active" xml:space="preserve"><value>aktiivinen</value></data>
+  <data name="MainPage_Pivot_Title_Friends" xml:space="preserve"><value>messenger</value></data>
+  <data name="MainPage_Pivot_Title_Groups" xml:space="preserve"><value>ryhmät</value></data>
+  <data name="MainPage_Pivot_Title_Recent_Threads" xml:space="preserve"><value>viimeaikaiset</value></data>
+  <data name="Matching_Contact_NotFound_Message" xml:space="preserve"><value>Henkilölle {0} ei löydy vastaavuutta Messengeristä</value></data>
+  <data name="MessageBox_Description_ArchiveThread" xml:space="preserve"><value>Jos haluat nähdä arkistoidut viestiketjut, sinun on kirjauduttava Facebook-sivustoon.</value></data>
+  <data name="MessageBox_Description_DeleteThread" xml:space="preserve"><value>Tämä poistaa viestiketjun pysyvästi.</value></data>
+  <data name="MessageBox_Description_FlyTrapSuccess" xml:space="preserve"><value>Kiitos palautteestasi.</value></data>
+  <data name="MessageBox_Description_LeaveThread" xml:space="preserve"><value>Jos poistut viestiketjusta, et saa uusia viestejä.</value></data>
+  <data name="MessageBox_Description_SpamThread" xml:space="preserve"><value>Kun merkitset jonkin roskapostiksi, se ei enää näy viimeisimmissä viesteissäsi.</value></data>
+  <data name="MessageBox_Label_ArchiveThread" xml:space="preserve"><value>arkistoidaanko tämä viestiketju?</value></data>
+  <data name="MessageBox_Label_AuthenticateWithBrowser" xml:space="preserve"><value>Muodosta yhteys avaamalla selain</value></data>
+  <data name="MessageBox_Label_BypassLogin2Fac" xml:space="preserve"><value>Sisäänkirjautumisen hyväksynnät on otettu käyttöön. Jatka kirjoittamalla salasanasi.</value></data>
+  <data name="MessageBox_Label_BypassLoginFail" xml:space="preserve"><value>Puhelinnumeroa ei voi vahvistaa. Yritä uudelleen.</value></data>
+  <data name="MessageBox_Label_ClearThreadPhotoFailed" xml:space="preserve"><value>Ryhmäkuvaa ei voi poistaa.</value></data>
+  <data name="MessageBox_Label_ConfirmPhoneNumberFailed" xml:space="preserve"><value>Numeroasi ei voitu vahvistaa</value></data>
+  <data name="MessageBox_Label_ConfirmationCodeInvalid" xml:space="preserve"><value>Virheellinen vahvistuskoodi.</value></data>
+  <data name="MessageBox_Label_CreateGroupFailed" xml:space="preserve"><value>Ryhmää ei voitu luoda</value></data>
+  <data name="MessageBox_Label_DeleteThread" xml:space="preserve"><value>Poistetaanko viestiketju?</value></data>
+  <data name="MessageBox_Label_ForwardingFailed" xml:space="preserve"><value>Viestiä ei voitu välittää kaikille vastaanottajille.</value></data>
+  <data name="MessageBox_Label_LeaveThread" xml:space="preserve"><value>Eroatko ryhmästä?</value></data>
+  <data name="MessageBox_Label_LoginFailed" xml:space="preserve"><value>Ei voi kirjautua sisään juuri nyt.</value></data>
+  <data name="MessageBox_Label_NamingConversation_Error" xml:space="preserve"><value>Viestiketjua ei voitu nimetä uudelleen.</value></data>
+  <data name="MessageBox_Label_NoInternet" xml:space="preserve"><value>Ei internetyhteyttä</value></data>
+  <data name="MessageBox_Label_PinGroupFailed" xml:space="preserve"><value>Ryhmää ei voitu kiinnittää aloitusnäyttöön.</value></data>
+  <data name="MessageBox_Label_SetThreadPhotoFailed" xml:space="preserve"><value>Ryhmän kuvaa ei voitu määrittää.</value></data>
+  <data name="MessageBox_Label_SpamThread" xml:space="preserve"><value>merkitäänkö roskapostiksi?</value></data>
+  <data name="MessageBox_Label_UpdatePhoneNumberFailed" xml:space="preserve"><value>Numeroa ei voitu päivittää.</value></data>
+  <data name="MessageBox_Label_UploadProfilePic_Failed" xml:space="preserve"><value>Profiilikuvaa ei voi lähettää.</value></data>
+  <data name="MessageBox_Popup_Cancel" xml:space="preserve"><value>Peruuta</value></data>
+  <data name="MessageBox_Title_AddContactFailed" xml:space="preserve"><value>Yhteystietoja ei tällä hetkellä löydy.</value></data>
+  <data name="MessageBox_Title_FlyTrapSuccess" xml:space="preserve"><value>Raportti lähetetty</value></data>
+  <data name="MessageBox_Title_LoginFailed" xml:space="preserve"><value>Ei voi sisäänkirjautua juuri nyt.</value></data>
+  <data name="MessageComposer_EmptyGallery_Text" xml:space="preserve"><value>Galleriassa ei ole vielä valokuvia.</value></data>
+  <data name="MessageDetails_Error_Unexpected" xml:space="preserve"><value>Viestin tietoja ei valitettavasti voi näyttää tällä hetkellä. Yritä uudelleen.</value></data>
+  <data name="MessageDetails_Label_SeenBy" xml:space="preserve"><value>Nähnyt:</value></data>
+  <data name="MessageSnippetAudioClipLoggedInUser" xml:space="preserve"><value>Lähetit äänileikkeen.</value></data>
+  <data name="MessageSnippetAudioClipOtherUser" xml:space="preserve"><value>{0} lähetti äänileikkeen.</value></data>
+  <data name="MessageSnippetGenericLoggedInUser" xml:space="preserve"><value>Lähetit viestin.</value></data>
+  <data name="MessageSnippetGenericOtherUser" xml:space="preserve"><value>{0} lähetti viestin.</value></data>
+  <data name="MessageSnippetPhotoLoggedInUser" xml:space="preserve"><value>Lähetit kuvan.</value></data>
+  <data name="MessageSnippetPhotoOtherUser" xml:space="preserve"><value>{0} lähetti kuvan.</value></data>
+  <data name="MessageSnippetStickerLoggedInUser" xml:space="preserve"><value>Lähetit tarran.</value></data>
+  <data name="MessageSnippetStickerOtherUser" xml:space="preserve"><value>{0} lähetti tarran.</value></data>
+  <data name="MessageSnippetVideoLoggedInUser" xml:space="preserve"><value>Lähetit videon.</value></data>
+  <data name="MessageSnippetVideoOtherUser" xml:space="preserve"><value>{0} lähetti videon.</value></data>
+  <data name="MessageSnippetWhenSenderIsTheLoggedInUser" xml:space="preserve"><value>Sinä</value></data>
+  <data name="MessageStatus_Location_City" xml:space="preserve"><value>Lähetetty paikasta {0}</value></data>
+  <data name="MessageStatus_Location_CityCountry" xml:space="preserve"><value>Lähetetty paikasta {0}, {1}</value></data>
+  <data name="MessageStatus_Location_CityState" xml:space="preserve"><value>Lähetetty paikasta {0}, {1}</value></data>
+  <data name="MessageStatus_Location_DistrictCity" xml:space="preserve"><value>Lähetetty paikasta {0}, {1}</value></data>
+  <data name="MessageStatus_Origin_Messenger" xml:space="preserve"><value>Lähetetty Messengeristä</value></data>
+  <data name="MessageStatus_Origin_Mobile" xml:space="preserve"><value>Lähetetty mobiililaitteesta</value></data>
+  <data name="MessageStatus_Origin_Web" xml:space="preserve"><value>Lähetetty verkosta</value></data>
+  <data name="MessageStatus_SeenBy_1" xml:space="preserve"><value>Nähnyt {0}</value></data>
+  <data name="MessageStatus_SeenBy_2" xml:space="preserve"><value>Nähneet {0} ja {1}</value></data>
+  <data name="MessageStatus_SeenBy_3" xml:space="preserve"><value>Nähneet {0}, {1} ja {2}</value></data>
+  <data name="MessageStatus_SeenBy_4" xml:space="preserve"><value>Nähneet {0}, {1}, {2} ja {3}</value></data>
+  <data name="MessageStatus_SeenBy_Everyone" xml:space="preserve"><value>Kaikki nähneet</value></data>
+  <data name="MessageStatus_SeenBy_Others" xml:space="preserve"><value>Nähneet {0}, {1}, {2} ja {3} muuta</value></data>
+  <data name="MessageStatus_Seen_Timestamp" xml:space="preserve"><value>Nähty {0}</value></data>
+  <data name="Message_Delete_Caption" xml:space="preserve"><value>Poista viesti</value></data>
+  <data name="Message_Delete_Text" xml:space="preserve"><value>Haluatko pysyvästi poistaa tämän viestin?</value></data>
+  <data name="Message_Sending_Failed" xml:space="preserve"><value>Viestiä ei voitu lähettää.</value></data>
+  <data name="Message_Sending_Failed_App_Exited_Description" xml:space="preserve"><value>Sovellus suljettiin ennen viestin lähettämistä. Yritä lähettää se uudelleen.</value></data>
+  <data name="Message_Sending_Failed_Permission_Description" xml:space="preserve"><value>Et voi lähettää viestiä tälle henkilölle.</value></data>
+  <data name="Messages_Active_1m_Ago" xml:space="preserve"><value>aktiivinen 1 min sitten</value></data>
+  <data name="Messages_Active_Now" xml:space="preserve"><value>aktiivinen nyt</value></data>
+  <data name="Messages_Active_Xd_Ago" xml:space="preserve"><value>aktiivinen {0} pv sitten</value></data>
+  <data name="Messages_Active_Xh_Ago" xml:space="preserve"><value>aktiivinen {0} h sitten</value></data>
+  <data name="Messages_Active_Xm_Ago" xml:space="preserve"><value>aktiivinen {0} min sitten</value></data>
+  <data name="Messages_AppBar_Send_Sticker" xml:space="preserve"><value>tarrat</value></data>
+  <data name="Messages_ContextMenu_Copy" xml:space="preserve"><value>kopioi teksti</value></data>
+  <data name="Messages_ContextMenu_Delete" xml:space="preserve"><value>poista</value></data>
+  <data name="Messages_ContextMenu_Forward" xml:space="preserve"><value>välitä</value></data>
+  <data name="Messages_ContextMenu_Retry" xml:space="preserve"><value>yritä uudelleen</value></data>
+  <data name="Messages_Context_Menu_View_Details" xml:space="preserve"><value>näytä tiedot</value></data>
+  <data name="Messages_Group_Message" xml:space="preserve"><value>RYHMÄ</value></data>
+  <data name="Messages_Hint_Text" xml:space="preserve"><value>kirjoita viesti</value></data>
+  <data name="Messages_On_Facebook" xml:space="preserve"><value>Facebook</value></data>
+  <data name="Messages_On_Messenger" xml:space="preserve"><value>Messenger</value></data>
+  <data name="Messages_On_Mobile" xml:space="preserve"><value>mobiili</value></data>
+  <data name="Messages_Refreshing_Failed_StateIndicator" xml:space="preserve"><value>Ei voitu päivittää. Tarkista yhteys.</value></data>
+  <data name="Messages_Refreshing_StateIndicator" xml:space="preserve"><value>Päivitetään…</value></data>
+  <data name="Messages_Refreshing_Success_Stateindicator" xml:space="preserve"><value>Päivitetty</value></data>
+  <data name="Messages_Share_Not_Viewable" xml:space="preserve"><value>Tämä on ehkä poistettu, tai sinulla ei ole oikeutta tarkastella sitä.</value></data>
+  <data name="Mute_Conversation_For_An_Hour" xml:space="preserve"><value>mykistä 1 tunniksi</value></data>
+  <data name="Mute_Conversation_Forever" xml:space="preserve"><value>mykistä</value></data>
+  <data name="Mute_Conversation_Menu_Item" xml:space="preserve"><value>mykistä</value></data>
+  <data name="Mute_Conversation_Until_8AM" xml:space="preserve"><value>mykistä klo 8 asti</value></data>
+  <data name="NameConversation_Menu_Clear" xml:space="preserve"><value>tyhjennä nimi</value></data>
+  <data name="NameConversation_Title" xml:space="preserve"><value>NIMEÄ RYHMÄ</value></data>
+  <data name="NetworkStatus_Banner_Connected" xml:space="preserve"><value>Yhteys muodostettu</value></data>
+  <data name="NetworkStatus_Banner_Connecting" xml:space="preserve"><value>Yhdistetään…</value></data>
+  <data name="NetworkStatus_Banner_Disconnected" xml:space="preserve"><value>Odotetaan verkkoa</value></data>
+  <data name="NetworkStatus_Banner_No_Internet" xml:space="preserve"><value>Ei Internet-yhteyttä</value></data>
+  <data name="NetworkStatus_Banner_Syncing" xml:space="preserve"><value>Synkronoidaan…</value></data>
+  <data name="NetworkStatus_Banner_UpToDate" xml:space="preserve"><value>Ajan tasalla</value></data>
+  <data name="NewContacts_Header_FoundContacts" xml:space="preserve"><value>{0} UUTTA YHTEYSTIETOA</value></data>
+  <data name="Notifications_Turn_Off_For_An_Hour" xml:space="preserve"><value>poista käytöstä 1 tunniksi</value></data>
+  <data name="Notifications_Turn_On" xml:space="preserve"><value>ota käyttöön</value></data>
+  <data name="Notifications_Turn_Until_8AM" xml:space="preserve"><value>poista käytöstä klo 8 asti</value></data>
+  <data name="Nux_Title_OnMessenger" xml:space="preserve"><value>Olet Messengerissä!</value></data>
+  <data name="Nux_Title_OnMessenger_Message" xml:space="preserve"><value>Kaikki, joilla on sininen Messenger-merkki, voidaan tavoittaa välittömästi.</value></data>
+  <data name="People_AppBar_AddContact" xml:space="preserve"><value>lisää henkilöitä</value></data>
+  <data name="People_AppBar_Search" xml:space="preserve"><value>etsi</value></data>
+  <data name="PhoneNumber_Box_Title" xml:space="preserve"><value>Maatunnus ja puhelinnumero</value></data>
+  <data name="PhoneNumber_ListpickerLabel_CountryCode" xml:space="preserve"><value>VALITSE MAA</value></data>
+  <data name="PhoneNumber_Registration_Welcome_Message" xml:space="preserve"><value>Aloita antamalla puhelinnumerosi.</value></data>
+  <data name="PhoneNumber_Select_Country" xml:space="preserve"><value>Maa</value></data>
+  <data name="PhotoAttachment_IndexDisplay_Label" xml:space="preserve"><value>{0} / {1} kuvaa</value></data>
+  <data name="PhotoEdit_AppBar_Draw" xml:space="preserve"><value>piirrä</value></data>
+  <data name="PhotoEdit_AppBar_Send" xml:space="preserve"><value>lähetä</value></data>
+  <data name="PhotoEdit_AppBar_Undo" xml:space="preserve"><value>kumoa</value></data>
+  <data name="PhotoEdit_AppBar_Write" xml:space="preserve"><value>kirjoita</value></data>
+  <data name="PhotoEdit_Nux_Text" xml:space="preserve"><value>Lisää tekstiä napauttamalla kuvaa</value></data>
+  <data name="Photos_SavePhoto_Error_StateIndicator" xml:space="preserve"><value>Kuvaa ei voitu tallentaa.</value></data>
+  <data name="Photos_SavePhoto_MenuItem" xml:space="preserve"><value>tallenna kuva</value></data>
+  <data name="Photos_SavePhoto_Saving_StateIndicator" xml:space="preserve"><value>Tallennetaan kuvaa…</value></data>
+  <data name="Photos_SavePhoto_Success_StateIndicator" xml:space="preserve"><value>Kuva tallennettiin</value></data>
+  <data name="Power_Saver_Mode_Warning" xml:space="preserve"><value>Olet akunsäästötilassa, joten et saa ilmoituksia.</value></data>
+  <data name="ProfilePic_Confirmation_Title" xml:space="preserve"><value>Näyttääkö hyvältä?</value></data>
+  <data name="ProfilePic_Label_Camera_Button" xml:space="preserve"><value>Ota kuva</value></data>
+  <data name="ProfilePic_Label_Gallery_Button" xml:space="preserve"><value>Valitse albumeista</value></data>
+  <data name="ProfilePic_Subtitle_Text" xml:space="preserve"><value>Valitse kuva, jotta muut tunnistavat sinut.</value></data>
+  <data name="ProfilePic_Title_Text" xml:space="preserve"><value>Haluatko lisätä kuvan?</value></data>
+  <data name="RecentThreadList_Nux_EmptyList_Message" xml:space="preserve"><value>Kaikki viestisi ovat täällä, kun aloitat keskustelun.</value></data>
+  <data name="Recent_ContextMenu_Archive" xml:space="preserve"><value>arkistoi</value></data>
+  <data name="Recent_ContextMenu_Delete" xml:space="preserve"><value>poista</value></data>
+  <data name="Recent_ContextMenu_Leave" xml:space="preserve"><value>eroa ryhmästä</value></data>
+  <data name="Recent_ContextMenu_MarkUnread" xml:space="preserve"><value>merkitse lukemattomaksi</value></data>
+  <data name="Recent_ContextMenu_Spam" xml:space="preserve"><value>merkitse roskapostiksi</value></data>
+  <data name="Registration_TextboxHint_FirstName" xml:space="preserve"><value>Etunimi</value></data>
+  <data name="Registration_TextboxHint_LastName" xml:space="preserve"><value>Sukunimi</value></data>
+  <data name="Registration_Title2" xml:space="preserve"><value>Käytä todellista nimeäsi, jotta muut tunnistavat sinut.</value></data>
+  <data name="ResourceLanguage" xml:space="preserve"><value>fi-FI</value></data>
+  <data name="Session_Expired_Caption" xml:space="preserve"><value>Käytä Messengeriä kirjautumalla uudelleen.</value></data>
+  <data name="Session_Expired_Title" xml:space="preserve"><value>istunto päättyi</value></data>
+  <data name="SettingsPage_Title" xml:space="preserve"><value>asetukset</value></data>
+  <data name="Settings_Help" xml:space="preserve"><value>Ohje</value></data>
+  <data name="Settings_Help_Title" xml:space="preserve"><value>Tiedot</value></data>
+  <data name="Settings_In_App_Audio_Title" xml:space="preserve"><value>Äänet sovelluksessa</value></data>
+  <data name="Settings_In_App_Contact_Sync_Title" xml:space="preserve"><value>Synkronoi yhteystiedot</value></data>
+  <data name="Settings_In_App_Vibration_Title" xml:space="preserve"><value>Värinä sovelluksessa</value></data>
+  <data name="Settings_Licenses" xml:space="preserve"><value>Lisenssit</value></data>
+  <data name="Settings_Location_Title" xml:space="preserve"><value>Sijainti</value></data>
+  <data name="Settings_Notification_Title" xml:space="preserve"><value>Ilmoitukset</value></data>
+  <data name="Settings_PhoneNumber_VerificationNeeded" xml:space="preserve"><value>(Vahvista numero.)</value></data>
+  <data name="Settings_Privacy_And_Terms" xml:space="preserve"><value>Yksityisyys ja käyttöehdot</value></data>
+  <data name="Settings_Remove_Contacts_Body" xml:space="preserve"><value>Kaikki aiemmin synkronoimasi yhteystiedot poistetaan.</value></data>
+  <data name="Settings_Remove_Contacts_Confirm" xml:space="preserve"><value>Poista</value></data>
+  <data name="Settings_Remove_Contacts_Title" xml:space="preserve"><value>Poistetaanko yhteystiedot?</value></data>
+  <data name="Settings_SendOnEnter_Title" xml:space="preserve"><value>Lähetä painamalla Enter</value></data>
+  <data name="Settings_Sync_Contacts_Body" xml:space="preserve"><value>Aloitetaanko synkronointi? Yhteystietosi synkronoidaan jatkuvasti palvelimillemme.</value></data>
+  <data name="Settings_Sync_Contacts_Confirmation" xml:space="preserve"><value>Synkronoi</value></data>
+  <data name="Settings_Sync_Contacts_Title" xml:space="preserve"><value>Synkronoi yhteystiedot</value></data>
+  <data name="Settings_Version_Number" xml:space="preserve"><value>Versio {0}</value></data>
+  <data name="Start_Group_Menu_Item" xml:space="preserve"><value>luo ryhmä henkilön {0} kanssa</value></data>
+  <data name="Sticker_Drawer_RecentStickers" xml:space="preserve"><value>Viimeaikaiset tarrat</value></data>
+  <data name="Sticker_Pack_Download" xml:space="preserve"><value>lataa</value></data>
+  <data name="Sticker_Pack_Download_Failed" xml:space="preserve"><value>Tarrapaketin lataus epäonnistui</value></data>
+  <data name="Sticker_Pack_Downloaded" xml:space="preserve"><value>ladattu</value></data>
+  <data name="Sticker_Pack_Downloading" xml:space="preserve"><value>ladataan</value></data>
+  <data name="Sticker_Pack_Share" xml:space="preserve"><value>jaa</value></data>
+  <data name="Sticker_Store_ContextMenu_Remove" xml:space="preserve"><value>poista</value></data>
+  <data name="Sticker_Store_Menu_Item" xml:space="preserve"><value>tarrakauppa</value></data>
+  <data name="Sticker_Store_Remove_Error" xml:space="preserve"><value>Tarrapakkausta ei voi poistaa.</value></data>
+  <data name="Sticker_Store_Tab_All" xml:space="preserve"><value>kaikki</value></data>
+  <data name="Sticker_Store_Tab_Featured" xml:space="preserve"><value>esittelyssä</value></data>
+  <data name="Sticker_Store_Tab_Owned" xml:space="preserve"><value>omat tarrat</value></data>
+  <data name="Sticker_Store_Title" xml:space="preserve"><value>TARRAKAUPPA</value></data>
+  <data name="SuggestedPins_Pinning_StateIndicator" xml:space="preserve"><value>Kiinnitetään…</value></data>
+  <data name="SuggestedPins_SearchBox_Hint" xml:space="preserve"><value>etsi ryhmiä</value></data>
+  <data name="SuggestedPins_Title_PinGroup" xml:space="preserve"><value>KIINNITÄ RYHMÄ</value></data>
+  <data name="SyncContact_Button_LearnMore" xml:space="preserve"><value>Lisätietoja</value></data>
+  <data name="SyncContact_ErrorMessage_UnableToToggle" xml:space="preserve"><value>Asetusta ei voi muuttaa. Tarkista verkkoyhteys ja yritä uudelleen.</value></data>
+  <data name="SyncContact_Subtitle" xml:space="preserve"><value>Synkronoi yhteystiedot, jotta näet Messengeriä käyttävät tuttusi. Yhteystietojen synkronointi on jatkuvaa, ja ne pidetään aina ajan tasalla.</value></data>
+  <data name="SyncContact_Title" xml:space="preserve"><value>Viestittele kenelle tahansa</value></data>
+  <data name="SyncContacts_MessageBox_LinkLabel" xml:space="preserve"><value>Lisätietoja</value></data>
+  <data name="Thread_AppBar_Details" xml:space="preserve"><value>tiedot</value></data>
+  <data name="Thread_AppBar_View_Members" xml:space="preserve"><value>näytä henkilöt</value></data>
+  <data name="Thread_Name_NoParticipant_Title" xml:space="preserve"><value>ei ihmisiä vielä</value></data>
+  <data name="Thread_UnnamedUserPlaceholder_Title" xml:space="preserve"><value>Henkilö Facebookissa</value></data>
+  <data name="Threads_AppBar_Compose" xml:space="preserve"><value>uusi</value></data>
+  <data name="Threads_AppBar_Refresh" xml:space="preserve"><value>päivitä</value></data>
+  <data name="UnMute_Conversation_Menu_Item" xml:space="preserve"><value>poista mykistys</value></data>
+  <data name="Unsent_Message_Warning" xml:space="preserve"><value>Poistutaanko Messengeristä? Et ole vielä lähettänyt viestejäsi.</value></data>
+  <data name="Verify_PhoneNumber_Box_Title" xml:space="preserve"><value>Puhelinnumero</value></data>
+  <data name="VideoRecorder_HelpText_Cancel" xml:space="preserve"><value>Poista ja aloita alusta päästämällä irti</value></data>
+  <data name="VideoRecorder_HelpText_HoldToSend" xml:space="preserve"><value>Nauhoita video pitämällä painettuna tai ota kuva napauttamalla</value></data>
+  <data name="VideoRecorder_HelpText_Send" xml:space="preserve"><value>Peruuta vetämällä sormesi pois Lähetä-painikkeen päältä</value></data>
+  <data name="View_Timeline_Menu_Item" xml:space="preserve"><value>aikajana</value></data>
+  <data name="Voice_Clip_Hold_Instruction" xml:space="preserve"><value>Nauhoita ääntä ja lähetä tallenne pitämällä painettuna</value></data>
+  <data name="Voice_Clip_Length_Limit" xml:space="preserve"><value>Tallenteen aikaraja saavutettiin, lähetä vapauttamalla</value></data>
+  <data name="Voice_Clip_Menu_Item" xml:space="preserve"><value>lähetä äänileike</value></data>
+  <data name="Voice_Clip_NUX_Instruction" xml:space="preserve"><value>Lähetä vapauttamalla tai peruuta pyyhkäisemällä</value></data>
+  <data name="Voice_Clip_Record" xml:space="preserve"><value>Nauhoita</value></data>
+  <data name="Voice_Clip_Release_Cancel" xml:space="preserve"><value>Lopeta nauhoitus vapauttamalla</value></data>
+  <data name="orca_neue_nux_add_phone_body1_searchable_all_not_verified" xml:space="preserve"><value>Ihmiset voivat lisätä sinut yhteystiedoksi, jos heillä on jo puhelinnumerosi, mutta vain sinä voit nähdä tämän numeron Facebookissa.</value></data>
+  <data name="orca_neue_nux_add_phone_body1_searchable_all_visible_all" xml:space="preserve"><value>Ihmiset voivat lisätä sinut yhteystiedoksi, jos heillä on jo puhelinnumerosi.</value></data>
+  <data name="orca_neue_nux_add_phone_body1_searchable_all_visible_custom" xml:space="preserve"><value>Ihmiset voivat lisätä sinut yhteystiedoksi, jos heillä on jo puhelinnumerosi. Tämä ei kuitenkaan vaikuta siihen, kuka voi nähdä numerosi Facebookissa.</value></data>
+  <data name="orca_neue_nux_add_phone_body1_searchable_all_visible_friends" xml:space="preserve"><value>Ihmiset voivat lisätä sinut yhteystiedoksi, jos heillä on jo puhelinnumerosi, mutta vain kaverisi voivat nähdä tämän numeron Facebookissa.</value></data>
+  <data name="orca_neue_nux_add_phone_body1_searchable_all_visible_self" xml:space="preserve"><value>Ihmiset voivat lisätä sinut yhteystiedoksi, jos heillä on jo puhelinnumerosi, mutta vain sinä voit nähdä tämän numeron Facebookissa.</value></data>
+  <data name="orca_neue_nux_add_phone_body1_searchable_fof" xml:space="preserve"><value>Teidän ei tarvitse olla Facebook-kavereita ollaksenne yhteydessä, joten Facebook-asetuksiasi muutetaan siten, että kaikki, joilla on numerosi, voivat etsiä sinua sen avulla.</value></data>
+  <data name="orca_neue_nux_add_phone_body2_not_verified" xml:space="preserve"><value>Vain sinä voit nähdä tämän numeron Facebookissa.</value></data>
+  <data name="orca_neue_nux_add_phone_body2_visible_custom" xml:space="preserve"><value>Tämä ei vaikuta siihen, kuka voi nähdä numerosi Facebookissa.</value></data>
+  <data name="orca_neue_nux_add_phone_body2_visible_friends" xml:space="preserve"><value>Vain kaverit voivat nähdä tämän numeron Facebookissa.</value></data>
+  <data name="orca_neue_nux_add_phone_body2_visible_self" xml:space="preserve"><value>Vain sinä voit nähdä tämän numeron Facebookissa.</value></data>
+  <data name="orca_neue_nux_add_phone_title_no_verified_number" xml:space="preserve"><value>Mitä numeroa käyttäen sinut voi tavoittaa?</value></data>
+  <data name="orca_neue_nux_add_phone_title_verified_long" xml:space="preserve"><value>Onko tämä numero, josta sinut tavoittaa?</value></data>
+  <data name="orca_neue_nux_add_phone_title_verified_short" xml:space="preserve"><value>Onko numerosi ajan tasalla?</value></data>
+</root>

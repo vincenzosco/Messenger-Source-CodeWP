@@ -1,0 +1,395 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Active_AppBar_Chat" xml:space="preserve"><value>чат</value></data>
+  <data name="AddContact_Contact_Already_Exists" xml:space="preserve"><value>Данный номер телефона уже добавлен в контакты.</value></data>
+  <data name="AddContact_FBUser_Already_Exists" xml:space="preserve"><value>{0} уже добавлен(а) в контакты.</value></data>
+  <data name="AddContact_Invite_Button" xml:space="preserve"><value>пригласить</value></data>
+  <data name="AddContact_MatchedExistingUser_Label" xml:space="preserve"><value>{0} уже в ваших контактах в Messenger</value></data>
+  <data name="AddContact_MatchingUser_Label" xml:space="preserve"><value>{0} добавлен(а) в ваши контакты в Messenger</value></data>
+  <data name="AddContact_Message_Button" xml:space="preserve"><value>отправить сообщение {0}</value></data>
+  <data name="AddContact_PhoneNumber_Description" xml:space="preserve"><value>Введите номер телефона, чтобы найти кого-то в Messenger.</value></data>
+  <data name="AddContact_PhoneNumber_Title" xml:space="preserve"><value>ДОБАВИТЬ КОНТАКТ</value></data>
+  <data name="AddContact_Remove_Contact_Warning" xml:space="preserve"><value>{0} будет удален(а) из ваших контактов Messenger.</value></data>
+  <data name="AddContact_Remove_MessageBox_Title" xml:space="preserve"><value>Удалить контакт</value></data>
+  <data name="AddPhotos_Menu_ChooseFromAlbum" xml:space="preserve"><value>Выбрать из альбомов</value></data>
+  <data name="AddPhotos_Menu_RemovePhotos" xml:space="preserve"><value>Удалить фото</value></data>
+  <data name="AddPhotos_Menu_TakePhoto" xml:space="preserve"><value>Сделать фото</value></data>
+  <data name="AddPhotos_Title_EditProfilePicture" xml:space="preserve"><value>РЕДАКТИРОВАТЬ ФОТОГРАФИЮ ПРОФИЛЯ</value></data>
+  <data name="AddPhotos_Title_SetGroupPhoto" xml:space="preserve"><value>УСТАНОВИТЬ ФОТО ГРУППЫ</value></data>
+  <data name="Add_Phone_Number_Label" xml:space="preserve"><value>Добавить номер телефона</value></data>
+  <data name="AppBar_Cancel" xml:space="preserve"><value>отмена</value></data>
+  <data name="AppBar_No" xml:space="preserve"><value>нет</value></data>
+  <data name="AppBar_Ok" xml:space="preserve"><value>ок</value></data>
+  <data name="AppBar_Remove" xml:space="preserve"><value>удалить</value></data>
+  <data name="AppBar_Undo" xml:space="preserve"><value>отменить</value></data>
+  <data name="AppBar_Yes" xml:space="preserve"><value>да</value></data>
+  <data name="AppUpdate_Description" xml:space="preserve"><value>Обновите Messenger, чтобы получить новые функции и обновления.</value></data>
+  <data name="AppUpdate_NotNowButton" xml:space="preserve"><value>Не сейчас</value></data>
+  <data name="AppUpdate_Title" xml:space="preserve"><value>Доступно обновление Messenger</value></data>
+  <data name="AppUpdate_UpdateAppButton" xml:space="preserve"><value>Обновить</value></data>
+  <data name="App_Location_Services_Enable" xml:space="preserve"><value>Чтобы делиться местонахождением в сообщениях, перейдите в настройки Messenger.</value></data>
+  <data name="App_Quit_Caption" xml:space="preserve"><value>Покинуть Messenger</value></data>
+  <data name="Attachments_AppBar_Next" xml:space="preserve"><value>далее</value></data>
+  <data name="Attachments_AppBar_Previous" xml:space="preserve"><value>предыдущий</value></data>
+  <data name="Attachments_AppBar_Skip" xml:space="preserve"><value>пропустить</value></data>
+  <data name="BackgroundToast_LeavingApp_Title" xml:space="preserve"><value>Messenger</value></data>
+  <data name="BackgroundToast_LeavingApp_Warning" xml:space="preserve"><value>Некоторые сообщения не были отправлены до завершения работы Messenger. Откройте Messenger, чтобы убедиться, что все сообщения отправлены.</value></data>
+  <data name="ButtonLabelRetry" xml:space="preserve"><value>Повторить попытку</value></data>
+  <data name="Button_Continue" xml:space="preserve"><value>Продолжить</value></data>
+  <data name="CanonicalThreadDetailsPage_Start_Group" xml:space="preserve"><value>создать групповую переписку</value></data>
+  <data name="CanonicalThreadDetailsPage_Title" xml:space="preserve"><value>подробности</value></data>
+  <data name="Chat_Is_Off" xml:space="preserve"><value>Чат выключен</value></data>
+  <data name="Chat_Is_Off_Details_Label" xml:space="preserve"><value>Если чат отключен, вы все равно будете получать сообщения, но вы можете включить его, чтобы посмотреть, кто активен на Facebook.</value></data>
+  <data name="Client_Type_Mobile" xml:space="preserve"><value>Моб.</value></data>
+  <data name="Client_Type_Web" xml:space="preserve"><value>Веб</value></data>
+  <data name="Composer_Exit_Warning" xml:space="preserve"><value>Отменить сообщение?</value></data>
+  <data name="Composer_Groups_Search_Header" xml:space="preserve"><value>ГРУППЫ</value></data>
+  <data name="Composer_More_People_Search_Header" xml:space="preserve"><value>ЕЩЕ</value></data>
+  <data name="Composer_SendingMessage" xml:space="preserve"><value>сообщение отправляется...</value></data>
+  <data name="Composer_To" xml:space="preserve"><value>Кому:</value></data>
+  <data name="Confirm_Phone_Number_Label" xml:space="preserve"><value>Подтвердить номер</value></data>
+  <data name="ContactCard_MenuLabel_CreateGroup" xml:space="preserve"><value>создать группу с {0}</value></data>
+  <data name="ContactCard_MenuLabel_RemoveContact" xml:space="preserve"><value>удалить контакт</value></data>
+  <data name="ContactCard_MenuLabel_SendMessage" xml:space="preserve"><value>отправить {0} сообщение</value></data>
+  <data name="ContactList_Header_ContactsFound" xml:space="preserve"><value>Найдено контактов: {0}</value></data>
+  <data name="ContactList_Header_Failed" xml:space="preserve"><value>Не удалось загрузить контакты. Попробовать еще раз?</value></data>
+  <data name="ContactList_Header_FindContacts" xml:space="preserve"><value>найти контакты</value></data>
+  <data name="ContactList_Header_ShowAll" xml:space="preserve"><value>показать все</value></data>
+  <data name="ContactList_Header_SyncingContacts" xml:space="preserve"><value>синхронизация...</value></data>
+  <data name="ContactList_Nux_Label_EmptyList" xml:space="preserve"><value>Вы можете синхронизировать свои контакты, чтобы посмотреть, кого вы уже знаете в Messenger.</value></data>
+  <data name="ContactList_Nux_Label_NoMatchingContacts" xml:space="preserve"><value>Ваши контакты будут отображаться здесь. Просто коснитесь значка, чтобы добавить кого-то.</value></data>
+  <data name="Contact_Search_No_Results" xml:space="preserve"><value>Результатов нет</value></data>
+  <data name="Contacts_Find_Button_Label" xml:space="preserve"><value>найти контакты</value></data>
+  <data name="Contacts_Invite_Button_Label" xml:space="preserve"><value>пригласить людей</value></data>
+  <data name="Conversation_AppBar_AttachPhoto" xml:space="preserve"><value>фото</value></data>
+  <data name="Conversation_AppBar_Camera" xml:space="preserve"><value>камера</value></data>
+  <data name="Conversation_AppBar_ChangePhoto" xml:space="preserve"><value>фото</value></data>
+  <data name="Conversation_AppBar_Like" xml:space="preserve"><value>"Нравится"</value></data>
+  <data name="Conversation_AppBar_Send" xml:space="preserve"><value>отправить</value></data>
+  <data name="Conversation_AppBar_Text" xml:space="preserve"><value>текст</value></data>
+  <data name="Conversation_ContextMenu_RemoveAttachment" xml:space="preserve"><value>удалить изображение</value></data>
+  <data name="Conversation_MenuItem_Rename" xml:space="preserve"><value>название</value></data>
+  <data name="CreateGroup_TextBox_Label" xml:space="preserve"><value>Название группы</value></data>
+  <data name="CreateGroup_Title" xml:space="preserve"><value>НОВАЯ ГРУППА</value></data>
+  <data name="Device_Location_Services_Enable" xml:space="preserve"><value>Чтобы поделиться информацией о местонахождении в сообщениях, перейдите в настройки местонахождения на вашем телефоне.</value></data>
+  <data name="Empty_Conversation_Placeholder_Text" xml:space="preserve"><value>{0} пользуется Messenger и мгновенно получит ваши сообщения.</value></data>
+  <data name="Empty_Conversation_Placeholder_Text_For_Non_Messenger_User" xml:space="preserve"><value>{0} не в Messenger, но получит ваше сообщение на Facebook.</value></data>
+  <data name="Empty_Conversation_Placeholder_Title" xml:space="preserve"><value>Начать переписку</value></data>
+  <data name="Error_Cannot_Attach_File" xml:space="preserve"><value>Не удалось вложить файл. Попробуйте еще раз.</value></data>
+  <data name="Error_Cannot_Fetch_Conversations" xml:space="preserve"><value>Невозможно показать сообщения прямо сейчас. Попробуйте еще раз.</value></data>
+  <data name="Error_Cannot_Fetch_Messages" xml:space="preserve"><value>Невозможно показать сообщения прямо сейчас. Попробуйте еще раз.</value></data>
+  <data name="Error_Cannot_Fetch_Sticker_Packs" xml:space="preserve"><value>Невозможно отобразить набор наклеек прямо сейчас.</value></data>
+  <data name="Error_Changing_Mute" xml:space="preserve"><value>Не удалось остановить. Попробуйте еще раз.</value></data>
+  <data name="Error_Changing_Unmute" xml:space="preserve"><value>Ошибка при отключении звука. Повторите попытку.</value></data>
+  <data name="Error_Gallery_Out_Of_Memory" xml:space="preserve"><value>Мы не можем прикрепить изображение этого размера.</value></data>
+  <data name="Error_Invalid_Phone_Number" xml:space="preserve"><value>Пожалуйста, укажите действительный номер телефона.</value></data>
+  <data name="Error_Invalid_Phone_Prefix" xml:space="preserve"><value>Введите действительный код страны.</value></data>
+  <data name="Error_Max_File_Attachment_Exceeded" xml:space="preserve"><value>Невозможно добавить еще фотографии к этому сообщению.</value></data>
+  <data name="Error_No_Connection" xml:space="preserve"><value>Отсутствует подключение к Интернету</value></data>
+  <data name="Error_No_Conversations" xml:space="preserve"><value>У вас еще нет переписок.</value></data>
+  <data name="ExistingUser_Create_Account_Button" xml:space="preserve"><value>создать новый аккаунт</value></data>
+  <data name="ExistingUser_Description" xml:space="preserve"><value>Номер соответствует аккаунту Facebook {0} {1}.</value></data>
+  <data name="ExistingUser_LoginAs_Button" xml:space="preserve"><value>войти как {0}</value></data>
+  <data name="ExistingUser_Title" xml:space="preserve"><value>Войти через Facebook?</value></data>
+  <data name="FetchingDataFromServerFailed" xml:space="preserve"><value>Не удалось загрузить вашу информацию. Попробуйте еще раз.</value></data>
+  <data name="FlyTrap_Error_Generic" xml:space="preserve"><value>Не удалось отобразить отчет.</value></data>
+  <data name="FlyTrap_Label_Disclaimer" xml:space="preserve"><value>Информация о вашем телефоне и приложение будут включены автоматически. Чтобы узнать больше об использовании информации, посетите наш {0}</value></data>
+  <data name="FlyTrap_Label_Disclaimer_DataUsePolicyLink" xml:space="preserve"><value>Политика использования данных</value></data>
+  <data name="FlyTrap_Label_Instructions" xml:space="preserve"><value>Опишите, что вы пытались сделать, и что пошло не так.</value></data>
+  <data name="FlyTrap_Label_Screenshot" xml:space="preserve"><value>Снимок экрана</value></data>
+  <data name="FlyTrap_MenuItem_ReportProblem" xml:space="preserve"><value>сообщить о проблеме</value></data>
+  <data name="FlyTrap_TextboxHint_Problem" xml:space="preserve"><value>опишите проблему</value></data>
+  <data name="FlyTrap_Title_ReportProblem" xml:space="preserve"><value>СООБЩИТЬ О ПРОБЛЕМЕ</value></data>
+  <data name="Forwarding_SearchBox_HintText" xml:space="preserve"><value>поиск людей</value></data>
+  <data name="Forwarding_Title_Label" xml:space="preserve"><value>ПЕРЕНАПРАВИТЬ СООБЩЕНИЕ</value></data>
+  <data name="Friends_AppBar_AddContact" xml:space="preserve"><value>добавить контакт</value></data>
+  <data name="Global_Notifcation_Off_Until" xml:space="preserve"><value>Отключено до {0}</value></data>
+  <data name="Global_Notification_Off" xml:space="preserve"><value>Выкл.</value></data>
+  <data name="Global_Notification_On" xml:space="preserve"><value>Вкл.</value></data>
+  <data name="GroupDetailsPage_AppBar_LeaveGroup" xml:space="preserve"><value>покинуть группу</value></data>
+  <data name="GroupDetailsPage_AppBar_RemoveGroupName" xml:space="preserve"><value>удалить название</value></data>
+  <data name="GroupDetailsPage_AppBar_RemoveGroupPhoto" xml:space="preserve"><value>удалить фото группы</value></data>
+  <data name="GroupDetailsPage_Title" xml:space="preserve"><value>группа</value></data>
+  <data name="GroupMember_Context_Menu_Remove_Member" xml:space="preserve"><value>удалить</value></data>
+  <data name="GroupTile_Date_ActiveDaysAgo" xml:space="preserve"><value>Последние действия {0} дней назад</value></data>
+  <data name="GroupTile_Date_ActiveLastMonth" xml:space="preserve"><value>Последние действия в прошлом месяце</value></data>
+  <data name="GroupTile_Date_ActiveLastYear" xml:space="preserve"><value>Последние действия в прошлом году</value></data>
+  <data name="GroupTile_Date_ActiveMonthsAgo" xml:space="preserve"><value>Последние действия {0} месяцев назад</value></data>
+  <data name="GroupTile_Date_ActiveToday" xml:space="preserve"><value>Действия сегодня</value></data>
+  <data name="GroupTile_Date_ActiveYearsAgo" xml:space="preserve"><value>Последние действия {0} лет назад</value></data>
+  <data name="GroupTile_Date_ActiveYesterday" xml:space="preserve"><value>Последние действия вчера</value></data>
+  <data name="Group_AddPeople_Search" xml:space="preserve"><value>Найти людей</value></data>
+  <data name="Group_AddPeople_Title" xml:space="preserve"><value>ДОБАВИТЬ ЛЮДЕЙ</value></data>
+  <data name="Group_AddingParticipants_Failed_Message" xml:space="preserve"><value>Не удалось добавить участников в группу. Попробуйте еще раз.</value></data>
+  <data name="Group_AddingParticipants_Failed_Title" xml:space="preserve"><value>Не удалось добавить участников</value></data>
+  <data name="Group_AppBar_SelectMany" xml:space="preserve"><value>Выбрать несколько</value></data>
+  <data name="Group_RemovingParticipants_Failed_Message" xml:space="preserve"><value>Не удалось удалить участников. Попробуйте еще раз.</value></data>
+  <data name="Group_RemovingParticipants_Failed_Title" xml:space="preserve"><value>Не удалось удалить участников.</value></data>
+  <data name="Groups_AppBar_Add" xml:space="preserve"><value>выделить</value></data>
+  <data name="Groups_AppBar_Create" xml:space="preserve"><value>создать</value></data>
+  <data name="Groups_AppBar_Next" xml:space="preserve"><value>далее</value></data>
+  <data name="Groups_NUX_Button_Text" xml:space="preserve"><value>Начать</value></data>
+  <data name="Groups_NUX_Help_Title" xml:space="preserve"><value>Теперь вы можете выделять группы, чтобы легко их находить.</value></data>
+  <data name="Groups_NUX_NoThread_Button_Text" xml:space="preserve"><value>Создать новую группу</value></data>
+  <data name="Groups_NUX_PlaceholderActive_LastWeek" xml:space="preserve"><value>Последние действия на прошлой неделе</value></data>
+  <data name="Groups_NUX_PlaceholderActive_Yesterday" xml:space="preserve"><value>Последние действия вчера</value></data>
+  <data name="Groups_NUX_PlaceholderFour_Members" xml:space="preserve"><value>Андрей, Олег</value></data>
+  <data name="Groups_NUX_PlaceholderFour_Title" xml:space="preserve"><value>Друзья с работы</value></data>
+  <data name="Groups_NUX_PlaceholderOne_Members" xml:space="preserve"><value>Вадим, Сергей</value></data>
+  <data name="Groups_NUX_PlaceholderOne_Title" xml:space="preserve"><value>Соседи по комнате</value></data>
+  <data name="Groups_NUX_PlaceholderThree_Members" xml:space="preserve"><value>Егор, Илья</value></data>
+  <data name="Groups_NUX_PlaceholderThree_Title" xml:space="preserve"><value>Команда на выходные</value></data>
+  <data name="Groups_NUX_PlaceholderTwo_Members" xml:space="preserve"><value>Алина, Юрий, Мария, Артем</value></data>
+  <data name="Groups_NUX_PlaceholderTwo_Title" xml:space="preserve"><value>Семья</value></data>
+  <data name="Image_Search_Empty_Results" xml:space="preserve"><value>Изображения не найдены</value></data>
+  <data name="Image_Search_Menu_Item" xml:space="preserve"><value>найти изображение</value></data>
+  <data name="Image_Search_Popup_Cancel" xml:space="preserve"><value>Отмена</value></data>
+  <data name="Image_Search_Popup_Message" xml:space="preserve"><value>Что вы ищете?</value></data>
+  <data name="Image_Search_Popup_Search" xml:space="preserve"><value>Поиск</value></data>
+  <data name="Image_Search_Popup_Title" xml:space="preserve"><value>Поиск изображений</value></data>
+  <data name="Invite_Contact_ToMessenger" xml:space="preserve"><value>Попробуйте Messenger: {0}</value></data>
+  <data name="Location_Menu_Item" xml:space="preserve"><value>отправить местонахождение</value></data>
+  <data name="Location_Services_Disabled" xml:space="preserve"><value>Определение местонахождения выключено</value></data>
+  <data name="Location_Warning_Body" xml:space="preserve"><value>Пользователи в этой переписке видят ваше местонахождение на карте. Коснитесь, чтобы переключить функцию геолокации.</value></data>
+  <data name="LoginApproval_ResendCode" xml:space="preserve"><value>выслать повторно</value></data>
+  <data name="LoginApproval_Title_EnterCode" xml:space="preserve"><value>Пожалуйста, введите код, отправленный на ваш телефон.</value></data>
+  <data name="Login_Approval_Security_Code" xml:space="preserve"><value>Код подтверждения</value></data>
+  <data name="Login_NotOnFacebook" xml:space="preserve"><value>Вас нет на Facebook?</value></data>
+  <data name="Login_RecoverPassword" xml:space="preserve"><value>Забыли пароль?</value></data>
+  <data name="Login_SigningIn" xml:space="preserve"><value>вход</value></data>
+  <data name="Login_TextboxHint_EmailOrPhone" xml:space="preserve"><value>Эл. адрес или телефон</value></data>
+  <data name="Login_TextboxHint_Password" xml:space="preserve"><value>Пароль</value></data>
+  <data name="Login_Title_SignIn" xml:space="preserve"><value>Вход через Facebook</value></data>
+  <data name="Login_Title_Welcome" xml:space="preserve"><value>Facebook Messenger</value></data>
+  <data name="Login_With_Facebook" xml:space="preserve"><value>Вход через Facebook</value></data>
+  <data name="MainPage_Active_Chat_Popup" xml:space="preserve"><value>ЧАТ</value></data>
+  <data name="MainPage_Active_Disable_Chat" xml:space="preserve"><value>отключить чат</value></data>
+  <data name="MainPage_Active_Enable_Chat" xml:space="preserve"><value>включить чат</value></data>
+  <data name="MainPage_AppBar_Mute_Button" xml:space="preserve"><value>выкл. звук</value></data>
+  <data name="MainPage_AppBar_UnMute_Button" xml:space="preserve"><value>вкл. звук</value></data>
+  <data name="MainPage_AppMenu_OtherFolder" xml:space="preserve"><value>папка «Другое»</value></data>
+  <data name="MainPage_AppMenu_Settings" xml:space="preserve"><value>настройки</value></data>
+  <data name="MainPage_Pivot_Title_Active" xml:space="preserve"><value>активен</value></data>
+  <data name="MainPage_Pivot_Title_Friends" xml:space="preserve"><value>messenger</value></data>
+  <data name="MainPage_Pivot_Title_Groups" xml:space="preserve"><value>группы</value></data>
+  <data name="MainPage_Pivot_Title_Recent_Threads" xml:space="preserve"><value>недавние</value></data>
+  <data name="Matching_Contact_NotFound_Message" xml:space="preserve"><value>Не удалось сопоставить {0} с человеком в Messenger</value></data>
+  <data name="MessageBox_Description_ArchiveThread" xml:space="preserve"><value>Для просмотра переписок из архива необходимо войти на веб-сайт Facebook.</value></data>
+  <data name="MessageBox_Description_DeleteThread" xml:space="preserve"><value>Это навсегда удалит переписку.</value></data>
+  <data name="MessageBox_Description_FlyTrapSuccess" xml:space="preserve"><value>Благодарим за ваш отзыв!</value></data>
+  <data name="MessageBox_Description_LeaveThread" xml:space="preserve"><value>Если вы покинете переписку, вы не будете получать новые сообщения.</value></data>
+  <data name="MessageBox_Description_SpamThread" xml:space="preserve"><value>Если вы помечаете что-либо как спам, вы больше не увидите это в недавних сообщениях.</value></data>
+  <data name="MessageBox_Label_ArchiveThread" xml:space="preserve"><value>поместить эту переписку в архив?</value></data>
+  <data name="MessageBox_Label_AuthenticateWithBrowser" xml:space="preserve"><value>Откройте веб-браузер, чтобы подключиться</value></data>
+  <data name="MessageBox_Label_BypassLogin2Fac" xml:space="preserve"><value>У вас включены подтверждения входа. Введите пароль, чтобы продолжить.</value></data>
+  <data name="MessageBox_Label_BypassLoginFail" xml:space="preserve"><value>Не удалось подтвердить номер телефона. Попробуйте еще раз.</value></data>
+  <data name="MessageBox_Label_ClearThreadPhotoFailed" xml:space="preserve"><value>Не удалось удалить фото группы.</value></data>
+  <data name="MessageBox_Label_ConfirmPhoneNumberFailed" xml:space="preserve"><value>Не удалось подтвердить номер</value></data>
+  <data name="MessageBox_Label_ConfirmationCodeInvalid" xml:space="preserve"><value>Недействительный код подтверждения.</value></data>
+  <data name="MessageBox_Label_CreateGroupFailed" xml:space="preserve"><value>Не удалось создать группу</value></data>
+  <data name="MessageBox_Label_DeleteThread" xml:space="preserve"><value>Удалить переписку?</value></data>
+  <data name="MessageBox_Label_ForwardingFailed" xml:space="preserve"><value>Невозможно перенаправить сообщение всем адресатам.</value></data>
+  <data name="MessageBox_Label_LeaveThread" xml:space="preserve"><value>Покинуть группу?</value></data>
+  <data name="MessageBox_Label_LoginFailed" xml:space="preserve"><value>Невозможно войти прямо сейчас.</value></data>
+  <data name="MessageBox_Label_NamingConversation_Error" xml:space="preserve"><value>Не удалось переименовать переписку.</value></data>
+  <data name="MessageBox_Label_NoInternet" xml:space="preserve"><value>Отсутствует подключение к Интернету</value></data>
+  <data name="MessageBox_Label_PinGroupFailed" xml:space="preserve"><value>Не удалось выделить группу.</value></data>
+  <data name="MessageBox_Label_SetThreadPhotoFailed" xml:space="preserve"><value>Не удалось установить фото группы.</value></data>
+  <data name="MessageBox_Label_SpamThread" xml:space="preserve"><value>пометить как спам?</value></data>
+  <data name="MessageBox_Label_UpdatePhoneNumberFailed" xml:space="preserve"><value>Не удалось обновить номер.</value></data>
+  <data name="MessageBox_Label_UploadProfilePic_Failed" xml:space="preserve"><value>Не удалось установить фото профиля.</value></data>
+  <data name="MessageBox_Popup_Cancel" xml:space="preserve"><value>Отмена</value></data>
+  <data name="MessageBox_Title_AddContactFailed" xml:space="preserve"><value>Не удалось найти контакт.</value></data>
+  <data name="MessageBox_Title_FlyTrapSuccess" xml:space="preserve"><value>Отчет отправлен</value></data>
+  <data name="MessageBox_Title_LoginFailed" xml:space="preserve"><value>Невозможно войти прямо сейчас.</value></data>
+  <data name="MessageComposer_EmptyGallery_Text" xml:space="preserve"><value>В вашей галерее пока нет фото.</value></data>
+  <data name="MessageDetails_Error_Unexpected" xml:space="preserve"><value>К сожалению, нельзя показать информацию о сообщении прямо сейчас. Попробуйте еще раз.</value></data>
+  <data name="MessageDetails_Label_SeenBy" xml:space="preserve"><value>Просмотрено:</value></data>
+  <data name="MessageSnippetAudioClipLoggedInUser" xml:space="preserve"><value>Вы отправили голосовое сообщение.</value></data>
+  <data name="MessageSnippetAudioClipOtherUser" xml:space="preserve"><value>{0} отправил(-а) голосовое сообщение.</value></data>
+  <data name="MessageSnippetGenericLoggedInUser" xml:space="preserve"><value>Вы отправили сообщение.</value></data>
+  <data name="MessageSnippetGenericOtherUser" xml:space="preserve"><value>{0} отправил(-а) сообщение.</value></data>
+  <data name="MessageSnippetPhotoLoggedInUser" xml:space="preserve"><value>Вы отправили изображение.</value></data>
+  <data name="MessageSnippetPhotoOtherUser" xml:space="preserve"><value>{0} отправил(-а) изображение.</value></data>
+  <data name="MessageSnippetStickerLoggedInUser" xml:space="preserve"><value>Вы отправили наклейку.</value></data>
+  <data name="MessageSnippetStickerOtherUser" xml:space="preserve"><value>{0} отправил(-а) наклейку.</value></data>
+  <data name="MessageSnippetVideoLoggedInUser" xml:space="preserve"><value>Вы отправили видео.</value></data>
+  <data name="MessageSnippetVideoOtherUser" xml:space="preserve"><value>{0} отправил(-а) видео.</value></data>
+  <data name="MessageSnippetWhenSenderIsTheLoggedInUser" xml:space="preserve"><value>Вы</value></data>
+  <data name="MessageStatus_Location_City" xml:space="preserve"><value>Отправлено из {0}</value></data>
+  <data name="MessageStatus_Location_CityCountry" xml:space="preserve"><value>Отправлено из {0}, {1}</value></data>
+  <data name="MessageStatus_Location_CityState" xml:space="preserve"><value>Отправлено из {0}, {1}</value></data>
+  <data name="MessageStatus_Location_DistrictCity" xml:space="preserve"><value>Отправлено из {0}, {1}</value></data>
+  <data name="MessageStatus_Origin_Messenger" xml:space="preserve"><value>Отправлено из Messenger</value></data>
+  <data name="MessageStatus_Origin_Mobile" xml:space="preserve"><value>Отправлено с мобильного</value></data>
+  <data name="MessageStatus_Origin_Web" xml:space="preserve"><value>Отправлено из Интернета</value></data>
+  <data name="MessageStatus_SeenBy_1" xml:space="preserve"><value>Просмотрено {0}</value></data>
+  <data name="MessageStatus_SeenBy_2" xml:space="preserve"><value>Просмотрено {0} и {1}</value></data>
+  <data name="MessageStatus_SeenBy_3" xml:space="preserve"><value>Просмотрено {0}, {1} и {2}</value></data>
+  <data name="MessageStatus_SeenBy_4" xml:space="preserve"><value>Просмотрено {0}, {1}, {2} и {3}</value></data>
+  <data name="MessageStatus_SeenBy_Everyone" xml:space="preserve"><value>Просмотрено всеми</value></data>
+  <data name="MessageStatus_SeenBy_Others" xml:space="preserve"><value>Просмотрено {0}, {1}, {2} и еще {3}</value></data>
+  <data name="MessageStatus_Seen_Timestamp" xml:space="preserve"><value>Просмотрено {0}</value></data>
+  <data name="Message_Delete_Caption" xml:space="preserve"><value>Удалить сообщение</value></data>
+  <data name="Message_Delete_Text" xml:space="preserve"><value>Вы хотите навсегда удалить это сообщение?</value></data>
+  <data name="Message_Sending_Failed" xml:space="preserve"><value>Невозможно отправить сообщение.</value></data>
+  <data name="Message_Sending_Failed_App_Exited_Description" xml:space="preserve"><value>Приложение было закрыто до отправки сообщения. Попробуйте отправить еще раз.</value></data>
+  <data name="Message_Sending_Failed_Permission_Description" xml:space="preserve"><value>Невозможно отправить сообщение этому человеку.</value></data>
+  <data name="Messages_Active_1m_Ago" xml:space="preserve"><value>последние действия 1 мин. назад</value></data>
+  <data name="Messages_Active_Now" xml:space="preserve"><value>сейчас в сети</value></data>
+  <data name="Messages_Active_Xd_Ago" xml:space="preserve"><value>последние действия {0} д. назад</value></data>
+  <data name="Messages_Active_Xh_Ago" xml:space="preserve"><value>последние действия {0} ч назад</value></data>
+  <data name="Messages_Active_Xm_Ago" xml:space="preserve"><value>последние действия {0} мин. назад</value></data>
+  <data name="Messages_AppBar_Send_Sticker" xml:space="preserve"><value>наклейки</value></data>
+  <data name="Messages_ContextMenu_Copy" xml:space="preserve"><value>копировать текст</value></data>
+  <data name="Messages_ContextMenu_Delete" xml:space="preserve"><value>удалить</value></data>
+  <data name="Messages_ContextMenu_Forward" xml:space="preserve"><value>перенаправить</value></data>
+  <data name="Messages_ContextMenu_Retry" xml:space="preserve"><value>попробовать еще раз</value></data>
+  <data name="Messages_Context_Menu_View_Details" xml:space="preserve"><value>подробнее</value></data>
+  <data name="Messages_Group_Message" xml:space="preserve"><value>ГРУППА</value></data>
+  <data name="Messages_Hint_Text" xml:space="preserve"><value>введите сообщение</value></data>
+  <data name="Messages_On_Facebook" xml:space="preserve"><value>Facebook</value></data>
+  <data name="Messages_On_Messenger" xml:space="preserve"><value>Messenger</value></data>
+  <data name="Messages_On_Mobile" xml:space="preserve"><value>моб.</value></data>
+  <data name="Messages_Refreshing_Failed_StateIndicator" xml:space="preserve"><value>Не удалось обновить, проверьте подключение</value></data>
+  <data name="Messages_Refreshing_StateIndicator" xml:space="preserve"><value>Обновление...</value></data>
+  <data name="Messages_Refreshing_Success_Stateindicator" xml:space="preserve"><value>Обновлено</value></data>
+  <data name="Messages_Share_Not_Viewable" xml:space="preserve"><value>Возможно, материалы были удалены, или у вас недостаточно прав для просмотра.</value></data>
+  <data name="Mute_Conversation_For_An_Hour" xml:space="preserve"><value>остановить на 1 ч.</value></data>
+  <data name="Mute_Conversation_Forever" xml:space="preserve"><value>выкл. звук</value></data>
+  <data name="Mute_Conversation_Menu_Item" xml:space="preserve"><value>выкл. звук</value></data>
+  <data name="Mute_Conversation_Until_8AM" xml:space="preserve"><value>остановить до 8 утра</value></data>
+  <data name="NameConversation_Menu_Clear" xml:space="preserve"><value>очистить название</value></data>
+  <data name="NameConversation_Title" xml:space="preserve"><value>НАЗВАНИЕ ГРУППЫ</value></data>
+  <data name="NetworkStatus_Banner_Connected" xml:space="preserve"><value>Подключено</value></data>
+  <data name="NetworkStatus_Banner_Connecting" xml:space="preserve"><value>Подключение...</value></data>
+  <data name="NetworkStatus_Banner_Disconnected" xml:space="preserve"><value>Ожидание сети</value></data>
+  <data name="NetworkStatus_Banner_No_Internet" xml:space="preserve"><value>Нет подключения к Интернету</value></data>
+  <data name="NetworkStatus_Banner_Syncing" xml:space="preserve"><value>Синхронизация...</value></data>
+  <data name="NetworkStatus_Banner_UpToDate" xml:space="preserve"><value>Обновлено</value></data>
+  <data name="NewContacts_Header_FoundContacts" xml:space="preserve"><value>НОВЫЕ КОНТАКТЫ: {0}</value></data>
+  <data name="Notifications_Turn_Off_For_An_Hour" xml:space="preserve"><value>выкл. на 1 час</value></data>
+  <data name="Notifications_Turn_On" xml:space="preserve"><value>вкл.</value></data>
+  <data name="Notifications_Turn_Until_8AM" xml:space="preserve"><value>выкл. до 8:00</value></data>
+  <data name="Nux_Title_OnMessenger" xml:space="preserve"><value>Вы в Messenger!</value></data>
+  <data name="Nux_Title_OnMessenger_Message" xml:space="preserve"><value>Со всеми, у кого есть значок Messenger, можно немедленно связаться.</value></data>
+  <data name="People_AppBar_AddContact" xml:space="preserve"><value>добавить пользователей</value></data>
+  <data name="People_AppBar_Search" xml:space="preserve"><value>поиск</value></data>
+  <data name="PhoneNumber_Box_Title" xml:space="preserve"><value>Код страны и номер телефона</value></data>
+  <data name="PhoneNumber_ListpickerLabel_CountryCode" xml:space="preserve"><value>ВЫБЕРИТЕ СТРАНУ</value></data>
+  <data name="PhoneNumber_Registration_Welcome_Message" xml:space="preserve"><value>Просто введите номер телефона, чтобы начать.</value></data>
+  <data name="PhoneNumber_Select_Country" xml:space="preserve"><value>Страна</value></data>
+  <data name="PhotoAttachment_IndexDisplay_Label" xml:space="preserve"><value>{0} / {1} фото</value></data>
+  <data name="PhotoEdit_AppBar_Draw" xml:space="preserve"><value>рисовать</value></data>
+  <data name="PhotoEdit_AppBar_Send" xml:space="preserve"><value>отправить</value></data>
+  <data name="PhotoEdit_AppBar_Undo" xml:space="preserve"><value>отменить</value></data>
+  <data name="PhotoEdit_AppBar_Write" xml:space="preserve"><value>написать</value></data>
+  <data name="PhotoEdit_Nux_Text" xml:space="preserve"><value>Коснитесь фото, чтобы добавить текст</value></data>
+  <data name="Photos_SavePhoto_Error_StateIndicator" xml:space="preserve"><value>Невозможно сохранить фото.</value></data>
+  <data name="Photos_SavePhoto_MenuItem" xml:space="preserve"><value>сохранить фото</value></data>
+  <data name="Photos_SavePhoto_Saving_StateIndicator" xml:space="preserve"><value>Сохранение фото...</value></data>
+  <data name="Photos_SavePhoto_Success_StateIndicator" xml:space="preserve"><value>Фото сохранено</value></data>
+  <data name="Power_Saver_Mode_Warning" xml:space="preserve"><value>Вы находитесь в режиме экономии энергии, поэтому вы не будете получать уведомления.</value></data>
+  <data name="ProfilePic_Confirmation_Title" xml:space="preserve"><value>Так хорошо?</value></data>
+  <data name="ProfilePic_Label_Camera_Button" xml:space="preserve"><value>Сделать фото</value></data>
+  <data name="ProfilePic_Label_Gallery_Button" xml:space="preserve"><value>Выбрать из альбомов</value></data>
+  <data name="ProfilePic_Subtitle_Text" xml:space="preserve"><value>Установите фото, чтобы люди могли узнать вас.</value></data>
+  <data name="ProfilePic_Title_Text" xml:space="preserve"><value>Хотите добавить фото?</value></data>
+  <data name="RecentThreadList_Nux_EmptyList_Message" xml:space="preserve"><value>Как только вы начнете переписку, все ваши сообщения будут храниться здесь.</value></data>
+  <data name="Recent_ContextMenu_Archive" xml:space="preserve"><value>архив</value></data>
+  <data name="Recent_ContextMenu_Delete" xml:space="preserve"><value>удалить</value></data>
+  <data name="Recent_ContextMenu_Leave" xml:space="preserve"><value>покинуть группу</value></data>
+  <data name="Recent_ContextMenu_MarkUnread" xml:space="preserve"><value>отметить как непрочитанное</value></data>
+  <data name="Recent_ContextMenu_Spam" xml:space="preserve"><value>пометить как спам</value></data>
+  <data name="Registration_TextboxHint_FirstName" xml:space="preserve"><value>Имя</value></data>
+  <data name="Registration_TextboxHint_LastName" xml:space="preserve"><value>Фамилия</value></data>
+  <data name="Registration_Title2" xml:space="preserve"><value>Используйте свое настоящее имя, чтобы люди знали, что это вы.</value></data>
+  <data name="ResourceLanguage" xml:space="preserve"><value>ru-RU</value></data>
+  <data name="Session_Expired_Caption" xml:space="preserve"><value>Войдите еще раз, чтобы использовать Messenger.</value></data>
+  <data name="Session_Expired_Title" xml:space="preserve"><value>сессия окончилась</value></data>
+  <data name="SettingsPage_Title" xml:space="preserve"><value>настройки</value></data>
+  <data name="Settings_Help" xml:space="preserve"><value>Помощь</value></data>
+  <data name="Settings_Help_Title" xml:space="preserve"><value>Информация</value></data>
+  <data name="Settings_In_App_Audio_Title" xml:space="preserve"><value>Звук в приложении</value></data>
+  <data name="Settings_In_App_Contact_Sync_Title" xml:space="preserve"><value>Синхр. контакты</value></data>
+  <data name="Settings_In_App_Vibration_Title" xml:space="preserve"><value>Вибрация в приложении</value></data>
+  <data name="Settings_Licenses" xml:space="preserve"><value>Лицензии</value></data>
+  <data name="Settings_Location_Title" xml:space="preserve"><value>Местонахождение</value></data>
+  <data name="Settings_Notification_Title" xml:space="preserve"><value>Уведомления</value></data>
+  <data name="Settings_PhoneNumber_VerificationNeeded" xml:space="preserve"><value>(Подтвердите номер)</value></data>
+  <data name="Settings_Privacy_And_Terms" xml:space="preserve"><value>Конфиденциальность и Условия использования</value></data>
+  <data name="Settings_Remove_Contacts_Body" xml:space="preserve"><value>Все ранее синхронизированные контакты будут удалены.</value></data>
+  <data name="Settings_Remove_Contacts_Confirm" xml:space="preserve"><value>Удалить</value></data>
+  <data name="Settings_Remove_Contacts_Title" xml:space="preserve"><value>Удалить контакты?</value></data>
+  <data name="Settings_SendOnEnter_Title" xml:space="preserve"><value>Отправить через "Enter"</value></data>
+  <data name="Settings_Sync_Contacts_Body" xml:space="preserve"><value>Начать синхронизацию? Ваши контакты будут постоянно синхронизироваться с нашими серверами.</value></data>
+  <data name="Settings_Sync_Contacts_Confirmation" xml:space="preserve"><value>Синхр.</value></data>
+  <data name="Settings_Sync_Contacts_Title" xml:space="preserve"><value>Синхр. контакты</value></data>
+  <data name="Settings_Version_Number" xml:space="preserve"><value>Версия {0}</value></data>
+  <data name="Start_Group_Menu_Item" xml:space="preserve"><value>создать группу с {0}</value></data>
+  <data name="Sticker_Drawer_RecentStickers" xml:space="preserve"><value>Последние наклейки</value></data>
+  <data name="Sticker_Pack_Download" xml:space="preserve"><value>загрузить</value></data>
+  <data name="Sticker_Pack_Download_Failed" xml:space="preserve"><value>Ошибка при загрузке набора наклеек</value></data>
+  <data name="Sticker_Pack_Downloaded" xml:space="preserve"><value>загружено</value></data>
+  <data name="Sticker_Pack_Downloading" xml:space="preserve"><value>загрузка</value></data>
+  <data name="Sticker_Pack_Share" xml:space="preserve"><value>поделиться</value></data>
+  <data name="Sticker_Store_ContextMenu_Remove" xml:space="preserve"><value>удалить</value></data>
+  <data name="Sticker_Store_Menu_Item" xml:space="preserve"><value>магазин наклеек</value></data>
+  <data name="Sticker_Store_Remove_Error" xml:space="preserve"><value>Не удалось удалить набор наклеек.</value></data>
+  <data name="Sticker_Store_Tab_All" xml:space="preserve"><value>все</value></data>
+  <data name="Sticker_Store_Tab_Featured" xml:space="preserve"><value>рекомендуемые</value></data>
+  <data name="Sticker_Store_Tab_Owned" xml:space="preserve"><value>ваш</value></data>
+  <data name="Sticker_Store_Title" xml:space="preserve"><value>МАГАЗИН НАКЛЕЕК</value></data>
+  <data name="SuggestedPins_Pinning_StateIndicator" xml:space="preserve"><value>Выделение...</value></data>
+  <data name="SuggestedPins_SearchBox_Hint" xml:space="preserve"><value>поиск по группам</value></data>
+  <data name="SuggestedPins_Title_PinGroup" xml:space="preserve"><value>ВЫДЕЛИТЬ ГРУППУ</value></data>
+  <data name="SyncContact_Button_LearnMore" xml:space="preserve"><value>Подробнее</value></data>
+  <data name="SyncContact_ErrorMessage_UnableToToggle" xml:space="preserve"><value>Не удалось изменить ваши настройки. Проверьте подключение к Интернет и попробуйте еще раз.</value></data>
+  <data name="SyncContact_Subtitle" xml:space="preserve"><value>Синхронизируйте свои контакты, чтобы посмотреть, кто еще есть в Messenger. Ваши контакты будут постоянно синхронизироваться для поддержания их актуальности.</value></data>
+  <data name="SyncContact_Title" xml:space="preserve"><value>Отправляйте сообщения любому контакту из своего телефона</value></data>
+  <data name="SyncContacts_MessageBox_LinkLabel" xml:space="preserve"><value>Подробнее</value></data>
+  <data name="Thread_AppBar_Details" xml:space="preserve"><value>подробности</value></data>
+  <data name="Thread_AppBar_View_Members" xml:space="preserve"><value>посмотреть пользователей</value></data>
+  <data name="Thread_Name_NoParticipant_Title" xml:space="preserve"><value>еще нет участников</value></data>
+  <data name="Thread_UnnamedUserPlaceholder_Title" xml:space="preserve"><value>Пользователь на Facebook</value></data>
+  <data name="Threads_AppBar_Compose" xml:space="preserve"><value>новинка</value></data>
+  <data name="Threads_AppBar_Refresh" xml:space="preserve"><value>обновить</value></data>
+  <data name="UnMute_Conversation_Menu_Item" xml:space="preserve"><value>вкл. звук</value></data>
+  <data name="Unsent_Message_Warning" xml:space="preserve"><value>Выходите из Messenger? Вы еще не оправили сообщения.</value></data>
+  <data name="Verify_PhoneNumber_Box_Title" xml:space="preserve"><value>Номер телефона</value></data>
+  <data name="VideoRecorder_HelpText_Cancel" xml:space="preserve"><value>Отпустите, чтобы удалить и начать заново</value></data>
+  <data name="VideoRecorder_HelpText_HoldToSend" xml:space="preserve"><value>Удерживайте для записи видео, коснитесь, чтобы сделать фото</value></data>
+  <data name="VideoRecorder_HelpText_Send" xml:space="preserve"><value>Чтобы отменить, уберите палец с "Отправить"</value></data>
+  <data name="View_Timeline_Menu_Item" xml:space="preserve"><value>Хроника</value></data>
+  <data name="Voice_Clip_Hold_Instruction" xml:space="preserve"><value>Коснитесь и удерживайте, чтобы записать и отправить аудио</value></data>
+  <data name="Voice_Clip_Length_Limit" xml:space="preserve"><value>Достигнут лимит времени, отпустите, чтобы отправить</value></data>
+  <data name="Voice_Clip_Menu_Item" xml:space="preserve"><value>отправить голосовое сообщение</value></data>
+  <data name="Voice_Clip_NUX_Instruction" xml:space="preserve"><value>Отпустите, чтобы отправить, или проведите пальцем, чтобы отменить</value></data>
+  <data name="Voice_Clip_Record" xml:space="preserve"><value>записать</value></data>
+  <data name="Voice_Clip_Release_Cancel" xml:space="preserve"><value>Отпустите, чтобы отменить запись</value></data>
+  <data name="orca_neue_nux_add_phone_body1_searchable_all_not_verified" xml:space="preserve"><value>Если у кого-то есть ваш номер телефона, он сможет добавить вас в контакты, но этот номер на Facebook можете видеть только вы.</value></data>
+  <data name="orca_neue_nux_add_phone_body1_searchable_all_visible_all" xml:space="preserve"><value>Если у кого-то есть ваш номер телефона, он сможет добавить вас в контакты.</value></data>
+  <data name="orca_neue_nux_add_phone_body1_searchable_all_visible_custom" xml:space="preserve"><value>Если у кого-то есть ваш номер телефона, он сможет добавить вас в контакты, но это не изменит того, кто может видеть ваш номер на Facebook.</value></data>
+  <data name="orca_neue_nux_add_phone_body1_searchable_all_visible_friends" xml:space="preserve"><value>Если у кого-то есть ваш номер телефона, он сможет добавить вас в контакты, но этот номер на Facebook могут видеть только ваши друзья.</value></data>
+  <data name="orca_neue_nux_add_phone_body1_searchable_all_visible_self" xml:space="preserve"><value>Если у кого-то есть ваш номер телефона, он сможет добавить вас в контакты, но этот номер на Facebook можете видеть только вы.</value></data>
+  <data name="orca_neue_nux_add_phone_body1_searchable_fof" xml:space="preserve"><value>Вам не обязательно быть друзьями на Facebook, чтобы общаться. Ваши настройки Facebook будут расширены, чтобы вас могли найти все, у кого есть ваш номер телефона.</value></data>
+  <data name="orca_neue_nux_add_phone_body2_not_verified" xml:space="preserve"><value>Только вы видите этот номер на Facebook.</value></data>
+  <data name="orca_neue_nux_add_phone_body2_visible_custom" xml:space="preserve"><value>Это не изменит того, кто может видеть ваш номер на Facebook.</value></data>
+  <data name="orca_neue_nux_add_phone_body2_visible_friends" xml:space="preserve"><value>Только друзья видят этот номер на Facebook.</value></data>
+  <data name="orca_neue_nux_add_phone_body2_visible_self" xml:space="preserve"><value>Только вы видите этот номер на Facebook.</value></data>
+  <data name="orca_neue_nux_add_phone_title_no_verified_number" xml:space="preserve"><value>По какому номеру вас можно найти?</value></data>
+  <data name="orca_neue_nux_add_phone_title_verified_long" xml:space="preserve"><value>Вас можно найти по этому номеру?</value></data>
+  <data name="orca_neue_nux_add_phone_title_verified_short" xml:space="preserve"><value>Ваш номер действителен?</value></data>
+</root>

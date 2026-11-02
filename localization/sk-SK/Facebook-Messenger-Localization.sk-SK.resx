@@ -1,0 +1,395 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Active_AppBar_Chat" xml:space="preserve"><value>čet</value></data>
+  <data name="AddContact_Contact_Already_Exists" xml:space="preserve"><value>Toto telefónne číslo už bolo pridané ako kontakt.</value></data>
+  <data name="AddContact_FBUser_Already_Exists" xml:space="preserve"><value>Používateľ {0} už bol pridaný ako kontakt.</value></data>
+  <data name="AddContact_Invite_Button" xml:space="preserve"><value>pozvať</value></data>
+  <data name="AddContact_MatchedExistingUser_Label" xml:space="preserve"><value>Používateľa {0} už máte vo svojich kontaktoch v Messengeri</value></data>
+  <data name="AddContact_MatchingUser_Label" xml:space="preserve"><value>Používateľ {0} bol pridaný do vašich kontaktov v Messengeri</value></data>
+  <data name="AddContact_Message_Button" xml:space="preserve"><value>odoslať správu kontaktu {0}</value></data>
+  <data name="AddContact_PhoneNumber_Description" xml:space="preserve"><value>Zadajte telefónne číslo osoby, ktorú chcete nájsť v Messengeri.</value></data>
+  <data name="AddContact_PhoneNumber_Title" xml:space="preserve"><value>PRIDANIE KONTAKTU</value></data>
+  <data name="AddContact_Remove_Contact_Warning" xml:space="preserve"><value>{0} sa odstráni z vašich kontaktov v Messengeri.</value></data>
+  <data name="AddContact_Remove_MessageBox_Title" xml:space="preserve"><value>Odstrániť kontakt?</value></data>
+  <data name="AddPhotos_Menu_ChooseFromAlbum" xml:space="preserve"><value>Vybrať z albumov</value></data>
+  <data name="AddPhotos_Menu_RemovePhotos" xml:space="preserve"><value>Odstrániť fotku</value></data>
+  <data name="AddPhotos_Menu_TakePhoto" xml:space="preserve"><value>Odfotiť</value></data>
+  <data name="AddPhotos_Title_EditProfilePicture" xml:space="preserve"><value>UPRAVIŤ PROFILOVÚ FOTKU</value></data>
+  <data name="AddPhotos_Title_SetGroupPhoto" xml:space="preserve"><value>NASTAVTE FOTKU SKUPINY</value></data>
+  <data name="Add_Phone_Number_Label" xml:space="preserve"><value>Pridať telefónne číslo</value></data>
+  <data name="AppBar_Cancel" xml:space="preserve"><value>zrušiť</value></data>
+  <data name="AppBar_No" xml:space="preserve"><value>nie</value></data>
+  <data name="AppBar_Ok" xml:space="preserve"><value>ok</value></data>
+  <data name="AppBar_Remove" xml:space="preserve"><value>odstrániť</value></data>
+  <data name="AppBar_Undo" xml:space="preserve"><value>späť</value></data>
+  <data name="AppBar_Yes" xml:space="preserve"><value>áno</value></data>
+  <data name="AppUpdate_Description" xml:space="preserve"><value>Aktualizujte si Messenger, aby ste získali nové funkcie a vylepšenia.</value></data>
+  <data name="AppUpdate_NotNowButton" xml:space="preserve"><value>Teraz nie</value></data>
+  <data name="AppUpdate_Title" xml:space="preserve"><value>K dispozícii je aktualizácia pre Messenger</value></data>
+  <data name="AppUpdate_UpdateAppButton" xml:space="preserve"><value>Aktualizovať</value></data>
+  <data name="App_Location_Services_Enable" xml:space="preserve"><value>Ak chcete vo svojich správach zdieľať polohu, prejdite do nastavení Messengera.</value></data>
+  <data name="App_Quit_Caption" xml:space="preserve"><value>Ukončiť Messenger</value></data>
+  <data name="Attachments_AppBar_Next" xml:space="preserve"><value>nasledujúce</value></data>
+  <data name="Attachments_AppBar_Previous" xml:space="preserve"><value>predchádzajúce</value></data>
+  <data name="Attachments_AppBar_Skip" xml:space="preserve"><value>preskočiť</value></data>
+  <data name="BackgroundToast_LeavingApp_Title" xml:space="preserve"><value>Messenger</value></data>
+  <data name="BackgroundToast_LeavingApp_Warning" xml:space="preserve"><value>Niektoré správy sa pred zavretím Messengera neodoslali. Otvorte Messenger, aby ste sa uistili, že vaše správy sú odoslané.</value></data>
+  <data name="ButtonLabelRetry" xml:space="preserve"><value>Znova</value></data>
+  <data name="Button_Continue" xml:space="preserve"><value>Pokračovať</value></data>
+  <data name="CanonicalThreadDetailsPage_Start_Group" xml:space="preserve"><value>vytvoriť skupinu</value></data>
+  <data name="CanonicalThreadDetailsPage_Title" xml:space="preserve"><value>podrobnosti</value></data>
+  <data name="Chat_Is_Off" xml:space="preserve"><value>Čet je vypnutý</value></data>
+  <data name="Chat_Is_Off_Details_Label" xml:space="preserve"><value>Správy dostávate, aj keď máte čet vypnutý, môžete ho však zapnúť, aby ste videli, kto je aktívny na Facebooku.</value></data>
+  <data name="Client_Type_Mobile" xml:space="preserve"><value>Mobil</value></data>
+  <data name="Client_Type_Web" xml:space="preserve"><value>Web</value></data>
+  <data name="Composer_Exit_Warning" xml:space="preserve"><value>Zrušiť správu?</value></data>
+  <data name="Composer_Groups_Search_Header" xml:space="preserve"><value>SKUPINY</value></data>
+  <data name="Composer_More_People_Search_Header" xml:space="preserve"><value>ĎALŠÍ ĽUDIA</value></data>
+  <data name="Composer_SendingMessage" xml:space="preserve"><value>správa sa odosiela...</value></data>
+  <data name="Composer_To" xml:space="preserve"><value>Komu:</value></data>
+  <data name="Confirm_Phone_Number_Label" xml:space="preserve"><value>Potvrdiť číslo</value></data>
+  <data name="ContactCard_MenuLabel_CreateGroup" xml:space="preserve"><value>vytvoriť skupinu s kontaktom {0}</value></data>
+  <data name="ContactCard_MenuLabel_RemoveContact" xml:space="preserve"><value>odstrániť kontakt</value></data>
+  <data name="ContactCard_MenuLabel_SendMessage" xml:space="preserve"><value>odoslať správu kontaktu {0}</value></data>
+  <data name="ContactList_Header_ContactsFound" xml:space="preserve"><value>Našli sa nové kontakty ({0})</value></data>
+  <data name="ContactList_Header_Failed" xml:space="preserve"><value>Nepodarilo sa nahrať kontakt. Skúsiť znova?</value></data>
+  <data name="ContactList_Header_FindContacts" xml:space="preserve"><value>nájsť kontakty</value></data>
+  <data name="ContactList_Header_ShowAll" xml:space="preserve"><value>zobraziť všetky</value></data>
+  <data name="ContactList_Header_SyncingContacts" xml:space="preserve"><value>kontakty sa synchronizujú...</value></data>
+  <data name="ContactList_Nux_Label_EmptyList" xml:space="preserve"><value>Svoje kontakty si môžete synchronizovať, aby ste videli, koho už v Messengeri poznáte.</value></data>
+  <data name="ContactList_Nux_Label_NoMatchingContacts" xml:space="preserve"><value>Svoje kontakty uvidíte tu. Stačí niekoho pridať ťuknutím na ikonu kontaktu.</value></data>
+  <data name="Contact_Search_No_Results" xml:space="preserve"><value>Žiadne výsledky</value></data>
+  <data name="Contacts_Find_Button_Label" xml:space="preserve"><value>nájsť kontakty</value></data>
+  <data name="Contacts_Invite_Button_Label" xml:space="preserve"><value>pozvať ľudí</value></data>
+  <data name="Conversation_AppBar_AttachPhoto" xml:space="preserve"><value>fotky</value></data>
+  <data name="Conversation_AppBar_Camera" xml:space="preserve"><value>fotoaparát</value></data>
+  <data name="Conversation_AppBar_ChangePhoto" xml:space="preserve"><value>fotka</value></data>
+  <data name="Conversation_AppBar_Like" xml:space="preserve"><value>páči sa mi to</value></data>
+  <data name="Conversation_AppBar_Send" xml:space="preserve"><value>odoslať</value></data>
+  <data name="Conversation_AppBar_Text" xml:space="preserve"><value>text</value></data>
+  <data name="Conversation_ContextMenu_RemoveAttachment" xml:space="preserve"><value>odstrániť obrázok</value></data>
+  <data name="Conversation_MenuItem_Rename" xml:space="preserve"><value>názov</value></data>
+  <data name="CreateGroup_TextBox_Label" xml:space="preserve"><value>Názov skupiny</value></data>
+  <data name="CreateGroup_Title" xml:space="preserve"><value>NOVÁ SKUPINA</value></data>
+  <data name="Device_Location_Services_Enable" xml:space="preserve"><value>Ak chcete v správach zdieľať polohu, prejdite na nastavenia lokalizácie v nastaveniach svojho telefónu.</value></data>
+  <data name="Empty_Conversation_Placeholder_Text" xml:space="preserve"><value>{0} používa Messenger a dostane vaše správy okamžite.</value></data>
+  <data name="Empty_Conversation_Placeholder_Text_For_Non_Messenger_User" xml:space="preserve"><value>{0} nepoužíva Messenger, no dostane vašu správu na Facebooku.</value></data>
+  <data name="Empty_Conversation_Placeholder_Title" xml:space="preserve"><value>Začnite konverzáciu</value></data>
+  <data name="Error_Cannot_Attach_File" xml:space="preserve"><value>Nepodarilo sa priložiť súbor. Skúste to znova.</value></data>
+  <data name="Error_Cannot_Fetch_Conversations" xml:space="preserve"><value>Ľutujeme, správy sa momentálne nedajú zobraziť. Skúste to znova.</value></data>
+  <data name="Error_Cannot_Fetch_Messages" xml:space="preserve"><value>Ľutujeme, správy sa momentálne nedajú zobraziť. Skúste to znova.</value></data>
+  <data name="Error_Cannot_Fetch_Sticker_Packs" xml:space="preserve"><value>Ľutujeme, balíčky nálepiek sa momentálne nedajú zobraziť.</value></data>
+  <data name="Error_Changing_Mute" xml:space="preserve"><value>Nepodarilo sa pozastaviť. Skúste to znova.</value></data>
+  <data name="Error_Changing_Unmute" xml:space="preserve"><value>Nepodarilo sa obnoviť. Skúste to znova.</value></data>
+  <data name="Error_Gallery_Out_Of_Memory" xml:space="preserve"><value>Obrázok tejto veľkosti sa nedá priložiť.</value></data>
+  <data name="Error_Invalid_Phone_Number" xml:space="preserve"><value>Zadajte platné telefónne číslo</value></data>
+  <data name="Error_Invalid_Phone_Prefix" xml:space="preserve"><value>Zadajte platný kód krajiny.</value></data>
+  <data name="Error_Max_File_Attachment_Exceeded" xml:space="preserve"><value>K tejto správe už nemôžete priložiť žiadne ďalšie fotky.</value></data>
+  <data name="Error_No_Connection" xml:space="preserve"><value>Žiadne internetové pripojenie</value></data>
+  <data name="Error_No_Conversations" xml:space="preserve"><value>Ešte nemáte žiadne konverzácie.</value></data>
+  <data name="ExistingUser_Create_Account_Button" xml:space="preserve"><value>vytvoriť nový účet</value></data>
+  <data name="ExistingUser_Description" xml:space="preserve"><value>Toto číslo zodpovedá účtu na Facebooku používateľa {0} {1}.</value></data>
+  <data name="ExistingUser_LoginAs_Button" xml:space="preserve"><value>prihlásiť sa ako {0}</value></data>
+  <data name="ExistingUser_Title" xml:space="preserve"><value>Prihlásiť sa cez Facebook?</value></data>
+  <data name="FetchingDataFromServerFailed" xml:space="preserve"><value>Vaše informácie sa nepodarilo načítať. Skúste to znova.</value></data>
+  <data name="FlyTrap_Error_Generic" xml:space="preserve"><value>Správu sa nepodarilo odoslať.</value></data>
+  <data name="FlyTrap_Label_Disclaimer" xml:space="preserve"><value>Do správy sa automaticky zahrnú informácie o vašom telefóne a tejto aplikácii. Ak si chcete prečítať viac o tom, ako sa používajú tieto informácie, pozrite si naše {0}</value></data>
+  <data name="FlyTrap_Label_Disclaimer_DataUsePolicyLink" xml:space="preserve"><value>Zásady využívania údajov</value></data>
+  <data name="FlyTrap_Label_Instructions" xml:space="preserve"><value>Popíšte, čo ste chceli urobiť a aký problém nastal.</value></data>
+  <data name="FlyTrap_Label_Screenshot" xml:space="preserve"><value>Snímka obrazovky</value></data>
+  <data name="FlyTrap_MenuItem_ReportProblem" xml:space="preserve"><value>nahlásiť problém</value></data>
+  <data name="FlyTrap_TextboxHint_Problem" xml:space="preserve"><value>popíšte problém</value></data>
+  <data name="FlyTrap_Title_ReportProblem" xml:space="preserve"><value>NAHLÁSENIE PROBLÉMU</value></data>
+  <data name="Forwarding_SearchBox_HintText" xml:space="preserve"><value>hľadať ľudí</value></data>
+  <data name="Forwarding_Title_Label" xml:space="preserve"><value>PREPOSLAŤ SPRÁVU</value></data>
+  <data name="Friends_AppBar_AddContact" xml:space="preserve"><value>pridať kontakt</value></data>
+  <data name="Global_Notifcation_Off_Until" xml:space="preserve"><value>Vypnuté do {0}</value></data>
+  <data name="Global_Notification_Off" xml:space="preserve"><value>Vypnuté</value></data>
+  <data name="Global_Notification_On" xml:space="preserve"><value>Zapnuté</value></data>
+  <data name="GroupDetailsPage_AppBar_LeaveGroup" xml:space="preserve"><value>opustiť skupinu</value></data>
+  <data name="GroupDetailsPage_AppBar_RemoveGroupName" xml:space="preserve"><value>odstrániť názov</value></data>
+  <data name="GroupDetailsPage_AppBar_RemoveGroupPhoto" xml:space="preserve"><value>odstrániť fotku skupiny</value></data>
+  <data name="GroupDetailsPage_Title" xml:space="preserve"><value>skupina</value></data>
+  <data name="GroupMember_Context_Menu_Remove_Member" xml:space="preserve"><value>odstrániť</value></data>
+  <data name="GroupTile_Date_ActiveDaysAgo" xml:space="preserve"><value>Aktívna pred {0} dňami</value></data>
+  <data name="GroupTile_Date_ActiveLastMonth" xml:space="preserve"><value>Aktívna minulý mesiac</value></data>
+  <data name="GroupTile_Date_ActiveLastYear" xml:space="preserve"><value>Aktívna minulý rok</value></data>
+  <data name="GroupTile_Date_ActiveMonthsAgo" xml:space="preserve"><value>Aktívna pred {0} mesiacmi</value></data>
+  <data name="GroupTile_Date_ActiveToday" xml:space="preserve"><value>Aktívna dnes</value></data>
+  <data name="GroupTile_Date_ActiveYearsAgo" xml:space="preserve"><value>Aktívna pred {0} rokmi</value></data>
+  <data name="GroupTile_Date_ActiveYesterday" xml:space="preserve"><value>Aktívna včera</value></data>
+  <data name="Group_AddPeople_Search" xml:space="preserve"><value>Hľadať ľudí</value></data>
+  <data name="Group_AddPeople_Title" xml:space="preserve"><value>PRIDAŤ ĽUDÍ</value></data>
+  <data name="Group_AddingParticipants_Failed_Message" xml:space="preserve"><value>Nepodarilo sa pridať ľudí do skupiny. Skúste to znova.</value></data>
+  <data name="Group_AddingParticipants_Failed_Title" xml:space="preserve"><value>Nepodarilo sa pridať ľudí</value></data>
+  <data name="Group_AppBar_SelectMany" xml:space="preserve"><value>Vybrať viaceré</value></data>
+  <data name="Group_RemovingParticipants_Failed_Message" xml:space="preserve"><value>Nepodarilo sa odstrániť ľudí. Skúste to znova.</value></data>
+  <data name="Group_RemovingParticipants_Failed_Title" xml:space="preserve"><value>Nepodarilo sa odstrániť ľudí.</value></data>
+  <data name="Groups_AppBar_Add" xml:space="preserve"><value>pripnúť</value></data>
+  <data name="Groups_AppBar_Create" xml:space="preserve"><value>vytvoriť</value></data>
+  <data name="Groups_AppBar_Next" xml:space="preserve"><value>ďalej</value></data>
+  <data name="Groups_NUX_Button_Text" xml:space="preserve"><value>Začať</value></data>
+  <data name="Groups_NUX_Help_Title" xml:space="preserve"><value>Teraz máte možnosť pripínať skupiny, aby ste sa s k nim mohli rýchlo vrátiť.</value></data>
+  <data name="Groups_NUX_NoThread_Button_Text" xml:space="preserve"><value>Vytvoriť novú skupinu</value></data>
+  <data name="Groups_NUX_PlaceholderActive_LastWeek" xml:space="preserve"><value>Aktívna minulý týždeň</value></data>
+  <data name="Groups_NUX_PlaceholderActive_Yesterday" xml:space="preserve"><value>Aktívna včera</value></data>
+  <data name="Groups_NUX_PlaceholderFour_Members" xml:space="preserve"><value>Kováč, Jozef</value></data>
+  <data name="Groups_NUX_PlaceholderFour_Title" xml:space="preserve"><value>Kolegovia z práce</value></data>
+  <data name="Groups_NUX_PlaceholderOne_Members" xml:space="preserve"><value>Kráľ, Peter</value></data>
+  <data name="Groups_NUX_PlaceholderOne_Title" xml:space="preserve"><value>Spolubývajúci</value></data>
+  <data name="Groups_NUX_PlaceholderThree_Members" xml:space="preserve"><value>Lukáč, Róbert</value></data>
+  <data name="Groups_NUX_PlaceholderThree_Title" xml:space="preserve"><value>Víkendová partia</value></data>
+  <data name="Groups_NUX_PlaceholderTwo_Members" xml:space="preserve"><value>Zuzka, Adam, Marta, Mišo</value></data>
+  <data name="Groups_NUX_PlaceholderTwo_Title" xml:space="preserve"><value>Rodina</value></data>
+  <data name="Image_Search_Empty_Results" xml:space="preserve"><value>Nenašli sa žiadne obrázky.</value></data>
+  <data name="Image_Search_Menu_Item" xml:space="preserve"><value>hľadať obrázok</value></data>
+  <data name="Image_Search_Popup_Cancel" xml:space="preserve"><value>Zrušiť</value></data>
+  <data name="Image_Search_Popup_Message" xml:space="preserve"><value>Čo hľadáte?</value></data>
+  <data name="Image_Search_Popup_Search" xml:space="preserve"><value>Hľadať</value></data>
+  <data name="Image_Search_Popup_Title" xml:space="preserve"><value>Hľadať obrázky</value></data>
+  <data name="Invite_Contact_ToMessenger" xml:space="preserve"><value>Vyskúšajte si Messenger: {0}</value></data>
+  <data name="Location_Menu_Item" xml:space="preserve"><value>odoslať polohu</value></data>
+  <data name="Location_Services_Disabled" xml:space="preserve"><value>Lokalizácia je vypnutá</value></data>
+  <data name="Location_Warning_Body" xml:space="preserve"><value>Účastníci tejto konverzácie vidia na mape, kde ste. Ťuknutím môžete zapnúť alebo vypnúť zobrazovanie svojej polohy.</value></data>
+  <data name="LoginApproval_ResendCode" xml:space="preserve"><value>odoslať znova</value></data>
+  <data name="LoginApproval_Title_EnterCode" xml:space="preserve"><value>Zadajte kód, ktorý sme vám poslali na telefón.</value></data>
+  <data name="Login_Approval_Security_Code" xml:space="preserve"><value>Potvrdzovací kód</value></data>
+  <data name="Login_NotOnFacebook" xml:space="preserve"><value>Nie ste na Facebooku?</value></data>
+  <data name="Login_RecoverPassword" xml:space="preserve"><value>Zabudli ste heslo?</value></data>
+  <data name="Login_SigningIn" xml:space="preserve"><value>prihlasuje sa</value></data>
+  <data name="Login_TextboxHint_EmailOrPhone" xml:space="preserve"><value>E-mail alebo telefón</value></data>
+  <data name="Login_TextboxHint_Password" xml:space="preserve"><value>Heslo</value></data>
+  <data name="Login_Title_SignIn" xml:space="preserve"><value>Prihláste sa cez Facebook</value></data>
+  <data name="Login_Title_Welcome" xml:space="preserve"><value>Víta vás Messenger</value></data>
+  <data name="Login_With_Facebook" xml:space="preserve"><value>Prihlásiť sa cez Facebook</value></data>
+  <data name="MainPage_Active_Chat_Popup" xml:space="preserve"><value>ČET</value></data>
+  <data name="MainPage_Active_Disable_Chat" xml:space="preserve"><value>vypnúť čet</value></data>
+  <data name="MainPage_Active_Enable_Chat" xml:space="preserve"><value>zapnúť čet</value></data>
+  <data name="MainPage_AppBar_Mute_Button" xml:space="preserve"><value>zastaviť</value></data>
+  <data name="MainPage_AppBar_UnMute_Button" xml:space="preserve"><value>obnoviť</value></data>
+  <data name="MainPage_AppMenu_OtherFolder" xml:space="preserve"><value>iný priečinok</value></data>
+  <data name="MainPage_AppMenu_Settings" xml:space="preserve"><value>nastavenia</value></data>
+  <data name="MainPage_Pivot_Title_Active" xml:space="preserve"><value>aktívni</value></data>
+  <data name="MainPage_Pivot_Title_Friends" xml:space="preserve"><value>messenger</value></data>
+  <data name="MainPage_Pivot_Title_Groups" xml:space="preserve"><value>skupiny</value></data>
+  <data name="MainPage_Pivot_Title_Recent_Threads" xml:space="preserve"><value>najnovšie</value></data>
+  <data name="Matching_Contact_NotFound_Message" xml:space="preserve"><value>Kontakt {0} sa nepodarilo priradiť k žiadnej osobe v Messengeri</value></data>
+  <data name="MessageBox_Description_ArchiveThread" xml:space="preserve"><value>Ak chcete zobraziť archivované konverzácie, musíte sa prihlásiť na web Facebooku.</value></data>
+  <data name="MessageBox_Description_DeleteThread" xml:space="preserve"><value>Konverzácia sa tým natrvalo odstráni.</value></data>
+  <data name="MessageBox_Description_FlyTrapSuccess" xml:space="preserve"><value>Ďakujeme za vašu reakciu.</value></data>
+  <data name="MessageBox_Description_LeaveThread" xml:space="preserve"><value>Ak opustíte túto konverzáciu, nebudete už dostávať žiadne nové správy.</value></data>
+  <data name="MessageBox_Description_SpamThread" xml:space="preserve"><value>Keď niečo označíte ako spam, už sa to nebude zobrazovať medzi vašimi najnovšími správami.</value></data>
+  <data name="MessageBox_Label_ArchiveThread" xml:space="preserve"><value>archivovať túto konverzáciu?</value></data>
+  <data name="MessageBox_Label_AuthenticateWithBrowser" xml:space="preserve"><value>Otvorte webový prehliadač na pripojenie</value></data>
+  <data name="MessageBox_Label_BypassLogin2Fac" xml:space="preserve"><value>Máte zapnuté schvaľovanie prihlásenia. Na pokračovanie zadajte svoje heslo.</value></data>
+  <data name="MessageBox_Label_BypassLoginFail" xml:space="preserve"><value>Telefónne číslo sa nepodarilo potvrdiť. Skúste to znova.</value></data>
+  <data name="MessageBox_Label_ClearThreadPhotoFailed" xml:space="preserve"><value>Fotku skupiny sa nepodarilo odstrániť.</value></data>
+  <data name="MessageBox_Label_ConfirmPhoneNumberFailed" xml:space="preserve"><value>Nepodarilo sa potvrdiť vaše číslo</value></data>
+  <data name="MessageBox_Label_ConfirmationCodeInvalid" xml:space="preserve"><value>Neplatný potvrdzovací kód.</value></data>
+  <data name="MessageBox_Label_CreateGroupFailed" xml:space="preserve"><value>Nepodarilo sa vytvoriť skupinu</value></data>
+  <data name="MessageBox_Label_DeleteThread" xml:space="preserve"><value>Odstrániť konverzáciu?</value></data>
+  <data name="MessageBox_Label_ForwardingFailed" xml:space="preserve"><value>Správu sa nepodarilo preposlať všetkým príjemcom.</value></data>
+  <data name="MessageBox_Label_LeaveThread" xml:space="preserve"><value>Opustiť skupinu?</value></data>
+  <data name="MessageBox_Label_LoginFailed" xml:space="preserve"><value>Momentálne sa nedá prihlásiť.</value></data>
+  <data name="MessageBox_Label_NamingConversation_Error" xml:space="preserve"><value>Nepodarilo sa premenovať konverzáciu.</value></data>
+  <data name="MessageBox_Label_NoInternet" xml:space="preserve"><value>Žiadne internetové pripojenie</value></data>
+  <data name="MessageBox_Label_PinGroupFailed" xml:space="preserve"><value>Nepodarilo sa pripnúť skupinu.</value></data>
+  <data name="MessageBox_Label_SetThreadPhotoFailed" xml:space="preserve"><value>Nepodarilo sa nastaviť fotku skupiny.</value></data>
+  <data name="MessageBox_Label_SpamThread" xml:space="preserve"><value>označiť ako spam?</value></data>
+  <data name="MessageBox_Label_UpdatePhoneNumberFailed" xml:space="preserve"><value>Nepodarilo sa aktualizovať číslo.</value></data>
+  <data name="MessageBox_Label_UploadProfilePic_Failed" xml:space="preserve"><value>Profilovú fotku sa nepodarilo nastaviť.</value></data>
+  <data name="MessageBox_Popup_Cancel" xml:space="preserve"><value>Zrušiť</value></data>
+  <data name="MessageBox_Title_AddContactFailed" xml:space="preserve"><value>Kontakt sa momentálne nepodarilo nájsť.</value></data>
+  <data name="MessageBox_Title_FlyTrapSuccess" xml:space="preserve"><value>Správa sa odoslala</value></data>
+  <data name="MessageBox_Title_LoginFailed" xml:space="preserve"><value>Momentálne sa nedá prihlásiť.</value></data>
+  <data name="MessageComposer_EmptyGallery_Text" xml:space="preserve"><value>Galéria ešte neobsahuje žiadne fotky.</value></data>
+  <data name="MessageDetails_Error_Unexpected" xml:space="preserve"><value>Ľutujeme, podrobnosti správy sa momentálne nedajú zobraziť. Skúste to znova.</value></data>
+  <data name="MessageDetails_Label_SeenBy" xml:space="preserve"><value>Správu videli:</value></data>
+  <data name="MessageSnippetAudioClipLoggedInUser" xml:space="preserve"><value>Odoslali ste hlasovú správu.</value></data>
+  <data name="MessageSnippetAudioClipOtherUser" xml:space="preserve"><value>Používateľ {0} poslal hlasovú správu.</value></data>
+  <data name="MessageSnippetGenericLoggedInUser" xml:space="preserve"><value>Odoslali ste správu.</value></data>
+  <data name="MessageSnippetGenericOtherUser" xml:space="preserve"><value>Používateľ {0} poslal správu.</value></data>
+  <data name="MessageSnippetPhotoLoggedInUser" xml:space="preserve"><value>Odoslali ste obrázok.</value></data>
+  <data name="MessageSnippetPhotoOtherUser" xml:space="preserve"><value>Používateľ {0} poslal obrázok.</value></data>
+  <data name="MessageSnippetStickerLoggedInUser" xml:space="preserve"><value>Odoslali ste nálepku.</value></data>
+  <data name="MessageSnippetStickerOtherUser" xml:space="preserve"><value>Používateľ {0} poslal nálepku.</value></data>
+  <data name="MessageSnippetVideoLoggedInUser" xml:space="preserve"><value>Odoslali ste video.</value></data>
+  <data name="MessageSnippetVideoOtherUser" xml:space="preserve"><value>Používateľ {0} poslal video.</value></data>
+  <data name="MessageSnippetWhenSenderIsTheLoggedInUser" xml:space="preserve"><value>Vy</value></data>
+  <data name="MessageStatus_Location_City" xml:space="preserve"><value>Odoslané z: {0}</value></data>
+  <data name="MessageStatus_Location_CityCountry" xml:space="preserve"><value>Odoslané z: {0}, {1}</value></data>
+  <data name="MessageStatus_Location_CityState" xml:space="preserve"><value>Odoslané z: {0}, {1}</value></data>
+  <data name="MessageStatus_Location_DistrictCity" xml:space="preserve"><value>Odoslané z: {0}, {1}</value></data>
+  <data name="MessageStatus_Origin_Messenger" xml:space="preserve"><value>Odoslané z Messengera</value></data>
+  <data name="MessageStatus_Origin_Mobile" xml:space="preserve"><value>Odoslané z mobilu</value></data>
+  <data name="MessageStatus_Origin_Web" xml:space="preserve"><value>Odoslané z webu</value></data>
+  <data name="MessageStatus_SeenBy_1" xml:space="preserve"><value>Správu videl/-a {0}</value></data>
+  <data name="MessageStatus_SeenBy_2" xml:space="preserve"><value>Správu videli {0} a {1}</value></data>
+  <data name="MessageStatus_SeenBy_3" xml:space="preserve"><value>Správu videli {0}, {1} a {2}</value></data>
+  <data name="MessageStatus_SeenBy_4" xml:space="preserve"><value>Správu videli {0}, {1}, {2} a {3}</value></data>
+  <data name="MessageStatus_SeenBy_Everyone" xml:space="preserve"><value>Správu videli všetci</value></data>
+  <data name="MessageStatus_SeenBy_Others" xml:space="preserve"><value>Správu videli {0}, {1}, {2} a {3} ďalší</value></data>
+  <data name="MessageStatus_Seen_Timestamp" xml:space="preserve"><value>Zobrazené {0}</value></data>
+  <data name="Message_Delete_Caption" xml:space="preserve"><value>Odstrániť správu</value></data>
+  <data name="Message_Delete_Text" xml:space="preserve"><value>Chcete natrvalo odstrániť túto správu?</value></data>
+  <data name="Message_Sending_Failed" xml:space="preserve"><value>Správu sa nepodarilo odoslať.</value></data>
+  <data name="Message_Sending_Failed_App_Exited_Description" xml:space="preserve"><value>Aplikácia bola ukončená pred odoslaním vašej správy. Skúste správu odoslať znova.</value></data>
+  <data name="Message_Sending_Failed_Permission_Description" xml:space="preserve"><value>Ľutujeme, tejto osobe nemôžete poslať správu.</value></data>
+  <data name="Messages_Active_1m_Ago" xml:space="preserve"><value>aktívny/-a pred 1 min</value></data>
+  <data name="Messages_Active_Now" xml:space="preserve"><value>aktívny/-a teraz</value></data>
+  <data name="Messages_Active_Xd_Ago" xml:space="preserve"><value>aktívny/-a pred {0} dňami</value></data>
+  <data name="Messages_Active_Xh_Ago" xml:space="preserve"><value>aktívny/-a pred {0} h</value></data>
+  <data name="Messages_Active_Xm_Ago" xml:space="preserve"><value>aktívny/-a pred {0} min</value></data>
+  <data name="Messages_AppBar_Send_Sticker" xml:space="preserve"><value>nálepky</value></data>
+  <data name="Messages_ContextMenu_Copy" xml:space="preserve"><value>kopírovať text</value></data>
+  <data name="Messages_ContextMenu_Delete" xml:space="preserve"><value>odstrániť</value></data>
+  <data name="Messages_ContextMenu_Forward" xml:space="preserve"><value>preposlať</value></data>
+  <data name="Messages_ContextMenu_Retry" xml:space="preserve"><value>skúsiť znova</value></data>
+  <data name="Messages_Context_Menu_View_Details" xml:space="preserve"><value>zobraziť podrobnosti</value></data>
+  <data name="Messages_Group_Message" xml:space="preserve"><value>SKUPINA</value></data>
+  <data name="Messages_Hint_Text" xml:space="preserve"><value>napíšte správu</value></data>
+  <data name="Messages_On_Facebook" xml:space="preserve"><value>Facebook</value></data>
+  <data name="Messages_On_Messenger" xml:space="preserve"><value>Messenger</value></data>
+  <data name="Messages_On_Mobile" xml:space="preserve"><value>na mobile</value></data>
+  <data name="Messages_Refreshing_Failed_StateIndicator" xml:space="preserve"><value>Nepodarilo sa aktualizovať – skontrolujte svoje pripojenie</value></data>
+  <data name="Messages_Refreshing_StateIndicator" xml:space="preserve"><value>Obnovuje sa...</value></data>
+  <data name="Messages_Refreshing_Success_Stateindicator" xml:space="preserve"><value>Aktualizované</value></data>
+  <data name="Messages_Share_Not_Viewable" xml:space="preserve"><value>Je možné, že táto položka bola odstránená alebo že nemáte povolenie zobraziť ju.</value></data>
+  <data name="Mute_Conversation_For_An_Hour" xml:space="preserve"><value>pozastaviť na 1 h</value></data>
+  <data name="Mute_Conversation_Forever" xml:space="preserve"><value>zastaviť</value></data>
+  <data name="Mute_Conversation_Menu_Item" xml:space="preserve"><value>zastaviť</value></data>
+  <data name="Mute_Conversation_Until_8AM" xml:space="preserve"><value>pozastaviť do 8:00</value></data>
+  <data name="NameConversation_Menu_Clear" xml:space="preserve"><value>vymazať názov</value></data>
+  <data name="NameConversation_Title" xml:space="preserve"><value>POMENOVAŤ SKUPINU</value></data>
+  <data name="NetworkStatus_Banner_Connected" xml:space="preserve"><value>Pripojené</value></data>
+  <data name="NetworkStatus_Banner_Connecting" xml:space="preserve"><value>Pripája sa...</value></data>
+  <data name="NetworkStatus_Banner_Disconnected" xml:space="preserve"><value>Čaká sa na sieť</value></data>
+  <data name="NetworkStatus_Banner_No_Internet" xml:space="preserve"><value>Žiadne internetové pripojenie</value></data>
+  <data name="NetworkStatus_Banner_Syncing" xml:space="preserve"><value>Synchronizuje sa...</value></data>
+  <data name="NetworkStatus_Banner_UpToDate" xml:space="preserve"><value>Aktuálne</value></data>
+  <data name="NewContacts_Header_FoundContacts" xml:space="preserve"><value>NOVÉ KONTAKTY: {0}</value></data>
+  <data name="Notifications_Turn_Off_For_An_Hour" xml:space="preserve"><value>vypnúť na 1 h</value></data>
+  <data name="Notifications_Turn_On" xml:space="preserve"><value>zapnúť</value></data>
+  <data name="Notifications_Turn_Until_8AM" xml:space="preserve"><value>vypnúť do 8:00</value></data>
+  <data name="Nux_Title_OnMessenger" xml:space="preserve"><value>Ste v Messengeri!</value></data>
+  <data name="Nux_Title_OnMessenger_Message" xml:space="preserve"><value>S každou osobou s modrou vizitkou Messengera sa môžete okamžite spojiť.</value></data>
+  <data name="People_AppBar_AddContact" xml:space="preserve"><value>pridať ľudí</value></data>
+  <data name="People_AppBar_Search" xml:space="preserve"><value>hľadať</value></data>
+  <data name="PhoneNumber_Box_Title" xml:space="preserve"><value>Predvoľba krajiny a telefónne číslo</value></data>
+  <data name="PhoneNumber_ListpickerLabel_CountryCode" xml:space="preserve"><value>VYBRAŤ KRAJINU</value></data>
+  <data name="PhoneNumber_Registration_Welcome_Message" xml:space="preserve"><value>Na začiatok stačí zadať svoje telefónne číslo.</value></data>
+  <data name="PhoneNumber_Select_Country" xml:space="preserve"><value>Krajina</value></data>
+  <data name="PhotoAttachment_IndexDisplay_Label" xml:space="preserve"><value>{0} / {1} fotiek</value></data>
+  <data name="PhotoEdit_AppBar_Draw" xml:space="preserve"><value>kresliť</value></data>
+  <data name="PhotoEdit_AppBar_Send" xml:space="preserve"><value>odoslať</value></data>
+  <data name="PhotoEdit_AppBar_Undo" xml:space="preserve"><value>späť</value></data>
+  <data name="PhotoEdit_AppBar_Write" xml:space="preserve"><value>napísať</value></data>
+  <data name="PhotoEdit_Nux_Text" xml:space="preserve"><value>Ťuknutím na fotku pridáte text</value></data>
+  <data name="Photos_SavePhoto_Error_StateIndicator" xml:space="preserve"><value>Nepodarilo sa uložiť fotku.</value></data>
+  <data name="Photos_SavePhoto_MenuItem" xml:space="preserve"><value>uložiť fotku</value></data>
+  <data name="Photos_SavePhoto_Saving_StateIndicator" xml:space="preserve"><value>Fotka sa ukladá...</value></data>
+  <data name="Photos_SavePhoto_Success_StateIndicator" xml:space="preserve"><value>Fotka sa uložila.</value></data>
+  <data name="Power_Saver_Mode_Warning" xml:space="preserve"><value>Máte aktívny režim úspory batérie, takže nebudete dostávať upozornenia.</value></data>
+  <data name="ProfilePic_Confirmation_Title" xml:space="preserve"><value>Vyzerá to dobre?</value></data>
+  <data name="ProfilePic_Label_Camera_Button" xml:space="preserve"><value>Odfotiť</value></data>
+  <data name="ProfilePic_Label_Gallery_Button" xml:space="preserve"><value>Vybrať z albumov</value></data>
+  <data name="ProfilePic_Subtitle_Text" xml:space="preserve"><value>Nastavte si fotku, aby vás ľudia mohli spoznať.</value></data>
+  <data name="ProfilePic_Title_Text" xml:space="preserve"><value>Chcete pridať fotku?</value></data>
+  <data name="RecentThreadList_Nux_EmptyList_Message" xml:space="preserve"><value>Keď začnete četovať, zobrazia sa tu všetky vaše správy.</value></data>
+  <data name="Recent_ContextMenu_Archive" xml:space="preserve"><value>archivovať</value></data>
+  <data name="Recent_ContextMenu_Delete" xml:space="preserve"><value>odstrániť</value></data>
+  <data name="Recent_ContextMenu_Leave" xml:space="preserve"><value>opustiť skupinu</value></data>
+  <data name="Recent_ContextMenu_MarkUnread" xml:space="preserve"><value>označiť ako neprečítané</value></data>
+  <data name="Recent_ContextMenu_Spam" xml:space="preserve"><value>označiť ako spam</value></data>
+  <data name="Registration_TextboxHint_FirstName" xml:space="preserve"><value>Meno</value></data>
+  <data name="Registration_TextboxHint_LastName" xml:space="preserve"><value>Priezvisko</value></data>
+  <data name="Registration_Title2" xml:space="preserve"><value>Použite svoje skutočné meno, aby ľudia vedeli, že ste to vy.</value></data>
+  <data name="ResourceLanguage" xml:space="preserve"><value>sk-SK</value></data>
+  <data name="Session_Expired_Caption" xml:space="preserve"><value>Ak chcete použiť Messenger, prihláste sa znova.</value></data>
+  <data name="Session_Expired_Title" xml:space="preserve"><value>relácia sa skončila</value></data>
+  <data name="SettingsPage_Title" xml:space="preserve"><value>nastavenia</value></data>
+  <data name="Settings_Help" xml:space="preserve"><value>Pomoc</value></data>
+  <data name="Settings_Help_Title" xml:space="preserve"><value>Informácie</value></data>
+  <data name="Settings_In_App_Audio_Title" xml:space="preserve"><value>Zvuk v aplikácii</value></data>
+  <data name="Settings_In_App_Contact_Sync_Title" xml:space="preserve"><value>Synchronizovať kontakty</value></data>
+  <data name="Settings_In_App_Vibration_Title" xml:space="preserve"><value>Vibrácia v aplikácii</value></data>
+  <data name="Settings_Licenses" xml:space="preserve"><value>Licencie</value></data>
+  <data name="Settings_Location_Title" xml:space="preserve"><value>Poloha</value></data>
+  <data name="Settings_Notification_Title" xml:space="preserve"><value>Upozornenia</value></data>
+  <data name="Settings_PhoneNumber_VerificationNeeded" xml:space="preserve"><value>(Potvrďte číslo)</value></data>
+  <data name="Settings_Privacy_And_Terms" xml:space="preserve"><value>Súkromie a zmluvné podmienky</value></data>
+  <data name="Settings_Remove_Contacts_Body" xml:space="preserve"><value>Všetky doteraz synchronizované kontakty sa odstránia.</value></data>
+  <data name="Settings_Remove_Contacts_Confirm" xml:space="preserve"><value>Odstrániť</value></data>
+  <data name="Settings_Remove_Contacts_Title" xml:space="preserve"><value>Odstrániť kontakty?</value></data>
+  <data name="Settings_SendOnEnter_Title" xml:space="preserve"><value>Povoliť posielanie stlačením klávesu Enter</value></data>
+  <data name="Settings_Sync_Contacts_Body" xml:space="preserve"><value>Začať synchronizáciu? Vaše kontakty budú priebežne synchronizované s našimi servermi.</value></data>
+  <data name="Settings_Sync_Contacts_Confirmation" xml:space="preserve"><value>Synchronizovať</value></data>
+  <data name="Settings_Sync_Contacts_Title" xml:space="preserve"><value>Synchronizovať kontakty</value></data>
+  <data name="Settings_Version_Number" xml:space="preserve"><value>Verzia {0}</value></data>
+  <data name="Start_Group_Menu_Item" xml:space="preserve"><value>vytvoriť skupinu s používateľom {0}</value></data>
+  <data name="Sticker_Drawer_RecentStickers" xml:space="preserve"><value>Najnovšie nálepky</value></data>
+  <data name="Sticker_Pack_Download" xml:space="preserve"><value>stiahnuť</value></data>
+  <data name="Sticker_Pack_Download_Failed" xml:space="preserve"><value>Balíček nálepiek sa nepodarilo stiahnuť</value></data>
+  <data name="Sticker_Pack_Downloaded" xml:space="preserve"><value>stiahnuté</value></data>
+  <data name="Sticker_Pack_Downloading" xml:space="preserve"><value>sťahuje sa</value></data>
+  <data name="Sticker_Pack_Share" xml:space="preserve"><value>zdieľať</value></data>
+  <data name="Sticker_Store_ContextMenu_Remove" xml:space="preserve"><value>odstrániť</value></data>
+  <data name="Sticker_Store_Menu_Item" xml:space="preserve"><value>obchod s nálepkami</value></data>
+  <data name="Sticker_Store_Remove_Error" xml:space="preserve"><value>Balíček nálepiek sa nepodarilo odstrániť.</value></data>
+  <data name="Sticker_Store_Tab_All" xml:space="preserve"><value>všetky</value></data>
+  <data name="Sticker_Store_Tab_Featured" xml:space="preserve"><value>prezentované</value></data>
+  <data name="Sticker_Store_Tab_Owned" xml:space="preserve"><value>vaše</value></data>
+  <data name="Sticker_Store_Title" xml:space="preserve"><value>OBCHOD S NÁLEPKAMI</value></data>
+  <data name="SuggestedPins_Pinning_StateIndicator" xml:space="preserve"><value>Pripína sa...</value></data>
+  <data name="SuggestedPins_SearchBox_Hint" xml:space="preserve"><value>hľadať skupiny</value></data>
+  <data name="SuggestedPins_Title_PinGroup" xml:space="preserve"><value>PRIPNÚŤ SKUPINU</value></data>
+  <data name="SyncContact_Button_LearnMore" xml:space="preserve"><value>Ďalšie informácie</value></data>
+  <data name="SyncContact_ErrorMessage_UnableToToggle" xml:space="preserve"><value>Vaše nastavenie sa nepodarilo zmeniť. Skontrolujte svoje internetové pripojenie a skúste znova.</value></data>
+  <data name="SyncContact_Subtitle" xml:space="preserve"><value>Zosynchronizujte si kontakty, aby ste videli, kto ďalší je v Messengeri. Vaše kontakty sa budú priebežne synchronizovať a udržiavať v aktuálnom stave.</value></data>
+  <data name="SyncContact_Title" xml:space="preserve"><value>Napíšte správu komukoľvek z vašich kontaktov v telefóne</value></data>
+  <data name="SyncContacts_MessageBox_LinkLabel" xml:space="preserve"><value>Viac informácií</value></data>
+  <data name="Thread_AppBar_Details" xml:space="preserve"><value>podrobnosti</value></data>
+  <data name="Thread_AppBar_View_Members" xml:space="preserve"><value>zobraziť ľudí</value></data>
+  <data name="Thread_Name_NoParticipant_Title" xml:space="preserve"><value>skupina bez ľudí</value></data>
+  <data name="Thread_UnnamedUserPlaceholder_Title" xml:space="preserve"><value>Osoba na Facebooku</value></data>
+  <data name="Threads_AppBar_Compose" xml:space="preserve"><value>nové</value></data>
+  <data name="Threads_AppBar_Refresh" xml:space="preserve"><value>obnoviť</value></data>
+  <data name="UnMute_Conversation_Menu_Item" xml:space="preserve"><value>obnoviť</value></data>
+  <data name="Unsent_Message_Warning" xml:space="preserve"><value>Chcete opustiť Messenger? Svoje správy ste ešte neodoslali.</value></data>
+  <data name="Verify_PhoneNumber_Box_Title" xml:space="preserve"><value>Telefónne číslo</value></data>
+  <data name="VideoRecorder_HelpText_Cancel" xml:space="preserve"><value>Nahrávanie môžete zrušiť a začať znova</value></data>
+  <data name="VideoRecorder_HelpText_HoldToSend" xml:space="preserve"><value>Podržaním odošlete video, ťuknutím odošlete fotku</value></data>
+  <data name="VideoRecorder_HelpText_Send" xml:space="preserve"><value>Odosielanie zrušíte potiahnutím prsta smerom od tlačidla Odoslať</value></data>
+  <data name="View_Timeline_Menu_Item" xml:space="preserve"><value>časová os</value></data>
+  <data name="Voice_Clip_Hold_Instruction" xml:space="preserve"><value>Ťuknutím a podržaním nahráte a odošlete zvukový klip</value></data>
+  <data name="Voice_Clip_Length_Limit" xml:space="preserve"><value>Dosiahol sa časový limit; uvoľnením nahrávku odošlete</value></data>
+  <data name="Voice_Clip_Menu_Item" xml:space="preserve"><value>odoslať zvukový klip</value></data>
+  <data name="Voice_Clip_NUX_Instruction" xml:space="preserve"><value>Uvoľnením odošlete, potiahnutím preč zrušíte</value></data>
+  <data name="Voice_Clip_Record" xml:space="preserve"><value>nahrať</value></data>
+  <data name="Voice_Clip_Release_Cancel" xml:space="preserve"><value>Uvoľnením zrušíte nahrávanie</value></data>
+  <data name="orca_neue_nux_add_phone_body1_searchable_all_not_verified" xml:space="preserve"><value>Ľudia, ktorí majú vaše telefónne číslo, si vás môžu pridať do kontaktov, no na Facebooku sa toto číslo zobrazuje len vám.</value></data>
+  <data name="orca_neue_nux_add_phone_body1_searchable_all_visible_all" xml:space="preserve"><value>Ľudia, ktorí majú vaše telefónne číslo, si vás môžu pridať do kontaktov.</value></data>
+  <data name="orca_neue_nux_add_phone_body1_searchable_all_visible_custom" xml:space="preserve"><value>Ľudia, ktorí majú vaše telefónne číslo, si vás môžu pridať do kontaktov, ale nezmenia sa tým nastavenia toho, komu sa zobrazí vaše číslo na Facebooku.</value></data>
+  <data name="orca_neue_nux_add_phone_body1_searchable_all_visible_friends" xml:space="preserve"><value>Ľudia, ktorí majú vaše telefónne číslo, si vás môžu pridať do kontaktov, no na Facebooku sa toto číslo zobrazuje len vašim priateľom.</value></data>
+  <data name="orca_neue_nux_add_phone_body1_searchable_all_visible_self" xml:space="preserve"><value>Ľudia, ktorí majú vaše telefónne číslo, si vás môžu pridať do kontaktov, no na Facebooku sa toto číslo zobrazuje len vám.</value></data>
+  <data name="orca_neue_nux_add_phone_body1_searchable_fof" xml:space="preserve"><value>Nato, aby ste sa mohli spojiť, nemusíte byť priateľmi na Facebooku. Vaše nastavenie na Facebooku sa preto rozšíri tak, aby vás každý, kto má vaše číslo, mohol podľa neho vyhľadať.</value></data>
+  <data name="orca_neue_nux_add_phone_body2_not_verified" xml:space="preserve"><value>Toto číslo sa na Facebooku zobrazuje len vám.</value></data>
+  <data name="orca_neue_nux_add_phone_body2_visible_custom" xml:space="preserve"><value>Nezmenia sa tým nastavenia toho, komu sa zobrazí vaše číslo na Facebooku.</value></data>
+  <data name="orca_neue_nux_add_phone_body2_visible_friends" xml:space="preserve"><value>Toto číslo sa na Facebooku zobrazuje len priateľom.</value></data>
+  <data name="orca_neue_nux_add_phone_body2_visible_self" xml:space="preserve"><value>Toto číslo sa na Facebooku zobrazuje len vám.</value></data>
+  <data name="orca_neue_nux_add_phone_title_no_verified_number" xml:space="preserve"><value>Na ktorom čísle vás môžu ľudia zastihnúť?</value></data>
+  <data name="orca_neue_nux_add_phone_title_verified_long" xml:space="preserve"><value>Na tomto čísle vás môžu ľudia zastihnúť?</value></data>
+  <data name="orca_neue_nux_add_phone_title_verified_short" xml:space="preserve"><value>Je vaše číslo aktuálne?</value></data>
+</root>

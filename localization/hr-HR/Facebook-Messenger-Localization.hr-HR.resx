@@ -1,0 +1,395 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Active_AppBar_Chat" xml:space="preserve"><value>čavrljanje</value></data>
+  <data name="AddContact_Contact_Already_Exists" xml:space="preserve"><value>Ovaj telefonski broj već ste dodali u kontakte.</value></data>
+  <data name="AddContact_FBUser_Already_Exists" xml:space="preserve"><value>U kontakte se već dodali korisnika {0}.</value></data>
+  <data name="AddContact_Invite_Button" xml:space="preserve"><value>pozovi</value></data>
+  <data name="AddContact_MatchedExistingUser_Label" xml:space="preserve"><value>Osoba {0} već se nalazi u vašim kontaktima na Messengeru</value></data>
+  <data name="AddContact_MatchingUser_Label" xml:space="preserve"><value>Vašim kontaktima u Messengeru dodan je korisnik {0}</value></data>
+  <data name="AddContact_Message_Button" xml:space="preserve"><value>pošaljite poruku korisniku {0}</value></data>
+  <data name="AddContact_PhoneNumber_Description" xml:space="preserve"><value>Unesite broj telefona neke osobe i pronađite je na Messengeru.</value></data>
+  <data name="AddContact_PhoneNumber_Title" xml:space="preserve"><value>DODAVANJE KONTAKATA</value></data>
+  <data name="AddContact_Remove_Contact_Warning" xml:space="preserve"><value>Korisnik {0} bit će uklonjen iz vaših kontakata u Messengeru.</value></data>
+  <data name="AddContact_Remove_MessageBox_Title" xml:space="preserve"><value>Ukloniti kontakt</value></data>
+  <data name="AddPhotos_Menu_ChooseFromAlbum" xml:space="preserve"><value>Odaberi iz albuma</value></data>
+  <data name="AddPhotos_Menu_RemovePhotos" xml:space="preserve"><value>Ukloni fotografiju</value></data>
+  <data name="AddPhotos_Menu_TakePhoto" xml:space="preserve"><value>Slikaj</value></data>
+  <data name="AddPhotos_Title_EditProfilePicture" xml:space="preserve"><value>UREDI SLIKU PROFILA</value></data>
+  <data name="AddPhotos_Title_SetGroupPhoto" xml:space="preserve"><value>POSTAVITE SLIKU GRUPE</value></data>
+  <data name="Add_Phone_Number_Label" xml:space="preserve"><value>Dodaj broj telefona</value></data>
+  <data name="AppBar_Cancel" xml:space="preserve"><value>odustani</value></data>
+  <data name="AppBar_No" xml:space="preserve"><value>ne</value></data>
+  <data name="AppBar_Ok" xml:space="preserve"><value>u redu</value></data>
+  <data name="AppBar_Remove" xml:space="preserve"><value>ukloni</value></data>
+  <data name="AppBar_Undo" xml:space="preserve"><value>poništi</value></data>
+  <data name="AppBar_Yes" xml:space="preserve"><value>da</value></data>
+  <data name="AppUpdate_Description" xml:space="preserve"><value>Ažurirajte Messenger da biste dobili nove značajke i poboljšanja.</value></data>
+  <data name="AppUpdate_NotNowButton" xml:space="preserve"><value>Ne sada</value></data>
+  <data name="AppUpdate_Title" xml:space="preserve"><value>Dostupno je ažuriranje za Messenger</value></data>
+  <data name="AppUpdate_UpdateAppButton" xml:space="preserve"><value>Ažuriraj</value></data>
+  <data name="App_Location_Services_Enable" xml:space="preserve"><value>Želite li u porukama prikazati svoju lokaciju, idite na postavke za Messenger.</value></data>
+  <data name="App_Quit_Caption" xml:space="preserve"><value>Izađite iz Messengera</value></data>
+  <data name="Attachments_AppBar_Next" xml:space="preserve"><value>sljedeća</value></data>
+  <data name="Attachments_AppBar_Previous" xml:space="preserve"><value>prethodna</value></data>
+  <data name="Attachments_AppBar_Skip" xml:space="preserve"><value>preskoči</value></data>
+  <data name="BackgroundToast_LeavingApp_Title" xml:space="preserve"><value>Messenger</value></data>
+  <data name="BackgroundToast_LeavingApp_Warning" xml:space="preserve"><value>Zatvorili ste Messenger, a neke poruke nisu poslane. Otvorite Messenger kako biste poslali poruke.</value></data>
+  <data name="ButtonLabelRetry" xml:space="preserve"><value>Pokušaj ponovno</value></data>
+  <data name="Button_Continue" xml:space="preserve"><value>Nastavi</value></data>
+  <data name="CanonicalThreadDetailsPage_Start_Group" xml:space="preserve"><value>napravi grupu</value></data>
+  <data name="CanonicalThreadDetailsPage_Title" xml:space="preserve"><value>pojedinosti</value></data>
+  <data name="Chat_Is_Off" xml:space="preserve"><value>Čavrljanje je isključeno</value></data>
+  <data name="Chat_Is_Off_Details_Label" xml:space="preserve"><value>Ako isključite čavrljanje, i dalje ćete primati sve svoje poruke, ali ako ga uključite, vidjet ćete tko je aktivan na Facebooku.</value></data>
+  <data name="Client_Type_Mobile" xml:space="preserve"><value>Mobilni telefon</value></data>
+  <data name="Client_Type_Web" xml:space="preserve"><value>Mreža</value></data>
+  <data name="Composer_Exit_Warning" xml:space="preserve"><value>Otkazati poruku?</value></data>
+  <data name="Composer_Groups_Search_Header" xml:space="preserve"><value>GRUPE</value></data>
+  <data name="Composer_More_People_Search_Header" xml:space="preserve"><value>VIŠE OSOBA</value></data>
+  <data name="Composer_SendingMessage" xml:space="preserve"><value>slanje poruke...</value></data>
+  <data name="Composer_To" xml:space="preserve"><value>Primatelj:</value></data>
+  <data name="Confirm_Phone_Number_Label" xml:space="preserve"><value>Potvrda broja telefona</value></data>
+  <data name="ContactCard_MenuLabel_CreateGroup" xml:space="preserve"><value>kreirajte grupu s korisnikom {0}</value></data>
+  <data name="ContactCard_MenuLabel_RemoveContact" xml:space="preserve"><value>ukloniti kontakt</value></data>
+  <data name="ContactCard_MenuLabel_SendMessage" xml:space="preserve"><value>pošaljite poruku korisniku {0}</value></data>
+  <data name="ContactList_Header_ContactsFound" xml:space="preserve"><value>Pronađeno kontakata: {0}</value></data>
+  <data name="ContactList_Header_Failed" xml:space="preserve"><value>učitavanje kontakta nije uspjelo. pokušati ponovo?</value></data>
+  <data name="ContactList_Header_FindContacts" xml:space="preserve"><value>pronađi kontakte</value></data>
+  <data name="ContactList_Header_ShowAll" xml:space="preserve"><value>prikaži sve</value></data>
+  <data name="ContactList_Header_SyncingContacts" xml:space="preserve"><value>sinkroniziranje kontakata...</value></data>
+  <data name="ContactList_Nux_Label_EmptyList" xml:space="preserve"><value>Možete sinkronizirati kontakte kako biste vidjeli koga već poznajete na Messengeru.</value></data>
+  <data name="ContactList_Nux_Label_NoMatchingContacts" xml:space="preserve"><value>Ovdje ćete vidjeti svoje kontakte. Dodirnite ikonu kontakta kako biste nekoga dodali.</value></data>
+  <data name="Contact_Search_No_Results" xml:space="preserve"><value>Nema rezultata</value></data>
+  <data name="Contacts_Find_Button_Label" xml:space="preserve"><value>pronađi kontakte</value></data>
+  <data name="Contacts_Invite_Button_Label" xml:space="preserve"><value>pozovite korisnike</value></data>
+  <data name="Conversation_AppBar_AttachPhoto" xml:space="preserve"><value>fotografije</value></data>
+  <data name="Conversation_AppBar_Camera" xml:space="preserve"><value>fotoaparat</value></data>
+  <data name="Conversation_AppBar_ChangePhoto" xml:space="preserve"><value>fotografija</value></data>
+  <data name="Conversation_AppBar_Like" xml:space="preserve"><value>sviđa mi se</value></data>
+  <data name="Conversation_AppBar_Send" xml:space="preserve"><value>pošalji</value></data>
+  <data name="Conversation_AppBar_Text" xml:space="preserve"><value>pošalji SMS poruku</value></data>
+  <data name="Conversation_ContextMenu_RemoveAttachment" xml:space="preserve"><value>ukloni sliku.</value></data>
+  <data name="Conversation_MenuItem_Rename" xml:space="preserve"><value>naziv</value></data>
+  <data name="CreateGroup_TextBox_Label" xml:space="preserve"><value>Naziv grupe</value></data>
+  <data name="CreateGroup_Title" xml:space="preserve"><value>NOVA GRUPA</value></data>
+  <data name="Device_Location_Services_Enable" xml:space="preserve"><value>Da biste podijelili lokaciju u svojim porukama idite na postavke lokacije na telefonu.</value></data>
+  <data name="Empty_Conversation_Placeholder_Text" xml:space="preserve"><value>{0} koristi Messenger i odmah će primiti vaše poruke.</value></data>
+  <data name="Empty_Conversation_Placeholder_Text_For_Non_Messenger_User" xml:space="preserve"><value>{0} ne koristi Messenger, ali će vaše poruke dobiti na Facebooku.</value></data>
+  <data name="Empty_Conversation_Placeholder_Title" xml:space="preserve"><value>Započnite razgovor</value></data>
+  <data name="Error_Cannot_Attach_File" xml:space="preserve"><value>Datoteku nije moguće pridružiti. Pokušajte ponovno.</value></data>
+  <data name="Error_Cannot_Fetch_Conversations" xml:space="preserve"><value>Žao nam je, trenutno nije moguće prikazati poruke. Pokušajte ponovno kasnije.</value></data>
+  <data name="Error_Cannot_Fetch_Messages" xml:space="preserve"><value>Žao nam je, poruke nije moguće trenutno prikazati. Pokušajte ponovno kasnije.</value></data>
+  <data name="Error_Cannot_Fetch_Sticker_Packs" xml:space="preserve"><value>Žao nam je, ali naljepnice se trenutno ne mogu prikazati.</value></data>
+  <data name="Error_Changing_Mute" xml:space="preserve"><value>Nije moguće isključiti razgovor. Pokušajte ponovno kasnije.</value></data>
+  <data name="Error_Changing_Unmute" xml:space="preserve"><value>Uključivanje zvuka nije uspjelo. Pokušajte ponovo.</value></data>
+  <data name="Error_Gallery_Out_Of_Memory" xml:space="preserve"><value>U privitak ne možemo staviti sliku ove veličine.</value></data>
+  <data name="Error_Invalid_Phone_Number" xml:space="preserve"><value>Unesite valjani broj telefona.</value></data>
+  <data name="Error_Invalid_Phone_Prefix" xml:space="preserve"><value>Upotrijebite valjan pozivni broj za državu.</value></data>
+  <data name="Error_Max_File_Attachment_Exceeded" xml:space="preserve"><value>Ovoj poruci se ne može pridružiti više slika.</value></data>
+  <data name="Error_No_Connection" xml:space="preserve"><value>Nema internetske veze</value></data>
+  <data name="Error_No_Conversations" xml:space="preserve"><value>Još nemate nijednu konverzaciju.</value></data>
+  <data name="ExistingUser_Create_Account_Button" xml:space="preserve"><value>napravite novi račun</value></data>
+  <data name="ExistingUser_Description" xml:space="preserve"><value>Ovaj broj odgovara Facebook računu korisnika {0}{1}.</value></data>
+  <data name="ExistingUser_LoginAs_Button" xml:space="preserve"><value>prijavite se kao {0}</value></data>
+  <data name="ExistingUser_Title" xml:space="preserve"><value>Želite li se prijaviti putem Facebooka?</value></data>
+  <data name="FetchingDataFromServerFailed" xml:space="preserve"><value>Učitavanje podataka nije uspjelo. Pokušajte ponovo.</value></data>
+  <data name="FlyTrap_Error_Generic" xml:space="preserve"><value>Izvješće nije moguće prijaviti.</value></data>
+  <data name="FlyTrap_Label_Disclaimer" xml:space="preserve"><value>Informacije o vašem telefonu i ovoj aplikaciji automatski će se uključiti. Da biste saznali više o tome kako se koriste ove informacije, posjetite našu stranicu {0}</value></data>
+  <data name="FlyTrap_Label_Disclaimer_DataUsePolicyLink" xml:space="preserve"><value>Pravila o upotrebi podataka</value></data>
+  <data name="FlyTrap_Label_Instructions" xml:space="preserve"><value>Opišite što ste radili i što nije bilo u redu.</value></data>
+  <data name="FlyTrap_Label_Screenshot" xml:space="preserve"><value>Snimka ekrana</value></data>
+  <data name="FlyTrap_MenuItem_ReportProblem" xml:space="preserve"><value>prijavi problem</value></data>
+  <data name="FlyTrap_TextboxHint_Problem" xml:space="preserve"><value>opišite problem</value></data>
+  <data name="FlyTrap_Title_ReportProblem" xml:space="preserve"><value>PRIJAVI PROBLEM</value></data>
+  <data name="Forwarding_SearchBox_HintText" xml:space="preserve"><value>pronađite osobe</value></data>
+  <data name="Forwarding_Title_Label" xml:space="preserve"><value>PROSLIJEDI PORUKU</value></data>
+  <data name="Friends_AppBar_AddContact" xml:space="preserve"><value>dodaj kontakt</value></data>
+  <data name="Global_Notifcation_Off_Until" xml:space="preserve"><value>Isključeno do {0}</value></data>
+  <data name="Global_Notification_Off" xml:space="preserve"><value>Isključeno</value></data>
+  <data name="Global_Notification_On" xml:space="preserve"><value>Uključeno</value></data>
+  <data name="GroupDetailsPage_AppBar_LeaveGroup" xml:space="preserve"><value>napusti grupu</value></data>
+  <data name="GroupDetailsPage_AppBar_RemoveGroupName" xml:space="preserve"><value>ukloni naziv</value></data>
+  <data name="GroupDetailsPage_AppBar_RemoveGroupPhoto" xml:space="preserve"><value>ukloni fotografiju grupe</value></data>
+  <data name="GroupDetailsPage_Title" xml:space="preserve"><value>grupa</value></data>
+  <data name="GroupMember_Context_Menu_Remove_Member" xml:space="preserve"><value>ukloni</value></data>
+  <data name="GroupTile_Date_ActiveDaysAgo" xml:space="preserve"><value>Aktivan prije {0}</value></data>
+  <data name="GroupTile_Date_ActiveLastMonth" xml:space="preserve"><value>Aktivna prošli mjesec</value></data>
+  <data name="GroupTile_Date_ActiveLastYear" xml:space="preserve"><value>Aktivna prošle godine</value></data>
+  <data name="GroupTile_Date_ActiveMonthsAgo" xml:space="preserve"><value>Aktivan prije {0}</value></data>
+  <data name="GroupTile_Date_ActiveToday" xml:space="preserve"><value>Aktivna danas</value></data>
+  <data name="GroupTile_Date_ActiveYearsAgo" xml:space="preserve"><value>Aktivan prije {0} godina</value></data>
+  <data name="GroupTile_Date_ActiveYesterday" xml:space="preserve"><value>Aktivna jučer</value></data>
+  <data name="Group_AddPeople_Search" xml:space="preserve"><value>Tražilica</value></data>
+  <data name="Group_AddPeople_Title" xml:space="preserve"><value>DODAJ OSOBE</value></data>
+  <data name="Group_AddingParticipants_Failed_Message" xml:space="preserve"><value>NIje moguće dodati ljude u ovu grupu. Pokušajte ponovno.</value></data>
+  <data name="Group_AddingParticipants_Failed_Title" xml:space="preserve"><value>Ljude nije moguće dodati</value></data>
+  <data name="Group_AppBar_SelectMany" xml:space="preserve"><value>Odaberite više stavki</value></data>
+  <data name="Group_RemovingParticipants_Failed_Message" xml:space="preserve"><value>Ljude nije moguće ukloniti. Pokušajte ponovno kasnije.</value></data>
+  <data name="Group_RemovingParticipants_Failed_Title" xml:space="preserve"><value>Ljude nije moguće ukloniti.</value></data>
+  <data name="Groups_AppBar_Add" xml:space="preserve"><value>označi</value></data>
+  <data name="Groups_AppBar_Create" xml:space="preserve"><value>kreiraj</value></data>
+  <data name="Groups_AppBar_Next" xml:space="preserve"><value>sljedeća</value></data>
+  <data name="Groups_NUX_Button_Text" xml:space="preserve"><value>Započni</value></data>
+  <data name="Groups_NUX_Help_Title" xml:space="preserve"><value>Sada možete označiti grupe da se možete lako na njih vratiti.</value></data>
+  <data name="Groups_NUX_NoThread_Button_Text" xml:space="preserve"><value>Kreiraj novu grupu</value></data>
+  <data name="Groups_NUX_PlaceholderActive_LastWeek" xml:space="preserve"><value>Aktivna prošli tjedan</value></data>
+  <data name="Groups_NUX_PlaceholderActive_Yesterday" xml:space="preserve"><value>Aktivna jučer</value></data>
+  <data name="Groups_NUX_PlaceholderFour_Members" xml:space="preserve"><value>Ivanović, Ivan</value></data>
+  <data name="Groups_NUX_PlaceholderFour_Title" xml:space="preserve"><value>Radne kolege</value></data>
+  <data name="Groups_NUX_PlaceholderOne_Members" xml:space="preserve"><value>Horvat, Goran</value></data>
+  <data name="Groups_NUX_PlaceholderOne_Title" xml:space="preserve"><value>Cimeri</value></data>
+  <data name="Groups_NUX_PlaceholderThree_Members" xml:space="preserve"><value>Ivković, Petar</value></data>
+  <data name="Groups_NUX_PlaceholderThree_Title" xml:space="preserve"><value>Ekipa za vikend</value></data>
+  <data name="Groups_NUX_PlaceholderTwo_Members" xml:space="preserve"><value>Ana, Ivan, Iva, Goran</value></data>
+  <data name="Groups_NUX_PlaceholderTwo_Title" xml:space="preserve"><value>Obitelj</value></data>
+  <data name="Image_Search_Empty_Results" xml:space="preserve"><value>Nijedna fotografija nije pronađena.</value></data>
+  <data name="Image_Search_Menu_Item" xml:space="preserve"><value>potražite sliku</value></data>
+  <data name="Image_Search_Popup_Cancel" xml:space="preserve"><value>Odustani</value></data>
+  <data name="Image_Search_Popup_Message" xml:space="preserve"><value>Što tražite?</value></data>
+  <data name="Image_Search_Popup_Search" xml:space="preserve"><value>Traži</value></data>
+  <data name="Image_Search_Popup_Title" xml:space="preserve"><value>Pretraživanje slika</value></data>
+  <data name="Invite_Contact_ToMessenger" xml:space="preserve"><value>Isprobaj Messenger: {0}</value></data>
+  <data name="Location_Menu_Item" xml:space="preserve"><value>pošalji lokaciju</value></data>
+  <data name="Location_Services_Disabled" xml:space="preserve"><value>Lokacija je isključena</value></data>
+  <data name="Location_Warning_Body" xml:space="preserve"><value>Ljudi u ovom razgovoru mogu vidjeti gdje se nalazite na karti. Dodirnite da uključite ili isključite lokaciju.</value></data>
+  <data name="LoginApproval_ResendCode" xml:space="preserve"><value>pošalji ponovno</value></data>
+  <data name="LoginApproval_Title_EnterCode" xml:space="preserve"><value>Unesite kod koji ste dobili u poruci.</value></data>
+  <data name="Login_Approval_Security_Code" xml:space="preserve"><value>Kod za potvrdu</value></data>
+  <data name="Login_NotOnFacebook" xml:space="preserve"><value>Niste na Facebooku?</value></data>
+  <data name="Login_RecoverPassword" xml:space="preserve"><value>Zaboravili ste lozinku?</value></data>
+  <data name="Login_SigningIn" xml:space="preserve"><value>prijavljivanje</value></data>
+  <data name="Login_TextboxHint_EmailOrPhone" xml:space="preserve"><value>E-pošta ili broj telefona</value></data>
+  <data name="Login_TextboxHint_Password" xml:space="preserve"><value>Lozinka</value></data>
+  <data name="Login_Title_SignIn" xml:space="preserve"><value>Prijava pomoću aplikacije Facebook</value></data>
+  <data name="Login_Title_Welcome" xml:space="preserve"><value>Dobro došli u Messenger</value></data>
+  <data name="Login_With_Facebook" xml:space="preserve"><value>Prijavite se putem Facebooka</value></data>
+  <data name="MainPage_Active_Chat_Popup" xml:space="preserve"><value>CHAT</value></data>
+  <data name="MainPage_Active_Disable_Chat" xml:space="preserve"><value>isključi čavrljanje</value></data>
+  <data name="MainPage_Active_Enable_Chat" xml:space="preserve"><value>uključi čavrljanje</value></data>
+  <data name="MainPage_AppBar_Mute_Button" xml:space="preserve"><value>bez zvuka</value></data>
+  <data name="MainPage_AppBar_UnMute_Button" xml:space="preserve"><value>uključi zvuk</value></data>
+  <data name="MainPage_AppMenu_OtherFolder" xml:space="preserve"><value>druga mapa</value></data>
+  <data name="MainPage_AppMenu_Settings" xml:space="preserve"><value>postavke</value></data>
+  <data name="MainPage_Pivot_Title_Active" xml:space="preserve"><value>aktivan</value></data>
+  <data name="MainPage_Pivot_Title_Friends" xml:space="preserve"><value>messenger</value></data>
+  <data name="MainPage_Pivot_Title_Groups" xml:space="preserve"><value>grupe</value></data>
+  <data name="MainPage_Pivot_Title_Recent_Threads" xml:space="preserve"><value>nedavno</value></data>
+  <data name="Matching_Contact_NotFound_Message" xml:space="preserve"><value>Korisnika {0} nismo mogli povezati s osobom u Messengeru</value></data>
+  <data name="MessageBox_Description_ArchiveThread" xml:space="preserve"><value>Da biste vidjeli arhivirane razgovore morate se prijaviti na Facebookovu web-stranicu.</value></data>
+  <data name="MessageBox_Description_DeleteThread" xml:space="preserve"><value>Ovo će trajno obrisati razgovor.</value></data>
+  <data name="MessageBox_Description_FlyTrapSuccess" xml:space="preserve"><value>Hvala vam na povratnim informacijama!</value></data>
+  <data name="MessageBox_Description_LeaveThread" xml:space="preserve"><value>Ako napustite razgovor, nećete moći primati nove poruke.</value></data>
+  <data name="MessageBox_Description_SpamThread" xml:space="preserve"><value>Ako nešto označite kao naželjenu poruku, nećete je više moći vidjeti u svojim nedavnim porukama.</value></data>
+  <data name="MessageBox_Label_ArchiveThread" xml:space="preserve"><value>Arhivirajte ovaj razgovor?</value></data>
+  <data name="MessageBox_Label_AuthenticateWithBrowser" xml:space="preserve"><value>Otvorite internetski preglednik da biste se spojili</value></data>
+  <data name="MessageBox_Label_BypassLogin2Fac" xml:space="preserve"><value>Uključili ste odobrenja za prijavu. Za nastavak unesite lozinku.</value></data>
+  <data name="MessageBox_Label_BypassLoginFail" xml:space="preserve"><value>Nismo uspjeli potvrditi telefonski broj. Molimo, pokušajte ponovo.</value></data>
+  <data name="MessageBox_Label_ClearThreadPhotoFailed" xml:space="preserve"><value>Uklanjanje fotografije grupe nije uspjelo.</value></data>
+  <data name="MessageBox_Label_ConfirmPhoneNumberFailed" xml:space="preserve"><value>Vaš broj nije moguće potvrditi</value></data>
+  <data name="MessageBox_Label_ConfirmationCodeInvalid" xml:space="preserve"><value>Neispravan potvrdni kod.</value></data>
+  <data name="MessageBox_Label_CreateGroupFailed" xml:space="preserve"><value>Grupu nije moguće kreirati</value></data>
+  <data name="MessageBox_Label_DeleteThread" xml:space="preserve"><value>Obrisati razgovor?</value></data>
+  <data name="MessageBox_Label_ForwardingFailed" xml:space="preserve"><value>Poruka nije mogla biti proslijeđena svim primateljima.</value></data>
+  <data name="MessageBox_Label_LeaveThread" xml:space="preserve"><value>Napustiti grupu?</value></data>
+  <data name="MessageBox_Label_LoginFailed" xml:space="preserve"><value>Prijava trenutno nije moguća.</value></data>
+  <data name="MessageBox_Label_NamingConversation_Error" xml:space="preserve"><value>Razgovor nije moguće preimenovati.</value></data>
+  <data name="MessageBox_Label_NoInternet" xml:space="preserve"><value>Nema internetske veze</value></data>
+  <data name="MessageBox_Label_PinGroupFailed" xml:space="preserve"><value>Grupu nije moguće označiti.</value></data>
+  <data name="MessageBox_Label_SetThreadPhotoFailed" xml:space="preserve"><value>Nije moguće postaviti fotografiju grupe.</value></data>
+  <data name="MessageBox_Label_SpamThread" xml:space="preserve"><value>označi kao neželjeno dopisivanje</value></data>
+  <data name="MessageBox_Label_UpdatePhoneNumberFailed" xml:space="preserve"><value>Broj nije moguće ažurirati.</value></data>
+  <data name="MessageBox_Label_UploadProfilePic_Failed" xml:space="preserve"><value>Postavljanje slike profila nije bilo moguće.</value></data>
+  <data name="MessageBox_Popup_Cancel" xml:space="preserve"><value>Odustani</value></data>
+  <data name="MessageBox_Title_AddContactFailed" xml:space="preserve"><value>U ovom trenutku pronalaženje kontakata nije moguće.</value></data>
+  <data name="MessageBox_Title_FlyTrapSuccess" xml:space="preserve"><value>Izvješće poslano</value></data>
+  <data name="MessageBox_Title_LoginFailed" xml:space="preserve"><value>Prijava trenutno nije moguća</value></data>
+  <data name="MessageComposer_EmptyGallery_Text" xml:space="preserve"><value>Još uvijek mema fotografija u vašoj galeriji.</value></data>
+  <data name="MessageDetails_Error_Unexpected" xml:space="preserve"><value>Žao nam je, ne možemo prikazati podatke o poruci. Pokušajte ponovo.</value></data>
+  <data name="MessageDetails_Label_SeenBy" xml:space="preserve"><value>Vidjeli:</value></data>
+  <data name="MessageSnippetAudioClipLoggedInUser" xml:space="preserve"><value>Poslali ste glasovni zapis.</value></data>
+  <data name="MessageSnippetAudioClipOtherUser" xml:space="preserve"><value>{0} šalje glasovni zapis.</value></data>
+  <data name="MessageSnippetGenericLoggedInUser" xml:space="preserve"><value>Poslali ste poruku.</value></data>
+  <data name="MessageSnippetGenericOtherUser" xml:space="preserve"><value>{0} šalje poruku.</value></data>
+  <data name="MessageSnippetPhotoLoggedInUser" xml:space="preserve"><value>Poslali ste sliku.</value></data>
+  <data name="MessageSnippetPhotoOtherUser" xml:space="preserve"><value>{0} šalje sliku.</value></data>
+  <data name="MessageSnippetStickerLoggedInUser" xml:space="preserve"><value>Poslali ste naljepnicu.</value></data>
+  <data name="MessageSnippetStickerOtherUser" xml:space="preserve"><value>{0} šalje naljepnicu.</value></data>
+  <data name="MessageSnippetVideoLoggedInUser" xml:space="preserve"><value>Poslali ste videozapis.</value></data>
+  <data name="MessageSnippetVideoOtherUser" xml:space="preserve"><value>{0} šalje videozapis.</value></data>
+  <data name="MessageSnippetWhenSenderIsTheLoggedInUser" xml:space="preserve"><value>Vi</value></data>
+  <data name="MessageStatus_Location_City" xml:space="preserve"><value>Poslano iz grada {0}</value></data>
+  <data name="MessageStatus_Location_CityCountry" xml:space="preserve"><value>Poslano iz grada {0}, države {1}</value></data>
+  <data name="MessageStatus_Location_CityState" xml:space="preserve"><value>Poslano iz grada {0}, države {1}</value></data>
+  <data name="MessageStatus_Location_DistrictCity" xml:space="preserve"><value>Poslano iz kvarta {0} u gradu {1}</value></data>
+  <data name="MessageStatus_Origin_Messenger" xml:space="preserve"><value>Poslano pomoću Messengera</value></data>
+  <data name="MessageStatus_Origin_Mobile" xml:space="preserve"><value>Poslano sa mobilnog uređaja</value></data>
+  <data name="MessageStatus_Origin_Web" xml:space="preserve"><value>Poslano s mreže</value></data>
+  <data name="MessageStatus_SeenBy_1" xml:space="preserve"><value>Ovo je vidio korisnik {0}</value></data>
+  <data name="MessageStatus_SeenBy_2" xml:space="preserve"><value>Ovo su vidjeli korisnici {0} i {1}</value></data>
+  <data name="MessageStatus_SeenBy_3" xml:space="preserve"><value>Ovo su vidjeli korisnici {0}, {1}, {2}</value></data>
+  <data name="MessageStatus_SeenBy_4" xml:space="preserve"><value>Ovo su vidjeli korsnici {0}, {1}, {2} i {3}</value></data>
+  <data name="MessageStatus_SeenBy_Everyone" xml:space="preserve"><value>Svi su pročitali poruku</value></data>
+  <data name="MessageStatus_SeenBy_Others" xml:space="preserve"><value>Objavu su vidjeli korisnici {0}, {1}, {2} i još {3} drugih.</value></data>
+  <data name="MessageStatus_Seen_Timestamp" xml:space="preserve"><value>Pročitano {0}</value></data>
+  <data name="Message_Delete_Caption" xml:space="preserve"><value>Izbriši poruku</value></data>
+  <data name="Message_Delete_Text" xml:space="preserve"><value>Želite li trajno izbrisati ovu poruku?</value></data>
+  <data name="Message_Sending_Failed" xml:space="preserve"><value>Poruku nije moguće poslati.</value></data>
+  <data name="Message_Sending_Failed_App_Exited_Description" xml:space="preserve"><value>Aplikacija je zatvorena prije nego što su vaše poruke poslane. Pokušajte ponovno.</value></data>
+  <data name="Message_Sending_Failed_Permission_Description" xml:space="preserve"><value>Žao nam je, ali ne možete poslati poruku ovoj osobi.</value></data>
+  <data name="Messages_Active_1m_Ago" xml:space="preserve"><value>zadnja aktivnost prije 1 min</value></data>
+  <data name="Messages_Active_Now" xml:space="preserve"><value>aktivan</value></data>
+  <data name="Messages_Active_Xd_Ago" xml:space="preserve"><value>zadnja aktivnost prije {0} dana</value></data>
+  <data name="Messages_Active_Xh_Ago" xml:space="preserve"><value>zadnja aktivnost prije {0} h</value></data>
+  <data name="Messages_Active_Xm_Ago" xml:space="preserve"><value>zadnja aktivnost prije {0} min</value></data>
+  <data name="Messages_AppBar_Send_Sticker" xml:space="preserve"><value>naljepnice</value></data>
+  <data name="Messages_ContextMenu_Copy" xml:space="preserve"><value>kopiraj tekst</value></data>
+  <data name="Messages_ContextMenu_Delete" xml:space="preserve"><value>izbriši</value></data>
+  <data name="Messages_ContextMenu_Forward" xml:space="preserve"><value>proslijedi</value></data>
+  <data name="Messages_ContextMenu_Retry" xml:space="preserve"><value>pokušajte ponovno</value></data>
+  <data name="Messages_Context_Menu_View_Details" xml:space="preserve"><value>pogledaj detalje</value></data>
+  <data name="Messages_Group_Message" xml:space="preserve"><value>GRUA</value></data>
+  <data name="Messages_Hint_Text" xml:space="preserve"><value>unesite poruku</value></data>
+  <data name="Messages_On_Facebook" xml:space="preserve"><value>Facebook</value></data>
+  <data name="Messages_On_Messenger" xml:space="preserve"><value>Messenger</value></data>
+  <data name="Messages_On_Mobile" xml:space="preserve"><value>na mobitelu</value></data>
+  <data name="Messages_Refreshing_Failed_StateIndicator" xml:space="preserve"><value>Ažuriranje nije moguće, provjerite svoju vezu</value></data>
+  <data name="Messages_Refreshing_StateIndicator" xml:space="preserve"><value>Osvježavanje...</value></data>
+  <data name="Messages_Refreshing_Success_Stateindicator" xml:space="preserve"><value>Ažurirano</value></data>
+  <data name="Messages_Share_Not_Viewable" xml:space="preserve"><value>Ovo je sadržaj možda uklonjen ili nemate dopuštenje da ga vidite.</value></data>
+  <data name="Mute_Conversation_For_An_Hour" xml:space="preserve"><value>isključi na 1 sat</value></data>
+  <data name="Mute_Conversation_Forever" xml:space="preserve"><value>bez zvuka</value></data>
+  <data name="Mute_Conversation_Menu_Item" xml:space="preserve"><value>bez zvuka</value></data>
+  <data name="Mute_Conversation_Until_8AM" xml:space="preserve"><value>isključi do 8 sati ujutro</value></data>
+  <data name="NameConversation_Menu_Clear" xml:space="preserve"><value>izbriši ime</value></data>
+  <data name="NameConversation_Title" xml:space="preserve"><value>NAZIV GRUPE</value></data>
+  <data name="NetworkStatus_Banner_Connected" xml:space="preserve"><value>Povezano</value></data>
+  <data name="NetworkStatus_Banner_Connecting" xml:space="preserve"><value>Povezivanje u tijeku...</value></data>
+  <data name="NetworkStatus_Banner_Disconnected" xml:space="preserve"><value>Čekanje na mrežu.</value></data>
+  <data name="NetworkStatus_Banner_No_Internet" xml:space="preserve"><value>Nema internetske veze</value></data>
+  <data name="NetworkStatus_Banner_Syncing" xml:space="preserve"><value>Sinkronizacija...</value></data>
+  <data name="NetworkStatus_Banner_UpToDate" xml:space="preserve"><value>Ažurno</value></data>
+  <data name="NewContacts_Header_FoundContacts" xml:space="preserve"><value>BROJ NOVIH KONTAKATA: {0}</value></data>
+  <data name="Notifications_Turn_Off_For_An_Hour" xml:space="preserve"><value>isključi na 1 sat</value></data>
+  <data name="Notifications_Turn_On" xml:space="preserve"><value>uključi</value></data>
+  <data name="Notifications_Turn_Until_8AM" xml:space="preserve"><value>isključi do 8 sati</value></data>
+  <data name="Nux_Title_OnMessenger" xml:space="preserve"><value>Koristite Messenger!</value></data>
+  <data name="Nux_Title_OnMessenger_Message" xml:space="preserve"><value>Svi označeni plavom ikonom Messengera trenutačno su dostupni.</value></data>
+  <data name="People_AppBar_AddContact" xml:space="preserve"><value>dodaj osobe</value></data>
+  <data name="People_AppBar_Search" xml:space="preserve"><value>traži</value></data>
+  <data name="PhoneNumber_Box_Title" xml:space="preserve"><value>Pozivni broj za državu i telefonski broj</value></data>
+  <data name="PhoneNumber_ListpickerLabel_CountryCode" xml:space="preserve"><value>ODABERITE DRŽAVU</value></data>
+  <data name="PhoneNumber_Registration_Welcome_Message" xml:space="preserve"><value>Za početak unesite svoj telefonski broj.</value></data>
+  <data name="PhoneNumber_Select_Country" xml:space="preserve"><value>Država</value></data>
+  <data name="PhotoAttachment_IndexDisplay_Label" xml:space="preserve"><value>{0} / {1} fotografija</value></data>
+  <data name="PhotoEdit_AppBar_Draw" xml:space="preserve"><value>crtaj</value></data>
+  <data name="PhotoEdit_AppBar_Send" xml:space="preserve"><value>pošalji</value></data>
+  <data name="PhotoEdit_AppBar_Undo" xml:space="preserve"><value>poništi</value></data>
+  <data name="PhotoEdit_AppBar_Write" xml:space="preserve"><value>piši</value></data>
+  <data name="PhotoEdit_Nux_Text" xml:space="preserve"><value>Za dodavanje teksta dodirnite fotografiju</value></data>
+  <data name="Photos_SavePhoto_Error_StateIndicator" xml:space="preserve"><value>Fotografiju nije moguće spremiti.</value></data>
+  <data name="Photos_SavePhoto_MenuItem" xml:space="preserve"><value>spremi fotografiju</value></data>
+  <data name="Photos_SavePhoto_Saving_StateIndicator" xml:space="preserve"><value>Spremanje fotografije...</value></data>
+  <data name="Photos_SavePhoto_Success_StateIndicator" xml:space="preserve"><value>Fotografija spremljena</value></data>
+  <data name="Power_Saver_Mode_Warning" xml:space="preserve"><value>Vi radite u načinu rada za Uštedu baterija, pa nećete dobivati obavijesti.</value></data>
+  <data name="ProfilePic_Confirmation_Title" xml:space="preserve"><value>Je li dobro?</value></data>
+  <data name="ProfilePic_Label_Camera_Button" xml:space="preserve"><value>Snimi fotografiju</value></data>
+  <data name="ProfilePic_Label_Gallery_Button" xml:space="preserve"><value>Odaberi iz albuma</value></data>
+  <data name="ProfilePic_Subtitle_Text" xml:space="preserve"><value>Stavite svoju fotografiju kako bi vas ljudi prepoznali.</value></data>
+  <data name="ProfilePic_Title_Text" xml:space="preserve"><value>Želite li dodati fotografiju?</value></data>
+  <data name="RecentThreadList_Nux_EmptyList_Message" xml:space="preserve"><value>Kada počnete čavrljati, sve će se poruke nalaziti ovdje.</value></data>
+  <data name="Recent_ContextMenu_Archive" xml:space="preserve"><value>arhiviraj</value></data>
+  <data name="Recent_ContextMenu_Delete" xml:space="preserve"><value>izbriši</value></data>
+  <data name="Recent_ContextMenu_Leave" xml:space="preserve"><value>napusti grupu</value></data>
+  <data name="Recent_ContextMenu_MarkUnread" xml:space="preserve"><value>označi kao nepročitano</value></data>
+  <data name="Recent_ContextMenu_Spam" xml:space="preserve"><value>označi kao neželjeno dopisivanje</value></data>
+  <data name="Registration_TextboxHint_FirstName" xml:space="preserve"><value>Ime</value></data>
+  <data name="Registration_TextboxHint_LastName" xml:space="preserve"><value>Prezime</value></data>
+  <data name="Registration_Title2" xml:space="preserve"><value>Upotrijebite pravo ime kako bi ljudi znali da ste to vi.</value></data>
+  <data name="ResourceLanguage" xml:space="preserve"><value>hr-HR</value></data>
+  <data name="Session_Expired_Caption" xml:space="preserve"><value>Da biste mogli koristiti Messenger, morate se prijaviti.</value></data>
+  <data name="Session_Expired_Title" xml:space="preserve"><value>sesija završena</value></data>
+  <data name="SettingsPage_Title" xml:space="preserve"><value>postavke</value></data>
+  <data name="Settings_Help" xml:space="preserve"><value>Pomoć</value></data>
+  <data name="Settings_Help_Title" xml:space="preserve"><value>Obavijest</value></data>
+  <data name="Settings_In_App_Audio_Title" xml:space="preserve"><value>Zvukovi u aplikaciji</value></data>
+  <data name="Settings_In_App_Contact_Sync_Title" xml:space="preserve"><value>Sinkroniziranje kontakata</value></data>
+  <data name="Settings_In_App_Vibration_Title" xml:space="preserve"><value>Vibriranje u aplikaciji</value></data>
+  <data name="Settings_Licenses" xml:space="preserve"><value>Licence</value></data>
+  <data name="Settings_Location_Title" xml:space="preserve"><value>Mjesto</value></data>
+  <data name="Settings_Notification_Title" xml:space="preserve"><value>Obavijesti</value></data>
+  <data name="Settings_PhoneNumber_VerificationNeeded" xml:space="preserve"><value>(Potvrda broja)</value></data>
+  <data name="Settings_Privacy_And_Terms" xml:space="preserve"><value>Privatnost i uvjeti</value></data>
+  <data name="Settings_Remove_Contacts_Body" xml:space="preserve"><value>Svi prethodno sinkronizirani kontakti bit će uklonjeni.</value></data>
+  <data name="Settings_Remove_Contacts_Confirm" xml:space="preserve"><value>Ukloni</value></data>
+  <data name="Settings_Remove_Contacts_Title" xml:space="preserve"><value>Ukloniti kontakte?</value></data>
+  <data name="Settings_SendOnEnter_Title" xml:space="preserve"><value>Pošalji tipkom Enter</value></data>
+  <data name="Settings_Sync_Contacts_Body" xml:space="preserve"><value>Pokreni sinkronizaciju? Vaši će se kontakti stalno sinkronizirati s našim poslužiteljima.</value></data>
+  <data name="Settings_Sync_Contacts_Confirmation" xml:space="preserve"><value>Sinkroniziraj</value></data>
+  <data name="Settings_Sync_Contacts_Title" xml:space="preserve"><value>Sinkroniziraj kontakte</value></data>
+  <data name="Settings_Version_Number" xml:space="preserve"><value>Verzija {0}</value></data>
+  <data name="Start_Group_Menu_Item" xml:space="preserve"><value>Kreirajte grupu s korisnikom {0}</value></data>
+  <data name="Sticker_Drawer_RecentStickers" xml:space="preserve"><value>Nedavne naljepnice</value></data>
+  <data name="Sticker_Pack_Download" xml:space="preserve"><value>preuzmi</value></data>
+  <data name="Sticker_Pack_Download_Failed" xml:space="preserve"><value>Preuzimanje paketa naljepnica nije uspjelo</value></data>
+  <data name="Sticker_Pack_Downloaded" xml:space="preserve"><value>preuzeto</value></data>
+  <data name="Sticker_Pack_Downloading" xml:space="preserve"><value>preuzimanje</value></data>
+  <data name="Sticker_Pack_Share" xml:space="preserve"><value>podijeli</value></data>
+  <data name="Sticker_Store_ContextMenu_Remove" xml:space="preserve"><value>ukloni</value></data>
+  <data name="Sticker_Store_Menu_Item" xml:space="preserve"><value>Trgovina naljepnicama</value></data>
+  <data name="Sticker_Store_Remove_Error" xml:space="preserve"><value>Uklanjanje paketa naljepnica nije uspjelo.</value></data>
+  <data name="Sticker_Store_Tab_All" xml:space="preserve"><value>sve</value></data>
+  <data name="Sticker_Store_Tab_Featured" xml:space="preserve"><value>istaknuto</value></data>
+  <data name="Sticker_Store_Tab_Owned" xml:space="preserve"><value>vaše</value></data>
+  <data name="Sticker_Store_Title" xml:space="preserve"><value>TRGOVINA NALJEPNICAMA</value></data>
+  <data name="SuggestedPins_Pinning_StateIndicator" xml:space="preserve"><value>Označavanje u tijeku...</value></data>
+  <data name="SuggestedPins_SearchBox_Hint" xml:space="preserve"><value>pretraži grupe</value></data>
+  <data name="SuggestedPins_Title_PinGroup" xml:space="preserve"><value>Označi grupu</value></data>
+  <data name="SyncContact_Button_LearnMore" xml:space="preserve"><value>Saznaj više</value></data>
+  <data name="SyncContact_ErrorMessage_UnableToToggle" xml:space="preserve"><value>Nismo mogli promijeniti vaše postavke. M, molimo provjerite internetsku vezu i pokušajte ponovo.</value></data>
+  <data name="SyncContact_Subtitle" xml:space="preserve"><value>Sinkronizirajte kontakte kako biste vidjeli tko se još služi Messengerom. Vaši će se kontakti stalno sinkronizirati i ažurirati.</value></data>
+  <data name="SyncContact_Title" xml:space="preserve"><value>Pošaljite poruku bilo kome iz imenika na telefonu</value></data>
+  <data name="SyncContacts_MessageBox_LinkLabel" xml:space="preserve"><value>Saznajte više</value></data>
+  <data name="Thread_AppBar_Details" xml:space="preserve"><value>pojedinosti</value></data>
+  <data name="Thread_AppBar_View_Members" xml:space="preserve"><value>pregledaj osobe</value></data>
+  <data name="Thread_Name_NoParticipant_Title" xml:space="preserve"><value>još uvijek nema ljudi</value></data>
+  <data name="Thread_UnnamedUserPlaceholder_Title" xml:space="preserve"><value>Osoba na Facebooku</value></data>
+  <data name="Threads_AppBar_Compose" xml:space="preserve"><value>novo</value></data>
+  <data name="Threads_AppBar_Refresh" xml:space="preserve"><value>osvježi</value></data>
+  <data name="UnMute_Conversation_Menu_Item" xml:space="preserve"><value>uključi zvuk</value></data>
+  <data name="Unsent_Message_Warning" xml:space="preserve"><value>Napuštate Messenger? Još uvijek niste poslali svoje poruke.</value></data>
+  <data name="Verify_PhoneNumber_Box_Title" xml:space="preserve"><value>Broj telefona</value></data>
+  <data name="VideoRecorder_HelpText_Cancel" xml:space="preserve"><value>Pustite kako biste izbrisali i krenuli ispočetka</value></data>
+  <data name="VideoRecorder_HelpText_HoldToSend" xml:space="preserve"><value>Zadržite za snimanje videozapisa, dodirnite za snimanje fotografije</value></data>
+  <data name="VideoRecorder_HelpText_Send" xml:space="preserve"><value>Za otkazivanje pomaknite prst s tipke Pošalji</value></data>
+  <data name="View_Timeline_Menu_Item" xml:space="preserve"><value>vremenska crta</value></data>
+  <data name="Voice_Clip_Hold_Instruction" xml:space="preserve"><value>Dodirnite i zadržite za snimanje i slanje zvučnog zapisa</value></data>
+  <data name="Voice_Clip_Length_Limit" xml:space="preserve"><value>Isteklo je vremensko ograničenje, otpustite za slanje</value></data>
+  <data name="Voice_Clip_Menu_Item" xml:space="preserve"><value>pošaljite glasovni zapis</value></data>
+  <data name="Voice_Clip_NUX_Instruction" xml:space="preserve"><value>Otpustite za slanje, pomaknite prst za otkazivanje</value></data>
+  <data name="Voice_Clip_Record" xml:space="preserve"><value>snimanje</value></data>
+  <data name="Voice_Clip_Release_Cancel" xml:space="preserve"><value>Otpustite za prekid snimanja</value></data>
+  <data name="orca_neue_nux_add_phone_body1_searchable_all_not_verified" xml:space="preserve"><value>Osobe vas mogu dodati u svoje kontakte ako već imaju vaš broj telefona, ali ovaj broj telefona na Facebooku možete vidjeti samo vi.</value></data>
+  <data name="orca_neue_nux_add_phone_body1_searchable_all_visible_all" xml:space="preserve"><value>Osobe vas mogu dodati u svoje kontakte ako već imaju vaš broj telefona.</value></data>
+  <data name="orca_neue_nux_add_phone_body1_searchable_all_visible_custom" xml:space="preserve"><value>Osobe vas mogu dodati u svoje kontakte ako već imaju vaš broj telefona, ali to neće promijeniti postavke opcije tko može vidjeti vaš broj telefona na Facebooku.</value></data>
+  <data name="orca_neue_nux_add_phone_body1_searchable_all_visible_friends" xml:space="preserve"><value>Osobe vas mogu dodati u svoje kontakte ako već imaju vaš broj telefona, ali ovaj broj na Facebooku mogu vidjeti samo vaši prijatelji.</value></data>
+  <data name="orca_neue_nux_add_phone_body1_searchable_all_visible_self" xml:space="preserve"><value>Osobe vas mogu dodati u svoje kontakte ako već imaju vaš broj telefona, ali ovaj broj telefona na Facebooku možete vidjeti samo vi.</value></data>
+  <data name="orca_neue_nux_add_phone_body1_searchable_fof" xml:space="preserve"><value>Ne morate biti prijatelji na Facebooku kako biste se povezali pa će postavke na Facebooku biti proširene tako da vas svi koji imaju vaš broj telefona pomoću njega mogu pronaći.</value></data>
+  <data name="orca_neue_nux_add_phone_body2_not_verified" xml:space="preserve"><value>Ovaj broj telefona na Facebooku možete vidjeti samo vi.</value></data>
+  <data name="orca_neue_nux_add_phone_body2_visible_custom" xml:space="preserve"><value>Ovo neće promijeniti postavke opcije tko može vidjeti vaš broj telefona na Facebooku.</value></data>
+  <data name="orca_neue_nux_add_phone_body2_visible_friends" xml:space="preserve"><value>Ovaj broj telefona na Facebooku mogu vidjeti samo prijatelji.</value></data>
+  <data name="orca_neue_nux_add_phone_body2_visible_self" xml:space="preserve"><value>Ovaj broj telefona na Facebooku možete vidjeti samo vi.</value></data>
+  <data name="orca_neue_nux_add_phone_title_no_verified_number" xml:space="preserve"><value>Na koji ste broj telefona dostupni?</value></data>
+  <data name="orca_neue_nux_add_phone_title_verified_long" xml:space="preserve"><value>Je li ovo broj telefona koji koristite?</value></data>
+  <data name="orca_neue_nux_add_phone_title_verified_short" xml:space="preserve"><value>Je li vaš broj telefona ažuran?</value></data>
+</root>

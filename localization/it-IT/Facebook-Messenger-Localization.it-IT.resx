@@ -1,0 +1,395 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Active_AppBar_Chat" xml:space="preserve"><value>chat</value></data>
+  <data name="AddContact_Contact_Already_Exists" xml:space="preserve"><value>Questo numero di telefono è già stato aggiunto come contatto.</value></data>
+  <data name="AddContact_FBUser_Already_Exists" xml:space="preserve"><value>{0} è già stato/a aggiunto/a come contatto.</value></data>
+  <data name="AddContact_Invite_Button" xml:space="preserve"><value>invita</value></data>
+  <data name="AddContact_MatchedExistingUser_Label" xml:space="preserve"><value>{0} fa già parte dei tuoi contatti su Messenger</value></data>
+  <data name="AddContact_MatchingUser_Label" xml:space="preserve"><value>{0} è stato/a aggiunto/a ai tuoi contatti Messenger</value></data>
+  <data name="AddContact_Message_Button" xml:space="preserve"><value>invia un messaggio a {0}</value></data>
+  <data name="AddContact_PhoneNumber_Description" xml:space="preserve"><value>Inserisci il numero di telefono di qualcuno per trovarlo su Messenger.</value></data>
+  <data name="AddContact_PhoneNumber_Title" xml:space="preserve"><value>Aggiungi contatto</value></data>
+  <data name="AddContact_Remove_Contact_Warning" xml:space="preserve"><value>{0} sarà rimosso/a dai tuoi contatti di Messenger.</value></data>
+  <data name="AddContact_Remove_MessageBox_Title" xml:space="preserve"><value>Rimuovi contatto</value></data>
+  <data name="AddPhotos_Menu_ChooseFromAlbum" xml:space="preserve"><value>Scegli dagli album</value></data>
+  <data name="AddPhotos_Menu_RemovePhotos" xml:space="preserve"><value>Rimuovi foto</value></data>
+  <data name="AddPhotos_Menu_TakePhoto" xml:space="preserve"><value>Scatta foto</value></data>
+  <data name="AddPhotos_Title_EditProfilePicture" xml:space="preserve"><value>Cambia immagine del profilo</value></data>
+  <data name="AddPhotos_Title_SetGroupPhoto" xml:space="preserve"><value>Imposta foto del gruppo</value></data>
+  <data name="Add_Phone_Number_Label" xml:space="preserve"><value>Aggiungi numero di telefono</value></data>
+  <data name="AppBar_Cancel" xml:space="preserve"><value>annulla</value></data>
+  <data name="AppBar_No" xml:space="preserve"><value>no</value></data>
+  <data name="AppBar_Ok" xml:space="preserve"><value>ok</value></data>
+  <data name="AppBar_Remove" xml:space="preserve"><value>rimuovi</value></data>
+  <data name="AppBar_Undo" xml:space="preserve"><value>annulla</value></data>
+  <data name="AppBar_Yes" xml:space="preserve"><value>sì</value></data>
+  <data name="AppUpdate_Description" xml:space="preserve"><value>Aggiorna Messenger per usufruire delle nuove funzioni e dei miglioramenti.</value></data>
+  <data name="AppUpdate_NotNowButton" xml:space="preserve"><value>Non ora</value></data>
+  <data name="AppUpdate_Title" xml:space="preserve"><value>È disponibile un aggiornamento per Messenger</value></data>
+  <data name="AppUpdate_UpdateAppButton" xml:space="preserve"><value>Aggiorna</value></data>
+  <data name="App_Location_Services_Enable" xml:space="preserve"><value>Per condividere la posizione nei tuoi messaggi, accedi alle impostazioni di Messenger.</value></data>
+  <data name="App_Quit_Caption" xml:space="preserve"><value>Esci da Messenger</value></data>
+  <data name="Attachments_AppBar_Next" xml:space="preserve"><value>successiva</value></data>
+  <data name="Attachments_AppBar_Previous" xml:space="preserve"><value>precedente</value></data>
+  <data name="Attachments_AppBar_Skip" xml:space="preserve"><value>salta</value></data>
+  <data name="BackgroundToast_LeavingApp_Title" xml:space="preserve"><value>Messenger</value></data>
+  <data name="BackgroundToast_LeavingApp_Warning" xml:space="preserve"><value>Alcuni messaggi non sono stati chiusi prima che Messenger venisse chiuso. Apri Messenger per assicurarti che i tuoi messaggi vengano inviati.</value></data>
+  <data name="ButtonLabelRetry" xml:space="preserve"><value>Riprova</value></data>
+  <data name="Button_Continue" xml:space="preserve"><value>Continua</value></data>
+  <data name="CanonicalThreadDetailsPage_Start_Group" xml:space="preserve"><value>crea un gruppo</value></data>
+  <data name="CanonicalThreadDetailsPage_Title" xml:space="preserve"><value>dettagli</value></data>
+  <data name="Chat_Is_Off" xml:space="preserve"><value>La chat è disattivata</value></data>
+  <data name="Chat_Is_Off_Details_Label" xml:space="preserve"><value>Riceverai comunque tutti i messaggi se la chat è disattivata, ma puoi attivarla per vedere chi è attivo su Facebook.</value></data>
+  <data name="Client_Type_Mobile" xml:space="preserve"><value>Cellulare</value></data>
+  <data name="Client_Type_Web" xml:space="preserve"><value>Web</value></data>
+  <data name="Composer_Exit_Warning" xml:space="preserve"><value>Annullare il messaggio?</value></data>
+  <data name="Composer_Groups_Search_Header" xml:space="preserve"><value>Gruppi</value></data>
+  <data name="Composer_More_People_Search_Header" xml:space="preserve"><value>Altre persone</value></data>
+  <data name="Composer_SendingMessage" xml:space="preserve"><value>invio messaggio in corso...</value></data>
+  <data name="Composer_To" xml:space="preserve"><value>A:</value></data>
+  <data name="Confirm_Phone_Number_Label" xml:space="preserve"><value>Conferma numero</value></data>
+  <data name="ContactCard_MenuLabel_CreateGroup" xml:space="preserve"><value>crea un gruppo con {0}</value></data>
+  <data name="ContactCard_MenuLabel_RemoveContact" xml:space="preserve"><value>rimuovi contatto</value></data>
+  <data name="ContactCard_MenuLabel_SendMessage" xml:space="preserve"><value>invia un messaggio a {0}</value></data>
+  <data name="ContactList_Header_ContactsFound" xml:space="preserve"><value>{0} contatti trovati</value></data>
+  <data name="ContactList_Header_Failed" xml:space="preserve"><value>caricamento dei contatti non riuscito. vuoi riprovare?</value></data>
+  <data name="ContactList_Header_FindContacts" xml:space="preserve"><value>trova contatti</value></data>
+  <data name="ContactList_Header_ShowAll" xml:space="preserve"><value>mostra tutto</value></data>
+  <data name="ContactList_Header_SyncingContacts" xml:space="preserve"><value>sincronizzazione contatti in corso...</value></data>
+  <data name="ContactList_Nux_Label_EmptyList" xml:space="preserve"><value>Puoi sincronizzare i tuoi contatti per vedere chi conosci già su Messenger.</value></data>
+  <data name="ContactList_Nux_Label_NoMatchingContacts" xml:space="preserve"><value>Vedrai qui i tuoi contatti. Tocca l'icona dei contatti per aggiungere qualcuno.</value></data>
+  <data name="Contact_Search_No_Results" xml:space="preserve"><value>Nessun risultato</value></data>
+  <data name="Contacts_Find_Button_Label" xml:space="preserve"><value>trova contatti</value></data>
+  <data name="Contacts_Invite_Button_Label" xml:space="preserve"><value>invita persone</value></data>
+  <data name="Conversation_AppBar_AttachPhoto" xml:space="preserve"><value>foto</value></data>
+  <data name="Conversation_AppBar_Camera" xml:space="preserve"><value>fotocamera</value></data>
+  <data name="Conversation_AppBar_ChangePhoto" xml:space="preserve"><value>foto</value></data>
+  <data name="Conversation_AppBar_Like" xml:space="preserve"><value>Mi piace</value></data>
+  <data name="Conversation_AppBar_Send" xml:space="preserve"><value>invia</value></data>
+  <data name="Conversation_AppBar_Text" xml:space="preserve"><value>invia messaggio</value></data>
+  <data name="Conversation_ContextMenu_RemoveAttachment" xml:space="preserve"><value>rimuovi immagine</value></data>
+  <data name="Conversation_MenuItem_Rename" xml:space="preserve"><value>nome</value></data>
+  <data name="CreateGroup_TextBox_Label" xml:space="preserve"><value>Nome del gruppo</value></data>
+  <data name="CreateGroup_Title" xml:space="preserve"><value>Nuovo gruppo</value></data>
+  <data name="Device_Location_Services_Enable" xml:space="preserve"><value>Per condividere la posizione nei tuoi messaggi, accedi alle impostazioni sulla posizione nelle impostazioni del tuo telefono.</value></data>
+  <data name="Empty_Conversation_Placeholder_Text" xml:space="preserve"><value>{0} è su Messenger e riceverà i tuoi messaggi immediatamente.</value></data>
+  <data name="Empty_Conversation_Placeholder_Text_For_Non_Messenger_User" xml:space="preserve"><value>{0} non è su Messenger, ma riceverà i tuoi messaggi su Facebook.</value></data>
+  <data name="Empty_Conversation_Placeholder_Title" xml:space="preserve"><value>Inizia la conversazione</value></data>
+  <data name="Error_Cannot_Attach_File" xml:space="preserve"><value>Impossibile allegare il file. Riprova.</value></data>
+  <data name="Error_Cannot_Fetch_Conversations" xml:space="preserve"><value>Spiacenti, impossibile visualizzare i messaggi al momento. Riprova.</value></data>
+  <data name="Error_Cannot_Fetch_Messages" xml:space="preserve"><value>Spiacenti, impossibile visualizzare i messaggi al momento. Riprova.</value></data>
+  <data name="Error_Cannot_Fetch_Sticker_Packs" xml:space="preserve"><value>Spiacenti, impossibile visualizzare i pacchetti di adesivi al momento.</value></data>
+  <data name="Error_Changing_Mute" xml:space="preserve"><value>Impossibile disattivare i suoni. Riprova.</value></data>
+  <data name="Error_Changing_Unmute" xml:space="preserve"><value>Impossibile attivare i suoni. Riprova.</value></data>
+  <data name="Error_Gallery_Out_Of_Memory" xml:space="preserve"><value>Impossibile allegare un'immagine di queste dimensioni.</value></data>
+  <data name="Error_Invalid_Phone_Number" xml:space="preserve"><value>Inserisci un numero di telefono valido.</value></data>
+  <data name="Error_Invalid_Phone_Prefix" xml:space="preserve"><value>Usa un prefisso internazionale valido.</value></data>
+  <data name="Error_Max_File_Attachment_Exceeded" xml:space="preserve"><value>Non puoi allegare altre foto a questo messaggio.</value></data>
+  <data name="Error_No_Connection" xml:space="preserve"><value>Connessione Internet assente</value></data>
+  <data name="Error_No_Conversations" xml:space="preserve"><value>Noi hai ancora conversazioni.</value></data>
+  <data name="ExistingUser_Create_Account_Button" xml:space="preserve"><value>crea nuovo account</value></data>
+  <data name="ExistingUser_Description" xml:space="preserve"><value>Questo numero corrisponde a un account Facebook di {0} {1}.</value></data>
+  <data name="ExistingUser_LoginAs_Button" xml:space="preserve"><value>accedi come {0}</value></data>
+  <data name="ExistingUser_Title" xml:space="preserve"><value>Vuoi accedere con Facebook?</value></data>
+  <data name="FetchingDataFromServerFailed" xml:space="preserve"><value>Impossibile caricare le tue informazioni. Riprova.</value></data>
+  <data name="FlyTrap_Error_Generic" xml:space="preserve"><value>Impossibile visualizzare la segnalazione.</value></data>
+  <data name="FlyTrap_Label_Disclaimer" xml:space="preserve"><value>Saranno incluse automaticamente informazioni sul tuo telefono e su questa applicazione. Per maggiori informazioni sull'uso delle informazioni, consulta {0}</value></data>
+  <data name="FlyTrap_Label_Disclaimer_DataUsePolicyLink" xml:space="preserve"><value>Normativa sull'utilizzo dei dati</value></data>
+  <data name="FlyTrap_Label_Instructions" xml:space="preserve"><value>Descrivi cosa stavi tentando di fare quando si è verificato il problema.</value></data>
+  <data name="FlyTrap_Label_Screenshot" xml:space="preserve"><value>Screenshot</value></data>
+  <data name="FlyTrap_MenuItem_ReportProblem" xml:space="preserve"><value>segnala un problema</value></data>
+  <data name="FlyTrap_TextboxHint_Problem" xml:space="preserve"><value>descrivi il problema</value></data>
+  <data name="FlyTrap_Title_ReportProblem" xml:space="preserve"><value>Segnala un problema</value></data>
+  <data name="Forwarding_SearchBox_HintText" xml:space="preserve"><value>cerca persone</value></data>
+  <data name="Forwarding_Title_Label" xml:space="preserve"><value>Inoltra messaggio</value></data>
+  <data name="Friends_AppBar_AddContact" xml:space="preserve"><value>aggiungi contatto</value></data>
+  <data name="Global_Notifcation_Off_Until" xml:space="preserve"><value>Disattivate fino alle ore {0}</value></data>
+  <data name="Global_Notification_Off" xml:space="preserve"><value>No</value></data>
+  <data name="Global_Notification_On" xml:space="preserve"><value>Sì</value></data>
+  <data name="GroupDetailsPage_AppBar_LeaveGroup" xml:space="preserve"><value>abbandona il gruppo</value></data>
+  <data name="GroupDetailsPage_AppBar_RemoveGroupName" xml:space="preserve"><value>rimuovi nome</value></data>
+  <data name="GroupDetailsPage_AppBar_RemoveGroupPhoto" xml:space="preserve"><value>rimuovi foto del gruppo</value></data>
+  <data name="GroupDetailsPage_Title" xml:space="preserve"><value>gruppo</value></data>
+  <data name="GroupMember_Context_Menu_Remove_Member" xml:space="preserve"><value>rimuovi</value></data>
+  <data name="GroupTile_Date_ActiveDaysAgo" xml:space="preserve"><value>Attivo {0} giorni fa</value></data>
+  <data name="GroupTile_Date_ActiveLastMonth" xml:space="preserve"><value>Attivo il mese scorso</value></data>
+  <data name="GroupTile_Date_ActiveLastYear" xml:space="preserve"><value>Attivo l'anno scorso</value></data>
+  <data name="GroupTile_Date_ActiveMonthsAgo" xml:space="preserve"><value>Attivo {0} mesi fa</value></data>
+  <data name="GroupTile_Date_ActiveToday" xml:space="preserve"><value>Attivo oggi</value></data>
+  <data name="GroupTile_Date_ActiveYearsAgo" xml:space="preserve"><value>Attivo {0} anni fa</value></data>
+  <data name="GroupTile_Date_ActiveYesterday" xml:space="preserve"><value>Attivo ieri</value></data>
+  <data name="Group_AddPeople_Search" xml:space="preserve"><value>Cerca persone</value></data>
+  <data name="Group_AddPeople_Title" xml:space="preserve"><value>Aggiungi persone</value></data>
+  <data name="Group_AddingParticipants_Failed_Message" xml:space="preserve"><value>Impossibile aggiungere persone al gruppo. Riprova.</value></data>
+  <data name="Group_AddingParticipants_Failed_Title" xml:space="preserve"><value>Impossibile aggiungere persone</value></data>
+  <data name="Group_AppBar_SelectMany" xml:space="preserve"><value>Seleziona più elementi</value></data>
+  <data name="Group_RemovingParticipants_Failed_Message" xml:space="preserve"><value>Impossibile rimuovere le persone. Riprova.</value></data>
+  <data name="Group_RemovingParticipants_Failed_Title" xml:space="preserve"><value>Impossibile rimuovere le persone</value></data>
+  <data name="Groups_AppBar_Add" xml:space="preserve"><value>fissa in alto</value></data>
+  <data name="Groups_AppBar_Create" xml:space="preserve"><value>crea</value></data>
+  <data name="Groups_AppBar_Next" xml:space="preserve"><value>avanti</value></data>
+  <data name="Groups_NUX_Button_Text" xml:space="preserve"><value>Inizia</value></data>
+  <data name="Groups_NUX_Help_Title" xml:space="preserve"><value>Adesso puoi fissare i gruppi in alto per trovarli facilmente.</value></data>
+  <data name="Groups_NUX_NoThread_Button_Text" xml:space="preserve"><value>Crea nuovo gruppo</value></data>
+  <data name="Groups_NUX_PlaceholderActive_LastWeek" xml:space="preserve"><value>Attivo la settimana scorsa</value></data>
+  <data name="Groups_NUX_PlaceholderActive_Yesterday" xml:space="preserve"><value>Attivo ieri</value></data>
+  <data name="Groups_NUX_PlaceholderFour_Members" xml:space="preserve"><value>Nicole, Eli</value></data>
+  <data name="Groups_NUX_PlaceholderFour_Title" xml:space="preserve"><value>Colleghi</value></data>
+  <data name="Groups_NUX_PlaceholderOne_Members" xml:space="preserve"><value>Luca, Marco</value></data>
+  <data name="Groups_NUX_PlaceholderOne_Title" xml:space="preserve"><value>Coinquilini</value></data>
+  <data name="Groups_NUX_PlaceholderThree_Members" xml:space="preserve"><value>Ale, Tom</value></data>
+  <data name="Groups_NUX_PlaceholderThree_Title" xml:space="preserve"><value>Gruppo weekend</value></data>
+  <data name="Groups_NUX_PlaceholderTwo_Members" xml:space="preserve"><value>Fede, Fra, Marghe, Max</value></data>
+  <data name="Groups_NUX_PlaceholderTwo_Title" xml:space="preserve"><value>Familiari</value></data>
+  <data name="Image_Search_Empty_Results" xml:space="preserve"><value>Nessuna immagine trovata.</value></data>
+  <data name="Image_Search_Menu_Item" xml:space="preserve"><value>cerca un'immagine</value></data>
+  <data name="Image_Search_Popup_Cancel" xml:space="preserve"><value>Annulla</value></data>
+  <data name="Image_Search_Popup_Message" xml:space="preserve"><value>Cosa stai cercando?</value></data>
+  <data name="Image_Search_Popup_Search" xml:space="preserve"><value>Cerca</value></data>
+  <data name="Image_Search_Popup_Title" xml:space="preserve"><value>Cerca le immagini</value></data>
+  <data name="Invite_Contact_ToMessenger" xml:space="preserve"><value>Prova Messenger: {0}</value></data>
+  <data name="Location_Menu_Item" xml:space="preserve"><value>invia posizione</value></data>
+  <data name="Location_Services_Disabled" xml:space="preserve"><value>La posizione è disattivata</value></data>
+  <data name="Location_Warning_Body" xml:space="preserve"><value>Le persone in questa conversazione possono vedere dove ti trovi sulla cartina. Tocca per attivare e disattivare la posizione.</value></data>
+  <data name="LoginApproval_ResendCode" xml:space="preserve"><value>invia di nuovo</value></data>
+  <data name="LoginApproval_Title_EnterCode" xml:space="preserve"><value>Inserisci il codice inviato al tuo telefono.</value></data>
+  <data name="Login_Approval_Security_Code" xml:space="preserve"><value>Codice di conferma</value></data>
+  <data name="Login_NotOnFacebook" xml:space="preserve"><value>Non sei su Facebook?</value></data>
+  <data name="Login_RecoverPassword" xml:space="preserve"><value>Password dimenticata?</value></data>
+  <data name="Login_SigningIn" xml:space="preserve"><value>accesso in corso</value></data>
+  <data name="Login_TextboxHint_EmailOrPhone" xml:space="preserve"><value>E-mail o telefono</value></data>
+  <data name="Login_TextboxHint_Password" xml:space="preserve"><value>Password</value></data>
+  <data name="Login_Title_SignIn" xml:space="preserve"><value>Accedi con Facebook</value></data>
+  <data name="Login_Title_Welcome" xml:space="preserve"><value>Benvenuti in Messenger</value></data>
+  <data name="Login_With_Facebook" xml:space="preserve"><value>Accedi con Facebook</value></data>
+  <data name="MainPage_Active_Chat_Popup" xml:space="preserve"><value>Chat</value></data>
+  <data name="MainPage_Active_Disable_Chat" xml:space="preserve"><value>disattiva chat</value></data>
+  <data name="MainPage_Active_Enable_Chat" xml:space="preserve"><value>attiva la chat</value></data>
+  <data name="MainPage_AppBar_Mute_Button" xml:space="preserve"><value>disattiva suoni</value></data>
+  <data name="MainPage_AppBar_UnMute_Button" xml:space="preserve"><value>attiva suoni</value></data>
+  <data name="MainPage_AppMenu_OtherFolder" xml:space="preserve"><value>cartella Altro</value></data>
+  <data name="MainPage_AppMenu_Settings" xml:space="preserve"><value>impostazioni</value></data>
+  <data name="MainPage_Pivot_Title_Active" xml:space="preserve"><value>attivi</value></data>
+  <data name="MainPage_Pivot_Title_Friends" xml:space="preserve"><value>messenger</value></data>
+  <data name="MainPage_Pivot_Title_Groups" xml:space="preserve"><value>gruppi</value></data>
+  <data name="MainPage_Pivot_Title_Recent_Threads" xml:space="preserve"><value>recenti</value></data>
+  <data name="Matching_Contact_NotFound_Message" xml:space="preserve"><value>Impossibile trovare corrispondenza tra {0} e una persona su Messenger</value></data>
+  <data name="MessageBox_Description_ArchiveThread" xml:space="preserve"><value>Per vedere le conversazioni archiviate, devi accedere al sito Web di Facebook.</value></data>
+  <data name="MessageBox_Description_DeleteThread" xml:space="preserve"><value>In questo modo, eliminerai definitivamente la conversazione.</value></data>
+  <data name="MessageBox_Description_FlyTrapSuccess" xml:space="preserve"><value>Grazie per i tuoi commenti!</value></data>
+  <data name="MessageBox_Description_LeaveThread" xml:space="preserve"><value>Se abbandoni la conversazione, non riceverai i nuovi messaggi.</value></data>
+  <data name="MessageBox_Description_SpamThread" xml:space="preserve"><value>Quando contrassegni una conversazione come spam, non la vedrai più tra i tuoi messaggi recenti.</value></data>
+  <data name="MessageBox_Label_ArchiveThread" xml:space="preserve"><value>archiviare questa conversazione?</value></data>
+  <data name="MessageBox_Label_AuthenticateWithBrowser" xml:space="preserve"><value>Apri un browser Web per connetterti</value></data>
+  <data name="MessageBox_Label_BypassLogin2Fac" xml:space="preserve"><value>Hai attivato l'approvazione degli accessi. Inserisci la password per continuare.</value></data>
+  <data name="MessageBox_Label_BypassLoginFail" xml:space="preserve"><value>Impossibile confermare il numero di telefono. Riprova.</value></data>
+  <data name="MessageBox_Label_ClearThreadPhotoFailed" xml:space="preserve"><value>Impossibile rimuovere una foto del gruppo.</value></data>
+  <data name="MessageBox_Label_ConfirmPhoneNumberFailed" xml:space="preserve"><value>Impossibile conferma il tuo numero</value></data>
+  <data name="MessageBox_Label_ConfirmationCodeInvalid" xml:space="preserve"><value>Codice di conferma non valido.</value></data>
+  <data name="MessageBox_Label_CreateGroupFailed" xml:space="preserve"><value>Impossibile creare il gruppo</value></data>
+  <data name="MessageBox_Label_DeleteThread" xml:space="preserve"><value>Eliminare la conversazione?</value></data>
+  <data name="MessageBox_Label_ForwardingFailed" xml:space="preserve"><value>Impossibile inoltrare il messaggio a tutti i destinatari.</value></data>
+  <data name="MessageBox_Label_LeaveThread" xml:space="preserve"><value>Abbandonare il gruppo?</value></data>
+  <data name="MessageBox_Label_LoginFailed" xml:space="preserve"><value>Impossibile accedere al momento.</value></data>
+  <data name="MessageBox_Label_NamingConversation_Error" xml:space="preserve"><value>Impossibile rinominare la conversazione.</value></data>
+  <data name="MessageBox_Label_NoInternet" xml:space="preserve"><value>Connessione Internet assente</value></data>
+  <data name="MessageBox_Label_PinGroupFailed" xml:space="preserve"><value>Impossibile fissare il gruppo in alto.</value></data>
+  <data name="MessageBox_Label_SetThreadPhotoFailed" xml:space="preserve"><value>Impossibile impostare la foto del gruppo.</value></data>
+  <data name="MessageBox_Label_SpamThread" xml:space="preserve"><value>contrassegnare come spam?</value></data>
+  <data name="MessageBox_Label_UpdatePhoneNumberFailed" xml:space="preserve"><value>Impossibile aggiornare il numero.</value></data>
+  <data name="MessageBox_Label_UploadProfilePic_Failed" xml:space="preserve"><value>Impossibile impostare l'immagine del profilo.</value></data>
+  <data name="MessageBox_Popup_Cancel" xml:space="preserve"><value>Annulla</value></data>
+  <data name="MessageBox_Title_AddContactFailed" xml:space="preserve"><value>Impossibile trovare contatti al momento.</value></data>
+  <data name="MessageBox_Title_FlyTrapSuccess" xml:space="preserve"><value>Segnalazione inviata</value></data>
+  <data name="MessageBox_Title_LoginFailed" xml:space="preserve"><value>Impossibile accedere al momento.</value></data>
+  <data name="MessageComposer_EmptyGallery_Text" xml:space="preserve"><value>Nessuna foto presente nella galleria.</value></data>
+  <data name="MessageDetails_Error_Unexpected" xml:space="preserve"><value>Spiacenti, non è possibile mostrare i dettagli del messaggio al momento. Riprova.</value></data>
+  <data name="MessageDetails_Label_SeenBy" xml:space="preserve"><value>Visualizzato da:</value></data>
+  <data name="MessageSnippetAudioClipLoggedInUser" xml:space="preserve"><value>Hai inviato un messaggio vocale.</value></data>
+  <data name="MessageSnippetAudioClipOtherUser" xml:space="preserve"><value>{0} ha inviato un messaggio vocale.</value></data>
+  <data name="MessageSnippetGenericLoggedInUser" xml:space="preserve"><value>Hai inviato un messaggio.</value></data>
+  <data name="MessageSnippetGenericOtherUser" xml:space="preserve"><value>{0} ha inviato un messaggio.</value></data>
+  <data name="MessageSnippetPhotoLoggedInUser" xml:space="preserve"><value>Hai inviato un'immagine.</value></data>
+  <data name="MessageSnippetPhotoOtherUser" xml:space="preserve"><value>{0} ha inviato un'immagine.</value></data>
+  <data name="MessageSnippetStickerLoggedInUser" xml:space="preserve"><value>Hai inviato un adesivo.</value></data>
+  <data name="MessageSnippetStickerOtherUser" xml:space="preserve"><value>{0} ha inviato un adesivo.</value></data>
+  <data name="MessageSnippetVideoLoggedInUser" xml:space="preserve"><value>Hai inviato un video.</value></data>
+  <data name="MessageSnippetVideoOtherUser" xml:space="preserve"><value>{0} ha inviato un video.</value></data>
+  <data name="MessageSnippetWhenSenderIsTheLoggedInUser" xml:space="preserve"><value>Tu</value></data>
+  <data name="MessageStatus_Location_City" xml:space="preserve"><value>Inviato da {0}</value></data>
+  <data name="MessageStatus_Location_CityCountry" xml:space="preserve"><value>Inviato da {0}, {1}</value></data>
+  <data name="MessageStatus_Location_CityState" xml:space="preserve"><value>Inviato da {0}, {1}</value></data>
+  <data name="MessageStatus_Location_DistrictCity" xml:space="preserve"><value>Inviato da {0}, {1}</value></data>
+  <data name="MessageStatus_Origin_Messenger" xml:space="preserve"><value>Inviato da Messenger</value></data>
+  <data name="MessageStatus_Origin_Mobile" xml:space="preserve"><value>Inviato dal cellulare</value></data>
+  <data name="MessageStatus_Origin_Web" xml:space="preserve"><value>Inviato dal Web</value></data>
+  <data name="MessageStatus_SeenBy_1" xml:space="preserve"><value>Visualizzato da {0}</value></data>
+  <data name="MessageStatus_SeenBy_2" xml:space="preserve"><value>Visualizzato da {0} e {1}</value></data>
+  <data name="MessageStatus_SeenBy_3" xml:space="preserve"><value>Visualizzato da {0}, {1} e {2}</value></data>
+  <data name="MessageStatus_SeenBy_4" xml:space="preserve"><value>Visualizzato da {0}, {1}, {2} e {3}</value></data>
+  <data name="MessageStatus_SeenBy_Everyone" xml:space="preserve"><value>Visualizzato da tutti</value></data>
+  <data name="MessageStatus_SeenBy_Others" xml:space="preserve"><value>Visualizzato da {0}, {1}, {2} e altre {3} persone</value></data>
+  <data name="MessageStatus_Seen_Timestamp" xml:space="preserve"><value>Visualizzato: {0}</value></data>
+  <data name="Message_Delete_Caption" xml:space="preserve"><value>Elimina messaggio</value></data>
+  <data name="Message_Delete_Text" xml:space="preserve"><value>Desideri eliminare questo messaggio in modo permanente?</value></data>
+  <data name="Message_Sending_Failed" xml:space="preserve"><value>Impossibile inviare il messaggio.</value></data>
+  <data name="Message_Sending_Failed_App_Exited_Description" xml:space="preserve"><value>L'applicazione è stata chiusa prima che il tuo messaggio venisse inviato. Prova a inviarlo di nuovo.</value></data>
+  <data name="Message_Sending_Failed_Permission_Description" xml:space="preserve"><value>Spiacenti, non puoi inviare un messaggio a questa persona.</value></data>
+  <data name="Messages_Active_1m_Ago" xml:space="preserve"><value>attivo/a 1 min fa</value></data>
+  <data name="Messages_Active_Now" xml:space="preserve"><value>attivo/a ora</value></data>
+  <data name="Messages_Active_Xd_Ago" xml:space="preserve"><value>attivo/a {0} g fa</value></data>
+  <data name="Messages_Active_Xh_Ago" xml:space="preserve"><value>attivo/a {0} h fa</value></data>
+  <data name="Messages_Active_Xm_Ago" xml:space="preserve"><value>attivo/a {0} min fa</value></data>
+  <data name="Messages_AppBar_Send_Sticker" xml:space="preserve"><value>adesivi</value></data>
+  <data name="Messages_ContextMenu_Copy" xml:space="preserve"><value>copia testo</value></data>
+  <data name="Messages_ContextMenu_Delete" xml:space="preserve"><value>elimina</value></data>
+  <data name="Messages_ContextMenu_Forward" xml:space="preserve"><value>inoltra</value></data>
+  <data name="Messages_ContextMenu_Retry" xml:space="preserve"><value>riprova</value></data>
+  <data name="Messages_Context_Menu_View_Details" xml:space="preserve"><value>visualizza dettagli</value></data>
+  <data name="Messages_Group_Message" xml:space="preserve"><value>Gruppo</value></data>
+  <data name="Messages_Hint_Text" xml:space="preserve"><value>digita un messaggio</value></data>
+  <data name="Messages_On_Facebook" xml:space="preserve"><value>Facebook</value></data>
+  <data name="Messages_On_Messenger" xml:space="preserve"><value>Messenger</value></data>
+  <data name="Messages_On_Mobile" xml:space="preserve"><value>da cellulare</value></data>
+  <data name="Messages_Refreshing_Failed_StateIndicator" xml:space="preserve"><value>Impossibile eseguire l'aggiornamento, controlla la tua connessione</value></data>
+  <data name="Messages_Refreshing_StateIndicator" xml:space="preserve"><value>Aggiornamento...</value></data>
+  <data name="Messages_Refreshing_Success_Stateindicator" xml:space="preserve"><value>Aggiornamento effettuato</value></data>
+  <data name="Messages_Share_Not_Viewable" xml:space="preserve"><value>Questo contenuto potrebbe essere stato rimosso o tu potresti non avere l'autorizzazione per visualizzarlo.</value></data>
+  <data name="Mute_Conversation_For_An_Hour" xml:space="preserve"><value>disattiva suoni per un'ora</value></data>
+  <data name="Mute_Conversation_Forever" xml:space="preserve"><value>disattiva suoni</value></data>
+  <data name="Mute_Conversation_Menu_Item" xml:space="preserve"><value>disattiva suoni</value></data>
+  <data name="Mute_Conversation_Until_8AM" xml:space="preserve"><value>disattiva suoni fino alle 8:00</value></data>
+  <data name="NameConversation_Menu_Clear" xml:space="preserve"><value>cancella nome</value></data>
+  <data name="NameConversation_Title" xml:space="preserve"><value>Dai un nome al gruppo</value></data>
+  <data name="NetworkStatus_Banner_Connected" xml:space="preserve"><value>Connessione stabilita</value></data>
+  <data name="NetworkStatus_Banner_Connecting" xml:space="preserve"><value>Connessione in corso...</value></data>
+  <data name="NetworkStatus_Banner_Disconnected" xml:space="preserve"><value>In attesa di connessione</value></data>
+  <data name="NetworkStatus_Banner_No_Internet" xml:space="preserve"><value>Connessione a Internet assente</value></data>
+  <data name="NetworkStatus_Banner_Syncing" xml:space="preserve"><value>Sincronizzazione in corso...</value></data>
+  <data name="NetworkStatus_Banner_UpToDate" xml:space="preserve"><value>Aggiornato</value></data>
+  <data name="NewContacts_Header_FoundContacts" xml:space="preserve"><value>{0} nuovi contatti</value></data>
+  <data name="Notifications_Turn_Off_For_An_Hour" xml:space="preserve"><value>disattiva per un'ora</value></data>
+  <data name="Notifications_Turn_On" xml:space="preserve"><value>attiva</value></data>
+  <data name="Notifications_Turn_Until_8AM" xml:space="preserve"><value>disattiva fino alle 8:00</value></data>
+  <data name="Nux_Title_OnMessenger" xml:space="preserve"><value>Sei su Messenger!</value></data>
+  <data name="Nux_Title_OnMessenger_Message" xml:space="preserve"><value>È possibile raggiungere immediatamente chiunque abbia il badge blu di Messenger.</value></data>
+  <data name="People_AppBar_AddContact" xml:space="preserve"><value>aggiungi persone</value></data>
+  <data name="People_AppBar_Search" xml:space="preserve"><value>cerca</value></data>
+  <data name="PhoneNumber_Box_Title" xml:space="preserve"><value>Prefisso internazionale e numero di telefono</value></data>
+  <data name="PhoneNumber_ListpickerLabel_CountryCode" xml:space="preserve"><value>Seleziona Paese</value></data>
+  <data name="PhoneNumber_Registration_Welcome_Message" xml:space="preserve"><value>Inserisci il numero di telefono per iniziare.</value></data>
+  <data name="PhoneNumber_Select_Country" xml:space="preserve"><value>Paese</value></data>
+  <data name="PhotoAttachment_IndexDisplay_Label" xml:space="preserve"><value>{0} foto su {1}</value></data>
+  <data name="PhotoEdit_AppBar_Draw" xml:space="preserve"><value>disegna</value></data>
+  <data name="PhotoEdit_AppBar_Send" xml:space="preserve"><value>invia</value></data>
+  <data name="PhotoEdit_AppBar_Undo" xml:space="preserve"><value>annulla</value></data>
+  <data name="PhotoEdit_AppBar_Write" xml:space="preserve"><value>scrivi</value></data>
+  <data name="PhotoEdit_Nux_Text" xml:space="preserve"><value>Tocca la foto per aggiungere il testo</value></data>
+  <data name="Photos_SavePhoto_Error_StateIndicator" xml:space="preserve"><value>Impossibile salvare la foto.</value></data>
+  <data name="Photos_SavePhoto_MenuItem" xml:space="preserve"><value>salva la foto</value></data>
+  <data name="Photos_SavePhoto_Saving_StateIndicator" xml:space="preserve"><value>Salvataggio della foto in corso...</value></data>
+  <data name="Photos_SavePhoto_Success_StateIndicator" xml:space="preserve"><value>Foto salvata</value></data>
+  <data name="Power_Saver_Mode_Warning" xml:space="preserve"><value>Sei in modalità Risparmia batteria, quindi non riceverai le notifiche.</value></data>
+  <data name="ProfilePic_Confirmation_Title" xml:space="preserve"><value>Ti piace?</value></data>
+  <data name="ProfilePic_Label_Camera_Button" xml:space="preserve"><value>Scatta foto</value></data>
+  <data name="ProfilePic_Label_Gallery_Button" xml:space="preserve"><value>Scegli dagli album</value></data>
+  <data name="ProfilePic_Subtitle_Text" xml:space="preserve"><value>Imposta una foto per consentire alle persone di riconoscerti</value></data>
+  <data name="ProfilePic_Title_Text" xml:space="preserve"><value>Vuoi aggiungere una foto?</value></data>
+  <data name="RecentThreadList_Nux_EmptyList_Message" xml:space="preserve"><value>I tuoi messaggi saranno visualizzati qui quando inizierai a chattare.</value></data>
+  <data name="Recent_ContextMenu_Archive" xml:space="preserve"><value>archivia</value></data>
+  <data name="Recent_ContextMenu_Delete" xml:space="preserve"><value>elimina</value></data>
+  <data name="Recent_ContextMenu_Leave" xml:space="preserve"><value>abbandona il gruppo</value></data>
+  <data name="Recent_ContextMenu_MarkUnread" xml:space="preserve"><value>segna come non letto</value></data>
+  <data name="Recent_ContextMenu_Spam" xml:space="preserve"><value>contrassegna come spam</value></data>
+  <data name="Registration_TextboxHint_FirstName" xml:space="preserve"><value>Nome</value></data>
+  <data name="Registration_TextboxHint_LastName" xml:space="preserve"><value>Cognome</value></data>
+  <data name="Registration_Title2" xml:space="preserve"><value>Usa il tuo vero nome per consentire alle persone di capire che si tratta di te.</value></data>
+  <data name="ResourceLanguage" xml:space="preserve"><value>it-IT</value></data>
+  <data name="Session_Expired_Caption" xml:space="preserve"><value>Effettua di nuovo l'accesso per usare Messenger.</value></data>
+  <data name="Session_Expired_Title" xml:space="preserve"><value>sessione terminata</value></data>
+  <data name="SettingsPage_Title" xml:space="preserve"><value>impostazioni</value></data>
+  <data name="Settings_Help" xml:space="preserve"><value>Assistenza</value></data>
+  <data name="Settings_Help_Title" xml:space="preserve"><value>Informazioni</value></data>
+  <data name="Settings_In_App_Audio_Title" xml:space="preserve"><value>Suoni dell'applicazione</value></data>
+  <data name="Settings_In_App_Contact_Sync_Title" xml:space="preserve"><value>Sincronizza contatti</value></data>
+  <data name="Settings_In_App_Vibration_Title" xml:space="preserve"><value>Vibrazione applicazione</value></data>
+  <data name="Settings_Licenses" xml:space="preserve"><value>Licenze</value></data>
+  <data name="Settings_Location_Title" xml:space="preserve"><value>Posizione</value></data>
+  <data name="Settings_Notification_Title" xml:space="preserve"><value>Notifiche</value></data>
+  <data name="Settings_PhoneNumber_VerificationNeeded" xml:space="preserve"><value>(Conferma numero)</value></data>
+  <data name="Settings_Privacy_And_Terms" xml:space="preserve"><value>Privacy e condizioni</value></data>
+  <data name="Settings_Remove_Contacts_Body" xml:space="preserve"><value>Tutti i contatti precedentemente sincronizzati saranno rimossi.</value></data>
+  <data name="Settings_Remove_Contacts_Confirm" xml:space="preserve"><value>Rimuovi</value></data>
+  <data name="Settings_Remove_Contacts_Title" xml:space="preserve"><value>Vuoi rimuovere i contatti?</value></data>
+  <data name="Settings_SendOnEnter_Title" xml:space="preserve"><value>Tasto Invio per inviare</value></data>
+  <data name="Settings_Sync_Contacts_Body" xml:space="preserve"><value>Vuoi iniziare la sincronizzazione? I tuoi contatti saranno sincronizzati continuamente con i nostri server.</value></data>
+  <data name="Settings_Sync_Contacts_Confirmation" xml:space="preserve"><value>Sincronizza</value></data>
+  <data name="Settings_Sync_Contacts_Title" xml:space="preserve"><value>Sincronizza contatti</value></data>
+  <data name="Settings_Version_Number" xml:space="preserve"><value>Versione {0}</value></data>
+  <data name="Start_Group_Menu_Item" xml:space="preserve"><value>crea gruppo con {0}</value></data>
+  <data name="Sticker_Drawer_RecentStickers" xml:space="preserve"><value>Adesivi recenti</value></data>
+  <data name="Sticker_Pack_Download" xml:space="preserve"><value>scarica</value></data>
+  <data name="Sticker_Pack_Download_Failed" xml:space="preserve"><value>Download del pacchetto di adesivi non riuscito</value></data>
+  <data name="Sticker_Pack_Downloaded" xml:space="preserve"><value>scaricato</value></data>
+  <data name="Sticker_Pack_Downloading" xml:space="preserve"><value>download in corso</value></data>
+  <data name="Sticker_Pack_Share" xml:space="preserve"><value>condividi</value></data>
+  <data name="Sticker_Store_ContextMenu_Remove" xml:space="preserve"><value>rimuovi</value></data>
+  <data name="Sticker_Store_Menu_Item" xml:space="preserve"><value>negozio di adesivi</value></data>
+  <data name="Sticker_Store_Remove_Error" xml:space="preserve"><value>Impossibile rimuovere il pacchetto di adesivi.</value></data>
+  <data name="Sticker_Store_Tab_All" xml:space="preserve"><value>tutti</value></data>
+  <data name="Sticker_Store_Tab_Featured" xml:space="preserve"><value>in evidenza</value></data>
+  <data name="Sticker_Store_Tab_Owned" xml:space="preserve"><value>i tuoi</value></data>
+  <data name="Sticker_Store_Title" xml:space="preserve"><value>Negozio di adesivi</value></data>
+  <data name="SuggestedPins_Pinning_StateIndicator" xml:space="preserve"><value>Operazione in corso...</value></data>
+  <data name="SuggestedPins_SearchBox_Hint" xml:space="preserve"><value>cerca gruppi</value></data>
+  <data name="SuggestedPins_Title_PinGroup" xml:space="preserve"><value>Fissa gruppo in alto</value></data>
+  <data name="SyncContact_Button_LearnMore" xml:space="preserve"><value>Maggiori informazioni</value></data>
+  <data name="SyncContact_ErrorMessage_UnableToToggle" xml:space="preserve"><value>Impossibile modificare le tue impostazioni, controlla la tua connessione Internet e riprova.</value></data>
+  <data name="SyncContact_Subtitle" xml:space="preserve"><value>Sincronizza i tuoi contatti per vedere chi altro è su Messenger. I tuoi contatti saranno sincronizzati e aggiornati continuamente.</value></data>
+  <data name="SyncContact_Title" xml:space="preserve"><value>Invia un messaggio a tutti i contatti memorizzati sul telefono</value></data>
+  <data name="SyncContacts_MessageBox_LinkLabel" xml:space="preserve"><value>Maggiori informazioni</value></data>
+  <data name="Thread_AppBar_Details" xml:space="preserve"><value>dettagli</value></data>
+  <data name="Thread_AppBar_View_Members" xml:space="preserve"><value>visualizza persone</value></data>
+  <data name="Thread_Name_NoParticipant_Title" xml:space="preserve"><value>nessuna persona ancora</value></data>
+  <data name="Thread_UnnamedUserPlaceholder_Title" xml:space="preserve"><value>Persona su Facebook</value></data>
+  <data name="Threads_AppBar_Compose" xml:space="preserve"><value>nuovo</value></data>
+  <data name="Threads_AppBar_Refresh" xml:space="preserve"><value>aggiorna</value></data>
+  <data name="UnMute_Conversation_Menu_Item" xml:space="preserve"><value>attiva suoni</value></data>
+  <data name="Unsent_Message_Warning" xml:space="preserve"><value>Uscire da Messenger? Non hai ancora inviato i tuoi messaggi.</value></data>
+  <data name="Verify_PhoneNumber_Box_Title" xml:space="preserve"><value>Numero di telefono</value></data>
+  <data name="VideoRecorder_HelpText_Cancel" xml:space="preserve"><value>Rilascia per eliminare e ricominciare</value></data>
+  <data name="VideoRecorder_HelpText_HoldToSend" xml:space="preserve"><value>Tieni premuto per il video, tocca per la foto</value></data>
+  <data name="VideoRecorder_HelpText_Send" xml:space="preserve"><value>Per annullare, solleva il dito dal pulsante Invia</value></data>
+  <data name="View_Timeline_Menu_Item" xml:space="preserve"><value>diario</value></data>
+  <data name="Voice_Clip_Hold_Instruction" xml:space="preserve"><value>Tocca e tieni premuto per registrare e inviare audio</value></data>
+  <data name="Voice_Clip_Length_Limit" xml:space="preserve"><value>Durata massima raggiunta, rilascia per inviare</value></data>
+  <data name="Voice_Clip_Menu_Item" xml:space="preserve"><value>invia un messaggio vocale</value></data>
+  <data name="Voice_Clip_NUX_Instruction" xml:space="preserve"><value>Rilascia per inviare, scorri per annullare</value></data>
+  <data name="Voice_Clip_Record" xml:space="preserve"><value>registra</value></data>
+  <data name="Voice_Clip_Release_Cancel" xml:space="preserve"><value>Rilascia per annullare la registrazione</value></data>
+  <data name="orca_neue_nux_add_phone_body1_searchable_all_not_verified" xml:space="preserve"><value>Le persone possono aggiungerti ai contatti se hanno già il tuo numero di telefono, ma questo sarà visibile solo a te su Facebook.</value></data>
+  <data name="orca_neue_nux_add_phone_body1_searchable_all_visible_all" xml:space="preserve"><value>Le persone possono aggiungerti ai contatti se hanno già il tuo numero di telefono.</value></data>
+  <data name="orca_neue_nux_add_phone_body1_searchable_all_visible_custom" xml:space="preserve"><value>Le persone possono aggiungerti ai contatti se hanno già il tuo numero di telefono, ma la modifica non influenzerà chi può vedere il tuo numero su Facebook.</value></data>
+  <data name="orca_neue_nux_add_phone_body1_searchable_all_visible_friends" xml:space="preserve"><value>Le persone possono aggiungerti ai contatti se hanno già il tuo numero di telefono, ma questo è visibile solo ai tuoi amici su Facebook.</value></data>
+  <data name="orca_neue_nux_add_phone_body1_searchable_all_visible_self" xml:space="preserve"><value>Le persone possono aggiungerti ai contatti se hanno già il tuo numero di telefono, ma questo sarà visibile solo a te su Facebook.</value></data>
+  <data name="orca_neue_nux_add_phone_body1_searchable_fof" xml:space="preserve"><value>Non dovete essere amici su Facebook per mettervi in contatto, la tua impostazione di Facebook consentirà a chiunque abbia il tuo numero di cercarti.</value></data>
+  <data name="orca_neue_nux_add_phone_body2_not_verified" xml:space="preserve"><value>Questo numero è visibile solo a te su Facebook.</value></data>
+  <data name="orca_neue_nux_add_phone_body2_visible_custom" xml:space="preserve"><value>La modifica non influenzerà chi può vedere il tuo numero su Facebook.</value></data>
+  <data name="orca_neue_nux_add_phone_body2_visible_friends" xml:space="preserve"><value>Questo numero è visibile solo ai tuoi amici su Facebook.</value></data>
+  <data name="orca_neue_nux_add_phone_body2_visible_self" xml:space="preserve"><value>Questo numero è visibile solo a te su Facebook.</value></data>
+  <data name="orca_neue_nux_add_phone_title_no_verified_number" xml:space="preserve"><value>Quale numero possono usare le persone per raggiungerti?</value></data>
+  <data name="orca_neue_nux_add_phone_title_verified_long" xml:space="preserve"><value>È il numero che le persone possono utilizzare per contattarti?</value></data>
+  <data name="orca_neue_nux_add_phone_title_verified_short" xml:space="preserve"><value>Il tuo numero è aggiornato?</value></data>
+</root>

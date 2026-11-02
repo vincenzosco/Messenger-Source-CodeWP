@@ -1,0 +1,395 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Active_AppBar_Chat" xml:space="preserve"><value>obrolan</value></data>
+  <data name="AddContact_Contact_Already_Exists" xml:space="preserve"><value>Nomor telepon ini telah ditambahkan sebagai kontak.</value></data>
+  <data name="AddContact_FBUser_Already_Exists" xml:space="preserve"><value>{0} telah ditambahkan sebagai kontak.</value></data>
+  <data name="AddContact_Invite_Button" xml:space="preserve"><value>undang</value></data>
+  <data name="AddContact_MatchedExistingUser_Label" xml:space="preserve"><value>{0} sudah ada di kontak Messenger Anda</value></data>
+  <data name="AddContact_MatchingUser_Label" xml:space="preserve"><value>{0} telah ditambahkan ke kontak Messenger Anda</value></data>
+  <data name="AddContact_Message_Button" xml:space="preserve"><value>kirim pesan ke {0}</value></data>
+  <data name="AddContact_PhoneNumber_Description" xml:space="preserve"><value>Masukkan nomor telepon seseorang untuk menemukannya di Messenger.</value></data>
+  <data name="AddContact_PhoneNumber_Title" xml:space="preserve"><value>TAMBAHKAN KONTAK</value></data>
+  <data name="AddContact_Remove_Contact_Warning" xml:space="preserve"><value>{0} akan dihapus dari Kontak Messenger Anda.</value></data>
+  <data name="AddContact_Remove_MessageBox_Title" xml:space="preserve"><value>Hapus Kontak</value></data>
+  <data name="AddPhotos_Menu_ChooseFromAlbum" xml:space="preserve"><value>Pilih dari album</value></data>
+  <data name="AddPhotos_Menu_RemovePhotos" xml:space="preserve"><value>Hapus foto</value></data>
+  <data name="AddPhotos_Menu_TakePhoto" xml:space="preserve"><value>Ambil Foto</value></data>
+  <data name="AddPhotos_Title_EditProfilePicture" xml:space="preserve"><value>SUNTING FOTO PROFIL</value></data>
+  <data name="AddPhotos_Title_SetGroupPhoto" xml:space="preserve"><value>ATUR FOTO GRUP</value></data>
+  <data name="Add_Phone_Number_Label" xml:space="preserve"><value>Tambahkan Nomor Telepon</value></data>
+  <data name="AppBar_Cancel" xml:space="preserve"><value>batal</value></data>
+  <data name="AppBar_No" xml:space="preserve"><value>tidak</value></data>
+  <data name="AppBar_Ok" xml:space="preserve"><value>ok</value></data>
+  <data name="AppBar_Remove" xml:space="preserve"><value>hapus</value></data>
+  <data name="AppBar_Undo" xml:space="preserve"><value>batalkan</value></data>
+  <data name="AppBar_Yes" xml:space="preserve"><value>ya</value></data>
+  <data name="AppUpdate_Description" xml:space="preserve"><value>Perbarui Messenger untuk mendapatkan fitur dan pengembangan baru.</value></data>
+  <data name="AppUpdate_NotNowButton" xml:space="preserve"><value>Lain Kali</value></data>
+  <data name="AppUpdate_Title" xml:space="preserve"><value>Pembaruan untuk Messenger tersedia</value></data>
+  <data name="AppUpdate_UpdateAppButton" xml:space="preserve"><value>Perbarui</value></data>
+  <data name="App_Location_Services_Enable" xml:space="preserve"><value>Untuk berbagi lokasi di pesan Anda, buka pengaturan Messenger.</value></data>
+  <data name="App_Quit_Caption" xml:space="preserve"><value>Tinggalkan Messenger</value></data>
+  <data name="Attachments_AppBar_Next" xml:space="preserve"><value>berikutnya</value></data>
+  <data name="Attachments_AppBar_Previous" xml:space="preserve"><value>sebelumnya</value></data>
+  <data name="Attachments_AppBar_Skip" xml:space="preserve"><value>lewati</value></data>
+  <data name="BackgroundToast_LeavingApp_Title" xml:space="preserve"><value>Messenger</value></data>
+  <data name="BackgroundToast_LeavingApp_Warning" xml:space="preserve"><value>Beberapa pesan belum dikirim sebelum Messenger ditutup. Buka Messenger untuk memastikan pesan Anda telah dikirim.</value></data>
+  <data name="ButtonLabelRetry" xml:space="preserve"><value>Coba lagi</value></data>
+  <data name="Button_Continue" xml:space="preserve"><value>Lanjutkan</value></data>
+  <data name="CanonicalThreadDetailsPage_Start_Group" xml:space="preserve"><value>buat grup</value></data>
+  <data name="CanonicalThreadDetailsPage_Title" xml:space="preserve"><value>rincian</value></data>
+  <data name="Chat_Is_Off" xml:space="preserve"><value>Obrolan mati</value></data>
+  <data name="Chat_Is_Off_Details_Label" xml:space="preserve"><value>Semua pesan tetap akan masuk meskipun obrolan dimatikan, namun Anda dapat menyalakannya untuk mengetahui siapa saja yang aktif di Facebook.</value></data>
+  <data name="Client_Type_Mobile" xml:space="preserve"><value>Seluler</value></data>
+  <data name="Client_Type_Web" xml:space="preserve"><value>Web</value></data>
+  <data name="Composer_Exit_Warning" xml:space="preserve"><value>Batalkan pesan?</value></data>
+  <data name="Composer_Groups_Search_Header" xml:space="preserve"><value>GRUP</value></data>
+  <data name="Composer_More_People_Search_Header" xml:space="preserve"><value>ORANG LAINNYA</value></data>
+  <data name="Composer_SendingMessage" xml:space="preserve"><value>mengirimkan pesan...</value></data>
+  <data name="Composer_To" xml:space="preserve"><value>Untuk:</value></data>
+  <data name="Confirm_Phone_Number_Label" xml:space="preserve"><value>Konfirmasikan Nomor</value></data>
+  <data name="ContactCard_MenuLabel_CreateGroup" xml:space="preserve"><value>buat grup bersama {0}</value></data>
+  <data name="ContactCard_MenuLabel_RemoveContact" xml:space="preserve"><value>hapus kontak</value></data>
+  <data name="ContactCard_MenuLabel_SendMessage" xml:space="preserve"><value>kirim Pesan ke {0}</value></data>
+  <data name="ContactList_Header_ContactsFound" xml:space="preserve"><value>{0} kontak ditemukan</value></data>
+  <data name="ContactList_Header_Failed" xml:space="preserve"><value>gagal mengunggah kontak. coba lagi?</value></data>
+  <data name="ContactList_Header_FindContacts" xml:space="preserve"><value>cari Kontak</value></data>
+  <data name="ContactList_Header_ShowAll" xml:space="preserve"><value>tampilkan semua</value></data>
+  <data name="ContactList_Header_SyncingContacts" xml:space="preserve"><value>menyinkronkan kontak...</value></data>
+  <data name="ContactList_Nux_Label_EmptyList" xml:space="preserve"><value>Anda dapat menyinkronkan kontak Anda untuk melihat siapa yang telah Anda kenal di Messenger.</value></data>
+  <data name="ContactList_Nux_Label_NoMatchingContacts" xml:space="preserve"><value>Anda akan melihat kontak Anda di sini. Ketuk ikon kontak untuk menambahkan seseorang.</value></data>
+  <data name="Contact_Search_No_Results" xml:space="preserve"><value>Tidak Ada Hasil</value></data>
+  <data name="Contacts_Find_Button_Label" xml:space="preserve"><value>cari Kontak</value></data>
+  <data name="Contacts_Invite_Button_Label" xml:space="preserve"><value>undang orang</value></data>
+  <data name="Conversation_AppBar_AttachPhoto" xml:space="preserve"><value>foto</value></data>
+  <data name="Conversation_AppBar_Camera" xml:space="preserve"><value>kamera</value></data>
+  <data name="Conversation_AppBar_ChangePhoto" xml:space="preserve"><value>foto</value></data>
+  <data name="Conversation_AppBar_Like" xml:space="preserve"><value>suka</value></data>
+  <data name="Conversation_AppBar_Send" xml:space="preserve"><value>kirim</value></data>
+  <data name="Conversation_AppBar_Text" xml:space="preserve"><value>teks</value></data>
+  <data name="Conversation_ContextMenu_RemoveAttachment" xml:space="preserve"><value>hapus gambar</value></data>
+  <data name="Conversation_MenuItem_Rename" xml:space="preserve"><value>nama</value></data>
+  <data name="CreateGroup_TextBox_Label" xml:space="preserve"><value>Nama Grup</value></data>
+  <data name="CreateGroup_Title" xml:space="preserve"><value>GRUP BARU</value></data>
+  <data name="Device_Location_Services_Enable" xml:space="preserve"><value>Untuk berbagi lokasi di pesan Anda, pergi ke pengaturan lokasi di pengaturan telepon Anda.</value></data>
+  <data name="Empty_Conversation_Placeholder_Text" xml:space="preserve"><value>{0} menggunakan Messenger dan akan langsung menerima pesan Anda.</value></data>
+  <data name="Empty_Conversation_Placeholder_Text_For_Non_Messenger_User" xml:space="preserve"><value>{0} tidak menggunakan Messenger, namun akan menerima pesan Anda di Facebook.</value></data>
+  <data name="Empty_Conversation_Placeholder_Title" xml:space="preserve"><value>Mulai percakapan</value></data>
+  <data name="Error_Cannot_Attach_File" xml:space="preserve"><value>Tidak dapat melampirkan berkas. Coba lagi nanti.</value></data>
+  <data name="Error_Cannot_Fetch_Conversations" xml:space="preserve"><value>Maaf, saat ini tidak dapat menampilkan pesan. Harap coba lagi.</value></data>
+  <data name="Error_Cannot_Fetch_Messages" xml:space="preserve"><value>Maaf, tida dapat menampilkan pesa sekarang. Harap coba lagi.</value></data>
+  <data name="Error_Cannot_Fetch_Sticker_Packs" xml:space="preserve"><value>Maaf, saat ini tidak dapat menampilkan paket stiker.</value></data>
+  <data name="Error_Changing_Mute" xml:space="preserve"><value>Tidak dapat mensenyapkan. Harap coba lagi.</value></data>
+  <data name="Error_Changing_Unmute" xml:space="preserve"><value>Tidak bisa membunyikan. Coba lagi.</value></data>
+  <data name="Error_Gallery_Out_Of_Memory" xml:space="preserve"><value>Kami tidak bisa melampirkan gambar ukuran ini.</value></data>
+  <data name="Error_Invalid_Phone_Number" xml:space="preserve"><value>Masukkan nomor telepon yang valid.</value></data>
+  <data name="Error_Invalid_Phone_Prefix" xml:space="preserve"><value>Gunakan kode negara yang valid</value></data>
+  <data name="Error_Max_File_Attachment_Exceeded" xml:space="preserve"><value>Anda tidak dapat menambahkan foto lagi ke pesan ini.</value></data>
+  <data name="Error_No_Connection" xml:space="preserve"><value>Tidak ada koneksi internet</value></data>
+  <data name="Error_No_Conversations" xml:space="preserve"><value>Anda sudah tidak memiliki percakapan lagi.</value></data>
+  <data name="ExistingUser_Create_Account_Button" xml:space="preserve"><value>buat akun baru</value></data>
+  <data name="ExistingUser_Description" xml:space="preserve"><value>Nomor ini cocok dengan akun Facebook {0} {1}.</value></data>
+  <data name="ExistingUser_LoginAs_Button" xml:space="preserve"><value>masuk sebagai {0}</value></data>
+  <data name="ExistingUser_Title" xml:space="preserve"><value>Masuk menggunakan Facebook?</value></data>
+  <data name="FetchingDataFromServerFailed" xml:space="preserve"><value>Tidak dapat memuat info Anda. Coba lagi.</value></data>
+  <data name="FlyTrap_Error_Generic" xml:space="preserve"><value>Tidak dapat menampilkan laporan.</value></data>
+  <data name="FlyTrap_Label_Disclaimer" xml:space="preserve"><value>Informasi tentang nomor telepon Anda dan aplikasi ini akan disertakan secara otomatis. Untuk mempelajari lebih lanjut tentang bagaimana informasi akan digunakan, kunjungi {0} kami.</value></data>
+  <data name="FlyTrap_Label_Disclaimer_DataUsePolicyLink" xml:space="preserve"><value>Kebijakan Penggunaan Data</value></data>
+  <data name="FlyTrap_Label_Instructions" xml:space="preserve"><value>Jelaskan apa yang akan Anda lakukan dan apa yang tidak berjalan dengan benar.</value></data>
+  <data name="FlyTrap_Label_Screenshot" xml:space="preserve"><value>Cuplikan layar</value></data>
+  <data name="FlyTrap_MenuItem_ReportProblem" xml:space="preserve"><value>laporkan masalah</value></data>
+  <data name="FlyTrap_TextboxHint_Problem" xml:space="preserve"><value>jelaskan masalahnya</value></data>
+  <data name="FlyTrap_Title_ReportProblem" xml:space="preserve"><value>LAPORKAN MASALAH</value></data>
+  <data name="Forwarding_SearchBox_HintText" xml:space="preserve"><value>cari orang</value></data>
+  <data name="Forwarding_Title_Label" xml:space="preserve"><value>TERUSKAN PESAN</value></data>
+  <data name="Friends_AppBar_AddContact" xml:space="preserve"><value>tambahkan kontak</value></data>
+  <data name="Global_Notifcation_Off_Until" xml:space="preserve"><value>Mati hingga {0}</value></data>
+  <data name="Global_Notification_Off" xml:space="preserve"><value>Mati</value></data>
+  <data name="Global_Notification_On" xml:space="preserve"><value>Nyala</value></data>
+  <data name="GroupDetailsPage_AppBar_LeaveGroup" xml:space="preserve"><value>keluar dari grup</value></data>
+  <data name="GroupDetailsPage_AppBar_RemoveGroupName" xml:space="preserve"><value>hapus nama</value></data>
+  <data name="GroupDetailsPage_AppBar_RemoveGroupPhoto" xml:space="preserve"><value>hapus foto grup</value></data>
+  <data name="GroupDetailsPage_Title" xml:space="preserve"><value>grup</value></data>
+  <data name="GroupMember_Context_Menu_Remove_Member" xml:space="preserve"><value>hapus</value></data>
+  <data name="GroupTile_Date_ActiveDaysAgo" xml:space="preserve"><value>Aktif {0} hari yang lalu</value></data>
+  <data name="GroupTile_Date_ActiveLastMonth" xml:space="preserve"><value>Aktif bulan lalu</value></data>
+  <data name="GroupTile_Date_ActiveLastYear" xml:space="preserve"><value>Aktif tahun lalu</value></data>
+  <data name="GroupTile_Date_ActiveMonthsAgo" xml:space="preserve"><value>Aktif {0} bulan yang lalu</value></data>
+  <data name="GroupTile_Date_ActiveToday" xml:space="preserve"><value>Aktif hari ini</value></data>
+  <data name="GroupTile_Date_ActiveYearsAgo" xml:space="preserve"><value>Aktif {0} tahun lalu</value></data>
+  <data name="GroupTile_Date_ActiveYesterday" xml:space="preserve"><value>Aktif kemarin</value></data>
+  <data name="Group_AddPeople_Search" xml:space="preserve"><value>Cari orang</value></data>
+  <data name="Group_AddPeople_Title" xml:space="preserve"><value>TAMBAHKAN ORANG</value></data>
+  <data name="Group_AddingParticipants_Failed_Message" xml:space="preserve"><value>Tidak dapat menambahkan orang ke grup. Harap coba lagi.</value></data>
+  <data name="Group_AddingParticipants_Failed_Title" xml:space="preserve"><value>Tidak dapat menambahkan orang</value></data>
+  <data name="Group_AppBar_SelectMany" xml:space="preserve"><value>Pilih lebih dari satu</value></data>
+  <data name="Group_RemovingParticipants_Failed_Message" xml:space="preserve"><value>Tidak dapat menghapus orang. Harap coba lagi.</value></data>
+  <data name="Group_RemovingParticipants_Failed_Title" xml:space="preserve"><value>Tidak dapat menghapus orang.</value></data>
+  <data name="Groups_AppBar_Add" xml:space="preserve"><value>sematkan</value></data>
+  <data name="Groups_AppBar_Create" xml:space="preserve"><value>buat</value></data>
+  <data name="Groups_AppBar_Next" xml:space="preserve"><value>berikutnya</value></data>
+  <data name="Groups_NUX_Button_Text" xml:space="preserve"><value>Mulai</value></data>
+  <data name="Groups_NUX_Help_Title" xml:space="preserve"><value>Sekarang Anda dapat menyematkan grup agar mudah membukanya kembali.</value></data>
+  <data name="Groups_NUX_NoThread_Button_Text" xml:space="preserve"><value>Buat grup baru</value></data>
+  <data name="Groups_NUX_PlaceholderActive_LastWeek" xml:space="preserve"><value>Aktif minggu lalu</value></data>
+  <data name="Groups_NUX_PlaceholderActive_Yesterday" xml:space="preserve"><value>Aktif kemarin</value></data>
+  <data name="Groups_NUX_PlaceholderFour_Members" xml:space="preserve"><value>Shenwei, Joey</value></data>
+  <data name="Groups_NUX_PlaceholderFour_Title" xml:space="preserve"><value>Rekan Kerja</value></data>
+  <data name="Groups_NUX_PlaceholderOne_Members" xml:space="preserve"><value>Brandon, Simon</value></data>
+  <data name="Groups_NUX_PlaceholderOne_Title" xml:space="preserve"><value>Teman sekamar</value></data>
+  <data name="Groups_NUX_PlaceholderThree_Members" xml:space="preserve"><value>Mac, Ben</value></data>
+  <data name="Groups_NUX_PlaceholderThree_Title" xml:space="preserve"><value>Kru Akhir Pekan</value></data>
+  <data name="Groups_NUX_PlaceholderTwo_Members" xml:space="preserve"><value>Alli, Adam, Megan, Mike</value></data>
+  <data name="Groups_NUX_PlaceholderTwo_Title" xml:space="preserve"><value>Keluarga</value></data>
+  <data name="Image_Search_Empty_Results" xml:space="preserve"><value>Tidak ditemukan gambar.</value></data>
+  <data name="Image_Search_Menu_Item" xml:space="preserve"><value>cari gambar</value></data>
+  <data name="Image_Search_Popup_Cancel" xml:space="preserve"><value>Batal</value></data>
+  <data name="Image_Search_Popup_Message" xml:space="preserve"><value>Apa yang Anda cari?</value></data>
+  <data name="Image_Search_Popup_Search" xml:space="preserve"><value>Cari</value></data>
+  <data name="Image_Search_Popup_Title" xml:space="preserve"><value>Cari gambar</value></data>
+  <data name="Invite_Contact_ToMessenger" xml:space="preserve"><value>Coba Messenger: {0}</value></data>
+  <data name="Location_Menu_Item" xml:space="preserve"><value>kirim lokasi</value></data>
+  <data name="Location_Services_Disabled" xml:space="preserve"><value>Lokasi mati</value></data>
+  <data name="Location_Warning_Body" xml:space="preserve"><value>Orang dalam percakapan ini dapat melihat lokasi Anda di Peta. Ketuk untuk mengaktifkan atau menonaktifkan lokasi Anda.</value></data>
+  <data name="LoginApproval_ResendCode" xml:space="preserve"><value>kirim Lagi</value></data>
+  <data name="LoginApproval_Title_EnterCode" xml:space="preserve"><value>Masukkan kode yang dikirim ke ponsel Anda.</value></data>
+  <data name="Login_Approval_Security_Code" xml:space="preserve"><value>Kode konfirmasi</value></data>
+  <data name="Login_NotOnFacebook" xml:space="preserve"><value>Belum bergabung dengan Facebook?</value></data>
+  <data name="Login_RecoverPassword" xml:space="preserve"><value>Lupa Kata Sandi?</value></data>
+  <data name="Login_SigningIn" xml:space="preserve"><value>masuk di</value></data>
+  <data name="Login_TextboxHint_EmailOrPhone" xml:space="preserve"><value>Email atau telepon</value></data>
+  <data name="Login_TextboxHint_Password" xml:space="preserve"><value>Kata sandi</value></data>
+  <data name="Login_Title_SignIn" xml:space="preserve"><value>Masuk dengan Facebook</value></data>
+  <data name="Login_Title_Welcome" xml:space="preserve"><value>Selamat datang di Messenger</value></data>
+  <data name="Login_With_Facebook" xml:space="preserve"><value>Masuk dengan Facebook</value></data>
+  <data name="MainPage_Active_Chat_Popup" xml:space="preserve"><value>OBROLAN</value></data>
+  <data name="MainPage_Active_Disable_Chat" xml:space="preserve"><value>matikan obrolan</value></data>
+  <data name="MainPage_Active_Enable_Chat" xml:space="preserve"><value>nyalakan obrolan</value></data>
+  <data name="MainPage_AppBar_Mute_Button" xml:space="preserve"><value>senyap</value></data>
+  <data name="MainPage_AppBar_UnMute_Button" xml:space="preserve"><value>Bunyikan</value></data>
+  <data name="MainPage_AppMenu_OtherFolder" xml:space="preserve"><value>folder lainnya</value></data>
+  <data name="MainPage_AppMenu_Settings" xml:space="preserve"><value>pengaturan</value></data>
+  <data name="MainPage_Pivot_Title_Active" xml:space="preserve"><value>aktif</value></data>
+  <data name="MainPage_Pivot_Title_Friends" xml:space="preserve"><value>messenger</value></data>
+  <data name="MainPage_Pivot_Title_Groups" xml:space="preserve"><value>grup</value></data>
+  <data name="MainPage_Pivot_Title_Recent_Threads" xml:space="preserve"><value>terbaru</value></data>
+  <data name="Matching_Contact_NotFound_Message" xml:space="preserve"><value>Tidak dapat mencocokkan {0} ke orang di Messenger</value></data>
+  <data name="MessageBox_Description_ArchiveThread" xml:space="preserve"><value>Untuk melihat percakapan yang diarsipkan, Anda perlu masuk ke situs web Facebook.</value></data>
+  <data name="MessageBox_Description_DeleteThread" xml:space="preserve"><value>Ini akan menghapus percakapan secara permanen.</value></data>
+  <data name="MessageBox_Description_FlyTrapSuccess" xml:space="preserve"><value>Terima kasih atas masukan Anda!</value></data>
+  <data name="MessageBox_Description_LeaveThread" xml:space="preserve"><value>Jika Anda meninggalkan percakapan tersebut, Anda tidak akan mendapatkan pesan apapun.</value></data>
+  <data name="MessageBox_Description_SpamThread" xml:space="preserve"><value>Saat Anda menandai sesuatu sebagai spam, Anda tidak akan melihatnya lagi di pesan terbaru Anda.</value></data>
+  <data name="MessageBox_Label_ArchiveThread" xml:space="preserve"><value>arsipkan percakapan ini?</value></data>
+  <data name="MessageBox_Label_AuthenticateWithBrowser" xml:space="preserve"><value>Buka browser web untuk menghubungkan</value></data>
+  <data name="MessageBox_Label_BypassLogin2Fac" xml:space="preserve"><value>Persetujuan masuk Anda telah aktif. Masukkan kata sandi Anda untuk melanjutkan.</value></data>
+  <data name="MessageBox_Label_BypassLoginFail" xml:space="preserve"><value>Tidak dapat mengonfirmasi nomor telepon. Coba lagi.</value></data>
+  <data name="MessageBox_Label_ClearThreadPhotoFailed" xml:space="preserve"><value>Tidak dapat menghapus foto.</value></data>
+  <data name="MessageBox_Label_ConfirmPhoneNumberFailed" xml:space="preserve"><value>Tidak dapat mengonfirmasi nomor Anda</value></data>
+  <data name="MessageBox_Label_ConfirmationCodeInvalid" xml:space="preserve"><value>Kode konfirmasi tidak valid.</value></data>
+  <data name="MessageBox_Label_CreateGroupFailed" xml:space="preserve"><value>Tidak bisa membuat grup</value></data>
+  <data name="MessageBox_Label_DeleteThread" xml:space="preserve"><value>Hapus percakapan?</value></data>
+  <data name="MessageBox_Label_ForwardingFailed" xml:space="preserve"><value>Tidak dapat meneruskan pesan ke semua penerima.</value></data>
+  <data name="MessageBox_Label_LeaveThread" xml:space="preserve"><value>Keluar dari grup?</value></data>
+  <data name="MessageBox_Label_LoginFailed" xml:space="preserve"><value>Tidak bisa masuk sekarang.</value></data>
+  <data name="MessageBox_Label_NamingConversation_Error" xml:space="preserve"><value>Tidak dapat mengganti nama percakapan.</value></data>
+  <data name="MessageBox_Label_NoInternet" xml:space="preserve"><value>Tidak ada koneksi internet</value></data>
+  <data name="MessageBox_Label_PinGroupFailed" xml:space="preserve"><value>Tidak dapat menyematkan grup.</value></data>
+  <data name="MessageBox_Label_SetThreadPhotoFailed" xml:space="preserve"><value>Tidak dapat mengatur foto grup.</value></data>
+  <data name="MessageBox_Label_SpamThread" xml:space="preserve"><value>tandai sebagai spam?</value></data>
+  <data name="MessageBox_Label_UpdatePhoneNumberFailed" xml:space="preserve"><value>Tidak dapat memperbarui nomor.</value></data>
+  <data name="MessageBox_Label_UploadProfilePic_Failed" xml:space="preserve"><value>Tidak bisa menetapkan foto profil.</value></data>
+  <data name="MessageBox_Popup_Cancel" xml:space="preserve"><value>Batalkan</value></data>
+  <data name="MessageBox_Title_AddContactFailed" xml:space="preserve"><value>Saat ini tidak dapat menemukan kontak.</value></data>
+  <data name="MessageBox_Title_FlyTrapSuccess" xml:space="preserve"><value>Laporan telah dikirim</value></data>
+  <data name="MessageBox_Title_LoginFailed" xml:space="preserve"><value>Tidak bisa masuk sekarang.</value></data>
+  <data name="MessageComposer_EmptyGallery_Text" xml:space="preserve"><value>Belum ada foto dalam galeri Anda.</value></data>
+  <data name="MessageDetails_Error_Unexpected" xml:space="preserve"><value>Maaf, saat ini tidak dapat menampilkan rincian pesan. Coba lagi nanti.</value></data>
+  <data name="MessageDetails_Label_SeenBy" xml:space="preserve"><value>Dilihat oleh:</value></data>
+  <data name="MessageSnippetAudioClipLoggedInUser" xml:space="preserve"><value>Anda mengirim klip suara.</value></data>
+  <data name="MessageSnippetAudioClipOtherUser" xml:space="preserve"><value>{0} mengirim klip suara.</value></data>
+  <data name="MessageSnippetGenericLoggedInUser" xml:space="preserve"><value>Anda mengirim pesan.</value></data>
+  <data name="MessageSnippetGenericOtherUser" xml:space="preserve"><value>{0} mengirim pesan.</value></data>
+  <data name="MessageSnippetPhotoLoggedInUser" xml:space="preserve"><value>Anda mengirim gambar.</value></data>
+  <data name="MessageSnippetPhotoOtherUser" xml:space="preserve"><value>{0} mengirim gambar.</value></data>
+  <data name="MessageSnippetStickerLoggedInUser" xml:space="preserve"><value>Anda mengirim stiker.</value></data>
+  <data name="MessageSnippetStickerOtherUser" xml:space="preserve"><value>{0} mengirim stiker.</value></data>
+  <data name="MessageSnippetVideoLoggedInUser" xml:space="preserve"><value>Anda mengirim video.</value></data>
+  <data name="MessageSnippetVideoOtherUser" xml:space="preserve"><value>{0} mengirim video.</value></data>
+  <data name="MessageSnippetWhenSenderIsTheLoggedInUser" xml:space="preserve"><value>Anda</value></data>
+  <data name="MessageStatus_Location_City" xml:space="preserve"><value>Dikirim dari {0}</value></data>
+  <data name="MessageStatus_Location_CityCountry" xml:space="preserve"><value>Dikirim dari {0}, {1}</value></data>
+  <data name="MessageStatus_Location_CityState" xml:space="preserve"><value>Dikirim dari {0}, {1}</value></data>
+  <data name="MessageStatus_Location_DistrictCity" xml:space="preserve"><value>dikirim dari {0}, {1}</value></data>
+  <data name="MessageStatus_Origin_Messenger" xml:space="preserve"><value>Dikirim dari Messenger</value></data>
+  <data name="MessageStatus_Origin_Mobile" xml:space="preserve"><value>Dikirim dari ponsel</value></data>
+  <data name="MessageStatus_Origin_Web" xml:space="preserve"><value>Dikirim dari web</value></data>
+  <data name="MessageStatus_SeenBy_1" xml:space="preserve"><value>Dilihat oleh {0}</value></data>
+  <data name="MessageStatus_SeenBy_2" xml:space="preserve"><value>Dilihat oleh {0} dan {1}</value></data>
+  <data name="MessageStatus_SeenBy_3" xml:space="preserve"><value>Dilihat oleh {0}, {1}, dan {2}</value></data>
+  <data name="MessageStatus_SeenBy_4" xml:space="preserve"><value>Dilihat oleh {0}, {1}, {2} dan {3}</value></data>
+  <data name="MessageStatus_SeenBy_Everyone" xml:space="preserve"><value>Dilihat oleh semua orang</value></data>
+  <data name="MessageStatus_SeenBy_Others" xml:space="preserve"><value>Dilihat oleh {0}, {1}, {2} dan {3} lainnya</value></data>
+  <data name="MessageStatus_Seen_Timestamp" xml:space="preserve"><value>Dilihat pada {0}</value></data>
+  <data name="Message_Delete_Caption" xml:space="preserve"><value>Hapus Pesan</value></data>
+  <data name="Message_Delete_Text" xml:space="preserve"><value>Apakah Anda ingin menghapus pesan ini secara permanen?</value></data>
+  <data name="Message_Sending_Failed" xml:space="preserve"><value>Pesan tidak dapat dikirim.</value></data>
+  <data name="Message_Sending_Failed_App_Exited_Description" xml:space="preserve"><value>Aplikasinya tertutup sebelum pesan Anda dikirim. Coba kirim lagi.</value></data>
+  <data name="Message_Sending_Failed_Permission_Description" xml:space="preserve"><value>Maaf, Anda tidak bisa mengirim pesan kepada orang ini.</value></data>
+  <data name="Messages_Active_1m_Ago" xml:space="preserve"><value>aktif 1 menit yang lalu</value></data>
+  <data name="Messages_Active_Now" xml:space="preserve"><value>sedang aktif</value></data>
+  <data name="Messages_Active_Xd_Ago" xml:space="preserve"><value>aktif {0} hari yang lalu</value></data>
+  <data name="Messages_Active_Xh_Ago" xml:space="preserve"><value>aktif {0} jam yang lalu</value></data>
+  <data name="Messages_Active_Xm_Ago" xml:space="preserve"><value>aktif {0} menit yang lalu</value></data>
+  <data name="Messages_AppBar_Send_Sticker" xml:space="preserve"><value>stiker</value></data>
+  <data name="Messages_ContextMenu_Copy" xml:space="preserve"><value>salin teks</value></data>
+  <data name="Messages_ContextMenu_Delete" xml:space="preserve"><value>hapus</value></data>
+  <data name="Messages_ContextMenu_Forward" xml:space="preserve"><value>teruskan</value></data>
+  <data name="Messages_ContextMenu_Retry" xml:space="preserve"><value>coba lagi</value></data>
+  <data name="Messages_Context_Menu_View_Details" xml:space="preserve"><value>lihat rincian</value></data>
+  <data name="Messages_Group_Message" xml:space="preserve"><value>GRUP</value></data>
+  <data name="Messages_Hint_Text" xml:space="preserve"><value>ketikkan pesan</value></data>
+  <data name="Messages_On_Facebook" xml:space="preserve"><value>Facebook</value></data>
+  <data name="Messages_On_Messenger" xml:space="preserve"><value>Messenger</value></data>
+  <data name="Messages_On_Mobile" xml:space="preserve"><value>di ponsel</value></data>
+  <data name="Messages_Refreshing_Failed_StateIndicator" xml:space="preserve"><value>Tidak dapat memperbarui, periksa koneksi Anda</value></data>
+  <data name="Messages_Refreshing_StateIndicator" xml:space="preserve"><value>Menyegarkan...</value></data>
+  <data name="Messages_Refreshing_Success_Stateindicator" xml:space="preserve"><value>Telah diperbarui</value></data>
+  <data name="Messages_Share_Not_Viewable" xml:space="preserve"><value>Mungkin ini telah dihapus atau Anda tidak memiliki izin untuk melihatnya.</value></data>
+  <data name="Mute_Conversation_For_An_Hour" xml:space="preserve"><value>senyapkan selama 1 jam</value></data>
+  <data name="Mute_Conversation_Forever" xml:space="preserve"><value>senyap</value></data>
+  <data name="Mute_Conversation_Menu_Item" xml:space="preserve"><value>senyap</value></data>
+  <data name="Mute_Conversation_Until_8AM" xml:space="preserve"><value>senyapkan hingga pukul 08.00</value></data>
+  <data name="NameConversation_Menu_Clear" xml:space="preserve"><value>kosongkan nama</value></data>
+  <data name="NameConversation_Title" xml:space="preserve"><value>NAMA GRUP</value></data>
+  <data name="NetworkStatus_Banner_Connected" xml:space="preserve"><value>Terhubung</value></data>
+  <data name="NetworkStatus_Banner_Connecting" xml:space="preserve"><value>Menghubungkan...</value></data>
+  <data name="NetworkStatus_Banner_Disconnected" xml:space="preserve"><value>Menunggu jaringan</value></data>
+  <data name="NetworkStatus_Banner_No_Internet" xml:space="preserve"><value>Tidak Ada Koneksi Internet</value></data>
+  <data name="NetworkStatus_Banner_Syncing" xml:space="preserve"><value>Menyinkronkan...</value></data>
+  <data name="NetworkStatus_Banner_UpToDate" xml:space="preserve"><value>Terbaru</value></data>
+  <data name="NewContacts_Header_FoundContacts" xml:space="preserve"><value>{0} KONTAK BARU</value></data>
+  <data name="Notifications_Turn_Off_For_An_Hour" xml:space="preserve"><value>matikan selama 1 jam</value></data>
+  <data name="Notifications_Turn_On" xml:space="preserve"><value>nyalakan</value></data>
+  <data name="Notifications_Turn_Until_8AM" xml:space="preserve"><value>matikan sampai 08.00</value></data>
+  <data name="Nux_Title_OnMessenger" xml:space="preserve"><value>Anda menggunakan Messenger!</value></data>
+  <data name="Nux_Title_OnMessenger_Message" xml:space="preserve"><value>Siapa saja dengan lencana biru Messenger dapat dihubungi langsung.</value></data>
+  <data name="People_AppBar_AddContact" xml:space="preserve"><value>tambahkan orang</value></data>
+  <data name="People_AppBar_Search" xml:space="preserve"><value>cari</value></data>
+  <data name="PhoneNumber_Box_Title" xml:space="preserve"><value>Kode negara dan nomor telepon</value></data>
+  <data name="PhoneNumber_ListpickerLabel_CountryCode" xml:space="preserve"><value>PILIH NEGARA</value></data>
+  <data name="PhoneNumber_Registration_Welcome_Message" xml:space="preserve"><value>Cukup dengan memasukkan nomor telepon Anda untuk memulai.</value></data>
+  <data name="PhoneNumber_Select_Country" xml:space="preserve"><value>Negara</value></data>
+  <data name="PhotoAttachment_IndexDisplay_Label" xml:space="preserve"><value>{0} / {1} foto</value></data>
+  <data name="PhotoEdit_AppBar_Draw" xml:space="preserve"><value>gambar</value></data>
+  <data name="PhotoEdit_AppBar_Send" xml:space="preserve"><value>kirim</value></data>
+  <data name="PhotoEdit_AppBar_Undo" xml:space="preserve"><value>batalkan</value></data>
+  <data name="PhotoEdit_AppBar_Write" xml:space="preserve"><value>tulis</value></data>
+  <data name="PhotoEdit_Nux_Text" xml:space="preserve"><value>Ketuk foto untuk menambahkan teks</value></data>
+  <data name="Photos_SavePhoto_Error_StateIndicator" xml:space="preserve"><value>Tidak dapat menyimpan foto.</value></data>
+  <data name="Photos_SavePhoto_MenuItem" xml:space="preserve"><value>simpan foto</value></data>
+  <data name="Photos_SavePhoto_Saving_StateIndicator" xml:space="preserve"><value>Menyimpan foto...</value></data>
+  <data name="Photos_SavePhoto_Success_StateIndicator" xml:space="preserve"><value>Foto tersimpan</value></data>
+  <data name="Power_Saver_Mode_Warning" xml:space="preserve"><value>Anda berada dalam mode Hemat Baterai, jadi Anda tidak akan mendapatkan pemberitahuan.</value></data>
+  <data name="ProfilePic_Confirmation_Title" xml:space="preserve"><value>Kelihatan Bagus?</value></data>
+  <data name="ProfilePic_Label_Camera_Button" xml:space="preserve"><value>Ambil foto</value></data>
+  <data name="ProfilePic_Label_Gallery_Button" xml:space="preserve"><value>Pilih dari album</value></data>
+  <data name="ProfilePic_Subtitle_Text" xml:space="preserve"><value>Atur foto sehingga orang dapat mengenali Anda.</value></data>
+  <data name="ProfilePic_Title_Text" xml:space="preserve"><value>Ingin menambahkan foto?</value></data>
+  <data name="RecentThreadList_Nux_EmptyList_Message" xml:space="preserve"><value>Sesaat setelah Anda mulai ngobrol, semua pesan Anda akan berada di sini.</value></data>
+  <data name="Recent_ContextMenu_Archive" xml:space="preserve"><value>arsipkan</value></data>
+  <data name="Recent_ContextMenu_Delete" xml:space="preserve"><value>hapus</value></data>
+  <data name="Recent_ContextMenu_Leave" xml:space="preserve"><value>keluar dari grup</value></data>
+  <data name="Recent_ContextMenu_MarkUnread" xml:space="preserve"><value>tandai belum dibaca</value></data>
+  <data name="Recent_ContextMenu_Spam" xml:space="preserve"><value>tandai sebagai spam</value></data>
+  <data name="Registration_TextboxHint_FirstName" xml:space="preserve"><value>Nama depan</value></data>
+  <data name="Registration_TextboxHint_LastName" xml:space="preserve"><value>Nama belakang</value></data>
+  <data name="Registration_Title2" xml:space="preserve"><value>Gunakan nama asli Anda sehingga orang tahu bahwa itu Anda.</value></data>
+  <data name="ResourceLanguage" xml:space="preserve"><value>id-ID</value></data>
+  <data name="Session_Expired_Caption" xml:space="preserve"><value>Silakan masuk kembali untuk menggunakan Messenger.</value></data>
+  <data name="Session_Expired_Title" xml:space="preserve"><value>sesi telah berakhir</value></data>
+  <data name="SettingsPage_Title" xml:space="preserve"><value>pengaturan</value></data>
+  <data name="Settings_Help" xml:space="preserve"><value>Bantuan</value></data>
+  <data name="Settings_Help_Title" xml:space="preserve"><value>Info</value></data>
+  <data name="Settings_In_App_Audio_Title" xml:space="preserve"><value>Suara Dalam-Aplikasi</value></data>
+  <data name="Settings_In_App_Contact_Sync_Title" xml:space="preserve"><value>Sinkronkan Kontak</value></data>
+  <data name="Settings_In_App_Vibration_Title" xml:space="preserve"><value>Getar Dalam-Aplikasi</value></data>
+  <data name="Settings_Licenses" xml:space="preserve"><value>Lisensi</value></data>
+  <data name="Settings_Location_Title" xml:space="preserve"><value>Lokasi</value></data>
+  <data name="Settings_Notification_Title" xml:space="preserve"><value>Pemberitahuan</value></data>
+  <data name="Settings_PhoneNumber_VerificationNeeded" xml:space="preserve"><value>Konfirmasi Nomor</value></data>
+  <data name="Settings_Privacy_And_Terms" xml:space="preserve"><value>Privasi dan Ketentuan</value></data>
+  <data name="Settings_Remove_Contacts_Body" xml:space="preserve"><value>Kontak yang pernah Anda sinkronkan akan dihapus.</value></data>
+  <data name="Settings_Remove_Contacts_Confirm" xml:space="preserve"><value>Hapus</value></data>
+  <data name="Settings_Remove_Contacts_Title" xml:space="preserve"><value>Hapus Kontak?</value></data>
+  <data name="Settings_SendOnEnter_Title" xml:space="preserve"><value>Tekan Enter untuk Mengirim</value></data>
+  <data name="Settings_Sync_Contacts_Body" xml:space="preserve"><value>Mulai menyinkronkan? Kontak Anda akan disinkronkan secara terus menerus dengan server kami.</value></data>
+  <data name="Settings_Sync_Contacts_Confirmation" xml:space="preserve"><value>Sinkronkan</value></data>
+  <data name="Settings_Sync_Contacts_Title" xml:space="preserve"><value>Sinkronkan Kontak</value></data>
+  <data name="Settings_Version_Number" xml:space="preserve"><value>Versi {0}</value></data>
+  <data name="Start_Group_Menu_Item" xml:space="preserve"><value>Buat grup bersama {0}</value></data>
+  <data name="Sticker_Drawer_RecentStickers" xml:space="preserve"><value>Stiker Terbaru</value></data>
+  <data name="Sticker_Pack_Download" xml:space="preserve"><value>unduh</value></data>
+  <data name="Sticker_Pack_Download_Failed" xml:space="preserve"><value>Unduhan paket stiker gagal</value></data>
+  <data name="Sticker_Pack_Downloaded" xml:space="preserve"><value>berhasil diunduh</value></data>
+  <data name="Sticker_Pack_Downloading" xml:space="preserve"><value>mengunduh</value></data>
+  <data name="Sticker_Pack_Share" xml:space="preserve"><value>bagikan</value></data>
+  <data name="Sticker_Store_ContextMenu_Remove" xml:space="preserve"><value>hapus</value></data>
+  <data name="Sticker_Store_Menu_Item" xml:space="preserve"><value>toko stiker</value></data>
+  <data name="Sticker_Store_Remove_Error" xml:space="preserve"><value>Tidak dapat menghapus paket stiker.</value></data>
+  <data name="Sticker_Store_Tab_All" xml:space="preserve"><value>semua</value></data>
+  <data name="Sticker_Store_Tab_Featured" xml:space="preserve"><value>ditampilkan</value></data>
+  <data name="Sticker_Store_Tab_Owned" xml:space="preserve"><value>milik Anda</value></data>
+  <data name="Sticker_Store_Title" xml:space="preserve"><value>TOKO STIKER</value></data>
+  <data name="SuggestedPins_Pinning_StateIndicator" xml:space="preserve"><value>Menyematkan...</value></data>
+  <data name="SuggestedPins_SearchBox_Hint" xml:space="preserve"><value>cari grup</value></data>
+  <data name="SuggestedPins_Title_PinGroup" xml:space="preserve"><value>SEMATKAN GRUP</value></data>
+  <data name="SyncContact_Button_LearnMore" xml:space="preserve"><value>Pelajari selengkapnya</value></data>
+  <data name="SyncContact_ErrorMessage_UnableToToggle" xml:space="preserve"><value>Tidak dapat mengubah pengaturan Anda, periksa sambungan internet Anda dan coba lagi.</value></data>
+  <data name="SyncContact_Subtitle" xml:space="preserve"><value>Sinkronkan kontak Anda untuk melihat siapa saja yang ada di Messenger. Kontak Anda akan disinkronkan secara terus menerus dan tetap terbaru.</value></data>
+  <data name="SyncContact_Title" xml:space="preserve"><value>Kirim pesan kepada orang di ponsel Anda</value></data>
+  <data name="SyncContacts_MessageBox_LinkLabel" xml:space="preserve"><value>Pelajari Selengkapnya</value></data>
+  <data name="Thread_AppBar_Details" xml:space="preserve"><value>rincian</value></data>
+  <data name="Thread_AppBar_View_Members" xml:space="preserve"><value>lihat orang</value></data>
+  <data name="Thread_Name_NoParticipant_Title" xml:space="preserve"><value>tidak ada orang sama sekali</value></data>
+  <data name="Thread_UnnamedUserPlaceholder_Title" xml:space="preserve"><value>Orang di Facebook</value></data>
+  <data name="Threads_AppBar_Compose" xml:space="preserve"><value>baru</value></data>
+  <data name="Threads_AppBar_Refresh" xml:space="preserve"><value>segarkan</value></data>
+  <data name="UnMute_Conversation_Menu_Item" xml:space="preserve"><value>bunyikan</value></data>
+  <data name="Unsent_Message_Warning" xml:space="preserve"><value>Keluar dari Messenger? Anda belum mengirim pesan Anda sama sekali.</value></data>
+  <data name="Verify_PhoneNumber_Box_Title" xml:space="preserve"><value>Nomor Telepon</value></data>
+  <data name="VideoRecorder_HelpText_Cancel" xml:space="preserve"><value>Hapus dan mulai ulang</value></data>
+  <data name="VideoRecorder_HelpText_HoldToSend" xml:space="preserve"><value>Tahan untuk video, ketuk untuk foto</value></data>
+  <data name="VideoRecorder_HelpText_Send" xml:space="preserve"><value>Untuk membatalkan, jauhkan jari Anda dari Kirim</value></data>
+  <data name="View_Timeline_Menu_Item" xml:space="preserve"><value>kronologi</value></data>
+  <data name="Voice_Clip_Hold_Instruction" xml:space="preserve"><value>Ketuk dan tahan untuk merekam dan mengirim suara</value></data>
+  <data name="Voice_Clip_Length_Limit" xml:space="preserve"><value>Batas waktu tercapai, lepaskan untuk mengirim</value></data>
+  <data name="Voice_Clip_Menu_Item" xml:space="preserve"><value>kirim klip suara</value></data>
+  <data name="Voice_Clip_NUX_Instruction" xml:space="preserve"><value>Lepaskan untuk mengirim, geser untuk membatalkan</value></data>
+  <data name="Voice_Clip_Record" xml:space="preserve"><value>rekam</value></data>
+  <data name="Voice_Clip_Release_Cancel" xml:space="preserve"><value>Lepaskan untuk membatalkan perekaman</value></data>
+  <data name="orca_neue_nux_add_phone_body1_searchable_all_not_verified" xml:space="preserve"><value>Orang dapat menambahkan Anda sebagai kontak jika mereka sudah mempunyai nomor telepon Anda, namun hanya Anda yang dapat melihat nomor ini di Facebook.</value></data>
+  <data name="orca_neue_nux_add_phone_body1_searchable_all_visible_all" xml:space="preserve"><value>Orang dapat menambahkan Anda sebagai kontak jika sudah mempunyai nomor telepon Anda.</value></data>
+  <data name="orca_neue_nux_add_phone_body1_searchable_all_visible_custom" xml:space="preserve"><value>Orang dapat menambahkan Anda sebagai kontak jika mereka memiliki nomor telepon Anda, namun ini tidak akan mengubah siapa yang dapat melihat nomor Anda di Facebook.</value></data>
+  <data name="orca_neue_nux_add_phone_body1_searchable_all_visible_friends" xml:space="preserve"><value>Orang dapat menambahkan Anda sebagai kontak jika mereka sudah mempunyai nomor telepon Anda, namun hanya teman yang dapat melihat nomor ini di Facebook.</value></data>
+  <data name="orca_neue_nux_add_phone_body1_searchable_all_visible_self" xml:space="preserve"><value>Orang dapat menambahkan Anda sebagai kontak jika sudah mempunyai nomor telepon Anda, namun hanya Anda yang dapat melihat nomor ini di Facebook.</value></data>
+  <data name="orca_neue_nux_add_phone_body1_searchable_fof" xml:space="preserve"><value>Anda tidak harus berteman di Facebook agar dapat terhubung, jadi pengaturan Facebook Anda akan diperluas agar siapa saja yang mempunyai nomor Anda dapat mencari Anda dengan nomor itu.</value></data>
+  <data name="orca_neue_nux_add_phone_body2_not_verified" xml:space="preserve"><value>Hanya Anda yang dapat melihat nomor ini di Facebook.</value></data>
+  <data name="orca_neue_nux_add_phone_body2_visible_custom" xml:space="preserve"><value>Ini tidak akan mengubah siapa yang dapat melihat nomor Anda di Facebook.</value></data>
+  <data name="orca_neue_nux_add_phone_body2_visible_friends" xml:space="preserve"><value>Hanya teman yang dapat melihat nomor ini di Facebook.</value></data>
+  <data name="orca_neue_nux_add_phone_body2_visible_self" xml:space="preserve"><value>Hanya Anda yang dapat melihat nomor ini di Facebook.</value></data>
+  <data name="orca_neue_nux_add_phone_title_no_verified_number" xml:space="preserve"><value>Nomor mana yang dapat digunakan untuk menghubungi Anda?</value></data>
+  <data name="orca_neue_nux_add_phone_title_verified_long" xml:space="preserve"><value>Apakah nomor ini yang dapat digunakan untuk menghubungi Anda?</value></data>
+  <data name="orca_neue_nux_add_phone_title_verified_short" xml:space="preserve"><value>Apakah nomor Anda adalah nomor yang terbaru?</value></data>
+</root>

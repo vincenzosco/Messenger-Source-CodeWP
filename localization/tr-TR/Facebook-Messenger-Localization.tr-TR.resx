@@ -1,0 +1,395 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Active_AppBar_Chat" xml:space="preserve"><value>sohbet</value></data>
+  <data name="AddContact_Contact_Already_Exists" xml:space="preserve"><value>Bu telefon numarası zaten kişi olarak eklendi.</value></data>
+  <data name="AddContact_FBUser_Already_Exists" xml:space="preserve"><value>{0} zaten kişi olarak eklendi.</value></data>
+  <data name="AddContact_Invite_Button" xml:space="preserve"><value>davet et</value></data>
+  <data name="AddContact_MatchedExistingUser_Label" xml:space="preserve"><value>{0} Messenger'da zaten kişilerin arasında</value></data>
+  <data name="AddContact_MatchingUser_Label" xml:space="preserve"><value>{0} Messenger kişilerine eklendi</value></data>
+  <data name="AddContact_Message_Button" xml:space="preserve"><value>{0}'e mesaj gönder</value></data>
+  <data name="AddContact_PhoneNumber_Description" xml:space="preserve"><value>Birini Messenger'da bulmak için telefon numarasını gir.</value></data>
+  <data name="AddContact_PhoneNumber_Title" xml:space="preserve"><value>KİŞİ EKLE</value></data>
+  <data name="AddContact_Remove_Contact_Warning" xml:space="preserve"><value>{0}, Messenger Kişilerin arasından kaldırılacak.</value></data>
+  <data name="AddContact_Remove_MessageBox_Title" xml:space="preserve"><value>Kişiyi Kaldır</value></data>
+  <data name="AddPhotos_Menu_ChooseFromAlbum" xml:space="preserve"><value>Albümlerden seç</value></data>
+  <data name="AddPhotos_Menu_RemovePhotos" xml:space="preserve"><value>Fotoğrafı Kaldır</value></data>
+  <data name="AddPhotos_Menu_TakePhoto" xml:space="preserve"><value>Fotoğraf Çek</value></data>
+  <data name="AddPhotos_Title_EditProfilePicture" xml:space="preserve"><value>PROFİL RESMİNİ DÜZENLE</value></data>
+  <data name="AddPhotos_Title_SetGroupPhoto" xml:space="preserve"><value>GRUP FOTOĞRAFINI BELİRLE</value></data>
+  <data name="Add_Phone_Number_Label" xml:space="preserve"><value>Telefon Numarası Ekle</value></data>
+  <data name="AppBar_Cancel" xml:space="preserve"><value>iptal</value></data>
+  <data name="AppBar_No" xml:space="preserve"><value>hayır</value></data>
+  <data name="AppBar_Ok" xml:space="preserve"><value>tamam</value></data>
+  <data name="AppBar_Remove" xml:space="preserve"><value>kaldır</value></data>
+  <data name="AppBar_Undo" xml:space="preserve"><value>geri al</value></data>
+  <data name="AppBar_Yes" xml:space="preserve"><value>evet</value></data>
+  <data name="AppUpdate_Description" xml:space="preserve"><value>Yeni özellikleri ve geliştirmeleri kullanmak için Messenger'ı güncelle.</value></data>
+  <data name="AppUpdate_NotNowButton" xml:space="preserve"><value>Şimdi Değil</value></data>
+  <data name="AppUpdate_Title" xml:space="preserve"><value>Messenger için yeni bir güncelleme var</value></data>
+  <data name="AppUpdate_UpdateAppButton" xml:space="preserve"><value>Güncelle</value></data>
+  <data name="App_Location_Services_Enable" xml:space="preserve"><value>Mesajlarında konum paylaşmak için, Messenger ayarlarına git.</value></data>
+  <data name="App_Quit_Caption" xml:space="preserve"><value>Messenger'dan Çık</value></data>
+  <data name="Attachments_AppBar_Next" xml:space="preserve"><value>sonraki</value></data>
+  <data name="Attachments_AppBar_Previous" xml:space="preserve"><value>önceki</value></data>
+  <data name="Attachments_AppBar_Skip" xml:space="preserve"><value>geç</value></data>
+  <data name="BackgroundToast_LeavingApp_Title" xml:space="preserve"><value>Messenger</value></data>
+  <data name="BackgroundToast_LeavingApp_Warning" xml:space="preserve"><value>Bazı mesajlar, Messenger kapatılmadan önce gönderilmedi. Mesajlarının gönderilmesi için Messenger'ı aç.</value></data>
+  <data name="ButtonLabelRetry" xml:space="preserve"><value>Tekrar Dene</value></data>
+  <data name="Button_Continue" xml:space="preserve"><value>Devam</value></data>
+  <data name="CanonicalThreadDetailsPage_Start_Group" xml:space="preserve"><value>grup oluştur</value></data>
+  <data name="CanonicalThreadDetailsPage_Title" xml:space="preserve"><value>detaylar</value></data>
+  <data name="Chat_Is_Off" xml:space="preserve"><value>Sohbet kapalı</value></data>
+  <data name="Chat_Is_Off_Details_Label" xml:space="preserve"><value>Sohbet kapalıyken de tüm mesajlarını alırsın, ancak Facebook'ta kimlerin aktif olduğunu görmek için sohbeti açabilirsin.</value></data>
+  <data name="Client_Type_Mobile" xml:space="preserve"><value>Mobil</value></data>
+  <data name="Client_Type_Web" xml:space="preserve"><value>Site</value></data>
+  <data name="Composer_Exit_Warning" xml:space="preserve"><value>Mesajı iptal et?</value></data>
+  <data name="Composer_Groups_Search_Header" xml:space="preserve"><value>GRUPLAR</value></data>
+  <data name="Composer_More_People_Search_Header" xml:space="preserve"><value>DAHA FAZLA KİŞİ</value></data>
+  <data name="Composer_SendingMessage" xml:space="preserve"><value>mesaj gönderiliyor...</value></data>
+  <data name="Composer_To" xml:space="preserve"><value>Kime:</value></data>
+  <data name="Confirm_Phone_Number_Label" xml:space="preserve"><value>Numarayı Onayla</value></data>
+  <data name="ContactCard_MenuLabel_CreateGroup" xml:space="preserve"><value>{0} ile bir grup kur</value></data>
+  <data name="ContactCard_MenuLabel_RemoveContact" xml:space="preserve"><value>kişiyi kaldır</value></data>
+  <data name="ContactCard_MenuLabel_SendMessage" xml:space="preserve"><value>{0}'e mesaj gönder</value></data>
+  <data name="ContactList_Header_ContactsFound" xml:space="preserve"><value>{0} kişi bulundu</value></data>
+  <data name="ContactList_Header_Failed" xml:space="preserve"><value>kişi yükleme başarısız oldu. tekrar dene?</value></data>
+  <data name="ContactList_Header_FindContacts" xml:space="preserve"><value>kişileri bul</value></data>
+  <data name="ContactList_Header_ShowAll" xml:space="preserve"><value>tümünü göster</value></data>
+  <data name="ContactList_Header_SyncingContacts" xml:space="preserve"><value>kişiler senkronize ediliyor...</value></data>
+  <data name="ContactList_Nux_Label_EmptyList" xml:space="preserve"><value>Messenger'daki tanıdığın kişileri görmek için kişilerini senkronize et.</value></data>
+  <data name="ContactList_Nux_Label_NoMatchingContacts" xml:space="preserve"><value>Kişilerini burada göreceksin. Birini eklemek için kişi simgesine dokunman yeterli.</value></data>
+  <data name="Contact_Search_No_Results" xml:space="preserve"><value>Sonuç Yok</value></data>
+  <data name="Contacts_Find_Button_Label" xml:space="preserve"><value>kişileri bul</value></data>
+  <data name="Contacts_Invite_Button_Label" xml:space="preserve"><value>kişileri davet et</value></data>
+  <data name="Conversation_AppBar_AttachPhoto" xml:space="preserve"><value>fotoğraflar</value></data>
+  <data name="Conversation_AppBar_Camera" xml:space="preserve"><value>kamera</value></data>
+  <data name="Conversation_AppBar_ChangePhoto" xml:space="preserve"><value>fotoğraf</value></data>
+  <data name="Conversation_AppBar_Like" xml:space="preserve"><value>beğen</value></data>
+  <data name="Conversation_AppBar_Send" xml:space="preserve"><value>gönder</value></data>
+  <data name="Conversation_AppBar_Text" xml:space="preserve"><value>metin</value></data>
+  <data name="Conversation_ContextMenu_RemoveAttachment" xml:space="preserve"><value>görüntüyü kaldır</value></data>
+  <data name="Conversation_MenuItem_Rename" xml:space="preserve"><value>ad</value></data>
+  <data name="CreateGroup_TextBox_Label" xml:space="preserve"><value>Grup Adı</value></data>
+  <data name="CreateGroup_Title" xml:space="preserve"><value>YENİ GRUP</value></data>
+  <data name="Device_Location_Services_Enable" xml:space="preserve"><value>Mesajlarında konumunu paylaşmak için, telefon ayarlarının konum ayarlarına git.</value></data>
+  <data name="Empty_Conversation_Placeholder_Text" xml:space="preserve"><value>{0} Messenger'da ve mesajlarını anında alacak.</value></data>
+  <data name="Empty_Conversation_Placeholder_Text_For_Non_Messenger_User" xml:space="preserve"><value>{0} Messenger'da değil, ancak mesajını Facebook'ta alacak.</value></data>
+  <data name="Empty_Conversation_Placeholder_Title" xml:space="preserve"><value>Konuşmayı başlat</value></data>
+  <data name="Error_Cannot_Attach_File" xml:space="preserve"><value>Dosya eklenemedi. Lütfen tekrar dene.</value></data>
+  <data name="Error_Cannot_Fetch_Conversations" xml:space="preserve"><value>Üzgünüz, şu anda mesajları gösteremiyoruz. Lütfen tekrar dene.</value></data>
+  <data name="Error_Cannot_Fetch_Messages" xml:space="preserve"><value>Üzgünüz, şu anda mesajları gösteremiyoruz. Lütfen tekrar dene.</value></data>
+  <data name="Error_Cannot_Fetch_Sticker_Packs" xml:space="preserve"><value>Üzgünüz, şu anda çıkartma paketlerini gösteremiyoruz.</value></data>
+  <data name="Error_Changing_Mute" xml:space="preserve"><value>Sessize alınamadı. Lütfen tekrar dene.</value></data>
+  <data name="Error_Changing_Unmute" xml:space="preserve"><value>Ses açılamadı. Lütfen tekrar dene.</value></data>
+  <data name="Error_Gallery_Out_Of_Memory" xml:space="preserve"><value>Bu büyüklükteki bir görüntüyü ekleyemiyoruz.</value></data>
+  <data name="Error_Invalid_Phone_Number" xml:space="preserve"><value>Lütfen geçerli bir telefon numarası gir.</value></data>
+  <data name="Error_Invalid_Phone_Prefix" xml:space="preserve"><value>Lütfen geçerli bir ülke kodu kullan.</value></data>
+  <data name="Error_Max_File_Attachment_Exceeded" xml:space="preserve"><value>Bu mesaja daha fazla fotoğraf ekleyemezsin.</value></data>
+  <data name="Error_No_Connection" xml:space="preserve"><value>İnternet bağlantısı yok</value></data>
+  <data name="Error_No_Conversations" xml:space="preserve"><value>Henüz hiç konuşman yok.</value></data>
+  <data name="ExistingUser_Create_Account_Button" xml:space="preserve"><value>yeni hesap oluştur</value></data>
+  <data name="ExistingUser_Description" xml:space="preserve"><value>Bu numara, {0} {1} adına kayıtlı bir Facebook hesabıyla eşleşti.</value></data>
+  <data name="ExistingUser_LoginAs_Button" xml:space="preserve"><value>{0} olarak giriş yap</value></data>
+  <data name="ExistingUser_Title" xml:space="preserve"><value>Facebook ile giriş yap?</value></data>
+  <data name="FetchingDataFromServerFailed" xml:space="preserve"><value>Bilgilerin yüklenemedi. Lütfen tekrar dene.</value></data>
+  <data name="FlyTrap_Error_Generic" xml:space="preserve"><value>Hata bildirimi gösterilemedi.</value></data>
+  <data name="FlyTrap_Label_Disclaimer" xml:space="preserve"><value>Telefonun ve bu uygulama hakkında bilgiler otomatik olarak eklenecek. Bilgilerin nasıl kullanıldığı hakkında daha fazla bilgi almak için {0} ziyaret et.</value></data>
+  <data name="FlyTrap_Label_Disclaimer_DataUsePolicyLink" xml:space="preserve"><value>Veri Kullanımı İlkemizi</value></data>
+  <data name="FlyTrap_Label_Instructions" xml:space="preserve"><value>Lütfen ne yapmaya çalıştığını ve sorunun ne olduğunu açıkla.</value></data>
+  <data name="FlyTrap_Label_Screenshot" xml:space="preserve"><value>Ekran görüntüsü</value></data>
+  <data name="FlyTrap_MenuItem_ReportProblem" xml:space="preserve"><value>sorun bildir</value></data>
+  <data name="FlyTrap_TextboxHint_Problem" xml:space="preserve"><value>sorunu açıkla</value></data>
+  <data name="FlyTrap_Title_ReportProblem" xml:space="preserve"><value>SORUN BİLDİR</value></data>
+  <data name="Forwarding_SearchBox_HintText" xml:space="preserve"><value>kişi ara</value></data>
+  <data name="Forwarding_Title_Label" xml:space="preserve"><value>MESAJI İLET</value></data>
+  <data name="Friends_AppBar_AddContact" xml:space="preserve"><value>kişi ekle</value></data>
+  <data name="Global_Notifcation_Off_Until" xml:space="preserve"><value>Şu ana kadar kapalı: {0}</value></data>
+  <data name="Global_Notification_Off" xml:space="preserve"><value>Kapalı</value></data>
+  <data name="Global_Notification_On" xml:space="preserve"><value>Açık</value></data>
+  <data name="GroupDetailsPage_AppBar_LeaveGroup" xml:space="preserve"><value>gruptan ayrıl</value></data>
+  <data name="GroupDetailsPage_AppBar_RemoveGroupName" xml:space="preserve"><value>adı kaldır</value></data>
+  <data name="GroupDetailsPage_AppBar_RemoveGroupPhoto" xml:space="preserve"><value>grup fotoğrafını kaldır</value></data>
+  <data name="GroupDetailsPage_Title" xml:space="preserve"><value>grup</value></data>
+  <data name="GroupMember_Context_Menu_Remove_Member" xml:space="preserve"><value>kaldır</value></data>
+  <data name="GroupTile_Date_ActiveDaysAgo" xml:space="preserve"><value>{0} gün önce aktifti</value></data>
+  <data name="GroupTile_Date_ActiveLastMonth" xml:space="preserve"><value>Geçen ay aktifti</value></data>
+  <data name="GroupTile_Date_ActiveLastYear" xml:space="preserve"><value>Geçen yıl aktifti</value></data>
+  <data name="GroupTile_Date_ActiveMonthsAgo" xml:space="preserve"><value>{0} ay önce aktifti</value></data>
+  <data name="GroupTile_Date_ActiveToday" xml:space="preserve"><value>Bugün aktif</value></data>
+  <data name="GroupTile_Date_ActiveYearsAgo" xml:space="preserve"><value>{0} yıl önce aktifti</value></data>
+  <data name="GroupTile_Date_ActiveYesterday" xml:space="preserve"><value>Dün aktifti</value></data>
+  <data name="Group_AddPeople_Search" xml:space="preserve"><value>Kişi ara</value></data>
+  <data name="Group_AddPeople_Title" xml:space="preserve"><value>KİŞİ EKLE</value></data>
+  <data name="Group_AddingParticipants_Failed_Message" xml:space="preserve"><value>Kişiler gruba eklenemedi. Lütfen tekrar dene.</value></data>
+  <data name="Group_AddingParticipants_Failed_Title" xml:space="preserve"><value>Kişiler eklenemedi</value></data>
+  <data name="Group_AppBar_SelectMany" xml:space="preserve"><value>Çoklu seçim yap</value></data>
+  <data name="Group_RemovingParticipants_Failed_Message" xml:space="preserve"><value>Kişiler çıkarılamadı. Lütfen tekrar dene.</value></data>
+  <data name="Group_RemovingParticipants_Failed_Title" xml:space="preserve"><value>Kişiler çıkarılamadı.</value></data>
+  <data name="Groups_AppBar_Add" xml:space="preserve"><value>tuttur</value></data>
+  <data name="Groups_AppBar_Create" xml:space="preserve"><value>kur</value></data>
+  <data name="Groups_AppBar_Next" xml:space="preserve"><value>ileri</value></data>
+  <data name="Groups_NUX_Button_Text" xml:space="preserve"><value>Kullanmaya Başla</value></data>
+  <data name="Groups_NUX_Help_Title" xml:space="preserve"><value>Artık daha kolay erişmek için grupları başa tutturabilirsin.</value></data>
+  <data name="Groups_NUX_NoThread_Button_Text" xml:space="preserve"><value>Yeni grup kur</value></data>
+  <data name="Groups_NUX_PlaceholderActive_LastWeek" xml:space="preserve"><value>Geçen hafta aktifti</value></data>
+  <data name="Groups_NUX_PlaceholderActive_Yesterday" xml:space="preserve"><value>Dün aktifti</value></data>
+  <data name="Groups_NUX_PlaceholderFour_Members" xml:space="preserve"><value>Selma, Ceyhun</value></data>
+  <data name="Groups_NUX_PlaceholderFour_Title" xml:space="preserve"><value>İş Arkadaşları</value></data>
+  <data name="Groups_NUX_PlaceholderOne_Members" xml:space="preserve"><value>Murat, Burak</value></data>
+  <data name="Groups_NUX_PlaceholderOne_Title" xml:space="preserve"><value>Ev Arkadaşları</value></data>
+  <data name="Groups_NUX_PlaceholderThree_Members" xml:space="preserve"><value>Ali, Bora</value></data>
+  <data name="Groups_NUX_PlaceholderThree_Title" xml:space="preserve"><value>Haftasonu Ekibi</value></data>
+  <data name="Groups_NUX_PlaceholderTwo_Members" xml:space="preserve"><value>Ali, Adem, Müge, Murat</value></data>
+  <data name="Groups_NUX_PlaceholderTwo_Title" xml:space="preserve"><value>Aile</value></data>
+  <data name="Image_Search_Empty_Results" xml:space="preserve"><value>Görüntü bulunamadı.</value></data>
+  <data name="Image_Search_Menu_Item" xml:space="preserve"><value>görüntü ara</value></data>
+  <data name="Image_Search_Popup_Cancel" xml:space="preserve"><value>İptal</value></data>
+  <data name="Image_Search_Popup_Message" xml:space="preserve"><value>Ne arıyorsun?</value></data>
+  <data name="Image_Search_Popup_Search" xml:space="preserve"><value>Ara</value></data>
+  <data name="Image_Search_Popup_Title" xml:space="preserve"><value>Görüntü ara</value></data>
+  <data name="Invite_Contact_ToMessenger" xml:space="preserve"><value>Messenger'ı dene: {0}</value></data>
+  <data name="Location_Menu_Item" xml:space="preserve"><value>konum gönder</value></data>
+  <data name="Location_Services_Disabled" xml:space="preserve"><value>Konum kapalı</value></data>
+  <data name="Location_Warning_Body" xml:space="preserve"><value>Bu konuşmadaki kişiler senin nerede olduğunu haritada görebilir. Konumunu açmak ve kapatmak için dokun.</value></data>
+  <data name="LoginApproval_ResendCode" xml:space="preserve"><value>tekrar gönder</value></data>
+  <data name="LoginApproval_Title_EnterCode" xml:space="preserve"><value>Lütfen telefonuna gönderilen kodu gir.</value></data>
+  <data name="Login_Approval_Security_Code" xml:space="preserve"><value>Onay kodu</value></data>
+  <data name="Login_NotOnFacebook" xml:space="preserve"><value>Facebook'ta yok musun?</value></data>
+  <data name="Login_RecoverPassword" xml:space="preserve"><value>Şifreni mi Unuttun?</value></data>
+  <data name="Login_SigningIn" xml:space="preserve"><value>giriş yapılıyor</value></data>
+  <data name="Login_TextboxHint_EmailOrPhone" xml:space="preserve"><value>E-posta veya telefon</value></data>
+  <data name="Login_TextboxHint_Password" xml:space="preserve"><value>Şifre</value></data>
+  <data name="Login_Title_SignIn" xml:space="preserve"><value>Facebook ile Giriş Yap</value></data>
+  <data name="Login_Title_Welcome" xml:space="preserve"><value>Messenger'a Hoş Geldin</value></data>
+  <data name="Login_With_Facebook" xml:space="preserve"><value>Facebook ile giriş yap</value></data>
+  <data name="MainPage_Active_Chat_Popup" xml:space="preserve"><value>SOHBET</value></data>
+  <data name="MainPage_Active_Disable_Chat" xml:space="preserve"><value>sohbeti kapat</value></data>
+  <data name="MainPage_Active_Enable_Chat" xml:space="preserve"><value>sohbeti aç</value></data>
+  <data name="MainPage_AppBar_Mute_Button" xml:space="preserve"><value>sessize al</value></data>
+  <data name="MainPage_AppBar_UnMute_Button" xml:space="preserve"><value>sesini aç</value></data>
+  <data name="MainPage_AppMenu_OtherFolder" xml:space="preserve"><value>diğer klasörü</value></data>
+  <data name="MainPage_AppMenu_Settings" xml:space="preserve"><value>ayarlar</value></data>
+  <data name="MainPage_Pivot_Title_Active" xml:space="preserve"><value>aktif</value></data>
+  <data name="MainPage_Pivot_Title_Friends" xml:space="preserve"><value>messenger</value></data>
+  <data name="MainPage_Pivot_Title_Groups" xml:space="preserve"><value>gruplar</value></data>
+  <data name="MainPage_Pivot_Title_Recent_Threads" xml:space="preserve"><value>en yeniler</value></data>
+  <data name="Matching_Contact_NotFound_Message" xml:space="preserve"><value>{0} Messenger'da bir kişiyle eşleştirilemedi</value></data>
+  <data name="MessageBox_Description_ArchiveThread" xml:space="preserve"><value>Arşivlenen konuşmaları görmek için, Facebook internet sitesine giriş yapman gerek.</value></data>
+  <data name="MessageBox_Description_DeleteThread" xml:space="preserve"><value>Bu işlem konuşmayı kalıcı olarak silecek.</value></data>
+  <data name="MessageBox_Description_FlyTrapSuccess" xml:space="preserve"><value>Görüşlerin için teşekkürler!</value></data>
+  <data name="MessageBox_Description_LeaveThread" xml:space="preserve"><value>Konuşmadan ayrılırsan, yeni mesajları almayacaksın.</value></data>
+  <data name="MessageBox_Description_SpamThread" xml:space="preserve"><value>Bir şeyi spam olarak işaretlediğinde, artık en son mesajlarında görmezsin.</value></data>
+  <data name="MessageBox_Label_ArchiveThread" xml:space="preserve"><value>bu konuşmayı arşivle?</value></data>
+  <data name="MessageBox_Label_AuthenticateWithBrowser" xml:space="preserve"><value>Bağlanmak için bir internet tarayıcısı aç</value></data>
+  <data name="MessageBox_Label_BypassLogin2Fac" xml:space="preserve"><value>Giriş onayların açık. Devam etmek için lütfen şifreni gir.</value></data>
+  <data name="MessageBox_Label_BypassLoginFail" xml:space="preserve"><value>Telefon numarası onaylanamadı. Lütfen tekrar dene.</value></data>
+  <data name="MessageBox_Label_ClearThreadPhotoFailed" xml:space="preserve"><value>Grup fotoğrafı kaldırılamadı.</value></data>
+  <data name="MessageBox_Label_ConfirmPhoneNumberFailed" xml:space="preserve"><value>Numaran doğrulanamadı</value></data>
+  <data name="MessageBox_Label_ConfirmationCodeInvalid" xml:space="preserve"><value>Geçersiz onay kodu.</value></data>
+  <data name="MessageBox_Label_CreateGroupFailed" xml:space="preserve"><value>Grup kurulamadı</value></data>
+  <data name="MessageBox_Label_DeleteThread" xml:space="preserve"><value>Konuşmayı sil?</value></data>
+  <data name="MessageBox_Label_ForwardingFailed" xml:space="preserve"><value>Mesaj tüm alıcılara iletilemedi.</value></data>
+  <data name="MessageBox_Label_LeaveThread" xml:space="preserve"><value>Gruptan ayrıl?</value></data>
+  <data name="MessageBox_Label_LoginFailed" xml:space="preserve"><value>Şu anda giriş yapılamıyor.</value></data>
+  <data name="MessageBox_Label_NamingConversation_Error" xml:space="preserve"><value>Konuşmanın adı değiştirilemedi.</value></data>
+  <data name="MessageBox_Label_NoInternet" xml:space="preserve"><value>İnternet bağlantısı yok</value></data>
+  <data name="MessageBox_Label_PinGroupFailed" xml:space="preserve"><value>Grup başa tutturulamadı.</value></data>
+  <data name="MessageBox_Label_SetThreadPhotoFailed" xml:space="preserve"><value>Grup fotoğrafı belirlenemedi.</value></data>
+  <data name="MessageBox_Label_SpamThread" xml:space="preserve"><value>spam olarak işaretle?</value></data>
+  <data name="MessageBox_Label_UpdatePhoneNumberFailed" xml:space="preserve"><value>Numara güncellenemedi.</value></data>
+  <data name="MessageBox_Label_UploadProfilePic_Failed" xml:space="preserve"><value>Profil resmi ayarlanamadı.</value></data>
+  <data name="MessageBox_Popup_Cancel" xml:space="preserve"><value>İptal</value></data>
+  <data name="MessageBox_Title_AddContactFailed" xml:space="preserve"><value>Kişi şu anda bulunamıyor.</value></data>
+  <data name="MessageBox_Title_FlyTrapSuccess" xml:space="preserve"><value>Hata bildirimi gönderildi</value></data>
+  <data name="MessageBox_Title_LoginFailed" xml:space="preserve"><value>Şu anda giriş yapılamıyor.</value></data>
+  <data name="MessageComposer_EmptyGallery_Text" xml:space="preserve"><value>Galerinde henüz fotoğraf yok.</value></data>
+  <data name="MessageDetails_Error_Unexpected" xml:space="preserve"><value>Üzgünüz, mesaj detayları şu anda gösterilemiyor. Lütfen tekrar dene.</value></data>
+  <data name="MessageDetails_Label_SeenBy" xml:space="preserve"><value>Görenler:</value></data>
+  <data name="MessageSnippetAudioClipLoggedInUser" xml:space="preserve"><value>Bir ses klibi gönderdin.</value></data>
+  <data name="MessageSnippetAudioClipOtherUser" xml:space="preserve"><value>{0} bir ses klibi gönderdi.</value></data>
+  <data name="MessageSnippetGenericLoggedInUser" xml:space="preserve"><value>Bir mesaj gönderdin.</value></data>
+  <data name="MessageSnippetGenericOtherUser" xml:space="preserve"><value>{0} bir mesaj gönderdi.</value></data>
+  <data name="MessageSnippetPhotoLoggedInUser" xml:space="preserve"><value>Bir görüntü gönderdin.</value></data>
+  <data name="MessageSnippetPhotoOtherUser" xml:space="preserve"><value>{0} bir görüntü gönderdi.</value></data>
+  <data name="MessageSnippetStickerLoggedInUser" xml:space="preserve"><value>Bir çıkartma gönderdin.</value></data>
+  <data name="MessageSnippetStickerOtherUser" xml:space="preserve"><value>{0} bir çıkartma gönderdi.</value></data>
+  <data name="MessageSnippetVideoLoggedInUser" xml:space="preserve"><value>Bir video gönderdin.</value></data>
+  <data name="MessageSnippetVideoOtherUser" xml:space="preserve"><value>{0} bir video gönderdi.</value></data>
+  <data name="MessageSnippetWhenSenderIsTheLoggedInUser" xml:space="preserve"><value>Sen</value></data>
+  <data name="MessageStatus_Location_City" xml:space="preserve"><value>Nereden: {0}</value></data>
+  <data name="MessageStatus_Location_CityCountry" xml:space="preserve"><value>Nereden: {0}, {1}</value></data>
+  <data name="MessageStatus_Location_CityState" xml:space="preserve"><value>Nereden: {0}, {1}</value></data>
+  <data name="MessageStatus_Location_DistrictCity" xml:space="preserve"><value>Nereden: {0}, {1}</value></data>
+  <data name="MessageStatus_Origin_Messenger" xml:space="preserve"><value>Messenger'dan gönderildi</value></data>
+  <data name="MessageStatus_Origin_Mobile" xml:space="preserve"><value>Mobilden gönderildi</value></data>
+  <data name="MessageStatus_Origin_Web" xml:space="preserve"><value>Siteden gönderildi</value></data>
+  <data name="MessageStatus_SeenBy_1" xml:space="preserve"><value>{0} gördü</value></data>
+  <data name="MessageStatus_SeenBy_2" xml:space="preserve"><value>{0} ve {1} gördü</value></data>
+  <data name="MessageStatus_SeenBy_3" xml:space="preserve"><value>{0}, {1} ve {2} gördü</value></data>
+  <data name="MessageStatus_SeenBy_4" xml:space="preserve"><value>{0}, {1}, {2} ve {3} gördü</value></data>
+  <data name="MessageStatus_SeenBy_Everyone" xml:space="preserve"><value>Herkes gördü</value></data>
+  <data name="MessageStatus_SeenBy_Others" xml:space="preserve"><value>{0}, {1}, {2} ve {3} diğer kişi gördü</value></data>
+  <data name="MessageStatus_Seen_Timestamp" xml:space="preserve"><value>Görüldü ({0})</value></data>
+  <data name="Message_Delete_Caption" xml:space="preserve"><value>Mesajı Sil</value></data>
+  <data name="Message_Delete_Text" xml:space="preserve"><value>Bu mesajı kalıcı olarak silmek istiyor musun?</value></data>
+  <data name="Message_Sending_Failed" xml:space="preserve"><value>Mesaj gönderilemedi.</value></data>
+  <data name="Message_Sending_Failed_App_Exited_Description" xml:space="preserve"><value>Mesajın gönderilmeden önce uygulama kapatıldı. Lütfen tekrar göndermeyi dene.</value></data>
+  <data name="Message_Sending_Failed_Permission_Description" xml:space="preserve"><value>Üzgünüz, bu kişiye mesaj gönderemezsin.</value></data>
+  <data name="Messages_Active_1m_Ago" xml:space="preserve"><value>1d önce aktifti</value></data>
+  <data name="Messages_Active_Now" xml:space="preserve"><value>şu an aktif</value></data>
+  <data name="Messages_Active_Xd_Ago" xml:space="preserve"><value>{0}g önce aktifti</value></data>
+  <data name="Messages_Active_Xh_Ago" xml:space="preserve"><value>{0}s önce aktifti</value></data>
+  <data name="Messages_Active_Xm_Ago" xml:space="preserve"><value>{0}d önce aktifti</value></data>
+  <data name="Messages_AppBar_Send_Sticker" xml:space="preserve"><value>çıkartmalar</value></data>
+  <data name="Messages_ContextMenu_Copy" xml:space="preserve"><value>metni kopyala</value></data>
+  <data name="Messages_ContextMenu_Delete" xml:space="preserve"><value>sil</value></data>
+  <data name="Messages_ContextMenu_Forward" xml:space="preserve"><value>ilet</value></data>
+  <data name="Messages_ContextMenu_Retry" xml:space="preserve"><value>tekrar dene</value></data>
+  <data name="Messages_Context_Menu_View_Details" xml:space="preserve"><value>detayları gör</value></data>
+  <data name="Messages_Group_Message" xml:space="preserve"><value>GRUP</value></data>
+  <data name="Messages_Hint_Text" xml:space="preserve"><value>bir mesaj yaz</value></data>
+  <data name="Messages_On_Facebook" xml:space="preserve"><value>Facebook</value></data>
+  <data name="Messages_On_Messenger" xml:space="preserve"><value>Messenger</value></data>
+  <data name="Messages_On_Mobile" xml:space="preserve"><value>mobilde</value></data>
+  <data name="Messages_Refreshing_Failed_StateIndicator" xml:space="preserve"><value>Güncellenemedi, lütfen bağlantını kontrol et</value></data>
+  <data name="Messages_Refreshing_StateIndicator" xml:space="preserve"><value>Yenileniyor...</value></data>
+  <data name="Messages_Refreshing_Success_Stateindicator" xml:space="preserve"><value>Güncellendi</value></data>
+  <data name="Messages_Share_Not_Viewable" xml:space="preserve"><value>Bu içerik kaldırılmış olabilir veya bunu görmeye iznin olmayabilir.</value></data>
+  <data name="Mute_Conversation_For_An_Hour" xml:space="preserve"><value>1 saatliğine sessize al</value></data>
+  <data name="Mute_Conversation_Forever" xml:space="preserve"><value>sessize al</value></data>
+  <data name="Mute_Conversation_Menu_Item" xml:space="preserve"><value>sessize al</value></data>
+  <data name="Mute_Conversation_Until_8AM" xml:space="preserve"><value>08:00'e kadar sessize al</value></data>
+  <data name="NameConversation_Menu_Clear" xml:space="preserve"><value>adı sil</value></data>
+  <data name="NameConversation_Title" xml:space="preserve"><value>GRUBA AD VER</value></data>
+  <data name="NetworkStatus_Banner_Connected" xml:space="preserve"><value>Bağlandı</value></data>
+  <data name="NetworkStatus_Banner_Connecting" xml:space="preserve"><value>Bağlanıyor...</value></data>
+  <data name="NetworkStatus_Banner_Disconnected" xml:space="preserve"><value>Ağ bekleniyor</value></data>
+  <data name="NetworkStatus_Banner_No_Internet" xml:space="preserve"><value>İnternet Bağlantısı Yok</value></data>
+  <data name="NetworkStatus_Banner_Syncing" xml:space="preserve"><value>Senkronize ediliyor...</value></data>
+  <data name="NetworkStatus_Banner_UpToDate" xml:space="preserve"><value>Güncel</value></data>
+  <data name="NewContacts_Header_FoundContacts" xml:space="preserve"><value>{0} YENİ KİŞİ</value></data>
+  <data name="Notifications_Turn_Off_For_An_Hour" xml:space="preserve"><value>1 saatliğine kapat</value></data>
+  <data name="Notifications_Turn_On" xml:space="preserve"><value>aç</value></data>
+  <data name="Notifications_Turn_Until_8AM" xml:space="preserve"><value>08:00'e kadar kapat</value></data>
+  <data name="Nux_Title_OnMessenger" xml:space="preserve"><value>Messenger'dasın!</value></data>
+  <data name="Nux_Title_OnMessenger_Message" xml:space="preserve"><value>Mavi Messenger simgesine sahip herkese anında erişilebilir.</value></data>
+  <data name="People_AppBar_AddContact" xml:space="preserve"><value>kişi ekle</value></data>
+  <data name="People_AppBar_Search" xml:space="preserve"><value>ara</value></data>
+  <data name="PhoneNumber_Box_Title" xml:space="preserve"><value>Ülke kodu ve telefon numarası</value></data>
+  <data name="PhoneNumber_ListpickerLabel_CountryCode" xml:space="preserve"><value>ÜLKE SEÇ</value></data>
+  <data name="PhoneNumber_Registration_Welcome_Message" xml:space="preserve"><value>Başlamak için telefon numaranı girmen yeterli.</value></data>
+  <data name="PhoneNumber_Select_Country" xml:space="preserve"><value>Ülke</value></data>
+  <data name="PhotoAttachment_IndexDisplay_Label" xml:space="preserve"><value>{0} / {1} fotoğraf</value></data>
+  <data name="PhotoEdit_AppBar_Draw" xml:space="preserve"><value>çiz</value></data>
+  <data name="PhotoEdit_AppBar_Send" xml:space="preserve"><value>gönder</value></data>
+  <data name="PhotoEdit_AppBar_Undo" xml:space="preserve"><value>geri al</value></data>
+  <data name="PhotoEdit_AppBar_Write" xml:space="preserve"><value>yaz</value></data>
+  <data name="PhotoEdit_Nux_Text" xml:space="preserve"><value>Metin eklemek için fotoğrafa dokun</value></data>
+  <data name="Photos_SavePhoto_Error_StateIndicator" xml:space="preserve"><value>Fotoğraf kaydedilemedi.</value></data>
+  <data name="Photos_SavePhoto_MenuItem" xml:space="preserve"><value>fotoğrafı kaydet</value></data>
+  <data name="Photos_SavePhoto_Saving_StateIndicator" xml:space="preserve"><value>Fotoğraf kaydediliyor...</value></data>
+  <data name="Photos_SavePhoto_Success_StateIndicator" xml:space="preserve"><value>Fotoğraf kaydedildi</value></data>
+  <data name="Power_Saver_Mode_Warning" xml:space="preserve"><value>Pil Koruma modunda olduğun için bildirimler almayacaksın.</value></data>
+  <data name="ProfilePic_Confirmation_Title" xml:space="preserve"><value>İyi Görünüyor mu?</value></data>
+  <data name="ProfilePic_Label_Camera_Button" xml:space="preserve"><value>Fotoğraf çek</value></data>
+  <data name="ProfilePic_Label_Gallery_Button" xml:space="preserve"><value>Albümlerden seç</value></data>
+  <data name="ProfilePic_Subtitle_Text" xml:space="preserve"><value>İnsanların seni tanıyabilmesi için bir fotoğraf belirle.</value></data>
+  <data name="ProfilePic_Title_Text" xml:space="preserve"><value>Bir fotoğraf eklemek ister misin?</value></data>
+  <data name="RecentThreadList_Nux_EmptyList_Message" xml:space="preserve"><value>Sohbet etmeye başladığında, tüm mesajların burada olacak.</value></data>
+  <data name="Recent_ContextMenu_Archive" xml:space="preserve"><value>arşivle</value></data>
+  <data name="Recent_ContextMenu_Delete" xml:space="preserve"><value>sil</value></data>
+  <data name="Recent_ContextMenu_Leave" xml:space="preserve"><value>gruptan ayrıl</value></data>
+  <data name="Recent_ContextMenu_MarkUnread" xml:space="preserve"><value>okunmadı olarak işaretle</value></data>
+  <data name="Recent_ContextMenu_Spam" xml:space="preserve"><value>spam olarak işaretle</value></data>
+  <data name="Registration_TextboxHint_FirstName" xml:space="preserve"><value>Adın</value></data>
+  <data name="Registration_TextboxHint_LastName" xml:space="preserve"><value>Soyadın</value></data>
+  <data name="Registration_Title2" xml:space="preserve"><value>İnsanların seni tanıması için gerçek adını kullan.</value></data>
+  <data name="ResourceLanguage" xml:space="preserve"><value>tr-TR</value></data>
+  <data name="Session_Expired_Caption" xml:space="preserve"><value>Messenger'ı kullanmak için lütfen tekrar giriş yap.</value></data>
+  <data name="Session_Expired_Title" xml:space="preserve"><value>oturum sonlandırıldı</value></data>
+  <data name="SettingsPage_Title" xml:space="preserve"><value>ayarlar</value></data>
+  <data name="Settings_Help" xml:space="preserve"><value>Yardım</value></data>
+  <data name="Settings_Help_Title" xml:space="preserve"><value>Bilgi</value></data>
+  <data name="Settings_In_App_Audio_Title" xml:space="preserve"><value>Uygulamada Ses</value></data>
+  <data name="Settings_In_App_Contact_Sync_Title" xml:space="preserve"><value>Kişileri Senkronize Et</value></data>
+  <data name="Settings_In_App_Vibration_Title" xml:space="preserve"><value>Uygulamada Titreşim</value></data>
+  <data name="Settings_Licenses" xml:space="preserve"><value>Lisanslar</value></data>
+  <data name="Settings_Location_Title" xml:space="preserve"><value>Konum</value></data>
+  <data name="Settings_Notification_Title" xml:space="preserve"><value>Bildirimler</value></data>
+  <data name="Settings_PhoneNumber_VerificationNeeded" xml:space="preserve"><value>(Numarayı Onayla)</value></data>
+  <data name="Settings_Privacy_And_Terms" xml:space="preserve"><value>Gizlilik ve Koşullar</value></data>
+  <data name="Settings_Remove_Contacts_Body" xml:space="preserve"><value>Daha önce senkronize ettiğin kişiler kaldırılacaktır.</value></data>
+  <data name="Settings_Remove_Contacts_Confirm" xml:space="preserve"><value>Kaldır</value></data>
+  <data name="Settings_Remove_Contacts_Title" xml:space="preserve"><value>Kişileri Kaldır?</value></data>
+  <data name="Settings_SendOnEnter_Title" xml:space="preserve"><value>Enter'a basılınca gönder</value></data>
+  <data name="Settings_Sync_Contacts_Body" xml:space="preserve"><value>Senkronizasyona başla? Kişilerin sunucularımızla sürekli senkronize edilecektir.</value></data>
+  <data name="Settings_Sync_Contacts_Confirmation" xml:space="preserve"><value>Senkronize Et</value></data>
+  <data name="Settings_Sync_Contacts_Title" xml:space="preserve"><value>Kişileri Senkronize Et</value></data>
+  <data name="Settings_Version_Number" xml:space="preserve"><value>Sürüm {0}</value></data>
+  <data name="Start_Group_Menu_Item" xml:space="preserve"><value>{0} ile grup kur</value></data>
+  <data name="Sticker_Drawer_RecentStickers" xml:space="preserve"><value>Yakınlardaki Çıkartmalar</value></data>
+  <data name="Sticker_Pack_Download" xml:space="preserve"><value>indir</value></data>
+  <data name="Sticker_Pack_Download_Failed" xml:space="preserve"><value>Çıkartma paketi indirilemedi</value></data>
+  <data name="Sticker_Pack_Downloaded" xml:space="preserve"><value>indirildi</value></data>
+  <data name="Sticker_Pack_Downloading" xml:space="preserve"><value>indiriliyor</value></data>
+  <data name="Sticker_Pack_Share" xml:space="preserve"><value>paylaş</value></data>
+  <data name="Sticker_Store_ContextMenu_Remove" xml:space="preserve"><value>kaldır</value></data>
+  <data name="Sticker_Store_Menu_Item" xml:space="preserve"><value>çıkartma mağazası</value></data>
+  <data name="Sticker_Store_Remove_Error" xml:space="preserve"><value>Çıkartma paketi kaldırılamadı.</value></data>
+  <data name="Sticker_Store_Tab_All" xml:space="preserve"><value>tümü</value></data>
+  <data name="Sticker_Store_Tab_Featured" xml:space="preserve"><value>öne çıkanlar</value></data>
+  <data name="Sticker_Store_Tab_Owned" xml:space="preserve"><value>sendekiler</value></data>
+  <data name="Sticker_Store_Title" xml:space="preserve"><value>ÇIKARTMA MAĞAZASI</value></data>
+  <data name="SuggestedPins_Pinning_StateIndicator" xml:space="preserve"><value>Tutturuluyor...</value></data>
+  <data name="SuggestedPins_SearchBox_Hint" xml:space="preserve"><value>grup ara</value></data>
+  <data name="SuggestedPins_Title_PinGroup" xml:space="preserve"><value>GRUBU BAŞA TUTTUR</value></data>
+  <data name="SyncContact_Button_LearnMore" xml:space="preserve"><value>Daha fazla bilgi al</value></data>
+  <data name="SyncContact_ErrorMessage_UnableToToggle" xml:space="preserve"><value>Ayarın değiştirilemedi. Lütfen internet bağlantını kontrol et ve tekrar dene.</value></data>
+  <data name="SyncContact_Subtitle" xml:space="preserve"><value>Başka kimlerin Messenger'da olduğunu görmek için kişilerini senkronize et. Kişilerin sürekli senkronize edilecek ve güncel tutulacaktır.</value></data>
+  <data name="SyncContact_Title" xml:space="preserve"><value>Telefonundaki herkese mesaj gönderebilirsin</value></data>
+  <data name="SyncContacts_MessageBox_LinkLabel" xml:space="preserve"><value>Daha Fazla Bilgi Al</value></data>
+  <data name="Thread_AppBar_Details" xml:space="preserve"><value>detaylar</value></data>
+  <data name="Thread_AppBar_View_Members" xml:space="preserve"><value>kişileri gör</value></data>
+  <data name="Thread_Name_NoParticipant_Title" xml:space="preserve"><value>henüz kişi yok</value></data>
+  <data name="Thread_UnnamedUserPlaceholder_Title" xml:space="preserve"><value>Kişi Facebook'ta</value></data>
+  <data name="Threads_AppBar_Compose" xml:space="preserve"><value>yeni</value></data>
+  <data name="Threads_AppBar_Refresh" xml:space="preserve"><value>yenile</value></data>
+  <data name="UnMute_Conversation_Menu_Item" xml:space="preserve"><value>sesini aç</value></data>
+  <data name="Unsent_Message_Warning" xml:space="preserve"><value>Messenger'dan Çık? Henüz mesajlarını göndermedin.</value></data>
+  <data name="Verify_PhoneNumber_Box_Title" xml:space="preserve"><value>Telefon numarası</value></data>
+  <data name="VideoRecorder_HelpText_Cancel" xml:space="preserve"><value>Silmek için bırak ve baştan başla</value></data>
+  <data name="VideoRecorder_HelpText_HoldToSend" xml:space="preserve"><value>Video için basılı tut, fotoğraf için dokun</value></data>
+  <data name="VideoRecorder_HelpText_Send" xml:space="preserve"><value>İptal etmek için, parmağını Gönder'in üzerinden dışarıya doğru sürükle</value></data>
+  <data name="View_Timeline_Menu_Item" xml:space="preserve"><value>zaman tüneli</value></data>
+  <data name="Voice_Clip_Hold_Instruction" xml:space="preserve"><value>Ses kaydedip göndermek için dokunup basılı tut</value></data>
+  <data name="Voice_Clip_Length_Limit" xml:space="preserve"><value>Süre sınırına gelindi, göndermek için bırak</value></data>
+  <data name="Voice_Clip_Menu_Item" xml:space="preserve"><value>ses klibi gönder</value></data>
+  <data name="Voice_Clip_NUX_Instruction" xml:space="preserve"><value>Göndermek için bırak, iptal etmek için parmağını dışarı kaydır</value></data>
+  <data name="Voice_Clip_Record" xml:space="preserve"><value>kaydet</value></data>
+  <data name="Voice_Clip_Release_Cancel" xml:space="preserve"><value>Kaydı iptal etmek için bırak</value></data>
+  <data name="orca_neue_nux_add_phone_body1_searchable_all_not_verified" xml:space="preserve"><value>Telefon numaranı bilenler seni rehberine ekleyebilir, ancak bu numarayı Facebook'ta sadece sen görebilirsin.</value></data>
+  <data name="orca_neue_nux_add_phone_body1_searchable_all_visible_all" xml:space="preserve"><value>Telefon numaranı bilenler seni rehberine ekleyebilir.</value></data>
+  <data name="orca_neue_nux_add_phone_body1_searchable_all_visible_custom" xml:space="preserve"><value>Telefon numaranı bilenler seni rehberine ekleyebilir, ancak bu durum numaranı Facebook'ta kimlerin görebildiğini değiştirmez.</value></data>
+  <data name="orca_neue_nux_add_phone_body1_searchable_all_visible_friends" xml:space="preserve"><value>Telefon numaranı bilenler seni rehberine ekleyebilir, ancak bu numarayı Facebook'ta sadece arkadaşların görebilir.</value></data>
+  <data name="orca_neue_nux_add_phone_body1_searchable_all_visible_self" xml:space="preserve"><value>Telefon numaranı bilenler seni rehberine ekleyebilir, ancak bu numarayı Facebook'ta sadece sen görebilirsin.</value></data>
+  <data name="orca_neue_nux_add_phone_body1_searchable_fof" xml:space="preserve"><value>İletişim kurmak için Facebook'ta arkadaş olmanız gerekmediğinden dolayı, Facebook ayarın numaranı bilen herkesin seni numaranı aratarak bulmasına izin verecek şekilde genişleyecek.</value></data>
+  <data name="orca_neue_nux_add_phone_body2_not_verified" xml:space="preserve"><value>Bu numarayı Facebook'ta sadece sen görebilirsin.</value></data>
+  <data name="orca_neue_nux_add_phone_body2_visible_custom" xml:space="preserve"><value>Bu durum, numaranı Facebook'ta kimlerin görebildiğini değiştirmez.</value></data>
+  <data name="orca_neue_nux_add_phone_body2_visible_friends" xml:space="preserve"><value>Bu numarayı Facebook'ta sadece arkadaşların görebilir.</value></data>
+  <data name="orca_neue_nux_add_phone_body2_visible_self" xml:space="preserve"><value>Bu numarayı Facebook'ta sadece sen görebilirsin.</value></data>
+  <data name="orca_neue_nux_add_phone_title_no_verified_number" xml:space="preserve"><value>İnsanlar sana hangi numaradan ulaşabilir?</value></data>
+  <data name="orca_neue_nux_add_phone_title_verified_long" xml:space="preserve"><value>İnsanların sana ulaşabileceği numara bu mu?</value></data>
+  <data name="orca_neue_nux_add_phone_title_verified_short" xml:space="preserve"><value>Numaran güncel mi?</value></data>
+</root>

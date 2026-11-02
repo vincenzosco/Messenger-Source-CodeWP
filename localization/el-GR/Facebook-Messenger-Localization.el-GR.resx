@@ -1,0 +1,395 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Active_AppBar_Chat" xml:space="preserve"><value>συνομιλία</value></data>
+  <data name="AddContact_Contact_Already_Exists" xml:space="preserve"><value>Αυτός ο αριθμός τηλεφώνου έχει ήδη προστεθεί ως επαφή.</value></data>
+  <data name="AddContact_FBUser_Already_Exists" xml:space="preserve"><value>Ο χρήστης {0} έχει ήδη προστεθεί ως επαφή.</value></data>
+  <data name="AddContact_Invite_Button" xml:space="preserve"><value>πρόσκληση</value></data>
+  <data name="AddContact_MatchedExistingUser_Label" xml:space="preserve"><value>Ο χρήστης {0} υπάρχει ήδη στις επαφές του Messenger</value></data>
+  <data name="AddContact_MatchingUser_Label" xml:space="preserve"><value>Ο χρήστης {0} προστέθηκε στις επαφές του Messenger</value></data>
+  <data name="AddContact_Message_Button" xml:space="preserve"><value>στείλτε ένα μήνυμα στο χρήστη {0}</value></data>
+  <data name="AddContact_PhoneNumber_Description" xml:space="preserve"><value>Γράψτε τον αριθμό τηλεφώνου κάποιου για να τον βρείτε στο Μessenger.</value></data>
+  <data name="AddContact_PhoneNumber_Title" xml:space="preserve"><value>ΠΡΟΣΘΗΚΗ ΕΠΑΦΗΣ</value></data>
+  <data name="AddContact_Remove_Contact_Warning" xml:space="preserve"><value>Ο χρήστης {0} θα αφαιρεθεί από τις επαφές του Messenger.</value></data>
+  <data name="AddContact_Remove_MessageBox_Title" xml:space="preserve"><value>Αφαίρεση επαφής</value></data>
+  <data name="AddPhotos_Menu_ChooseFromAlbum" xml:space="preserve"><value>Επιλέξτε από τα άλμπουμ</value></data>
+  <data name="AddPhotos_Menu_RemovePhotos" xml:space="preserve"><value>Αφαίρεση φωτογραφίας</value></data>
+  <data name="AddPhotos_Menu_TakePhoto" xml:space="preserve"><value>Τραβήξτε φωτογραφία</value></data>
+  <data name="AddPhotos_Title_EditProfilePicture" xml:space="preserve"><value>ΕΠΕΞΕΡΓΑΣΙΑ ΕΙΚΟΝΑΣ ΠΡΟΦΙΛ</value></data>
+  <data name="AddPhotos_Title_SetGroupPhoto" xml:space="preserve"><value>ΟΡΙΣΜΟΣ ΦΩΤΟΓΡΑΦΙΑΣ ΟΜΑΔΑΣ</value></data>
+  <data name="Add_Phone_Number_Label" xml:space="preserve"><value>Προσθέστε αριθμό τηλεφώνου</value></data>
+  <data name="AppBar_Cancel" xml:space="preserve"><value>άκυρο</value></data>
+  <data name="AppBar_No" xml:space="preserve"><value>όχι</value></data>
+  <data name="AppBar_Ok" xml:space="preserve"><value>OK</value></data>
+  <data name="AppBar_Remove" xml:space="preserve"><value>αφαίρεση</value></data>
+  <data name="AppBar_Undo" xml:space="preserve"><value>αναίρεση</value></data>
+  <data name="AppBar_Yes" xml:space="preserve"><value>ναι</value></data>
+  <data name="AppUpdate_Description" xml:space="preserve"><value>Ενημερώστε το Messenger για να αποκτήσετε όλες τις νέες λειτουργίες και βελτιώσεις.</value></data>
+  <data name="AppUpdate_NotNowButton" xml:space="preserve"><value>Όχι τώρα</value></data>
+  <data name="AppUpdate_Title" xml:space="preserve"><value>Είναι διαθέσιμη μια ενημέρωση για το Messenger</value></data>
+  <data name="AppUpdate_UpdateAppButton" xml:space="preserve"><value>Ενημέρωση</value></data>
+  <data name="App_Location_Services_Enable" xml:space="preserve"><value>Για να κοινοποιείτε την τοποθεσία σας στα μηνύματα, πηγαίνετε στις ρυθμίσεις του Messenger.</value></data>
+  <data name="App_Quit_Caption" xml:space="preserve"><value>Έξοδος από το Messenger</value></data>
+  <data name="Attachments_AppBar_Next" xml:space="preserve"><value>επόμενη</value></data>
+  <data name="Attachments_AppBar_Previous" xml:space="preserve"><value>προηγούμενη</value></data>
+  <data name="Attachments_AppBar_Skip" xml:space="preserve"><value>παράλειψη</value></data>
+  <data name="BackgroundToast_LeavingApp_Title" xml:space="preserve"><value>Messenger</value></data>
+  <data name="BackgroundToast_LeavingApp_Warning" xml:space="preserve"><value>Μερικά μηνύματα δεν στάλθηκαν προτού κλείσετε το Messenger. Για να σταλούν τα μηνύματα, ανοίξτε το Messenger.</value></data>
+  <data name="ButtonLabelRetry" xml:space="preserve"><value>Επανάληψη</value></data>
+  <data name="Button_Continue" xml:space="preserve"><value>Συνέχεια</value></data>
+  <data name="CanonicalThreadDetailsPage_Start_Group" xml:space="preserve"><value>δημιουργία ομάδας</value></data>
+  <data name="CanonicalThreadDetailsPage_Title" xml:space="preserve"><value>λεπτομέρειες</value></data>
+  <data name="Chat_Is_Off" xml:space="preserve"><value>Η Συνομιλία είναι απενεργοποιημένη</value></data>
+  <data name="Chat_Is_Off_Details_Label" xml:space="preserve"><value>Θα λαμβάνετε κανονικά όλα τα μηνύματα ακόμα κι αν η Συνομιλία είναι απενεργοποιημένη. Αν όμως την ενεργοποιήσετε, θα βλέπετε ποιοι είναι ενεργοί στο Facebook.</value></data>
+  <data name="Client_Type_Mobile" xml:space="preserve"><value>Κινητό</value></data>
+  <data name="Client_Type_Web" xml:space="preserve"><value>Διαδίκτυο</value></data>
+  <data name="Composer_Exit_Warning" xml:space="preserve"><value>Ακύρωση του μηνύματος;</value></data>
+  <data name="Composer_Groups_Search_Header" xml:space="preserve"><value>ΟΜΑΔΕΣ</value></data>
+  <data name="Composer_More_People_Search_Header" xml:space="preserve"><value>ΠΕΡΙΣΣΟΤΕΡΑ ΑΤΟΜΑ</value></data>
+  <data name="Composer_SendingMessage" xml:space="preserve"><value>αποστολή μηνύματος...</value></data>
+  <data name="Composer_To" xml:space="preserve"><value>Προς:</value></data>
+  <data name="Confirm_Phone_Number_Label" xml:space="preserve"><value>Επιβεβαίωση αριθμού</value></data>
+  <data name="ContactCard_MenuLabel_CreateGroup" xml:space="preserve"><value>δημιουργία ομάδας με το χρήστη {0}</value></data>
+  <data name="ContactCard_MenuLabel_RemoveContact" xml:space="preserve"><value>αφαίρεση επαφής</value></data>
+  <data name="ContactCard_MenuLabel_SendMessage" xml:space="preserve"><value>στείλτε ένα μήνυμα στο χρήστη {0}</value></data>
+  <data name="ContactList_Header_ContactsFound" xml:space="preserve"><value>Βρέθηκαν {0} επαφές</value></data>
+  <data name="ContactList_Header_Failed" xml:space="preserve"><value>Η αποστολή των επαφών απέτυχε. Επανάληψη;</value></data>
+  <data name="ContactList_Header_FindContacts" xml:space="preserve"><value>εύρεση επαφών</value></data>
+  <data name="ContactList_Header_ShowAll" xml:space="preserve"><value>εμφάνιση όλων</value></data>
+  <data name="ContactList_Header_SyncingContacts" xml:space="preserve"><value>συγχρονισμός επαφών...</value></data>
+  <data name="ContactList_Nux_Label_EmptyList" xml:space="preserve"><value>Μπορείτε να συγχρονίσετε τις επαφές σας για να δείτε ποιους χρήστες του Messenger γνωρίζετε ήδη.</value></data>
+  <data name="ContactList_Nux_Label_NoMatchingContacts" xml:space="preserve"><value>Εδώ βλέπετε τις επαφές σας. Απλά πατήστε το εικονίδιο επαφών για να προσθέσετε κάποιον.</value></data>
+  <data name="Contact_Search_No_Results" xml:space="preserve"><value>Κανένα αποτέλεσμα</value></data>
+  <data name="Contacts_Find_Button_Label" xml:space="preserve"><value>εύρεση επαφών</value></data>
+  <data name="Contacts_Invite_Button_Label" xml:space="preserve"><value>πρόσκληση ατόμων</value></data>
+  <data name="Conversation_AppBar_AttachPhoto" xml:space="preserve"><value>φωτογραφίες</value></data>
+  <data name="Conversation_AppBar_Camera" xml:space="preserve"><value>κάμερα</value></data>
+  <data name="Conversation_AppBar_ChangePhoto" xml:space="preserve"><value>φωτογραφία</value></data>
+  <data name="Conversation_AppBar_Like" xml:space="preserve"><value>μου αρέσει</value></data>
+  <data name="Conversation_AppBar_Send" xml:space="preserve"><value>αποστολή</value></data>
+  <data name="Conversation_AppBar_Text" xml:space="preserve"><value>κείμενο</value></data>
+  <data name="Conversation_ContextMenu_RemoveAttachment" xml:space="preserve"><value>αφαίρεση εικόνας</value></data>
+  <data name="Conversation_MenuItem_Rename" xml:space="preserve"><value>όνομα</value></data>
+  <data name="CreateGroup_TextBox_Label" xml:space="preserve"><value>Όνομα ομάδας</value></data>
+  <data name="CreateGroup_Title" xml:space="preserve"><value>ΝΕΑ ΟΜΑΔΑ</value></data>
+  <data name="Device_Location_Services_Enable" xml:space="preserve"><value>Για να κοινοποιείτε την τοποθεσία στα μηνύματά σας, πηγαίνετε στις ρυθμίσεις τοποθεσίας στις ρυθμίσεις του κινητού σας.</value></data>
+  <data name="Empty_Conversation_Placeholder_Text" xml:space="preserve"><value>Ο χρήστης {0} είναι στο Messenger και θα λαμβάνει απευθείας τα μηνύματά σας.</value></data>
+  <data name="Empty_Conversation_Placeholder_Text_For_Non_Messenger_User" xml:space="preserve"><value>Ο χρήστης {0} δεν είναι στο Messenger, αλλά θα δει το μήνυμά σας στο Facebook.</value></data>
+  <data name="Empty_Conversation_Placeholder_Title" xml:space="preserve"><value>Ξεκινήστε τη συζήτηση</value></data>
+  <data name="Error_Cannot_Attach_File" xml:space="preserve"><value>Το αρχείο δεν επισυνάφθηκε. Δοκιμάστε ξανά.</value></data>
+  <data name="Error_Cannot_Fetch_Conversations" xml:space="preserve"><value>Η προβολή των μηνυμάτων δεν είναι δυνατή. Δοκιμάστε ξανά.</value></data>
+  <data name="Error_Cannot_Fetch_Messages" xml:space="preserve"><value>Η προβολή των μηνυμάτων δεν είναι δυνατή. Δοκιμάστε ξανά.</value></data>
+  <data name="Error_Cannot_Fetch_Sticker_Packs" xml:space="preserve"><value>Η προβολή των πακέτων αυτοκόλλητων δεν είναι δυνατή.</value></data>
+  <data name="Error_Changing_Mute" xml:space="preserve"><value>Η διακοπή απέτυχε. Δοκιμάστε ξανά.</value></data>
+  <data name="Error_Changing_Unmute" xml:space="preserve"><value>Η επανέναρξη απέτυχε. Δοκιμάστε ξανά.</value></data>
+  <data name="Error_Gallery_Out_Of_Memory" xml:space="preserve"><value>Δεν είναι δυνατή η επισύναψη εικόνας αυτού του μεγέθους.</value></data>
+  <data name="Error_Invalid_Phone_Number" xml:space="preserve"><value>Δώστε έναν έγκυρο αριθμό τηλεφώνου.</value></data>
+  <data name="Error_Invalid_Phone_Prefix" xml:space="preserve"><value>Χρησιμοποιήστε έγκυρο κωδικό χώρας.</value></data>
+  <data name="Error_Max_File_Attachment_Exceeded" xml:space="preserve"><value>Δεν μπορείτε να επισυνάψετε άλλες φωτογραφίες στο μήνυμα.</value></data>
+  <data name="Error_No_Connection" xml:space="preserve"><value>Δεν υπάρχει σύνδεση στο Διαδίκτυο</value></data>
+  <data name="Error_No_Conversations" xml:space="preserve"><value>Δεν έχετε καμία συζήτηση ακόμα.</value></data>
+  <data name="ExistingUser_Create_Account_Button" xml:space="preserve"><value>δημιουργία νέου λογαριασμού</value></data>
+  <data name="ExistingUser_Description" xml:space="preserve"><value>Αυτός ο αριθμός αντιστοιχεί στο λογαριασμό Facebook του χρήστη {0} {1}.</value></data>
+  <data name="ExistingUser_LoginAs_Button" xml:space="preserve"><value>σύνδεση ως {0}</value></data>
+  <data name="ExistingUser_Title" xml:space="preserve"><value>Σύνδεση μέσω Facebook;</value></data>
+  <data name="FetchingDataFromServerFailed" xml:space="preserve"><value>Η φόρτωση των πληροφοριών απέτυχε. Δοκιμάστε ξανά.</value></data>
+  <data name="FlyTrap_Error_Generic" xml:space="preserve"><value>Η προβολή της αναφοράς απέτυχε.</value></data>
+  <data name="FlyTrap_Label_Disclaimer" xml:space="preserve"><value>Οι πληροφορίες για το τηλέφωνό σας και την εφαρμογή θα συμπεριληφθούν αυτόματα. Για να μάθετε περισσότερα σχετικά με τον τρόπο χρήσης των πληροφοριών, επισκεφτείτε το {0}</value></data>
+  <data name="FlyTrap_Label_Disclaimer_DataUsePolicyLink" xml:space="preserve"><value>Πολιτική χρήσης δεδομένων</value></data>
+  <data name="FlyTrap_Label_Instructions" xml:space="preserve"><value>Περιγράψτε τι προσπαθείτε να κάνετε και τι πήγε στραβά.</value></data>
+  <data name="FlyTrap_Label_Screenshot" xml:space="preserve"><value>Στιγμιότυπο οθόνης (screenshot)</value></data>
+  <data name="FlyTrap_MenuItem_ReportProblem" xml:space="preserve"><value>αναφορά προβλήματος</value></data>
+  <data name="FlyTrap_TextboxHint_Problem" xml:space="preserve"><value>περιγράψτε το πρόβλημα</value></data>
+  <data name="FlyTrap_Title_ReportProblem" xml:space="preserve"><value>ΑΝΑΦΟΡΑ ΠΡΟΒΛΗΜΑΤΟΣ</value></data>
+  <data name="Forwarding_SearchBox_HintText" xml:space="preserve"><value>αναζήτηση ατόμων</value></data>
+  <data name="Forwarding_Title_Label" xml:space="preserve"><value>ΠΡΟΩΘΗΣΗ ΜΗΝΥΜΑΤΟΣ</value></data>
+  <data name="Friends_AppBar_AddContact" xml:space="preserve"><value>προσθήκη επαφής</value></data>
+  <data name="Global_Notifcation_Off_Until" xml:space="preserve"><value>Όχι, μέχρι {0}</value></data>
+  <data name="Global_Notification_Off" xml:space="preserve"><value>Όχι</value></data>
+  <data name="Global_Notification_On" xml:space="preserve"><value>Ναι</value></data>
+  <data name="GroupDetailsPage_AppBar_LeaveGroup" xml:space="preserve"><value>αποχώρηση από την ομάδα</value></data>
+  <data name="GroupDetailsPage_AppBar_RemoveGroupName" xml:space="preserve"><value>αφαίρεση ονόματος</value></data>
+  <data name="GroupDetailsPage_AppBar_RemoveGroupPhoto" xml:space="preserve"><value>αφαίρεση φωτογραφίας ομάδας</value></data>
+  <data name="GroupDetailsPage_Title" xml:space="preserve"><value>ομάδα</value></data>
+  <data name="GroupMember_Context_Menu_Remove_Member" xml:space="preserve"><value>αφαίρεση</value></data>
+  <data name="GroupTile_Date_ActiveDaysAgo" xml:space="preserve"><value>Ενεργή πριν από {0} μέρες</value></data>
+  <data name="GroupTile_Date_ActiveLastMonth" xml:space="preserve"><value>Ενεργή τον περασμένο μήνα</value></data>
+  <data name="GroupTile_Date_ActiveLastYear" xml:space="preserve"><value>Ενεργή πέρυσι</value></data>
+  <data name="GroupTile_Date_ActiveMonthsAgo" xml:space="preserve"><value>Ενεργή πριν από {0} μήνες</value></data>
+  <data name="GroupTile_Date_ActiveToday" xml:space="preserve"><value>Ενεργή σήμερα</value></data>
+  <data name="GroupTile_Date_ActiveYearsAgo" xml:space="preserve"><value>Ενεργή πριν από {0} χρόνια</value></data>
+  <data name="GroupTile_Date_ActiveYesterday" xml:space="preserve"><value>Ενεργή χτες</value></data>
+  <data name="Group_AddPeople_Search" xml:space="preserve"><value>Αναζητήστε άτομα</value></data>
+  <data name="Group_AddPeople_Title" xml:space="preserve"><value>ΠΡΟΣΘΕΣΤΕ ΑΤΟΜΑ</value></data>
+  <data name="Group_AddingParticipants_Failed_Message" xml:space="preserve"><value>Η προσθήκη ατόμων στη συζήτηση απέτυχε. Δοκιμάστε ξανά.</value></data>
+  <data name="Group_AddingParticipants_Failed_Title" xml:space="preserve"><value>Δεν προστέθηκαν άτομα</value></data>
+  <data name="Group_AppBar_SelectMany" xml:space="preserve"><value>Επιλογή πολλών στοιχείων</value></data>
+  <data name="Group_RemovingParticipants_Failed_Message" xml:space="preserve"><value>Η αφαίρεση των ατόμων απέτυχε. Δοκιμάστε ξανά.</value></data>
+  <data name="Group_RemovingParticipants_Failed_Title" xml:space="preserve"><value>Η αφαίρεση των ατόμων απέτυχε.</value></data>
+  <data name="Groups_AppBar_Add" xml:space="preserve"><value>καρφίτσωμα</value></data>
+  <data name="Groups_AppBar_Create" xml:space="preserve"><value>δημιουργία</value></data>
+  <data name="Groups_AppBar_Next" xml:space="preserve"><value>επόμενο</value></data>
+  <data name="Groups_NUX_Button_Text" xml:space="preserve"><value>Ξεκινήστε</value></data>
+  <data name="Groups_NUX_Help_Title" xml:space="preserve"><value>Πλέον μπορείτε να καρφιτσώνετε ομάδες, για να τις βρίσκετε εύκολα.</value></data>
+  <data name="Groups_NUX_NoThread_Button_Text" xml:space="preserve"><value>Δημιουργία νέας ομάδας</value></data>
+  <data name="Groups_NUX_PlaceholderActive_LastWeek" xml:space="preserve"><value>Ενεργή την περασμένη βδομάδα</value></data>
+  <data name="Groups_NUX_PlaceholderActive_Yesterday" xml:space="preserve"><value>Ενεργή χτες</value></data>
+  <data name="Groups_NUX_PlaceholderFour_Members" xml:space="preserve"><value>Γιώργος, Γιάννης</value></data>
+  <data name="Groups_NUX_PlaceholderFour_Title" xml:space="preserve"><value>Συνάδελφοι</value></data>
+  <data name="Groups_NUX_PlaceholderOne_Members" xml:space="preserve"><value>Μπάμπης, Σίμος</value></data>
+  <data name="Groups_NUX_PlaceholderOne_Title" xml:space="preserve"><value>Συγκάτοικοι</value></data>
+  <data name="Groups_NUX_PlaceholderThree_Members" xml:space="preserve"><value>Μάνος, Μίλτος</value></data>
+  <data name="Groups_NUX_PlaceholderThree_Title" xml:space="preserve"><value>Προσωπικό για Σ/Κ</value></data>
+  <data name="Groups_NUX_PlaceholderTwo_Members" xml:space="preserve"><value>Αλίκη, Αδάμ, Μαρία, Μιχάλης</value></data>
+  <data name="Groups_NUX_PlaceholderTwo_Title" xml:space="preserve"><value>Οικογένεια</value></data>
+  <data name="Image_Search_Empty_Results" xml:space="preserve"><value>Δεν βρέθηκαν εικόνες.</value></data>
+  <data name="Image_Search_Menu_Item" xml:space="preserve"><value>αναζήτηση εικόνας</value></data>
+  <data name="Image_Search_Popup_Cancel" xml:space="preserve"><value>Ακύρωση</value></data>
+  <data name="Image_Search_Popup_Message" xml:space="preserve"><value>Τι ψάχνετε;</value></data>
+  <data name="Image_Search_Popup_Search" xml:space="preserve"><value>Αναζήτηση</value></data>
+  <data name="Image_Search_Popup_Title" xml:space="preserve"><value>Αναζήτηση εικόνων</value></data>
+  <data name="Invite_Contact_ToMessenger" xml:space="preserve"><value>Δοκιμάστε το Messenger: {0}</value></data>
+  <data name="Location_Menu_Item" xml:space="preserve"><value>αποστολή τοποθεσίας</value></data>
+  <data name="Location_Services_Disabled" xml:space="preserve"><value>Οι υπηρεσίες τοποθεσίας είναι ανενεργές</value></data>
+  <data name="Location_Warning_Body" xml:space="preserve"><value>Όσοι συμμετέχουν σε αυτή τη συζήτηση μπορούν να δουν πού βρίσκεστε στο χάρτη. Πατήστε για να ενεργοποιήσετε ή να απενεργοποιήσετε την τοποθεσία σας.</value></data>
+  <data name="LoginApproval_ResendCode" xml:space="preserve"><value>στείλτε τον ξανά</value></data>
+  <data name="LoginApproval_Title_EnterCode" xml:space="preserve"><value>Πληκτρολογήστε τον κωδικό που λάβατε στο κινητό σας.</value></data>
+  <data name="Login_Approval_Security_Code" xml:space="preserve"><value>Κωδικός επιβεβαίωσης</value></data>
+  <data name="Login_NotOnFacebook" xml:space="preserve"><value>Δεν είστε στο Facebook;</value></data>
+  <data name="Login_RecoverPassword" xml:space="preserve"><value>Ξεχάσατε τον κωδικό πρόσβασης;</value></data>
+  <data name="Login_SigningIn" xml:space="preserve"><value>συνδέεστε</value></data>
+  <data name="Login_TextboxHint_EmailOrPhone" xml:space="preserve"><value>Email ή τηλέφωνο</value></data>
+  <data name="Login_TextboxHint_Password" xml:space="preserve"><value>Κωδικός πρόσβασης</value></data>
+  <data name="Login_Title_SignIn" xml:space="preserve"><value>Συνδεθείτε μέσω Facebook</value></data>
+  <data name="Login_Title_Welcome" xml:space="preserve"><value>Καλώς ήρθατε στο Messenger</value></data>
+  <data name="Login_With_Facebook" xml:space="preserve"><value>Συνδεθείτε μέσω Facebook</value></data>
+  <data name="MainPage_Active_Chat_Popup" xml:space="preserve"><value>ΣΥΝΟΜΙΛΙΑ</value></data>
+  <data name="MainPage_Active_Disable_Chat" xml:space="preserve"><value>απενεργοποιήστε τη Συνομιλία</value></data>
+  <data name="MainPage_Active_Enable_Chat" xml:space="preserve"><value>ενεργοποιήστε τη Συνομιλία</value></data>
+  <data name="MainPage_AppBar_Mute_Button" xml:space="preserve"><value>διακοπή</value></data>
+  <data name="MainPage_AppBar_UnMute_Button" xml:space="preserve"><value>επανέναρξη</value></data>
+  <data name="MainPage_AppMenu_OtherFolder" xml:space="preserve"><value>φάκελος "Άλλα"</value></data>
+  <data name="MainPage_AppMenu_Settings" xml:space="preserve"><value>ρυθμίσεις</value></data>
+  <data name="MainPage_Pivot_Title_Active" xml:space="preserve"><value>ενεργό</value></data>
+  <data name="MainPage_Pivot_Title_Friends" xml:space="preserve"><value>Messenger</value></data>
+  <data name="MainPage_Pivot_Title_Groups" xml:space="preserve"><value>ομάδες</value></data>
+  <data name="MainPage_Pivot_Title_Recent_Threads" xml:space="preserve"><value>πρόσφατα</value></data>
+  <data name="Matching_Contact_NotFound_Message" xml:space="preserve"><value>Ο χρήστης {0} δεν μπορεί να αντιστοιχιστεί σε επαφή του Messenger</value></data>
+  <data name="MessageBox_Description_ArchiveThread" xml:space="preserve"><value>Για να δείτε τις αρχειοθετημένες συζητήσεις, πρέπει να συνδεθείτε στον ιστότοπο του Facebook.</value></data>
+  <data name="MessageBox_Description_DeleteThread" xml:space="preserve"><value>Έτσι θα διαγραφεί οριστικά η συζήτηση.</value></data>
+  <data name="MessageBox_Description_FlyTrapSuccess" xml:space="preserve"><value>Σας ευχαριστούμε για την αναφορά!</value></data>
+  <data name="MessageBox_Description_LeaveThread" xml:space="preserve"><value>Αν αποχωρήσετε από τη συζήτηση, δεν θα λαμβάνετε νέα μηνύματα.</value></data>
+  <data name="MessageBox_Description_SpamThread" xml:space="preserve"><value>Αν σημειώσετε μια συζήτηση ως σπαμ, δεν θα εμφανίζεται πλέον στα πρόσφατα μηνύματά σας.</value></data>
+  <data name="MessageBox_Label_ArchiveThread" xml:space="preserve"><value>αρχειοθέτηση της συζήτησης;</value></data>
+  <data name="MessageBox_Label_AuthenticateWithBrowser" xml:space="preserve"><value>Ανοίξτε ένα πρόγραμμα περιήγησης για να συνδεθείτε</value></data>
+  <data name="MessageBox_Label_BypassLogin2Fac" xml:space="preserve"><value>Έχετε ενεργοποιήσει τις εγκρίσεις σύνδεσης. Για να συνεχίσετε, πληκτρολογήστε τον κωδικό πρόσβασης.</value></data>
+  <data name="MessageBox_Label_BypassLoginFail" xml:space="preserve"><value>Δεν είναι δυνατή η επιβεβαίωση του αριθμού τηλεφώνου. Δοκιμάστε ξανά.</value></data>
+  <data name="MessageBox_Label_ClearThreadPhotoFailed" xml:space="preserve"><value>Η φωτογραφία της ομάδας δεν αφαιρέθηκε.</value></data>
+  <data name="MessageBox_Label_ConfirmPhoneNumberFailed" xml:space="preserve"><value>Ο αριθμός σας δεν επιβεβαιώθηκε</value></data>
+  <data name="MessageBox_Label_ConfirmationCodeInvalid" xml:space="preserve"><value>Μη έγκυρος κωδικός επιβεβαίωσης.</value></data>
+  <data name="MessageBox_Label_CreateGroupFailed" xml:space="preserve"><value>Η δημιουργία της ομάδας απέτυχε</value></data>
+  <data name="MessageBox_Label_DeleteThread" xml:space="preserve"><value>Διαγραφή της συζήτησης;</value></data>
+  <data name="MessageBox_Label_ForwardingFailed" xml:space="preserve"><value>Το μήνυμα δεν προωθήθηκε σε όλους τους παραλήπτες.</value></data>
+  <data name="MessageBox_Label_LeaveThread" xml:space="preserve"><value>Αποχώρηση από την ομάδα;</value></data>
+  <data name="MessageBox_Label_LoginFailed" xml:space="preserve"><value>Η σύνδεση δεν είναι δυνατή.</value></data>
+  <data name="MessageBox_Label_NamingConversation_Error" xml:space="preserve"><value>Η μετονομασία της συζήτησης απέτυχε.</value></data>
+  <data name="MessageBox_Label_NoInternet" xml:space="preserve"><value>Δεν υπάρχει σύνδεση στο Διαδίκτυο</value></data>
+  <data name="MessageBox_Label_PinGroupFailed" xml:space="preserve"><value>Η ομάδα δεν καρφιτσώθηκε.</value></data>
+  <data name="MessageBox_Label_SetThreadPhotoFailed" xml:space="preserve"><value>Η φωτογραφία της ομάδας δεν ορίστηκε.</value></data>
+  <data name="MessageBox_Label_SpamThread" xml:space="preserve"><value>να σημειωθεί ως σπαμ;</value></data>
+  <data name="MessageBox_Label_UpdatePhoneNumberFailed" xml:space="preserve"><value>Ο αριθμός δεν ενημερώθηκε.</value></data>
+  <data name="MessageBox_Label_UploadProfilePic_Failed" xml:space="preserve"><value>Η προσθήκη της εικόνας προφίλ δεν είναι δυνατή.</value></data>
+  <data name="MessageBox_Popup_Cancel" xml:space="preserve"><value>Ακύρωση</value></data>
+  <data name="MessageBox_Title_AddContactFailed" xml:space="preserve"><value>Δεν είναι δυνατή η εύρεση της επαφής αυτή τη στιγμή.</value></data>
+  <data name="MessageBox_Title_FlyTrapSuccess" xml:space="preserve"><value>Η αναφορά στάλθηκε</value></data>
+  <data name="MessageBox_Title_LoginFailed" xml:space="preserve"><value>Η σύνδεση δεν είναι δυνατή.</value></data>
+  <data name="MessageComposer_EmptyGallery_Text" xml:space="preserve"><value>Δεν υπάρχουν φωτογραφίες στη συλλογή σας.</value></data>
+  <data name="MessageDetails_Error_Unexpected" xml:space="preserve"><value>Η λήψη των λεπτομερειών του μηνύματος απέτυχε. Δοκιμάστε ξανά.</value></data>
+  <data name="MessageDetails_Label_SeenBy" xml:space="preserve"><value>Το είδαν:</value></data>
+  <data name="MessageSnippetAudioClipLoggedInUser" xml:space="preserve"><value>Στείλατε ηχητικό κλιπ.</value></data>
+  <data name="MessageSnippetAudioClipOtherUser" xml:space="preserve"><value>Ο χρήστης {0} έστειλε ηχητικό κλιπ.</value></data>
+  <data name="MessageSnippetGenericLoggedInUser" xml:space="preserve"><value>Στείλατε μήνυμα.</value></data>
+  <data name="MessageSnippetGenericOtherUser" xml:space="preserve"><value>Ο χρήστης {0} έστειλε μήνυμα.</value></data>
+  <data name="MessageSnippetPhotoLoggedInUser" xml:space="preserve"><value>Στείλατε εικόνα.</value></data>
+  <data name="MessageSnippetPhotoOtherUser" xml:space="preserve"><value>Ο χρήστης {0} έστειλε εικόνα.</value></data>
+  <data name="MessageSnippetStickerLoggedInUser" xml:space="preserve"><value>Στείλατε αυτοκόλλητο.</value></data>
+  <data name="MessageSnippetStickerOtherUser" xml:space="preserve"><value>Ο χρήστης {0} έστειλε αυτοκόλλητο.</value></data>
+  <data name="MessageSnippetVideoLoggedInUser" xml:space="preserve"><value>Στείλατε ένα βίντεο.</value></data>
+  <data name="MessageSnippetVideoOtherUser" xml:space="preserve"><value>Ο χρήστης {0} έστειλε ένα βίντεο.</value></data>
+  <data name="MessageSnippetWhenSenderIsTheLoggedInUser" xml:space="preserve"><value>Εσείς</value></data>
+  <data name="MessageStatus_Location_City" xml:space="preserve"><value>Στάλθηκε από {0}</value></data>
+  <data name="MessageStatus_Location_CityCountry" xml:space="preserve"><value>Στάλθηκε από {0}, {1}</value></data>
+  <data name="MessageStatus_Location_CityState" xml:space="preserve"><value>Στάλθηκε από {0}, {1}</value></data>
+  <data name="MessageStatus_Location_DistrictCity" xml:space="preserve"><value>Στάλθηκε από {0}, {1}</value></data>
+  <data name="MessageStatus_Origin_Messenger" xml:space="preserve"><value>Στάλθηκε μέσω Messenger</value></data>
+  <data name="MessageStatus_Origin_Mobile" xml:space="preserve"><value>Από κινητό</value></data>
+  <data name="MessageStatus_Origin_Web" xml:space="preserve"><value>Στάλθηκε από το Διαδίκτυο</value></data>
+  <data name="MessageStatus_SeenBy_1" xml:space="preserve"><value>Το είδε ο χρήστης {0}</value></data>
+  <data name="MessageStatus_SeenBy_2" xml:space="preserve"><value>Το είδαν οι {0} και {1}</value></data>
+  <data name="MessageStatus_SeenBy_3" xml:space="preserve"><value>Το είδαν οι {0}, {1} και {2}</value></data>
+  <data name="MessageStatus_SeenBy_4" xml:space="preserve"><value>Το είδαν οι {0}, {1}, {2} και {3}</value></data>
+  <data name="MessageStatus_SeenBy_Everyone" xml:space="preserve"><value>Το είδαν όλοι</value></data>
+  <data name="MessageStatus_SeenBy_Others" xml:space="preserve"><value>Το είδαν οι εξής: {0}, {1}, {2} και {3} ακόμη</value></data>
+  <data name="MessageStatus_Seen_Timestamp" xml:space="preserve"><value>Διαβάστηκε {0}</value></data>
+  <data name="Message_Delete_Caption" xml:space="preserve"><value>Διαγραφή μηνύματος</value></data>
+  <data name="Message_Delete_Text" xml:space="preserve"><value>Θέλετε να διαγράψετε οριστικά αυτό το μήνυμα;</value></data>
+  <data name="Message_Sending_Failed" xml:space="preserve"><value>Το μήνυμα δεν στάλθηκε.</value></data>
+  <data name="Message_Sending_Failed_App_Exited_Description" xml:space="preserve"><value>Η εφαρμογή έκλεισε προτού σταλεί το μήνυμά σας. Δοκιμάστε ξανά να στείλετε το μήνυμα.</value></data>
+  <data name="Message_Sending_Failed_Permission_Description" xml:space="preserve"><value>Δεν μπορείτε να στείλετε μήνυμα σε αυτό το άτομο.</value></data>
+  <data name="Messages_Active_1m_Ago" xml:space="preserve"><value>ενεργός πριν από 1 λεπτό</value></data>
+  <data name="Messages_Active_Now" xml:space="preserve"><value>ενεργός τώρα</value></data>
+  <data name="Messages_Active_Xd_Ago" xml:space="preserve"><value>ενεργός πριν από {0} ημ.</value></data>
+  <data name="Messages_Active_Xh_Ago" xml:space="preserve"><value>ενεργός πριν από {0} ώρες</value></data>
+  <data name="Messages_Active_Xm_Ago" xml:space="preserve"><value>ενεργός πριν από {0} λεπτά</value></data>
+  <data name="Messages_AppBar_Send_Sticker" xml:space="preserve"><value>αυτοκόλλητα</value></data>
+  <data name="Messages_ContextMenu_Copy" xml:space="preserve"><value>αντιγραφή κειμένου</value></data>
+  <data name="Messages_ContextMenu_Delete" xml:space="preserve"><value>διαγραφή</value></data>
+  <data name="Messages_ContextMenu_Forward" xml:space="preserve"><value>προώθηση</value></data>
+  <data name="Messages_ContextMenu_Retry" xml:space="preserve"><value>δοκιμάστε ξανά</value></data>
+  <data name="Messages_Context_Menu_View_Details" xml:space="preserve"><value>προβολή λεπτομερειών</value></data>
+  <data name="Messages_Group_Message" xml:space="preserve"><value>ΟΜΑΔΑ</value></data>
+  <data name="Messages_Hint_Text" xml:space="preserve"><value>γράψτε μήνυμα</value></data>
+  <data name="Messages_On_Facebook" xml:space="preserve"><value>Facebook</value></data>
+  <data name="Messages_On_Messenger" xml:space="preserve"><value>Messenger</value></data>
+  <data name="Messages_On_Mobile" xml:space="preserve"><value>από κινητό</value></data>
+  <data name="Messages_Refreshing_Failed_StateIndicator" xml:space="preserve"><value>Η ενημέρωση απέτυχε, ελέγξτε τη σύνδεσή σας</value></data>
+  <data name="Messages_Refreshing_StateIndicator" xml:space="preserve"><value>Ανανέωση...</value></data>
+  <data name="Messages_Refreshing_Success_Stateindicator" xml:space="preserve"><value>Ενημερώθηκε</value></data>
+  <data name="Messages_Share_Not_Viewable" xml:space="preserve"><value>Το περιεχόμενο μπορεί να έχει αφαιρεθεί ή μπορεί να μην έχετε δικαίωμα να το δείτε.</value></data>
+  <data name="Mute_Conversation_For_An_Hour" xml:space="preserve"><value>διακοπή για 1 ώρα</value></data>
+  <data name="Mute_Conversation_Forever" xml:space="preserve"><value>διακοπή</value></data>
+  <data name="Mute_Conversation_Menu_Item" xml:space="preserve"><value>διακοπή</value></data>
+  <data name="Mute_Conversation_Until_8AM" xml:space="preserve"><value>διακοπή μέχρι 8 πμ</value></data>
+  <data name="NameConversation_Menu_Clear" xml:space="preserve"><value>διαγραφή ονόματος</value></data>
+  <data name="NameConversation_Title" xml:space="preserve"><value>ΟΝΟΜΑΣΤΕ ΤΗΝ ΟΜΑΔΑ</value></data>
+  <data name="NetworkStatus_Banner_Connected" xml:space="preserve"><value>Συνδέθηκε</value></data>
+  <data name="NetworkStatus_Banner_Connecting" xml:space="preserve"><value>Σύνδεση...</value></data>
+  <data name="NetworkStatus_Banner_Disconnected" xml:space="preserve"><value>Αναμονή για σύνδεση σε δίκτυο</value></data>
+  <data name="NetworkStatus_Banner_No_Internet" xml:space="preserve"><value>Δεν υπάρχει σύνδεση στο Internet</value></data>
+  <data name="NetworkStatus_Banner_Syncing" xml:space="preserve"><value>Συγχρονισμός...</value></data>
+  <data name="NetworkStatus_Banner_UpToDate" xml:space="preserve"><value>Ενημερώθηκε</value></data>
+  <data name="NewContacts_Header_FoundContacts" xml:space="preserve"><value>{0} ΝΕΕΣ ΕΠΑΦΕΣ</value></data>
+  <data name="Notifications_Turn_Off_For_An_Hour" xml:space="preserve"><value>απενεργοποίηση για 1 ώρα</value></data>
+  <data name="Notifications_Turn_On" xml:space="preserve"><value>ενεργοποίηση</value></data>
+  <data name="Notifications_Turn_Until_8AM" xml:space="preserve"><value>απενεργοποίηση μέχρι 8 πμ</value></data>
+  <data name="Nux_Title_OnMessenger" xml:space="preserve"><value>Είστε στο Messenger!</value></data>
+  <data name="Nux_Title_OnMessenger_Message" xml:space="preserve"><value>Μπορείτε να επικοινωνήσετε απευθείας με όποιον έχει το μπλε διακριτικό του Messenger.</value></data>
+  <data name="People_AppBar_AddContact" xml:space="preserve"><value>προσθέστε άτομα</value></data>
+  <data name="People_AppBar_Search" xml:space="preserve"><value>αναζήτηση</value></data>
+  <data name="PhoneNumber_Box_Title" xml:space="preserve"><value>Κωδικός χώρας και αριθμός τηλεφώνου</value></data>
+  <data name="PhoneNumber_ListpickerLabel_CountryCode" xml:space="preserve"><value>ΕΠΙΛΕΞΤΕ ΧΩΡΑ</value></data>
+  <data name="PhoneNumber_Registration_Welcome_Message" xml:space="preserve"><value>Για να ξεκινήσετε, απλώς γράψτε τον αριθμό του τηλεφώνου σας.</value></data>
+  <data name="PhoneNumber_Select_Country" xml:space="preserve"><value>Χώρα</value></data>
+  <data name="PhotoAttachment_IndexDisplay_Label" xml:space="preserve"><value>{0} / {1} φωτογραφίες</value></data>
+  <data name="PhotoEdit_AppBar_Draw" xml:space="preserve"><value>σχεδίαση</value></data>
+  <data name="PhotoEdit_AppBar_Send" xml:space="preserve"><value>αποστολή</value></data>
+  <data name="PhotoEdit_AppBar_Undo" xml:space="preserve"><value>αναίρεση</value></data>
+  <data name="PhotoEdit_AppBar_Write" xml:space="preserve"><value>κείμενο</value></data>
+  <data name="PhotoEdit_Nux_Text" xml:space="preserve"><value>Πατήστε τη φωτογραφία για να προσθέσετε κείμενο</value></data>
+  <data name="Photos_SavePhoto_Error_StateIndicator" xml:space="preserve"><value>Η φωτογραφία δεν αποθηκεύτηκε.</value></data>
+  <data name="Photos_SavePhoto_MenuItem" xml:space="preserve"><value>αποθήκευση φωτογραφίας</value></data>
+  <data name="Photos_SavePhoto_Saving_StateIndicator" xml:space="preserve"><value>Η φωτογραφία αποθηκεύεται...</value></data>
+  <data name="Photos_SavePhoto_Success_StateIndicator" xml:space="preserve"><value>Η φωτογραφία αποθηκεύτηκε</value></data>
+  <data name="Power_Saver_Mode_Warning" xml:space="preserve"><value>Δεν θα λαμβάνετε ειδοποιήσεις, επειδή είναι ενεργή η λειτουργία εξοικονόμησης μπαταρίας.</value></data>
+  <data name="ProfilePic_Confirmation_Title" xml:space="preserve"><value>Σας αρέσει;</value></data>
+  <data name="ProfilePic_Label_Camera_Button" xml:space="preserve"><value>Τραβήξτε φωτογραφία</value></data>
+  <data name="ProfilePic_Label_Gallery_Button" xml:space="preserve"><value>Επιλογή από τα άλμπουμ</value></data>
+  <data name="ProfilePic_Subtitle_Text" xml:space="preserve"><value>Επιλέξτε μια φωτογραφία για να μπορούν να σας αναγνωρίζουν οι άλλοι.</value></data>
+  <data name="ProfilePic_Title_Text" xml:space="preserve"><value>Θέλετε να προσθέσετε φωτογραφία;</value></data>
+  <data name="RecentThreadList_Nux_EmptyList_Message" xml:space="preserve"><value>Από τη στιγμή που θα αρχίσετε μια συνομιλία, όλα τα μηνύματά σας θα εμφανίζονται εδώ.</value></data>
+  <data name="Recent_ContextMenu_Archive" xml:space="preserve"><value>αρχειοθέτηση</value></data>
+  <data name="Recent_ContextMenu_Delete" xml:space="preserve"><value>διαγραφή</value></data>
+  <data name="Recent_ContextMenu_Leave" xml:space="preserve"><value>αποχώρηση από την ομάδα</value></data>
+  <data name="Recent_ContextMenu_MarkUnread" xml:space="preserve"><value>δεν το έχω διαβάσει</value></data>
+  <data name="Recent_ContextMenu_Spam" xml:space="preserve"><value>σπαμ</value></data>
+  <data name="Registration_TextboxHint_FirstName" xml:space="preserve"><value>Όνομα</value></data>
+  <data name="Registration_TextboxHint_LastName" xml:space="preserve"><value>Επώνυμο</value></data>
+  <data name="Registration_Title2" xml:space="preserve"><value>Χρησιμοποιήστε το πραγματικό σας όνομα ώστε να σας αναγνωρίζουν οι άλλοι.</value></data>
+  <data name="ResourceLanguage" xml:space="preserve"><value>el-GR</value></data>
+  <data name="Session_Expired_Caption" xml:space="preserve"><value>Συνδεθείτε ξανά για να χρησιμοποιήσετε το Messenger.</value></data>
+  <data name="Session_Expired_Title" xml:space="preserve"><value>η περίοδος σύνδεσης έληξε</value></data>
+  <data name="SettingsPage_Title" xml:space="preserve"><value>ρυθμίσεις</value></data>
+  <data name="Settings_Help" xml:space="preserve"><value>Βοήθεια</value></data>
+  <data name="Settings_Help_Title" xml:space="preserve"><value>Πληροφορίες</value></data>
+  <data name="Settings_In_App_Audio_Title" xml:space="preserve"><value>Ήχος εφαρμογής</value></data>
+  <data name="Settings_In_App_Contact_Sync_Title" xml:space="preserve"><value>Συγχρονισμός επαφών</value></data>
+  <data name="Settings_In_App_Vibration_Title" xml:space="preserve"><value>Δόνηση εφαρμογής</value></data>
+  <data name="Settings_Licenses" xml:space="preserve"><value>Άδειες χρήσης</value></data>
+  <data name="Settings_Location_Title" xml:space="preserve"><value>Τοποθεσία</value></data>
+  <data name="Settings_Notification_Title" xml:space="preserve"><value>Ειδοποιήσεις</value></data>
+  <data name="Settings_PhoneNumber_VerificationNeeded" xml:space="preserve"><value>(Επιβεβαιώστε τον αριθμό)</value></data>
+  <data name="Settings_Privacy_And_Terms" xml:space="preserve"><value>Απόρρητο και όροι χρήσης</value></data>
+  <data name="Settings_Remove_Contacts_Body" xml:space="preserve"><value>Θα αφαιρεθούν όσες επαφές είχατε συγχρονίσει προηγουμένως.</value></data>
+  <data name="Settings_Remove_Contacts_Confirm" xml:space="preserve"><value>Αφαίρεση</value></data>
+  <data name="Settings_Remove_Contacts_Title" xml:space="preserve"><value>Αφαίρεση επαφών;</value></data>
+  <data name="Settings_SendOnEnter_Title" xml:space="preserve"><value>Αποστολή με Enter</value></data>
+  <data name="Settings_Sync_Contacts_Body" xml:space="preserve"><value>Να ξεκινήσει ο συγχρονισμός; Οι επαφές θα συγχρονίζονται συνεχώς με τους διακομιστές μας.</value></data>
+  <data name="Settings_Sync_Contacts_Confirmation" xml:space="preserve"><value>Συγχρονισμός</value></data>
+  <data name="Settings_Sync_Contacts_Title" xml:space="preserve"><value>Συγχρονισμός επαφών</value></data>
+  <data name="Settings_Version_Number" xml:space="preserve"><value>Έκδοση {0}</value></data>
+  <data name="Start_Group_Menu_Item" xml:space="preserve"><value>δημιουργία ομαδικής συζήτησης με {0}</value></data>
+  <data name="Sticker_Drawer_RecentStickers" xml:space="preserve"><value>Πρόσφατα αυτοκόλλητα</value></data>
+  <data name="Sticker_Pack_Download" xml:space="preserve"><value>λήψη</value></data>
+  <data name="Sticker_Pack_Download_Failed" xml:space="preserve"><value>Η λήψη του πακέτου αυτοκόλλητων απέτυχε</value></data>
+  <data name="Sticker_Pack_Downloaded" xml:space="preserve"><value>κατέβηκε</value></data>
+  <data name="Sticker_Pack_Downloading" xml:space="preserve"><value>κατεβαίνει</value></data>
+  <data name="Sticker_Pack_Share" xml:space="preserve"><value>κοινοποίηση</value></data>
+  <data name="Sticker_Store_ContextMenu_Remove" xml:space="preserve"><value>αφαίρεση</value></data>
+  <data name="Sticker_Store_Menu_Item" xml:space="preserve"><value>κατάστημα αυτοκόλλητων</value></data>
+  <data name="Sticker_Store_Remove_Error" xml:space="preserve"><value>Το πακέτο αυτοκόλλητων δεν αφαιρέθηκε.</value></data>
+  <data name="Sticker_Store_Tab_All" xml:space="preserve"><value>όλα</value></data>
+  <data name="Sticker_Store_Tab_Featured" xml:space="preserve"><value>προβαλλόμενα</value></data>
+  <data name="Sticker_Store_Tab_Owned" xml:space="preserve"><value>δικά σας</value></data>
+  <data name="Sticker_Store_Title" xml:space="preserve"><value>ΚΑΤΑΣΤΗΜΑ ΑΥΤΟΚΟΛΛΗΤΩΝ</value></data>
+  <data name="SuggestedPins_Pinning_StateIndicator" xml:space="preserve"><value>Καρφιτσώνεται...</value></data>
+  <data name="SuggestedPins_SearchBox_Hint" xml:space="preserve"><value>αναζήτηση ομάδων</value></data>
+  <data name="SuggestedPins_Title_PinGroup" xml:space="preserve"><value>ΚΑΡΦΙΤΣΩΜΑ ΟΜΑΔΑΣ</value></data>
+  <data name="SyncContact_Button_LearnMore" xml:space="preserve"><value>Μάθετε περισσότερα</value></data>
+  <data name="SyncContact_ErrorMessage_UnableToToggle" xml:space="preserve"><value>Η αλλαγή της ρύθμισης δεν ήταν δυνατή. Ελέγξτε τη σύνδεσή σας στο διαδίκτυο και προσπαθήστε ξανά.</value></data>
+  <data name="SyncContact_Subtitle" xml:space="preserve"><value>Συγχρονίστε τις επαφές σας για να δείτε ποιοι άλλοι είναι στο Messenger. Οι επαφές σας θα συγχρονίζονται και θα ενημερώνονται συνεχώς.</value></data>
+  <data name="SyncContact_Title" xml:space="preserve"><value>Στείλτε μήνυμα σε οποιαδήποτε επαφή του τηλεφώνου σας</value></data>
+  <data name="SyncContacts_MessageBox_LinkLabel" xml:space="preserve"><value>Μάθετε περισσότερα</value></data>
+  <data name="Thread_AppBar_Details" xml:space="preserve"><value>λεπτομέρειες</value></data>
+  <data name="Thread_AppBar_View_Members" xml:space="preserve"><value>προβολή ατόμων</value></data>
+  <data name="Thread_Name_NoParticipant_Title" xml:space="preserve"><value>δεν υπάρχουν άτομα ακόμα</value></data>
+  <data name="Thread_UnnamedUserPlaceholder_Title" xml:space="preserve"><value>Κάποιος στο Facebook</value></data>
+  <data name="Threads_AppBar_Compose" xml:space="preserve"><value>νέο</value></data>
+  <data name="Threads_AppBar_Refresh" xml:space="preserve"><value>ανανέωση</value></data>
+  <data name="UnMute_Conversation_Menu_Item" xml:space="preserve"><value>επανέναρξη</value></data>
+  <data name="Unsent_Message_Warning" xml:space="preserve"><value>Θέλετε να κλείσετε το Messenger; Τα μηνύματά σας δεν έχουν σταλεί ακόμα.</value></data>
+  <data name="Verify_PhoneNumber_Box_Title" xml:space="preserve"><value>Αριθμός τηλεφώνου</value></data>
+  <data name="VideoRecorder_HelpText_Cancel" xml:space="preserve"><value>Για διαγραφή και να ξεκινήσετε από την αρχή, αφήστε το δάχτυλό σας</value></data>
+  <data name="VideoRecorder_HelpText_HoldToSend" xml:space="preserve"><value>Πατήστε κανονικά για φωτογραφία, παρατεταμένα για βίντεο</value></data>
+  <data name="VideoRecorder_HelpText_Send" xml:space="preserve"><value>Για ακύρωση, σύρετε το δάχτυλό σας από το κουμπί "Αποστολή"</value></data>
+  <data name="View_Timeline_Menu_Item" xml:space="preserve"><value>Χρονολόγιο</value></data>
+  <data name="Voice_Clip_Hold_Instruction" xml:space="preserve"><value>Για εγγραφή και αποστολή ήχου, πατήστε παρατεταμένα</value></data>
+  <data name="Voice_Clip_Length_Limit" xml:space="preserve"><value>Εξαντλήθηκε το χρονικό όριο, αφήστε για αποστολή</value></data>
+  <data name="Voice_Clip_Menu_Item" xml:space="preserve"><value>αποστολή ηχητικού κλιπ</value></data>
+  <data name="Voice_Clip_NUX_Instruction" xml:space="preserve"><value>Αφήστε για αποστολή, σύρετε για ακύρωση</value></data>
+  <data name="Voice_Clip_Record" xml:space="preserve"><value>Εγγραφή</value></data>
+  <data name="Voice_Clip_Release_Cancel" xml:space="preserve"><value>Για να ακυρώσετε την ηχογράφηση, αφήστε το κουμπί</value></data>
+  <data name="orca_neue_nux_add_phone_body1_searchable_all_not_verified" xml:space="preserve"><value>Οι άλλοι μπορούν να σας προσθέσουν στις επαφές τους αν έχουν ήδη τον αριθμό του τηλεφώνου σας. Ωστόσο, μόνο εσείς μπορείτε να βλέπετε αυτόν τον αριθμό στο Facebook.</value></data>
+  <data name="orca_neue_nux_add_phone_body1_searchable_all_visible_all" xml:space="preserve"><value>Οι άλλοι μπορούν να σας προσθέσουν στις επαφές τους όταν έχουν τον αριθμό του τηλεφώνου σας.</value></data>
+  <data name="orca_neue_nux_add_phone_body1_searchable_all_visible_custom" xml:space="preserve"><value>Οι άλλοι μπορούν να σας προσθέσουν στις επαφές τους αν έχουν ήδη τον αριθμό του τηλεφώνου σας. Αυτό όμως δεν αλλάζει το ποιοι μπορούν να δουν τον αριθμό σας στο Facebook.</value></data>
+  <data name="orca_neue_nux_add_phone_body1_searchable_all_visible_friends" xml:space="preserve"><value>Οι άλλοι μπορούν να σας προσθέσουν στις επαφές τους αν έχουν ήδη τον αριθμό του τηλεφώνου σας. Ωστόσο, μόνο οι φίλοι σας μπορούν να δουν αυτόν τον αριθμό στο Facebook.</value></data>
+  <data name="orca_neue_nux_add_phone_body1_searchable_all_visible_self" xml:space="preserve"><value>Οι άλλοι μπορούν να σας προσθέσουν στις επαφές τους αν έχουν ήδη τον αριθμό του τηλεφώνου σας. Ωστόσο, μόνο εσείς μπορείτε να βλέπετε αυτόν τον αριθμό στο Facebook.</value></data>
+  <data name="orca_neue_nux_add_phone_body1_searchable_fof" xml:space="preserve"><value>Δεν χρειάζεται να είστε φίλοι στο Facebook προκειμένου να επικοινωνήσετε. Επομένως, η ρύθμιση του απορρήτου σας στο Facebook θα διευρυνθεί, ώστε να μπορούν να σας αναζητήσουν με βάση τον αριθμό του τηλεφώνου σας όσοι έχουν τον αριθμό.</value></data>
+  <data name="orca_neue_nux_add_phone_body2_not_verified" xml:space="preserve"><value>Μόνο εσείς μπορείτε να δείτε αυτόν τον αριθμό στο Facebook.</value></data>
+  <data name="orca_neue_nux_add_phone_body2_visible_custom" xml:space="preserve"><value>Έτσι δεν αλλάζει το ποιοι μπορούν να βλέπουν τον αριθμό σας στο Facebook.</value></data>
+  <data name="orca_neue_nux_add_phone_body2_visible_friends" xml:space="preserve"><value>Μόνο οι φίλοι σας μπορούν να δουν αυτόν τον αριθμό στο Facebook.</value></data>
+  <data name="orca_neue_nux_add_phone_body2_visible_self" xml:space="preserve"><value>Μόνο εσείς μπορείτε να δείτε αυτόν τον αριθμό στο Facebook.</value></data>
+  <data name="orca_neue_nux_add_phone_title_no_verified_number" xml:space="preserve"><value>Σε ποιον αριθμό μπορούν να επικοινωνήσουν μαζί σας οι άλλοι;</value></data>
+  <data name="orca_neue_nux_add_phone_title_verified_long" xml:space="preserve"><value>Μπορούν οι άλλοι να επικοινωνούν μαζί σας σε αυτόν τον αριθμό;</value></data>
+  <data name="orca_neue_nux_add_phone_title_verified_short" xml:space="preserve"><value>Είναι ενημερωμένος ο αριθμός σας;</value></data>
+</root>

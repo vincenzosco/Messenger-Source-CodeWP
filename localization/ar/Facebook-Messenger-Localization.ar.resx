@@ -1,0 +1,395 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Active_AppBar_Chat" xml:space="preserve"><value>دردشة</value></data>
+  <data name="AddContact_Contact_Already_Exists" xml:space="preserve"><value>تمت إضافة رقم الهاتف هذا كجهة اتصال من قبل.</value></data>
+  <data name="AddContact_FBUser_Already_Exists" xml:space="preserve"><value>تمت إضافة ‏{0}‏ إلى جهات اتصالك من قبل بالفعل.</value></data>
+  <data name="AddContact_Invite_Button" xml:space="preserve"><value>دعوة</value></data>
+  <data name="AddContact_MatchedExistingUser_Label" xml:space="preserve"><value>‏{0}‏ موجود بالفعل بجهات اتصال Messenger لديك</value></data>
+  <data name="AddContact_MatchingUser_Label" xml:space="preserve"><value>تمت إضافة ‏{0}‏ إلى جهات اتصال Messenger لديك</value></data>
+  <data name="AddContact_Message_Button" xml:space="preserve"><value>إرسال رسالة إلى ‏{0}‏</value></data>
+  <data name="AddContact_PhoneNumber_Description" xml:space="preserve"><value>أدخل رقم هاتف شخص للعثور عليه في Messenger.</value></data>
+  <data name="AddContact_PhoneNumber_Title" xml:space="preserve"><value>إضافة جهة اتصال</value></data>
+  <data name="AddContact_Remove_Contact_Warning" xml:space="preserve"><value>ستتم إزالة ‏{0}‏ من جهات اتصال Messenger لديك.</value></data>
+  <data name="AddContact_Remove_MessageBox_Title" xml:space="preserve"><value>إزالة جهة الاتصال</value></data>
+  <data name="AddPhotos_Menu_ChooseFromAlbum" xml:space="preserve"><value>اختيار من الألبومات</value></data>
+  <data name="AddPhotos_Menu_RemovePhotos" xml:space="preserve"><value>إزالة صورة</value></data>
+  <data name="AddPhotos_Menu_TakePhoto" xml:space="preserve"><value>التقاط صورة</value></data>
+  <data name="AddPhotos_Title_EditProfilePicture" xml:space="preserve"><value>تعديل الصورة الشخصية</value></data>
+  <data name="AddPhotos_Title_SetGroupPhoto" xml:space="preserve"><value>تعيين صورة مجموعة</value></data>
+  <data name="Add_Phone_Number_Label" xml:space="preserve"><value>إضافة رقم هاتف</value></data>
+  <data name="AppBar_Cancel" xml:space="preserve"><value>إلغاء</value></data>
+  <data name="AppBar_No" xml:space="preserve"><value>لا</value></data>
+  <data name="AppBar_Ok" xml:space="preserve"><value>موافق</value></data>
+  <data name="AppBar_Remove" xml:space="preserve"><value>إزالة</value></data>
+  <data name="AppBar_Undo" xml:space="preserve"><value>تراجع</value></data>
+  <data name="AppBar_Yes" xml:space="preserve"><value>نعم</value></data>
+  <data name="AppUpdate_Description" xml:space="preserve"><value>قم بتحديث Messenger للحصول على أي ميزات وتحسينات جديدة.</value></data>
+  <data name="AppUpdate_NotNowButton" xml:space="preserve"><value>ليس الآن</value></data>
+  <data name="AppUpdate_Title" xml:space="preserve"><value>تحديث Messenger متوفر</value></data>
+  <data name="AppUpdate_UpdateAppButton" xml:space="preserve"><value>تحديث</value></data>
+  <data name="App_Location_Services_Enable" xml:space="preserve"><value>لمشاركة الموقع برسائلك، انتقل إلى إعدادات Messenger.</value></data>
+  <data name="App_Quit_Caption" xml:space="preserve"><value>مغادرة Messenger</value></data>
+  <data name="Attachments_AppBar_Next" xml:space="preserve"><value>التالي</value></data>
+  <data name="Attachments_AppBar_Previous" xml:space="preserve"><value>السابق</value></data>
+  <data name="Attachments_AppBar_Skip" xml:space="preserve"><value>تخطي</value></data>
+  <data name="BackgroundToast_LeavingApp_Title" xml:space="preserve"><value>Messenger</value></data>
+  <data name="BackgroundToast_LeavingApp_Warning" xml:space="preserve"><value>لم يتم إرسال بعض الرسائل قبل إغلاق Messenger. افتح تطبيق Messenger للتأكد من إرسال رسائلك.</value></data>
+  <data name="ButtonLabelRetry" xml:space="preserve"><value>إعادة المحاولة</value></data>
+  <data name="Button_Continue" xml:space="preserve"><value>متابعة</value></data>
+  <data name="CanonicalThreadDetailsPage_Start_Group" xml:space="preserve"><value>بدء محادثة جماعية</value></data>
+  <data name="CanonicalThreadDetailsPage_Title" xml:space="preserve"><value>التفاصيل</value></data>
+  <data name="Chat_Is_Off" xml:space="preserve"><value>الدردشة غير مشغّلة</value></data>
+  <data name="Chat_Is_Off_Details_Label" xml:space="preserve"><value>ما زلت ستتلقى كل رسائلك إذا كانت الدردشة غير مشغّلة، لكن بإمكانك تشغيلها لرؤية الأصدقاء النشطين في فيس بوك.</value></data>
+  <data name="Client_Type_Mobile" xml:space="preserve"><value>الهاتف المحمول</value></data>
+  <data name="Client_Type_Web" xml:space="preserve"><value>ويب</value></data>
+  <data name="Composer_Exit_Warning" xml:space="preserve"><value>هل تريد إلغاء الرسالة؟</value></data>
+  <data name="Composer_Groups_Search_Header" xml:space="preserve"><value>المجموعات</value></data>
+  <data name="Composer_More_People_Search_Header" xml:space="preserve"><value>مزيد من الأشخاص</value></data>
+  <data name="Composer_SendingMessage" xml:space="preserve"><value>جارٍ إرسال الرسالة...</value></data>
+  <data name="Composer_To" xml:space="preserve"><value>إلى:</value></data>
+  <data name="Confirm_Phone_Number_Label" xml:space="preserve"><value>تأكيد الرقم</value></data>
+  <data name="ContactCard_MenuLabel_CreateGroup" xml:space="preserve"><value>إنشاء مجموعة مع ‏{0}‏</value></data>
+  <data name="ContactCard_MenuLabel_RemoveContact" xml:space="preserve"><value>إزالة جهة الاتصال</value></data>
+  <data name="ContactCard_MenuLabel_SendMessage" xml:space="preserve"><value>إرسال رسالة إلى ‏{0}‏</value></data>
+  <data name="ContactList_Header_ContactsFound" xml:space="preserve"><value>تم العثور على ‏{0}‏ من جهات الاتصال</value></data>
+  <data name="ContactList_Header_Failed" xml:space="preserve"><value>فشل تحميل جهة الاتصال. هل تريد أعادة المحاولة؟</value></data>
+  <data name="ContactList_Header_FindContacts" xml:space="preserve"><value>البحث عن جهات اتصال</value></data>
+  <data name="ContactList_Header_ShowAll" xml:space="preserve"><value>إظهار الكل</value></data>
+  <data name="ContactList_Header_SyncingContacts" xml:space="preserve"><value>جارٍ مزامنة جهات الاتصال...</value></data>
+  <data name="ContactList_Nux_Label_EmptyList" xml:space="preserve"><value>يمكنك مزامنة جهات اتصالك لرؤية الأشخاص الذين تعرفهم بالفعل على Messenger.</value></data>
+  <data name="ContactList_Nux_Label_NoMatchingContacts" xml:space="preserve"><value>ستظهر جهات اتصالك هنا. ما عليك سوى الضغط على أيقونة جهة الاتصال لإضافة أي شخص.</value></data>
+  <data name="Contact_Search_No_Results" xml:space="preserve"><value>لا توجد نتائج</value></data>
+  <data name="Contacts_Find_Button_Label" xml:space="preserve"><value>البحث عن جهات اتصال</value></data>
+  <data name="Contacts_Invite_Button_Label" xml:space="preserve"><value>دعوة أشخاص</value></data>
+  <data name="Conversation_AppBar_AttachPhoto" xml:space="preserve"><value>الصور</value></data>
+  <data name="Conversation_AppBar_Camera" xml:space="preserve"><value>الكاميرا</value></data>
+  <data name="Conversation_AppBar_ChangePhoto" xml:space="preserve"><value>صورة</value></data>
+  <data name="Conversation_AppBar_Like" xml:space="preserve"><value>أعجبني</value></data>
+  <data name="Conversation_AppBar_Send" xml:space="preserve"><value>إرسال</value></data>
+  <data name="Conversation_AppBar_Text" xml:space="preserve"><value>نص</value></data>
+  <data name="Conversation_ContextMenu_RemoveAttachment" xml:space="preserve"><value>إزالة صورة</value></data>
+  <data name="Conversation_MenuItem_Rename" xml:space="preserve"><value>الاسم</value></data>
+  <data name="CreateGroup_TextBox_Label" xml:space="preserve"><value>اسم المجموعة</value></data>
+  <data name="CreateGroup_Title" xml:space="preserve"><value>مجموعة جديدة</value></data>
+  <data name="Device_Location_Services_Enable" xml:space="preserve"><value>لمشاركة الموقع في رسائلك، انتقل إلى إعدادات الموقع في إعدادات الهاتف لديك.</value></data>
+  <data name="Empty_Conversation_Placeholder_Text" xml:space="preserve"><value>‏{0}‏ موجود على Messenger وسيستلم رسائلك في الحال.</value></data>
+  <data name="Empty_Conversation_Placeholder_Text_For_Non_Messenger_User" xml:space="preserve"><value>‏{0}‏ ليس على Messenger، لكنه سيستلم رسالتك على فيس بوك.</value></data>
+  <data name="Empty_Conversation_Placeholder_Title" xml:space="preserve"><value>بدء المحادثة</value></data>
+  <data name="Error_Cannot_Attach_File" xml:space="preserve"><value>تعذر إرفاق الملف. يرجى المحاولة مرة أخرى.</value></data>
+  <data name="Error_Cannot_Fetch_Conversations" xml:space="preserve"><value>عذرًا، لا يمكن عرض الرسائل الآن. يرجى المحاولة مرة أخرى.</value></data>
+  <data name="Error_Cannot_Fetch_Messages" xml:space="preserve"><value>عذرًا، لا يمكن عرض الرسائل الآن. يرجى المحاولة مرة أخرى.</value></data>
+  <data name="Error_Cannot_Fetch_Sticker_Packs" xml:space="preserve"><value>عذرًا، لا يمكن عرض حزمة الملصقات الآن.</value></data>
+  <data name="Error_Changing_Mute" xml:space="preserve"><value>تعذر كتم الصوت. يرجى المحاولة مرة أخرى.</value></data>
+  <data name="Error_Changing_Unmute" xml:space="preserve"><value>تعذر إلغاء كتم الصوت. يرجى المحاولة مرة أخرى.</value></data>
+  <data name="Error_Gallery_Out_Of_Memory" xml:space="preserve"><value>لا يمكننا إرفاق صورة بهذا الحجم.</value></data>
+  <data name="Error_Invalid_Phone_Number" xml:space="preserve"><value>يرجى إدخال رقم هاتف صالح.</value></data>
+  <data name="Error_Invalid_Phone_Prefix" xml:space="preserve"><value>الرجاء استخدام رمز بلد صالح.</value></data>
+  <data name="Error_Max_File_Attachment_Exceeded" xml:space="preserve"><value>لا يمكنك إرفاق أي صور أخرى بهذه الرسالة.</value></data>
+  <data name="Error_No_Connection" xml:space="preserve"><value>الاتصال بالإنترنت غير متوفر</value></data>
+  <data name="Error_No_Conversations" xml:space="preserve"><value>لا توجد لديك أي محادثات حتى الآن.</value></data>
+  <data name="ExistingUser_Create_Account_Button" xml:space="preserve"><value>إنشاء حساب جديد</value></data>
+  <data name="ExistingUser_Description" xml:space="preserve"><value>هذا الرقم مطابق للرقم المسجل بحساب فيسبوك لـ ‏{0}‏ ‏{1}‏.</value></data>
+  <data name="ExistingUser_LoginAs_Button" xml:space="preserve"><value>تسجيل الدخول باسم ‏{0}‏</value></data>
+  <data name="ExistingUser_Title" xml:space="preserve"><value>هل تريد تسجيل الدخول بحساب فيسبوك؟</value></data>
+  <data name="FetchingDataFromServerFailed" xml:space="preserve"><value>تعذر تحميل معلوماتك. يرجى إعادة المحاولة.</value></data>
+  <data name="FlyTrap_Error_Generic" xml:space="preserve"><value>تعذر عرض التقرير.</value></data>
+  <data name="FlyTrap_Label_Disclaimer" xml:space="preserve"><value>سيتم تلقائيًا تضمين معلومات حول هاتفك وهذا التطبيق. لمعرفة المزيد حول طريقة استخدام المعلومات، يرجى زيارة ‏{0}‏.</value></data>
+  <data name="FlyTrap_Label_Disclaimer_DataUsePolicyLink" xml:space="preserve"><value>سياسة استخدام البيانات</value></data>
+  <data name="FlyTrap_Label_Instructions" xml:space="preserve"><value>يرجى تقديم وصف للإجراء الذي كنت تحاول القيام به والخطأ الذي حدث.</value></data>
+  <data name="FlyTrap_Label_Screenshot" xml:space="preserve"><value>لقطة شاشة</value></data>
+  <data name="FlyTrap_MenuItem_ReportProblem" xml:space="preserve"><value>الإبلاغ عن مشكلة</value></data>
+  <data name="FlyTrap_TextboxHint_Problem" xml:space="preserve"><value>وصف المشكلة</value></data>
+  <data name="FlyTrap_Title_ReportProblem" xml:space="preserve"><value>الإبلاغ عن مشكلة</value></data>
+  <data name="Forwarding_SearchBox_HintText" xml:space="preserve"><value>البحث عن أشخاص</value></data>
+  <data name="Forwarding_Title_Label" xml:space="preserve"><value>إعادة توجيه الرسالة</value></data>
+  <data name="Friends_AppBar_AddContact" xml:space="preserve"><value>إضافة جهة اتصال</value></data>
+  <data name="Global_Notifcation_Off_Until" xml:space="preserve"><value>الإشعارات معطلة حتى ‏{0}‏</value></data>
+  <data name="Global_Notification_Off" xml:space="preserve"><value>قيد إيقاف التشغيل</value></data>
+  <data name="Global_Notification_On" xml:space="preserve"><value>قيد التشغيل</value></data>
+  <data name="GroupDetailsPage_AppBar_LeaveGroup" xml:space="preserve"><value>مغادرة المجموعة</value></data>
+  <data name="GroupDetailsPage_AppBar_RemoveGroupName" xml:space="preserve"><value>إزالة الاسم</value></data>
+  <data name="GroupDetailsPage_AppBar_RemoveGroupPhoto" xml:space="preserve"><value>إزالة صورة المجموعة</value></data>
+  <data name="GroupDetailsPage_Title" xml:space="preserve"><value>المجموعة</value></data>
+  <data name="GroupMember_Context_Menu_Remove_Member" xml:space="preserve"><value>إزالة</value></data>
+  <data name="GroupTile_Date_ActiveDaysAgo" xml:space="preserve"><value>نشط منذ ‏{0}‏ من الأيام</value></data>
+  <data name="GroupTile_Date_ActiveLastMonth" xml:space="preserve"><value>نشط الشهر الماضي</value></data>
+  <data name="GroupTile_Date_ActiveLastYear" xml:space="preserve"><value>نشط السنة الماضية</value></data>
+  <data name="GroupTile_Date_ActiveMonthsAgo" xml:space="preserve"><value>نشط منذ ‏{0}‏ من الشهور</value></data>
+  <data name="GroupTile_Date_ActiveToday" xml:space="preserve"><value>نشط اليوم</value></data>
+  <data name="GroupTile_Date_ActiveYearsAgo" xml:space="preserve"><value>نشط منذ ‏{0}‏ من السنوات</value></data>
+  <data name="GroupTile_Date_ActiveYesterday" xml:space="preserve"><value>نشط أمس</value></data>
+  <data name="Group_AddPeople_Search" xml:space="preserve"><value>البحث عن أشخاص</value></data>
+  <data name="Group_AddPeople_Title" xml:space="preserve"><value>إضافة أشخاص</value></data>
+  <data name="Group_AddingParticipants_Failed_Message" xml:space="preserve"><value>تعذرت إضافة أشخاص إلى المجموعة. يرجى المحاولة مرة أخرى.</value></data>
+  <data name="Group_AddingParticipants_Failed_Title" xml:space="preserve"><value>تعذرت إضافة أشخاص</value></data>
+  <data name="Group_AppBar_SelectMany" xml:space="preserve"><value>تحديد عناصر متعددة</value></data>
+  <data name="Group_RemovingParticipants_Failed_Message" xml:space="preserve"><value>تعذرت إزالة الأشخاص. يرجى المحاولة مرة أخرى.</value></data>
+  <data name="Group_RemovingParticipants_Failed_Title" xml:space="preserve"><value>تعذرت إزالة الأشخاص.</value></data>
+  <data name="Groups_AppBar_Add" xml:space="preserve"><value>تثبيت</value></data>
+  <data name="Groups_AppBar_Create" xml:space="preserve"><value>إنشاء</value></data>
+  <data name="Groups_AppBar_Next" xml:space="preserve"><value>التالي</value></data>
+  <data name="Groups_NUX_Button_Text" xml:space="preserve"><value>البدء</value></data>
+  <data name="Groups_NUX_Help_Title" xml:space="preserve"><value>يمكنك الآن تثبيت المجموعات للرجوع إليها بسهولة.</value></data>
+  <data name="Groups_NUX_NoThread_Button_Text" xml:space="preserve"><value>إنشاء مجموعة جديدة</value></data>
+  <data name="Groups_NUX_PlaceholderActive_LastWeek" xml:space="preserve"><value>نشط الأسبوع الماضي</value></data>
+  <data name="Groups_NUX_PlaceholderActive_Yesterday" xml:space="preserve"><value>نشط أمس</value></data>
+  <data name="Groups_NUX_PlaceholderFour_Members" xml:space="preserve"><value>عادل، كامل</value></data>
+  <data name="Groups_NUX_PlaceholderFour_Title" xml:space="preserve"><value>زملاء العمل</value></data>
+  <data name="Groups_NUX_PlaceholderOne_Members" xml:space="preserve"><value>شريف، سيد</value></data>
+  <data name="Groups_NUX_PlaceholderOne_Title" xml:space="preserve"><value>زملاء السكن</value></data>
+  <data name="Groups_NUX_PlaceholderThree_Members" xml:space="preserve"><value>سالم، رفاعي</value></data>
+  <data name="Groups_NUX_PlaceholderThree_Title" xml:space="preserve"><value>مجموعة عطلات نهاية الأسبوع</value></data>
+  <data name="Groups_NUX_PlaceholderTwo_Members" xml:space="preserve"><value>آدم، صبحي، باسم، أدهم</value></data>
+  <data name="Groups_NUX_PlaceholderTwo_Title" xml:space="preserve"><value>العائلة</value></data>
+  <data name="Image_Search_Empty_Results" xml:space="preserve"><value>لم يتم العثور على صور.</value></data>
+  <data name="Image_Search_Menu_Item" xml:space="preserve"><value>بحث عن صورة</value></data>
+  <data name="Image_Search_Popup_Cancel" xml:space="preserve"><value>إلغاء</value></data>
+  <data name="Image_Search_Popup_Message" xml:space="preserve"><value>ما الذي تبحث عنها؟</value></data>
+  <data name="Image_Search_Popup_Search" xml:space="preserve"><value>بحث</value></data>
+  <data name="Image_Search_Popup_Title" xml:space="preserve"><value>البحث عن صور</value></data>
+  <data name="Invite_Contact_ToMessenger" xml:space="preserve"><value>جرب Messenger: ‏{0}‏</value></data>
+  <data name="Location_Menu_Item" xml:space="preserve"><value>موقع الإرسال</value></data>
+  <data name="Location_Services_Disabled" xml:space="preserve"><value>الموقع قيد إيقاف التشغيل</value></data>
+  <data name="Location_Warning_Body" xml:space="preserve"><value>يمكن للأشخاص في هذه المحادثة رؤية موقعك على الخريطة. اضغط لإيقاف تشغيل/تشغيل موقعك.</value></data>
+  <data name="LoginApproval_ResendCode" xml:space="preserve"><value>إرسال مرة أخرى</value></data>
+  <data name="LoginApproval_Title_EnterCode" xml:space="preserve"><value>الرجاء إدخال الرمز الذي تم إرساله لك على هاتفك المحمول.</value></data>
+  <data name="Login_Approval_Security_Code" xml:space="preserve"><value>رمز التأكيد</value></data>
+  <data name="Login_NotOnFacebook" xml:space="preserve"><value>ألست منضمًا إلى فيس بوك؟</value></data>
+  <data name="Login_RecoverPassword" xml:space="preserve"><value>هل نسيت كلمة السر؟</value></data>
+  <data name="Login_SigningIn" xml:space="preserve"><value>جارٍ تسجيل الدخول</value></data>
+  <data name="Login_TextboxHint_EmailOrPhone" xml:space="preserve"><value>البريد الإلكتروني أو الهاتف</value></data>
+  <data name="Login_TextboxHint_Password" xml:space="preserve"><value>كلمة السر</value></data>
+  <data name="Login_Title_SignIn" xml:space="preserve"><value>تسجيل الدخول بفيس بوك</value></data>
+  <data name="Login_Title_Welcome" xml:space="preserve"><value>مرحبًا بك في Messenger</value></data>
+  <data name="Login_With_Facebook" xml:space="preserve"><value>تسجيل الدخول بحساب فيسبوك</value></data>
+  <data name="MainPage_Active_Chat_Popup" xml:space="preserve"><value>دردشة</value></data>
+  <data name="MainPage_Active_Disable_Chat" xml:space="preserve"><value>إيقاف تشغيل الدردشة</value></data>
+  <data name="MainPage_Active_Enable_Chat" xml:space="preserve"><value>تشغيل الدردشة</value></data>
+  <data name="MainPage_AppBar_Mute_Button" xml:space="preserve"><value>كتم الصوت</value></data>
+  <data name="MainPage_AppBar_UnMute_Button" xml:space="preserve"><value>إلغاء كتم الصوت</value></data>
+  <data name="MainPage_AppMenu_OtherFolder" xml:space="preserve"><value>مجلد الرسائل الأخرى</value></data>
+  <data name="MainPage_AppMenu_Settings" xml:space="preserve"><value>الإعدادات</value></data>
+  <data name="MainPage_Pivot_Title_Active" xml:space="preserve"><value>نشط</value></data>
+  <data name="MainPage_Pivot_Title_Friends" xml:space="preserve"><value>Messenger</value></data>
+  <data name="MainPage_Pivot_Title_Groups" xml:space="preserve"><value>المجموعات</value></data>
+  <data name="MainPage_Pivot_Title_Recent_Threads" xml:space="preserve"><value>الأحدث</value></data>
+  <data name="Matching_Contact_NotFound_Message" xml:space="preserve"><value>تعذرت مطابقة ‏{0}‏ مع أي شخص على Messenger</value></data>
+  <data name="MessageBox_Description_ArchiveThread" xml:space="preserve"><value>لمشاهدة المحادثات المؤرشفة، يجب تسجيل الدخول إلى موقع فيسبوك على الويب.</value></data>
+  <data name="MessageBox_Description_DeleteThread" xml:space="preserve"><value>سيؤدي هذا إلى حذف المحادثة بشكل نهائي.</value></data>
+  <data name="MessageBox_Description_FlyTrapSuccess" xml:space="preserve"><value>شكرًا لك على ملاحظاتك!</value></data>
+  <data name="MessageBox_Description_LeaveThread" xml:space="preserve"><value>إذا غادرت المحادثة، فلن تستلم أي رسائل جديدة.</value></data>
+  <data name="MessageBox_Description_SpamThread" xml:space="preserve"><value>عندما تقوم بتحديد شيء ما على أنه غير هام، فإنك لن يصبح بإمكانك رؤيته في رسائلك الأخيرة.</value></data>
+  <data name="MessageBox_Label_ArchiveThread" xml:space="preserve"><value>هل تريد أرشفة هذه المحادثة؟</value></data>
+  <data name="MessageBox_Label_AuthenticateWithBrowser" xml:space="preserve"><value>افتح متصفح ويب للاتصال</value></data>
+  <data name="MessageBox_Label_BypassLogin2Fac" xml:space="preserve"><value>لقد قمت بتشغيل الموافقات على تسجيل الدخول. يرجى إدخال كلمة السر الخاصة بك للمتابعة.</value></data>
+  <data name="MessageBox_Label_BypassLoginFail" xml:space="preserve"><value>تعذر تأكيد رقم الهاتف. يرجى إعادة المحاولة.</value></data>
+  <data name="MessageBox_Label_ClearThreadPhotoFailed" xml:space="preserve"><value>تعذر إزالة صورة المجموعة.</value></data>
+  <data name="MessageBox_Label_ConfirmPhoneNumberFailed" xml:space="preserve"><value>تعذر تأكيد رقمك</value></data>
+  <data name="MessageBox_Label_ConfirmationCodeInvalid" xml:space="preserve"><value>رمز تأكيد غير صالح.</value></data>
+  <data name="MessageBox_Label_CreateGroupFailed" xml:space="preserve"><value>تعذر إنشاء مجموعة</value></data>
+  <data name="MessageBox_Label_DeleteThread" xml:space="preserve"><value>حذف المحادثة؟</value></data>
+  <data name="MessageBox_Label_ForwardingFailed" xml:space="preserve"><value>تعذر توجيه الرسالة إلى كافة المستلمين.</value></data>
+  <data name="MessageBox_Label_LeaveThread" xml:space="preserve"><value>مغادرة المجموعة؟</value></data>
+  <data name="MessageBox_Label_LoginFailed" xml:space="preserve"><value>لا يمكن تسجيل الدخول الآن.</value></data>
+  <data name="MessageBox_Label_NamingConversation_Error" xml:space="preserve"><value>تعذرت إعادة تسمية المحادثة.</value></data>
+  <data name="MessageBox_Label_NoInternet" xml:space="preserve"><value>الاتصال بالإنترنت غير متوفر</value></data>
+  <data name="MessageBox_Label_PinGroupFailed" xml:space="preserve"><value>تعذر تثبيت المجموعة.</value></data>
+  <data name="MessageBox_Label_SetThreadPhotoFailed" xml:space="preserve"><value>تعذر تعيين صورة مجموعة.</value></data>
+  <data name="MessageBox_Label_SpamThread" xml:space="preserve"><value>تحديد كمحتوى غير هام؟</value></data>
+  <data name="MessageBox_Label_UpdatePhoneNumberFailed" xml:space="preserve"><value>تعذر تحديث الرقم.</value></data>
+  <data name="MessageBox_Label_UploadProfilePic_Failed" xml:space="preserve"><value>تعذر تعيين الصورة الشخصية.</value></data>
+  <data name="MessageBox_Popup_Cancel" xml:space="preserve"><value>إلغاء</value></data>
+  <data name="MessageBox_Title_AddContactFailed" xml:space="preserve"><value>تعذر العثور على جهة اتصال الآن.</value></data>
+  <data name="MessageBox_Title_FlyTrapSuccess" xml:space="preserve"><value>تم إرسال التقرير</value></data>
+  <data name="MessageBox_Title_LoginFailed" xml:space="preserve"><value>لا يمكن تسجيل الدخول الآن.</value></data>
+  <data name="MessageComposer_EmptyGallery_Text" xml:space="preserve"><value>لا توجد صور في المعرض لديك حتى الآن.</value></data>
+  <data name="MessageDetails_Error_Unexpected" xml:space="preserve"><value>عذرًا، لا يمكن عرض تفاصيل الرسالة الآن. يرجى إعادة المحاولة.</value></data>
+  <data name="MessageDetails_Label_SeenBy" xml:space="preserve"><value>تمت القراءة من قبل:</value></data>
+  <data name="MessageSnippetAudioClipLoggedInUser" xml:space="preserve"><value>لقد أرسلت مقطعًا صوتيًا.</value></data>
+  <data name="MessageSnippetAudioClipOtherUser" xml:space="preserve"><value>لقد تم إرسال مقطع صوتي من قبل ‏{0}‏.</value></data>
+  <data name="MessageSnippetGenericLoggedInUser" xml:space="preserve"><value>لقد أرسلت رسالة.</value></data>
+  <data name="MessageSnippetGenericOtherUser" xml:space="preserve"><value>تم إرسال رسالة من قبل ‏{0}‏.</value></data>
+  <data name="MessageSnippetPhotoLoggedInUser" xml:space="preserve"><value>لقد أرسلتَ صورة.</value></data>
+  <data name="MessageSnippetPhotoOtherUser" xml:space="preserve"><value>تم إرسال صورة من قبل ‏{0}‏.</value></data>
+  <data name="MessageSnippetStickerLoggedInUser" xml:space="preserve"><value>لقد أرسلت ملصقًا.</value></data>
+  <data name="MessageSnippetStickerOtherUser" xml:space="preserve"><value>تم إرسال ملصق من قبل ‏{0}‏.</value></data>
+  <data name="MessageSnippetVideoLoggedInUser" xml:space="preserve"><value>لقد أرسلت مقطع فيديو.</value></data>
+  <data name="MessageSnippetVideoOtherUser" xml:space="preserve"><value>تم إرسال مقطع فيديو من قبل ‏{0}‏.</value></data>
+  <data name="MessageSnippetWhenSenderIsTheLoggedInUser" xml:space="preserve"><value>أنت</value></data>
+  <data name="MessageStatus_Location_City" xml:space="preserve"><value>تم الإرسال من ‏{0}‏</value></data>
+  <data name="MessageStatus_Location_CityCountry" xml:space="preserve"><value>تم الإرسال من ‏{0}‏، ‏{1}‏</value></data>
+  <data name="MessageStatus_Location_CityState" xml:space="preserve"><value>تم الإرسال من ‏{0}‏، ‏{1}‏</value></data>
+  <data name="MessageStatus_Location_DistrictCity" xml:space="preserve"><value>تم الإرسال من ‏{0}‏، ‏{1}‏</value></data>
+  <data name="MessageStatus_Origin_Messenger" xml:space="preserve"><value>تم الإرسال من Messenger</value></data>
+  <data name="MessageStatus_Origin_Mobile" xml:space="preserve"><value>تم الإرسال من الهاتف المحمول</value></data>
+  <data name="MessageStatus_Origin_Web" xml:space="preserve"><value>تم الإرسال من الويب</value></data>
+  <data name="MessageStatus_SeenBy_1" xml:space="preserve"><value>تمت المشاهدة من قبل ‏{0}‏</value></data>
+  <data name="MessageStatus_SeenBy_2" xml:space="preserve"><value>تمت المشاهدة من قبل ‏{0}‏ و‏{1}‏</value></data>
+  <data name="MessageStatus_SeenBy_3" xml:space="preserve"><value>تمت المشاهدم من قبل ‏{0}‏ و‏{1}‏ و‏{2}‏</value></data>
+  <data name="MessageStatus_SeenBy_4" xml:space="preserve"><value>تمت القراء من قبل كل من ‏{0}‏ و‏{1}‏ و‏{2}‏ و‏{3}‏</value></data>
+  <data name="MessageStatus_SeenBy_Everyone" xml:space="preserve"><value>تمت المشاهدة من الكل</value></data>
+  <data name="MessageStatus_SeenBy_Others" xml:space="preserve"><value>تمت المشاهدة من قِبل ‏{0}‏ و‏{1}‏ و‏{2}‏  و‏{3}‏ آخرين</value></data>
+  <data name="MessageStatus_Seen_Timestamp" xml:space="preserve"><value>تم العرض في ‏{0}‏</value></data>
+  <data name="Message_Delete_Caption" xml:space="preserve"><value>حذف الرسالة</value></data>
+  <data name="Message_Delete_Text" xml:space="preserve"><value>هل تريد حذف هذه الرسالة بشكل نهائي؟</value></data>
+  <data name="Message_Sending_Failed" xml:space="preserve"><value>تعذر إرسال الرسالة.</value></data>
+  <data name="Message_Sending_Failed_App_Exited_Description" xml:space="preserve"><value>تم إغلاق التطبيق قبل إرسال رسالتك. يرجى محاولة إرسالها مرة أخرى.</value></data>
+  <data name="Message_Sending_Failed_Permission_Description" xml:space="preserve"><value>عذرًا، لا يمكن مراسلة هذا الشخص.</value></data>
+  <data name="Messages_Active_1m_Ago" xml:space="preserve"><value>نشط منذ دقيقة واحدة</value></data>
+  <data name="Messages_Active_Now" xml:space="preserve"><value>نشط الآن</value></data>
+  <data name="Messages_Active_Xd_Ago" xml:space="preserve"><value>نشط منذ ‏{0}‏ أيام</value></data>
+  <data name="Messages_Active_Xh_Ago" xml:space="preserve"><value>نشط منذ ‏{0}‏ من الساعات</value></data>
+  <data name="Messages_Active_Xm_Ago" xml:space="preserve"><value>نشط منذ ‏{0}‏ من الدقائق</value></data>
+  <data name="Messages_AppBar_Send_Sticker" xml:space="preserve"><value>الملصقات</value></data>
+  <data name="Messages_ContextMenu_Copy" xml:space="preserve"><value>نسخ النص</value></data>
+  <data name="Messages_ContextMenu_Delete" xml:space="preserve"><value>حذف</value></data>
+  <data name="Messages_ContextMenu_Forward" xml:space="preserve"><value>إعادة توجيه</value></data>
+  <data name="Messages_ContextMenu_Retry" xml:space="preserve"><value>المحاولة مرة أخرى</value></data>
+  <data name="Messages_Context_Menu_View_Details" xml:space="preserve"><value>عرض التفاصيل</value></data>
+  <data name="Messages_Group_Message" xml:space="preserve"><value>المجموعة</value></data>
+  <data name="Messages_Hint_Text" xml:space="preserve"><value>كتابة رسالة</value></data>
+  <data name="Messages_On_Facebook" xml:space="preserve"><value>فيس بوك</value></data>
+  <data name="Messages_On_Messenger" xml:space="preserve"><value>Messenger</value></data>
+  <data name="Messages_On_Mobile" xml:space="preserve"><value>على الهاتف المحمول</value></data>
+  <data name="Messages_Refreshing_Failed_StateIndicator" xml:space="preserve"><value>تعذر التحديث، يرجى التحقق من الاتصال</value></data>
+  <data name="Messages_Refreshing_StateIndicator" xml:space="preserve"><value>جارٍ التحديث...</value></data>
+  <data name="Messages_Refreshing_Success_Stateindicator" xml:space="preserve"><value>محدّث</value></data>
+  <data name="Messages_Share_Not_Viewable" xml:space="preserve"><value>ربما تمت إزالة هذا أو أنه ربما ليس لديك إذن بعرضه.</value></data>
+  <data name="Mute_Conversation_For_An_Hour" xml:space="preserve"><value>كتم الصوت لمدة ساعة واحدة</value></data>
+  <data name="Mute_Conversation_Forever" xml:space="preserve"><value>كتم الصوت</value></data>
+  <data name="Mute_Conversation_Menu_Item" xml:space="preserve"><value>كتم الصوت</value></data>
+  <data name="Mute_Conversation_Until_8AM" xml:space="preserve"><value>كتم الصوت حتى 8 صباحًا</value></data>
+  <data name="NameConversation_Menu_Clear" xml:space="preserve"><value>مسح الاسم</value></data>
+  <data name="NameConversation_Title" xml:space="preserve"><value>تسمية المجموعة</value></data>
+  <data name="NetworkStatus_Banner_Connected" xml:space="preserve"><value>متصل</value></data>
+  <data name="NetworkStatus_Banner_Connecting" xml:space="preserve"><value>جارٍ الاتصال...</value></data>
+  <data name="NetworkStatus_Banner_Disconnected" xml:space="preserve"><value>بانتظار الاتصال بالشبكة</value></data>
+  <data name="NetworkStatus_Banner_No_Internet" xml:space="preserve"><value>لا يوجد اتصال بالإنترنت</value></data>
+  <data name="NetworkStatus_Banner_Syncing" xml:space="preserve"><value>جارٍ المزامنة...</value></data>
+  <data name="NetworkStatus_Banner_UpToDate" xml:space="preserve"><value>محدث</value></data>
+  <data name="NewContacts_Header_FoundContacts" xml:space="preserve"><value>‏{0}‏ جهات اتصال جديدة</value></data>
+  <data name="Notifications_Turn_Off_For_An_Hour" xml:space="preserve"><value>إيقاف تشغيل لمدة ساعة</value></data>
+  <data name="Notifications_Turn_On" xml:space="preserve"><value>تشغيل</value></data>
+  <data name="Notifications_Turn_Until_8AM" xml:space="preserve"><value>إيقاف التشغيل حتى 8 صباحًا</value></data>
+  <data name="Nux_Title_OnMessenger" xml:space="preserve"><value>أنت على Messenger!</value></data>
+  <data name="Nux_Title_OnMessenger_Message" xml:space="preserve"><value>يمكن الاتصال بأي شخص يحمل شارة Messenger الزرقاء بشكل فوري.</value></data>
+  <data name="People_AppBar_AddContact" xml:space="preserve"><value>إضافة أشخاص</value></data>
+  <data name="People_AppBar_Search" xml:space="preserve"><value>بحث</value></data>
+  <data name="PhoneNumber_Box_Title" xml:space="preserve"><value>رمز البلد ورقم الهاتف</value></data>
+  <data name="PhoneNumber_ListpickerLabel_CountryCode" xml:space="preserve"><value>تحديد البلد</value></data>
+  <data name="PhoneNumber_Registration_Welcome_Message" xml:space="preserve"><value>ما عليك سوى إدخال رقم هاتفك فقط لتبدأ.</value></data>
+  <data name="PhoneNumber_Select_Country" xml:space="preserve"><value>البلد</value></data>
+  <data name="PhotoAttachment_IndexDisplay_Label" xml:space="preserve"><value>‏{0}‏/‏{1}‏ صور</value></data>
+  <data name="PhotoEdit_AppBar_Draw" xml:space="preserve"><value>رسم</value></data>
+  <data name="PhotoEdit_AppBar_Send" xml:space="preserve"><value>إرسال</value></data>
+  <data name="PhotoEdit_AppBar_Undo" xml:space="preserve"><value>تراجع</value></data>
+  <data name="PhotoEdit_AppBar_Write" xml:space="preserve"><value>كتابة</value></data>
+  <data name="PhotoEdit_Nux_Text" xml:space="preserve"><value>اضغط على صورة لإضافة نص</value></data>
+  <data name="Photos_SavePhoto_Error_StateIndicator" xml:space="preserve"><value>تعذر حفظ الصورة.</value></data>
+  <data name="Photos_SavePhoto_MenuItem" xml:space="preserve"><value>حفظ الصورة</value></data>
+  <data name="Photos_SavePhoto_Saving_StateIndicator" xml:space="preserve"><value>جارٍ حفظ الصورة...</value></data>
+  <data name="Photos_SavePhoto_Success_StateIndicator" xml:space="preserve"><value>تم حفظ الصورة</value></data>
+  <data name="Power_Saver_Mode_Warning" xml:space="preserve"><value>أنت في وضع توفير البطارية، وبالتالي لن تتلقى إشعارات.</value></data>
+  <data name="ProfilePic_Confirmation_Title" xml:space="preserve"><value>هل تبدو جيدة؟</value></data>
+  <data name="ProfilePic_Label_Camera_Button" xml:space="preserve"><value>التقاط صورة</value></data>
+  <data name="ProfilePic_Label_Gallery_Button" xml:space="preserve"><value>اختيار من الألبومات</value></data>
+  <data name="ProfilePic_Subtitle_Text" xml:space="preserve"><value>قم بتعيين صورة حتى يتعرف عليك الأشخاص.</value></data>
+  <data name="ProfilePic_Title_Text" xml:space="preserve"><value>هل تريد إضافة صورة؟</value></data>
+  <data name="RecentThreadList_Nux_EmptyList_Message" xml:space="preserve"><value>بمجرد بدء الدردشة، ستظهر كل رسائلك هنا.</value></data>
+  <data name="Recent_ContextMenu_Archive" xml:space="preserve"><value>حفظ في الأرشيف</value></data>
+  <data name="Recent_ContextMenu_Delete" xml:space="preserve"><value>حذف</value></data>
+  <data name="Recent_ContextMenu_Leave" xml:space="preserve"><value>مغادرة المجموعة</value></data>
+  <data name="Recent_ContextMenu_MarkUnread" xml:space="preserve"><value>تحديد كغير مقروءة</value></data>
+  <data name="Recent_ContextMenu_Spam" xml:space="preserve"><value>تحديد كمحتوى غير هام</value></data>
+  <data name="Registration_TextboxHint_FirstName" xml:space="preserve"><value>الاسم الأول</value></data>
+  <data name="Registration_TextboxHint_LastName" xml:space="preserve"><value>اسم العائلة</value></data>
+  <data name="Registration_Title2" xml:space="preserve"><value>استخدم اسمك الحقيقي حتى يتمكن الأشخاص من التعرف عليك.</value></data>
+  <data name="ResourceLanguage" xml:space="preserve"><value>ar_SA</value></data>
+  <data name="Session_Expired_Caption" xml:space="preserve"><value>يرجى تسجيل الدخول مرة أخرى لاستخدام Messenger.</value></data>
+  <data name="Session_Expired_Title" xml:space="preserve"><value>انتهت الجلسة</value></data>
+  <data name="SettingsPage_Title" xml:space="preserve"><value>الإعدادات</value></data>
+  <data name="Settings_Help" xml:space="preserve"><value>مساعدة</value></data>
+  <data name="Settings_Help_Title" xml:space="preserve"><value>المعلومات</value></data>
+  <data name="Settings_In_App_Audio_Title" xml:space="preserve"><value>التنبيه بالصوت</value></data>
+  <data name="Settings_In_App_Contact_Sync_Title" xml:space="preserve"><value>مزامنة جهات الاتصال</value></data>
+  <data name="Settings_In_App_Vibration_Title" xml:space="preserve"><value>التنبيه بالاهتزاز</value></data>
+  <data name="Settings_Licenses" xml:space="preserve"><value>التراخيص</value></data>
+  <data name="Settings_Location_Title" xml:space="preserve"><value>الموقع</value></data>
+  <data name="Settings_Notification_Title" xml:space="preserve"><value>الإشعارات</value></data>
+  <data name="Settings_PhoneNumber_VerificationNeeded" xml:space="preserve"><value>(تأكيد الرقم)</value></data>
+  <data name="Settings_Privacy_And_Terms" xml:space="preserve"><value>الخصوصية والشروط</value></data>
+  <data name="Settings_Remove_Contacts_Body" xml:space="preserve"><value>ستتم إزالة أية جهات اتصال قمت بمزامنتها من قبل.</value></data>
+  <data name="Settings_Remove_Contacts_Confirm" xml:space="preserve"><value>إزالة</value></data>
+  <data name="Settings_Remove_Contacts_Title" xml:space="preserve"><value>هل تريد إزالة جهات الاتصال؟</value></data>
+  <data name="Settings_SendOnEnter_Title" xml:space="preserve"><value>إرسال عند الضغط على Enter</value></data>
+  <data name="Settings_Sync_Contacts_Body" xml:space="preserve"><value>هل تريد بدء المزامنة. ستتم مزامنة جهات اتصالك بصفة مستمرة مع خوادمنا.</value></data>
+  <data name="Settings_Sync_Contacts_Confirmation" xml:space="preserve"><value>مزامنة</value></data>
+  <data name="Settings_Sync_Contacts_Title" xml:space="preserve"><value>مزامنة جهات الاتصال</value></data>
+  <data name="Settings_Version_Number" xml:space="preserve"><value>إصدار ‏{0}‏</value></data>
+  <data name="Start_Group_Menu_Item" xml:space="preserve"><value>إنشاء مجموعة مع ‏{0}‏</value></data>
+  <data name="Sticker_Drawer_RecentStickers" xml:space="preserve"><value>أحدث الملصقات</value></data>
+  <data name="Sticker_Pack_Download" xml:space="preserve"><value>تنزيل</value></data>
+  <data name="Sticker_Pack_Download_Failed" xml:space="preserve"><value>فشل تنزيل حزمة الملصقات</value></data>
+  <data name="Sticker_Pack_Downloaded" xml:space="preserve"><value>تم التنزيل</value></data>
+  <data name="Sticker_Pack_Downloading" xml:space="preserve"><value>جارٍ التنزيل</value></data>
+  <data name="Sticker_Pack_Share" xml:space="preserve"><value>مشاركة</value></data>
+  <data name="Sticker_Store_ContextMenu_Remove" xml:space="preserve"><value>إزالة</value></data>
+  <data name="Sticker_Store_Menu_Item" xml:space="preserve"><value>متجر الملصقات</value></data>
+  <data name="Sticker_Store_Remove_Error" xml:space="preserve"><value>تعذر إزالة حزمة الملصقات.</value></data>
+  <data name="Sticker_Store_Tab_All" xml:space="preserve"><value>الكل</value></data>
+  <data name="Sticker_Store_Tab_Featured" xml:space="preserve"><value>ملصقات مميزة</value></data>
+  <data name="Sticker_Store_Tab_Owned" xml:space="preserve"><value>الملصقات الخاصة بك</value></data>
+  <data name="Sticker_Store_Title" xml:space="preserve"><value>متجر الملصقات</value></data>
+  <data name="SuggestedPins_Pinning_StateIndicator" xml:space="preserve"><value>جارٍ التثبيت...</value></data>
+  <data name="SuggestedPins_SearchBox_Hint" xml:space="preserve"><value>البحث في المجموعات</value></data>
+  <data name="SuggestedPins_Title_PinGroup" xml:space="preserve"><value>تثبيت المجموعة</value></data>
+  <data name="SyncContact_Button_LearnMore" xml:space="preserve"><value>معرفة المزيد</value></data>
+  <data name="SyncContact_ErrorMessage_UnableToToggle" xml:space="preserve"><value>تعذر تغيير إعدادك، يرجى التحقق من اتصالك بالإنترنت ثم إعادة المحاولة.</value></data>
+  <data name="SyncContact_Subtitle" xml:space="preserve"><value>قم بمزامنة جهات الاتصال الخاصة بك لمعرفة الأشخاص المتواجدين أيضًا على Messenger. ستتم مزامنة جهات اتصالك وتحديثها بصفة مستمرة.</value></data>
+  <data name="SyncContact_Title" xml:space="preserve"><value>توجيه رسالة نصية إلى أي شخص على هاتفك</value></data>
+  <data name="SyncContacts_MessageBox_LinkLabel" xml:space="preserve"><value>معرفة المزيد</value></data>
+  <data name="Thread_AppBar_Details" xml:space="preserve"><value>التفاصيل</value></data>
+  <data name="Thread_AppBar_View_Members" xml:space="preserve"><value>عرض الأشخاص</value></data>
+  <data name="Thread_Name_NoParticipant_Title" xml:space="preserve"><value>لا أشخاص حتى الآن</value></data>
+  <data name="Thread_UnnamedUserPlaceholder_Title" xml:space="preserve"><value>شخص على فيسبوك</value></data>
+  <data name="Threads_AppBar_Compose" xml:space="preserve"><value>جديد</value></data>
+  <data name="Threads_AppBar_Refresh" xml:space="preserve"><value>تحديث</value></data>
+  <data name="UnMute_Conversation_Menu_Item" xml:space="preserve"><value>إلغاء كتم الصوت</value></data>
+  <data name="Unsent_Message_Warning" xml:space="preserve"><value>هل تريد مغادرة المجموعة؟ لم تقم بإرسال رسائلك حتى الآن.</value></data>
+  <data name="Verify_PhoneNumber_Box_Title" xml:space="preserve"><value>رقم الهاتف</value></data>
+  <data name="VideoRecorder_HelpText_Cancel" xml:space="preserve"><value>لنحذف ونبدأ من جديد</value></data>
+  <data name="VideoRecorder_HelpText_HoldToSend" xml:space="preserve"><value>ضغط باستمرار لتصوير فيديو، ضغط لالتقاط صورة</value></data>
+  <data name="VideoRecorder_HelpText_Send" xml:space="preserve"><value>للإلغاءـ اسحب إصبعك على "إرسال"</value></data>
+  <data name="View_Timeline_Menu_Item" xml:space="preserve"><value>اليوميات</value></data>
+  <data name="Voice_Clip_Hold_Instruction" xml:space="preserve"><value>اضغط باستمرار لتسجيل مقطع صوتي وإرساله</value></data>
+  <data name="Voice_Clip_Length_Limit" xml:space="preserve"><value>تم بلوغ حد الوقت، قم بالتحرير للإرسال</value></data>
+  <data name="Voice_Clip_Menu_Item" xml:space="preserve"><value>إرسال مقطع فيديو</value></data>
+  <data name="Voice_Clip_NUX_Instruction" xml:space="preserve"><value>قم بالتحرير للإرسال، والتمرير للإلغاء</value></data>
+  <data name="Voice_Clip_Record" xml:space="preserve"><value>تسجيل</value></data>
+  <data name="Voice_Clip_Release_Cancel" xml:space="preserve"><value>قم بالتحرير لإلغاء التسجيل</value></data>
+  <data name="orca_neue_nux_add_phone_body1_searchable_all_not_verified" xml:space="preserve"><value>بإمكان الأشخاص إضافتك كجهة اتصال إذا كان لديهم رقم هاتفك، لكن بإمكانك وحدك رؤية هذا الرقم في فيس بوك.</value></data>
+  <data name="orca_neue_nux_add_phone_body1_searchable_all_visible_all" xml:space="preserve"><value>بإمكان الأشخاص إضافتك كجهة اتصال إذا كان لديهم رقم هاتفك.</value></data>
+  <data name="orca_neue_nux_add_phone_body1_searchable_all_visible_custom" xml:space="preserve"><value>بإمكان الأشخاص إضافتك كجهة اتصال إذا كان لديهم رقم هاتفك، لكن هذا لن يؤدي إلى تغيير من بإمكانه رؤية رقمك في فيس بوك.</value></data>
+  <data name="orca_neue_nux_add_phone_body1_searchable_all_visible_friends" xml:space="preserve"><value>بإمكان الأشخاص إضافتك كجهة اتصال إذا كانوا يملكون رقم هاتفك، لكن تستطيع وحدك رؤية هذا الرقم في فيس بوك.</value></data>
+  <data name="orca_neue_nux_add_phone_body1_searchable_all_visible_self" xml:space="preserve"><value>بإمكان الأشخاص إضافتك كجهة اتصال إذا كانوا يملكون رقم هاتفك، لكن تستطيع وحدك رؤية هذا الرقم في فيس بوك.</value></data>
+  <data name="orca_neue_nux_add_phone_body1_searchable_fof" xml:space="preserve"><value>ليس عليك أن تكون صديقًا في فيس بوك للتواصل، حيث سيتم توسيع نطاق إعداد فيس بوك للسماح لأي شخص بالبحث عن رقمك بواسطته.</value></data>
+  <data name="orca_neue_nux_add_phone_body2_not_verified" xml:space="preserve"><value>بإمكانك وحدك رؤية هذا الرقم في فيس بوك.</value></data>
+  <data name="orca_neue_nux_add_phone_body2_visible_custom" xml:space="preserve"><value>لن يؤدي هذا إلى تغيير من بإمكانه رؤية رقمك في فيس بوك.</value></data>
+  <data name="orca_neue_nux_add_phone_body2_visible_friends" xml:space="preserve"><value>بإمكان الأصدقاء فقط رؤية هذا الرقم في فيس بوك.</value></data>
+  <data name="orca_neue_nux_add_phone_body2_visible_self" xml:space="preserve"><value>بإمكانك وحدك رؤية هذا الرقم في فيس بوك.</value></data>
+  <data name="orca_neue_nux_add_phone_title_no_verified_number" xml:space="preserve"><value>على أي رقم يمكن للأشخاص الاتصال بك؟</value></data>
+  <data name="orca_neue_nux_add_phone_title_verified_long" xml:space="preserve"><value>هل هذا هو الرقم الذي يمكن أن يستخدمه الأشخاص للاتصال بك؟</value></data>
+  <data name="orca_neue_nux_add_phone_title_verified_short" xml:space="preserve"><value>هل رقمك محدّث؟</value></data>
+</root>

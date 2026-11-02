@@ -23,6 +23,13 @@
 - Non fa parte di `Messenger.sln` e non deve essere aggiunto al build: è
   materiale di analisi, non codice compilabile.
 
+## Materiale ricostruito e localizzazioni
+
+- `recovered/` contiene i metodi ritradotti a mano dal IL: qui si può
+  intervenire, ma resta materiale di analisi e non entra nel build.
+- `localization/` è generata da `tools/resx-dump`: le `.resx` non si correggono a
+  mano, si rilancia l'estrattore sul payload in `extracted/`.
+
 ## File non versionati
 
 - `*.xap` (pacchetto originale), `extracted/` (payload grezzo) e `.tools/`

@@ -1,0 +1,395 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Active_AppBar_Chat" xml:space="preserve"><value>chat</value></data>
+  <data name="AddContact_Contact_Already_Exists" xml:space="preserve"><value>Dit telefoonnummer is al als contact toegevoegd.</value></data>
+  <data name="AddContact_FBUser_Already_Exists" xml:space="preserve"><value>{0} is al als contact toegevoegd.</value></data>
+  <data name="AddContact_Invite_Button" xml:space="preserve"><value>uitnodigen</value></data>
+  <data name="AddContact_MatchedExistingUser_Label" xml:space="preserve"><value>{0} staat al in je lijst met Messenger-contacten</value></data>
+  <data name="AddContact_MatchingUser_Label" xml:space="preserve"><value>{0} is aan je Messenger-contacten toegevoegd</value></data>
+  <data name="AddContact_Message_Button" xml:space="preserve"><value>{0} een bericht sturen</value></data>
+  <data name="AddContact_PhoneNumber_Description" xml:space="preserve"><value>Voer het telefoonnummer van iemand in om deze persoon in Messenger te zoeken.</value></data>
+  <data name="AddContact_PhoneNumber_Title" xml:space="preserve"><value>CONTACT TOEVOEGEN</value></data>
+  <data name="AddContact_Remove_Contact_Warning" xml:space="preserve"><value>{0} wordt uit je Messenger-contacten verwijderd.</value></data>
+  <data name="AddContact_Remove_MessageBox_Title" xml:space="preserve"><value>Contact verwijderen</value></data>
+  <data name="AddPhotos_Menu_ChooseFromAlbum" xml:space="preserve"><value>Kiezen uit albums</value></data>
+  <data name="AddPhotos_Menu_RemovePhotos" xml:space="preserve"><value>Foto verwijderen</value></data>
+  <data name="AddPhotos_Menu_TakePhoto" xml:space="preserve"><value>Foto maken</value></data>
+  <data name="AddPhotos_Title_EditProfilePicture" xml:space="preserve"><value>PROFIELFOTO BEWERKEN</value></data>
+  <data name="AddPhotos_Title_SetGroupPhoto" xml:space="preserve"><value>GROEPSFOTO INSTELLEN</value></data>
+  <data name="Add_Phone_Number_Label" xml:space="preserve"><value>Telefoonnummer toevoegen</value></data>
+  <data name="AppBar_Cancel" xml:space="preserve"><value>annuleren</value></data>
+  <data name="AppBar_No" xml:space="preserve"><value>nee</value></data>
+  <data name="AppBar_Ok" xml:space="preserve"><value>ok</value></data>
+  <data name="AppBar_Remove" xml:space="preserve"><value>verwijderen</value></data>
+  <data name="AppBar_Undo" xml:space="preserve"><value>ongedaan maken</value></data>
+  <data name="AppBar_Yes" xml:space="preserve"><value>ja</value></data>
+  <data name="AppUpdate_Description" xml:space="preserve"><value>Werk Messenger bij voor nieuwe functies en verbeteringen.</value></data>
+  <data name="AppUpdate_NotNowButton" xml:space="preserve"><value>Niet nu</value></data>
+  <data name="AppUpdate_Title" xml:space="preserve"><value>Er is een update voor Messenger beschikbaar</value></data>
+  <data name="AppUpdate_UpdateAppButton" xml:space="preserve"><value>Bijwerken</value></data>
+  <data name="App_Location_Services_Enable" xml:space="preserve"><value>Ga naar de Messenger-instellingen om je locatie in je berichten te delen.</value></data>
+  <data name="App_Quit_Caption" xml:space="preserve"><value>Messenger verlaten</value></data>
+  <data name="Attachments_AppBar_Next" xml:space="preserve"><value>volgende</value></data>
+  <data name="Attachments_AppBar_Previous" xml:space="preserve"><value>vorige</value></data>
+  <data name="Attachments_AppBar_Skip" xml:space="preserve"><value>overslaan</value></data>
+  <data name="BackgroundToast_LeavingApp_Title" xml:space="preserve"><value>Messenger</value></data>
+  <data name="BackgroundToast_LeavingApp_Warning" xml:space="preserve"><value>Een aantal berichten zijn niet verzonden voordat Messenger is gesloten. Open Messenger om te zorgen dat je berichten worden verzonden.</value></data>
+  <data name="ButtonLabelRetry" xml:space="preserve"><value>Opnieuw proberen</value></data>
+  <data name="Button_Continue" xml:space="preserve"><value>Doorgaan</value></data>
+  <data name="CanonicalThreadDetailsPage_Start_Group" xml:space="preserve"><value>groep maken</value></data>
+  <data name="CanonicalThreadDetailsPage_Title" xml:space="preserve"><value>details</value></data>
+  <data name="Chat_Is_Off" xml:space="preserve"><value>Chat is uitgeschakeld</value></data>
+  <data name="Chat_Is_Off_Details_Label" xml:space="preserve"><value>Je krijgt al je berichten ook als chat is uitgeschakeld, maar je kunt de functie inschakelen om te zien wie er actief is op Facebook.</value></data>
+  <data name="Client_Type_Mobile" xml:space="preserve"><value>Mobiel</value></data>
+  <data name="Client_Type_Web" xml:space="preserve"><value>Internet</value></data>
+  <data name="Composer_Exit_Warning" xml:space="preserve"><value>Bericht annuleren?</value></data>
+  <data name="Composer_Groups_Search_Header" xml:space="preserve"><value>GROEPEN</value></data>
+  <data name="Composer_More_People_Search_Header" xml:space="preserve"><value>MEER PERSONEN</value></data>
+  <data name="Composer_SendingMessage" xml:space="preserve"><value>bericht versturen...</value></data>
+  <data name="Composer_To" xml:space="preserve"><value>Aan:</value></data>
+  <data name="Confirm_Phone_Number_Label" xml:space="preserve"><value>Nummer bevestigen</value></data>
+  <data name="ContactCard_MenuLabel_CreateGroup" xml:space="preserve"><value>een groep maken met {0}</value></data>
+  <data name="ContactCard_MenuLabel_RemoveContact" xml:space="preserve"><value>contact verwijderen</value></data>
+  <data name="ContactCard_MenuLabel_SendMessage" xml:space="preserve"><value>{0} een bericht sturen</value></data>
+  <data name="ContactList_Header_ContactsFound" xml:space="preserve"><value>{0} contacten gevonden</value></data>
+  <data name="ContactList_Header_Failed" xml:space="preserve"><value>Uploaden van contact is mislukt. Opnieuw proberen?</value></data>
+  <data name="ContactList_Header_FindContacts" xml:space="preserve"><value>contacten zoeken</value></data>
+  <data name="ContactList_Header_ShowAll" xml:space="preserve"><value>alles weergeven</value></data>
+  <data name="ContactList_Header_SyncingContacts" xml:space="preserve"><value>contacten synchroniseren...</value></data>
+  <data name="ContactList_Nux_Label_EmptyList" xml:space="preserve"><value>Je kunt je contacten synchroniseren om te zien wie er nog meer Messenger gebruikt.</value></data>
+  <data name="ContactList_Nux_Label_NoMatchingContacts" xml:space="preserve"><value>Je ziet hier je contacten. Tik op het contactpictogram om iemand toe te voegen.</value></data>
+  <data name="Contact_Search_No_Results" xml:space="preserve"><value>Geen resultaten</value></data>
+  <data name="Contacts_Find_Button_Label" xml:space="preserve"><value>contacten zoeken</value></data>
+  <data name="Contacts_Invite_Button_Label" xml:space="preserve"><value>mensen uitnodigen</value></data>
+  <data name="Conversation_AppBar_AttachPhoto" xml:space="preserve"><value>foto's</value></data>
+  <data name="Conversation_AppBar_Camera" xml:space="preserve"><value>camera</value></data>
+  <data name="Conversation_AppBar_ChangePhoto" xml:space="preserve"><value>foto</value></data>
+  <data name="Conversation_AppBar_Like" xml:space="preserve"><value>vind-ik-leuk</value></data>
+  <data name="Conversation_AppBar_Send" xml:space="preserve"><value>verzenden</value></data>
+  <data name="Conversation_AppBar_Text" xml:space="preserve"><value>tekst</value></data>
+  <data name="Conversation_ContextMenu_RemoveAttachment" xml:space="preserve"><value>afbeelding verwijderen</value></data>
+  <data name="Conversation_MenuItem_Rename" xml:space="preserve"><value>naam geven</value></data>
+  <data name="CreateGroup_TextBox_Label" xml:space="preserve"><value>Groepsnaam</value></data>
+  <data name="CreateGroup_Title" xml:space="preserve"><value>NIEUWE GROEP</value></data>
+  <data name="Device_Location_Services_Enable" xml:space="preserve"><value>Ga om je locatie in berichten te delen naar de locatie-instellingen van je telefoon.</value></data>
+  <data name="Empty_Conversation_Placeholder_Text" xml:space="preserve"><value>{0} zit op Messenger en ontvangt je berichten direct.</value></data>
+  <data name="Empty_Conversation_Placeholder_Text_For_Non_Messenger_User" xml:space="preserve"><value>{0} maakt geen gebruik van Messenger, maar zal je bericht op Facebook ontvangen.</value></data>
+  <data name="Empty_Conversation_Placeholder_Title" xml:space="preserve"><value>Het gesprek beginnen</value></data>
+  <data name="Error_Cannot_Attach_File" xml:space="preserve"><value>Bestand kan niet worden bijgevoegd. Probeer het opnieuw.</value></data>
+  <data name="Error_Cannot_Fetch_Conversations" xml:space="preserve"><value>Er kunnen momenteel geen berichten worden weergegeven. Probeer het opnieuw.</value></data>
+  <data name="Error_Cannot_Fetch_Messages" xml:space="preserve"><value>Er kunnen momenteel geen berichten worden weergegeven. Probeer het opnieuw.</value></data>
+  <data name="Error_Cannot_Fetch_Sticker_Packs" xml:space="preserve"><value>Stickerpakketten kunnen momenteel niet worden weergegeven.</value></data>
+  <data name="Error_Changing_Mute" xml:space="preserve"><value>Dempen is mislukt. Probeer het opnieuw.</value></data>
+  <data name="Error_Changing_Unmute" xml:space="preserve"><value>Dempen kan niet ongedaan worden gemaakt. Probeer het opnieuw.</value></data>
+  <data name="Error_Gallery_Out_Of_Memory" xml:space="preserve"><value>Afbeeldingen van dit formaat kunnen niet worden bijgevoegd.</value></data>
+  <data name="Error_Invalid_Phone_Number" xml:space="preserve"><value>Voer een geldig telefoonnummer in.</value></data>
+  <data name="Error_Invalid_Phone_Prefix" xml:space="preserve"><value>Gebruik een geldige landcode.</value></data>
+  <data name="Error_Max_File_Attachment_Exceeded" xml:space="preserve"><value>Je kunt niet meer foto's aan dit bericht toevoegen.</value></data>
+  <data name="Error_No_Connection" xml:space="preserve"><value>Geen internetverbinding</value></data>
+  <data name="Error_No_Conversations" xml:space="preserve"><value>Er zijn nu geen gesprekken om weer te geven.</value></data>
+  <data name="ExistingUser_Create_Account_Button" xml:space="preserve"><value>nieuw account maken</value></data>
+  <data name="ExistingUser_Description" xml:space="preserve"><value>Dit nummer komt overeen met een Facebook-account voor {0} {1}.</value></data>
+  <data name="ExistingUser_LoginAs_Button" xml:space="preserve"><value>aanmelden als {0}</value></data>
+  <data name="ExistingUser_Title" xml:space="preserve"><value>Aanmelden met Facebook?</value></data>
+  <data name="FetchingDataFromServerFailed" xml:space="preserve"><value>Je informatie kan niet worden geladen. Probeer het opnieuw.</value></data>
+  <data name="FlyTrap_Error_Generic" xml:space="preserve"><value>Rapport kan niet worden weergegeven.</value></data>
+  <data name="FlyTrap_Label_Disclaimer" xml:space="preserve"><value>Informatie over je telefoon en deze app worden automatisch toegevoegd. Als je meer wilt weten over hoe deze gegevens worden gebruikt, kun je ons {0} lezen.</value></data>
+  <data name="FlyTrap_Label_Disclaimer_DataUsePolicyLink" xml:space="preserve"><value>Beleid inzake gegevensgebruik</value></data>
+  <data name="FlyTrap_Label_Instructions" xml:space="preserve"><value>Geef een beschrijving van wat je probeert te doen en wat er fout is gegaan.</value></data>
+  <data name="FlyTrap_Label_Screenshot" xml:space="preserve"><value>Screenshot</value></data>
+  <data name="FlyTrap_MenuItem_ReportProblem" xml:space="preserve"><value>een probleem rapporteren</value></data>
+  <data name="FlyTrap_TextboxHint_Problem" xml:space="preserve"><value>beschrijf het probleem</value></data>
+  <data name="FlyTrap_Title_ReportProblem" xml:space="preserve"><value>EEN PROBLEEM RAPPORTEREN</value></data>
+  <data name="Forwarding_SearchBox_HintText" xml:space="preserve"><value>personen zoeken</value></data>
+  <data name="Forwarding_Title_Label" xml:space="preserve"><value>BERICHT DOORSTUREN</value></data>
+  <data name="Friends_AppBar_AddContact" xml:space="preserve"><value>contact toevoegen</value></data>
+  <data name="Global_Notifcation_Off_Until" xml:space="preserve"><value>Uitgeschakeld tot {0}</value></data>
+  <data name="Global_Notification_Off" xml:space="preserve"><value>Uit</value></data>
+  <data name="Global_Notification_On" xml:space="preserve"><value>Aan</value></data>
+  <data name="GroupDetailsPage_AppBar_LeaveGroup" xml:space="preserve"><value>groep verlaten</value></data>
+  <data name="GroupDetailsPage_AppBar_RemoveGroupName" xml:space="preserve"><value>naam verwijderen</value></data>
+  <data name="GroupDetailsPage_AppBar_RemoveGroupPhoto" xml:space="preserve"><value>groepsfoto verwijderen</value></data>
+  <data name="GroupDetailsPage_Title" xml:space="preserve"><value>groep</value></data>
+  <data name="GroupMember_Context_Menu_Remove_Member" xml:space="preserve"><value>verwijderen</value></data>
+  <data name="GroupTile_Date_ActiveDaysAgo" xml:space="preserve"><value>{0} dagen geleden actief</value></data>
+  <data name="GroupTile_Date_ActiveLastMonth" xml:space="preserve"><value>Actief in afgelopen maand</value></data>
+  <data name="GroupTile_Date_ActiveLastYear" xml:space="preserve"><value>Actief in het afgelopen jaar</value></data>
+  <data name="GroupTile_Date_ActiveMonthsAgo" xml:space="preserve"><value>{0} maanden geleden actief</value></data>
+  <data name="GroupTile_Date_ActiveToday" xml:space="preserve"><value>Vandaag actief</value></data>
+  <data name="GroupTile_Date_ActiveYearsAgo" xml:space="preserve"><value>{0} jaar geleden actief</value></data>
+  <data name="GroupTile_Date_ActiveYesterday" xml:space="preserve"><value>Gisteren actief</value></data>
+  <data name="Group_AddPeople_Search" xml:space="preserve"><value>Personen zoeken</value></data>
+  <data name="Group_AddPeople_Title" xml:space="preserve"><value>PERSONEN TOEVOEGEN</value></data>
+  <data name="Group_AddingParticipants_Failed_Message" xml:space="preserve"><value>Er kunnen geen personen aan de groep worden toegevoegd. Probeer het opnieuw.</value></data>
+  <data name="Group_AddingParticipants_Failed_Title" xml:space="preserve"><value>Er kunnen geen personen worden toegevoegd</value></data>
+  <data name="Group_AppBar_SelectMany" xml:space="preserve"><value>Meerdere selecteren</value></data>
+  <data name="Group_RemovingParticipants_Failed_Message" xml:space="preserve"><value>Personen kunnen niet worden verwijderd. Probeer het opnieuw.</value></data>
+  <data name="Group_RemovingParticipants_Failed_Title" xml:space="preserve"><value>Personen kunnen niet worden verwijderd.</value></data>
+  <data name="Groups_AppBar_Add" xml:space="preserve"><value>vastzetten</value></data>
+  <data name="Groups_AppBar_Create" xml:space="preserve"><value>maken</value></data>
+  <data name="Groups_AppBar_Next" xml:space="preserve"><value>volgende</value></data>
+  <data name="Groups_NUX_Button_Text" xml:space="preserve"><value>Aan de slag</value></data>
+  <data name="Groups_NUX_Help_Title" xml:space="preserve"><value>Je kunt nu groepen vastzetten zodat je ze gemakkelijker terugvindt.</value></data>
+  <data name="Groups_NUX_NoThread_Button_Text" xml:space="preserve"><value>Nieuwe groep maken</value></data>
+  <data name="Groups_NUX_PlaceholderActive_LastWeek" xml:space="preserve"><value>Actief in afgelopen week</value></data>
+  <data name="Groups_NUX_PlaceholderActive_Yesterday" xml:space="preserve"><value>Gisteren actief</value></data>
+  <data name="Groups_NUX_PlaceholderFour_Members" xml:space="preserve"><value>Shenwei, Jan</value></data>
+  <data name="Groups_NUX_PlaceholderFour_Title" xml:space="preserve"><value>Collega's</value></data>
+  <data name="Groups_NUX_PlaceholderOne_Members" xml:space="preserve"><value>Bart, Simon</value></data>
+  <data name="Groups_NUX_PlaceholderOne_Title" xml:space="preserve"><value>Huisgenoten</value></data>
+  <data name="Groups_NUX_PlaceholderThree_Members" xml:space="preserve"><value>Mark, Ben</value></data>
+  <data name="Groups_NUX_PlaceholderThree_Title" xml:space="preserve"><value>Weekendvrienden</value></data>
+  <data name="Groups_NUX_PlaceholderTwo_Members" xml:space="preserve"><value>Anita, Arjan, Michelle, Michael</value></data>
+  <data name="Groups_NUX_PlaceholderTwo_Title" xml:space="preserve"><value>Familie</value></data>
+  <data name="Image_Search_Empty_Results" xml:space="preserve"><value>Geen afbeeldingen gevonden.</value></data>
+  <data name="Image_Search_Menu_Item" xml:space="preserve"><value>afbeelding zoeken</value></data>
+  <data name="Image_Search_Popup_Cancel" xml:space="preserve"><value>Annuleren</value></data>
+  <data name="Image_Search_Popup_Message" xml:space="preserve"><value>Wat zoek je?</value></data>
+  <data name="Image_Search_Popup_Search" xml:space="preserve"><value>Zoeken</value></data>
+  <data name="Image_Search_Popup_Title" xml:space="preserve"><value>Afbeeldingen zoeken</value></data>
+  <data name="Invite_Contact_ToMessenger" xml:space="preserve"><value>Probeer Messenger: {0}</value></data>
+  <data name="Location_Menu_Item" xml:space="preserve"><value>locatie sturen</value></data>
+  <data name="Location_Services_Disabled" xml:space="preserve"><value>Locatie is uit</value></data>
+  <data name="Location_Warning_Body" xml:space="preserve"><value>Mensen in dit gesprek kunnen je locatie op de kaart zien. Tik om je locatie in of uit te schakelen.</value></data>
+  <data name="LoginApproval_ResendCode" xml:space="preserve"><value>opnieuw verzenden</value></data>
+  <data name="LoginApproval_Title_EnterCode" xml:space="preserve"><value>Voer de code in die naar je telefoon is verzonden</value></data>
+  <data name="Login_Approval_Security_Code" xml:space="preserve"><value>Bevestigingscode</value></data>
+  <data name="Login_NotOnFacebook" xml:space="preserve"><value>Niet op Facebook?</value></data>
+  <data name="Login_RecoverPassword" xml:space="preserve"><value>Wachtwoord vergeten?</value></data>
+  <data name="Login_SigningIn" xml:space="preserve"><value>bezig met aanmelden</value></data>
+  <data name="Login_TextboxHint_EmailOrPhone" xml:space="preserve"><value>E-mailadres of telefoonnummer</value></data>
+  <data name="Login_TextboxHint_Password" xml:space="preserve"><value>Wachtwoord</value></data>
+  <data name="Login_Title_SignIn" xml:space="preserve"><value>Aanmelden met Facebook</value></data>
+  <data name="Login_Title_Welcome" xml:space="preserve"><value>Welkom bij Messenger</value></data>
+  <data name="Login_With_Facebook" xml:space="preserve"><value>Aanmelden met Facebook</value></data>
+  <data name="MainPage_Active_Chat_Popup" xml:space="preserve"><value>CHAT</value></data>
+  <data name="MainPage_Active_Disable_Chat" xml:space="preserve"><value>chat uitschakelen</value></data>
+  <data name="MainPage_Active_Enable_Chat" xml:space="preserve"><value>chat inschakelen</value></data>
+  <data name="MainPage_AppBar_Mute_Button" xml:space="preserve"><value>dempen</value></data>
+  <data name="MainPage_AppBar_UnMute_Button" xml:space="preserve"><value>geluid aanzetten</value></data>
+  <data name="MainPage_AppMenu_OtherFolder" xml:space="preserve"><value>map Overige</value></data>
+  <data name="MainPage_AppMenu_Settings" xml:space="preserve"><value>instellingen</value></data>
+  <data name="MainPage_Pivot_Title_Active" xml:space="preserve"><value>actief</value></data>
+  <data name="MainPage_Pivot_Title_Friends" xml:space="preserve"><value>messenger</value></data>
+  <data name="MainPage_Pivot_Title_Groups" xml:space="preserve"><value>groepen</value></data>
+  <data name="MainPage_Pivot_Title_Recent_Threads" xml:space="preserve"><value>recent</value></data>
+  <data name="Matching_Contact_NotFound_Message" xml:space="preserve"><value>{0} kan niet aan een persoon op Messenger worden gekoppeld</value></data>
+  <data name="MessageBox_Description_ArchiveThread" xml:space="preserve"><value>Om gearchiveerde gesprekken te bekijken, moet je je bij de Facebook-website aanmelden.</value></data>
+  <data name="MessageBox_Description_DeleteThread" xml:space="preserve"><value>Hiermee wordt het gesprek permanent verwijderd.</value></data>
+  <data name="MessageBox_Description_FlyTrapSuccess" xml:space="preserve"><value>Bedankt voor je feedback!</value></data>
+  <data name="MessageBox_Description_LeaveThread" xml:space="preserve"><value>Als je het gesprek verlaat, ontvang je geen nieuwe berichten meer.</value></data>
+  <data name="MessageBox_Description_SpamThread" xml:space="preserve"><value>Als je iets als spam markeert, zie je dit niet langer in je recente berichten.</value></data>
+  <data name="MessageBox_Label_ArchiveThread" xml:space="preserve"><value>dit gesprek archiveren?</value></data>
+  <data name="MessageBox_Label_AuthenticateWithBrowser" xml:space="preserve"><value>Open een webbrowser om verbinding te maken</value></data>
+  <data name="MessageBox_Label_BypassLogin2Fac" xml:space="preserve"><value>Je hebt aanmeldgoedkeuringen ingeschakeld. Voer je wachtwoord in om verder te gaan.</value></data>
+  <data name="MessageBox_Label_BypassLoginFail" xml:space="preserve"><value>Telefoonnummer kan niet worden bevestigd. Probeer het opnieuw.</value></data>
+  <data name="MessageBox_Label_ClearThreadPhotoFailed" xml:space="preserve"><value>De groepsfoto kan niet worden verwijderd.</value></data>
+  <data name="MessageBox_Label_ConfirmPhoneNumberFailed" xml:space="preserve"><value>Nummer kan niet worden bevestigd</value></data>
+  <data name="MessageBox_Label_ConfirmationCodeInvalid" xml:space="preserve"><value>Ongeldige bevestigingscode.</value></data>
+  <data name="MessageBox_Label_CreateGroupFailed" xml:space="preserve"><value>Groep kan niet worden gemaakt</value></data>
+  <data name="MessageBox_Label_DeleteThread" xml:space="preserve"><value>Gesprek verwijderen?</value></data>
+  <data name="MessageBox_Label_ForwardingFailed" xml:space="preserve"><value>Kan het bericht niet doorsturen naar alle ontvangers.</value></data>
+  <data name="MessageBox_Label_LeaveThread" xml:space="preserve"><value>Groep verlaten?</value></data>
+  <data name="MessageBox_Label_LoginFailed" xml:space="preserve"><value>Je kunt je momenteel niet aanmelden.</value></data>
+  <data name="MessageBox_Label_NamingConversation_Error" xml:space="preserve"><value>Naam van gesprek kan niet worden gewijzigd.</value></data>
+  <data name="MessageBox_Label_NoInternet" xml:space="preserve"><value>Geen internetverbinding</value></data>
+  <data name="MessageBox_Label_PinGroupFailed" xml:space="preserve"><value>Groep kan niet worden vastgezet.</value></data>
+  <data name="MessageBox_Label_SetThreadPhotoFailed" xml:space="preserve"><value>Groepsfoto kan niet worden ingesteld.</value></data>
+  <data name="MessageBox_Label_SpamThread" xml:space="preserve"><value>markeren als spam?</value></data>
+  <data name="MessageBox_Label_UpdatePhoneNumberFailed" xml:space="preserve"><value>Nummer kan niet worden bijgewerkt.</value></data>
+  <data name="MessageBox_Label_UploadProfilePic_Failed" xml:space="preserve"><value>Profielfoto kan niet worden ingesteld.</value></data>
+  <data name="MessageBox_Popup_Cancel" xml:space="preserve"><value>Annuleren</value></data>
+  <data name="MessageBox_Title_AddContactFailed" xml:space="preserve"><value>Contact kan momenteel niet worden gevonden.</value></data>
+  <data name="MessageBox_Title_FlyTrapSuccess" xml:space="preserve"><value>Rapport verzonden</value></data>
+  <data name="MessageBox_Title_LoginFailed" xml:space="preserve"><value>Je kunt je momenteel niet aanmelden.</value></data>
+  <data name="MessageComposer_EmptyGallery_Text" xml:space="preserve"><value>Nog geen foto's in je galerij.</value></data>
+  <data name="MessageDetails_Error_Unexpected" xml:space="preserve"><value>De berichtdetails kunnen momenteel niet worden weergegeven. Probeer het opnieuw.</value></data>
+  <data name="MessageDetails_Label_SeenBy" xml:space="preserve"><value>Bekeken door:</value></data>
+  <data name="MessageSnippetAudioClipLoggedInUser" xml:space="preserve"><value>Je hebt een spraakclip gestuurd.</value></data>
+  <data name="MessageSnippetAudioClipOtherUser" xml:space="preserve"><value>{0} heeft een spraakclip gestuurd.</value></data>
+  <data name="MessageSnippetGenericLoggedInUser" xml:space="preserve"><value>Je hebt een bericht gestuurd.</value></data>
+  <data name="MessageSnippetGenericOtherUser" xml:space="preserve"><value>{0} heeft een bericht gestuurd.</value></data>
+  <data name="MessageSnippetPhotoLoggedInUser" xml:space="preserve"><value>Je hebt een afbeelding gestuurd.</value></data>
+  <data name="MessageSnippetPhotoOtherUser" xml:space="preserve"><value>{0} heeft een afbeelding gestuurd.</value></data>
+  <data name="MessageSnippetStickerLoggedInUser" xml:space="preserve"><value>Je hebt een sticker gestuurd.</value></data>
+  <data name="MessageSnippetStickerOtherUser" xml:space="preserve"><value>{0} heeft een sticker gestuurd.</value></data>
+  <data name="MessageSnippetVideoLoggedInUser" xml:space="preserve"><value>Je hebt een video gestuurd.</value></data>
+  <data name="MessageSnippetVideoOtherUser" xml:space="preserve"><value>{0} heeft een video gestuurd.</value></data>
+  <data name="MessageSnippetWhenSenderIsTheLoggedInUser" xml:space="preserve"><value>Jij</value></data>
+  <data name="MessageStatus_Location_City" xml:space="preserve"><value>Verstuurd vanuit {0}</value></data>
+  <data name="MessageStatus_Location_CityCountry" xml:space="preserve"><value>Verstuurd vanuit {0}, {1}</value></data>
+  <data name="MessageStatus_Location_CityState" xml:space="preserve"><value>Verstuurd vanuit {0}, {1}</value></data>
+  <data name="MessageStatus_Location_DistrictCity" xml:space="preserve"><value>Verstuurd vanuit {0}, {1}</value></data>
+  <data name="MessageStatus_Origin_Messenger" xml:space="preserve"><value>Verstuurd via Messenger</value></data>
+  <data name="MessageStatus_Origin_Mobile" xml:space="preserve"><value>Verstuurd vanaf een mobiele telefoon</value></data>
+  <data name="MessageStatus_Origin_Web" xml:space="preserve"><value>Verzonden vanaf internet</value></data>
+  <data name="MessageStatus_SeenBy_1" xml:space="preserve"><value>Bekeken door {0}</value></data>
+  <data name="MessageStatus_SeenBy_2" xml:space="preserve"><value>Bekeken door {0} en {1}</value></data>
+  <data name="MessageStatus_SeenBy_3" xml:space="preserve"><value>Bekeken door {0}, {1} en {2}</value></data>
+  <data name="MessageStatus_SeenBy_4" xml:space="preserve"><value>Bekeken door {0}, {1}, {2} en {3}</value></data>
+  <data name="MessageStatus_SeenBy_Everyone" xml:space="preserve"><value>Door iedereen bekeken</value></data>
+  <data name="MessageStatus_SeenBy_Others" xml:space="preserve"><value>Bekeken door {0}, {1}, {2} en {3} anderen</value></data>
+  <data name="MessageStatus_Seen_Timestamp" xml:space="preserve"><value>Gezien op {0}</value></data>
+  <data name="Message_Delete_Caption" xml:space="preserve"><value>Bericht verwijderen</value></data>
+  <data name="Message_Delete_Text" xml:space="preserve"><value>Wil je dit bericht permanent verwijderen?</value></data>
+  <data name="Message_Sending_Failed" xml:space="preserve"><value>Bericht kan niet worden verzonden.</value></data>
+  <data name="Message_Sending_Failed_App_Exited_Description" xml:space="preserve"><value>De app is gesloten voordat je bericht is verzonden. Probeer het opnieuw te verzenden.</value></data>
+  <data name="Message_Sending_Failed_Permission_Description" xml:space="preserve"><value>Je kunt deze persoon geen bericht sturen.</value></data>
+  <data name="Messages_Active_1m_Ago" xml:space="preserve"><value>1 minuut geleden actief</value></data>
+  <data name="Messages_Active_Now" xml:space="preserve"><value>nu actief</value></data>
+  <data name="Messages_Active_Xd_Ago" xml:space="preserve"><value>{0} dagen geleden actief</value></data>
+  <data name="Messages_Active_Xh_Ago" xml:space="preserve"><value>{0} u. geleden actief</value></data>
+  <data name="Messages_Active_Xm_Ago" xml:space="preserve"><value>{0} minuten geleden actief</value></data>
+  <data name="Messages_AppBar_Send_Sticker" xml:space="preserve"><value>stickers</value></data>
+  <data name="Messages_ContextMenu_Copy" xml:space="preserve"><value>tekst kopiëren</value></data>
+  <data name="Messages_ContextMenu_Delete" xml:space="preserve"><value>verwijderen</value></data>
+  <data name="Messages_ContextMenu_Forward" xml:space="preserve"><value>doorsturen</value></data>
+  <data name="Messages_ContextMenu_Retry" xml:space="preserve"><value>opnieuw proberen</value></data>
+  <data name="Messages_Context_Menu_View_Details" xml:space="preserve"><value>gegevens bekijken</value></data>
+  <data name="Messages_Group_Message" xml:space="preserve"><value>GROEP</value></data>
+  <data name="Messages_Hint_Text" xml:space="preserve"><value>typ een bericht</value></data>
+  <data name="Messages_On_Facebook" xml:space="preserve"><value>Facebook</value></data>
+  <data name="Messages_On_Messenger" xml:space="preserve"><value>Messenger</value></data>
+  <data name="Messages_On_Mobile" xml:space="preserve"><value>op mobiel</value></data>
+  <data name="Messages_Refreshing_Failed_StateIndicator" xml:space="preserve"><value>Bijwerken is mislukt. Controleer je verbinding.</value></data>
+  <data name="Messages_Refreshing_StateIndicator" xml:space="preserve"><value>Vernieuwen...</value></data>
+  <data name="Messages_Refreshing_Success_Stateindicator" xml:space="preserve"><value>Bijgewerkt</value></data>
+  <data name="Messages_Share_Not_Viewable" xml:space="preserve"><value>Dit is wellicht verwijderd of je hebt geen toestemming om dit te bekijken.</value></data>
+  <data name="Mute_Conversation_For_An_Hour" xml:space="preserve"><value>1 uur dempen</value></data>
+  <data name="Mute_Conversation_Forever" xml:space="preserve"><value>dempen</value></data>
+  <data name="Mute_Conversation_Menu_Item" xml:space="preserve"><value>dempen</value></data>
+  <data name="Mute_Conversation_Until_8AM" xml:space="preserve"><value>dempen tot 8:00 uur</value></data>
+  <data name="NameConversation_Menu_Clear" xml:space="preserve"><value>naam wissen</value></data>
+  <data name="NameConversation_Title" xml:space="preserve"><value>GROEP EEN NAAM GEVEN</value></data>
+  <data name="NetworkStatus_Banner_Connected" xml:space="preserve"><value>Verbonden</value></data>
+  <data name="NetworkStatus_Banner_Connecting" xml:space="preserve"><value>Verbinden...</value></data>
+  <data name="NetworkStatus_Banner_Disconnected" xml:space="preserve"><value>Wachten op netwerk</value></data>
+  <data name="NetworkStatus_Banner_No_Internet" xml:space="preserve"><value>Geen internetverbinding</value></data>
+  <data name="NetworkStatus_Banner_Syncing" xml:space="preserve"><value>Synchroniseren...</value></data>
+  <data name="NetworkStatus_Banner_UpToDate" xml:space="preserve"><value>Up-to-date</value></data>
+  <data name="NewContacts_Header_FoundContacts" xml:space="preserve"><value>{0} NIEUWE CONTACTEN</value></data>
+  <data name="Notifications_Turn_Off_For_An_Hour" xml:space="preserve"><value>gedurende 1u uitschakelen</value></data>
+  <data name="Notifications_Turn_On" xml:space="preserve"><value>inschakelen</value></data>
+  <data name="Notifications_Turn_Until_8AM" xml:space="preserve"><value>uitschakelen tot 8:00</value></data>
+  <data name="Nux_Title_OnMessenger" xml:space="preserve"><value>Je zit nu op Messenger</value></data>
+  <data name="Nux_Title_OnMessenger_Message" xml:space="preserve"><value>Iedereen met een blauwe Messenger-badge is direct bereikbaar.</value></data>
+  <data name="People_AppBar_AddContact" xml:space="preserve"><value>personen toevoegen</value></data>
+  <data name="People_AppBar_Search" xml:space="preserve"><value>zoeken</value></data>
+  <data name="PhoneNumber_Box_Title" xml:space="preserve"><value>Landcode en telefoonnummer</value></data>
+  <data name="PhoneNumber_ListpickerLabel_CountryCode" xml:space="preserve"><value>LAND SELECTEREN</value></data>
+  <data name="PhoneNumber_Registration_Welcome_Message" xml:space="preserve"><value>Voer je telefoonnummer in om te beginnen.</value></data>
+  <data name="PhoneNumber_Select_Country" xml:space="preserve"><value>Land</value></data>
+  <data name="PhotoAttachment_IndexDisplay_Label" xml:space="preserve"><value>{0}/{1} foto's</value></data>
+  <data name="PhotoEdit_AppBar_Draw" xml:space="preserve"><value>tekenen</value></data>
+  <data name="PhotoEdit_AppBar_Send" xml:space="preserve"><value>verzenden</value></data>
+  <data name="PhotoEdit_AppBar_Undo" xml:space="preserve"><value>wissen</value></data>
+  <data name="PhotoEdit_AppBar_Write" xml:space="preserve"><value>schrijven</value></data>
+  <data name="PhotoEdit_Nux_Text" xml:space="preserve"><value>Tik op de foto om tekst toe te voegen</value></data>
+  <data name="Photos_SavePhoto_Error_StateIndicator" xml:space="preserve"><value>Foto kan niet worden opgeslagen.</value></data>
+  <data name="Photos_SavePhoto_MenuItem" xml:space="preserve"><value>foto opslaan</value></data>
+  <data name="Photos_SavePhoto_Saving_StateIndicator" xml:space="preserve"><value>Foto opslaan...</value></data>
+  <data name="Photos_SavePhoto_Success_StateIndicator" xml:space="preserve"><value>Foto opgeslagen</value></data>
+  <data name="Power_Saver_Mode_Warning" xml:space="preserve"><value>Je gebruikt de batterijbesparende modus en ontvangt daarom geen meldingen.</value></data>
+  <data name="ProfilePic_Confirmation_Title" xml:space="preserve"><value>Naar wens?</value></data>
+  <data name="ProfilePic_Label_Camera_Button" xml:space="preserve"><value>Foto maken</value></data>
+  <data name="ProfilePic_Label_Gallery_Button" xml:space="preserve"><value>Kiezen uit albums</value></data>
+  <data name="ProfilePic_Subtitle_Text" xml:space="preserve"><value>Stel een foto in zodat anderen je kunnen herkennen.</value></data>
+  <data name="ProfilePic_Title_Text" xml:space="preserve"><value>Wil je een foto toevoegen?</value></data>
+  <data name="RecentThreadList_Nux_EmptyList_Message" xml:space="preserve"><value>Wanneer je begint met chatten, vind je al je berichten hier.</value></data>
+  <data name="Recent_ContextMenu_Archive" xml:space="preserve"><value>archiveren</value></data>
+  <data name="Recent_ContextMenu_Delete" xml:space="preserve"><value>verwijderen</value></data>
+  <data name="Recent_ContextMenu_Leave" xml:space="preserve"><value>groep verlaten</value></data>
+  <data name="Recent_ContextMenu_MarkUnread" xml:space="preserve"><value>markeren als ongelezen</value></data>
+  <data name="Recent_ContextMenu_Spam" xml:space="preserve"><value>markeren als spam</value></data>
+  <data name="Registration_TextboxHint_FirstName" xml:space="preserve"><value>Voornaam</value></data>
+  <data name="Registration_TextboxHint_LastName" xml:space="preserve"><value>Achternaam</value></data>
+  <data name="Registration_Title2" xml:space="preserve"><value>Gebruik je echte naam zodat anderen weten dat jij het bent.</value></data>
+  <data name="ResourceLanguage" xml:space="preserve"><value>en-VS</value></data>
+  <data name="Session_Expired_Caption" xml:space="preserve"><value>Meld je opnieuw aan om Messenger te gebruiken.</value></data>
+  <data name="Session_Expired_Title" xml:space="preserve"><value>sessie beëindigd</value></data>
+  <data name="SettingsPage_Title" xml:space="preserve"><value>instellingen</value></data>
+  <data name="Settings_Help" xml:space="preserve"><value>Help</value></data>
+  <data name="Settings_Help_Title" xml:space="preserve"><value>Info</value></data>
+  <data name="Settings_In_App_Audio_Title" xml:space="preserve"><value>Geluid in app</value></data>
+  <data name="Settings_In_App_Contact_Sync_Title" xml:space="preserve"><value>Contacten synchroniseren</value></data>
+  <data name="Settings_In_App_Vibration_Title" xml:space="preserve"><value>Trillen in app</value></data>
+  <data name="Settings_Licenses" xml:space="preserve"><value>Licenties</value></data>
+  <data name="Settings_Location_Title" xml:space="preserve"><value>Locatie</value></data>
+  <data name="Settings_Notification_Title" xml:space="preserve"><value>Meldingen</value></data>
+  <data name="Settings_PhoneNumber_VerificationNeeded" xml:space="preserve"><value>(Nummer bevestigen)</value></data>
+  <data name="Settings_Privacy_And_Terms" xml:space="preserve"><value>Privacy en voorwaarden</value></data>
+  <data name="Settings_Remove_Contacts_Body" xml:space="preserve"><value>Alle contacten die je eerder hebt gesynchroniseerd worden verwijderd.</value></data>
+  <data name="Settings_Remove_Contacts_Confirm" xml:space="preserve"><value>Verwijderen</value></data>
+  <data name="Settings_Remove_Contacts_Title" xml:space="preserve"><value>Contacten verwijderen?</value></data>
+  <data name="Settings_SendOnEnter_Title" xml:space="preserve"><value>Verzenden bij indrukken Enter-toets</value></data>
+  <data name="Settings_Sync_Contacts_Body" xml:space="preserve"><value>Synchronisatie starten? Je contacten worden doorlopend met onze servers gesynchroniseerd.</value></data>
+  <data name="Settings_Sync_Contacts_Confirmation" xml:space="preserve"><value>Synchroniseren</value></data>
+  <data name="Settings_Sync_Contacts_Title" xml:space="preserve"><value>Contacten synchroniseren</value></data>
+  <data name="Settings_Version_Number" xml:space="preserve"><value>Versie {0}</value></data>
+  <data name="Start_Group_Menu_Item" xml:space="preserve"><value>groep maken met {0}</value></data>
+  <data name="Sticker_Drawer_RecentStickers" xml:space="preserve"><value>Recente stickers</value></data>
+  <data name="Sticker_Pack_Download" xml:space="preserve"><value>downloaden</value></data>
+  <data name="Sticker_Pack_Download_Failed" xml:space="preserve"><value>Downloaden van stickerpakket is mislukt</value></data>
+  <data name="Sticker_Pack_Downloaded" xml:space="preserve"><value>gedownload</value></data>
+  <data name="Sticker_Pack_Downloading" xml:space="preserve"><value>downloaden</value></data>
+  <data name="Sticker_Pack_Share" xml:space="preserve"><value>delen</value></data>
+  <data name="Sticker_Store_ContextMenu_Remove" xml:space="preserve"><value>verwijderen</value></data>
+  <data name="Sticker_Store_Menu_Item" xml:space="preserve"><value>stickerwinkel</value></data>
+  <data name="Sticker_Store_Remove_Error" xml:space="preserve"><value>Stickerpakket kan niet worden verwijderd.</value></data>
+  <data name="Sticker_Store_Tab_All" xml:space="preserve"><value>alles</value></data>
+  <data name="Sticker_Store_Tab_Featured" xml:space="preserve"><value>aanbevolen</value></data>
+  <data name="Sticker_Store_Tab_Owned" xml:space="preserve"><value>van jou</value></data>
+  <data name="Sticker_Store_Title" xml:space="preserve"><value>Stickerwinkel</value></data>
+  <data name="SuggestedPins_Pinning_StateIndicator" xml:space="preserve"><value>Vastzetten...</value></data>
+  <data name="SuggestedPins_SearchBox_Hint" xml:space="preserve"><value>groepen zoeken</value></data>
+  <data name="SuggestedPins_Title_PinGroup" xml:space="preserve"><value>GROEP VASTZETTEN</value></data>
+  <data name="SyncContact_Button_LearnMore" xml:space="preserve"><value>Meer info</value></data>
+  <data name="SyncContact_ErrorMessage_UnableToToggle" xml:space="preserve"><value>Je instellingen kunnen niet worden gewijzigd. Controleer je internetverbinding en probeer het opnieuw.</value></data>
+  <data name="SyncContact_Subtitle" xml:space="preserve"><value>Synchroniseer je contacten om te zien wie er nog meer Messenger gebruikt. Je contacten worden doorlopend gesynchroniseerd en up-to-date gehouden.</value></data>
+  <data name="SyncContact_Title" xml:space="preserve"><value>Je kunt berichten naar personen in je telefoonboek sturen</value></data>
+  <data name="SyncContacts_MessageBox_LinkLabel" xml:space="preserve"><value>Meer info</value></data>
+  <data name="Thread_AppBar_Details" xml:space="preserve"><value>details</value></data>
+  <data name="Thread_AppBar_View_Members" xml:space="preserve"><value>personen weergeven</value></data>
+  <data name="Thread_Name_NoParticipant_Title" xml:space="preserve"><value>nog geen personen</value></data>
+  <data name="Thread_UnnamedUserPlaceholder_Title" xml:space="preserve"><value>Persoon op Facebook</value></data>
+  <data name="Threads_AppBar_Compose" xml:space="preserve"><value>nieuw</value></data>
+  <data name="Threads_AppBar_Refresh" xml:space="preserve"><value>vernieuwen</value></data>
+  <data name="UnMute_Conversation_Menu_Item" xml:space="preserve"><value>geluid aanzetten</value></data>
+  <data name="Unsent_Message_Warning" xml:space="preserve"><value>Messenger verlaten? Je hebt je berichten nog niet verstuurd.</value></data>
+  <data name="Verify_PhoneNumber_Box_Title" xml:space="preserve"><value>Telefoonnummer</value></data>
+  <data name="VideoRecorder_HelpText_Cancel" xml:space="preserve"><value>Laat los om te verwijderen en opnieuw te beginnen</value></data>
+  <data name="VideoRecorder_HelpText_HoldToSend" xml:space="preserve"><value>Houd vast voor video, tik voor foto</value></data>
+  <data name="VideoRecorder_HelpText_Send" xml:space="preserve"><value>Sleep je vinger weg van Verzenden om te annuleren</value></data>
+  <data name="View_Timeline_Menu_Item" xml:space="preserve"><value>tijdlijn</value></data>
+  <data name="Voice_Clip_Hold_Instruction" xml:space="preserve"><value>Tik en houd vast om een audioclip op te nemen en te versturen</value></data>
+  <data name="Voice_Clip_Length_Limit" xml:space="preserve"><value>Tijdlimiet bereikt, laat los om te versturen</value></data>
+  <data name="Voice_Clip_Menu_Item" xml:space="preserve"><value>spraakclip sturen</value></data>
+  <data name="Voice_Clip_NUX_Instruction" xml:space="preserve"><value>Laat los om te versturen, veeg ervan af om te annuleren</value></data>
+  <data name="Voice_Clip_Record" xml:space="preserve"><value>opnemen</value></data>
+  <data name="Voice_Clip_Release_Cancel" xml:space="preserve"><value>Laat los om opname te annuleren</value></data>
+  <data name="orca_neue_nux_add_phone_body1_searchable_all_not_verified" xml:space="preserve"><value>Mensen kunnen je als contactpersoon toevoegen als ze je nummer al hebben, maar alleen jij kunt dit nummer zien op Facebook.</value></data>
+  <data name="orca_neue_nux_add_phone_body1_searchable_all_visible_all" xml:space="preserve"><value>Mensen kunnen je als contactpersoon toevoegen als ze je telefoonnummer al hebben.</value></data>
+  <data name="orca_neue_nux_add_phone_body1_searchable_all_visible_custom" xml:space="preserve"><value>Mensen kunnen je als contactpersoon toevoegen als ze je telefoonnummer al hebben. Hiermee wordt niet gewijzigd wie je nummer kan zien op Facebook.</value></data>
+  <data name="orca_neue_nux_add_phone_body1_searchable_all_visible_friends" xml:space="preserve"><value>Mensen kunnen je als contactpersoon toevoegen als ze je telefoonnummer al hebben, maar alleen vrienden kunnen dit nummer op Facebook zien.</value></data>
+  <data name="orca_neue_nux_add_phone_body1_searchable_all_visible_self" xml:space="preserve"><value>Mensen kunnen je als contactpersoon toevoegen als ze je nummer al hebben, maar alleen jij kunt dit nummer zien op Facebook.</value></data>
+  <data name="orca_neue_nux_add_phone_body1_searchable_fof" xml:space="preserve"><value>Je hoeft geen vrienden op Facebook te zijn om met elkaar in contact te komen. Met deze Facebook-instellingen kun je instellen dat iedereen die je nummer heeft je kan opzoeken met dit nummer.</value></data>
+  <data name="orca_neue_nux_add_phone_body2_not_verified" xml:space="preserve"><value>Alleen jij kunt dit nummer zien op Facebook.</value></data>
+  <data name="orca_neue_nux_add_phone_body2_visible_custom" xml:space="preserve"><value>Hiermee wordt niet gewijzigd wie je nummer op Facebook kan zien.</value></data>
+  <data name="orca_neue_nux_add_phone_body2_visible_friends" xml:space="preserve"><value>Alleen vrienden kunnen dit nummer zien op Facebook.</value></data>
+  <data name="orca_neue_nux_add_phone_body2_visible_self" xml:space="preserve"><value>Alleen jij kunt dit nummer zien op Facebook.</value></data>
+  <data name="orca_neue_nux_add_phone_title_no_verified_number" xml:space="preserve"><value>Welk nummer kunnen mensen gebruiken om je te bereiken?</value></data>
+  <data name="orca_neue_nux_add_phone_title_verified_long" xml:space="preserve"><value>Is dit het nummer dat mensen kunnen gebruiken om je te bereiken?</value></data>
+  <data name="orca_neue_nux_add_phone_title_verified_short" xml:space="preserve"><value>Is je nummer up-to-date?</value></data>
+</root>
