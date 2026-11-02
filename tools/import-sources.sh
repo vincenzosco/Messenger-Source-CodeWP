@@ -42,7 +42,7 @@ for dll in "$ROOT"/extracted/*.dll; do
     Facebook-Messenger-Localization.dll|ThriftPortable.dll|Facebook-Base-RT.dll)
       continue ;;
   esac
-  cp -f "$dll" "$LIB/$name"
+  cp -n "$dll" "$LIB/$name" 2>/dev/null || true
 done
 for component in "$ROOT"/extracted/*.winmd; do
   [ -f "$component" ] && cp -f "$component" "$LIB/"
@@ -56,9 +56,8 @@ copy_assembly "$APP" "$APP_DIR"
 mkdir -p "$APP_DIR/Assets"
 cp -f "$ROOT"/extracted/Assets/*.png "$APP_DIR/Assets/" 2>/dev/null || true
 cp -f "$ROOT"/extracted/SplashScreenImage.*.jpg "$APP_DIR/Assets/" 2>/dev/null || true
-cp -f "$ROOT"/extracted/AppxManifest.xml "$APP_DIR/Package.appxmanifest"
-cp -f "$ROOT"/extracted/AppManifest.xaml "$APP_DIR/AppManifest.xaml"
-
+  cp -n "$ROOT"/extracted/AppxManifest.xml "$APP_DIR/Package.appxmanifest" 2>/dev/null || true
+  cp -n "$ROOT"/extracted/AppManifest.xaml "$APP_DIR/AppManifest.xaml" 2>/dev/null || true
 # --- sorgenti delle altre assembly ------------------------------------------
 for asm in "${LIBS[@]}"; do
   copy_assembly "$asm" "src/$asm"
@@ -319,5 +318,6 @@ python tools/fixups-xaml.py
 python tools/fixups-ambiguous.py
 python tools/fixups-residual.py
 python tools/fixups-il.py
+python tools/fixups-resources.py
 
 echo "import completato: app in $APP_DIR/, librerie in src/, dll in lib/"

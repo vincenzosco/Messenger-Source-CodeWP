@@ -16,7 +16,7 @@
     Loaded="NameConversationPage_OnLoaded">
 
     <pages:NameConversationViewModelPage.Resources>
-        <Style x:Name="NoBorderButton" TargetType="Button">
+        <Style x:Key="NoBorderButton" TargetType="Button">
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="Button">

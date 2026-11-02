@@ -17,7 +17,7 @@
 
     <UserControl.Resources>
         <CubicEase x:Name="ZoomEase" EasingMode="EaseInOut"/>
-        <ElasticEase x:Name="ElasticEase" EasingMode="EaseOut" Oscillations="1" Springiness="2"/>
+        <ElasticEase x:Key="ElasticEase" EasingMode="EaseOut" Oscillations="1" Springiness="2"/>
         
         <Storyboard x:Name="ZoomOut">
             <DoubleAnimation

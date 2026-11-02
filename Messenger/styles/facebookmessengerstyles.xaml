@@ -976,7 +976,7 @@
     </Style>
 
     <Style TargetType="toolkit:ContextMenu"
-           x:Name="ContextMenuStyle">
+           x:Key="ContextMenuStyle">
         <Setter Property="IsZoomEnabled" Value="False"/>
     </Style>
 

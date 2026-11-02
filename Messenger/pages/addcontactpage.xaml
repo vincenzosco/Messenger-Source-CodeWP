@@ -64,7 +64,7 @@
             <Setter Property="Foreground" Value="{StaticResource MessengerTextBlackBrush}"/>
         </Style>
 
-        <DataTemplate x:Name="CountryCodeDataTemplate">
+        <DataTemplate x:Key="CountryCodeDataTemplate">
             <Grid Margin="2,0,0,34">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
@@ -89,7 +89,7 @@
 
         </DataTemplate>
 
-        <DataTemplate x:Name="GroupedCountryCodeHeaderTemplate">
+        <DataTemplate x:Key="GroupedCountryCodeHeaderTemplate">
             <Grid Width="62"
                   Height="62"
                   HorizontalAlignment="Left"
