@@ -3,83 +3,84 @@ using System.Collections.ObjectModel;
 using System.Globalization;
 using Microsoft.Phone.Globalization;
 
-namespace Facebook.Messenger.WP8.Utilities;
-
-public class AlphaKeyGroup<T> : ObservableCollection<T>
+namespace Facebook.Messenger.WP8.Utilities
 {
-	public delegate string GetKeyDelegate(T item);
-
-	public string Key { get; private set; }
-
-	public AlphaKeyGroup(string key)
+	public class AlphaKeyGroup<T> : ObservableCollection<T>
 	{
-		Key = key;
-	}
+		public delegate string GetKeyDelegate(T item);
 
-	public AlphaKeyGroup(string key, IEnumerable<T> list)
-		: base(list)
-	{
-		Key = key;
-	}
+		public string Key { get; private set; }
 
-	private static ObservableCollection<AlphaKeyGroup<T>> CreateGroups(SortedLocaleGrouping slg)
-	{
-		ObservableCollection<AlphaKeyGroup<T>> observableCollection = new ObservableCollection<AlphaKeyGroup<T>>();
-		foreach (string groupDisplayName in slg.GroupDisplayNames)
+		public AlphaKeyGroup(string key)
 		{
-			if (groupDisplayName.Equals("..."))
+			Key = key;
+		}
+
+		public AlphaKeyGroup(string key, IEnumerable<T> list)
+			: base(list)
+		{
+			Key = key;
+		}
+
+		private static ObservableCollection<AlphaKeyGroup<T>> CreateGroups(SortedLocaleGrouping slg)
+		{
+			ObservableCollection<AlphaKeyGroup<T>> observableCollection = new ObservableCollection<AlphaKeyGroup<T>>();
+			foreach (string groupDisplayName in slg.GroupDisplayNames)
 			{
-				observableCollection.Add(new AlphaKeyGroup<T>("\ud83c\udf10"));
+				if (groupDisplayName.Equals("..."))
+				{
+					observableCollection.Add(new AlphaKeyGroup<T>("\ud83c\udf10"));
+				}
+				else
+				{
+					observableCollection.Add(new AlphaKeyGroup<T>(groupDisplayName));
+				}
 			}
-			else
-			{
-				observableCollection.Add(new AlphaKeyGroup<T>(groupDisplayName));
-			}
+			return observableCollection;
 		}
-		return observableCollection;
-	}
 
-	public static ObservableCollection<AlphaKeyGroup<T>> CreateGroups(IEnumerable<T> items, CultureInfo ci, GetKeyDelegate getKey, bool sort, IEnumerable<T> prependList = null, string prependKey = null)
-	{
-		//IL_0026: Unknown result type (might be due to invalid IL or missing references)
-		//IL_002c: Expected Obj, but got Unknown
-		if (items == null)
+		public static ObservableCollection<AlphaKeyGroup<T>> CreateGroups(IEnumerable<T> items, CultureInfo ci, GetKeyDelegate getKey, bool sort, IEnumerable<T> prependList = null, string prependKey = null)
 		{
-			return null;
-		}
-		SortedLocaleGrouping val = new SortedLocaleGrouping(ci);
-		ObservableCollection<AlphaKeyGroup<T>> observableCollection = CreateGroups(val);
-		List<T> list = new List<T>(items);
-		if (sort)
-		{
-			list.Sort((T c0, T c1) => ci.CompareInfo.Compare(getKey(c0), getKey(c1)));
-		}
-		foreach (T item in list)
-		{
-			int groupIndex = val.GetGroupIndex(getKey(item));
-			if (groupIndex >= 0 && groupIndex < observableCollection.Count)
+			//IL_0026: Unknown result type (might be due to invalid IL or missing references)
+			//IL_002c: Expected Obj, but got Unknown
+			if (items == null)
 			{
-				observableCollection[groupIndex].Add(item);
+				return null;
 			}
-		}
-		if (prependList != null)
-		{
-			if (prependKey == null)
+			SortedLocaleGrouping val = new SortedLocaleGrouping(ci);
+			ObservableCollection<AlphaKeyGroup<T>> observableCollection = CreateGroups(val);
+			List<T> list = new List<T>(items);
+			if (sort)
 			{
-				prependKey = "★";
+				list.Sort((T c0, T c1) => ci.CompareInfo.Compare(getKey(c0), getKey(c1)));
 			}
-			AlphaKeyGroup<T> alphaKeyGroup = new AlphaKeyGroup<T>(prependKey);
-			alphaKeyGroup.AddRange(prependList);
-			observableCollection.Insert(0, alphaKeyGroup);
+			foreach (T item in list)
+			{
+				int groupIndex = val.GetGroupIndex(getKey(item));
+				if (groupIndex >= 0 && groupIndex < observableCollection.Count)
+				{
+					observableCollection[groupIndex].Add(item);
+				}
+			}
+			if (prependList != null)
+			{
+				if (prependKey == null)
+				{
+					prependKey = "★";
+				}
+				AlphaKeyGroup<T> alphaKeyGroup = new AlphaKeyGroup<T>(prependKey);
+				alphaKeyGroup.AddRange(prependList);
+				observableCollection.Insert(0, alphaKeyGroup);
+			}
+			return observableCollection;
 		}
-		return observableCollection;
-	}
 
-	public void AddRange(IEnumerable<T> list)
-	{
-		foreach (T item in list)
+		public void AddRange(IEnumerable<T> list)
 		{
-			Add(item);
+			foreach (T item in list)
+			{
+				Add(item);
+			}
 		}
 	}
 }

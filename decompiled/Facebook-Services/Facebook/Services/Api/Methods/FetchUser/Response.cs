@@ -3,11 +3,12 @@ using System.Runtime.Serialization;
 using Facebook.Models;
 using Newtonsoft.Json;
 
-namespace Facebook.Services.Api.Methods.FetchUser;
-
-public class Response : FacebookApiResponse
+namespace Facebook.Services.Api.Methods.FetchUser
 {
-	[DataMember]
-	[JsonProperty(PropertyName = "data")]
-	public List<FacebookUser> UserData;
+	public class Response : FacebookApiResponse
+	{
+		[DataMember]
+		[JsonProperty(PropertyName = "data")]
+		public List<FacebookUser> UserData;
+	}
 }

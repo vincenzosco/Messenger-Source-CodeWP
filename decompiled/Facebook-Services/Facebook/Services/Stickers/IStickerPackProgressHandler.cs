@@ -1,10 +1,11 @@
-namespace Facebook.Services.Stickers;
-
-public interface IStickerPackProgressHandler
+namespace Facebook.Services.Stickers
 {
-	void DownloadStarted(string stickerPackId);
+	public interface IStickerPackProgressHandler
+	{
+		void DownloadStarted(string stickerPackId);
 
-	void DownloadFailed(string stickerPackId);
+		void DownloadFailed(string stickerPackId);
 
-	void ProgressUpdated(string stickerPackId, double progress);
+		void ProgressUpdated(string stickerPackId, double progress);
+	}
 }

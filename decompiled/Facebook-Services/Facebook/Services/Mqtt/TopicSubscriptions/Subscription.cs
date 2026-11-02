@@ -4,33 +4,34 @@ using Facebook.Base.Mqtt;
 using Facebook.Base.Mqtt.Messages;
 using GalaSoft.MvvmLight.Messaging;
 
-namespace Facebook.Services.Mqtt.TopicSubscriptions;
-
-public abstract class Subscription
+namespace Facebook.Services.Mqtt.TopicSubscriptions
 {
-	public readonly string Topic;
-
-	public readonly QualityofService QoS;
-
-	private readonly IDispatcher _uiDispatcher;
-
-	protected Subscription(IDispatcher uiDispatcher, string topic, QualityofService qos)
+	public abstract class Subscription
 	{
-		_uiDispatcher = uiDispatcher;
-		Topic = topic;
-		QoS = qos;
-	}
+		public readonly string Topic;
 
-	public abstract Task HandleMessage(PublishMessage message);
+		public readonly QualityofService QoS;
 
-	protected async Task PerformSignal<T>(T payload)
-	{
-		if (payload != null)
+		private readonly IDispatcher _uiDispatcher;
+
+		protected Subscription(IDispatcher uiDispatcher, string topic, QualityofService qos)
 		{
-			await _uiDispatcher.RunAsync(() =>
+			_uiDispatcher = uiDispatcher;
+			Topic = topic;
+			QoS = qos;
+		}
+
+		public abstract Task HandleMessage(PublishMessage message);
+
+		protected async Task PerformSignal<T>(T payload)
+		{
+			if (payload != null)
 			{
-				Messenger.Default.Send(payload);
-			});
+				await _uiDispatcher.RunAsync(() =>
+				{
+					Messenger.Default.Send(payload);
+				});
+			}
 		}
 	}
 }

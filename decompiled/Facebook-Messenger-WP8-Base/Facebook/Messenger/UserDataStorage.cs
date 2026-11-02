@@ -7,66 +7,71 @@ using Facebook.Models;
 using Windows.Storage;
 using Windows.Storage.Streams;
 
-namespace Facebook.Messenger;
-
-public class UserDataStorage : IUserDataStorage
+namespace Facebook.Messenger
 {
-	private readonly FacebookContext _context;
-
-	public UserDataStorage(FacebookContext context)
+	public class UserDataStorage : IUserDataStorage
 	{
-		_context = context;
-	}
+		private readonly FacebookContext _context;
 
-	public async Task<bool> DataExists(string key)
-	{
-		string folder = await GetFolder();
-		if (folder == null)
+		public UserDataStorage(FacebookContext context)
 		{
-			return false;
+			_context = context;
 		}
-		string path = Path.Combine(folder, key);
-		return File.Exists(path);
-	}
 
-	public async Task<string> GetData(string key)
-	{
-		StorageFile file = await StorageFile.GetFileFromPathAsync(await GetFile(key));
-		byte[] bytes = null;
-		IRandomAccessStream stream = await file.OpenAsync((FileAccessMode)0);
-		try
+		public async Task<bool> DataExists(string key)
 		{
-			using Stream readStream = ((IInputStream)(object)stream).AsStreamForRead();
-			bytes = new byte[readStream.Length];
-			await readStream.ReadAsync(bytes, 0, bytes.Length);
+			string folder = await GetFolder();
+			if (folder == null)
+			{
+				return false;
+			}
+			string path = Path.Combine(folder, key);
+			return File.Exists(path);
 		}
-		finally
+
+		public async Task<string> GetData(string key)
 		{
-			((IDisposable)stream)?.Dispose();
+			StorageFile file = await StorageFile.GetFileFromPathAsync(await GetFile(key));
+			byte[] bytes = null;
+			IRandomAccessStream stream = await file.OpenAsync((FileAccessMode)0);
+			try
+			{
+				using (Stream readStream = ((IInputStream)(object)stream).AsStreamForRead())
+				{
+					bytes = new byte[readStream.Length];
+					await readStream.ReadAsync(bytes, 0, bytes.Length);
+				}
+			}
+			finally
+			{
+				((IDisposable)stream)?.Dispose();
+			}
+			return Encoding.UTF8.GetString(bytes, 0, bytes.Length);
 		}
-		return Encoding.UTF8.GetString(bytes, 0, bytes.Length);
-	}
 
-	public async Task SetData(string key, string data)
-	{
-		string filePath = await GetFile(key);
-		File.Delete(filePath);
-		using StreamWriter stream = File.CreateText(filePath);
-		await stream.WriteAsync(data);
-	}
-
-	private async Task<string> GetFile(string key)
-	{
-		return Path.Combine(await GetFolder(), key);
-	}
-
-	private async Task<string> GetFolder()
-	{
-		string rootPath = await _context.Settings.GetUserFolderPath();
-		if (rootPath == "")
+		public async Task SetData(string key, string data)
 		{
-			return null;
+			string filePath = await GetFile(key);
+			File.Delete(filePath);
+			using (StreamWriter stream = File.CreateText(filePath))
+			{
+				await stream.WriteAsync(data);
+			}
 		}
-		return (await (await StorageFolder.GetFolderFromPathAsync(rootPath)).CreateFolderAsync("DataStorage", (CreationCollisionOption)3)).Path;
+
+		private async Task<string> GetFile(string key)
+		{
+			return Path.Combine(await GetFolder(), key);
+		}
+
+		private async Task<string> GetFolder()
+		{
+			string rootPath = await _context.Settings.GetUserFolderPath();
+			if (rootPath == "")
+			{
+				return null;
+			}
+			return (await (await StorageFolder.GetFolderFromPathAsync(rootPath)).CreateFolderAsync("DataStorage", (CreationCollisionOption)3)).Path;
+		}
 	}
 }

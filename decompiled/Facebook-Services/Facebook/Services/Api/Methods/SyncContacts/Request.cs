@@ -1,9 +1,10 @@
 using System.Collections.Generic;
 
-namespace Facebook.Services.Api.Methods.SyncContacts;
-
-[Queue(QueueType.Web)]
-public class Request : FacebookServiceRequest
+namespace Facebook.Services.Api.Methods.SyncContacts
 {
-	public List<ContactChange> ContactChanges;
+	[Queue(QueueType.Web)]
+	public class Request : FacebookServiceRequest
+	{
+		public List<ContactChange> ContactChanges;
+	}
 }

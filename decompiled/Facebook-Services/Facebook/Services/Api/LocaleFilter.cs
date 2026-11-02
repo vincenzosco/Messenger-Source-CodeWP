@@ -2,23 +2,25 @@ using System.Threading.Tasks;
 using Facebook.Base;
 using Facebook.Services.Api.Methods;
 
-namespace Facebook.Services.Api;
-
-internal class LocaleFilter : IFilter
+namespace Facebook.Services.Api
 {
-	private readonly ITranslator _translator;
-
-	public LocaleFilter(ITranslator translator)
+	internal class LocaleFilter : IFilter
 	{
-		_translator = translator;
-	}
+		private readonly ITranslator _translator;
 
-	public async Task<TResponse> ExecuteAsync<TRequest, TResponse>(TRequest request, IHandler next) where TRequest : Request where TResponse : Response
-	{
-		if (request is FacebookServiceRequest fbRequest)
+		public LocaleFilter(ITranslator translator)
 		{
-			fbRequest.Locale = _translator.GetCurrentFBLocale();
+			_translator = translator;
 		}
-		return await next.ExecuteAsync<TRequest, TResponse>(request);
+
+		public async Task<TResponse> ExecuteAsync<TRequest, TResponse>(TRequest request, IHandler next) where TRequest : Request where TResponse : Response
+		{
+			FacebookServiceRequest fbRequest = request as FacebookServiceRequest;
+			if (fbRequest != null)
+			{
+				fbRequest.Locale = _translator.GetCurrentFBLocale();
+			}
+			return await next.ExecuteAsync<TRequest, TResponse>(request);
+		}
 	}
 }

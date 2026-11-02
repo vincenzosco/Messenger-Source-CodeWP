@@ -1,9 +1,10 @@
-namespace Facebook.Messenger.WP8.Utilities;
-
-public enum MuteDuration
+namespace Facebook.Messenger.WP8.Utilities
 {
-	Off,
-	Forever,
-	Hour,
-	EightAM
+	public enum MuteDuration
+	{
+		Off,
+		Forever,
+		Hour,
+		EightAM
+	}
 }

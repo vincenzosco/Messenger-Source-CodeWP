@@ -1,14 +1,15 @@
-namespace Facebook.Services.Common;
-
-public enum AddFriendHowFound
+namespace Facebook.Services.Common
 {
-	ContactImporter,
-	Search,
-	Pymk,
-	ProfileButton,
-	NetegoPymk,
-	FriendBrowser,
-	FriendBrowserSearch,
-	FriendsTab,
-	ProfileBrowser
+	public enum AddFriendHowFound
+	{
+		ContactImporter,
+		Search,
+		Pymk,
+		ProfileButton,
+		NetegoPymk,
+		FriendBrowser,
+		FriendBrowserSearch,
+		FriendsTab,
+		ProfileBrowser
+	}
 }

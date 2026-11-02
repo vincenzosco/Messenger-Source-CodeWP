@@ -1,16 +1,17 @@
 using Facebook.Base.Extensions;
 using Facebook.Services.Common;
 
-namespace Facebook.Services.Analytics.Logging;
-
-public class DataConsumptionLogger
+namespace Facebook.Services.Analytics.Logging
 {
-	public static void LogDataEvent(Service service, DataType type, long downloadedBytes, long uploadedBytes)
+	public class DataConsumptionLogger
 	{
-		if (downloadedBytes != 0 || uploadedBytes != 0)
+		public static void LogDataEvent(Service service, DataType type, long downloadedBytes, long uploadedBytes)
 		{
-			DataEventRequest request = new DataEventRequest(type, downloadedBytes, uploadedBytes);
-			service.ExecuteAsync<DataEventRequest, BoolResponse>(request).DoNotWait();
+			if (downloadedBytes != 0 || uploadedBytes != 0)
+			{
+				DataEventRequest request = new DataEventRequest(type, downloadedBytes, uploadedBytes);
+				service.ExecuteAsync<DataEventRequest, BoolResponse>(request).DoNotWait();
+			}
 		}
 	}
 }

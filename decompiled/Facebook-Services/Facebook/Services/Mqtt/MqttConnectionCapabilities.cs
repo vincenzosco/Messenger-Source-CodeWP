@@ -1,10 +1,11 @@
-namespace Facebook.Services.Mqtt;
-
-internal enum MqttConnectionCapabilities
+namespace Facebook.Services.Mqtt
 {
-	AcknowledgedDelivery = 1,
-	ProcessingLastActivePresenceInfo = 2,
-	ExactKeepAlive = 4,
-	RequiresJsonUnicodeEscapes = 8,
-	DeltaSentMessageEnabled = 0x10
+	internal enum MqttConnectionCapabilities
+	{
+		AcknowledgedDelivery = 1,
+		ProcessingLastActivePresenceInfo = 2,
+		ExactKeepAlive = 4,
+		RequiresJsonUnicodeEscapes = 8,
+		DeltaSentMessageEnabled = 0x10
+	}
 }

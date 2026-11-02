@@ -1,48 +1,49 @@
 using Facebook.Models;
 using Microsoft.Practices.ServiceLocation;
 
-namespace Facebook.Messenger;
-
-public class DebuggingUtility
+namespace Facebook.Messenger
 {
-	public static bool IsTestBuildOrEmployee
+	public class DebuggingUtility
 	{
-		get
+		public static bool IsTestBuildOrEmployee
 		{
-			if (!IsTestBuild)
+			get
 			{
-				return IsEmployee;
+				if (!IsTestBuild)
+				{
+					return IsEmployee;
+				}
+				return true;
 			}
-			return true;
 		}
-	}
 
-	public static bool IsEmployee
-	{
-		get
+		public static bool IsEmployee
 		{
-			FacebookContext instance = ServiceLocator.Current.GetInstance<FacebookContext>();
-			return instance.Session.Profile?.IsEmployee ?? false;
-		}
-	}
-
-	public static bool IsTestBuild
-	{
-		get
-		{
-			if (!IsQualityAssuranceBuild)
+			get
 			{
-				return IsDebugBuild;
+				FacebookContext instance = ServiceLocator.Current.GetInstance<FacebookContext>();
+				return instance.Session.Profile?.IsEmployee ?? false;
 			}
-			return true;
 		}
+
+		public static bool IsTestBuild
+		{
+			get
+			{
+				if (!IsQualityAssuranceBuild)
+				{
+					return IsDebugBuild;
+				}
+				return true;
+			}
+		}
+
+		public static bool IsQualityAssuranceBuild => false;
+
+		public static bool IsDebugBuild => false;
+
+		public static bool IsDogfoodBuild => false;
+
+		public static bool CanLogSensitiveInfo => IsTestBuild;
 	}
-
-	public static bool IsQualityAssuranceBuild => false;
-
-	public static bool IsDebugBuild => false;
-
-	public static bool IsDogfoodBuild => false;
-
-	public static bool CanLogSensitiveInfo => IsTestBuild;
 }

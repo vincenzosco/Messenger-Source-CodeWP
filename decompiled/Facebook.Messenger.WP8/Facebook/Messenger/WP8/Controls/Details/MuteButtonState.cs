@@ -1,7 +1,8 @@
-namespace Facebook.Messenger.WP8.Controls.Details;
-
-public enum MuteButtonState
+namespace Facebook.Messenger.WP8.Controls.Details
 {
-	Mute,
-	Unmute
+	public enum MuteButtonState
+	{
+		Mute,
+		Unmute
+	}
 }

@@ -1,16 +1,17 @@
 using Facebook.Models;
 
-namespace Facebook.Messenger;
-
-public class ImageResult
+namespace Facebook.Messenger
 {
-	public MediaSource Source { get; private set; }
-
-	public PhotoData Image { get; private set; }
-
-	public ImageResult(MediaSource source, PhotoData image)
+	public class ImageResult
 	{
-		Source = source;
-		Image = image;
+		public MediaSource Source { get; private set; }
+
+		public PhotoData Image { get; private set; }
+
+		public ImageResult(MediaSource source, PhotoData image)
+		{
+			Source = source;
+			Image = image;
+		}
 	}
 }

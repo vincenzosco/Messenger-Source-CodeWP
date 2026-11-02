@@ -1,10 +1,11 @@
 using System;
 
-namespace Facebook.Services.Common;
-
-public class JewelRequestedEventArgs : EventArgs
+namespace Facebook.Services.Common
 {
-	public JewelType JewelType { get; set; }
+	public class JewelRequestedEventArgs : EventArgs
+	{
+		public JewelType JewelType { get; set; }
 
-	public bool PerformFullSync { get; set; }
+		public bool PerformFullSync { get; set; }
+	}
 }

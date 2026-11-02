@@ -1,6 +1,7 @@
-namespace Thrift.Protocol;
-
-public interface TAbstractBase
+namespace Thrift.Protocol
 {
-	void Write(TProtocol tProtocol);
+	public interface TAbstractBase
+	{
+		void Write(TProtocol tProtocol);
+	}
 }

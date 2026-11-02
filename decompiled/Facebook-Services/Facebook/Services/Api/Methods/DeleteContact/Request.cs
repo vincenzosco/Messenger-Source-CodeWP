@@ -1,9 +1,10 @@
-namespace Facebook.Services.Api.Methods.DeleteContact;
-
-[Queue(QueueType.Web)]
-public class Request : FacebookServiceRequest
+namespace Facebook.Services.Api.Methods.DeleteContact
 {
-	public string ContactWriteId;
+	[Queue(QueueType.Web)]
+	public class Request : FacebookServiceRequest
+	{
+		public string ContactWriteId;
 
-	public string ContactId;
+		public string ContactId;
+	}
 }

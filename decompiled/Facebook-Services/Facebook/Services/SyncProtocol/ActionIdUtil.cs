@@ -1,14 +1,15 @@
 using System.Threading;
 
-namespace Facebook.Services.SyncProtocol;
-
-public class ActionIdUtil
+namespace Facebook.Services.SyncProtocol
 {
-	private static long _nextSubsecond;
-
-	public static long CreateActionIdFromTimestamp(long timestamp)
+	public class ActionIdUtil
 	{
-		long num = Interlocked.Increment(ref _nextSubsecond);
-		return timestamp * 1000000 + num;
+		private static long _nextSubsecond;
+
+		public static long CreateActionIdFromTimestamp(long timestamp)
+		{
+			long num = Interlocked.Increment(ref _nextSubsecond);
+			return timestamp * 1000000 + num;
+		}
 	}
 }

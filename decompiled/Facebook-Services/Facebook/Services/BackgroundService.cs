@@ -3,50 +3,51 @@ using Facebook.Base;
 using Facebook.Models;
 using GalaSoft.MvvmLight.Messaging;
 
-namespace Facebook.Services;
-
-public abstract class BackgroundService : Service
+namespace Facebook.Services
 {
-	protected readonly IDispatcher UiDispatcher;
-
-	protected BackgroundService(IDispatcher ui)
+	public abstract class BackgroundService : Service
 	{
-		UiDispatcher = ui;
-	}
+		protected readonly IDispatcher UiDispatcher;
 
-	protected Task Signal<T>(T payload, DispatcherPriority priority = DispatcherPriority.Low)
-	{
-		return UiDispatcher.RunAsync(() =>
+		protected BackgroundService(IDispatcher ui)
 		{
-			Messenger.Default.Send(payload);
-		}, priority);
-	}
-
-	protected Task Signal<T>(string token, T payload, DispatcherPriority priority = DispatcherPriority.Low)
-	{
-		return UiDispatcher.RunAsync(() =>
-		{
-			Messenger.Default.Send(payload, token);
-		}, priority);
-	}
-
-	protected void PerformSignal<T>(T payload) where T : class
-	{
-		if (payload != null)
-		{
-			Signal(payload);
+			UiDispatcher = ui;
 		}
-	}
 
-	public abstract void StartService(FacebookContext context);
+		protected Task Signal<T>(T payload, DispatcherPriority priority = DispatcherPriority.Low)
+		{
+			return UiDispatcher.RunAsync(() =>
+			{
+				Messenger.Default.Send(payload);
+			}, priority);
+		}
 
-	public virtual void PrepareStopService()
-	{
-	}
+		protected Task Signal<T>(string token, T payload, DispatcherPriority priority = DispatcherPriority.Low)
+		{
+			return UiDispatcher.RunAsync(() =>
+			{
+				Messenger.Default.Send(payload, token);
+			}, priority);
+		}
 
-	public abstract void StopService();
+		protected void PerformSignal<T>(T payload) where T : class
+		{
+			if (payload != null)
+			{
+				Signal(payload);
+			}
+		}
 
-	public virtual void PrepareStopServiceUiThreadMustNotUseDispatcher()
-	{
+		public abstract void StartService(FacebookContext context);
+
+		public virtual void PrepareStopService()
+		{
+		}
+
+		public abstract void StopService();
+
+		public virtual void PrepareStopServiceUiThreadMustNotUseDispatcher()
+		{
+		}
 	}
 }

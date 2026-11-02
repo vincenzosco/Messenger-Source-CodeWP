@@ -6,75 +6,76 @@ using Microsoft.Phone;
 using Microsoft.Phone.BackgroundAudio;
 using Microsoft.Practices.ServiceLocation;
 
-namespace Facebook.Messenger.WP8.Agents;
-
-public class BackgroundStreamerAgent : AudioStreamingAgent
+namespace Facebook.Messenger.WP8.Agents
 {
-	private const int MaxRunTimeMs = 300000;
-
-	private static volatile bool IsInitialized;
-
-	private readonly IBackgroundInstance _backgroundSendingInstance;
-
-	private StreamSource StreamSource;
-
-	private object _lock = new object();
-
-	public BackgroundStreamerAgent()
+	public class BackgroundStreamerAgent : AudioStreamingAgent
 	{
-		if (!IsInitialized)
-		{
-			IsInitialized = true;
-			ServiceLocator.SetLocatorProvider(() => FacebookMessengerBackgroundLocator.Instance);
-			_backgroundSendingInstance = ServiceLocator.Current.GetInstance<IBackgroundInstance>();
-			IBackgroundInstance backgroundSendingInstance = _backgroundSendingInstance;
-			backgroundSendingInstance.ExecutionComplete = (EventHandler)Delegate.Combine(backgroundSendingInstance.ExecutionComplete, new EventHandler(OnMessageSendingComplete));
-		}
-	}
+		private const int MaxRunTimeMs = 300000;
 
-	protected override void OnBeginStreaming(AudioTrack track, AudioStreamer streamer)
-	{
-		Logger.Info("[Audio Streamer Agent] Begin Streaming", "OnBeginStreaming", "c:\\Open\\messenger\\Facebook\\Facebook-Messenger-WP8-Agents\\BackgroundStreamerAgent.cs", 37);
-		lock (_lock)
+		private static volatile bool IsInitialized;
+
+		private readonly IBackgroundInstance _backgroundSendingInstance;
+
+		private StreamSource StreamSource;
+
+		private object _lock = new object();
+
+		public BackgroundStreamerAgent()
 		{
-			if (_backgroundSendingInstance.IsInstanceRunning)
+			if (!IsInitialized)
 			{
-				return;
+				IsInitialized = true;
+				ServiceLocator.SetLocatorProvider(() => FacebookMessengerBackgroundLocator.Instance);
+				_backgroundSendingInstance = ServiceLocator.Current.GetInstance<IBackgroundInstance>();
+				IBackgroundInstance backgroundSendingInstance = _backgroundSendingInstance;
+				backgroundSendingInstance.ExecutionComplete = (EventHandler)Delegate.Combine(backgroundSendingInstance.ExecutionComplete, new EventHandler(OnMessageSendingComplete));
 			}
 		}
-		StreamSource = new StreamSource();
-		StreamSource.StreamComplete += OnStreamComplete;
-		streamer.SetSource((MediaStreamSource)(object)StreamSource);
-		if (!_backgroundSendingInstance.Execute().Wait(300000))
+
+		protected override void OnBeginStreaming(AudioTrack track, AudioStreamer streamer)
 		{
-			Logger.Info("Forced audio agent shutdown for exceeding maximum run time", "OnBeginStreaming", "c:\\Open\\messenger\\Facebook\\Facebook-Messenger-WP8-Agents\\BackgroundStreamerAgent.cs", 52);
+			Logger.Info("[Audio Streamer Agent] Begin Streaming", "OnBeginStreaming", "c:\\Open\\messenger\\Facebook\\Facebook-Messenger-WP8-Agents\\BackgroundStreamerAgent.cs", 37);
+			lock (_lock)
+			{
+				if (_backgroundSendingInstance.IsInstanceRunning)
+				{
+					return;
+				}
+			}
+			StreamSource = new StreamSource();
+			StreamSource.StreamComplete += OnStreamComplete;
+			streamer.SetSource((MediaStreamSource)(object)StreamSource);
+			if (!_backgroundSendingInstance.Execute().Wait(300000))
+			{
+				Logger.Info("Forced audio agent shutdown for exceeding maximum run time", "OnBeginStreaming", "c:\\Open\\messenger\\Facebook\\Facebook-Messenger-WP8-Agents\\BackgroundStreamerAgent.cs", 52);
+				StreamSource.Shutdown();
+			}
+		}
+
+		protected override void OnCancel()
+		{
+			Logger.Info("[Audio Streamer Agent] Cancelled", "OnCancel", "c:\\Open\\messenger\\Facebook\\Facebook-Messenger-WP8-Agents\\BackgroundStreamerAgent.cs", 60);
 			StreamSource.Shutdown();
 		}
-	}
 
-	protected override void OnCancel()
-	{
-		Logger.Info("[Audio Streamer Agent] Cancelled", "OnCancel", "c:\\Open\\messenger\\Facebook\\Facebook-Messenger-WP8-Agents\\BackgroundStreamerAgent.cs", 60);
-		StreamSource.Shutdown();
-	}
-
-	private void OnStreamComplete(object sender, EventArgs e)
-	{
-		Logger.Info("[Audio Streamer Agent] Stream Complete", "OnStreamComplete", "c:\\Open\\messenger\\Facebook\\Facebook-Messenger-WP8-Agents\\BackgroundStreamerAgent.cs", 66);
-		lock (_lock)
+		private void OnStreamComplete(object sender, EventArgs e)
 		{
-			if (_backgroundSendingInstance.IsInstanceRunning)
+			Logger.Info("[Audio Streamer Agent] Stream Complete", "OnStreamComplete", "c:\\Open\\messenger\\Facebook\\Facebook-Messenger-WP8-Agents\\BackgroundStreamerAgent.cs", 66);
+			lock (_lock)
 			{
-				_backgroundSendingInstance.Cancel();
-				StreamSource.StreamComplete -= OnStreamComplete;
+				if (_backgroundSendingInstance.IsInstanceRunning)
+				{
+					_backgroundSendingInstance.Cancel();
+					StreamSource.StreamComplete -= OnStreamComplete;
+				}
 			}
+			((BackgroundAgent)this).NotifyComplete();
 		}
-		((BackgroundAgent)this).NotifyComplete();
-	}
 
-	private void OnMessageSendingComplete(object sender, EventArgs e)
-	{
-		Logger.Info("[Audio Streamer Agent] Message Sending Complete", "OnMessageSendingComplete", "c:\\Open\\messenger\\Facebook\\Facebook-Messenger-WP8-Agents\\BackgroundStreamerAgent.cs", 80);
-		StreamSource.Shutdown();
+		private void OnMessageSendingComplete(object sender, EventArgs e)
+		{
+			Logger.Info("[Audio Streamer Agent] Message Sending Complete", "OnMessageSendingComplete", "c:\\Open\\messenger\\Facebook\\Facebook-Messenger-WP8-Agents\\BackgroundStreamerAgent.cs", 80);
+			StreamSource.Shutdown();
+		}
 	}
 }

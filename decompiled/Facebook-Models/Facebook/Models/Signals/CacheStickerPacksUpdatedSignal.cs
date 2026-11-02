@@ -1,26 +1,27 @@
 using System.Collections.Generic;
 
-namespace Facebook.Models.Signals;
-
-public class CacheStickerPacksUpdatedSignal
+namespace Facebook.Models.Signals
 {
-	public enum StickerPackState
+	public class CacheStickerPacksUpdatedSignal
 	{
-		Added,
-		Downloaded,
-		Deleted
-	}
+		public enum StickerPackState
+		{
+			Added,
+			Downloaded,
+			Deleted
+		}
 
-	public readonly List<StickerPack> StickerPacks;
+		public readonly List<StickerPack> StickerPacks;
 
-	public readonly StickerPackType StickerPackType;
+		public readonly StickerPackType StickerPackType;
 
-	public readonly StickerPackState State;
+		public readonly StickerPackState State;
 
-	public CacheStickerPacksUpdatedSignal(List<StickerPack> stickerPacks, StickerPackType stickerPackType, StickerPackState state)
-	{
-		StickerPacks = stickerPacks;
-		StickerPackType = stickerPackType;
-		State = state;
+		public CacheStickerPacksUpdatedSignal(List<StickerPack> stickerPacks, StickerPackType stickerPackType, StickerPackState state)
+		{
+			StickerPacks = stickerPacks;
+			StickerPackType = stickerPackType;
+			State = state;
+		}
 	}
 }

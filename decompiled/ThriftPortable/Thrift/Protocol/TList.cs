@@ -1,39 +1,40 @@
-namespace Thrift.Protocol;
-
-public struct TList
+namespace Thrift.Protocol
 {
-	private TType elementType;
-
-	private int count;
-
-	public TType ElementType
+	public struct TList
 	{
-		get
-		{
-			return elementType;
-		}
-		set
-		{
-			elementType = value;
-		}
-	}
+		private TType elementType;
 
-	public int Count
-	{
-		get
-		{
-			return count;
-		}
-		set
-		{
-			count = value;
-		}
-	}
+		private int count;
 
-	public TList(TType elementType, int count)
-	{
-		this = default;
-		this.elementType = elementType;
-		this.count = count;
+		public TType ElementType
+		{
+			get
+			{
+				return elementType;
+			}
+			set
+			{
+				elementType = value;
+			}
+		}
+
+		public int Count
+		{
+			get
+			{
+				return count;
+			}
+			set
+			{
+				count = value;
+			}
+		}
+
+		public TList(TType elementType, int count)
+		{
+			this = default(TList);
+			this.elementType = elementType;
+			this.count = count;
+		}
 	}
 }

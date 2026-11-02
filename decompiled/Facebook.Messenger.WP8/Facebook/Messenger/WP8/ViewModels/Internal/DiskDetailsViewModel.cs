@@ -6,51 +6,52 @@ using Facebook.Models;
 using Windows.Storage;
 using Windows.Storage.FileProperties;
 
-namespace Facebook.Messenger.WP8.ViewModels.Internal;
-
-public class DiskDetailsViewModel
+namespace Facebook.Messenger.WP8.ViewModels.Internal
 {
-	private const string LevelSpacing = "  ";
-
-	private readonly FacebookContext _context;
-
-	public ObservableCollection<FileViewModel> FilesystemListing { get; private set; }
-
-	public DiskDetailsViewModel(FacebookContext context)
+	public class DiskDetailsViewModel
 	{
-		_context = context;
-		FilesystemListing = new ObservableCollection<FileViewModel>();
-		CalculateFileListing();
-	}
+		private const string LevelSpacing = "  ";
 
-	public async void ReportProblemWithFile(FileViewModel vm)
-	{
-		if (!(await CrashSender.PostToServerAndDeleteLogFile("File sent via file picker", await StorageFile.GetFileFromPathAsync(vm.FullPath), _context.Session.Credentials.AccessToken)))
+		private readonly FacebookContext _context;
+
+		public ObservableCollection<FileViewModel> FilesystemListing { get; private set; }
+
+		public DiskDetailsViewModel(FacebookContext context)
 		{
-			throw new Exception("Unknown failure");
+			_context = context;
+			FilesystemListing = new ObservableCollection<FileViewModel>();
+			CalculateFileListing();
 		}
-	}
 
-	private async void CalculateFileListing()
-	{
-		StorageFolder root = ApplicationData.Current.LocalFolder;
-		await BuildFolder((IStorageFolder)(object)root, string.Empty);
-	}
-
-	private async Task BuildFolder(IStorageFolder root, string indent)
-	{
-		foreach (StorageFile file in await root.GetFilesAsync().AsTask<IReadOnlyList<StorageFile>>())
+		public async void ReportProblemWithFile(FileViewModel vm)
 		{
-			ulong fileSizeKb = (await file.GetBasicPropertiesAsync().AsTask<BasicProperties>()).Size / 1024;
-			string description = $"{indent}{fileSizeKb}KB {file.Name}";
-			FilesystemListing.Add(new FileViewModel(description, file.Path));
+			if (!(await CrashSender.PostToServerAndDeleteLogFile("File sent via file picker", await StorageFile.GetFileFromPathAsync(vm.FullPath), _context.Session.Credentials.AccessToken)))
+			{
+				throw new Exception("Unknown failure");
+			}
 		}
-		string nextIndent = indent + "  ";
-		foreach (StorageFolder folder in await root.GetFoldersAsync().AsTask<IReadOnlyList<StorageFolder>>())
+
+		private async void CalculateFileListing()
 		{
-			string description2 = $"{indent}[{folder.Name}]";
-			FilesystemListing.Add(new FileViewModel(description2, folder.Path));
-			await BuildFolder((IStorageFolder)(object)folder, nextIndent);
+			StorageFolder root = ApplicationData.Current.LocalFolder;
+			await BuildFolder((IStorageFolder)(object)root, string.Empty);
+		}
+
+		private async Task BuildFolder(IStorageFolder root, string indent)
+		{
+			foreach (StorageFile file in await root.GetFilesAsync().AsTask<IReadOnlyList<StorageFile>>())
+			{
+				ulong fileSizeKb = (await file.GetBasicPropertiesAsync().AsTask<BasicProperties>()).Size / 1024;
+				string description = $"{indent}{fileSizeKb}KB {file.Name}";
+				FilesystemListing.Add(new FileViewModel(description, file.Path));
+			}
+			string nextIndent = indent + "  ";
+			foreach (StorageFolder folder in await root.GetFoldersAsync().AsTask<IReadOnlyList<StorageFolder>>())
+			{
+				string description2 = $"{indent}[{folder.Name}]";
+				FilesystemListing.Add(new FileViewModel(description2, folder.Path));
+				await BuildFolder((IStorageFolder)(object)folder, nextIndent);
+			}
 		}
 	}
 }

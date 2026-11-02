@@ -1,12 +1,13 @@
-namespace Facebook.Messenger.WP8.Utilities;
-
-public enum PhonePrivacyTypes
+namespace Facebook.Messenger.WP8.Utilities
 {
-	Everyone,
-	FriendsOfFriends,
-	MutualFriends,
-	AllFriends,
-	Custom,
-	Self,
-	Unknown
+	public enum PhonePrivacyTypes
+	{
+		Everyone,
+		FriendsOfFriends,
+		MutualFriends,
+		AllFriends,
+		Custom,
+		Self,
+		Unknown
+	}
 }

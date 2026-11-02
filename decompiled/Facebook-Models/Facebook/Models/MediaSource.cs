@@ -1,11 +1,12 @@
-namespace Facebook.Models;
-
-public enum MediaSource
+namespace Facebook.Models
 {
-	Unknown,
-	QuickCam,
-	Gallery,
-	ImageSearch,
-	Location,
-	Share
+	public enum MediaSource
+	{
+		Unknown,
+		QuickCam,
+		Gallery,
+		ImageSearch,
+		Location,
+		Share
+	}
 }

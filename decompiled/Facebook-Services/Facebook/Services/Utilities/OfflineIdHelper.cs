@@ -2,33 +2,35 @@ using System;
 using Facebook.Base;
 using Facebook.Models;
 
-namespace Facebook.Services.Utilities;
-
-public static class OfflineIdHelper
+namespace Facebook.Services.Utilities
 {
-	public static string CreateOfflineThreadingId(FacebookContext context)
+	public static class OfflineIdHelper
 	{
-		long num = DateExtensions.MSecsSinceEpoch();
-		int deviceId = GetDeviceId(context);
-		long num2 = (num << 32) + deviceId;
-		return (num2 & 0x7FFFFFFFFFFFFFFFL).ToString();
-	}
-
-	public static bool IsMessageFromThisDevice(MailMessage message, FacebookContext context)
-	{
-		string offlineThreadingId = message.OfflineThreadingId;
-		if (!long.TryParse(offlineThreadingId, out var result))
+		public static string CreateOfflineThreadingId(FacebookContext context)
 		{
-			return false;
+			long num = DateExtensions.MSecsSinceEpoch();
+			int deviceId = GetDeviceId(context);
+			long num2 = (num << 32) + deviceId;
+			return (num2 & 0x7FFFFFFFFFFFFFFFL).ToString();
 		}
-		int num = (int)result;
-		int deviceId = GetDeviceId(context);
-		return deviceId == num;
-	}
 
-	private static int GetDeviceId(FacebookContext context)
-	{
-		string deviceIdentifier = context.GlobalSettings.DeviceIdentifier;
-		return BitConverter.ToInt32(new Guid(deviceIdentifier).ToByteArray(), 0);
+		public static bool IsMessageFromThisDevice(MailMessage message, FacebookContext context)
+		{
+			string offlineThreadingId = message.OfflineThreadingId;
+			long result;
+			if (!long.TryParse(offlineThreadingId, out result))
+			{
+				return false;
+			}
+			int num = (int)result;
+			int deviceId = GetDeviceId(context);
+			return deviceId == num;
+		}
+
+		private static int GetDeviceId(FacebookContext context)
+		{
+			string deviceIdentifier = context.GlobalSettings.DeviceIdentifier;
+			return BitConverter.ToInt32(new Guid(deviceIdentifier).ToByteArray(), 0);
+		}
 	}
 }

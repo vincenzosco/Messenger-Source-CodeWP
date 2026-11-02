@@ -3,19 +3,21 @@ using System.Linq;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
-namespace Facebook.Models;
-
-internal class SchoolClassesConverter : CollapseNodesConverter
+namespace Facebook.Models
 {
-	public override object ReadJson(JsonReader reader, Type objectType, object existingValue, JsonSerializer serializer)
+	internal class SchoolClassesConverter : CollapseNodesConverter
 	{
-		if (!(base.ReadJson(reader, objectType, existingValue, serializer) is JArray source))
+		public override object ReadJson(JsonReader reader, Type objectType, object existingValue, JsonSerializer serializer)
 		{
-			return null;
+			JArray jArray = base.ReadJson(reader, objectType, existingValue, serializer) as JArray;
+			if (jArray == null)
+			{
+				return null;
+			}
+			return (from token in jArray
+				select token.ToObject<SchoolClass>() into schoolClass
+				where schoolClass != null
+				select schoolClass).ToList();
 		}
-		return (from token in source
-			select token.ToObject<SchoolClass>() into schoolClass
-			where schoolClass != null
-			select schoolClass).ToList();
 	}
 }

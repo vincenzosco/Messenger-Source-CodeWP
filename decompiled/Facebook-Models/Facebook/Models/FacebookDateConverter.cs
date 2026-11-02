@@ -3,78 +3,80 @@ using System.Globalization;
 using Facebook.Base.Logging;
 using Newtonsoft.Json;
 
-namespace Facebook.Models;
-
-public class FacebookDateConverter : JsonConverter
+namespace Facebook.Models
 {
-	public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
+	public class FacebookDateConverter : JsonConverter
 	{
-		if (value != null)
+		public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
 		{
-			try
+			if (value != null)
 			{
-				string value2 = ((DateTime)value).ToString("MM/dd/yyyy", CultureInfo.InvariantCulture);
-				serializer.Serialize(writer, value2);
-			}
-			catch
-			{
+				try
+				{
+					string value2 = ((DateTime)value).ToString("MM/dd/yyyy", CultureInfo.InvariantCulture);
+					serializer.Serialize(writer, value2);
+				}
+				catch
+				{
+				}
 			}
 		}
-	}
 
-	public override object ReadJson(JsonReader reader, Type objectType, object existingValue, JsonSerializer serializer)
-	{
-		if (reader.TokenType == JsonToken.String)
+		public override object ReadJson(JsonReader reader, Type objectType, object existingValue, JsonSerializer serializer)
 		{
-			string text = reader.Value as string;
-			try
+			if (reader.TokenType == JsonToken.String)
 			{
-				string text2 = string.Empty;
-				DateTime? dateTime = null;
-				if (text.Length == 5)
+				string text = reader.Value as string;
+				try
 				{
-					text2 = "MM/dd";
-				}
-				else if (text.Length == 8)
-				{
-					text2 = "MM/dd/yy";
-				}
-				else if (text.Length > 8)
-				{
-					text2 = "MM/dd/yyyy";
-				}
-				if (!string.IsNullOrWhiteSpace(text2))
-				{
-					if (DateTime.TryParseExact(text, text2, CultureInfo.InvariantCulture, DateTimeStyles.None, out var result))
+					string text2 = string.Empty;
+					DateTime? dateTime = null;
+					if (text.Length == 5)
 					{
-						dateTime = result;
+						text2 = "MM/dd";
 					}
-					else
+					else if (text.Length == 8)
 					{
-						if (!DateTime.TryParseExact(text, text2, CultureInfo.CurrentCulture, DateTimeStyles.None, out result))
+						text2 = "MM/dd/yy";
+					}
+					else if (text.Length > 8)
+					{
+						text2 = "MM/dd/yyyy";
+					}
+					if (!string.IsNullOrWhiteSpace(text2))
+					{
+						DateTime result;
+						if (DateTime.TryParseExact(text, text2, CultureInfo.InvariantCulture, DateTimeStyles.None, out result))
 						{
-							throw new FormatException("Unable to parse date");
+							dateTime = result;
 						}
-						dateTime = result;
+						else
+						{
+							if (!DateTime.TryParseExact(text, text2, CultureInfo.CurrentCulture, DateTimeStyles.None, out result))
+							{
+								throw new FormatException("Unable to parse date");
+							}
+							dateTime = result;
+						}
 					}
+					if (text.Length == 5)
+					{
+						DateTime dateTime2 = new DateTime(1, 1, 1);
+						dateTime = new DateTime(1, (dateTime ?? dateTime2).Month, (dateTime ?? dateTime2).Day);
+					}
+					return dateTime;
 				}
-				if (text.Length == 5)
+				catch (FormatException)
 				{
-					DateTime dateTime2 = new DateTime(1, 1, 1);
-					dateTime = new DateTime(1, (dateTime ?? dateTime2).Month, (dateTime ?? dateTime2).Day);
+					Logger.Error(this, "Unable to parse date string: " + text, "ReadJson", "c:\\Open\\messenger\\Facebook\\Facebook-Models\\FacebookUser.cs", 270);
 				}
-				return dateTime;
 			}
-			catch (FormatException)
-			{
-				Logger.Error(this, "Unable to parse date string: " + text, "ReadJson", "c:\\Open\\messenger\\Facebook\\Facebook-Models\\FacebookUser.cs", 270);
-			}
+			return new DateTime(1, 1, 1);
 		}
-		return new DateTime(1, 1, 1);
-	}
 
-	public override bool CanConvert(Type objectType)
-	{
-		return (object)objectType == typeof(string);
+		public override bool CanConvert(Type objectType)
+		{
+			return (object)objectType == typeof(string);
+		}
 	}
 }

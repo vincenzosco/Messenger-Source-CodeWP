@@ -1,9 +1,10 @@
-namespace Facebook.Base.Mqtt;
-
-public enum SyncConnectionState
+namespace Facebook.Base.Mqtt
 {
-	Disconnected,
-	Connecting,
-	Syncing,
-	Connected
+	public enum SyncConnectionState
+	{
+		Disconnected,
+		Connecting,
+		Syncing,
+		Connected
+	}
 }

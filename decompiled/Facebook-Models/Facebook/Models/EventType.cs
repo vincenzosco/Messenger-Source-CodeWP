@@ -1,11 +1,12 @@
-namespace Facebook.Models;
-
-public enum EventType
+namespace Facebook.Models
 {
-	Unknown,
-	Header,
-	UpcomingEvent,
-	PastEvent,
-	Birthday,
-	LoadMore
+	public enum EventType
+	{
+		Unknown,
+		Header,
+		UpcomingEvent,
+		PastEvent,
+		Birthday,
+		LoadMore
+	}
 }

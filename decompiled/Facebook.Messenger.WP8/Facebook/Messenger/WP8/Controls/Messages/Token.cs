@@ -6,87 +6,88 @@ using System.Windows.Media;
 using Facebook.Messenger.WP8.Extensions;
 using PixelLab;
 
-namespace Facebook.Messenger.WP8.Controls.Messages;
-
-public sealed class Token : UserControl, ITiltable
+namespace Facebook.Messenger.WP8.Controls.Messages
 {
-	public static readonly DependencyProperty IsFocusedProperty = DependencyProperty.Register("IsFocused", typeof(bool), typeof(Token), new PropertyMetadata((object)false));
-
-	internal Border Border;
-
-	internal DynamicTextBlock NameTextBox;
-
-	private bool _contentLoaded;
-
-	public bool IsFocused
+	public sealed class Token : UserControl, ITiltable
 	{
-		get
+		public static readonly DependencyProperty IsFocusedProperty = DependencyProperty.Register("IsFocused", typeof(bool), typeof(Token), new PropertyMetadata((object)false));
+
+		internal Border Border;
+
+		internal DynamicTextBlock NameTextBox;
+
+		private bool _contentLoaded;
+
+		public bool IsFocused
 		{
-			return (bool)((DependencyObject)this).GetValue(IsFocusedProperty);
-		}
-		set
-		{
-			//IL_0054: Unknown result type (might be due to invalid IL or missing references)
-			//IL_0059: Unknown result type (might be due to invalid IL or missing references)
-			//IL_0063: Expected Obj, but got Unknown
-			//IL_0069: Unknown result type (might be due to invalid IL or missing references)
-			//IL_006e: Unknown result type (might be due to invalid IL or missing references)
-			//IL_0078: Expected Obj, but got Unknown
-			//IL_003e: Unknown result type (might be due to invalid IL or missing references)
-			//IL_0043: Unknown result type (might be due to invalid IL or missing references)
-			//IL_004d: Expected Obj, but got Unknown
-			((DependencyObject)this).SetValue(IsFocusedProperty, (object)value);
-			if (value)
+			get
 			{
-				Border border = Border;
-				object obj = Application.Current.Resources[(object)"MessengerBlueBrush"];
-				border.Background = (Brush)((obj is SolidColorBrush) ? obj : null);
-				((Control)NameTextBox).Foreground = (Brush)new SolidColorBrush(Colors.White);
+				return (bool)((DependencyObject)this).GetValue(IsFocusedProperty);
 			}
-			else
+			set
 			{
-				Border.Background = (Brush)new SolidColorBrush(Colors.Transparent);
-				((Control)NameTextBox).Foreground = (Brush)new SolidColorBrush(Colors.Black);
+				//IL_0054: Unknown result type (might be due to invalid IL or missing references)
+				//IL_0059: Unknown result type (might be due to invalid IL or missing references)
+				//IL_0063: Expected Obj, but got Unknown
+				//IL_0069: Unknown result type (might be due to invalid IL or missing references)
+				//IL_006e: Unknown result type (might be due to invalid IL or missing references)
+				//IL_0078: Expected Obj, but got Unknown
+				//IL_003e: Unknown result type (might be due to invalid IL or missing references)
+				//IL_0043: Unknown result type (might be due to invalid IL or missing references)
+				//IL_004d: Expected Obj, but got Unknown
+				((DependencyObject)this).SetValue(IsFocusedProperty, (object)value);
+				if (value)
+				{
+					Border border = Border;
+					object obj = Application.Current.Resources[(object)"MessengerBlueBrush"];
+					border.Background = (Brush)((obj is SolidColorBrush) ? obj : null);
+					((Control)NameTextBox).Foreground = (Brush)new SolidColorBrush(Colors.White);
+				}
+				else
+				{
+					Border.Background = (Brush)new SolidColorBrush(Colors.Transparent);
+					((Control)NameTextBox).Foreground = (Brush)new SolidColorBrush(Colors.Black);
+				}
 			}
 		}
-	}
 
-	public string Text
-	{
-		get
+		public string Text
 		{
-			return NameTextBox.Text;
+			get
+			{
+				return NameTextBox.Text;
+			}
+			set
+			{
+				NameTextBox.Text = value;
+			}
 		}
-		set
+
+		public string ClassName => "Token";
+
+		public Token()
 		{
-			NameTextBox.Text = value;
+			InitializeComponent();
 		}
-	}
 
-	public string ClassName => "Token";
-
-	public Token()
-	{
-		InitializeComponent();
-	}
-
-	[DebuggerNonUserCode]
-	public void InitializeComponent()
-	{
-		//IL_002d: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0037: Expected Obj, but got Unknown
-		if (!_contentLoaded)
+		[DebuggerNonUserCode]
+		public void InitializeComponent()
 		{
-			_contentLoaded = true;
-			Application.LoadComponent((object)this, new Uri("/Facebook.Messenger.WP8;component/Controls/Messages/Token.xaml", UriKind.Relative));
-			Border = (Border)((FrameworkElement)this).FindName("Border");
-			NameTextBox = (DynamicTextBlock)((FrameworkElement)this).FindName("NameTextBox");
+			//IL_002d: Unknown result type (might be due to invalid IL or missing references)
+			//IL_0037: Expected Obj, but got Unknown
+			if (!_contentLoaded)
+			{
+				_contentLoaded = true;
+				Application.LoadComponent((object)this, new Uri("/Facebook.Messenger.WP8;component/Controls/Messages/Token.xaml", UriKind.Relative));
+				Border = (Border)((FrameworkElement)this).FindName("Border");
+				NameTextBox = (DynamicTextBlock)((FrameworkElement)this).FindName("NameTextBox");
+			}
 		}
-	}
 
-	static Token()
-	{
-		//IL_001f: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0029: Expected Obj, but got Unknown
+		static Token()
+		{
+			//IL_001f: Unknown result type (might be due to invalid IL or missing references)
+			//IL_0029: Expected Obj, but got Unknown
+		}
 	}
 }

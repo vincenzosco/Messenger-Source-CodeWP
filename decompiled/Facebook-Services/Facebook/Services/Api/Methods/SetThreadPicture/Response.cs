@@ -1,11 +1,12 @@
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 
-namespace Facebook.Services.Api.Methods.SetThreadPicture;
-
-[JsonObject(MemberSerialization.OptIn)]
-[DataContract]
-public class Response : FacebookApiResponse
+namespace Facebook.Services.Api.Methods.SetThreadPicture
 {
-	public string PictureHash { get; set; }
+	[JsonObject(MemberSerialization.OptIn)]
+	[DataContract]
+	public class Response : FacebookApiResponse
+	{
+		public string PictureHash { get; set; }
+	}
 }

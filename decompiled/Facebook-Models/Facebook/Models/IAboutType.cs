@@ -1,6 +1,7 @@
-namespace Facebook.Models;
-
-public interface IAboutType
+namespace Facebook.Models
 {
-	AboutType Type { get; }
+	public interface IAboutType
+	{
+		AboutType Type { get; }
+	}
 }

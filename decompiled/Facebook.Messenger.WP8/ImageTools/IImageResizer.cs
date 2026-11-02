@@ -1,6 +1,7 @@
-namespace ImageTools;
-
-public interface IImageResizer
+namespace ImageTools
 {
-	void Resize(ImageBase source, ImageBase target, int width, int height);
+	public interface IImageResizer
+	{
+		void Resize(ImageBase source, ImageBase target, int width, int height);
+	}
 }

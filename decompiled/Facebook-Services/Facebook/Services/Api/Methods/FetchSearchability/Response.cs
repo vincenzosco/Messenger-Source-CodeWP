@@ -3,13 +3,14 @@ using System.Runtime.Serialization;
 using Facebook.Models;
 using Newtonsoft.Json;
 
-namespace Facebook.Services.Api.Methods.FetchSearchability;
-
-public class Response : FacebookApiResponse
+namespace Facebook.Services.Api.Methods.FetchSearchability
 {
-	[DataMember]
-	[JsonProperty(PropertyName = "data")]
-	public List<PrivacyOption> PrivacyOptions;
+	public class Response : FacebookApiResponse
+	{
+		[DataMember]
+		[JsonProperty(PropertyName = "data")]
+		public List<PrivacyOption> PrivacyOptions;
 
-	public PhoneSearchabilityTypes Searchability;
+		public PhoneSearchabilityTypes Searchability;
+	}
 }

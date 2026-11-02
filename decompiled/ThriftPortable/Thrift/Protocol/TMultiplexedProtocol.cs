@@ -1,27 +1,28 @@
-namespace Thrift.Protocol;
-
-public class TMultiplexedProtocol : TProtocolDecorator
+namespace Thrift.Protocol
 {
-	public static string SEPARATOR = ":";
-
-	private string ServiceName;
-
-	public TMultiplexedProtocol(TProtocol protocol, string serviceName)
-		: base(protocol)
+	public class TMultiplexedProtocol : TProtocolDecorator
 	{
-		ServiceName = serviceName;
-	}
+		public static string SEPARATOR = ":";
 
-	public override void WriteMessageBegin(TMessage tMessage)
-	{
-		TMessageType type = tMessage.Type;
-		if (type == TMessageType.Call || type == TMessageType.Oneway)
+		private string ServiceName;
+
+		public TMultiplexedProtocol(TProtocol protocol, string serviceName)
+			: base(protocol)
 		{
-			base.WriteMessageBegin(new TMessage(ServiceName + SEPARATOR + tMessage.Name, tMessage.Type, tMessage.SeqID));
+			ServiceName = serviceName;
 		}
-		else
+
+		public override void WriteMessageBegin(TMessage tMessage)
 		{
-			base.WriteMessageBegin(tMessage);
+			TMessageType type = tMessage.Type;
+			if (type == TMessageType.Call || type == TMessageType.Oneway)
+			{
+				base.WriteMessageBegin(new TMessage(ServiceName + SEPARATOR + tMessage.Name, tMessage.Type, tMessage.SeqID));
+			}
+			else
+			{
+				base.WriteMessageBegin(tMessage);
+			}
 		}
 	}
 }

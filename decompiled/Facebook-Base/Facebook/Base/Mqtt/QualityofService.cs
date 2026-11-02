@@ -1,7 +1,8 @@
-namespace Facebook.Base.Mqtt;
-
-public enum QualityofService
+namespace Facebook.Base.Mqtt
 {
-	FireAndForget,
-	AcknowledgedDelivery
+	public enum QualityofService
+	{
+		FireAndForget,
+		AcknowledgedDelivery
+	}
 }

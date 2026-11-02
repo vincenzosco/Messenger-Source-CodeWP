@@ -1,18 +1,24 @@
 using System;
 
-namespace Facebook.Messenger;
-
-public static class RotationAngleExtension
+namespace Facebook.Messenger
 {
-	public static int ToDegrees(this RotationAngle angle)
+	public static class RotationAngleExtension
 	{
-		return angle switch
+		public static int ToDegrees(this RotationAngle angle)
 		{
-			RotationAngle.Portrait => 0, 
-			RotationAngle.LandscapeLeft => 90, 
-			RotationAngle.PortraitDown => 180, 
-			RotationAngle.LandscapeRight => 270, 
-			_ => throw new ArgumentOutOfRangeException("angle"), 
-		};
+			switch (angle)
+			{
+			case RotationAngle.Portrait:
+				return 0;
+			case RotationAngle.LandscapeLeft:
+				return 90;
+			case RotationAngle.PortraitDown:
+				return 180;
+			case RotationAngle.LandscapeRight:
+				return 270;
+			default:
+				throw new ArgumentOutOfRangeException("angle");
+			}
+		}
 	}
 }

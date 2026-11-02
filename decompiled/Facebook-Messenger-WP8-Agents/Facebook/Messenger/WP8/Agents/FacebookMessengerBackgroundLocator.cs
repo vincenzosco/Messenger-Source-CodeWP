@@ -10,45 +10,46 @@ using Facebook.Services.Cache;
 using Facebook.Services.MessageSender;
 using Facebook.Services.Mqtt;
 
-namespace Facebook.Messenger.WP8.Agents;
-
-public class FacebookMessengerBackgroundLocator : FacebookMessengerLocator
+namespace Facebook.Messenger.WP8.Agents
 {
-	private static readonly FacebookMessengerBackgroundLocator PrivateInstance = new FacebookMessengerBackgroundLocator();
-
-	public static FacebookMessengerBackgroundLocator Instance => PrivateInstance;
-
-	protected FacebookMessengerBackgroundLocator()
+	public class FacebookMessengerBackgroundLocator : FacebookMessengerLocator
 	{
-		RegisterSingle(CreateBackgroundInstance);
-		RegisterSingle((Func<IDispatcher>)(() => new BackgroundDispatcher()));
-	}
+		private static readonly FacebookMessengerBackgroundLocator PrivateInstance = new FacebookMessengerBackgroundLocator();
 
-	protected override IList<BackgroundService> GetInitializationOrderedServices()
-	{
-		return new BackgroundService[4]
+		public static FacebookMessengerBackgroundLocator Instance => PrivateInstance;
+
+		protected FacebookMessengerBackgroundLocator()
 		{
-			GetInstance<Facebook.Services.Cache.Service>(),
-			GetInstance<Facebook.Services.Analytics.Service>(),
-			GetInstance<Facebook.Services.Mqtt.Service>(),
-			GetInstance<Facebook.Services.MessageSender.Service>()
-		};
-	}
+			RegisterSingle(CreateBackgroundInstance);
+			RegisterSingle((Func<IDispatcher>)(() => new BackgroundDispatcher()));
+		}
 
-	protected override ApplicationState CreateApplicationState()
-	{
-		return new ApplicationState(ApplicationState.Runtype.BackgroundSending);
-	}
+		protected override IList<BackgroundService> GetInitializationOrderedServices()
+		{
+			return new BackgroundService[4]
+			{
+				GetInstance<Facebook.Services.Cache.Service>(),
+				GetInstance<Facebook.Services.Analytics.Service>(),
+				GetInstance<Facebook.Services.Mqtt.Service>(),
+				GetInstance<Facebook.Services.MessageSender.Service>()
+			};
+		}
 
-	private IBackgroundInstance CreateBackgroundInstance()
-	{
-		return new MessageSendingBackgroundInstance(GetInstance<FacebookContext>(), GetInstance<ServiceEngine>(), GetInstance<Facebook.Services.MessageSender.Service>());
-	}
+		protected override ApplicationState CreateApplicationState()
+		{
+			return new ApplicationState(ApplicationState.Runtype.BackgroundSending);
+		}
 
-	protected override List<ICache> GetCaches()
-	{
-		List<ICache> list = new List<ICache>();
-		list.Add(GetInstance<AnalyticsCache>());
-		return list;
+		private IBackgroundInstance CreateBackgroundInstance()
+		{
+			return new MessageSendingBackgroundInstance(GetInstance<FacebookContext>(), GetInstance<ServiceEngine>(), GetInstance<Facebook.Services.MessageSender.Service>());
+		}
+
+		protected override List<ICache> GetCaches()
+		{
+			List<ICache> list = new List<ICache>();
+			list.Add(GetInstance<AnalyticsCache>());
+			return list;
+		}
 	}
 }

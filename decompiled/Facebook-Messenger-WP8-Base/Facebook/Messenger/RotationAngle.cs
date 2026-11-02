@@ -1,9 +1,10 @@
-namespace Facebook.Messenger;
-
-public enum RotationAngle
+namespace Facebook.Messenger
 {
-	Portrait,
-	LandscapeLeft,
-	PortraitDown,
-	LandscapeRight
+	public enum RotationAngle
+	{
+		Portrait,
+		LandscapeLeft,
+		PortraitDown,
+		LandscapeRight
+	}
 }

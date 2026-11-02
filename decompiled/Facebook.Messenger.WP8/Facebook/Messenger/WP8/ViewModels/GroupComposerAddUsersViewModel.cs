@@ -17,140 +17,142 @@ using GalaSoft.MvvmLight.Command;
 using GalaSoft.MvvmLight.Messaging;
 using Microsoft.Practices.ServiceLocation;
 
-namespace Facebook.Messenger.WP8.ViewModels;
-
-public class GroupComposerAddUsersViewModel : GroupContactsViewModel
+namespace Facebook.Messenger.WP8.ViewModels
 {
-	private string _threadImageUri;
-
-	private string _groupName;
-
-	private ObservableCollection<FacebookUser> _selectedUsers;
-
-	private bool _isCreatingGroup;
-
-	private Facebook.Messenger.WP8.AudioController.Service _audioService;
-
-	protected RelayCommand<FacebookUser> _userDeselectedCommand;
-
-	protected RelayCommand _createGroupCommand;
-
-	public ObservableCollection<FacebookUser> SelectedUsers
+	public class GroupComposerAddUsersViewModel : GroupContactsViewModel
 	{
-		get
-		{
-			return _selectedUsers;
-		}
-		set
-		{
-			Set(ref _selectedUsers, value, broadcast: false, "SelectedUsers");
-		}
-	}
+		private string _threadImageUri;
 
-	public bool IsCreatingGroup
-	{
-		get
+		private string _groupName;
+
+		private ObservableCollection<FacebookUser> _selectedUsers;
+
+		private bool _isCreatingGroup;
+
+		private Facebook.Messenger.WP8.AudioController.Service _audioService;
+
+		protected RelayCommand<FacebookUser> _userDeselectedCommand;
+
+		protected RelayCommand _createGroupCommand;
+
+		public ObservableCollection<FacebookUser> SelectedUsers
 		{
-			return _isCreatingGroup;
-		}
-		set
-		{
-			Set(ref _isCreatingGroup, value, broadcast: false, "IsCreatingGroup");
-		}
-	}
-
-	private Facebook.Messenger.WP8.AudioController.Service AudioService => _audioService ?? (_audioService = ServiceLocator.Current.GetInstance<Facebook.Messenger.WP8.AudioController.Service>());
-
-	public RelayCommand<FacebookUser> UserDeselectedCommand => _userDeselectedCommand ?? (_userDeselectedCommand = new RelayCommand<FacebookUser>(ExecuteRemoveUser));
-
-	public RelayCommand CreateGroupCommand => _createGroupCommand ?? (_createGroupCommand = new RelayCommand(ExecuteCreateGroup));
-
-	public GroupComposerAddUsersViewModel(Facebook.Services.Api.Service apiService, FacebookContext context, Navigator navigator, IDispatcher dispatcher, INetworkStatus networkStatus, ContactSyncFeatureEnabledProvider contactSyncFeatureEnabledProvider, PhoneContactsManager phoneContactsManager)
-		: base(apiService, context, navigator, dispatcher, networkStatus, contactSyncFeatureEnabledProvider, phoneContactsManager)
-	{
-		IsSearching = true;
-		SelectedUsers = new ObservableCollection<FacebookUser>();
-		_contactsIdsToExclude = new HashSet<string>();
-		if (Navigator.GetAndClearNavigationData() is MailUser user)
-		{
-			AddUser(user);
-		}
-	}
-
-	private void AddUser(FacebookUser user)
-	{
-		SelectedUsers.Add(user);
-		_contactsIdsToExclude.Add(user.Id);
-	}
-
-	public override void SetPath(Uri uri)
-	{
-		base.SetPath(uri);
-		if (PathUri.Params.ContainsKey("groupName"))
-		{
-			_groupName = PathUri.Params["groupName"];
-		}
-		if (PathUri.Params.ContainsKey("threadImageUri"))
-		{
-			_threadImageUri = PathUri.Params["threadImageUri"];
-		}
-	}
-
-	protected override void LoadContacts()
-	{
-	}
-
-	public override void OnUserSelected(UserSelectedEventArgs args)
-	{
-		if (args.SelectedFacebookUsers == null || !args.SelectedFacebookUsers.Any())
-		{
-			return;
-		}
-		foreach (FacebookUser selectedFacebookUser in args.SelectedFacebookUsers)
-		{
-			if (!_contactsIdsToExclude.Contains(selectedFacebookUser.Id))
+			get
 			{
-				AddUser(selectedFacebookUser);
+				return _selectedUsers;
+			}
+			set
+			{
+				Set(ref _selectedUsers, value, false, "SelectedUsers");
 			}
 		}
-	}
 
-	private void ExecuteRemoveUser(FacebookUser user)
-	{
-		if (!IsCreatingGroup)
+		public bool IsCreatingGroup
 		{
-			SelectedUsers.Remove(user);
-			_contactsIdsToExclude.Remove(user.Id);
-		}
-	}
-
-	private async void ExecuteCreateGroup()
-	{
-		if (!IsCreatingGroup)
-		{
-			IsCreatingGroup = true;
-			Facebook.Services.Api.Methods.CreateGroup.Request request = new Facebook.Services.Api.Methods.CreateGroup.Request(_groupName, SelectedUsers.Select((FacebookUser user) => user.Id).ToList())
+			get
 			{
-				AccessToken = Context.Session.Credentials.AccessToken
-			};
-			if (!string.IsNullOrWhiteSpace(_threadImageUri))
-			{
-				request.ImagePath = FileUtil.ConvertUrlToPath(_threadImageUri);
+				return _isCreatingGroup;
 			}
-			AudioService.PlayNewGroupCreatedTap();
-			Facebook.Services.Api.Methods.CreateGroup.Response response = await ApiService.ExecuteAsync<Facebook.Services.Api.Methods.CreateGroup.Request, Facebook.Services.Api.Methods.CreateGroup.Response>(request);
-			IsCreatingGroup = false;
-			if (response.HasError())
+			set
 			{
-				OnError(new Error
+				Set(ref _isCreatingGroup, value, false, "IsCreatingGroup");
+			}
+		}
+
+		private Facebook.Messenger.WP8.AudioController.Service AudioService => _audioService ?? (_audioService = ServiceLocator.Current.GetInstance<Facebook.Messenger.WP8.AudioController.Service>());
+
+		public RelayCommand<FacebookUser> UserDeselectedCommand => _userDeselectedCommand ?? (_userDeselectedCommand = new RelayCommand<FacebookUser>(ExecuteRemoveUser));
+
+		public RelayCommand CreateGroupCommand => _createGroupCommand ?? (_createGroupCommand = new RelayCommand(ExecuteCreateGroup));
+
+		public GroupComposerAddUsersViewModel(Facebook.Services.Api.Service apiService, FacebookContext context, Navigator navigator, IDispatcher dispatcher, INetworkStatus networkStatus, ContactSyncFeatureEnabledProvider contactSyncFeatureEnabledProvider, PhoneContactsManager phoneContactsManager)
+			: base(apiService, context, navigator, dispatcher, networkStatus, contactSyncFeatureEnabledProvider, phoneContactsManager)
+		{
+			IsSearching = true;
+			SelectedUsers = new ObservableCollection<FacebookUser>();
+			_contactsIdsToExclude = new HashSet<string>();
+			MailUser mailUser = Navigator.GetAndClearNavigationData() as MailUser;
+			if (mailUser != null)
+			{
+				AddUser(mailUser);
+			}
+		}
+
+		private void AddUser(FacebookUser user)
+		{
+			SelectedUsers.Add(user);
+			_contactsIdsToExclude.Add(user.Id);
+		}
+
+		public override void SetPath(Uri uri)
+		{
+			base.SetPath(uri);
+			if (PathUri.Params.ContainsKey("groupName"))
+			{
+				_groupName = PathUri.Params["groupName"];
+			}
+			if (PathUri.Params.ContainsKey("threadImageUri"))
+			{
+				_threadImageUri = PathUri.Params["threadImageUri"];
+			}
+		}
+
+		protected override void LoadContacts()
+		{
+		}
+
+		public override void OnUserSelected(UserSelectedEventArgs args)
+		{
+			if (args.SelectedFacebookUsers == null || !args.SelectedFacebookUsers.Any())
+			{
+				return;
+			}
+			foreach (FacebookUser selectedFacebookUser in args.SelectedFacebookUsers)
+			{
+				if (!_contactsIdsToExclude.Contains(selectedFacebookUser.Id))
 				{
-					Message = StringLibrary.MessageBox_Label_CreateGroupFailed
-				});
+					AddUser(selectedFacebookUser);
+				}
 			}
-			else
+		}
+
+		private void ExecuteRemoveUser(FacebookUser user)
+		{
+			if (!IsCreatingGroup)
 			{
-				Navigator.GoBackToRoot();
-				GalaSoft.MvvmLight.Messaging.Messenger.Default.Send(new GroupPinnedSignal(response.Thread.Id));
+				SelectedUsers.Remove(user);
+				_contactsIdsToExclude.Remove(user.Id);
+			}
+		}
+
+		private async void ExecuteCreateGroup()
+		{
+			if (!IsCreatingGroup)
+			{
+				IsCreatingGroup = true;
+				Facebook.Services.Api.Methods.CreateGroup.Request request = new Facebook.Services.Api.Methods.CreateGroup.Request(_groupName, SelectedUsers.Select((FacebookUser user) => user.Id).ToList())
+				{
+					AccessToken = Context.Session.Credentials.AccessToken
+				};
+				if (!string.IsNullOrWhiteSpace(_threadImageUri))
+				{
+					request.ImagePath = FileUtil.ConvertUrlToPath(_threadImageUri);
+				}
+				AudioService.PlayNewGroupCreatedTap();
+				Facebook.Services.Api.Methods.CreateGroup.Response response = await ApiService.ExecuteAsync<Facebook.Services.Api.Methods.CreateGroup.Request, Facebook.Services.Api.Methods.CreateGroup.Response>(request);
+				IsCreatingGroup = false;
+				if (response.HasError())
+				{
+					OnError(new Error
+					{
+						Message = StringLibrary.MessageBox_Label_CreateGroupFailed
+					});
+				}
+				else
+				{
+					Navigator.GoBackToRoot();
+					GalaSoft.MvvmLight.Messaging.Messenger.Default.Send(new GroupPinnedSignal(response.Thread.Id));
+				}
 			}
 		}
 	}

@@ -4,47 +4,48 @@ using Facebook.Models;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
-namespace Facebook.Services.Api.Methods.FetchSticker;
-
-public class StickerConverter : JsonConverter
+namespace Facebook.Services.Api.Methods.FetchSticker
 {
-	private readonly string _stickerId;
-
-	public StickerConverter(string id)
+	public class StickerConverter : JsonConverter
 	{
-		_stickerId = id;
-	}
+		private readonly string _stickerId;
 
-	public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
-	{
-		throw new NotImplementedException();
-	}
-
-	public override object ReadJson(JsonReader reader, Type objectType, object existingValue, JsonSerializer serializer)
-	{
-		Response response = new Response();
-		if (reader.TokenType == JsonToken.StartObject)
+		public StickerConverter(string id)
 		{
-			JObject jObject = JObject.Load(reader);
-			JToken nestedDescendant = jObject.GetNestedDescendant(_stickerId);
-			if (nestedDescendant != null)
+			_stickerId = id;
+		}
+
+		public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
+		{
+			throw new NotImplementedException();
+		}
+
+		public override object ReadJson(JsonReader reader, Type objectType, object existingValue, JsonSerializer serializer)
+		{
+			Response response = new Response();
+			if (reader.TokenType == JsonToken.StartObject)
 			{
-				response.Sticker = nestedDescendant.ToObject<Sticker>();
+				JObject jObject = JObject.Load(reader);
+				JToken nestedDescendant = jObject.GetNestedDescendant(_stickerId);
+				if (nestedDescendant != null)
+				{
+					response.Sticker = nestedDescendant.ToObject<Sticker>();
+				}
+				else
+				{
+					response = FacebookApiResponse.FromApiResponse<Response>(jObject.ToObject<FacebookApiResponse>());
+				}
 			}
 			else
 			{
-				response = FacebookApiResponse.FromApiResponse<Response>(jObject.ToObject<FacebookApiResponse>());
+				serializer.Populate(reader, response);
 			}
+			return response;
 		}
-		else
-		{
-			serializer.Populate(reader, response);
-		}
-		return response;
-	}
 
-	public override bool CanConvert(Type objectType)
-	{
-		return true;
+		public override bool CanConvert(Type objectType)
+		{
+			return true;
+		}
 	}
 }

@@ -1,9 +1,10 @@
-namespace ImageTools;
-
-public enum RotationType
+namespace ImageTools
 {
-	None,
-	Rotate90,
-	Rotate180,
-	Rotate270
+	public enum RotationType
+	{
+		None,
+		Rotate90,
+		Rotate180,
+		Rotate270
+	}
 }

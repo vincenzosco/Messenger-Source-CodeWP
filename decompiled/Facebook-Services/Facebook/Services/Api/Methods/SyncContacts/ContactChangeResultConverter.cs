@@ -3,42 +3,43 @@ using System.Collections.Generic;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
-namespace Facebook.Services.Api.Methods.SyncContacts;
-
-public class ContactChangeResultConverter : JsonConverter
+namespace Facebook.Services.Api.Methods.SyncContacts
 {
-	public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
+	public class ContactChangeResultConverter : JsonConverter
 	{
-		throw new NotImplementedException();
-	}
-
-	public override object ReadJson(JsonReader reader, Type objectType, object existingValue, JsonSerializer serializer)
-	{
-		Dictionary<string, ContactChangeResult> dictionary = new Dictionary<string, ContactChangeResult>();
-		if (reader.TokenType == JsonToken.StartObject)
+		public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
 		{
-			JObject jObject = JObject.Load(reader);
-			foreach (KeyValuePair<string, JToken> item in jObject)
+			throw new NotImplementedException();
+		}
+
+		public override object ReadJson(JsonReader reader, Type objectType, object existingValue, JsonSerializer serializer)
+		{
+			Dictionary<string, ContactChangeResult> dictionary = new Dictionary<string, ContactChangeResult>();
+			if (reader.TokenType == JsonToken.StartObject)
 			{
-				string text = item.Value["update_type"].ToString();
-				if (!(text != "add"))
+				JObject jObject = JObject.Load(reader);
+				foreach (KeyValuePair<string, JToken> item in jObject)
 				{
-					string remoteContactId = item.Value["contact"]["id"].ToString();
-					string matchConfidence = item.Value["match_confidence"].ToString();
-					dictionary.Add(item.Key, new ContactChangeResult
+					string text = item.Value["update_type"].ToString();
+					if (!(text != "add"))
 					{
-						UpdateType = text,
-						RemoteContactId = remoteContactId,
-						MatchConfidence = matchConfidence
-					});
+						string remoteContactId = item.Value["contact"]["id"].ToString();
+						string matchConfidence = item.Value["match_confidence"].ToString();
+						dictionary.Add(item.Key, new ContactChangeResult
+						{
+							UpdateType = text,
+							RemoteContactId = remoteContactId,
+							MatchConfidence = matchConfidence
+						});
+					}
 				}
 			}
+			return dictionary;
 		}
-		return dictionary;
-	}
 
-	public override bool CanConvert(Type objectType)
-	{
-		return true;
+		public override bool CanConvert(Type objectType)
+		{
+			return true;
+		}
 	}
 }

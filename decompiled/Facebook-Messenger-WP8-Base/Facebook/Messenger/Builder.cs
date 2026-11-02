@@ -1,31 +1,32 @@
 using System;
 
-namespace Facebook.Messenger;
-
-internal class Builder<T> : IBuilder<T>
+namespace Facebook.Messenger
 {
-	private readonly Lazy<T> _singleton;
-
-	private readonly Func<T> _builder;
-
-	private readonly bool _isSingleton;
-
-	public Builder(Func<T> builder, bool singleton = false)
+	internal class Builder<T> : IBuilder<T>
 	{
-		_builder = builder;
-		_isSingleton = singleton;
-		if (_isSingleton)
-		{
-			_singleton = new Lazy<T>(builder, isThreadSafe: true);
-		}
-	}
+		private readonly Lazy<T> _singleton;
 
-	public T Get()
-	{
-		if (!_isSingleton)
+		private readonly Func<T> _builder;
+
+		private readonly bool _isSingleton;
+
+		public Builder(Func<T> builder, bool singleton = false)
 		{
-			return _builder();
+			_builder = builder;
+			_isSingleton = singleton;
+			if (_isSingleton)
+			{
+				_singleton = new Lazy<T>(builder, true);
+			}
 		}
-		return _singleton.Value;
+
+		public T Get()
+		{
+			if (!_isSingleton)
+			{
+				return _builder();
+			}
+			return _singleton.Value;
+		}
 	}
 }

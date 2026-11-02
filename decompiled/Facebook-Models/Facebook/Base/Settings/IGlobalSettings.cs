@@ -1,19 +1,20 @@
 using System.Threading.Tasks;
 using Facebook.Models;
 
-namespace Facebook.Base.Settings;
-
-public interface IGlobalSettings
+namespace Facebook.Base.Settings
 {
-	string FacebookMachineId { get; set; }
+	public interface IGlobalSettings
+	{
+		string FacebookMachineId { get; set; }
 
-	string DeviceIdentifier { get; }
+		string DeviceIdentifier { get; }
 
-	void ClearSession(string id);
+		void ClearSession(string id);
 
-	bool SaveSession(FacebookSession session);
+		bool SaveSession(FacebookSession session);
 
-	FacebookSession LoadSession();
+		FacebookSession LoadSession();
 
-	Task PurgeUserFolders(params string[] excludes);
+		Task PurgeUserFolders(params string[] excludes);
+	}
 }

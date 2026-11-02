@@ -1,6 +1,7 @@
-namespace Facebook.Messenger.WP8.Controls.Base;
-
-public interface IResetableView
+namespace Facebook.Messenger.WP8.Controls.Base
 {
-	void ResetView(bool recycled);
+	public interface IResetableView
+	{
+		void ResetView(bool recycled);
+	}
 }

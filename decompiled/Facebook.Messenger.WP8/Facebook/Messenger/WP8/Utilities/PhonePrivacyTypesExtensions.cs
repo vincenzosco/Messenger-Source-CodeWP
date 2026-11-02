@@ -1,21 +1,30 @@
 using System;
 
-namespace Facebook.Messenger.WP8.Utilities;
-
-public static class PhonePrivacyTypesExtensions
+namespace Facebook.Messenger.WP8.Utilities
 {
-	public static int GetPublicityRankDescending(this PhonePrivacyTypes type)
+	public static class PhonePrivacyTypesExtensions
 	{
-		return type switch
+		public static int GetPublicityRankDescending(this PhonePrivacyTypes type)
 		{
-			PhonePrivacyTypes.Everyone => 0, 
-			PhonePrivacyTypes.FriendsOfFriends => 1, 
-			PhonePrivacyTypes.MutualFriends => 2, 
-			PhonePrivacyTypes.AllFriends => 3, 
-			PhonePrivacyTypes.Custom => 4, 
-			PhonePrivacyTypes.Self => 5, 
-			PhonePrivacyTypes.Unknown => 6, 
-			_ => throw new ArgumentOutOfRangeException("type"), 
-		};
+			switch (type)
+			{
+			case PhonePrivacyTypes.Everyone:
+				return 0;
+			case PhonePrivacyTypes.FriendsOfFriends:
+				return 1;
+			case PhonePrivacyTypes.MutualFriends:
+				return 2;
+			case PhonePrivacyTypes.AllFriends:
+				return 3;
+			case PhonePrivacyTypes.Custom:
+				return 4;
+			case PhonePrivacyTypes.Self:
+				return 5;
+			case PhonePrivacyTypes.Unknown:
+				return 6;
+			default:
+				throw new ArgumentOutOfRangeException("type");
+			}
+		}
 	}
 }

@@ -1,21 +1,22 @@
-namespace Facebook.Models;
-
-public class FacebookCredentials
+namespace Facebook.Models
 {
-	public string AccessToken { get; set; }
-
-	public string SessionKey { get; set; }
-
-	public string Secret { get; set; }
-
-	public string Id { get; set; }
-
-	public bool IsValid()
+	public class FacebookCredentials
 	{
-		if (!string.IsNullOrWhiteSpace(AccessToken) && !string.IsNullOrWhiteSpace(SessionKey) && !string.IsNullOrWhiteSpace(Secret))
+		public string AccessToken { get; set; }
+
+		public string SessionKey { get; set; }
+
+		public string Secret { get; set; }
+
+		public string Id { get; set; }
+
+		public bool IsValid()
 		{
-			return !string.IsNullOrWhiteSpace(Id);
+			if (!string.IsNullOrWhiteSpace(AccessToken) && !string.IsNullOrWhiteSpace(SessionKey) && !string.IsNullOrWhiteSpace(Secret))
+			{
+				return !string.IsNullOrWhiteSpace(Id);
+			}
+			return false;
 		}
-		return false;
 	}
 }

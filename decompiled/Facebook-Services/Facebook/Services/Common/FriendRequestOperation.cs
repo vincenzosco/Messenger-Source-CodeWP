@@ -1,11 +1,12 @@
-namespace Facebook.Services.Common;
-
-public enum FriendRequestOperation
+namespace Facebook.Services.Common
 {
-	Add,
-	Cancel,
-	Remove,
-	Confirm,
-	Ignore,
-	Delete
+	public enum FriendRequestOperation
+	{
+		Add,
+		Cancel,
+		Remove,
+		Confirm,
+		Ignore,
+		Delete
+	}
 }

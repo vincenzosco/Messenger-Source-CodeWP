@@ -1,16 +1,17 @@
 using System;
 
-namespace Microsoft.Phone.Controls;
-
-public class PhotoLoadingSignal
+namespace Microsoft.Phone.Controls
 {
-	public Uri ImageUri { get; private set; }
-
-	public PhotoLoadingStatus LoadingStatus { get; private set; }
-
-	public PhotoLoadingSignal(Uri imageUri, PhotoLoadingStatus loadingStatus)
+	public class PhotoLoadingSignal
 	{
-		ImageUri = imageUri;
-		LoadingStatus = loadingStatus;
+		public Uri ImageUri { get; private set; }
+
+		public PhotoLoadingStatus LoadingStatus { get; private set; }
+
+		public PhotoLoadingSignal(Uri imageUri, PhotoLoadingStatus loadingStatus)
+		{
+			ImageUri = imageUri;
+			LoadingStatus = loadingStatus;
+		}
 	}
 }

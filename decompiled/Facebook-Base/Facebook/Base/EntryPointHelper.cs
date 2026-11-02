@@ -1,13 +1,14 @@
 using System;
 
-namespace Facebook.Base;
-
-public static class EntryPointHelper
+namespace Facebook.Base
 {
-	private const string LaunchUrlFormatWithEntryPoint = "/Views/Home.xaml?entry_point={0}";
-
-	public static Uri GetLaunchUri(EntryPoint entryPoint)
+	public static class EntryPointHelper
 	{
-		return new Uri($"/Views/Home.xaml?entry_point={entryPoint}", UriKind.Relative);
+		private const string LaunchUrlFormatWithEntryPoint = "/Views/Home.xaml?entry_point={0}";
+
+		public static Uri GetLaunchUri(EntryPoint entryPoint)
+		{
+			return new Uri($"/Views/Home.xaml?entry_point={entryPoint}", UriKind.Relative);
+		}
 	}
 }

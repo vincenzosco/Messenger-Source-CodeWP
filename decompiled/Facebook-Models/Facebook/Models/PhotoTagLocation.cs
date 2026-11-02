@@ -1,55 +1,56 @@
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 
-namespace Facebook.Models;
-
-public class PhotoTagLocation
+namespace Facebook.Models
 {
-	private float? _xCoordFraction;
-
-	private float? _yCoordFraction;
-
-	[JsonProperty("x")]
-	[DataMember]
-	public float? XCoordFraction
+	public class PhotoTagLocation
 	{
-		get
+		private float? _xCoordFraction;
+
+		private float? _yCoordFraction;
+
+		[JsonProperty("x")]
+		[DataMember]
+		public float? XCoordFraction
 		{
-			return _xCoordFraction;
-		}
-		set
-		{
-			_xCoordFraction = value;
-			if (!XCoordPercent.HasValue)
+			get
 			{
-				XCoordPercent = _xCoordFraction * 100f;
+				return _xCoordFraction;
+			}
+			set
+			{
+				_xCoordFraction = value;
+				if (!XCoordPercent.HasValue)
+				{
+					XCoordPercent = _xCoordFraction * 100f;
+				}
 			}
 		}
-	}
 
-	[DataMember]
-	[JsonProperty("y")]
-	public float? YCoordFraction
-	{
-		get
+		[DataMember]
+		[JsonProperty("y")]
+		public float? YCoordFraction
 		{
-			return _yCoordFraction;
-		}
-		set
-		{
-			_yCoordFraction = value;
-			if (!YCoordPercent.HasValue)
+			get
 			{
-				YCoordPercent = _yCoordFraction * 100f;
+				return _yCoordFraction;
+			}
+			set
+			{
+				_yCoordFraction = value;
+				if (!YCoordPercent.HasValue)
+				{
+					YCoordPercent = _yCoordFraction * 100f;
+				}
 			}
 		}
+
+		public float? XCoordAbs { get; set; }
+
+		public float? YCoordAbs { get; set; }
+
+		public float? XCoordPercent { get; set; }
+
+		public float? YCoordPercent { get; set; }
 	}
-
-	public float? XCoordAbs { get; set; }
-
-	public float? YCoordAbs { get; set; }
-
-	public float? XCoordPercent { get; set; }
-
-	public float? YCoordPercent { get; set; }
 }

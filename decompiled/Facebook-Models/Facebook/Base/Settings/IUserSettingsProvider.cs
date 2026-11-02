@@ -1,8 +1,9 @@
-namespace Facebook.Base.Settings;
-
-public interface IUserSettingsProvider
+namespace Facebook.Base.Settings
 {
-	IUserSettings GetOrCreate(string id);
+	public interface IUserSettingsProvider
+	{
+		IUserSettings GetOrCreate(string id);
 
-	void Clear(string id);
+		void Clear(string id);
+	}
 }

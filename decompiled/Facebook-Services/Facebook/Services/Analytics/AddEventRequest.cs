@@ -1,19 +1,20 @@
 using Facebook.Base;
 
-namespace Facebook.Services.Analytics;
-
-public class AddEventRequest : Request
+namespace Facebook.Services.Analytics
 {
-	public AnalyticsEvent Event { get; private set; }
-
-	public AddEventRequest(string name, string module)
+	public class AddEventRequest : Request
 	{
-		Event = new AnalyticsEvent(name, module);
-	}
+		public AnalyticsEvent Event { get; private set; }
 
-	public AddEventRequest AddData(string key, string value)
-	{
-		Event.AddData(key, value ?? string.Empty);
-		return this;
+		public AddEventRequest(string name, string module)
+		{
+			Event = new AnalyticsEvent(name, module);
+		}
+
+		public AddEventRequest AddData(string key, string value)
+		{
+			Event.AddData(key, value ?? string.Empty);
+			return this;
+		}
 	}
 }

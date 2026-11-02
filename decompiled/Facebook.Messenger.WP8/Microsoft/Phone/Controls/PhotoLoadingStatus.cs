@@ -1,7 +1,8 @@
-namespace Microsoft.Phone.Controls;
-
-public enum PhotoLoadingStatus
+namespace Microsoft.Phone.Controls
 {
-	Loading,
-	Loaded
+	public enum PhotoLoadingStatus
+	{
+		Loading,
+		Loaded
+	}
 }

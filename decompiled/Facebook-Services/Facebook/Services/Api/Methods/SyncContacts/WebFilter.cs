@@ -3,27 +3,28 @@ using Facebook.Services.Api.Attributes;
 using Facebook.Services.Http;
 using Newtonsoft.Json;
 
-namespace Facebook.Services.Api.Methods.SyncContacts;
-
-[Bundle(BundleType.Web, typeof(Request), typeof(Response))]
-public class WebFilter : FacebookApiFilter<Request, Response>
+namespace Facebook.Services.Api.Methods.SyncContacts
 {
-	public WebFilter(ServiceContext context)
-		: base(context)
+	[Bundle(BundleType.Web, typeof(Request), typeof(Response))]
+	public class WebFilter : FacebookApiFilter<Request, Response>
 	{
-	}
-
-	public override async Task<Response> ExecuteAsync(Request request, IHandler next)
-	{
-		Facebook.Services.Http.Request graph = CreateGraphRequest(request, "me/bulkcontacts").SetHttpMethod(Method.Post).AddParam("contact_changes", JsonConvert.SerializeObject(request.ContactChanges));
-		Facebook.Services.Http.Response raw = await ExecuteHttpRequest(graph);
-		if (raw.HasError())
+		public WebFilter(ServiceContext context)
+			: base(context)
 		{
-			return new Response
-			{
-				Error = raw.Error
-			};
 		}
-		return ParseResponse<Response>(raw);
+
+		public override async Task<Response> ExecuteAsync(Request request, IHandler next)
+		{
+			Facebook.Services.Http.Request graph = CreateGraphRequest(request, "me/bulkcontacts").SetHttpMethod(Method.Post).AddParam("contact_changes", JsonConvert.SerializeObject(request.ContactChanges));
+			Facebook.Services.Http.Response raw = await ExecuteHttpRequest(graph);
+			if (raw.HasError())
+			{
+				return new Response
+				{
+					Error = raw.Error
+				};
+			}
+			return ParseResponse<Response>(raw);
+		}
 	}
 }

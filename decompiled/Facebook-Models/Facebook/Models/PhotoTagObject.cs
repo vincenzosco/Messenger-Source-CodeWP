@@ -1,15 +1,16 @@
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 
-namespace Facebook.Models;
-
-public class PhotoTagObject
+namespace Facebook.Models
 {
-	[JsonProperty("location")]
-	[DataMember]
-	public PhotoTagLocation PhotoTagLocation { get; set; }
+	public class PhotoTagObject
+	{
+		[JsonProperty("location")]
+		[DataMember]
+		public PhotoTagLocation PhotoTagLocation { get; set; }
 
-	[DataMember]
-	[JsonProperty("tagger")]
-	public Actor Tagger { get; set; }
+		[DataMember]
+		[JsonProperty("tagger")]
+		public Actor Tagger { get; set; }
+	}
 }

@@ -1,8 +1,9 @@
-namespace Facebook.Models.Signals;
-
-public class MessageTypingSentSignal
+namespace Facebook.Models.Signals
 {
-	public string ToId { get; set; }
+	public class MessageTypingSentSignal
+	{
+		public string ToId { get; set; }
 
-	public bool State { get; set; }
+		public bool State { get; set; }
+	}
 }

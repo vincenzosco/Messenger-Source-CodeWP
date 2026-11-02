@@ -1,21 +1,22 @@
 using System.Windows;
 
-namespace Facebook.Messenger;
-
-public class VisibilityUtil
+namespace Facebook.Messenger
 {
-	public static Visibility FromBool(bool visible)
+	public class VisibilityUtil
 	{
-		if (visible)
+		public static Visibility FromBool(bool visible)
 		{
-			return (Visibility)0;
+			if (visible)
+			{
+				return (Visibility)0;
+			}
+			return (Visibility)1;
 		}
-		return (Visibility)1;
-	}
 
-	public static Visibility VisibleIfNotEmpty(string s)
-	{
-		//IL_0009: Unknown result type (might be due to invalid IL or missing references)
-		return FromBool(!string.IsNullOrWhiteSpace(s));
+		public static Visibility VisibleIfNotEmpty(string s)
+		{
+			//IL_0009: Unknown result type (might be due to invalid IL or missing references)
+			return FromBool(!string.IsNullOrWhiteSpace(s));
+		}
 	}
 }

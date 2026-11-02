@@ -1,14 +1,15 @@
-namespace Facebook.Base.Mqtt.Messages;
-
-public class SubscribeTopic
+namespace Facebook.Base.Mqtt.Messages
 {
-	public string Name { get; set; }
-
-	public int QualityOfService { get; set; }
-
-	public SubscribeTopic(string name, int qos)
+	public class SubscribeTopic
 	{
-		Name = name;
-		QualityOfService = qos;
+		public string Name { get; set; }
+
+		public int QualityOfService { get; set; }
+
+		public SubscribeTopic(string name, int qos)
+		{
+			Name = name;
+			QualityOfService = qos;
+		}
 	}
 }

@@ -1,8 +1,9 @@
-namespace Facebook.Messenger.WP8.Text;
-
-public struct ParsedText
+namespace Facebook.Messenger.WP8.Text
 {
-	public string text { get; set; }
+	public struct ParsedText
+	{
+		public string text { get; set; }
 
-	public TextType type { get; set; }
+		public TextType type { get; set; }
+	}
 }

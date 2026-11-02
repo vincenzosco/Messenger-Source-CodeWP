@@ -1,12 +1,13 @@
-namespace Facebook.Base.Network;
-
-public interface INetworkStatus
+namespace Facebook.Base.Network
 {
-	void AddHandler(NetworkStatusHandler handler);
+	public interface INetworkStatus
+	{
+		void AddHandler(NetworkStatusHandler handler);
 
-	void RemoveHandler(NetworkStatusHandler handler);
+		void RemoveHandler(NetworkStatusHandler handler);
 
-	bool IsConnected();
+		bool IsConnected();
 
-	void ResetNetworkMap();
+		void ResetNetworkMap();
+	}
 }

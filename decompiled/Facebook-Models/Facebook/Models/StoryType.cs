@@ -1,10 +1,11 @@
-namespace Facebook.Models;
-
-public enum StoryType
+namespace Facebook.Models
 {
-	Default,
-	Optical,
-	Loading,
-	LoadMore,
-	Empty
+	public enum StoryType
+	{
+		Default,
+		Optical,
+		Loading,
+		LoadMore,
+		Empty
+	}
 }

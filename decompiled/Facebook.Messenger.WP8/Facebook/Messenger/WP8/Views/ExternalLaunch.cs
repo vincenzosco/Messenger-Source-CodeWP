@@ -12,90 +12,91 @@ using Facebook.Models;
 using Microsoft.Phone.Controls;
 using Microsoft.Practices.ServiceLocation;
 
-namespace Facebook.Messenger.WP8.Views;
-
-public class ExternalLaunch : PhoneApplicationPage
+namespace Facebook.Messenger.WP8.Views
 {
-	private const string FbMessengerProtocol = "fbmessenger://";
-
-	private const string PageHome = "fbmessenger://home";
-
-	private const string PageComposer = "fbmessenger://composer";
-
-	private const string PageUser = "fbmessenger://user";
-
-	private const string RecipientIdKey = "recipientId";
-
-	private const string RecipientFriendlyNameKey = "name";
-
-	internal Grid LayoutRoot;
-
-	private bool _contentLoaded;
-
-	public ExternalLaunch()
+	public class ExternalLaunch : PhoneApplicationPage
 	{
-		InitializeComponent();
-	}
+		private const string FbMessengerProtocol = "fbmessenger://";
 
-	protected override void OnNavigatedTo(NavigationEventArgs e)
-	{
-		((Page)this).OnNavigatedTo(e);
-		Uri redirectUri = GetRedirectUri(e.Uri);
-		Navigator instance = ServiceLocator.Current.GetInstance<Navigator>();
-		instance.Reset(redirectUri);
-	}
+		private const string PageHome = "fbmessenger://home";
 
-	private Uri GetRedirectUri(Uri navigationUri)
-	{
-		FacebookContext instance = ServiceLocator.Current.GetInstance<FacebookContext>();
-		if (!instance.IsAuthenticated())
+		private const string PageComposer = "fbmessenger://composer";
+
+		private const string PageUser = "fbmessenger://user";
+
+		private const string RecipientIdKey = "recipientId";
+
+		private const string RecipientFriendlyNameKey = "name";
+
+		internal Grid LayoutRoot;
+
+		private bool _contentLoaded;
+
+		public ExternalLaunch()
 		{
-			return FacebookUri.GetFirstNavigationUri();
+			InitializeComponent();
 		}
-		UriQuery uriQuery = UriUtils.ParseQueryStringFromUri(navigationUri.OriginalString);
-		string uri = uriQuery["encodedLaunchUri"];
-		string text = UriUtils.StripQueryString(uri).TrimEnd('/');
-		UriQuery paramDictionary = UriUtils.ParseQueryStringFromUri(uri);
-		switch (text)
-		{
-		case "fbmessenger://user":
-			return GetRecipientUri(paramDictionary);
-		case "fbmessenger://composer":
-			return FacebookUri.GetComposerUri(null, fromExternal: true);
-		case "fbmessenger://home":
-			return FacebookUri.RootUri;
-		default:
-			Logger.Error(this, "External navigation failed as page was invalid: " + text, "GetRedirectUri", "c:\\Open\\messenger\\Facebook\\Facebook-Messenger-WP8\\Views\\ExternalLaunch.xaml.cs", 72);
-			return FacebookUri.RootUri;
-		}
-	}
 
-	private Uri GetRecipientUri(IReadOnlyDictionary<string, string> paramDictionary)
-	{
-		if (!paramDictionary.ContainsKey("recipientId"))
+		protected override void OnNavigatedTo(NavigationEventArgs e)
 		{
-			Logger.Error(this, "Attempted to navigate to a recipient thread without supplied recipient ID", "GetRecipientUri", "c:\\Open\\messenger\\Facebook\\Facebook-Messenger-WP8\\Views\\ExternalLaunch.xaml.cs", 81);
-			return FacebookUri.RootUri;
+			((Page)this).OnNavigatedTo(e);
+			Uri redirectUri = GetRedirectUri(e.Uri);
+			Navigator instance = ServiceLocator.Current.GetInstance<Navigator>();
+			instance.Reset(redirectUri);
 		}
-		string userId = paramDictionary["recipientId"];
-		string value = string.Empty;
-		if (!paramDictionary.TryGetValue("name", out value))
-		{
-			Logger.Error(this, "Navigating to recipient thread without a friend name, this is sub-optimal", "GetRecipientUri", "c:\\Open\\messenger\\Facebook\\Facebook-Messenger-WP8\\Views\\ExternalLaunch.xaml.cs", 90);
-		}
-		return FacebookUri.GetConversationUri(userId, value, true);
-	}
 
-	[DebuggerNonUserCode]
-	public void InitializeComponent()
-	{
-		//IL_002d: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0037: Expected Obj, but got Unknown
-		if (!_contentLoaded)
+		private Uri GetRedirectUri(Uri navigationUri)
 		{
-			_contentLoaded = true;
-			Application.LoadComponent((object)this, new Uri("/Facebook.Messenger.WP8;component/Views/ExternalLaunch.xaml", UriKind.Relative));
-			LayoutRoot = (Grid)((FrameworkElement)this).FindName("LayoutRoot");
+			FacebookContext instance = ServiceLocator.Current.GetInstance<FacebookContext>();
+			if (!instance.IsAuthenticated())
+			{
+				return FacebookUri.GetFirstNavigationUri();
+			}
+			UriQuery uriQuery = UriUtils.ParseQueryStringFromUri(navigationUri.OriginalString);
+			string uri = uriQuery["encodedLaunchUri"];
+			string text = UriUtils.StripQueryString(uri).TrimEnd('/');
+			UriQuery paramDictionary = UriUtils.ParseQueryStringFromUri(uri);
+			switch (text)
+			{
+			case "fbmessenger://user":
+				return GetRecipientUri(paramDictionary);
+			case "fbmessenger://composer":
+				return FacebookUri.GetComposerUri(null, true);
+			case "fbmessenger://home":
+				return FacebookUri.RootUri;
+			default:
+				Logger.Error(this, "External navigation failed as page was invalid: " + text, "GetRedirectUri", "c:\\Open\\messenger\\Facebook\\Facebook-Messenger-WP8\\Views\\ExternalLaunch.xaml.cs", 72);
+				return FacebookUri.RootUri;
+			}
+		}
+
+		private Uri GetRecipientUri(IReadOnlyDictionary<string, string> paramDictionary)
+		{
+			if (!paramDictionary.ContainsKey("recipientId"))
+			{
+				Logger.Error(this, "Attempted to navigate to a recipient thread without supplied recipient ID", "GetRecipientUri", "c:\\Open\\messenger\\Facebook\\Facebook-Messenger-WP8\\Views\\ExternalLaunch.xaml.cs", 81);
+				return FacebookUri.RootUri;
+			}
+			string userId = paramDictionary["recipientId"];
+			string value = string.Empty;
+			if (!paramDictionary.TryGetValue("name", out value))
+			{
+				Logger.Error(this, "Navigating to recipient thread without a friend name, this is sub-optimal", "GetRecipientUri", "c:\\Open\\messenger\\Facebook\\Facebook-Messenger-WP8\\Views\\ExternalLaunch.xaml.cs", 90);
+			}
+			return FacebookUri.GetConversationUri(userId, value, true);
+		}
+
+		[DebuggerNonUserCode]
+		public void InitializeComponent()
+		{
+			//IL_002d: Unknown result type (might be due to invalid IL or missing references)
+			//IL_0037: Expected Obj, but got Unknown
+			if (!_contentLoaded)
+			{
+				_contentLoaded = true;
+				Application.LoadComponent((object)this, new Uri("/Facebook.Messenger.WP8;component/Views/ExternalLaunch.xaml", UriKind.Relative));
+				LayoutRoot = (Grid)((FrameworkElement)this).FindName("LayoutRoot");
+			}
 		}
 	}
 }

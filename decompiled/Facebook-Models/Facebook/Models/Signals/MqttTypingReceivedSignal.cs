@@ -1,8 +1,9 @@
-namespace Facebook.Models.Signals;
-
-public class MqttTypingReceivedSignal
+namespace Facebook.Models.Signals
 {
-	public string SenderId { get; set; }
+	public class MqttTypingReceivedSignal
+	{
+		public string SenderId { get; set; }
 
-	public bool State { get; set; }
+		public bool State { get; set; }
+	}
 }

@@ -1,13 +1,14 @@
-namespace Facebook.Base.Mqtt.Messages;
-
-public class MqttMessage
+namespace Facebook.Base.Mqtt.Messages
 {
-	public FixedHeader FixedHeader { get; private set; }
-
-	public MessageType MessageType => FixedHeader.MessageType;
-
-	public MqttMessage(FixedHeader header)
+	public class MqttMessage
 	{
-		FixedHeader = header;
+		public FixedHeader FixedHeader { get; private set; }
+
+		public MessageType MessageType => FixedHeader.MessageType;
+
+		public MqttMessage(FixedHeader header)
+		{
+			FixedHeader = header;
+		}
 	}
 }

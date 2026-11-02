@@ -2,24 +2,25 @@ using System.Collections.Generic;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 
-namespace Facebook.Services.Api.Methods.FetchAppConfig;
-
-[DataContract]
-[JsonObject(MemberSerialization.OptIn)]
-public class Response : FacebookApiResponse
+namespace Facebook.Services.Api.Methods.FetchAppConfig
 {
-	[JsonProperty("data")]
-	public List<Data> Data;
-
-	public ClientConfig ClientConfig
+	[DataContract]
+	[JsonObject(MemberSerialization.OptIn)]
+	public class Response : FacebookApiResponse
 	{
-		get
+		[JsonProperty("data")]
+		public List<Data> Data;
+
+		public ClientConfig ClientConfig
 		{
-			if (Data == null || Data.Count != 1)
+			get
 			{
-				return null;
+				if (Data == null || Data.Count != 1)
+				{
+					return null;
+				}
+				return Data[0].ClientConfig;
 			}
-			return Data[0].ClientConfig;
 		}
 	}
 }

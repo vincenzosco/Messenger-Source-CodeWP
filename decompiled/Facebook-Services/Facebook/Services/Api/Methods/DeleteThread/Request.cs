@@ -1,12 +1,13 @@
-namespace Facebook.Services.Api.Methods.DeleteThread;
-
-[Queue(QueueType.Web)]
-public class Request : FacebookServiceRequest
+namespace Facebook.Services.Api.Methods.DeleteThread
 {
-	public string ThreadId { get; private set; }
-
-	public Request(string threadId)
+	[Queue(QueueType.Web)]
+	public class Request : FacebookServiceRequest
 	{
-		ThreadId = threadId;
+		public string ThreadId { get; private set; }
+
+		public Request(string threadId)
+		{
+			ThreadId = threadId;
+		}
 	}
 }

@@ -1,9 +1,10 @@
-namespace Facebook.Messenger.WP8.Controls;
-
-public enum ActionState
+namespace Facebook.Messenger.WP8.Controls
 {
-	NotStarted,
-	Started,
-	Succeeded,
-	Failed
+	public enum ActionState
+	{
+		NotStarted,
+		Started,
+		Succeeded,
+		Failed
+	}
 }

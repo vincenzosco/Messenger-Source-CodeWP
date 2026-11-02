@@ -1,6 +1,7 @@
-namespace Facebook.Messenger.WP8.Utilities;
-
-public class AppBarEntryBase
+namespace Facebook.Messenger.WP8.Utilities
 {
-	public int Position { get; set; }
+	public class AppBarEntryBase
+	{
+		public int Position { get; set; }
+	}
 }

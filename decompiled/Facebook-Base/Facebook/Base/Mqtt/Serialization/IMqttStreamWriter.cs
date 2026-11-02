@@ -1,14 +1,15 @@
-namespace Facebook.Base.Mqtt.Serialization;
-
-public interface IMqttStreamWriter
+namespace Facebook.Base.Mqtt.Serialization
 {
-	void WriteChar(char value);
+	public interface IMqttStreamWriter
+	{
+		void WriteChar(char value);
 
-	void WriteInt16(int value);
+		void WriteInt16(int value);
 
-	void WriteByte(int value);
+		void WriteByte(int value);
 
-	void WriteByte(byte value);
+		void WriteByte(byte value);
 
-	void WriteBytes(byte[] value);
+		void WriteBytes(byte[] value);
+	}
 }

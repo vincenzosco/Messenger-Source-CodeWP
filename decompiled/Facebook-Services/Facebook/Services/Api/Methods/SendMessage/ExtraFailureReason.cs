@@ -1,9 +1,10 @@
-namespace Facebook.Services.Api.Methods.SendMessage;
-
-public enum ExtraFailureReason
+namespace Facebook.Services.Api.Methods.SendMessage
 {
-	None,
-	AppBackgrounded,
-	AppManuallyTerminated,
-	RequestManuallyCancelled
+	public enum ExtraFailureReason
+	{
+		None,
+		AppBackgrounded,
+		AppManuallyTerminated,
+		RequestManuallyCancelled
+	}
 }

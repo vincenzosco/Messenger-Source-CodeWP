@@ -1,11 +1,12 @@
-namespace Facebook.Base.Mqtt.Messages;
-
-public class PublishAckMessage : MqttMessage
+namespace Facebook.Base.Mqtt.Messages
 {
-	public int MessageId { get; set; }
-
-	public PublishAckMessage(FixedHeader header)
-		: base(header)
+	public class PublishAckMessage : MqttMessage
 	{
+		public int MessageId { get; set; }
+
+		public PublishAckMessage(FixedHeader header)
+			: base(header)
+		{
+		}
 	}
 }

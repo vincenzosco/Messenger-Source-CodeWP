@@ -6,161 +6,162 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using GalaSoft.MvvmLight.Messaging;
 
-namespace Microsoft.Phone.Controls;
-
-public class ThumbnailedImageViewer : Control
+namespace Microsoft.Phone.Controls
 {
-	private enum ImageBindingState
+	public class ThumbnailedImageViewer : Control
 	{
-		ScreenSizeThumbnail,
-		FullSizePhoto
-	}
-
-	private Image _image;
-
-	private FrameworkElement _placeholder;
-
-	private BitmapImage _thumbnailBitmapImage;
-
-	private ImageSource _thumbnailImageSource;
-
-	private BitmapImage _fullResolutionBitmapImage;
-
-	private ImageSource _fullResolutionImageSource;
-
-	public ThumbnailedImageViewer()
-	{
-		//IL_0036: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0040: Expected Obj, but got Unknown
-		//IL_003b: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0045: Expected Obj, but got Unknown
-		//IL_0048: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0052: Expected Obj, but got Unknown
-		((Control)this).DefaultStyleKey = typeof(ThumbnailedImageViewer);
-		DependencyProperty val = DependencyProperty.RegisterAttached("DataContextProperty", typeof(object), typeof(FrameworkElement), new PropertyMetadata((PropertyChangedCallback)OnDataContextPropertyChanged));
-		((FrameworkElement)this).SetBinding(val, new Binding());
-	}
-
-	public override void OnApplyTemplate()
-	{
-		((FrameworkElement)this).OnApplyTemplate();
-		DependencyObject templateChild = ((Control)this).GetTemplateChild("Image");
-		_image = (Image)(object)((templateChild is Image) ? templateChild : null);
-		DependencyObject templateChild2 = ((Control)this).GetTemplateChild("Placeholder");
-		_placeholder = (FrameworkElement)(object)((templateChild2 is FrameworkElement) ? templateChild2 : null);
-		ShowPlaceholder();
-	}
-
-	private static void OnDataContextPropertyChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
-	{
-		ThumbnailedImageViewer thumbnailedImageViewer = (ThumbnailedImageViewer)(object)d;
-		IImage image = e.NewValue as IImage;
-		thumbnailedImageViewer.ClearImageSources();
-		if (image != null)
+		private enum ImageBindingState
 		{
-			thumbnailedImageViewer.ShowPlaceholder();
-			thumbnailedImageViewer.BeginLoadingFullResolutionImage();
+			ScreenSizeThumbnail,
+			FullSizePhoto
 		}
-		else
+
+		private Image _image;
+
+		private FrameworkElement _placeholder;
+
+		private BitmapImage _thumbnailBitmapImage;
+
+		private ImageSource _thumbnailImageSource;
+
+		private BitmapImage _fullResolutionBitmapImage;
+
+		private ImageSource _fullResolutionImageSource;
+
+		public ThumbnailedImageViewer()
 		{
-			thumbnailedImageViewer._image.Source = null;
+			//IL_0036: Unknown result type (might be due to invalid IL or missing references)
+			//IL_0040: Expected Obj, but got Unknown
+			//IL_003b: Unknown result type (might be due to invalid IL or missing references)
+			//IL_0045: Expected Obj, but got Unknown
+			//IL_0048: Unknown result type (might be due to invalid IL or missing references)
+			//IL_0052: Expected Obj, but got Unknown
+			((Control)this).DefaultStyleKey = typeof(ThumbnailedImageViewer);
+			DependencyProperty val = DependencyProperty.RegisterAttached("DataContextProperty", typeof(object), typeof(FrameworkElement), new PropertyMetadata((PropertyChangedCallback)OnDataContextPropertyChanged));
+			((FrameworkElement)this).SetBinding(val, new Binding());
 		}
-	}
 
-	private void OnThumbnailOpened(object sender, EventArgs e)
-	{
-		_image.Source = null;
-		_image.Source = _thumbnailImageSource;
-		ClearImageSources();
-		HidePlaceholder();
-		((UIElement)this).InvalidateMeasure();
-	}
+		public override void OnApplyTemplate()
+		{
+			((FrameworkElement)this).OnApplyTemplate();
+			DependencyObject templateChild = ((Control)this).GetTemplateChild("Image");
+			_image = (Image)(object)((templateChild is Image) ? templateChild : null);
+			DependencyObject templateChild2 = ((Control)this).GetTemplateChild("Placeholder");
+			_placeholder = (FrameworkElement)(object)((templateChild2 is FrameworkElement) ? templateChild2 : null);
+			ShowPlaceholder();
+		}
 
-	private void OnFullSizeImageOpened(object sender, EventArgs e)
-	{
-		ImageSource fullResolutionImageSource = _fullResolutionImageSource;
-		BitmapImage val = (BitmapImage)(object)((fullResolutionImageSource is BitmapImage) ? fullResolutionImageSource : null);
-		if (val != null)
+		private static void OnDataContextPropertyChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
+		{
+			ThumbnailedImageViewer thumbnailedImageViewer = (ThumbnailedImageViewer)(object)d;
+			IImage image = e.NewValue as IImage;
+			thumbnailedImageViewer.ClearImageSources();
+			if (image != null)
+			{
+				thumbnailedImageViewer.ShowPlaceholder();
+				thumbnailedImageViewer.BeginLoadingFullResolutionImage();
+			}
+			else
+			{
+				thumbnailedImageViewer._image.Source = null;
+			}
+		}
+
+		private void OnThumbnailOpened(object sender, EventArgs e)
 		{
 			_image.Source = null;
-			_image.Source = (ImageSource)(object)val;
-			Messenger.Default.Send(new PhotoLoadingSignal(val.UriSource, PhotoLoadingStatus.Loaded));
+			_image.Source = _thumbnailImageSource;
 			ClearImageSources();
 			HidePlaceholder();
 			((UIElement)this).InvalidateMeasure();
 		}
-	}
 
-	private void ClearImageSources()
-	{
-		if (_thumbnailBitmapImage != null)
+		private void OnFullSizeImageOpened(object sender, EventArgs e)
 		{
-			_thumbnailBitmapImage.ImageOpened -= OnThumbnailOpened;
+			ImageSource fullResolutionImageSource = _fullResolutionImageSource;
+			BitmapImage val = (BitmapImage)(object)((fullResolutionImageSource is BitmapImage) ? fullResolutionImageSource : null);
+			if (val != null)
+			{
+				_image.Source = null;
+				_image.Source = (ImageSource)(object)val;
+				Messenger.Default.Send(new PhotoLoadingSignal(val.UriSource, PhotoLoadingStatus.Loaded));
+				ClearImageSources();
+				HidePlaceholder();
+				((UIElement)this).InvalidateMeasure();
+			}
 		}
-		_thumbnailBitmapImage = null;
-		if (_fullResolutionBitmapImage != null)
-		{
-			_fullResolutionBitmapImage.ImageOpened -= OnFullSizeImageOpened;
-			_fullResolutionBitmapImage.ImageOpened -= OnFullSizeImageOpened;
-		}
-		_fullResolutionBitmapImage = null;
-		_thumbnailImageSource = null;
-		_fullResolutionImageSource = null;
-	}
 
-	private bool CurrentImageSizeIsTooSmall(Size availableSize)
-	{
-		ImageSource source = _image.Source;
-		BitmapImage val = (BitmapImage)(object)((source is BitmapImage) ? source : null);
-		if (val == null)
+		private void ClearImageSources()
 		{
-			return true;
-		}
-		return (double)((BitmapSource)val).PixelWidth < availableSize.Width && (double)((BitmapSource)val).PixelHeight < availableSize.Height;
-	}
-
-	private void BeginLoadingFullResolutionImage()
-	{
-		//IL_0057: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0061: Expected Obj, but got Unknown
-		if (((FrameworkElement)this).DataContext is IImage)
-		{
+			if (_thumbnailBitmapImage != null)
+			{
+				_thumbnailBitmapImage.ImageOpened -= OnThumbnailOpened;
+			}
+			_thumbnailBitmapImage = null;
 			if (_fullResolutionBitmapImage != null)
 			{
 				_fullResolutionBitmapImage.ImageOpened -= OnFullSizeImageOpened;
+				_fullResolutionBitmapImage.ImageOpened -= OnFullSizeImageOpened;
 			}
 			_fullResolutionBitmapImage = null;
-			Uri imageUri = ((IImage)((FrameworkElement)this).DataContext).GetImageUri();
-			Messenger.Default.Send(new PhotoLoadingSignal(imageUri, PhotoLoadingStatus.Loading));
-			_fullResolutionBitmapImage = new BitmapImage();
-			_fullResolutionBitmapImage.ImageOpened += OnFullSizeImageOpened;
-			_fullResolutionBitmapImage.CreateOptions = (BitmapCreateOptions)16;
-			_fullResolutionBitmapImage.UriSource = imageUri;
-			_fullResolutionImageSource = (ImageSource)(object)_fullResolutionBitmapImage;
+			_thumbnailImageSource = null;
+			_fullResolutionImageSource = null;
 		}
-	}
 
-	private void ShowPlaceholder()
-	{
-		if (_placeholder != null)
+		private bool CurrentImageSizeIsTooSmall(Size availableSize)
 		{
-			((UIElement)_placeholder).Visibility = (Visibility)0;
+			ImageSource source = _image.Source;
+			BitmapImage val = (BitmapImage)(object)((source is BitmapImage) ? source : null);
+			if (val == null)
+			{
+				return true;
+			}
+			return (double)((BitmapSource)val).PixelWidth < availableSize.Width && (double)((BitmapSource)val).PixelHeight < availableSize.Height;
 		}
-		if (_image != null)
-		{
-			((UIElement)_image).Visibility = (Visibility)1;
-		}
-	}
 
-	private void HidePlaceholder()
-	{
-		if (_image != null)
+		private void BeginLoadingFullResolutionImage()
 		{
-			((UIElement)_image).Visibility = (Visibility)0;
+			//IL_0057: Unknown result type (might be due to invalid IL or missing references)
+			//IL_0061: Expected Obj, but got Unknown
+			if (((FrameworkElement)this).DataContext is IImage)
+			{
+				if (_fullResolutionBitmapImage != null)
+				{
+					_fullResolutionBitmapImage.ImageOpened -= OnFullSizeImageOpened;
+				}
+				_fullResolutionBitmapImage = null;
+				Uri imageUri = ((IImage)((FrameworkElement)this).DataContext).GetImageUri();
+				Messenger.Default.Send(new PhotoLoadingSignal(imageUri, PhotoLoadingStatus.Loading));
+				_fullResolutionBitmapImage = new BitmapImage();
+				_fullResolutionBitmapImage.ImageOpened += OnFullSizeImageOpened;
+				_fullResolutionBitmapImage.CreateOptions = (BitmapCreateOptions)16;
+				_fullResolutionBitmapImage.UriSource = imageUri;
+				_fullResolutionImageSource = (ImageSource)(object)_fullResolutionBitmapImage;
+			}
 		}
-		if (_placeholder != null)
+
+		private void ShowPlaceholder()
 		{
-			((UIElement)_placeholder).Visibility = (Visibility)1;
+			if (_placeholder != null)
+			{
+				((UIElement)_placeholder).Visibility = (Visibility)0;
+			}
+			if (_image != null)
+			{
+				((UIElement)_image).Visibility = (Visibility)1;
+			}
+		}
+
+		private void HidePlaceholder()
+		{
+			if (_image != null)
+			{
+				((UIElement)_image).Visibility = (Visibility)0;
+			}
+			if (_placeholder != null)
+			{
+				((UIElement)_placeholder).Visibility = (Visibility)1;
+			}
 		}
 	}
 }

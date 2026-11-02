@@ -3,48 +3,50 @@ using System.Collections.Generic;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
-namespace Facebook.Models;
-
-public class WorkProjectsConverter : CollapseNodesConverter
+namespace Facebook.Models
 {
-	public override object ReadJson(JsonReader reader, Type objectType, object existingValue, JsonSerializer serializer)
+	public class WorkProjectsConverter : CollapseNodesConverter
 	{
-		if (!(base.ReadJson(reader, objectType, existingValue, serializer) is JArray jArray))
+		public override object ReadJson(JsonReader reader, Type objectType, object existingValue, JsonSerializer serializer)
 		{
-			return null;
-		}
-		List<WorkProject> list = new List<WorkProject>();
-		foreach (JToken item in jArray)
-		{
-			WorkProject workProject = new WorkProject();
-			foreach (JToken item2 in (IEnumerable<JToken>)item)
+			JArray jArray = base.ReadJson(reader, objectType, existingValue, serializer) as JArray;
+			if (jArray == null)
 			{
-				if (!(item2 is JProperty))
+				return null;
+			}
+			List<WorkProject> list = new List<WorkProject>();
+			foreach (JToken item in jArray)
+			{
+				WorkProject workProject = new WorkProject();
+				foreach (JToken item2 in (IEnumerable<JToken>)item)
 				{
-					continue;
-				}
-				JProperty jProperty = item2 as JProperty;
-				if (jProperty.First != null && jProperty.First.Type != JTokenType.Null)
-				{
-					switch (jProperty.Name)
+					if (!(item2 is JProperty))
 					{
-					case "message":
-						workProject.Message = ConverterHelper.GetTextProperty(jProperty);
-						break;
-					case "experience_with":
-						workProject.ExperienceWith = JsonConvert.DeserializeObject<List<FacebookProfile>>(jProperty.First.ToString(), new JsonConverter[1]
+						continue;
+					}
+					JProperty jProperty = item2 as JProperty;
+					if (jProperty.First != null && jProperty.First.Type != JTokenType.Null)
+					{
+						switch (jProperty.Name)
 						{
-							new ExperienceWithConverter()
-						});
-						break;
-					case "work_project":
-						workProject.ProjectName = ConverterHelper.GetPropertyString(jProperty, "name");
-						break;
+						case "message":
+							workProject.Message = ConverterHelper.GetTextProperty(jProperty);
+							break;
+						case "experience_with":
+							workProject.ExperienceWith = JsonConvert.DeserializeObject<List<FacebookProfile>>(jProperty.First.ToString(), new JsonConverter[1]
+							{
+								new ExperienceWithConverter()
+							});
+							break;
+						case "work_project":
+							workProject.ProjectName = ConverterHelper.GetPropertyString(jProperty, "name");
+							break;
+						}
 					}
 				}
+				list.Add(workProject);
 			}
-			list.Add(workProject);
+			return list;
 		}
-		return list;
 	}
 }

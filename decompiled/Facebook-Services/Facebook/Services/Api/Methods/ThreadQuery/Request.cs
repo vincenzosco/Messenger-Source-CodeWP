@@ -1,17 +1,18 @@
-namespace Facebook.Services.Api.Methods.ThreadQuery;
-
-[Queue(QueueType.Web)]
-public class Request : FacebookServiceRequest
+namespace Facebook.Services.Api.Methods.ThreadQuery
 {
-	public string ThreadFbId { get; set; }
+	[Queue(QueueType.Web)]
+	public class Request : FacebookServiceRequest
+	{
+		public string ThreadFbId { get; set; }
 
-	public int MessageCount { get; set; }
+		public int MessageCount { get; set; }
 
-	public long ActionId { get; set; }
+		public long ActionId { get; set; }
 
-	public long MaxTimestamp { get; set; }
+		public long MaxTimestamp { get; set; }
 
-	public bool ForceToServer { get; set; }
+		public bool ForceToServer { get; set; }
 
-	public long RecentPushActionId { get; set; }
+		public long RecentPushActionId { get; set; }
+	}
 }

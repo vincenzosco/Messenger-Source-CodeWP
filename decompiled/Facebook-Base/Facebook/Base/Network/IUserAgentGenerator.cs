@@ -1,8 +1,9 @@
-namespace Facebook.Base.Network;
-
-public interface IUserAgentGenerator
+namespace Facebook.Base.Network
 {
-	string GetUserAgent();
+	public interface IUserAgentGenerator
+	{
+		string GetUserAgent();
 
-	string GetSystemInformation();
+		string GetSystemInformation();
+	}
 }

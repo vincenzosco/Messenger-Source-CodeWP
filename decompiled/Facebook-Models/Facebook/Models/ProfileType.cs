@@ -1,12 +1,13 @@
-namespace Facebook.Models;
-
-public enum ProfileType
+namespace Facebook.Models
 {
-	User,
-	Group,
-	Page,
-	Event,
-	Application,
-	ShareCharm,
-	Album
+	public enum ProfileType
+	{
+		User,
+		Group,
+		Page,
+		Event,
+		Application,
+		ShareCharm,
+		Album
+	}
 }

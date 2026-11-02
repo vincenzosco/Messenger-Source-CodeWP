@@ -1,97 +1,99 @@
 using System.Collections.Generic;
 using System.IO.IsolatedStorage;
 
-namespace Facebook.Messenger.Settings;
-
-public class AppSettingsManager
+namespace Facebook.Messenger.Settings
 {
-	private readonly object _lockObject;
-
-	public static AppSettingsManager Settings { get; private set; }
-
-	public object this[string key]
+	public class AppSettingsManager
 	{
-		get
+		private readonly object _lockObject;
+
+		public static AppSettingsManager Settings { get; private set; }
+
+		public object this[string key]
+		{
+			get
+			{
+				lock (_lockObject)
+				{
+					return IsolatedStorageSettings.ApplicationSettings[key];
+				}
+			}
+			set
+			{
+				lock (_lockObject)
+				{
+					IsolatedStorageSettings.ApplicationSettings[key] = value;
+				}
+			}
+		}
+
+		public ICollection<string> Keys => (ICollection<string>)IsolatedStorageSettings.ApplicationSettings.Keys;
+
+		static AppSettingsManager()
+		{
+			Settings = new AppSettingsManager();
+		}
+
+		private AppSettingsManager()
+		{
+			_lockObject = new object();
+		}
+
+		public void Save()
 		{
 			lock (_lockObject)
 			{
-				return IsolatedStorageSettings.ApplicationSettings[key];
+				try
+				{
+					IsolatedStorageSettings.ApplicationSettings.Save();
+				}
+				catch (IsolatedStorageException)
+				{
+				}
 			}
 		}
-		set
+
+		public void Add(string key, object value)
 		{
 			lock (_lockObject)
 			{
-				IsolatedStorageSettings.ApplicationSettings[key] = value;
+				IsolatedStorageSettings.ApplicationSettings.Add(key, value);
 			}
 		}
-	}
 
-	public ICollection<string> Keys => (ICollection<string>)IsolatedStorageSettings.ApplicationSettings.Keys;
-
-	static AppSettingsManager()
-	{
-		Settings = new AppSettingsManager();
-	}
-
-	private AppSettingsManager()
-	{
-		_lockObject = new object();
-	}
-
-	public void Save()
-	{
-		lock (_lockObject)
+		public bool Remove(string key)
 		{
-			try
+			lock (_lockObject)
 			{
-				IsolatedStorageSettings.ApplicationSettings.Save();
+				return IsolatedStorageSettings.ApplicationSettings.Remove(key);
 			}
-			catch (IsolatedStorageException)
+		}
+
+		public bool Contains(string key)
+		{
+			lock (_lockObject)
 			{
+				return IsolatedStorageSettings.ApplicationSettings.Contains(key);
 			}
 		}
-	}
 
-	public void Add(string key, object value)
-	{
-		lock (_lockObject)
+		public bool TryGetValue<T>(string key, out T value)
 		{
-			IsolatedStorageSettings.ApplicationSettings.Add(key, value);
+			lock (_lockObject)
+			{
+				object value2;
+				bool result = TryGetValue(key, out value2);
+				value = (T)value2;
+				return result;
+			}
 		}
-	}
 
-	public bool Remove(string key)
-	{
-		lock (_lockObject)
+		public bool TryGetValue(string key, out object value)
 		{
-			return IsolatedStorageSettings.ApplicationSettings.Remove(key);
-		}
-	}
-
-	public bool Contains(string key)
-	{
-		lock (_lockObject)
-		{
-			return IsolatedStorageSettings.ApplicationSettings.Contains(key);
-		}
-	}
-
-	public bool TryGetValue<T>(string key, out T value)
-	{
-		lock (_lockObject)
-		{
-			bool result = TryGetValue(key, out var value2);
-			value = (T)value2;
-			return result;
-		}
-	}
-
-	public bool TryGetValue(string key, out object value)
-	{
-		lock (_lockObject)
-		{
-			return IsolatedStorageSettings.ApplicationSettings.TryGetValue<object>(key, ref value);
+			lock (_lockObject)
+			{
+				return IsolatedStorageSettings.ApplicationSettings.TryGetValue<object>(key, ref value);
+			}
 		}
 	}
 }

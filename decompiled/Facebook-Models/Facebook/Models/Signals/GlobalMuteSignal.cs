@@ -1,6 +1,7 @@
-namespace Facebook.Models.Signals;
-
-public class GlobalMuteSignal
+namespace Facebook.Models.Signals
 {
-	public long MuteDuration;
+	public class GlobalMuteSignal
+	{
+		public long MuteDuration;
+	}
 }

@@ -3,27 +3,28 @@ using System.Globalization;
 using System.Windows.Data;
 using Facebook.Messenger.Localization.Resources;
 
-namespace Facebook.Messenger.WP8.Converters;
-
-public class ClientTypeEnumToStringConverter : IValueConverter
+namespace Facebook.Messenger.WP8.Converters
 {
-	public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+	public class ClientTypeEnumToStringConverter : IValueConverter
 	{
-		int? num = (int?)value;
-		if (num.HasValue)
+		public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
 		{
-			int? num2 = num & 4;
-			if (num2.GetValueOrDefault() != 0 || !num2.HasValue || (num & 8) != 0)
+			int? num = (int?)value;
+			if (num.HasValue)
 			{
-				return StringLibrary.Client_Type_Mobile;
+				int? num2 = num & 4;
+				if (num2.GetValueOrDefault() != 0 || !num2.HasValue || (num & 8) != 0)
+				{
+					return StringLibrary.Client_Type_Mobile;
+				}
+				return StringLibrary.Client_Type_Web;
 			}
-			return StringLibrary.Client_Type_Web;
+			return "";
 		}
-		return "";
-	}
 
-	public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
-	{
-		throw new NotImplementedException();
+		public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+		{
+			throw new NotImplementedException();
+		}
 	}
 }

@@ -13,126 +13,127 @@ using Facebook.Services.Common;
 using GalaSoft.MvvmLight.Command;
 using Google.PhoneNumbers;
 
-namespace Facebook.Messenger.WP8.ViewModels;
-
-public class PhoneNumberRegistrationViewModel : BasePhoneNumberViewModel
+namespace Facebook.Messenger.WP8.ViewModels
 {
-	private bool _sessionExpired;
-
-	private RelayCommand _registerPhoneNumberCommand;
-
-	private RelayCommand _navigateToLoginPageCommand;
-
-	private Error _error;
-
-	public bool SessionExpired
+	public class PhoneNumberRegistrationViewModel : BasePhoneNumberViewModel
 	{
-		get
-		{
-			return _sessionExpired;
-		}
-		set
-		{
-			Set(ref _sessionExpired, value, broadcast: false, "SessionExpired");
-		}
-	}
+		private bool _sessionExpired;
 
-	public RelayCommand RegisterPhoneNumberCommand => _registerPhoneNumberCommand ?? (_registerPhoneNumberCommand = new RelayCommand(ExecuteRegisterPhoneNumberCommand));
+		private RelayCommand _registerPhoneNumberCommand;
 
-	public RelayCommand NavigateToLoginPageCommand => _navigateToLoginPageCommand ?? (_navigateToLoginPageCommand = new RelayCommand(ExecuteNavigateToLoginPageCommand));
+		private RelayCommand _navigateToLoginPageCommand;
 
-	public Error Error
-	{
-		get
+		private Error _error;
+
+		public bool SessionExpired
 		{
-			return _error;
-		}
-		set
-		{
-			Set(ref _error, value, broadcast: false, "Error");
-		}
-	}
-
-	public PhoneNumberRegistrationViewModel(Facebook.Services.Api.Service apiService, FacebookContext context, Navigator navigator, IDispatcher dispatcher, INetworkStatus networkStatus)
-		: base(apiService, context, navigator, dispatcher, networkStatus)
-	{
-	}
-
-	public override void SetPath(Uri uri)
-	{
-		base.SetPath(uri);
-		if (PathUri.Params.ContainsKey("expired"))
-		{
-			SessionExpired = true;
-		}
-	}
-
-	private void ExecuteNavigateToLoginPageCommand()
-	{
-		Navigator.Navigate(FacebookUri.LoginUri);
-	}
-
-	private async void ExecuteRegisterPhoneNumberCommand()
-	{
-		if (IsLoading || string.IsNullOrWhiteSpace(MyPhoneNumber) || ValidatedCountryCode == null)
-		{
-			return;
-		}
-		if (!HasConnection)
-		{
-			Error = new Error
+			get
 			{
-				Message = StringLibrary.MessageBox_Label_NoInternet
-			};
-			return;
+				return _sessionExpired;
+			}
+			set
+			{
+				Set(ref _sessionExpired, value, false, "SessionExpired");
+			}
 		}
-		IsLoading = true;
-		try
+
+		public RelayCommand RegisterPhoneNumberCommand => _registerPhoneNumberCommand ?? (_registerPhoneNumberCommand = new RelayCommand(ExecuteRegisterPhoneNumberCommand));
+
+		public RelayCommand NavigateToLoginPageCommand => _navigateToLoginPageCommand ?? (_navigateToLoginPageCommand = new RelayCommand(ExecuteNavigateToLoginPageCommand));
+
+		public Error Error
 		{
-			string phoneNumber = Regex.Replace(MyPhoneNumber, "[\\(\\)\\-\\.\\s]", "");
-			PhoneNumberUtil phoneUtil = PhoneNumberUtil.getInstance();
-			Google.PhoneNumbers.PhoneNumber proto = phoneUtil.parse(phoneNumber, ValidatedCountryCode.RegionCode);
-			if (!phoneUtil.isValidNumberForRegion(proto, ValidatedCountryCode.RegionCode))
+			get
+			{
+				return _error;
+			}
+			set
+			{
+				Set(ref _error, value, false, "Error");
+			}
+		}
+
+		public PhoneNumberRegistrationViewModel(Facebook.Services.Api.Service apiService, FacebookContext context, Navigator navigator, IDispatcher dispatcher, INetworkStatus networkStatus)
+			: base(apiService, context, navigator, dispatcher, networkStatus)
+		{
+		}
+
+		public override void SetPath(Uri uri)
+		{
+			base.SetPath(uri);
+			if (PathUri.Params.ContainsKey("expired"))
+			{
+				SessionExpired = true;
+			}
+		}
+
+		private void ExecuteNavigateToLoginPageCommand()
+		{
+			Navigator.Navigate(FacebookUri.LoginUri);
+		}
+
+		private async void ExecuteRegisterPhoneNumberCommand()
+		{
+			if (IsLoading || string.IsNullOrWhiteSpace(MyPhoneNumber) || ValidatedCountryCode == null)
+			{
+				return;
+			}
+			if (!HasConnection)
 			{
 				Error = new Error
 				{
-					Message = StringLibrary.Error_Invalid_Phone_Number
+					Message = StringLibrary.MessageBox_Label_NoInternet
 				};
-				IsLoading = false;
 				return;
 			}
-			_normalizedPhoneNumber = $"+{ValidatedCountryCode.PhonePrefix}{phoneNumber}";
-			Facebook.Services.Api.Methods.PhoneNumberRegistration.Request request = new Facebook.Services.Api.Methods.PhoneNumberRegistration.Request(Context.GlobalSettings.DeviceIdentifier, ValidatedCountryCode.RegionCode, _normalizedPhoneNumber);
-			BoolResponse response = await ApiService.ExecuteAsync<Facebook.Services.Api.Methods.PhoneNumberRegistration.Request, BoolResponse>(request);
-			if (response == null || response.HasError())
+			IsLoading = true;
+			try
 			{
-				Error = (HasConnection ? Error.FromResponse(response, StringLibrary.MessageBox_Label_UpdatePhoneNumberFailed, string.Empty) : new Error
+				string phoneNumber = Regex.Replace(MyPhoneNumber, "[\\(\\)\\-\\.\\s]", "");
+				PhoneNumberUtil phoneUtil = PhoneNumberUtil.getInstance();
+				Google.PhoneNumbers.PhoneNumber proto = phoneUtil.parse(phoneNumber, ValidatedCountryCode.RegionCode);
+				if (!phoneUtil.isValidNumberForRegion(proto, ValidatedCountryCode.RegionCode))
 				{
-					Message = StringLibrary.MessageBox_Label_NoInternet
-				});
+					Error = new Error
+					{
+						Message = StringLibrary.Error_Invalid_Phone_Number
+					};
+					IsLoading = false;
+					return;
+				}
+				_normalizedPhoneNumber = $"+{ValidatedCountryCode.PhonePrefix}{phoneNumber}";
+				Facebook.Services.Api.Methods.PhoneNumberRegistration.Request request = new Facebook.Services.Api.Methods.PhoneNumberRegistration.Request(Context.GlobalSettings.DeviceIdentifier, ValidatedCountryCode.RegionCode, _normalizedPhoneNumber);
+				BoolResponse response = await ApiService.ExecuteAsync<Facebook.Services.Api.Methods.PhoneNumberRegistration.Request, BoolResponse>(request);
+				if (response == null || response.HasError())
+				{
+					Error = (HasConnection ? Error.FromResponse(response, StringLibrary.MessageBox_Label_UpdatePhoneNumberFailed, string.Empty) : new Error
+					{
+						Message = StringLibrary.MessageBox_Label_NoInternet
+					});
+				}
+				else
+				{
+					NavigateToVerifyPhoneNumber();
+				}
 			}
-			else
+			catch (NumberParseException ex)
 			{
-				NavigateToVerifyPhoneNumber();
+				Logger.Error("NumberParseException was thrown: " + ex, "ExecuteRegisterPhoneNumberCommand", "c:\\Open\\messenger\\Facebook\\Facebook-Messenger-WP8\\ViewModels\\PhoneNumberRegistrationViewModel.cs", 152);
+				Logger.Error("Number : " + MyPhoneNumber, "ExecuteRegisterPhoneNumberCommand", "c:\\Open\\messenger\\Facebook\\Facebook-Messenger-WP8\\ViewModels\\PhoneNumberRegistrationViewModel.cs", 153);
 			}
+			IsLoading = false;
 		}
-		catch (NumberParseException ex)
-		{
-			Logger.Error("NumberParseException was thrown: " + ex, "ExecuteRegisterPhoneNumberCommand", "c:\\Open\\messenger\\Facebook\\Facebook-Messenger-WP8\\ViewModels\\PhoneNumberRegistrationViewModel.cs", 152);
-			Logger.Error("Number : " + MyPhoneNumber, "ExecuteRegisterPhoneNumberCommand", "c:\\Open\\messenger\\Facebook\\Facebook-Messenger-WP8\\ViewModels\\PhoneNumberRegistrationViewModel.cs", 153);
-		}
-		IsLoading = false;
-	}
 
-	private void NavigateToVerifyPhoneNumber()
-	{
-		UriQuery uriQuery = new UriQuery();
-		uriQuery.Add("phonenumber", MyPhoneNumber);
-		uriQuery.Add("normalizedphonenumber", _normalizedPhoneNumber);
-		uriQuery.Add("regioncode", ValidatedCountryCode.RegionCode);
-		UriQuery uriQuery2 = uriQuery;
-		uriQuery2.Add("registrationflow", "true");
-		uriQuery2.Add("phoneprefix", ValidatedCountryCode.PhonePrefix.ToString());
-		Navigator.Navigate(FacebookUri.GetAppUri(UriId.VerifyPhoneNumber, uriQuery2));
+		private void NavigateToVerifyPhoneNumber()
+		{
+			UriQuery uriQuery = new UriQuery();
+			uriQuery.Add("phonenumber", MyPhoneNumber);
+			uriQuery.Add("normalizedphonenumber", _normalizedPhoneNumber);
+			uriQuery.Add("regioncode", ValidatedCountryCode.RegionCode);
+			UriQuery uriQuery2 = uriQuery;
+			uriQuery2.Add("registrationflow", "true");
+			uriQuery2.Add("phoneprefix", ValidatedCountryCode.PhonePrefix.ToString());
+			Navigator.Navigate(FacebookUri.GetAppUri(UriId.VerifyPhoneNumber, uriQuery2));
+		}
 	}
 }

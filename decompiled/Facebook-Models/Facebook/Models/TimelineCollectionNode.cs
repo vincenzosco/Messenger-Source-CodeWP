@@ -2,13 +2,14 @@ using System.Collections.Generic;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 
-namespace Facebook.Models;
-
-[DataContract]
-[JsonObject(MemberSerialization.OptIn)]
-public class TimelineCollectionNode
+namespace Facebook.Models
 {
-	[DataMember]
-	[JsonProperty("nodes")]
-	public List<TimelineObject> Nodes { get; set; }
+	[DataContract]
+	[JsonObject(MemberSerialization.OptIn)]
+	public class TimelineCollectionNode
+	{
+		[DataMember]
+		[JsonProperty("nodes")]
+		public List<TimelineObject> Nodes { get; set; }
+	}
 }

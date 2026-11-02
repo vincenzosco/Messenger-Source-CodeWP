@@ -2,196 +2,197 @@ using System;
 using System.Collections.Generic;
 using Facebook.Models;
 
-namespace Facebook.Messenger.WP8.ViewModels;
-
-public class ContextualMessageViewModel : MessageViewModel
+namespace Facebook.Messenger.WP8.ViewModels
 {
-	public enum GroupState
+	public class ContextualMessageViewModel : MessageViewModel
 	{
-		None,
-		FirstOfGroup,
-		MiddleOfGroup,
-		LastOfGroup
-	}
-
-	public const string MessageGroupStatePropertyName = "MessageGroupState";
-
-	private long _actionId;
-
-	private string _threadId;
-
-	private string _offlineThreadingId;
-
-	private string _syncChangeType;
-
-	private IList<string> _targetUserIds;
-
-	private GroupState _messageGroupState;
-
-	private bool _shouldAutoAnimateSticker;
-
-	private bool _isCancellable;
-
-	private bool _isSingleRecipient;
-
-	public long ActionId
-	{
-		get
+		public enum GroupState
 		{
-			return _actionId;
+			None,
+			FirstOfGroup,
+			MiddleOfGroup,
+			LastOfGroup
 		}
-		private set
-		{
-			Set(ref _actionId, value, broadcast: false, "ActionId");
-		}
-	}
 
-	public string ThreadId
-	{
-		get
-		{
-			return _threadId;
-		}
-		private set
-		{
-			Set(ref _threadId, value, broadcast: false, "ThreadId");
-		}
-	}
+		public const string MessageGroupStatePropertyName = "MessageGroupState";
 
-	public string OfflineThreadingId
-	{
-		get
-		{
-			return _offlineThreadingId;
-		}
-		private set
-		{
-			Set(ref _offlineThreadingId, value, broadcast: false, "OfflineThreadingId");
-		}
-	}
+		private long _actionId;
 
-	public string SyncChangeType
-	{
-		get
-		{
-			return _syncChangeType;
-		}
-		private set
-		{
-			Set(ref _syncChangeType, value, broadcast: false, "SyncChangeType");
-		}
-	}
+		private string _threadId;
 
-	public IList<string> TargetUsersIds
-	{
-		get
-		{
-			return _targetUserIds;
-		}
-		private set
-		{
-			Set(ref _targetUserIds, value, broadcast: false, "TargetUsersIds");
-		}
-	}
+		private string _offlineThreadingId;
 
-	public GroupState MessageGroupState
-	{
-		get
+		private string _syncChangeType;
+
+		private IList<string> _targetUserIds;
+
+		private GroupState _messageGroupState;
+
+		private bool _shouldAutoAnimateSticker;
+
+		private bool _isCancellable;
+
+		private bool _isSingleRecipient;
+
+		public long ActionId
 		{
-			return _messageGroupState;
-		}
-		set
-		{
-			if (_messageGroupState != value)
+			get
 			{
-				_messageGroupState = value;
-				RaisePropertyChanged("MessageGroupState");
+				return _actionId;
+			}
+			private set
+			{
+				Set(ref _actionId, value, false, "ActionId");
 			}
 		}
-	}
 
-	public bool ShouldAutoAnimateSticker
-	{
-		get
+		public string ThreadId
 		{
-			return _shouldAutoAnimateSticker;
+			get
+			{
+				return _threadId;
+			}
+			private set
+			{
+				Set(ref _threadId, value, false, "ThreadId");
+			}
 		}
-		set
-		{
-			Set(ref _shouldAutoAnimateSticker, value, broadcast: false, "ShouldAutoAnimateSticker");
-		}
-	}
 
-	public bool IsCancellable
-	{
-		get
+		public string OfflineThreadingId
 		{
-			return _isCancellable;
+			get
+			{
+				return _offlineThreadingId;
+			}
+			private set
+			{
+				Set(ref _offlineThreadingId, value, false, "OfflineThreadingId");
+			}
 		}
-		set
+
+		public string SyncChangeType
 		{
-			Set(ref _isCancellable, value, broadcast: false, "IsCancellable");
+			get
+			{
+				return _syncChangeType;
+			}
+			private set
+			{
+				Set(ref _syncChangeType, value, false, "SyncChangeType");
+			}
 		}
-	}
 
-	public bool Deleted => string.Equals("deleted", SyncChangeType, StringComparison.Ordinal);
-
-	public bool IsSingleRecipient
-	{
-		get
+		public IList<string> TargetUsersIds
 		{
-			return _isSingleRecipient;
+			get
+			{
+				return _targetUserIds;
+			}
+			private set
+			{
+				Set(ref _targetUserIds, value, false, "TargetUsersIds");
+			}
 		}
-		set
+
+		public GroupState MessageGroupState
 		{
-			Set(ref _isSingleRecipient, value, broadcast: false, "IsSingleRecipient");
+			get
+			{
+				return _messageGroupState;
+			}
+			set
+			{
+				if (_messageGroupState != value)
+				{
+					_messageGroupState = value;
+					RaisePropertyChanged("MessageGroupState");
+				}
+			}
 		}
-	}
 
-	public ContextualMessageViewModel(MailMessage message, bool isSingleRecipient)
-		: base(message)
-	{
-		ActionId = message.ActionId;
-		ThreadId = message.ThreadId;
-		OfflineThreadingId = message.OfflineThreadingId;
-		SyncChangeType = message.SyncChangeType;
-		TargetUsersIds = message.TargetUsersIds;
-		IsSingleRecipient = isSingleRecipient;
-	}
-
-	public override void UpdateMessage(MailMessage message)
-	{
-		_actionId = message.ActionId;
-		_offlineThreadingId = message.OfflineThreadingId;
-		_threadId = message.ThreadId;
-		_syncChangeType = message.SyncChangeType;
-		base.UpdateMessage(message);
-	}
-
-	public override bool MatchesMessageId(string id)
-	{
-		if (!(id == Id))
+		public bool ShouldAutoAnimateSticker
 		{
-			return id == OfflineThreadingId;
+			get
+			{
+				return _shouldAutoAnimateSticker;
+			}
+			set
+			{
+				Set(ref _shouldAutoAnimateSticker, value, false, "ShouldAutoAnimateSticker");
+			}
 		}
-		return true;
-	}
 
-	public bool IsEarlierInGroup()
-	{
-		if (MessageGroupState != GroupState.FirstOfGroup)
+		public bool IsCancellable
 		{
-			return MessageGroupState == GroupState.MiddleOfGroup;
+			get
+			{
+				return _isCancellable;
+			}
+			set
+			{
+				Set(ref _isCancellable, value, false, "IsCancellable");
+			}
 		}
-		return true;
-	}
 
-	public bool IsLaterInGroup()
-	{
-		if (MessageGroupState != GroupState.LastOfGroup)
+		public bool Deleted => string.Equals("deleted", SyncChangeType, StringComparison.Ordinal);
+
+		public bool IsSingleRecipient
 		{
-			return MessageGroupState == GroupState.MiddleOfGroup;
+			get
+			{
+				return _isSingleRecipient;
+			}
+			set
+			{
+				Set(ref _isSingleRecipient, value, false, "IsSingleRecipient");
+			}
 		}
-		return true;
+
+		public ContextualMessageViewModel(MailMessage message, bool isSingleRecipient)
+			: base(message)
+		{
+			ActionId = message.ActionId;
+			ThreadId = message.ThreadId;
+			OfflineThreadingId = message.OfflineThreadingId;
+			SyncChangeType = message.SyncChangeType;
+			TargetUsersIds = message.TargetUsersIds;
+			IsSingleRecipient = isSingleRecipient;
+		}
+
+		public override void UpdateMessage(MailMessage message)
+		{
+			_actionId = message.ActionId;
+			_offlineThreadingId = message.OfflineThreadingId;
+			_threadId = message.ThreadId;
+			_syncChangeType = message.SyncChangeType;
+			base.UpdateMessage(message);
+		}
+
+		public override bool MatchesMessageId(string id)
+		{
+			if (!(id == Id))
+			{
+				return id == OfflineThreadingId;
+			}
+			return true;
+		}
+
+		public bool IsEarlierInGroup()
+		{
+			if (MessageGroupState != GroupState.FirstOfGroup)
+			{
+				return MessageGroupState == GroupState.MiddleOfGroup;
+			}
+			return true;
+		}
+
+		public bool IsLaterInGroup()
+		{
+			if (MessageGroupState != GroupState.LastOfGroup)
+			{
+				return MessageGroupState == GroupState.MiddleOfGroup;
+			}
+			return true;
+		}
 	}
 }

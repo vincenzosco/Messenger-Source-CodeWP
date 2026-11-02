@@ -1,44 +1,45 @@
-namespace Thrift.Protocol;
-
-public struct TSet
+namespace Thrift.Protocol
 {
-	private TType elementType;
-
-	private int count;
-
-	public TType ElementType
+	public struct TSet
 	{
-		get
-		{
-			return elementType;
-		}
-		set
-		{
-			elementType = value;
-		}
-	}
+		private TType elementType;
 
-	public int Count
-	{
-		get
-		{
-			return count;
-		}
-		set
-		{
-			count = value;
-		}
-	}
+		private int count;
 
-	public TSet(TType elementType, int count)
-	{
-		this = default;
-		this.elementType = elementType;
-		this.count = count;
-	}
+		public TType ElementType
+		{
+			get
+			{
+				return elementType;
+			}
+			set
+			{
+				elementType = value;
+			}
+		}
 
-	public TSet(TList list)
-		: this(list.ElementType, list.Count)
-	{
+		public int Count
+		{
+			get
+			{
+				return count;
+			}
+			set
+			{
+				count = value;
+			}
+		}
+
+		public TSet(TType elementType, int count)
+		{
+			this = default(TSet);
+			this.elementType = elementType;
+			this.count = count;
+		}
+
+		public TSet(TList list)
+			: this(list.ElementType, list.Count)
+		{
+		}
 	}
 }

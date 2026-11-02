@@ -1,13 +1,14 @@
-namespace Facebook.Base.Mqtt;
-
-public enum ConnectionFailureReason
+namespace Facebook.Base.Mqtt
 {
-	FailedSocketConnectError,
-	FailedConnectMessage,
-	FailedInvalidConnectAck,
-	FailedDnsUnresolved,
-	FailedCreateStream,
-	FailedConnectRefused,
-	FailedConnectRefusedNotAuthorized,
-	FailedUnexpectedDisconnect
+	public enum ConnectionFailureReason
+	{
+		FailedSocketConnectError,
+		FailedConnectMessage,
+		FailedInvalidConnectAck,
+		FailedDnsUnresolved,
+		FailedCreateStream,
+		FailedConnectRefused,
+		FailedConnectRefusedNotAuthorized,
+		FailedUnexpectedDisconnect
+	}
 }

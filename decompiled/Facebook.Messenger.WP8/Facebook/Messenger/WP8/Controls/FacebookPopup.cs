@@ -6,123 +6,125 @@ using System.Windows.Markup;
 using Facebook.Messenger.WP8.Controls.Base;
 using Microsoft.Phone.Shell;
 
-namespace Facebook.Messenger.WP8.Controls;
-
-[ContentProperty("Child")]
-public class FacebookPopup : BaseControl
+namespace Facebook.Messenger.WP8.Controls
 {
-	protected double MaxContentPanelWidth;
-
-	protected double MaxContentPanelHeight;
-
-	protected readonly IApplicationBar ApplicationBar;
-
-	public static readonly DependencyProperty IsOpenProperty = DependencyProperty.Register("IsOpen", typeof(bool), typeof(FacebookPopup), new PropertyMetadata((object)false, (PropertyChangedCallback)IsOpen_OnChanged));
-
-	public Popup RootPopup = new Popup();
-
-	public bool IsOpen
+	[ContentProperty("Child")]
+	public class FacebookPopup : BaseControl
 	{
-		get
+		protected double MaxContentPanelWidth;
+
+		protected double MaxContentPanelHeight;
+
+		protected readonly IApplicationBar ApplicationBar;
+
+		public static readonly DependencyProperty IsOpenProperty = DependencyProperty.Register("IsOpen", typeof(bool), typeof(FacebookPopup), new PropertyMetadata((object)false, (PropertyChangedCallback)IsOpen_OnChanged));
+
+		public Popup RootPopup = new Popup();
+
+		public bool IsOpen
 		{
-			return (bool)((DependencyObject)this).GetValue(IsOpenProperty);
-		}
-		set
-		{
-			((DependencyObject)this).SetValue(IsOpenProperty, (object)value);
-			if (!IsOpen)
+			get
 			{
-				if (PopupDismissed != null)
+				return (bool)((DependencyObject)this).GetValue(IsOpenProperty);
+			}
+			set
+			{
+				((DependencyObject)this).SetValue(IsOpenProperty, (object)value);
+				if (!IsOpen)
 				{
-					PopupDismissed(this, null);
+					if (PopupDismissed != null)
+					{
+						PopupDismissed(this, null);
+					}
+					Reset();
 				}
-				Reset();
+				else
+				{
+					Setup();
+				}
 			}
-			else
+		}
+
+		public UIElement Child
+		{
+			get
 			{
-				Setup();
+				return RootPopup.Child;
+			}
+			set
+			{
+				RootPopup.Child = value;
 			}
 		}
-	}
 
-	public UIElement Child
-	{
-		get
+		public event EventHandler PopupDismissed;
+
+		private static void IsOpen_OnChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
 		{
-			return RootPopup.Child;
+			FacebookPopup facebookPopup = d as FacebookPopup;
+			if (facebookPopup != null)
+			{
+				facebookPopup.RootPopup.IsOpen = (bool)e.NewValue;
+			}
 		}
-		set
+
+		protected virtual void Setup()
 		{
-			RootPopup.Child = value;
 		}
-	}
 
-	public event EventHandler PopupDismissed;
-
-	private static void IsOpen_OnChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
-	{
-		if (d is FacebookPopup facebookPopup)
+		protected virtual void Reset()
 		{
-			facebookPopup.RootPopup.IsOpen = (bool)e.NewValue;
 		}
-	}
 
-	protected virtual void Setup()
-	{
-	}
+		public FacebookPopup()
+		{
+			//IL_0001: Unknown result type (might be due to invalid IL or missing references)
+			//IL_000b: Expected Obj, but got Unknown
+			Initialize();
+		}
 
-	protected virtual void Reset()
-	{
-	}
+		public FacebookPopup(IApplicationBar applicationBar)
+		{
+			//IL_0001: Unknown result type (might be due to invalid IL or missing references)
+			//IL_000b: Expected Obj, but got Unknown
+			ApplicationBar = applicationBar;
+			Initialize();
+		}
 
-	public FacebookPopup()
-	{
-		//IL_0001: Unknown result type (might be due to invalid IL or missing references)
-		//IL_000b: Expected Obj, but got Unknown
-		Initialize();
-	}
+		public static void SafeCleanUp(FacebookPopup popup)
+		{
+			popup?.CleanUp();
+		}
 
-	public FacebookPopup(IApplicationBar applicationBar)
-	{
-		//IL_0001: Unknown result type (might be due to invalid IL or missing references)
-		//IL_000b: Expected Obj, but got Unknown
-		ApplicationBar = applicationBar;
-		Initialize();
-	}
+		public void CleanUp()
+		{
+			Application.Current.Host.Content.Resized -= OnApplicationContentOnResized;
+		}
 
-	public static void SafeCleanUp(FacebookPopup popup)
-	{
-		popup?.CleanUp();
-	}
+		private void Initialize()
+		{
+			((UserControl)this).Content = (UIElement)(object)RootPopup;
+			UpdateSize();
+			Application.Current.Host.Content.Resized += OnApplicationContentOnResized;
+		}
 
-	public void CleanUp()
-	{
-		Application.Current.Host.Content.Resized -= OnApplicationContentOnResized;
-	}
+		private void UpdateSize()
+		{
+			MaxContentPanelHeight = Application.Current.Host.Content.ActualHeight;
+			MaxContentPanelWidth = Application.Current.Host.Content.ActualWidth;
+		}
 
-	private void Initialize()
-	{
-		((UserControl)this).Content = (UIElement)(object)RootPopup;
-		UpdateSize();
-		Application.Current.Host.Content.Resized += OnApplicationContentOnResized;
-	}
+		private void OnApplicationContentOnResized(object sender, EventArgs eventArgs)
+		{
+			UpdateSize();
+		}
 
-	private void UpdateSize()
-	{
-		MaxContentPanelHeight = Application.Current.Host.Content.ActualHeight;
-		MaxContentPanelWidth = Application.Current.Host.Content.ActualWidth;
-	}
-
-	private void OnApplicationContentOnResized(object sender, EventArgs eventArgs)
-	{
-		UpdateSize();
-	}
-
-	static FacebookPopup()
-	{
-		//IL_0026: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0030: Expected Obj, but got Unknown
-		//IL_002b: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0035: Expected Obj, but got Unknown
+		static FacebookPopup()
+		{
+			//IL_0026: Unknown result type (might be due to invalid IL or missing references)
+			//IL_0030: Expected Obj, but got Unknown
+			//IL_002b: Unknown result type (might be due to invalid IL or missing references)
+			//IL_0035: Expected Obj, but got Unknown
+		}
 	}
 }

@@ -1,5 +1,6 @@
-namespace Facebook.Messenger.WP8.Extensions;
-
-public interface ITiltable
+namespace Facebook.Messenger.WP8.Extensions
 {
+	public interface ITiltable
+	{
+	}
 }

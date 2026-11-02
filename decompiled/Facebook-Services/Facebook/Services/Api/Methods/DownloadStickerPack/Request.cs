@@ -1,8 +1,9 @@
 using Facebook.Base;
 
-namespace Facebook.Services.Api.Methods.DownloadStickerPack;
-
-public class Request : Facebook.Base.Request
+namespace Facebook.Services.Api.Methods.DownloadStickerPack
 {
-	public string StickerPackId { get; set; }
+	public class Request : Facebook.Base.Request
+	{
+		public string StickerPackId { get; set; }
+	}
 }

@@ -1,19 +1,20 @@
-namespace Facebook.Base.Mqtt.Messages;
-
-public enum MessageType
+namespace Facebook.Base.Mqtt.Messages
 {
-	Connect = 1,
-	ConnectAck,
-	Publish,
-	PublishAck,
-	PublishReceived,
-	PublishReleased,
-	PublishComplete,
-	Subscribe,
-	SubscribeAck,
-	Unsubscribe,
-	UnsubscribeAck,
-	PingRequest,
-	PingResponse,
-	Disconnect
+	public enum MessageType
+	{
+		Connect = 1,
+		ConnectAck,
+		Publish,
+		PublishAck,
+		PublishReceived,
+		PublishReleased,
+		PublishComplete,
+		Subscribe,
+		SubscribeAck,
+		Unsubscribe,
+		UnsubscribeAck,
+		PingRequest,
+		PingResponse,
+		Disconnect
+	}
 }

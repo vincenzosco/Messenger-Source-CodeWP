@@ -1,56 +1,57 @@
 using System;
 using System.Diagnostics.Contracts;
 
-namespace ImageTools;
-
-public sealed class ImageProperty : IEquatable<ImageProperty>
+namespace ImageTools
 {
-	private string _name;
-
-	public string Name => _name;
-
-	public string Value { get; set; }
-
-	public ImageProperty(string name, string value)
+	public sealed class ImageProperty : IEquatable<ImageProperty>
 	{
-		Contract.Requires<ArgumentException>(!string.IsNullOrEmpty(name), "Name cannot be null or empty.");
-		_name = name;
-		Value = value;
-	}
+		private string _name;
 
-	public override bool Equals(object obj)
-	{
-		if (obj == null)
+		public string Name => _name;
+
+		public string Value { get; set; }
+
+		public ImageProperty(string name, string value)
 		{
+			Contract.Requires<ArgumentException>(!string.IsNullOrEmpty(name), "Name cannot be null or empty.");
+			_name = name;
+			Value = value;
+		}
+
+		public override bool Equals(object obj)
+		{
+			if (obj == null)
+			{
+				return false;
+			}
+			return Equals(obj as ImageProperty);
+		}
+
+		public bool Equals(ImageProperty other)
+		{
+			if (other == null)
+			{
+				return false;
+			}
+			if (object.Equals(Name, other.Name))
+			{
+				return object.Equals(Value, other.Value);
+			}
 			return false;
 		}
-		return Equals(obj as ImageProperty);
-	}
 
-	public bool Equals(ImageProperty other)
-	{
-		if (other == null)
+		public override int GetHashCode()
 		{
-			return false;
+			int num = 1;
+			if (Name != null)
+			{
+				num ^= Name.GetHashCode();
+			}
+			if (Value != null)
+			{
+				num ^= Value.GetHashCode();
+			}
+			return num;
 		}
-		if (object.Equals(Name, other.Name))
-		{
-			return object.Equals(Value, other.Value);
-		}
-		return false;
-	}
-
-	public override int GetHashCode()
-	{
-		int num = 1;
-		if (Name != null)
-		{
-			num ^= Name.GetHashCode();
-		}
-		if (Value != null)
-		{
-			num ^= Value.GetHashCode();
-		}
-		return num;
 	}
 }

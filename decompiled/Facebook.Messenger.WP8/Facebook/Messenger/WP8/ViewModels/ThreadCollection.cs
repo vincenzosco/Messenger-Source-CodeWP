@@ -14,334 +14,337 @@ using Facebook.Services.Api.Methods.FetchThreads;
 using Facebook.Services.Localization;
 using GalaSoft.MvvmLight.Messaging;
 
-namespace Facebook.Messenger.WP8.ViewModels;
-
-public class ThreadCollection : ObservableCollection<ThreadViewModel>
+namespace Facebook.Messenger.WP8.ViewModels
 {
-	public delegate void CollectionDelegate(ThreadCollection c);
-
-	public delegate void FetchCollectionDelegate(ThreadCollection c, bool receivedThreadsFromWebOrSync, Error error = null);
-
-	private bool _fetchingUpdatedThreads;
-
-	private bool _canFetchMoreItems;
-
-	private bool _fetchingThreads;
-
-	private FacebookContext Context { get; set; }
-
-	public CancellationToken Token { get; private set; }
-
-	private Facebook.Services.Api.Service ApiService { get; set; }
-
-	public long RecentPushActionId { get; set; }
-
-	public bool ThreadsFetched { get; set; }
-
-	public bool FetchingThreads
+	public class ThreadCollection : ObservableCollection<ThreadViewModel>
 	{
-		get
+		public delegate void CollectionDelegate(ThreadCollection c);
+
+		public delegate void FetchCollectionDelegate(ThreadCollection c, bool receivedThreadsFromWebOrSync, Error error = null);
+
+		private bool _fetchingUpdatedThreads;
+
+		private bool _canFetchMoreItems;
+
+		private bool _fetchingThreads;
+
+		private FacebookContext Context { get; set; }
+
+		public CancellationToken Token { get; private set; }
+
+		private Facebook.Services.Api.Service ApiService { get; set; }
+
+		public long RecentPushActionId { get; set; }
+
+		public bool ThreadsFetched { get; set; }
+
+		public bool FetchingThreads
 		{
-			return _fetchingThreads;
-		}
-		set
-		{
-			_fetchingThreads = value;
-			if (value)
+			get
 			{
-				if (FetchingThreadsStarted != null)
+				return _fetchingThreads;
+			}
+			set
+			{
+				_fetchingThreads = value;
+				if (value)
 				{
-					FetchingThreadsStarted(this, null);
+					if (FetchingThreadsStarted != null)
+					{
+						FetchingThreadsStarted(this, null);
+					}
+				}
+				else if (FetchingThreadsComplete != null)
+				{
+					FetchingThreadsComplete(this, null);
 				}
 			}
-			else if (FetchingThreadsComplete != null)
+		}
+
+		public event FetchCollectionDelegate FirstPageFetched;
+
+		public event CollectionDelegate UpdatedThreadsStarting;
+
+		public event CollectionDelegate UpdatedThreadsFinished;
+
+		public event EventHandler FetchingThreadsStarted;
+
+		public event EventHandler FetchingThreadsComplete;
+
+		public ThreadCollection(FacebookContext context, CancellationToken token, Facebook.Services.Api.Service service)
+		{
+			Context = context;
+			ApiService = service;
+			Token = token;
+			_canFetchMoreItems = true;
+		}
+
+		public async Task FetchOlderThreads()
+		{
+			if (!FetchingThreads && _canFetchMoreItems)
 			{
-				FetchingThreadsComplete(this, null);
+				FetchingThreads = true;
+				long timestamp = this.Last().Timestamp;
+				Facebook.Services.Api.Methods.FetchThreads.Response response = await ExecuteFetchRequest(timestamp, 0L);
+				if (!response.HasError())
+				{
+					ProcessResponse(response);
+				}
+				FetchingThreads = false;
 			}
 		}
-	}
 
-	public event FetchCollectionDelegate FirstPageFetched;
-
-	public event CollectionDelegate UpdatedThreadsStarting;
-
-	public event CollectionDelegate UpdatedThreadsFinished;
-
-	public event EventHandler FetchingThreadsStarted;
-
-	public event EventHandler FetchingThreadsComplete;
-
-	public ThreadCollection(FacebookContext context, CancellationToken token, Facebook.Services.Api.Service service)
-	{
-		Context = context;
-		ApiService = service;
-		Token = token;
-		_canFetchMoreItems = true;
-	}
-
-	public async Task FetchOlderThreads()
-	{
-		if (!FetchingThreads && _canFetchMoreItems)
+		public async Task FetchFirstPage()
 		{
-			FetchingThreads = true;
-			long timestamp = this.Last().Timestamp;
-			Facebook.Services.Api.Methods.FetchThreads.Response response = await ExecuteFetchRequest(timestamp, 0L);
-			if (!response.HasError())
+			if (!FetchingThreads)
 			{
-				ProcessResponse(response);
+				FetchingThreads = true;
+				Facebook.Services.Api.Methods.FetchThreads.Response response = await ExecuteFetchRequest(0L, 0L);
+				if (response.HasError())
+				{
+					_canFetchMoreItems = false;
+				}
+				else
+				{
+					ProcessResponse(response);
+				}
+				FetchingThreads = false;
+				ThreadsFetched = true;
+				if (FirstPageFetched != null)
+				{
+					FirstPageFetched(this, response.ReceivedThreadsFromWebOrSync, response.Error);
+				}
 			}
-			FetchingThreads = false;
 		}
-	}
 
-	public async Task FetchFirstPage()
-	{
-		if (!FetchingThreads)
+		public void ThreadUpdated(MailThread thread)
 		{
-			FetchingThreads = true;
-			Facebook.Services.Api.Methods.FetchThreads.Response response = await ExecuteFetchRequest(0L, 0L);
-			if (response.HasError())
+			thread.SnippetFromMe = thread.SnippetSender != null && Context.IsActiveUser(thread.SnippetSender.Id);
+			ThreadViewModel threadViewModel = this.FirstOrDefault((ThreadViewModel x) => x.IsSameThread(thread));
+			if (threadViewModel == null)
 			{
-				_canFetchMoreItems = false;
+				if (Count == 0)
+				{
+					FetchFirstPage().DoNotWait();
+				}
+				else if (base[0].ActionId < thread.ActionId)
+				{
+					FetchUpdatedThreads().DoNotWait();
+				}
+			}
+			else if (thread.Deleted || thread.Archived)
+			{
+				Remove(threadViewModel);
 			}
 			else
 			{
-				ProcessResponse(response);
-			}
-			FetchingThreads = false;
-			ThreadsFetched = true;
-			if (FirstPageFetched != null)
-			{
-				FirstPageFetched(this, response.ReceivedThreadsFromWebOrSync, response.Error);
+				threadViewModel.UpdateThread(thread);
+				if (Count > 0)
+				{
+					ArrangeThread(threadViewModel);
+				}
 			}
 		}
-	}
 
-	public void ThreadUpdated(MailThread thread)
-	{
-		thread.SnippetFromMe = thread.SnippetSender != null && Context.IsActiveUser(thread.SnippetSender.Id);
-		ThreadViewModel threadViewModel = this.FirstOrDefault((ThreadViewModel x) => x.IsSameThread(thread));
-		if (threadViewModel == null)
+		public async Task FetchUpdatedThreads()
 		{
-			if (Count == 0)
+			if (Count == 0 || _fetchingUpdatedThreads)
 			{
-				FetchFirstPage().DoNotWait();
+				return;
 			}
-			else if (base[0].ActionId < thread.ActionId)
+			_fetchingUpdatedThreads = true;
+			SignalRefreshStatusUpdate(ActionState.Started);
+			if (UpdatedThreadsStarting != null)
+			{
+				UpdatedThreadsStarting(this);
+			}
+			Facebook.Services.Api.Methods.FetchThreads.Response response = await ExecuteFetchRequest(0L, this.Max((ThreadViewModel r) => r.ActionId), true);
+			if (response.HasError() || response.Threads == null)
+			{
+				_fetchingUpdatedThreads = false;
+				SignalRefreshStatusUpdate(ActionState.Failed);
+				return;
+			}
+			if (response.ShouldPurgeThreadCache)
+			{
+				Clear();
+			}
+			foreach (MailThread thread in response.Threads)
+			{
+				thread.SnippetFromMe = thread.SnippetSender != null && Context.IsActiveUser(thread.SnippetSender.Id);
+				ThreadViewModel matchingThread = GetMatchingThread(thread);
+				bool flag = thread.Deleted || thread.Archived;
+				if (flag && matchingThread != null)
+				{
+					Remove(matchingThread);
+				}
+				else if (matchingThread != null)
+				{
+					matchingThread.UpdateThread(thread);
+					ArrangeThread(matchingThread);
+				}
+				else if (!flag)
+				{
+					InsertThread(new ThreadViewModel(thread));
+				}
+			}
+			if (response.ShouldPurgeThreadCache)
+			{
+				_canFetchMoreItems = true;
+			}
+			MarkThreadFailureState(response.ThreadIdsWithFailedSentMessages);
+			if (UpdatedThreadsFinished != null)
+			{
+				UpdatedThreadsFinished(this);
+			}
+			_fetchingUpdatedThreads = false;
+			SignalRefreshStatusUpdate(response.ReceivedThreadsFromWebOrSync ? ActionState.Succeeded : ActionState.Failed);
+		}
+
+		private async Task<Facebook.Services.Api.Methods.FetchThreads.Response> ExecuteFetchRequest(long timestamp = 0L, long maxActionId = 0L, bool forceToServer = false)
+		{
+			Facebook.Services.Api.Methods.FetchThreads.Request request = new Facebook.Services.Api.Methods.FetchThreads.Request
+			{
+				AccessToken = Context.Session.Credentials.AccessToken,
+				CancelToken = Token,
+				MaxTimestamp = timestamp,
+				RecentPushActionId = RecentPushActionId,
+				ForceToServer = forceToServer,
+				ActionId = maxActionId
+			};
+			return await ApiService.ExecuteAsync<Facebook.Services.Api.Methods.FetchThreads.Request, Facebook.Services.Api.Methods.FetchThreads.Response>(request);
+		}
+
+		private void ProcessResponse(Facebook.Services.Api.Methods.FetchThreads.Response response)
+		{
+			foreach (MailThread thread in response.Threads)
+			{
+				if (!thread.Deleted && !thread.Archived)
+				{
+					if (thread.SnippetSender != null)
+					{
+						thread.SnippetFromMe = Context.IsActiveUser(thread.SnippetSender.Id);
+					}
+					Add(new ThreadViewModel(thread));
+				}
+			}
+			if (response.Threads.Count == 0)
+			{
+				_canFetchMoreItems = false;
+			}
+			MarkThreadFailureState(response.ThreadIdsWithFailedSentMessages);
+		}
+
+		private ThreadViewModel GetMatchingThread(MailThread thread)
+		{
+			return GetMatchingThread(thread.Id, thread.IsCanonical(), thread.SingleRecipient);
+		}
+
+		private ThreadViewModel GetMatchingThread(string threadId, bool isCanonical = false, string singleRecipient = null)
+		{
+			List<ThreadViewModel> list = new List<ThreadViewModel>(this);
+			return list.Find((ThreadViewModel rowItem) => (threadId != null && threadId == rowItem.Id) || (isCanonical && singleRecipient == rowItem.SingleRecipient));
+		}
+
+		public void MarkThreadFailureState(List<string> failedIds)
+		{
+			if (failedIds == null)
+			{
+				return;
+			}
+			ILookup<string, string> lookup = failedIds.ToLookup((string s) => s);
+			using (IEnumerator<ThreadViewModel> enumerator = GetEnumerator())
+			{
+				while (enumerator.MoveNext())
+				{
+					ThreadViewModel current = enumerator.Current;
+					current.HasFailedUnsentMessages = lookup.Contains(current.Id);
+				}
+			}
+		}
+
+		public void MarkThreadRead(string threadId, long timestamp)
+		{
+			ThreadViewModel matchingThread = GetMatchingThread(threadId);
+			if (matchingThread != null)
+			{
+				matchingThread.ReadMessageTimestamp = timestamp;
+			}
+		}
+
+		public void AddMessage(MailMessage message, ThreadSnippetInfo snippet, bool isOutgoingMessage)
+		{
+			ThreadViewModel matchingThread = GetMatchingThread(message.ThreadId);
+			if (matchingThread == null)
 			{
 				FetchUpdatedThreads().DoNotWait();
 			}
-		}
-		else if (thread.Deleted || thread.Archived)
-		{
-			Remove(threadViewModel);
-		}
-		else
-		{
-			threadViewModel.UpdateThread(thread);
-			if (Count > 0)
+			else if (isOutgoingMessage || (matchingThread.Timestamp < message.Timestamp && matchingThread.Snippet.SnippetTimestamp < message.Timestamp))
 			{
-				ArrangeThread(threadViewModel);
+				bool isSnippetFromMe = Context.IsActiveUser(message.Sender.Id);
+				matchingThread.UpdateSnippetAndReadState(message, isSnippetFromMe, snippet);
+				ArrangeThread(matchingThread);
 			}
 		}
-	}
 
-	public async Task FetchUpdatedThreads()
-	{
-		if (Count == 0 || _fetchingUpdatedThreads)
+		public void RemoveByThreadId(string threadId)
 		{
-			return;
-		}
-		_fetchingUpdatedThreads = true;
-		SignalRefreshStatusUpdate(ActionState.Started);
-		if (UpdatedThreadsStarting != null)
-		{
-			UpdatedThreadsStarting(this);
-		}
-		Facebook.Services.Api.Methods.FetchThreads.Response response = await ExecuteFetchRequest(0L, this.Max((ThreadViewModel r) => r.ActionId), forceToServer: true);
-		if (response.HasError() || response.Threads == null)
-		{
-			_fetchingUpdatedThreads = false;
-			SignalRefreshStatusUpdate(ActionState.Failed);
-			return;
-		}
-		if (response.ShouldPurgeThreadCache)
-		{
-			Clear();
-		}
-		foreach (MailThread thread in response.Threads)
-		{
-			thread.SnippetFromMe = thread.SnippetSender != null && Context.IsActiveUser(thread.SnippetSender.Id);
-			ThreadViewModel matchingThread = GetMatchingThread(thread);
-			bool flag = thread.Deleted || thread.Archived;
-			if (flag && matchingThread != null)
+			ThreadViewModel matchingThread = GetMatchingThread(threadId);
+			if (matchingThread != null)
 			{
 				Remove(matchingThread);
 			}
-			else if (matchingThread != null)
+		}
+
+		public async Task UpdateVisibleThreads()
+		{
+			if (Count != 0)
 			{
-				matchingThread.UpdateThread(thread);
+				Facebook.Services.Api.Methods.FetchLocalThreadData.Request request = new Facebook.Services.Api.Methods.FetchLocalThreadData.Request(this.Select((ThreadViewModel rowItem) => rowItem.Id).ToList());
+				Facebook.Services.Api.Methods.FetchLocalThreadData.Response response = await ApiService.ExecuteAsync<Facebook.Services.Api.Methods.FetchLocalThreadData.Request, Facebook.Services.Api.Methods.FetchLocalThreadData.Response>(request);
+				if (!response.HasError())
+				{
+					MarkThreadFailureState(response.ThreadIdsWithFailedUnsentMessages);
+				}
+			}
+		}
+
+		private void SignalRefreshStatusUpdate(ActionState state)
+		{
+			GalaSoft.MvvmLight.Messaging.Messenger.Default.Send(state);
+		}
+
+		public void ExecuteActionOnThread(string threadId, Action<ThreadViewModel> action)
+		{
+			ThreadViewModel matchingThread = GetMatchingThread(threadId);
+			if (matchingThread != null)
+			{
+				action(matchingThread);
+				matchingThread.Timestamp = DateTime.UtcNow.ToUnixTimeMilliseconds();
 				ArrangeThread(matchingThread);
 			}
-			else if (!flag)
+		}
+
+		public void ArrangeThread(ThreadViewModel threadViewModel)
+		{
+			if (Contains(threadViewModel))
 			{
-				InsertThread(new ThreadViewModel(thread));
+				Remove(threadViewModel);
+				InsertThread(threadViewModel);
 			}
 		}
-		if (response.ShouldPurgeThreadCache)
-		{
-			_canFetchMoreItems = true;
-		}
-		MarkThreadFailureState(response.ThreadIdsWithFailedSentMessages);
-		if (UpdatedThreadsFinished != null)
-		{
-			UpdatedThreadsFinished(this);
-		}
-		_fetchingUpdatedThreads = false;
-		SignalRefreshStatusUpdate(response.ReceivedThreadsFromWebOrSync ? ActionState.Succeeded : ActionState.Failed);
-	}
 
-	private async Task<Facebook.Services.Api.Methods.FetchThreads.Response> ExecuteFetchRequest(long timestamp = 0L, long maxActionId = 0L, bool forceToServer = false)
-	{
-		Facebook.Services.Api.Methods.FetchThreads.Request request = new Facebook.Services.Api.Methods.FetchThreads.Request
+		private void InsertThread(ThreadViewModel threadViewModel)
 		{
-			AccessToken = Context.Session.Credentials.AccessToken,
-			CancelToken = Token,
-			MaxTimestamp = timestamp,
-			RecentPushActionId = RecentPushActionId,
-			ForceToServer = forceToServer,
-			ActionId = maxActionId
-		};
-		return await ApiService.ExecuteAsync<Facebook.Services.Api.Methods.FetchThreads.Request, Facebook.Services.Api.Methods.FetchThreads.Response>(request);
-	}
-
-	private void ProcessResponse(Facebook.Services.Api.Methods.FetchThreads.Response response)
-	{
-		foreach (MailThread thread in response.Threads)
-		{
-			if (!thread.Deleted && !thread.Archived)
+			int num = this.TakeWhile((ThreadViewModel rowItem) => threadViewModel.Timestamp <= rowItem.Timestamp).Count();
+			if (num < Count)
 			{
-				if (thread.SnippetSender != null)
-				{
-					thread.SnippetFromMe = Context.IsActiveUser(thread.SnippetSender.Id);
-				}
-				Add(new ThreadViewModel(thread));
+				Insert(num, threadViewModel);
 			}
-		}
-		if (response.Threads.Count == 0)
-		{
-			_canFetchMoreItems = false;
-		}
-		MarkThreadFailureState(response.ThreadIdsWithFailedSentMessages);
-	}
-
-	private ThreadViewModel GetMatchingThread(MailThread thread)
-	{
-		return GetMatchingThread(thread.Id, thread.IsCanonical(), thread.SingleRecipient);
-	}
-
-	private ThreadViewModel GetMatchingThread(string threadId, bool isCanonical = false, string singleRecipient = null)
-	{
-		List<ThreadViewModel> list = new List<ThreadViewModel>(this);
-		return list.Find((ThreadViewModel rowItem) => (threadId != null && threadId == rowItem.Id) || (isCanonical && singleRecipient == rowItem.SingleRecipient));
-	}
-
-	public void MarkThreadFailureState(List<string> failedIds)
-	{
-		if (failedIds == null)
-		{
-			return;
-		}
-		ILookup<string, string> lookup = failedIds.ToLookup((string s) => s);
-		using IEnumerator<ThreadViewModel> enumerator = GetEnumerator();
-		while (enumerator.MoveNext())
-		{
-			ThreadViewModel current = enumerator.Current;
-			current.HasFailedUnsentMessages = lookup.Contains(current.Id);
-		}
-	}
-
-	public void MarkThreadRead(string threadId, long timestamp)
-	{
-		ThreadViewModel matchingThread = GetMatchingThread(threadId);
-		if (matchingThread != null)
-		{
-			matchingThread.ReadMessageTimestamp = timestamp;
-		}
-	}
-
-	public void AddMessage(MailMessage message, ThreadSnippetInfo snippet, bool isOutgoingMessage)
-	{
-		ThreadViewModel matchingThread = GetMatchingThread(message.ThreadId);
-		if (matchingThread == null)
-		{
-			FetchUpdatedThreads().DoNotWait();
-		}
-		else if (isOutgoingMessage || (matchingThread.Timestamp < message.Timestamp && matchingThread.Snippet.SnippetTimestamp < message.Timestamp))
-		{
-			bool isSnippetFromMe = Context.IsActiveUser(message.Sender.Id);
-			matchingThread.UpdateSnippetAndReadState(message, isSnippetFromMe, snippet);
-			ArrangeThread(matchingThread);
-		}
-	}
-
-	public void RemoveByThreadId(string threadId)
-	{
-		ThreadViewModel matchingThread = GetMatchingThread(threadId);
-		if (matchingThread != null)
-		{
-			Remove(matchingThread);
-		}
-	}
-
-	public async Task UpdateVisibleThreads()
-	{
-		if (Count != 0)
-		{
-			Facebook.Services.Api.Methods.FetchLocalThreadData.Request request = new Facebook.Services.Api.Methods.FetchLocalThreadData.Request(this.Select((ThreadViewModel rowItem) => rowItem.Id).ToList());
-			Facebook.Services.Api.Methods.FetchLocalThreadData.Response response = await ApiService.ExecuteAsync<Facebook.Services.Api.Methods.FetchLocalThreadData.Request, Facebook.Services.Api.Methods.FetchLocalThreadData.Response>(request);
-			if (!response.HasError())
+			else
 			{
-				MarkThreadFailureState(response.ThreadIdsWithFailedUnsentMessages);
+				Add(threadViewModel);
 			}
-		}
-	}
-
-	private void SignalRefreshStatusUpdate(ActionState state)
-	{
-		GalaSoft.MvvmLight.Messaging.Messenger.Default.Send(state);
-	}
-
-	public void ExecuteActionOnThread(string threadId, Action<ThreadViewModel> action)
-	{
-		ThreadViewModel matchingThread = GetMatchingThread(threadId);
-		if (matchingThread != null)
-		{
-			action(matchingThread);
-			matchingThread.Timestamp = DateTime.UtcNow.ToUnixTimeMilliseconds();
-			ArrangeThread(matchingThread);
-		}
-	}
-
-	public void ArrangeThread(ThreadViewModel threadViewModel)
-	{
-		if (Contains(threadViewModel))
-		{
-			Remove(threadViewModel);
-			InsertThread(threadViewModel);
-		}
-	}
-
-	private void InsertThread(ThreadViewModel threadViewModel)
-	{
-		int num = this.TakeWhile((ThreadViewModel rowItem) => threadViewModel.Timestamp <= rowItem.Timestamp).Count();
-		if (num < Count)
-		{
-			Insert(num, threadViewModel);
-		}
-		else
-		{
-			Add(threadViewModel);
 		}
 	}
 }

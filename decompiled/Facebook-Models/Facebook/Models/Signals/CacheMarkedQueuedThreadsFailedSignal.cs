@@ -1,5 +1,6 @@
-namespace Facebook.Models.Signals;
-
-public class CacheMarkedQueuedThreadsFailedSignal
+namespace Facebook.Models.Signals
 {
+	public class CacheMarkedQueuedThreadsFailedSignal
+	{
+	}
 }

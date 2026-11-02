@@ -1,10 +1,11 @@
-namespace Facebook.Services.Common;
-
-public enum PeopleYouMayKnowLocation
+namespace Facebook.Services.Common
 {
-	NewAccountNUX,
-	Jewel,
-	Feed,
-	FindFriends,
-	NotificationsTab
+	public enum PeopleYouMayKnowLocation
+	{
+		NewAccountNUX,
+		Jewel,
+		Feed,
+		FindFriends,
+		NotificationsTab
+	}
 }

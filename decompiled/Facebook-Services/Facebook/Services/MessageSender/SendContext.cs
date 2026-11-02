@@ -3,127 +3,128 @@ using System.Threading;
 using System.Threading.Tasks;
 using Facebook.Services.Api.Methods.SendMessage;
 
-namespace Facebook.Services.MessageSender;
-
-public class SendContext
+namespace Facebook.Services.MessageSender
 {
-	private readonly object _lock = new object();
-
-	private readonly SemaphoreSlim _sendingSemaphore;
-
-	private readonly SemaphoreSlim _savingSemaphore;
-
-	private readonly List<Request> _requests;
-
-	private string _localThreadIdOverride;
-
-	private string _serverThreadIdOverride;
-
-	public string Id { get; set; }
-
-	public bool IdIsLocal { get; set; }
-
-	public bool IsSending { get; set; }
-
-	public SendContext(string id, bool isThreadIdLocal)
+	public class SendContext
 	{
-		_sendingSemaphore = new SemaphoreSlim(1);
-		_savingSemaphore = new SemaphoreSlim(1);
-		_requests = new List<Request>();
-		IsSending = false;
-		_localThreadIdOverride = null;
-		_serverThreadIdOverride = null;
-		Id = id;
-		IdIsLocal = isThreadIdLocal;
-	}
+		private readonly object _lock = new object();
 
-	public bool HasOutstandingRequests()
-	{
-		return GetNumOutstandingRequests() > 0;
-	}
+		private readonly SemaphoreSlim _sendingSemaphore;
 
-	public int GetNumOutstandingRequests()
-	{
-		lock (_lock)
+		private readonly SemaphoreSlim _savingSemaphore;
+
+		private readonly List<Request> _requests;
+
+		private string _localThreadIdOverride;
+
+		private string _serverThreadIdOverride;
+
+		public string Id { get; set; }
+
+		public bool IdIsLocal { get; set; }
+
+		public bool IsSending { get; set; }
+
+		public SendContext(string id, bool isThreadIdLocal)
 		{
-			return _requests.Count;
+			_sendingSemaphore = new SemaphoreSlim(1);
+			_savingSemaphore = new SemaphoreSlim(1);
+			_requests = new List<Request>();
+			IsSending = false;
+			_localThreadIdOverride = null;
+			_serverThreadIdOverride = null;
+			Id = id;
+			IdIsLocal = isThreadIdLocal;
 		}
-	}
 
-	internal void EnqueueRequest(Request request)
-	{
-		lock (_lock)
+		public bool HasOutstandingRequests()
 		{
-			if (_localThreadIdOverride != null)
-			{
-				request.LocalThreadId = _localThreadIdOverride;
-			}
-			if (_serverThreadIdOverride != null)
-			{
-				request.ServerThreadId = _serverThreadIdOverride;
-			}
-			_requests.Add(request);
-			IsSending = true;
+			return GetNumOutstandingRequests() > 0;
 		}
-	}
 
-	internal async Task WaitToSendAsync()
-	{
-		await _sendingSemaphore.WaitAsync();
-	}
-
-	internal async Task WaitToSaveAsync()
-	{
-		await _savingSemaphore.WaitAsync();
-	}
-
-	internal void OverrideLocalThreadId(string id)
-	{
-		_localThreadIdOverride = id;
-		lock (_lock)
+		public int GetNumOutstandingRequests()
 		{
-			foreach (Request request in _requests)
+			lock (_lock)
 			{
-				request.LocalThreadId = id;
+				return _requests.Count;
 			}
 		}
-	}
 
-	internal void OverrideServerThreadId(string id)
-	{
-		_serverThreadIdOverride = id;
-		lock (_lock)
+		internal void EnqueueRequest(Request request)
 		{
-			foreach (Request request in _requests)
+			lock (_lock)
 			{
-				request.ServerThreadId = id;
+				if (_localThreadIdOverride != null)
+				{
+					request.LocalThreadId = _localThreadIdOverride;
+				}
+				if (_serverThreadIdOverride != null)
+				{
+					request.ServerThreadId = _serverThreadIdOverride;
+				}
+				_requests.Add(request);
+				IsSending = true;
 			}
 		}
-	}
 
-	internal void ReleaseSend(Request request)
-	{
-		lock (_lock)
+		internal async Task WaitToSendAsync()
 		{
-			_requests.Remove(request);
-			if (_requests.Count == 0)
+			await _sendingSemaphore.WaitAsync();
+		}
+
+		internal async Task WaitToSaveAsync()
+		{
+			await _savingSemaphore.WaitAsync();
+		}
+
+		internal void OverrideLocalThreadId(string id)
+		{
+			_localThreadIdOverride = id;
+			lock (_lock)
 			{
-				IsSending = false;
+				foreach (Request request in _requests)
+				{
+					request.LocalThreadId = id;
+				}
 			}
 		}
-		_sendingSemaphore.Release();
-	}
 
-	internal void ReleaseSave()
-	{
-		_savingSemaphore.Release();
-	}
-
-	public List<Request> GetOutstandingRequests()
-	{
-		lock (_lock)
+		internal void OverrideServerThreadId(string id)
 		{
-			return new List<Request>(_requests);
+			_serverThreadIdOverride = id;
+			lock (_lock)
+			{
+				foreach (Request request in _requests)
+				{
+					request.ServerThreadId = id;
+				}
+			}
+		}
+
+		internal void ReleaseSend(Request request)
+		{
+			lock (_lock)
+			{
+				_requests.Remove(request);
+				if (_requests.Count == 0)
+				{
+					IsSending = false;
+				}
+			}
+			_sendingSemaphore.Release();
+		}
+
+		internal void ReleaseSave()
+		{
+			_savingSemaphore.Release();
+		}
+
+		public List<Request> GetOutstandingRequests()
+		{
+			lock (_lock)
+			{
+				return new List<Request>(_requests);
+			}
 		}
 	}
 }

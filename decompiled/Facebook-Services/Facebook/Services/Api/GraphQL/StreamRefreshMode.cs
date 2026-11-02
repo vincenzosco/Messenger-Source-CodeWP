@@ -1,8 +1,9 @@
-namespace Facebook.Services.Api.GraphQL;
-
-public enum StreamRefreshMode
+namespace Facebook.Services.Api.GraphQL
 {
-	Undefined,
-	Automatic,
-	Manual
+	public enum StreamRefreshMode
+	{
+		Undefined,
+		Automatic,
+		Manual
+	}
 }

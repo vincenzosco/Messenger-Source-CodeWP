@@ -1,8 +1,9 @@
-namespace Facebook.Services.Api.Methods.MediaItemUpload;
-
-public enum MediaType
+namespace Facebook.Services.Api.Methods.MediaItemUpload
 {
-	Unknown,
-	Image,
-	Video
+	public enum MediaType
+	{
+		Unknown,
+		Image,
+		Video
+	}
 }

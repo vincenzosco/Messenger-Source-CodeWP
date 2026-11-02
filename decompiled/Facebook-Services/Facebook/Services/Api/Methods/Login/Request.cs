@@ -1,18 +1,19 @@
-namespace Facebook.Services.Api.Methods.Login;
-
-[Queue(QueueType.Web)]
-public class Request : FacebookServiceRequest
+namespace Facebook.Services.Api.Methods.Login
 {
-	public string UserName { get; private set; }
-
-	public string Password { get; private set; }
-
-	public string MachineId { get; private set; }
-
-	public Request(string name, string password, string machineId = null)
+	[Queue(QueueType.Web)]
+	public class Request : FacebookServiceRequest
 	{
-		UserName = name;
-		Password = password;
-		MachineId = machineId;
+		public string UserName { get; private set; }
+
+		public string Password { get; private set; }
+
+		public string MachineId { get; private set; }
+
+		public Request(string name, string password, string machineId = null)
+		{
+			UserName = name;
+			Password = password;
+			MachineId = machineId;
+		}
 	}
 }

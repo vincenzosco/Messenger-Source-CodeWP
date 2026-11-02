@@ -1,6 +1,7 @@
-namespace Facebook.Messenger.WP8.Events;
-
-public enum ListEvent
+namespace Facebook.Messenger.WP8.Events
 {
-	ScrolledToBottom
+	public enum ListEvent
+	{
+		ScrolledToBottom
+	}
 }

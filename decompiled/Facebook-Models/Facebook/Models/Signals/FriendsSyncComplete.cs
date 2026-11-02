@@ -1,5 +1,6 @@
-namespace Facebook.Models.Signals;
-
-public class FriendsSyncComplete
+namespace Facebook.Models.Signals
 {
+	public class FriendsSyncComplete
+	{
+	}
 }

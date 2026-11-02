@@ -2,35 +2,37 @@ using System;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
-namespace Facebook.Models;
-
-internal class StringPropertyConverter : JsonConverter
+namespace Facebook.Models
 {
-	public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
+	internal class StringPropertyConverter : JsonConverter
 	{
-	}
-
-	public object ReadJson(JsonReader reader, Type objectType, object existingValue, JsonSerializer serializer, string propertyName)
-	{
-		string result = null;
-		if (reader.TokenType == JsonToken.StartObject)
+		public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
 		{
-			JObject jObject = JObject.Load(reader);
-			if (jObject.TryGetValue(propertyName, out var value))
-			{
-				result = value.ToString();
-			}
 		}
-		return result;
-	}
 
-	public override object ReadJson(JsonReader reader, Type objectType, object existingValue, JsonSerializer serializer)
-	{
-		return ReadJson(reader, objectType, existingValue, serializer, "text");
-	}
+		public object ReadJson(JsonReader reader, Type objectType, object existingValue, JsonSerializer serializer, string propertyName)
+		{
+			string result = null;
+			if (reader.TokenType == JsonToken.StartObject)
+			{
+				JObject jObject = JObject.Load(reader);
+				JToken value;
+				if (jObject.TryGetValue(propertyName, out value))
+				{
+					result = value.ToString();
+				}
+			}
+			return result;
+		}
 
-	public override bool CanConvert(Type objectType)
-	{
-		return true;
+		public override object ReadJson(JsonReader reader, Type objectType, object existingValue, JsonSerializer serializer)
+		{
+			return ReadJson(reader, objectType, existingValue, serializer, "text");
+		}
+
+		public override bool CanConvert(Type objectType)
+		{
+			return true;
+		}
 	}
 }

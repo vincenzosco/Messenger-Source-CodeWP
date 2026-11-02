@@ -1,8 +1,9 @@
-namespace Facebook.Models.SyncProtocol;
-
-public enum FolderCountType
+namespace Facebook.Models.SyncProtocol
 {
-	TOTAL = 1,
-	UNREAD,
-	UNSEEN
+	public enum FolderCountType
+	{
+		TOTAL = 1,
+		UNREAD,
+		UNSEEN
+	}
 }

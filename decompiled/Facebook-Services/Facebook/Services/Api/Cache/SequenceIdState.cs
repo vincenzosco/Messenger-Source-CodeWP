@@ -1,8 +1,9 @@
-namespace Facebook.Services.Api.Cache;
-
-public enum SequenceIdState
+namespace Facebook.Services.Api.Cache
 {
-	AlreadySeen,
-	Contiguous,
-	Unexpected
+	public enum SequenceIdState
+	{
+		AlreadySeen,
+		Contiguous,
+		Unexpected
+	}
 }

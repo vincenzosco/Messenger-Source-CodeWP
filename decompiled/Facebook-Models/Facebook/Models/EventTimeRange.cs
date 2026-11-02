@@ -1,31 +1,32 @@
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 
-namespace Facebook.Models;
-
-public class EventTimeRange
+namespace Facebook.Models
 {
-	[JsonProperty("start")]
-	[DataMember]
-	public string Start { get; set; }
-
-	[DataMember]
-	[JsonProperty("end")]
-	public string End { get; set; }
-
-	[JsonProperty("timezone")]
-	[DataMember]
-	public string TimeZone { get; set; }
-
-	public bool IsDateOnly
+	public class EventTimeRange
 	{
-		get
+		[JsonProperty("start")]
+		[DataMember]
+		public string Start { get; set; }
+
+		[DataMember]
+		[JsonProperty("end")]
+		public string End { get; set; }
+
+		[JsonProperty("timezone")]
+		[DataMember]
+		public string TimeZone { get; set; }
+
+		public bool IsDateOnly
 		{
-			if (Start != null)
+			get
 			{
-				return Start.Length == 10;
+				if (Start != null)
+				{
+					return Start.Length == 10;
+				}
+				return false;
 			}
-			return false;
 		}
 	}
 }

@@ -1,11 +1,12 @@
-namespace Facebook.Models.Signals;
-
-public class CachePinnedThreadUpdatedSignal
+namespace Facebook.Models.Signals
 {
-	public readonly PinnedThread Thread;
-
-	public CachePinnedThreadUpdatedSignal(PinnedThread thread)
+	public class CachePinnedThreadUpdatedSignal
 	{
-		Thread = thread;
+		public readonly PinnedThread Thread;
+
+		public CachePinnedThreadUpdatedSignal(PinnedThread thread)
+		{
+			Thread = thread;
+		}
 	}
 }

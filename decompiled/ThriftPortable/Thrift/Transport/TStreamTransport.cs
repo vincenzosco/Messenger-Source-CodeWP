@@ -1,89 +1,90 @@
 using System.IO;
 
-namespace Thrift.Transport;
-
-public class TStreamTransport : TTransport
+namespace Thrift.Transport
 {
-	protected Stream inputStream;
-
-	protected Stream outputStream;
-
-	private bool _IsDisposed;
-
-	public Stream OutputStream => outputStream;
-
-	public Stream InputStream => inputStream;
-
-	public override bool IsOpen => true;
-
-	public TStreamTransport()
+	public class TStreamTransport : TTransport
 	{
-	}
+		protected Stream inputStream;
 
-	public TStreamTransport(Stream inputStream, Stream outputStream)
-	{
-		this.inputStream = inputStream;
-		this.outputStream = outputStream;
-	}
+		protected Stream outputStream;
 
-	public override void Open()
-	{
-	}
+		private bool _IsDisposed;
 
-	public override void Close()
-	{
-		if (inputStream != null)
+		public Stream OutputStream => outputStream;
+
+		public Stream InputStream => inputStream;
+
+		public override bool IsOpen => true;
+
+		public TStreamTransport()
 		{
-			inputStream.Dispose();
-			inputStream = null;
 		}
-		if (outputStream != null)
-		{
-			outputStream.Dispose();
-			outputStream = null;
-		}
-	}
 
-	public override int Read(byte[] buf, int off, int len)
-	{
-		if (inputStream == null)
+		public TStreamTransport(Stream inputStream, Stream outputStream)
 		{
-			throw new TTransportException(TTransportException.ExceptionType.NotOpen, "Cannot read from null inputstream");
+			this.inputStream = inputStream;
+			this.outputStream = outputStream;
 		}
-		return inputStream.Read(buf, off, len);
-	}
 
-	public override void Write(byte[] buf, int off, int len)
-	{
-		if (outputStream == null)
+		public override void Open()
 		{
-			throw new TTransportException(TTransportException.ExceptionType.NotOpen, "Cannot write to null outputstream");
 		}
-		outputStream.Write(buf, off, len);
-	}
 
-	public override void Flush()
-	{
-		if (outputStream == null)
+		public override void Close()
 		{
-			throw new TTransportException(TTransportException.ExceptionType.NotOpen, "Cannot flush null outputstream");
-		}
-		outputStream.Flush();
-	}
-
-	protected override void Dispose(bool disposing)
-	{
-		if (!_IsDisposed && disposing)
-		{
-			if (InputStream != null)
+			if (inputStream != null)
 			{
-				InputStream.Dispose();
+				inputStream.Dispose();
+				inputStream = null;
 			}
-			if (OutputStream != null)
+			if (outputStream != null)
 			{
-				OutputStream.Dispose();
+				outputStream.Dispose();
+				outputStream = null;
 			}
 		}
-		_IsDisposed = true;
+
+		public override int Read(byte[] buf, int off, int len)
+		{
+			if (inputStream == null)
+			{
+				throw new TTransportException(TTransportException.ExceptionType.NotOpen, "Cannot read from null inputstream");
+			}
+			return inputStream.Read(buf, off, len);
+		}
+
+		public override void Write(byte[] buf, int off, int len)
+		{
+			if (outputStream == null)
+			{
+				throw new TTransportException(TTransportException.ExceptionType.NotOpen, "Cannot write to null outputstream");
+			}
+			outputStream.Write(buf, off, len);
+		}
+
+		public override void Flush()
+		{
+			if (outputStream == null)
+			{
+				throw new TTransportException(TTransportException.ExceptionType.NotOpen, "Cannot flush null outputstream");
+			}
+			outputStream.Flush();
+		}
+
+		protected override void Dispose(bool disposing)
+		{
+			if (!_IsDisposed && disposing)
+			{
+				if (InputStream != null)
+				{
+					InputStream.Dispose();
+				}
+				if (OutputStream != null)
+				{
+					OutputStream.Dispose();
+				}
+			}
+			_IsDisposed = true;
+		}
 	}
 }

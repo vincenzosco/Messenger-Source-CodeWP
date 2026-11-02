@@ -1,12 +1,13 @@
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 
-namespace Facebook.Services.Api.Methods.SearchImages;
-
-[DataContract]
-[JsonObject(MemberSerialization.OptIn)]
-public class Query
+namespace Facebook.Services.Api.Methods.SearchImages
 {
-	[JsonProperty("SearchTerms")]
-	public string SearchTerms { get; set; }
+	[DataContract]
+	[JsonObject(MemberSerialization.OptIn)]
+	public class Query
+	{
+		[JsonProperty("SearchTerms")]
+		public string SearchTerms { get; set; }
+	}
 }

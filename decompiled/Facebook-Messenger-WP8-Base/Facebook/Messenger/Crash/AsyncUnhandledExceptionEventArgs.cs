@@ -1,27 +1,28 @@
 using System;
 
-namespace Facebook.Messenger.Crash;
-
-public class AsyncUnhandledExceptionEventArgs
+namespace Facebook.Messenger.Crash
 {
-	public Exception Exception { get; private set; }
-
-	public bool Handled { get; set; }
-
-	public string Message
+	public class AsyncUnhandledExceptionEventArgs
 	{
-		get
+		public Exception Exception { get; private set; }
+
+		public bool Handled { get; set; }
+
+		public string Message
 		{
-			if (Exception == null)
+			get
 			{
-				return string.Empty;
+				if (Exception == null)
+				{
+					return string.Empty;
+				}
+				return Exception.Message;
 			}
-			return Exception.Message;
 		}
-	}
 
-	public AsyncUnhandledExceptionEventArgs(Exception e)
-	{
-		Exception = e;
+		public AsyncUnhandledExceptionEventArgs(Exception e)
+		{
+			Exception = e;
+		}
 	}
 }

@@ -1,13 +1,14 @@
 using Facebook.Models.SyncProtocol;
 
-namespace Facebook.Models.Signals;
-
-public class SyncMessageSignal
+namespace Facebook.Models.Signals
 {
-	public ClientPayload Payload { get; private set; }
-
-	public SyncMessageSignal(ClientPayload payload)
+	public class SyncMessageSignal
 	{
-		Payload = payload;
+		public ClientPayload Payload { get; private set; }
+
+		public SyncMessageSignal(ClientPayload payload)
+		{
+			Payload = payload;
+		}
 	}
 }

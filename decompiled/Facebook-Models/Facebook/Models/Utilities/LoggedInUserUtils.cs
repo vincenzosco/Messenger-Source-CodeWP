@@ -1,21 +1,22 @@
-namespace Facebook.Models.Utilities;
-
-public class LoggedInUserUtils
+namespace Facebook.Models.Utilities
 {
-	private readonly FacebookContext _context;
-
-	public LoggedInUserUtils(FacebookContext context)
+	public class LoggedInUserUtils
 	{
-		_context = context;
-	}
+		private readonly FacebookContext _context;
 
-	public bool IsLoggedInUser(string userId)
-	{
-		return _context.IsActiveUser(userId);
-	}
+		public LoggedInUserUtils(FacebookContext context)
+		{
+			_context = context;
+		}
 
-	public bool IsLoggedInUser(long userId)
-	{
-		return IsLoggedInUser(userId.ToString());
+		public bool IsLoggedInUser(string userId)
+		{
+			return _context.IsActiveUser(userId);
+		}
+
+		public bool IsLoggedInUser(long userId)
+		{
+			return IsLoggedInUser(userId.ToString());
+		}
 	}
 }

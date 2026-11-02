@@ -1,5 +1,6 @@
-namespace Facebook.Models.Signals;
-
-public class FriendsUpdatedSignal
+namespace Facebook.Models.Signals
 {
+	public class FriendsUpdatedSignal
+	{
+	}
 }

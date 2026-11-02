@@ -7,35 +7,36 @@ using Facebook.Services.Http;
 using Facebook.Services.MessageSender;
 using Facebook.Services.Mqtt;
 
-namespace Facebook.Services.Api;
-
-public class ServiceContext
+namespace Facebook.Services.Api
 {
-	public Service ApiService;
+	public class ServiceContext
+	{
+		public Service ApiService;
 
-	public Facebook.Services.Analytics.Service AnalyticsService;
+		public Facebook.Services.Analytics.Service AnalyticsService;
 
-	public Facebook.Services.Http.Service HttpService;
+		public Facebook.Services.Http.Service HttpService;
 
-	public Facebook.Services.Mqtt.Service MqttService;
+		public Facebook.Services.Mqtt.Service MqttService;
 
-	public Facebook.Services.BackgroundTransfer.Service BackgroundTransferService;
+		public Facebook.Services.BackgroundTransfer.Service BackgroundTransferService;
 
-	public Facebook.Services.MessageSender.Service MessageSender;
+		public Facebook.Services.MessageSender.Service MessageSender;
 
-	public FacebookConfig Config;
+		public FacebookConfig Config;
 
-	public FacebookContext FBContext;
+		public FacebookContext FBContext;
 
-	public ICrypto Crypto;
+		public ICrypto Crypto;
 
-	public ApplicationState ApplicationState;
+		public ApplicationState ApplicationState;
 
-	public ThreadCache ThreadCache;
+		public ThreadCache ThreadCache;
 
-	public ContactCache ContactCache;
+		public ContactCache ContactCache;
 
-	public StickerPackCache StickerPackCache;
+		public StickerPackCache StickerPackCache;
 
-	public PhoneContactCache PhoneContactCache;
+		public PhoneContactCache PhoneContactCache;
+	}
 }

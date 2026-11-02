@@ -1,40 +1,41 @@
 using System;
 
-namespace Facebook.Base;
-
-public interface IEnvironmentInformation
+namespace Facebook.Base
 {
-	string GetFacebookApplicationId();
+	public interface IEnvironmentInformation
+	{
+		string GetFacebookApplicationId();
 
-	Version GetApplicationVersion();
+		Version GetApplicationVersion();
 
-	string GetApplicationVersionAsThreePartString();
+		string GetApplicationVersionAsThreePartString();
 
-	string GetApplicationPackageId();
+		string GetApplicationPackageId();
 
-	string GetBuildNumber();
+		string GetBuildNumber();
 
-	string GetBuildGitHash();
+		string GetBuildGitHash();
 
-	string GetBuildGitBranch();
+		string GetBuildGitBranch();
 
-	string GetBuildTime();
+		string GetBuildTime();
 
-	string GetNetworkDescription();
+		string GetNetworkDescription();
 
-	string GetDeviceModelName();
+		string GetDeviceModelName();
 
-	string GetDeviceManufacturer();
+		string GetDeviceManufacturer();
 
-	string GetDeviceModelDescription();
+		string GetDeviceModelDescription();
 
-	string GetOperatingSystemDescription();
+		string GetOperatingSystemDescription();
 
-	string GetOperatingSystemName();
+		string GetOperatingSystemName();
 
-	string GetOperatingSystemVersion();
+		string GetOperatingSystemVersion();
 
-	string GetNetworkConnectionType();
+		string GetNetworkConnectionType();
 
-	string GetInterfaceDetailsLogString();
+		string GetInterfaceDetailsLogString();
+	}
 }

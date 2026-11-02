@@ -2,24 +2,25 @@ using System;
 using System.IO;
 using Facebook.Base.Logging;
 
-namespace Facebook.Messenger.WP8.Utilities;
-
-public class StreamUtilities
+namespace Facebook.Messenger.WP8.Utilities
 {
-	public static void DisposeStream(Stream s)
+	public class StreamUtilities
 	{
-		if (s == null)
+		public static void DisposeStream(Stream s)
 		{
-			return;
-		}
-		try
-		{
-			s.Dispose();
-		}
-		catch (Exception ex)
-		{
-			Logger.Error("Error disposing the stream", "DisposeStream", "c:\\Open\\messenger\\Facebook\\Facebook-Messenger-WP8\\Utilities\\StreamUtilities.cs", 20);
-			Logger.Error(ex.ToString(), "DisposeStream", "c:\\Open\\messenger\\Facebook\\Facebook-Messenger-WP8\\Utilities\\StreamUtilities.cs", 21);
+			if (s == null)
+			{
+				return;
+			}
+			try
+			{
+				s.Dispose();
+			}
+			catch (Exception ex)
+			{
+				Logger.Error("Error disposing the stream", "DisposeStream", "c:\\Open\\messenger\\Facebook\\Facebook-Messenger-WP8\\Utilities\\StreamUtilities.cs", 20);
+				Logger.Error(ex.ToString(), "DisposeStream", "c:\\Open\\messenger\\Facebook\\Facebook-Messenger-WP8\\Utilities\\StreamUtilities.cs", 21);
+			}
 		}
 	}
 }

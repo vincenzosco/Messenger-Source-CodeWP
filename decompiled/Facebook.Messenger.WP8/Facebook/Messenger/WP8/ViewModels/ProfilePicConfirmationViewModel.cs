@@ -9,93 +9,95 @@ using Facebook.Services.Api;
 using Facebook.Services.Api.Methods.UploadProfilePicture;
 using GalaSoft.MvvmLight.Command;
 
-namespace Facebook.Messenger.WP8.ViewModels;
-
-public class ProfilePicConfirmationViewModel : FacebookMessengerViewModel
+namespace Facebook.Messenger.WP8.ViewModels
 {
-	private string _profilePicUrl;
-
-	private Uri _profilePicUri;
-
-	private Error _error;
-
-	private RelayCommand _confirmProfilePicCommand;
-
-	public Uri ProfilePicUri
+	public class ProfilePicConfirmationViewModel : FacebookMessengerViewModel
 	{
-		get
-		{
-			return _profilePicUri;
-		}
-		set
-		{
-			Set(ref _profilePicUri, value, broadcast: false, "ProfilePicUri");
-		}
-	}
+		private string _profilePicUrl;
 
-	public Error Error
-	{
-		get
-		{
-			return _error;
-		}
-		set
-		{
-			Set(ref _error, value, broadcast: false, "Error");
-		}
-	}
+		private Uri _profilePicUri;
 
-	public RelayCommand ConfirmProfilePicCommand => _confirmProfilePicCommand ?? (_confirmProfilePicCommand = new RelayCommand(ExecuteConfirmProfilePicCommand));
+		private Error _error;
 
-	public ProfilePicConfirmationViewModel(Facebook.Services.Api.Service apiService, FacebookContext context, Navigator navigator, IDispatcher dispatcher, INetworkStatus networkStatus)
-		: base(apiService, context, navigator, dispatcher, networkStatus)
-	{
-	}
+		private RelayCommand _confirmProfilePicCommand;
 
-	public override void SetPath(Uri uri)
-	{
-		base.SetPath(uri);
-		if (PathUri.Params.ContainsKey("profilepicurl"))
+		public Uri ProfilePicUri
 		{
-			_profilePicUrl = PathUri.Params["profilepicurl"];
-			Uri.TryCreate(_profilePicUrl, UriKind.Absolute, out var result);
-			ProfilePicUri = result;
-		}
-	}
-
-	private async void ExecuteConfirmProfilePicCommand()
-	{
-		if (IsLoading)
-		{
-			return;
-		}
-		if (!HasConnection)
-		{
-			Error = new Error
+			get
 			{
-				Message = StringLibrary.MessageBox_Label_NoInternet
+				return _profilePicUri;
+			}
+			set
+			{
+				Set(ref _profilePicUri, value, false, "ProfilePicUri");
+			}
+		}
+
+		public Error Error
+		{
+			get
+			{
+				return _error;
+			}
+			set
+			{
+				Set(ref _error, value, false, "Error");
+			}
+		}
+
+		public RelayCommand ConfirmProfilePicCommand => _confirmProfilePicCommand ?? (_confirmProfilePicCommand = new RelayCommand(ExecuteConfirmProfilePicCommand));
+
+		public ProfilePicConfirmationViewModel(Facebook.Services.Api.Service apiService, FacebookContext context, Navigator navigator, IDispatcher dispatcher, INetworkStatus networkStatus)
+			: base(apiService, context, navigator, dispatcher, networkStatus)
+		{
+		}
+
+		public override void SetPath(Uri uri)
+		{
+			base.SetPath(uri);
+			if (PathUri.Params.ContainsKey("profilepicurl"))
+			{
+				_profilePicUrl = PathUri.Params["profilepicurl"];
+				Uri result;
+				Uri.TryCreate(_profilePicUrl, UriKind.Absolute, out result);
+				ProfilePicUri = result;
+			}
+		}
+
+		private async void ExecuteConfirmProfilePicCommand()
+		{
+			if (IsLoading)
+			{
+				return;
+			}
+			if (!HasConnection)
+			{
+				Error = new Error
+				{
+					Message = StringLibrary.MessageBox_Label_NoInternet
+				};
+				return;
+			}
+			IsLoading = true;
+			Facebook.Services.Api.Methods.UploadProfilePicture.Request request = new Facebook.Services.Api.Methods.UploadProfilePicture.Request
+			{
+				ImageUrl = _profilePicUrl,
+				AccessToken = Context.Session.Credentials.AccessToken,
+				CancelToken = CancelTokenSource.Token
 			};
-			return;
-		}
-		IsLoading = true;
-		Facebook.Services.Api.Methods.UploadProfilePicture.Request request = new Facebook.Services.Api.Methods.UploadProfilePicture.Request
-		{
-			ImageUrl = _profilePicUrl,
-			AccessToken = Context.Session.Credentials.AccessToken,
-			CancelToken = CancelTokenSource.Token
-		};
-		Facebook.Services.Api.Methods.UploadProfilePicture.Response response = await ApiService.ExecuteAsync<Facebook.Services.Api.Methods.UploadProfilePicture.Request, Facebook.Services.Api.Methods.UploadProfilePicture.Response>(request);
-		if (response.HasError())
-		{
-			Error = (HasConnection ? Error.FromResponse(response, StringLibrary.MessageBox_Label_UploadProfilePic_Failed, string.Empty) : new Error
+			Facebook.Services.Api.Methods.UploadProfilePicture.Response response = await ApiService.ExecuteAsync<Facebook.Services.Api.Methods.UploadProfilePicture.Request, Facebook.Services.Api.Methods.UploadProfilePicture.Response>(request);
+			if (response.HasError())
 			{
-				Message = StringLibrary.MessageBox_Label_NoInternet
-			});
+				Error = (HasConnection ? Error.FromResponse(response, StringLibrary.MessageBox_Label_UploadProfilePic_Failed, string.Empty) : new Error
+				{
+					Message = StringLibrary.MessageBox_Label_NoInternet
+				});
+			}
+			else
+			{
+				Navigator.Reset(FacebookUri.SyncContacts);
+			}
+			IsLoading = false;
 		}
-		else
-		{
-			Navigator.Reset(FacebookUri.SyncContacts);
-		}
-		IsLoading = false;
 	}
 }

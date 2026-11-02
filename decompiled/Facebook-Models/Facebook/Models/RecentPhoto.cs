@@ -1,13 +1,14 @@
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 
-namespace Facebook.Models;
-
-[JsonObject(MemberSerialization.OptIn)]
-[DataContract]
-public class RecentPhoto
+namespace Facebook.Models
 {
-	[DataMember]
-	[JsonProperty(PropertyName = "photo")]
-	public FeedPhoto Photo { get; set; }
+	[JsonObject(MemberSerialization.OptIn)]
+	[DataContract]
+	public class RecentPhoto
+	{
+		[DataMember]
+		[JsonProperty(PropertyName = "photo")]
+		public FeedPhoto Photo { get; set; }
+	}
 }

@@ -1,18 +1,19 @@
-namespace Facebook.Services.Api.Methods.PhoneNumberRegistrationConfirmation;
-
-[Queue(QueueType.Web)]
-public class Request : FacebookServiceRequest
+namespace Facebook.Services.Api.Methods.PhoneNumberRegistrationConfirmation
 {
-	public string DeviceId { get; private set; }
-
-	public string ConfirmationCode { get; private set; }
-
-	public string PhoneNumber { get; private set; }
-
-	public Request(string deviceId, string confirmationCode, string phoneNumber)
+	[Queue(QueueType.Web)]
+	public class Request : FacebookServiceRequest
 	{
-		DeviceId = deviceId;
-		ConfirmationCode = confirmationCode;
-		PhoneNumber = phoneNumber;
+		public string DeviceId { get; private set; }
+
+		public string ConfirmationCode { get; private set; }
+
+		public string PhoneNumber { get; private set; }
+
+		public Request(string deviceId, string confirmationCode, string phoneNumber)
+		{
+			DeviceId = deviceId;
+			ConfirmationCode = confirmationCode;
+			PhoneNumber = phoneNumber;
+		}
 	}
 }

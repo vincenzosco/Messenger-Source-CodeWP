@@ -13,89 +13,90 @@ using Microsoft.Practices.ServiceLocation;
 using Windows.ApplicationModel.DataTransfer;
 using Windows.ApplicationModel.DataTransfer.ShareTarget;
 
-namespace Facebook.Messenger.WP8.Pages;
-
-public class FirstLaunchPage : PhoneApplicationPage
+namespace Facebook.Messenger.WP8.Pages
 {
-	private bool _contentLoaded;
-
-	public FirstLaunchPage()
+	public class FirstLaunchPage : PhoneApplicationPage
 	{
-		InitializeComponent();
-	}
+		private bool _contentLoaded;
 
-	protected override async void OnNavigatedTo(NavigationEventArgs e)
-	{
-		_003C_003En__FabricatedMethode(e);
-		FacebookContext context = ServiceLocator.Current.GetInstance<FacebookContext>();
-		Navigator navigator = ServiceLocator.Current.GetInstance<Navigator>();
-		FacebookUri uri;
-		if (context.IsAuthenticated())
+		public FirstLaunchPage()
 		{
-			if (context.HasUserCompletedPhoneNumberFlow())
+			InitializeComponent();
+		}
+
+		protected override async void OnNavigatedTo(NavigationEventArgs e)
+		{
+			_003C_003En__FabricatedMethode(e);
+			FacebookContext context = ServiceLocator.Current.GetInstance<FacebookContext>();
+			Navigator navigator = ServiceLocator.Current.GetInstance<Navigator>();
+			FacebookUri uri;
+			if (context.IsAuthenticated())
 			{
-				uri = FacebookUri.RootUri;
-				string photoId = ParsePhotoLaunchParameters(((Page)this).NavigationContext.QueryString);
-				if (!string.IsNullOrWhiteSpace(photoId))
+				if (context.HasUserCompletedPhoneNumberFlow())
 				{
-					uri = FacebookUri.GetComposerUri(photoId, fromExternal: true);
+					uri = FacebookUri.RootUri;
+					string photoId = ParsePhotoLaunchParameters(((Page)this).NavigationContext.QueryString);
+					if (!string.IsNullOrWhiteSpace(photoId))
+					{
+						uri = FacebookUri.GetComposerUri(photoId, true);
+					}
+					ShareOperation shareOperation = (Application.Current as App).PendingShare;
+					if (shareOperation != null)
+					{
+						DataPackageView data = shareOperation.Data;
+						if (data.Contains(StandardDataFormats.WebLink))
+						{
+							string title = data.Properties.Title;
+							string text = $"{title} - {await data.GetWebLinkAsync()}";
+							uri = FacebookUri.GetComposerUri(null, true, null, null, text);
+						}
+						else if (data.Contains(StandardDataFormats.Text))
+						{
+							uri = FacebookUri.GetComposerUri(null, true, null, null, await data.GetTextAsync());
+						}
+					}
 				}
-				ShareOperation shareOperation = (Application.Current as App).PendingShare;
-				if (shareOperation != null)
+				else
 				{
-					DataPackageView data = shareOperation.Data;
-					if (data.Contains(StandardDataFormats.WebLink))
-					{
-						string title = data.Properties.Title;
-						string text = $"{title} - {await data.GetWebLinkAsync()}";
-						uri = FacebookUri.GetComposerUri(null, fromExternal: true, null, null, text);
-					}
-					else if (data.Contains(StandardDataFormats.Text))
-					{
-						uri = FacebookUri.GetComposerUri(null, fromExternal: true, null, null, await data.GetTextAsync());
-					}
+					App app = Application.Current as App;
+					app.PrefetchLargeProfilePicture();
+					uri = FacebookUri.GetAppUri(UriId.PhoneNumber, new UriQuery { { "loginflow", "true" } });
 				}
 			}
 			else
 			{
-				App app = Application.Current as App;
-				app.PrefetchLargeProfilePicture();
-				uri = FacebookUri.GetAppUri(UriId.PhoneNumber, new UriQuery { { "loginflow", "true" } });
+				uri = FacebookUri.GetFirstNavigationUri();
 			}
+			navigator.Reset(uri);
 		}
-		else
-		{
-			uri = FacebookUri.GetFirstNavigationUri();
-		}
-		navigator.Reset(uri);
-	}
 
-	private string ParsePhotoLaunchParameters(IDictionary<string, string> queryStrings)
-	{
-		if (queryStrings == null)
+		private string ParsePhotoLaunchParameters(IDictionary<string, string> queryStrings)
 		{
+			if (queryStrings == null)
+			{
+				return null;
+			}
+			if (queryStrings.ContainsKey("Action") && queryStrings["Action"] == "ShareContent" && queryStrings.ContainsKey("FileId"))
+			{
+				return queryStrings["FileId"];
+			}
 			return null;
 		}
-		if (queryStrings.ContainsKey("Action") && queryStrings["Action"] == "ShareContent" && queryStrings.ContainsKey("FileId"))
-		{
-			return queryStrings["FileId"];
-		}
-		return null;
-	}
 
-	[DebuggerNonUserCode]
-	public void InitializeComponent()
-	{
-		if (!_contentLoaded)
+		[DebuggerNonUserCode]
+		public void InitializeComponent()
 		{
-			_contentLoaded = true;
-			Application.LoadComponent((object)this, new Uri("/Facebook.Messenger.WP8;component/Pages/FirstLaunchPage.xaml", UriKind.Relative));
+			if (!_contentLoaded)
+			{
+				_contentLoaded = true;
+				Application.LoadComponent((object)this, new Uri("/Facebook.Messenger.WP8;component/Pages/FirstLaunchPage.xaml", UriKind.Relative));
+			}
 		}
-	}
 
-	[CompilerGenerated]
-	private void _003C_003En__FabricatedMethode(NavigationEventArgs P_0)
-	{
-		((Page)this).OnNavigatedTo(P_0);
+		[CompilerGenerated]
+		private void _003C_003En__FabricatedMethode(NavigationEventArgs P_0)
+		{
+			((Page)this).OnNavigatedTo(P_0);
+		}
 	}
 }

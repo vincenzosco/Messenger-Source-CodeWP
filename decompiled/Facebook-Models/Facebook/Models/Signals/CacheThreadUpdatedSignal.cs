@@ -1,11 +1,12 @@
-namespace Facebook.Models.Signals;
-
-public class CacheThreadUpdatedSignal
+namespace Facebook.Models.Signals
 {
-	public readonly MailThread Thread;
-
-	public CacheThreadUpdatedSignal(MailThread thread)
+	public class CacheThreadUpdatedSignal
 	{
-		Thread = thread;
+		public readonly MailThread Thread;
+
+		public CacheThreadUpdatedSignal(MailThread thread)
+		{
+			Thread = thread;
+		}
 	}
 }

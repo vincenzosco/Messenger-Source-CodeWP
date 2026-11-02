@@ -1,24 +1,25 @@
-namespace Facebook.Services.Api.Methods.SyncFriends;
-
-[Queue(QueueType.Web)]
-public class Request : FacebookServiceRequest
+namespace Facebook.Services.Api.Methods.SyncFriends
 {
-	public static int FetchUserSize = 200;
-
-	public int Limit { get; set; }
-
-	public int Offset { get; set; }
-
-	public long LastUpdated { get; set; }
-
-	public bool ShouldPurgeBeforeSaving()
+	[Queue(QueueType.Web)]
+	public class Request : FacebookServiceRequest
 	{
-		bool flag = LastUpdated == 0;
-		bool result = Offset == 0;
-		if (flag)
+		public static int FetchUserSize = 200;
+
+		public int Limit { get; set; }
+
+		public int Offset { get; set; }
+
+		public long LastUpdated { get; set; }
+
+		public bool ShouldPurgeBeforeSaving()
 		{
-			return result;
+			bool flag = LastUpdated == 0;
+			bool result = Offset == 0;
+			if (flag)
+			{
+				return result;
+			}
+			return false;
 		}
-		return false;
 	}
 }

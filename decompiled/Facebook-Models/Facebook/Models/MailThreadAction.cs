@@ -3,72 +3,73 @@ using System.Linq;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 
-namespace Facebook.Models;
-
-public class MailThreadAction : MailMessage
+namespace Facebook.Models
 {
-	[DataMember]
-	[JsonProperty("users")]
-	internal IList<MailUser> Users
+	public class MailThreadAction : MailMessage
 	{
-		set
+		[DataMember]
+		[JsonProperty("users")]
+		internal IList<MailUser> Users
 		{
-			if (value != null)
+			set
 			{
-				TargetUsersIds = value.Select((MailUser user) => user.Id).ToList();
+				if (value != null)
+				{
+					TargetUsersIds = value.Select((MailUser user) => user.Id).ToList();
+				}
 			}
 		}
-	}
 
-	[JsonProperty("internal_message_id")]
-	[DataMember]
-	internal string InternalMessageId
-	{
-		get
+		[JsonProperty("internal_message_id")]
+		[DataMember]
+		internal string InternalMessageId
 		{
-			return Id;
-		}
-		set
-		{
-			Id = "a_" + value;
-		}
-	}
-
-	[JsonProperty("actor")]
-	[DataMember]
-	internal MailUser Actor
-	{
-		get
-		{
-			return Sender;
-		}
-		set
-		{
-			Sender = value;
-		}
-	}
-
-	[DataMember]
-	[JsonProperty("type")]
-	internal int ActionType
-	{
-		get
-		{
-			return (int)MessageType;
-		}
-		set
-		{
-			switch (value)
+			get
 			{
-			case 1:
-				MessageType = Type.ParticipantAdded;
-				break;
-			case 2:
-				MessageType = Type.ParticipantLeft;
-				break;
-			default:
-				MessageType = Type.Unknown;
-				break;
+				return Id;
+			}
+			set
+			{
+				Id = "a_" + value;
+			}
+		}
+
+		[JsonProperty("actor")]
+		[DataMember]
+		internal MailUser Actor
+		{
+			get
+			{
+				return Sender;
+			}
+			set
+			{
+				Sender = value;
+			}
+		}
+
+		[DataMember]
+		[JsonProperty("type")]
+		internal int ActionType
+		{
+			get
+			{
+				return (int)MessageType;
+			}
+			set
+			{
+				switch (value)
+				{
+				case 1:
+					MessageType = Type.ParticipantAdded;
+					break;
+				case 2:
+					MessageType = Type.ParticipantLeft;
+					break;
+				default:
+					MessageType = Type.Unknown;
+					break;
+				}
 			}
 		}
 	}

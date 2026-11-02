@@ -1,5 +1,6 @@
-namespace Facebook.Services.Common;
-
-internal class JewelCommon
+namespace Facebook.Services.Common
 {
+	internal class JewelCommon
+	{
+	}
 }

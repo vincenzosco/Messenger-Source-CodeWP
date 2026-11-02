@@ -1,7 +1,8 @@
-namespace Facebook.Models.Signals;
-
-public enum PresenceUpdateType
+namespace Facebook.Models.Signals
 {
-	Full,
-	Incremental
+	public enum PresenceUpdateType
+	{
+		Full,
+		Incremental
+	}
 }

@@ -1,10 +1,11 @@
-namespace Facebook.Base.Strategy;
-
-public sealed class NullResponse
+namespace Facebook.Base.Strategy
 {
-	public static NullResponse Null => null;
-
-	private NullResponse()
+	public sealed class NullResponse
 	{
+		public static NullResponse Null => null;
+
+		private NullResponse()
+		{
+		}
 	}
 }

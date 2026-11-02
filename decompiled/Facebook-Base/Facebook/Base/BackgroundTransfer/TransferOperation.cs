@@ -1,7 +1,8 @@
-namespace Facebook.Base.BackgroundTransfer;
-
-public enum TransferOperation
+namespace Facebook.Base.BackgroundTransfer
 {
-	Upload,
-	Download
+	public enum TransferOperation
+	{
+		Upload,
+		Download
+	}
 }

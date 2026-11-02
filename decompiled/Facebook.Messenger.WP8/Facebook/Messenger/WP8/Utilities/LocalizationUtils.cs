@@ -1,19 +1,20 @@
 using System.Threading;
 using System.Windows;
 
-namespace Facebook.Messenger.WP8.Utilities;
-
-public class LocalizationUtils
+namespace Facebook.Messenger.WP8.Utilities
 {
-	public static FlowDirection GetFlowDirectionForCurrentLocale()
+	public class LocalizationUtils
 	{
-		switch (Thread.CurrentThread.CurrentUICulture.Name)
+		public static FlowDirection GetFlowDirectionForCurrentLocale()
 		{
-		case "ar-SA":
-		case "he-IL":
-			return (FlowDirection)1;
-		default:
-			return (FlowDirection)0;
+			switch (Thread.CurrentThread.CurrentUICulture.Name)
+			{
+			case "ar-SA":
+			case "he-IL":
+				return (FlowDirection)1;
+			default:
+				return (FlowDirection)0;
+			}
 		}
 	}
 }

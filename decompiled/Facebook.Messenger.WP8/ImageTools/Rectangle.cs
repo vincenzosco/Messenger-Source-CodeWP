@@ -1,123 +1,124 @@
 using System;
 
-namespace ImageTools;
-
-public struct Rectangle : IEquatable<Rectangle>
+namespace ImageTools
 {
-	public static readonly Rectangle Zero = new Rectangle(0, 0, 0, 0);
-
-	private int _height;
-
-	private int _width;
-
-	private int _x;
-
-	private int _y;
-
-	public int Bottom => _y + _height;
-
-	public int Height
+	public struct Rectangle : IEquatable<Rectangle>
 	{
-		get
+		public static readonly Rectangle Zero = new Rectangle(0, 0, 0, 0);
+
+		private int _height;
+
+		private int _width;
+
+		private int _x;
+
+		private int _y;
+
+		public int Bottom => _y + _height;
+
+		public int Height
 		{
-			return _height;
+			get
+			{
+				return _height;
+			}
+			set
+			{
+				_height = value;
+			}
 		}
-		set
+
+		public int Left => _x;
+
+		public int Right => _x + _width;
+
+		public int Top => _y;
+
+		public int Width
 		{
-			_height = value;
+			get
+			{
+				return _width;
+			}
+			set
+			{
+				_width = value;
+			}
 		}
-	}
 
-	public int Left => _x;
-
-	public int Right => _x + _width;
-
-	public int Top => _y;
-
-	public int Width
-	{
-		get
+		public int X
 		{
-			return _width;
+			get
+			{
+				return _x;
+			}
+			set
+			{
+				_x = value;
+			}
 		}
-		set
-		{
-			_width = value;
-		}
-	}
 
-	public int X
-	{
-		get
+		public int Y
 		{
-			return _x;
+			get
+			{
+				return _y;
+			}
+			set
+			{
+				_y = value;
+			}
 		}
-		set
+
+		public Rectangle(int x, int y, int width, int height)
 		{
-			_x = value;
+			_x = x;
+			_y = y;
+			_width = width;
+			_height = height;
 		}
-	}
 
-	public int Y
-	{
-		get
+		public Rectangle(Rectangle other)
+			: this(other.X, other.Y, other.Width, other.Height)
 		{
-			return _y;
 		}
-		set
+
+		public override bool Equals(object obj)
 		{
-			_y = value;
+			if (obj == null)
+			{
+				return false;
+			}
+			bool result = false;
+			if (obj is Rectangle)
+			{
+				result = Equals((Rectangle)obj);
+			}
+			return result;
 		}
-	}
 
-	public Rectangle(int x, int y, int width, int height)
-	{
-		_x = x;
-		_y = y;
-		_width = width;
-		_height = height;
-	}
-
-	public Rectangle(Rectangle other)
-		: this(other.X, other.Y, other.Width, other.Height)
-	{
-	}
-
-	public override bool Equals(object obj)
-	{
-		if (obj == null)
+		public bool Equals(Rectangle other)
 		{
+			if (_x == other._x && _y == other._y && _width == other._width)
+			{
+				return _height == other._height;
+			}
 			return false;
 		}
-		bool result = false;
-		if (obj is Rectangle)
+
+		public override int GetHashCode()
 		{
-			result = Equals((Rectangle)obj);
+			return X ^ Y ^ Width ^ Height;
 		}
-		return result;
-	}
 
-	public bool Equals(Rectangle other)
-	{
-		if (_x == other._x && _y == other._y && _width == other._width)
+		public static bool operator ==(Rectangle left, Rectangle right)
 		{
-			return _height == other._height;
+			return left.Equals(right);
 		}
-		return false;
-	}
 
-	public override int GetHashCode()
-	{
-		return X ^ Y ^ Width ^ Height;
-	}
-
-	public static bool operator ==(Rectangle left, Rectangle right)
-	{
-		return left.Equals(right);
-	}
-
-	public static bool operator !=(Rectangle left, Rectangle right)
-	{
-		return !left.Equals(right);
+		public static bool operator !=(Rectangle left, Rectangle right)
+		{
+			return !left.Equals(right);
+		}
 	}
 }

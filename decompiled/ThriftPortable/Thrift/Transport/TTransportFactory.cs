@@ -1,9 +1,10 @@
-namespace Thrift.Transport;
-
-public class TTransportFactory
+namespace Thrift.Transport
 {
-	public virtual TTransport GetTransport(TTransport trans)
+	public class TTransportFactory
 	{
-		return trans;
+		public virtual TTransport GetTransport(TTransport trans)
+		{
+			return trans;
+		}
 	}
 }

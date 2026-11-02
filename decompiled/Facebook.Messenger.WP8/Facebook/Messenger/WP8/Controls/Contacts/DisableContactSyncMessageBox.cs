@@ -2,30 +2,31 @@ using System;
 using Facebook.Messenger.Localization.Resources;
 using Microsoft.Phone.Controls;
 
-namespace Facebook.Messenger.WP8.Controls.Contacts;
-
-internal class DisableContactSyncMessageBox
+namespace Facebook.Messenger.WP8.Controls.Contacts
 {
-	public static void Show(Action acceptAction, Action cancelAction)
+	internal class DisableContactSyncMessageBox
 	{
-		CustomMessageBox customMessageBox = new CustomMessageBox();
-		customMessageBox.Caption = StringLibrary.Settings_Remove_Contacts_Title;
-		customMessageBox.Message = StringLibrary.Settings_Remove_Contacts_Body;
-		customMessageBox.LeftButtonContent = StringLibrary.Settings_Remove_Contacts_Confirm;
-		customMessageBox.RightButtonContent = StringLibrary.MessageBox_Popup_Cancel;
-		customMessageBox.IsFullScreen = false;
-		CustomMessageBox customMessageBox2 = customMessageBox;
-		customMessageBox2.Dismissed += (object sender, DismissedEventArgs args) =>
+		public static void Show(Action acceptAction, Action cancelAction)
 		{
-			if (args.Result == CustomMessageBoxResult.LeftButton)
+			CustomMessageBox customMessageBox = new CustomMessageBox();
+			customMessageBox.Caption = StringLibrary.Settings_Remove_Contacts_Title;
+			customMessageBox.Message = StringLibrary.Settings_Remove_Contacts_Body;
+			customMessageBox.LeftButtonContent = StringLibrary.Settings_Remove_Contacts_Confirm;
+			customMessageBox.RightButtonContent = StringLibrary.MessageBox_Popup_Cancel;
+			customMessageBox.IsFullScreen = false;
+			CustomMessageBox customMessageBox2 = customMessageBox;
+			customMessageBox2.Dismissed += (object sender, DismissedEventArgs args) =>
 			{
-				acceptAction();
-			}
-			else
-			{
-				cancelAction();
-			}
-		};
-		customMessageBox2.Show();
+				if (args.Result == CustomMessageBoxResult.LeftButton)
+				{
+					acceptAction();
+				}
+				else
+				{
+					cancelAction();
+				}
+			};
+			customMessageBox2.Show();
+		}
 	}
 }

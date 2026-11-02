@@ -7,27 +7,28 @@ using Facebook.Services.Api;
 using Facebook.Services.Api.Cache;
 using Facebook.Services.SyncProtocol;
 
-namespace Facebook.Messenger.WP8.ViewModels.Internal;
-
-public class InternalSettingsViewModel : FacebookMessengerViewModel
+namespace Facebook.Messenger.WP8.ViewModels.Internal
 {
-	public AudioLevelsViewModel AudioLevelsViewModel { get; private set; }
-
-	public DiskDetailsViewModel DiskDetailsViewModel { get; private set; }
-
-	public BuildDetailsViewModel BuildDetailsViewModel { get; private set; }
-
-	public NetworkInterfaceDetailsViewModel NetworkInterfaceDetailsViewModel { get; private set; }
-
-	public SyncProtocolSettingsViewModel SyncProtocolSettingsViewModel { get; private set; }
-
-	public InternalSettingsViewModel(Facebook.Services.Api.Service apiService, FacebookContext context, Navigator navigator, IDispatcher dispatcher, INetworkStatus networkStatus, Facebook.Messenger.WP8.AudioController.Service audioService, Facebook.Services.SyncProtocol.Service syncProtocolService, ThreadCache threadCache)
-		: base(apiService, context, navigator, dispatcher, networkStatus)
+	public class InternalSettingsViewModel : FacebookMessengerViewModel
 	{
-		AudioLevelsViewModel = new AudioLevelsViewModel(audioService);
-		DiskDetailsViewModel = new DiskDetailsViewModel(context);
-		BuildDetailsViewModel = new BuildDetailsViewModel();
-		NetworkInterfaceDetailsViewModel = new NetworkInterfaceDetailsViewModel();
-		SyncProtocolSettingsViewModel = new SyncProtocolSettingsViewModel(syncProtocolService, threadCache);
+		public AudioLevelsViewModel AudioLevelsViewModel { get; private set; }
+
+		public DiskDetailsViewModel DiskDetailsViewModel { get; private set; }
+
+		public BuildDetailsViewModel BuildDetailsViewModel { get; private set; }
+
+		public NetworkInterfaceDetailsViewModel NetworkInterfaceDetailsViewModel { get; private set; }
+
+		public SyncProtocolSettingsViewModel SyncProtocolSettingsViewModel { get; private set; }
+
+		public InternalSettingsViewModel(Facebook.Services.Api.Service apiService, FacebookContext context, Navigator navigator, IDispatcher dispatcher, INetworkStatus networkStatus, Facebook.Messenger.WP8.AudioController.Service audioService, Facebook.Services.SyncProtocol.Service syncProtocolService, ThreadCache threadCache)
+			: base(apiService, context, navigator, dispatcher, networkStatus)
+		{
+			AudioLevelsViewModel = new AudioLevelsViewModel(audioService);
+			DiskDetailsViewModel = new DiskDetailsViewModel(context);
+			BuildDetailsViewModel = new BuildDetailsViewModel();
+			NetworkInterfaceDetailsViewModel = new NetworkInterfaceDetailsViewModel();
+			SyncProtocolSettingsViewModel = new SyncProtocolSettingsViewModel(syncProtocolService, threadCache);
+		}
 	}
 }

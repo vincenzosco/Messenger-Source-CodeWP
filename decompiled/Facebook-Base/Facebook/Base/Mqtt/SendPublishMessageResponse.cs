@@ -1,8 +1,9 @@
-namespace Facebook.Base.Mqtt;
-
-public class SendPublishMessageResponse
+namespace Facebook.Base.Mqtt
 {
-	public int MessageId { get; set; }
+	public class SendPublishMessageResponse
+	{
+		public int MessageId { get; set; }
 
-	public long RawPayloadSize { get; set; }
+		public long RawPayloadSize { get; set; }
+	}
 }

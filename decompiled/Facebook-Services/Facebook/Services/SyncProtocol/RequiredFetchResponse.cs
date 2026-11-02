@@ -1,19 +1,20 @@
 using Facebook.Base.Strategy;
 
-namespace Facebook.Services.SyncProtocol;
-
-public class RequiredFetchResponse
+namespace Facebook.Services.SyncProtocol
 {
-	public readonly ExecutionResult MessageExecutionResult;
-
-	public readonly ExecutionResult ThreadExecutionResult;
-
-	public readonly bool SkipHandle;
-
-	public RequiredFetchResponse(ExecutionResult messageExecutionResult, ExecutionResult threadExecutionResult, bool skipHandle)
+	public class RequiredFetchResponse
 	{
-		MessageExecutionResult = messageExecutionResult;
-		ThreadExecutionResult = threadExecutionResult;
-		SkipHandle = skipHandle;
+		public readonly ExecutionResult MessageExecutionResult;
+
+		public readonly ExecutionResult ThreadExecutionResult;
+
+		public readonly bool SkipHandle;
+
+		public RequiredFetchResponse(ExecutionResult messageExecutionResult, ExecutionResult threadExecutionResult, bool skipHandle)
+		{
+			MessageExecutionResult = messageExecutionResult;
+			ThreadExecutionResult = threadExecutionResult;
+			SkipHandle = skipHandle;
+		}
 	}
 }

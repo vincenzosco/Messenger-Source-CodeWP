@@ -2,35 +2,36 @@ using System.Threading.Tasks;
 using Facebook.Base;
 using Facebook.Services.Api.Attributes;
 
-namespace Facebook.Services.Api.Methods.SyncFriends;
-
-[Bundle(BundleType.InMemoryCache, typeof(Request), typeof(Response))]
-public class CacheFilter : Filter<Request, Response>
+namespace Facebook.Services.Api.Methods.SyncFriends
 {
-	public CacheFilter(ServiceContext context)
-		: base(context)
+	[Bundle(BundleType.InMemoryCache, typeof(Request), typeof(Response))]
+	public class CacheFilter : Filter<Request, Response>
 	{
-	}
-
-	public override async Task<Response> ExecuteAsync(Request request, IHandler next)
-	{
-		Response response = await next.ExecuteAsync<Request, Response>(request);
-		if (request.CancelToken.IsCancellationRequested)
+		public CacheFilter(ServiceContext context)
+			: base(context)
 		{
-			return new Response
-			{
-				Error = Error.FromException(new TaskCanceledException())
-			};
 		}
-		if (response.HasError())
+
+		public override async Task<Response> ExecuteAsync(Request request, IHandler next)
 		{
+			Response response = await next.ExecuteAsync<Request, Response>(request);
+			if (request.CancelToken.IsCancellationRequested)
+			{
+				return new Response
+				{
+					Error = Error.FromException(new TaskCanceledException())
+				};
+			}
+			if (response.HasError())
+			{
+				return response;
+			}
+			if (request.ShouldPurgeBeforeSaving())
+			{
+				await Context.ContactCache.Purge();
+			}
+			await Context.ContactCache.Update(response.NewFriends, response.DeletedFriends);
 			return response;
 		}
-		if (request.ShouldPurgeBeforeSaving())
-		{
-			await Context.ContactCache.Purge();
-		}
-		await Context.ContactCache.Update(response.NewFriends, response.DeletedFriends);
-		return response;
 	}
 }

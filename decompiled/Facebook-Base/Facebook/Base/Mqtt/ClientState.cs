@@ -1,9 +1,10 @@
-namespace Facebook.Base.Mqtt;
-
-public enum ClientState
+namespace Facebook.Base.Mqtt
 {
-	Initialized,
-	Connecting,
-	Connected,
-	Disconnected
+	public enum ClientState
+	{
+		Initialized,
+		Connecting,
+		Connected,
+		Disconnected
+	}
 }

@@ -1,34 +1,35 @@
 using System.Threading.Tasks;
 using Facebook.Services.Api.Attributes;
 
-namespace Facebook.Services.Api.Methods.FetchMessages;
-
-[Bundle(BundleType.PreCache, typeof(Request), typeof(Response))]
-internal class SendFilter : Filter<Request, Response>
+namespace Facebook.Services.Api.Methods.FetchMessages
 {
-	public SendFilter(ServiceContext context)
-		: base(context)
+	[Bundle(BundleType.PreCache, typeof(Request), typeof(Response))]
+	internal class SendFilter : Filter<Request, Response>
 	{
-	}
-
-	public override async Task<Response> ExecuteAsync(Request request, IHandler next)
-	{
-		bool isFirstPage = IsFirstPageRequest(request);
-		Response response = await next.ExecuteAsync<Request, Response>(request);
-		if (response.HasError() || !isFirstPage)
+		public SendFilter(ServiceContext context)
+			: base(context)
 		{
+		}
+
+		public override async Task<Response> ExecuteAsync(Request request, IHandler next)
+		{
+			bool isFirstPage = IsFirstPageRequest(request);
+			Response response = await next.ExecuteAsync<Request, Response>(request);
+			if (response.HasError() || !isFirstPage)
+			{
+				return response;
+			}
+			Context.MessageSender.GetContext(request.ThreadId);
 			return response;
 		}
-		Context.MessageSender.GetContext(request.ThreadId);
-		return response;
-	}
 
-	private bool IsFirstPageRequest(Request request)
-	{
-		if (request.ActionId == 0)
+		private bool IsFirstPageRequest(Request request)
 		{
-			return request.MaxTimestamp == 0;
+			if (request.ActionId == 0)
+			{
+				return request.MaxTimestamp == 0;
+			}
+			return false;
 		}
-		return false;
 	}
 }

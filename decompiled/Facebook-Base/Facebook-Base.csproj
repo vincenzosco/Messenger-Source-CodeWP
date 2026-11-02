@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <ProjectGuid>{4C0E86F2-AA99-4258-BCE1-625A837991E1}</ProjectGuid>
+    <ProjectGuid>{84EF50A6-0282-4E62-8969-E42DEE00C127}</ProjectGuid>
     <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <OutputType>Library</OutputType>
-    <LangVersion>14.0</LangVersion>
+    <LangVersion>6</LangVersion>
     <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
     <AssemblyName>Facebook-Base</AssemblyName>
     <TargetFrameworkIdentifier>.NETPortable</TargetFrameworkIdentifier>

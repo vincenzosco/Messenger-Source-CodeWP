@@ -7,90 +7,96 @@ using Facebook.Base.Mqtt.Messages;
 using Facebook.Base.Mqtt.Serialization.Payloads;
 using Newtonsoft.Json;
 
-namespace Facebook.Services.Mqtt.TopicSubscriptions;
-
-public class SendMessageResponse(IDispatcher uiDispatcher) : Subscription(uiDispatcher, "/send_message_response", QualityofService.AcknowledgedDelivery)
+namespace Facebook.Services.Mqtt.TopicSubscriptions
 {
-	private class ResponseContext
+	public class SendMessageResponse : Subscription
 	{
-		private const int ResponseTimeout = 70000;
-
-		private readonly SemaphoreSlim _semaphore;
-
-		public SendResponse Response { get; private set; }
-
-		public ResponseContext()
+		private class ResponseContext
 		{
-			_semaphore = new SemaphoreSlim(0);
+			private const int ResponseTimeout = 70000;
+
+			private readonly SemaphoreSlim _semaphore;
+
+			public SendResponse Response { get; private set; }
+
+			public ResponseContext()
+			{
+				_semaphore = new SemaphoreSlim(0);
+			}
+
+			public void SetResponse(SendResponse response)
+			{
+				Response = response;
+				_semaphore.Release();
+			}
+
+			public async Task WaitAsync(CancellationToken cancellationToken)
+			{
+				await _semaphore.WaitAsync(70000, cancellationToken);
+			}
 		}
 
-		public void SetResponse(SendResponse response)
+		public const string SendMessageResponseTopic = "/send_message_response";
+
+		private readonly IDictionary<string, ResponseContext> _outstandingSends = new Dictionary<string, ResponseContext>();
+
+		public SendMessageResponse(IDispatcher uiDispatcher)
+			: base(uiDispatcher, "/send_message_response", QualityofService.AcknowledgedDelivery)
 		{
-			Response = response;
-			_semaphore.Release();
 		}
 
-		public async Task WaitAsync(CancellationToken cancellationToken)
+		public async Task<SendResponse> WaitForResponse(string offlineThreadingId, CancellationToken cancellationToken)
 		{
-			await _semaphore.WaitAsync(70000, cancellationToken);
-		}
-	}
-
-	public const string SendMessageResponseTopic = "/send_message_response";
-
-	private readonly IDictionary<string, ResponseContext> _outstandingSends = new Dictionary<string, ResponseContext>();
-
-	public async Task<SendResponse> WaitForResponse(string offlineThreadingId, CancellationToken cancellationToken)
-	{
-		ResponseContext context = new ResponseContext();
-		lock (_outstandingSends)
-		{
-			_outstandingSends.Add(offlineThreadingId, context);
-		}
-		try
-		{
-			await context.WaitAsync(cancellationToken);
-		}
-		finally
-		{
+			ResponseContext context = new ResponseContext();
 			lock (_outstandingSends)
 			{
-				_outstandingSends.Remove(offlineThreadingId);
+				_outstandingSends.Add(offlineThreadingId, context);
 			}
-		}
-		return context.Response;
-	}
-
-	public override Task HandleMessage(PublishMessage message)
-	{
-		return Task.Run(() =>
-		{
-			SendResponse sendResponse = ParseMessage(message.GetPayloadAsString());
-			if (sendResponse != null)
+			try
 			{
-				HandleResponse(sendResponse);
+				await context.WaitAsync(cancellationToken);
 			}
-		});
-	}
-
-	private static SendResponse ParseMessage(string json)
-	{
-		JsonSerializerSettings jsonSerializerSettings = new JsonSerializerSettings();
-		jsonSerializerSettings.NullValueHandling = NullValueHandling.Ignore;
-		JsonSerializerSettings settings = jsonSerializerSettings;
-		return JsonConvert.DeserializeObject<SendResponse>(json, settings);
-	}
-
-	private void HandleResponse(SendResponse response)
-	{
-		ResponseContext responseContext = null;
-		lock (_outstandingSends)
-		{
-			if (_outstandingSends.ContainsKey(response.MessageId))
+			finally
 			{
-				responseContext = _outstandingSends[response.MessageId];
+				lock (_outstandingSends)
+				{
+					_outstandingSends.Remove(offlineThreadingId);
+				}
 			}
+			return context.Response;
 		}
-		responseContext?.SetResponse(response);
+
+		public override Task HandleMessage(PublishMessage message)
+		{
+			return Task.Run(() =>
+			{
+				SendResponse sendResponse = ParseMessage(message.GetPayloadAsString());
+				if (sendResponse != null)
+				{
+					HandleResponse(sendResponse);
+				}
+			});
+		}
+
+		private static SendResponse ParseMessage(string json)
+		{
+			JsonSerializerSettings jsonSerializerSettings = new JsonSerializerSettings();
+			jsonSerializerSettings.NullValueHandling = NullValueHandling.Ignore;
+			JsonSerializerSettings settings = jsonSerializerSettings;
+			return JsonConvert.DeserializeObject<SendResponse>(json, settings);
+		}
+
+		private void HandleResponse(SendResponse response)
+		{
+			ResponseContext responseContext = null;
+			lock (_outstandingSends)
+			{
+				if (_outstandingSends.ContainsKey(response.MessageId))
+				{
+					responseContext = _outstandingSends[response.MessageId];
+				}
+			}
+			responseContext?.SetResponse(response);
+		}
 	}
 }

@@ -1,6 +1,7 @@
-namespace Facebook.Messenger;
-
-public interface IBuilder<out T>
+namespace Facebook.Messenger
 {
-	T Get();
+	public interface IBuilder<out T>
+	{
+		T Get();
+	}
 }

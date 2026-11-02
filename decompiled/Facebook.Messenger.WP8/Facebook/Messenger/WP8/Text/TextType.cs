@@ -1,8 +1,9 @@
-namespace Facebook.Messenger.WP8.Text;
-
-public enum TextType
+namespace Facebook.Messenger.WP8.Text
 {
-	Text,
-	Url,
-	Emoticon
+	public enum TextType
+	{
+		Text,
+		Url,
+		Emoticon
+	}
 }

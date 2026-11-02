@@ -1,15 +1,16 @@
-namespace Facebook.Services.Api.Methods.AddContact;
-
-[Queue(QueueType.Web)]
-public class Request : FacebookServiceRequest
+namespace Facebook.Services.Api.Methods.AddContact
 {
-	public string PhoneNumber { get; set; }
-
-	public string CountryCode { get; set; }
-
-	public Request(string phoneNumber, string countryCode)
+	[Queue(QueueType.Web)]
+	public class Request : FacebookServiceRequest
 	{
-		PhoneNumber = phoneNumber;
-		CountryCode = countryCode;
+		public string PhoneNumber { get; set; }
+
+		public string CountryCode { get; set; }
+
+		public Request(string phoneNumber, string countryCode)
+		{
+			PhoneNumber = phoneNumber;
+			CountryCode = countryCode;
+		}
 	}
 }

@@ -1,9 +1,10 @@
-namespace Facebook.Messenger.WP8.Utilities.PhoneContacts;
-
-public enum SyncState
+namespace Facebook.Messenger.WP8.Utilities.PhoneContacts
 {
-	NotStarted,
-	InProgress,
-	Complete,
-	Failed
+	public enum SyncState
+	{
+		NotStarted,
+		InProgress,
+		Complete,
+		Failed
+	}
 }

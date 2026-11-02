@@ -1,13 +1,14 @@
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 
-namespace Facebook.Models;
-
-[JsonObject(MemberSerialization.OptIn)]
-[DataContract]
-public class FacebookType
+namespace Facebook.Models
 {
-	[DataMember]
-	[JsonProperty(PropertyName = "name")]
-	public string Name { get; set; }
+	[JsonObject(MemberSerialization.OptIn)]
+	[DataContract]
+	public class FacebookType
+	{
+		[DataMember]
+		[JsonProperty(PropertyName = "name")]
+		public string Name { get; set; }
+	}
 }

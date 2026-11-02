@@ -1,13 +1,14 @@
-namespace Facebook.Models.Signals;
-
-public class MessageSentSignal
+namespace Facebook.Models.Signals
 {
-	public readonly MailMessage Message;
-
-	public string DeviceSourceId { get; set; }
-
-	public MessageSentSignal(MailMessage message)
+	public class MessageSentSignal
 	{
-		Message = message;
+		public readonly MailMessage Message;
+
+		public string DeviceSourceId { get; set; }
+
+		public MessageSentSignal(MailMessage message)
+		{
+			Message = message;
+		}
 	}
 }

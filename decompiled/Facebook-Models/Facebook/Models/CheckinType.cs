@@ -1,8 +1,9 @@
-namespace Facebook.Models;
-
-public enum CheckinType
+namespace Facebook.Models
 {
-	Status,
-	Checkin,
-	Photo
+	public enum CheckinType
+	{
+		Status,
+		Checkin,
+		Photo
+	}
 }

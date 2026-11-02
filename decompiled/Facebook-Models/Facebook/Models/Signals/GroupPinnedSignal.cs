@@ -1,11 +1,12 @@
-namespace Facebook.Models.Signals;
-
-public class GroupPinnedSignal
+namespace Facebook.Models.Signals
 {
-	public readonly string ThreadId;
-
-	public GroupPinnedSignal(string threadId)
+	public class GroupPinnedSignal
 	{
-		ThreadId = threadId;
+		public readonly string ThreadId;
+
+		public GroupPinnedSignal(string threadId)
+		{
+			ThreadId = threadId;
+		}
 	}
 }

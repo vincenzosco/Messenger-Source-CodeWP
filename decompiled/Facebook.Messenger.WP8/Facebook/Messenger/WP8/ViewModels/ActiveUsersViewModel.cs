@@ -12,76 +12,77 @@ using Facebook.Services.Api;
 using Facebook.Services.Presence;
 using GalaSoft.MvvmLight.Messaging;
 
-namespace Facebook.Messenger.WP8.ViewModels;
-
-public class ActiveUsersViewModel : FacebookMessengerViewModel
+namespace Facebook.Messenger.WP8.ViewModels
 {
-	private readonly Facebook.Services.Presence.Service _presence;
-
-	private ObservableCollection<FacebookUser> _activeUsersToDisplay;
-
-	private bool _isChatEnabled;
-
-	public ObservableCollection<FacebookUser> ActiveUsers
+	public class ActiveUsersViewModel : FacebookMessengerViewModel
 	{
-		get
-		{
-			return _activeUsersToDisplay;
-		}
-		set
-		{
-			Set(ref _activeUsersToDisplay, value, broadcast: false, "ActiveUsers");
-		}
-	}
+		private readonly Facebook.Services.Presence.Service _presence;
 
-	public bool IsChatEnabled
-	{
-		get
+		private ObservableCollection<FacebookUser> _activeUsersToDisplay;
+
+		private bool _isChatEnabled;
+
+		public ObservableCollection<FacebookUser> ActiveUsers
 		{
-			return _isChatEnabled;
-		}
-		set
-		{
-			if (Set(ref _isChatEnabled, value, broadcast: false, "IsChatEnabled"))
+			get
 			{
-				Context.SetChatEnabled(_isChatEnabled);
-				GalaSoft.MvvmLight.Messaging.Messenger.Default.Send(new ChatSettingSignal(IsChatEnabled));
+				return _activeUsersToDisplay;
+			}
+			set
+			{
+				Set(ref _activeUsersToDisplay, value, false, "ActiveUsers");
 			}
 		}
-	}
 
-	public ActiveUsersViewModel(Facebook.Services.Presence.Service presence, Facebook.Services.Api.Service apiService, FacebookContext context, Navigator navigator, IDispatcher dispatcher, INetworkStatus networkStatus)
-		: base(apiService, context, navigator, dispatcher, networkStatus)
-	{
-		_presence = presence;
-		_isChatEnabled = Context.IsChatEnabled();
-		GalaSoft.MvvmLight.Messaging.Messenger.Default.Register<FriendsUpdatedSignal>(this, OnFriendsUpdatedSignal);
-		GalaSoft.MvvmLight.Messaging.Messenger.Default.Register<OnlineUserSignal>(this, OnPresenceUpdatedSignal);
-	}
+		public bool IsChatEnabled
+		{
+			get
+			{
+				return _isChatEnabled;
+			}
+			set
+			{
+				if (Set(ref _isChatEnabled, value, false, "IsChatEnabled"))
+				{
+					Context.SetChatEnabled(_isChatEnabled);
+					GalaSoft.MvvmLight.Messaging.Messenger.Default.Send(new ChatSettingSignal(IsChatEnabled));
+				}
+			}
+		}
 
-	private void OnFriendsUpdatedSignal(FriendsUpdatedSignal obj)
-	{
-		UpdatePresence().DoNotWait();
-	}
+		public ActiveUsersViewModel(Facebook.Services.Presence.Service presence, Facebook.Services.Api.Service apiService, FacebookContext context, Navigator navigator, IDispatcher dispatcher, INetworkStatus networkStatus)
+			: base(apiService, context, navigator, dispatcher, networkStatus)
+		{
+			_presence = presence;
+			_isChatEnabled = Context.IsChatEnabled();
+			GalaSoft.MvvmLight.Messaging.Messenger.Default.Register<FriendsUpdatedSignal>(this, OnFriendsUpdatedSignal);
+			GalaSoft.MvvmLight.Messaging.Messenger.Default.Register<OnlineUserSignal>(this, OnPresenceUpdatedSignal);
+		}
 
-	private void OnPresenceUpdatedSignal(OnlineUserSignal obj)
-	{
-		UpdateListOfActiveUsers(obj.OnlineUsers);
-	}
+		private void OnFriendsUpdatedSignal(FriendsUpdatedSignal obj)
+		{
+			UpdatePresence().DoNotWait();
+		}
 
-	public async Task UpdatePresence()
-	{
-		UpdateListOfActiveUsers(await _presence.GetOnlineUsers());
-	}
+		private void OnPresenceUpdatedSignal(OnlineUserSignal obj)
+		{
+			UpdateListOfActiveUsers(obj.OnlineUsers);
+		}
 
-	public bool LaunchUserThread(FacebookUser user)
-	{
-		FacebookUri conversationUri = FacebookUri.GetConversationUri(user.Id, user.Name);
-		return Navigator.Navigate(conversationUri);
-	}
+		public async Task UpdatePresence()
+		{
+			UpdateListOfActiveUsers(await _presence.GetOnlineUsers());
+		}
 
-	private void UpdateListOfActiveUsers(IEnumerable<FacebookUser> updatedActiveUsers)
-	{
-		ActiveUsers = new ObservableCollection<FacebookUser>(updatedActiveUsers);
+		public bool LaunchUserThread(FacebookUser user)
+		{
+			FacebookUri conversationUri = FacebookUri.GetConversationUri(user.Id, user.Name);
+			return Navigator.Navigate(conversationUri);
+		}
+
+		private void UpdateListOfActiveUsers(IEnumerable<FacebookUser> updatedActiveUsers)
+		{
+			ActiveUsers = new ObservableCollection<FacebookUser>(updatedActiveUsers);
+		}
 	}
 }

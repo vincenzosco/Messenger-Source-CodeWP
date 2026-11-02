@@ -6,23 +6,24 @@ using Facebook.Models;
 using Facebook.Services.Api;
 using GalaSoft.MvvmLight.Command;
 
-namespace Facebook.Messenger.WP8.ViewModels;
-
-public class NuxOnMessengerViewModel : FacebookMessengerViewModel
+namespace Facebook.Messenger.WP8.ViewModels
 {
-	private RelayCommand _loginCommand;
-
-	public RelayCommand ContinueCommand => _loginCommand ?? (_loginCommand = new RelayCommand(NavigateToRoot));
-
-	public FacebookProfile CurrentUser => Context.Session.Profile;
-
-	public NuxOnMessengerViewModel(Facebook.Services.Api.Service apiService, FacebookContext context, Navigator navigation, IDispatcher dispatcher, INetworkStatus networkStatus)
-		: base(apiService, context, navigation, dispatcher, networkStatus)
+	public class NuxOnMessengerViewModel : FacebookMessengerViewModel
 	{
-	}
+		private RelayCommand _loginCommand;
 
-	private void NavigateToRoot()
-	{
-		Navigator.Reset(FacebookUri.RootUri);
+		public RelayCommand ContinueCommand => _loginCommand ?? (_loginCommand = new RelayCommand(NavigateToRoot));
+
+		public FacebookProfile CurrentUser => Context.Session.Profile;
+
+		public NuxOnMessengerViewModel(Facebook.Services.Api.Service apiService, FacebookContext context, Navigator navigation, IDispatcher dispatcher, INetworkStatus networkStatus)
+			: base(apiService, context, navigation, dispatcher, networkStatus)
+		{
+		}
+
+		private void NavigateToRoot()
+		{
+			Navigator.Reset(FacebookUri.RootUri);
+		}
 	}
 }

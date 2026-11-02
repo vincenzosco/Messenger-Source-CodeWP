@@ -3,43 +3,44 @@ using Facebook.Base;
 using Facebook.Models;
 using Facebook.Services.Api.Methods;
 
-namespace Facebook.Services.Api;
-
-internal class AuthCheckFilter : IFilter
+namespace Facebook.Services.Api
 {
-	private const int GraphApiSessionErrorCode = 190;
-
-	private const int RestApiSessionErrorCode = 102;
-
-	private readonly FacebookContext _context;
-
-	private readonly IDispatcher _dispatcher;
-
-	public AuthCheckFilter(FacebookContext context, IDispatcher dispatcher)
+	internal class AuthCheckFilter : IFilter
 	{
-		_context = context;
-		_dispatcher = dispatcher;
-	}
+		private const int GraphApiSessionErrorCode = 190;
 
-	public async Task<TResponse> ExecuteAsync<TRequest, TResponse>(TRequest request, IHandler next) where TRequest : Request where TResponse : Response
-	{
-		TResponse response = await next.ExecuteAsync<TRequest, TResponse>(request);
-		if (response is FacebookApiResponse)
+		private const int RestApiSessionErrorCode = 102;
+
+		private readonly FacebookContext _context;
+
+		private readonly IDispatcher _dispatcher;
+
+		public AuthCheckFilter(FacebookContext context, IDispatcher dispatcher)
 		{
-			FacebookApiResponse facebookApiResponse = response as FacebookApiResponse;
-			if (facebookApiResponse.ApiError != null)
+			_context = context;
+			_dispatcher = dispatcher;
+		}
+
+		public async Task<TResponse> ExecuteAsync<TRequest, TResponse>(TRequest request, IHandler next) where TRequest : Request where TResponse : Response
+		{
+			TResponse response = await next.ExecuteAsync<TRequest, TResponse>(request);
+			if (response is FacebookApiResponse)
 			{
-				long errorCode = facebookApiResponse.ApiError.ErrorCode;
-				if (errorCode == 190 || errorCode == 102)
+				FacebookApiResponse facebookApiResponse = response as FacebookApiResponse;
+				if (facebookApiResponse.ApiError != null)
 				{
-					facebookApiResponse.SessionExpired = true;
-					_dispatcher.Schedule(() =>
+					long errorCode = facebookApiResponse.ApiError.ErrorCode;
+					if (errorCode == 190 || errorCode == 102)
 					{
-						_context.Logout(expiredSession: true);
-					});
+						facebookApiResponse.SessionExpired = true;
+						_dispatcher.Schedule(() =>
+						{
+							_context.Logout(true);
+						});
+					}
 				}
 			}
+			return response;
 		}
-		return response;
 	}
 }

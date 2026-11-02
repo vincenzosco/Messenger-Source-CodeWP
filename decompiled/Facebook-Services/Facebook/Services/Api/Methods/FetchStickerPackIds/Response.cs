@@ -1,10 +1,11 @@
 using System.Collections.Generic;
 using Newtonsoft.Json;
 
-namespace Facebook.Services.Api.Methods.FetchStickerPackIds;
-
-[JsonConverter(typeof(StickerPacksIdConverter))]
-public class Response : FacebookApiResponse
+namespace Facebook.Services.Api.Methods.FetchStickerPackIds
 {
-	public List<string> StickerPackIds { get; set; }
+	[JsonConverter(typeof(StickerPacksIdConverter))]
+	public class Response : FacebookApiResponse
+	{
+		public List<string> StickerPackIds { get; set; }
+	}
 }

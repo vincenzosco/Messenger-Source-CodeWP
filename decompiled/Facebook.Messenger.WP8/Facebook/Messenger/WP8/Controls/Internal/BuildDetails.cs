@@ -3,24 +3,25 @@ using System.Diagnostics;
 using System.Windows;
 using System.Windows.Controls;
 
-namespace Facebook.Messenger.WP8.Controls.Internal;
-
-public class BuildDetails : UserControl
+namespace Facebook.Messenger.WP8.Controls.Internal
 {
-	private bool _contentLoaded;
-
-	public BuildDetails()
+	public class BuildDetails : UserControl
 	{
-		InitializeComponent();
-	}
+		private bool _contentLoaded;
 
-	[DebuggerNonUserCode]
-	public void InitializeComponent()
-	{
-		if (!_contentLoaded)
+		public BuildDetails()
 		{
-			_contentLoaded = true;
-			Application.LoadComponent((object)this, new Uri("/Facebook.Messenger.WP8;component/Controls/Internal/BuildDetails.xaml", UriKind.Relative));
+			InitializeComponent();
+		}
+
+		[DebuggerNonUserCode]
+		public void InitializeComponent()
+		{
+			if (!_contentLoaded)
+			{
+				_contentLoaded = true;
+				Application.LoadComponent((object)this, new Uri("/Facebook.Messenger.WP8;component/Controls/Internal/BuildDetails.xaml", UriKind.Relative));
+			}
 		}
 	}
 }

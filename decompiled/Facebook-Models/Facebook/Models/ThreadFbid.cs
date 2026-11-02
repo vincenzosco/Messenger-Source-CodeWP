@@ -1,38 +1,39 @@
 using System;
 
-namespace Facebook.Models;
-
-public class ThreadFbid
+namespace Facebook.Models
 {
-	public readonly long Value;
-
-	[Obsolete("We should be converting all FBIDs to long")]
-	public ThreadFbid(string value)
+	public class ThreadFbid
 	{
-		Value = long.Parse(value);
-	}
+		public readonly long Value;
 
-	public ThreadFbid(long value)
-	{
-		Value = value;
-	}
-
-	public override string ToString()
-	{
-		return Value.ToString();
-	}
-
-	public override bool Equals(object obj)
-	{
-		if (obj is ThreadFbid)
+		[Obsolete("We should be converting all FBIDs to long")]
+		public ThreadFbid(string value)
 		{
-			return Value == ((ThreadFbid)obj).Value;
+			Value = long.Parse(value);
 		}
-		return false;
-	}
 
-	public override int GetHashCode()
-	{
-		return Value.GetHashCode();
+		public ThreadFbid(long value)
+		{
+			Value = value;
+		}
+
+		public override string ToString()
+		{
+			return Value.ToString();
+		}
+
+		public override bool Equals(object obj)
+		{
+			if (obj is ThreadFbid)
+			{
+				return Value == ((ThreadFbid)obj).Value;
+			}
+			return false;
+		}
+
+		public override int GetHashCode()
+		{
+			return Value.GetHashCode();
+		}
 	}
 }

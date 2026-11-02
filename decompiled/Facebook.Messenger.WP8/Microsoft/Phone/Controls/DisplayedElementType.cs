@@ -1,9 +1,10 @@
-namespace Microsoft.Phone.Controls;
-
-public enum DisplayedElementType
+namespace Microsoft.Phone.Controls
 {
-	None,
-	Header,
-	Item,
-	Footer
+	public enum DisplayedElementType
+	{
+		None,
+		Header,
+		Item,
+		Footer
+	}
 }

@@ -2,35 +2,36 @@ using System;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
-namespace Facebook.Services.Api.Methods.MediaItemUpload;
-
-public class FbidResponseConverter : JsonConverter
+namespace Facebook.Services.Api.Methods.MediaItemUpload
 {
-	public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
+	public class FbidResponseConverter : JsonConverter
 	{
-		throw new NotImplementedException();
-	}
-
-	public override object ReadJson(JsonReader reader, Type objectType, object existingValue, JsonSerializer serializer)
-	{
-		Response response = new Response();
-		if (reader.TokenType == JsonToken.String)
+		public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
 		{
-			JToken jToken = JToken.Load(reader);
-			if (jToken.Type == JTokenType.String)
+			throw new NotImplementedException();
+		}
+
+		public override object ReadJson(JsonReader reader, Type objectType, object existingValue, JsonSerializer serializer)
+		{
+			Response response = new Response();
+			if (reader.TokenType == JsonToken.String)
 			{
-				response.Fbid = jToken.ToObject<string>();
+				JToken jToken = JToken.Load(reader);
+				if (jToken.Type == JTokenType.String)
+				{
+					response.Fbid = jToken.ToObject<string>();
+				}
 			}
+			else
+			{
+				serializer.Populate(reader, response);
+			}
+			return response;
 		}
-		else
-		{
-			serializer.Populate(reader, response);
-		}
-		return response;
-	}
 
-	public override bool CanConvert(Type objectType)
-	{
-		return true;
+		public override bool CanConvert(Type objectType)
+		{
+			return true;
+		}
 	}
 }

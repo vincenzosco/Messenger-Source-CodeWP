@@ -1,9 +1,10 @@
-namespace Facebook.Services.Api.Methods.SetThreadPicture;
-
-[Queue(QueueType.Web)]
-public class Request : FacebookServiceRequest
+namespace Facebook.Services.Api.Methods.SetThreadPicture
 {
-	public string ThreadId { get; set; }
+	[Queue(QueueType.Web)]
+	public class Request : FacebookServiceRequest
+	{
+		public string ThreadId { get; set; }
 
-	public string ImagePath { get; set; }
+		public string ImagePath { get; set; }
+	}
 }

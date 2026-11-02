@@ -1,9 +1,10 @@
-namespace Facebook.Base;
-
-public enum DispatcherPriority
+namespace Facebook.Base
 {
-	Idle = -2,
-	Low,
-	Normal,
-	High
+	public enum DispatcherPriority
+	{
+		Idle = -2,
+		Low,
+		Normal,
+		High
+	}
 }

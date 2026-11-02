@@ -3,15 +3,16 @@ using System.Linq;
 using System.Windows;
 using System.Windows.Documents;
 
-namespace Facebook.Messenger.WP8.Extensions;
-
-public static class BlockCollectionExtension
+namespace Facebook.Messenger.WP8.Extensions
 {
-	public static void ClearWithBugFix(this BlockCollection blocks)
+	public static class BlockCollectionExtension
 	{
-		while (((IEnumerable<Block>)blocks).Any())
+		public static void ClearWithBugFix(this BlockCollection blocks)
 		{
-			((PresentationFrameworkCollection<Block>)(object)blocks).RemoveAt(0);
+			while (((IEnumerable<Block>)blocks).Any())
+			{
+				((PresentationFrameworkCollection<Block>)(object)blocks).RemoveAt(0);
+			}
 		}
 	}
 }

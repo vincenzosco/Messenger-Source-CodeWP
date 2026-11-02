@@ -6,54 +6,55 @@ using Facebook.Base.Logging;
 using Windows.Storage;
 using Windows.Storage.Streams;
 
-namespace Facebook.Messenger;
-
-public class FileAccess : IFileAccess
+namespace Facebook.Messenger
 {
-	public async Task<Stream> GetFileStream(string filePath)
+	public class FileAccess : IFileAccess
 	{
-		try
+		public async Task<Stream> GetFileStream(string filePath)
 		{
-			return ((IInputStream)(object)(await (await StorageFile.GetFileFromPathAsync(filePath)).OpenAsync((FileAccessMode)0))).AsStreamForRead();
+			try
+			{
+				return ((IInputStream)(object)(await (await StorageFile.GetFileFromPathAsync(filePath)).OpenAsync((FileAccessMode)0))).AsStreamForRead();
+			}
+			catch (Exception ex)
+			{
+				Logger.Error(this, $"Can't read file at {filePath}", "GetFileStream", "c:\\Open\\messenger\\Facebook\\Facebook-Messenger-WP8-Base\\FileAccess.cs", 22);
+				Logger.Error(ex.ToString(), "GetFileStream", "c:\\Open\\messenger\\Facebook\\Facebook-Messenger-WP8-Base\\FileAccess.cs", 23);
+			}
+			return null;
 		}
-		catch (Exception ex)
-		{
-			Logger.Error(this, $"Can't read file at {filePath}", "GetFileStream", "c:\\Open\\messenger\\Facebook\\Facebook-Messenger-WP8-Base\\FileAccess.cs", 22);
-			Logger.Error(ex.ToString(), "GetFileStream", "c:\\Open\\messenger\\Facebook\\Facebook-Messenger-WP8-Base\\FileAccess.cs", 23);
-		}
-		return null;
-	}
 
-	public async Task DeleteFileAtPath(string path)
-	{
-		if (string.IsNullOrWhiteSpace(path))
+		public async Task DeleteFileAtPath(string path)
 		{
-			return;
+			if (string.IsNullOrWhiteSpace(path))
+			{
+				return;
+			}
+			try
+			{
+				await (await StorageFile.GetFileFromPathAsync(path)).DeleteAsync((StorageDeleteOption)1);
+			}
+			catch (Exception ex)
+			{
+				Logger.Error(this, $"Can't delete file at {path}", "DeleteFileAtPath", "c:\\Open\\messenger\\Facebook\\Facebook-Messenger-WP8-Base\\FileAccess.cs", 40);
+				Logger.Error(ex.ToString(), "DeleteFileAtPath", "c:\\Open\\messenger\\Facebook\\Facebook-Messenger-WP8-Base\\FileAccess.cs", 41);
+			}
 		}
-		try
-		{
-			await (await StorageFile.GetFileFromPathAsync(path)).DeleteAsync((StorageDeleteOption)1);
-		}
-		catch (Exception ex)
-		{
-			Logger.Error(this, $"Can't delete file at {path}", "DeleteFileAtPath", "c:\\Open\\messenger\\Facebook\\Facebook-Messenger-WP8-Base\\FileAccess.cs", 40);
-			Logger.Error(ex.ToString(), "DeleteFileAtPath", "c:\\Open\\messenger\\Facebook\\Facebook-Messenger-WP8-Base\\FileAccess.cs", 41);
-		}
-	}
 
-	public async Task<string> RenameFileAtPath(string path, string fileName)
-	{
-		try
+		public async Task<string> RenameFileAtPath(string path, string fileName)
 		{
-			StorageFile file = await StorageFile.GetFileFromPathAsync(path);
-			await file.RenameAsync(fileName, (NameCollisionOption)0);
-			path = file.Path;
+			try
+			{
+				StorageFile file = await StorageFile.GetFileFromPathAsync(path);
+				await file.RenameAsync(fileName, (NameCollisionOption)0);
+				path = file.Path;
+			}
+			catch (Exception ex)
+			{
+				Logger.Error(this, $"Can't rename file at {path}", "RenameFileAtPath", "c:\\Open\\messenger\\Facebook\\Facebook-Messenger-WP8-Base\\FileAccess.cs", 55);
+				Logger.Error(ex.ToString(), "RenameFileAtPath", "c:\\Open\\messenger\\Facebook\\Facebook-Messenger-WP8-Base\\FileAccess.cs", 56);
+			}
+			return path;
 		}
-		catch (Exception ex)
-		{
-			Logger.Error(this, $"Can't rename file at {path}", "RenameFileAtPath", "c:\\Open\\messenger\\Facebook\\Facebook-Messenger-WP8-Base\\FileAccess.cs", 55);
-			Logger.Error(ex.ToString(), "RenameFileAtPath", "c:\\Open\\messenger\\Facebook\\Facebook-Messenger-WP8-Base\\FileAccess.cs", 56);
-		}
-		return path;
 	}
 }

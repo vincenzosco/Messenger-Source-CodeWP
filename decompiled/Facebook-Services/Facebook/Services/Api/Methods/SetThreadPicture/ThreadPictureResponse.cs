@@ -2,24 +2,25 @@ using System.Collections.Generic;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 
-namespace Facebook.Services.Api.Methods.SetThreadPicture;
-
-[DataContract]
-[JsonObject(MemberSerialization.OptIn)]
-public class ThreadPictureResponse : FacebookApiResponse
+namespace Facebook.Services.Api.Methods.SetThreadPicture
 {
-	[JsonProperty("data")]
-	public List<Data> Data;
-
-	public string PictureHash
+	[DataContract]
+	[JsonObject(MemberSerialization.OptIn)]
+	public class ThreadPictureResponse : FacebookApiResponse
 	{
-		get
+		[JsonProperty("data")]
+		public List<Data> Data;
+
+		public string PictureHash
 		{
-			if (Data == null || Data.Count != 1)
+			get
 			{
-				return null;
+				if (Data == null || Data.Count != 1)
+				{
+					return null;
+				}
+				return Data[0].PictureHash;
 			}
-			return Data[0].PictureHash;
 		}
 	}
 }

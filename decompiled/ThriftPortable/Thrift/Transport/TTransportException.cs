@@ -1,38 +1,39 @@
-namespace Thrift.Transport;
-
-public class TTransportException : TException
+namespace Thrift.Transport
 {
-	public enum ExceptionType
+	public class TTransportException : TException
 	{
-		Unknown,
-		NotOpen,
-		AlreadyOpen,
-		TimedOut,
-		EndOfFile
-	}
+		public enum ExceptionType
+		{
+			Unknown,
+			NotOpen,
+			AlreadyOpen,
+			TimedOut,
+			EndOfFile
+		}
 
-	protected ExceptionType type;
+		protected ExceptionType type;
 
-	public ExceptionType Type => type;
+		public ExceptionType Type => type;
 
-	public TTransportException()
-	{
-	}
+		public TTransportException()
+		{
+		}
 
-	public TTransportException(ExceptionType type)
-		: this()
-	{
-		this.type = type;
-	}
+		public TTransportException(ExceptionType type)
+			: this()
+		{
+			this.type = type;
+		}
 
-	public TTransportException(ExceptionType type, string message)
-		: base(message)
-	{
-		this.type = type;
-	}
+		public TTransportException(ExceptionType type, string message)
+			: base(message)
+		{
+			this.type = type;
+		}
 
-	public TTransportException(string message)
-		: base(message)
-	{
+		public TTransportException(string message)
+			: base(message)
+		{
+		}
 	}
 }

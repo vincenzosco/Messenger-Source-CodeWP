@@ -1,11 +1,12 @@
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 
-namespace Facebook.Services.Api.Methods.UploadProfilePicture;
-
-public class Response : FacebookApiResponse
+namespace Facebook.Services.Api.Methods.UploadProfilePicture
 {
-	[JsonProperty(PropertyName = "id")]
-	[DataMember]
-	public string Id { get; set; }
+	public class Response : FacebookApiResponse
+	{
+		[JsonProperty(PropertyName = "id")]
+		[DataMember]
+		public string Id { get; set; }
+	}
 }

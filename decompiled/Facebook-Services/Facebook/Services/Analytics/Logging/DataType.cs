@@ -1,9 +1,10 @@
-namespace Facebook.Services.Analytics.Logging;
-
-public enum DataType
+namespace Facebook.Services.Analytics.Logging
 {
-	Api,
-	Mqtt,
-	Image,
-	Sticker
+	public enum DataType
+	{
+		Api,
+		Mqtt,
+		Image,
+		Sticker
+	}
 }

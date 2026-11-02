@@ -2,21 +2,22 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Facebook.Messenger.WP8.Extensions;
-
-public static class EnumerableExtensions
+namespace Facebook.Messenger.WP8.Extensions
 {
-	public static bool IsNullOrEmpty<T>(this IEnumerable<T> enumerable)
+	public static class EnumerableExtensions
 	{
-		if (enumerable != null)
+		public static bool IsNullOrEmpty<T>(this IEnumerable<T> enumerable)
 		{
-			return !enumerable.Any();
+			if (enumerable != null)
+			{
+				return !enumerable.Any();
+			}
+			return true;
 		}
-		return true;
-	}
 
-	public static bool NotNullAndAny<T>(this IEnumerable<T> enumerable, Func<T, bool> predicate)
-	{
-		return enumerable?.Any(predicate) ?? false;
+		public static bool NotNullAndAny<T>(this IEnumerable<T> enumerable, Func<T, bool> predicate)
+		{
+			return enumerable?.Any(predicate) ?? false;
+		}
 	}
 }

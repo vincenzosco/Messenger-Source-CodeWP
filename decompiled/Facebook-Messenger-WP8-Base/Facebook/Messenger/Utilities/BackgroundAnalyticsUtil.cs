@@ -1,23 +1,24 @@
 using System.IO.IsolatedStorage;
 
-namespace Facebook.Messenger.Utilities;
-
-public class BackgroundAnalyticsUtil
+namespace Facebook.Messenger.Utilities
 {
-	private const string BackgroundSendingStartedFilename = "BackgroundSendingStarted";
-
-	public static void BackgroundSendingStarted()
+	public class BackgroundAnalyticsUtil
 	{
-		ErrorIgnoringStorageUtils.CreateFileInIsolatedStorage("BackgroundSendingStarted", CreateEmptyFile);
-	}
+		private const string BackgroundSendingStartedFilename = "BackgroundSendingStarted";
 
-	private static void CreateEmptyFile(IsolatedStorageFile storage, string fileName)
-	{
-		storage.CreateFile(fileName).Dispose();
-	}
+		public static void BackgroundSendingStarted()
+		{
+			ErrorIgnoringStorageUtils.CreateFileInIsolatedStorage("BackgroundSendingStarted", CreateEmptyFile);
+		}
 
-	public static bool WasBackgroundSendingInstanceRun()
-	{
-		return ErrorIgnoringStorageUtils.DeleteFileInIsolateStorage("BackgroundSendingStarted");
+		private static void CreateEmptyFile(IsolatedStorageFile storage, string fileName)
+		{
+			storage.CreateFile(fileName).Dispose();
+		}
+
+		public static bool WasBackgroundSendingInstanceRun()
+		{
+			return ErrorIgnoringStorageUtils.DeleteFileInIsolateStorage("BackgroundSendingStarted");
+		}
 	}
 }

@@ -1,12 +1,13 @@
-namespace Facebook.Services.Api.Methods.FetchUserById;
-
-[Queue(QueueType.Web)]
-public class Request : FacebookServiceRequest
+namespace Facebook.Services.Api.Methods.FetchUserById
 {
-	public string Id { get; set; }
-
-	public Request(string id)
+	[Queue(QueueType.Web)]
+	public class Request : FacebookServiceRequest
 	{
-		Id = id;
+		public string Id { get; set; }
+
+		public Request(string id)
+		{
+			Id = id;
+		}
 	}
 }

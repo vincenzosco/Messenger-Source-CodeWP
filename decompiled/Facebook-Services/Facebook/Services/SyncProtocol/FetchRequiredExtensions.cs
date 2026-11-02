@@ -1,13 +1,14 @@
 using System.Collections.Generic;
 
-namespace Facebook.Services.SyncProtocol;
-
-public static class FetchRequiredExtensions
+namespace Facebook.Services.SyncProtocol
 {
-	public static List<FetchRequired> ToList(this FetchRequired fetchRequired)
+	public static class FetchRequiredExtensions
 	{
-		List<FetchRequired> list = new List<FetchRequired>();
-		list.Add(fetchRequired);
-		return list;
+		public static List<FetchRequired> ToList(this FetchRequired fetchRequired)
+		{
+			List<FetchRequired> list = new List<FetchRequired>();
+			list.Add(fetchRequired);
+			return list;
+		}
 	}
 }

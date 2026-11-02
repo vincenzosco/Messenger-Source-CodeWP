@@ -2,23 +2,24 @@ using System.Threading.Tasks;
 using Facebook.Services.Api.Attributes;
 using Facebook.Services.Common;
 
-namespace Facebook.Services.Api.Methods.ClearThreadPicture;
-
-[Bundle(BundleType.InMemoryCache, typeof(Request), typeof(BoolResponse))]
-public class CacheFilter : FacebookApiFilter<Request, BoolResponse>
+namespace Facebook.Services.Api.Methods.ClearThreadPicture
 {
-	public CacheFilter(ServiceContext context)
-		: base(context)
+	[Bundle(BundleType.InMemoryCache, typeof(Request), typeof(BoolResponse))]
+	public class CacheFilter : FacebookApiFilter<Request, BoolResponse>
 	{
-	}
-
-	public override async Task<BoolResponse> ExecuteAsync(Request request, IHandler next)
-	{
-		BoolResponse response = await next.ExecuteAsync<Request, BoolResponse>(request);
-		if (!response.HasError())
+		public CacheFilter(ServiceContext context)
+			: base(context)
 		{
-			await Context.ThreadCache.ClearThreadPicture(request.ThreadId);
 		}
-		return response;
+
+		public override async Task<BoolResponse> ExecuteAsync(Request request, IHandler next)
+		{
+			BoolResponse response = await next.ExecuteAsync<Request, BoolResponse>(request);
+			if (!response.HasError())
+			{
+				await Context.ThreadCache.ClearThreadPicture(request.ThreadId);
+			}
+			return response;
+		}
 	}
 }

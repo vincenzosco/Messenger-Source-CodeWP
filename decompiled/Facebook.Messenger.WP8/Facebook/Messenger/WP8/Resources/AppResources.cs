@@ -5,45 +5,46 @@ using System.Globalization;
 using System.Resources;
 using System.Runtime.CompilerServices;
 
-namespace Facebook.Messenger.WP8.Resources;
-
-[GeneratedCode("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
-[DebuggerNonUserCode]
-[CompilerGenerated]
-public class AppResources
+namespace Facebook.Messenger.WP8.Resources
 {
-	private static ResourceManager resourceMan;
-
-	private static CultureInfo resourceCulture;
-
-	[EditorBrowsable(EditorBrowsableState.Advanced)]
-	public static ResourceManager ResourceManager
+	[GeneratedCode("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
+	[DebuggerNonUserCode]
+	[CompilerGenerated]
+	public class AppResources
 	{
-		get
+		private static ResourceManager resourceMan;
+
+		private static CultureInfo resourceCulture;
+
+		[EditorBrowsable(EditorBrowsableState.Advanced)]
+		public static ResourceManager ResourceManager
 		{
-			if (object.ReferenceEquals(resourceMan, null))
+			get
 			{
-				ResourceManager resourceManager = new ResourceManager("Facebook.Messenger.WP8.Resources.AppResources", typeof(AppResources).Assembly);
-				resourceMan = resourceManager;
+				if (object.ReferenceEquals(resourceMan, null))
+				{
+					ResourceManager resourceManager = new ResourceManager("Facebook.Messenger.WP8.Resources.AppResources", typeof(AppResources).Assembly);
+					resourceMan = resourceManager;
+				}
+				return resourceMan;
 			}
-			return resourceMan;
 		}
-	}
 
-	[EditorBrowsable(EditorBrowsableState.Advanced)]
-	public static CultureInfo Culture
-	{
-		get
+		[EditorBrowsable(EditorBrowsableState.Advanced)]
+		public static CultureInfo Culture
 		{
-			return resourceCulture;
+			get
+			{
+				return resourceCulture;
+			}
+			set
+			{
+				resourceCulture = value;
+			}
 		}
-		set
-		{
-			resourceCulture = value;
-		}
-	}
 
-	internal AppResources()
-	{
+		internal AppResources()
+		{
+		}
 	}
 }

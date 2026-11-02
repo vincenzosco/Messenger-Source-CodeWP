@@ -1,8 +1,9 @@
-namespace ShakeGestures;
-
-public enum ShakeType
+namespace ShakeGestures
 {
-	X,
-	Y,
-	Z
+	public enum ShakeType
+	{
+		X,
+		Y,
+		Z
+	}
 }

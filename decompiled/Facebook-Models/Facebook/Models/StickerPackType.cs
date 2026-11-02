@@ -1,8 +1,9 @@
-namespace Facebook.Models;
-
-public enum StickerPackType
+namespace Facebook.Models
 {
-	Available,
-	Tray,
-	Owned
+	public enum StickerPackType
+	{
+		Available,
+		Tray,
+		Owned
+	}
 }

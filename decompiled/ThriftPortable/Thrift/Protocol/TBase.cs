@@ -1,6 +1,7 @@
-namespace Thrift.Protocol;
-
-public interface TBase : TAbstractBase
+namespace Thrift.Protocol
 {
-	void Read(TProtocol tProtocol);
+	public interface TBase : TAbstractBase
+	{
+		void Read(TProtocol tProtocol);
+	}
 }

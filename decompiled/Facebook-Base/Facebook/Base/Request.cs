@@ -2,29 +2,30 @@ using System.Runtime.Serialization;
 using System.Threading;
 using Newtonsoft.Json;
 
-namespace Facebook.Base;
-
-[JsonObject(MemberSerialization.OptIn)]
-[DataContract]
-public class Request
+namespace Facebook.Base
 {
-	private readonly CancellationTokenSource _tokenSource;
-
-	public CancellationToken CancelToken { get; set; }
-
-	public bool ExtendTimeout { get; set; }
-
-	public Request()
+	[JsonObject(MemberSerialization.OptIn)]
+	[DataContract]
+	public class Request
 	{
-		_tokenSource = new CancellationTokenSource();
-		CancelToken = _tokenSource.Token;
-	}
+		private readonly CancellationTokenSource _tokenSource;
 
-	public void Cancel()
-	{
-		if (CancelToken == _tokenSource.Token)
+		public CancellationToken CancelToken { get; set; }
+
+		public bool ExtendTimeout { get; set; }
+
+		public Request()
 		{
-			_tokenSource.Cancel();
+			_tokenSource = new CancellationTokenSource();
+			CancelToken = _tokenSource.Token;
+		}
+
+		public void Cancel()
+		{
+			if (CancelToken == _tokenSource.Token)
+			{
+				_tokenSource.Cancel();
+			}
 		}
 	}
 }

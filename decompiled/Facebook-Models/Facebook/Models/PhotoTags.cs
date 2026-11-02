@@ -2,11 +2,12 @@ using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 
-namespace Facebook.Models;
-
-public class PhotoTags
+namespace Facebook.Models
 {
-	[DataMember]
-	[JsonProperty("edges")]
-	public ObservableCollection<PhotoTagEdge> PhotoTagEdges { get; set; }
+	public class PhotoTags
+	{
+		[DataMember]
+		[JsonProperty("edges")]
+		public ObservableCollection<PhotoTagEdge> PhotoTagEdges { get; set; }
+	}
 }

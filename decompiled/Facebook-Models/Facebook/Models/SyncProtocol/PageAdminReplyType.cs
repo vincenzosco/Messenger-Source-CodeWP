@@ -1,8 +1,9 @@
-namespace Facebook.Models.SyncProtocol;
-
-public enum PageAdminReplyType
+namespace Facebook.Models.SyncProtocol
 {
-	ACTIVITY_REPLY = 1,
-	COMMERCE_LINK,
-	COMMERCE_UNLINK
+	public enum PageAdminReplyType
+	{
+		ACTIVITY_REPLY = 1,
+		COMMERCE_LINK,
+		COMMERCE_UNLINK
+	}
 }

@@ -1,13 +1,14 @@
 using System;
 
-namespace Microsoft.Phone.Controls;
-
-public class ItemDisplayedEventArgs : EventArgs
+namespace Microsoft.Phone.Controls
 {
-	public int ItemIndex { get; private set; }
-
-	public ItemDisplayedEventArgs(int itemIndex)
+	public class ItemDisplayedEventArgs : EventArgs
 	{
-		ItemIndex = itemIndex;
+		public int ItemIndex { get; private set; }
+
+		public ItemDisplayedEventArgs(int itemIndex)
+		{
+			ItemIndex = itemIndex;
+		}
 	}
 }

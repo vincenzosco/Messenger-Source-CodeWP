@@ -1,8 +1,9 @@
 using Facebook.Models;
 
-namespace Facebook.Services.Api.Methods.FetchMessage;
-
-public class Response : FacebookApiResponse
+namespace Facebook.Services.Api.Methods.FetchMessage
 {
-	public MailMessage Message { get; set; }
+	public class Response : FacebookApiResponse
+	{
+		public MailMessage Message { get; set; }
+	}
 }

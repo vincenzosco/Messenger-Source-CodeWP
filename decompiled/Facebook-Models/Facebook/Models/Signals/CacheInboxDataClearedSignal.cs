@@ -1,11 +1,12 @@
-namespace Facebook.Models.Signals;
-
-public class CacheInboxDataClearedSignal
+namespace Facebook.Models.Signals
 {
-	public readonly DataTypeCleared DateTypeCleared;
-
-	public CacheInboxDataClearedSignal(DataTypeCleared dataTypeCleared)
+	public class CacheInboxDataClearedSignal
 	{
-		DateTypeCleared = dataTypeCleared;
+		public readonly DataTypeCleared DateTypeCleared;
+
+		public CacheInboxDataClearedSignal(DataTypeCleared dataTypeCleared)
+		{
+			DateTypeCleared = dataTypeCleared;
+		}
 	}
 }

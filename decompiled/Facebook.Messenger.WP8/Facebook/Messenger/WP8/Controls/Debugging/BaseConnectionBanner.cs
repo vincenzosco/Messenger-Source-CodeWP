@@ -5,163 +5,164 @@ using System.Windows.Controls;
 using System.Windows.Controls.Primitives;
 using Facebook.Messenger.WP8.ViewModels;
 
-namespace Facebook.Messenger.WP8.Controls.Debugging;
-
-public abstract class BaseConnectionBanner : SyncConnectionBannerViewModelControl
+namespace Facebook.Messenger.WP8.Controls.Debugging
 {
-	private bool _isBannerShowing;
-
-	private bool _savedIsBannerShowing;
-
-	public event EventHandler BannerAnimationStarted;
-
-	public event EventHandler BannerAnimationCompleted;
-
-	protected BaseConnectionBanner()
+	public abstract class BaseConnectionBanner : SyncConnectionBannerViewModelControl
 	{
-		//IL_0014: Unknown result type (might be due to invalid IL or missing references)
-		//IL_001e: Expected Obj, but got Unknown
-		AddConnectionBannerToVisualTree();
-		((FrameworkElement)this).Unloaded += OnUnloaded;
-	}
+		private bool _isBannerShowing;
 
-	protected override void ViewModelUpdated(ConnectionBannerViewModel oldViewModel)
-	{
-		base.ViewModelUpdated(oldViewModel);
-		if (oldViewModel != null)
+		private bool _savedIsBannerShowing;
+
+		public event EventHandler BannerAnimationStarted;
+
+		public event EventHandler BannerAnimationCompleted;
+
+		protected BaseConnectionBanner()
 		{
-			oldViewModel.PropertyChanged -= OnPropertyChanged;
+			//IL_0014: Unknown result type (might be due to invalid IL or missing references)
+			//IL_001e: Expected Obj, but got Unknown
+			AddConnectionBannerToVisualTree();
+			((FrameworkElement)this).Unloaded += OnUnloaded;
 		}
-		WithViewModel((ConnectionBannerViewModel vm) =>
-		{
-			vm.PropertyChanged += OnPropertyChanged;
-			vm.RefreshStateTriggered += OnRefreshStateTriggered;
-		});
-		UpdateBanner();
-	}
 
-	private void OnPropertyChanged(object sender, PropertyChangedEventArgs e)
-	{
-		if (e.PropertyName == "BannerState")
+		protected override void ViewModelUpdated(ConnectionBannerViewModel oldViewModel)
 		{
+			base.ViewModelUpdated(oldViewModel);
+			if (oldViewModel != null)
+			{
+				oldViewModel.PropertyChanged -= OnPropertyChanged;
+			}
+			WithViewModel((ConnectionBannerViewModel vm) =>
+			{
+				vm.PropertyChanged += OnPropertyChanged;
+				vm.RefreshStateTriggered += OnRefreshStateTriggered;
+			});
 			UpdateBanner();
 		}
-	}
 
-	private void OnUnloaded(object sender, RoutedEventArgs e)
-	{
-		WithViewModel((ConnectionBannerViewModel vm) =>
+		private void OnPropertyChanged(object sender, PropertyChangedEventArgs e)
 		{
-			vm.PropertyChanged -= OnPropertyChanged;
-			vm.RefreshStateTriggered -= OnRefreshStateTriggered;
-		});
-	}
-
-	private void AddConnectionBannerToVisualTree()
-	{
-		//IL_0000: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0006: Expected Obj, but got Unknown
-		//IL_003c: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0042: Expected Obj, but got Unknown
-		Grid val = new Grid();
-		((FrameworkElement)val).HorizontalAlignment = (HorizontalAlignment)3;
-		((FrameworkElement)val).VerticalAlignment = (VerticalAlignment)0;
-		((FrameworkElement)val).Width = Application.Current.Host.Content.ActualWidth;
-		Grid val2 = val;
-		((PresentationFrameworkCollection<UIElement>)(object)((Panel)val2).Children).Add((UIElement)(object)this);
-		Popup val3 = new Popup();
-		val3.Child = (UIElement)(object)val2;
-		val3.IsOpen = true;
-		((UIElement)val3).IsHitTestVisible = false;
-	}
-
-	private void UpdateBanner()
-	{
-		WithViewModel((ConnectionBannerViewModel vm) =>
-		{
-			UpdateBannerStatus(vm.BannerState);
-			AnimateBanner(vm.BannerState);
-		});
-	}
-
-	private void AnimateBanner(BannerState newState)
-	{
-		if (_isBannerShowing)
-		{
-			if (newState == BannerState.Connected || newState == BannerState.Hidden)
+			if (e.PropertyName == "BannerState")
 			{
-				HideBanner();
+				UpdateBanner();
 			}
 		}
-		else if (newState == BannerState.Disconnected || newState == BannerState.NoInternet)
+
+		private void OnUnloaded(object sender, RoutedEventArgs e)
 		{
-			ShowBanner();
+			WithViewModel((ConnectionBannerViewModel vm) =>
+			{
+				vm.PropertyChanged -= OnPropertyChanged;
+				vm.RefreshStateTriggered -= OnRefreshStateTriggered;
+			});
 		}
-	}
 
-	private void ShowBanner()
-	{
-		if (BannerAnimationStarted != null)
+		private void AddConnectionBannerToVisualTree()
 		{
-			BannerAnimationStarted(this, null);
+			//IL_0000: Unknown result type (might be due to invalid IL or missing references)
+			//IL_0006: Expected Obj, but got Unknown
+			//IL_003c: Unknown result type (might be due to invalid IL or missing references)
+			//IL_0042: Expected Obj, but got Unknown
+			Grid val = new Grid();
+			((FrameworkElement)val).HorizontalAlignment = (HorizontalAlignment)3;
+			((FrameworkElement)val).VerticalAlignment = (VerticalAlignment)0;
+			((FrameworkElement)val).Width = Application.Current.Host.Content.ActualWidth;
+			Grid val2 = val;
+			((PresentationFrameworkCollection<UIElement>)(object)((Panel)val2).Children).Add((UIElement)(object)this);
+			Popup val3 = new Popup();
+			val3.Child = (UIElement)(object)val2;
+			val3.IsOpen = true;
+			((UIElement)val3).IsHitTestVisible = false;
 		}
-		_isBannerShowing = true;
-		TriggerShowAnimation();
-	}
 
-	private void HideBanner()
-	{
-		TriggerHideAnimation();
-	}
-
-	public void RestoreBannerState()
-	{
-		if (_savedIsBannerShowing && !_isBannerShowing)
+		private void UpdateBanner()
 		{
-			ShowBanner();
+			WithViewModel((ConnectionBannerViewModel vm) =>
+			{
+				UpdateBannerStatus(vm.BannerState);
+				AnimateBanner(vm.BannerState);
+			});
 		}
-	}
 
-	public void PreserveBannerState()
-	{
-		FinishAnimations();
-		TriggerHideWithoutAnimation();
-		_savedIsBannerShowing = _isBannerShowing;
-		if (BannerAnimationCompleted != null)
+		private void AnimateBanner(BannerState newState)
 		{
-			BannerAnimationCompleted(this, null);
+			if (_isBannerShowing)
+			{
+				if (newState == BannerState.Connected || newState == BannerState.Hidden)
+				{
+					HideBanner();
+				}
+			}
+			else if (newState == BannerState.Disconnected || newState == BannerState.NoInternet)
+			{
+				ShowBanner();
+			}
 		}
-		_isBannerShowing = false;
-	}
 
-	protected abstract void TriggerShowAnimation();
-
-	protected abstract void TriggerHideAnimation();
-
-	protected abstract void TriggerHideWithoutAnimation();
-
-	protected abstract void FinishAnimations();
-
-	protected abstract void UpdateBannerStatus(BannerState newState);
-
-	protected virtual void OnBannerHidden(object sender, EventArgs e)
-	{
-		if (BannerAnimationCompleted != null)
-		{
-			BannerAnimationCompleted(this, null);
-		}
-		_isBannerShowing = false;
-	}
-
-	protected virtual void OnRefreshStateTriggered(object sender, EventArgs eventArgs)
-	{
-		if (!_isBannerShowing)
+		private void ShowBanner()
 		{
 			if (BannerAnimationStarted != null)
 			{
 				BannerAnimationStarted(this, null);
 			}
 			_isBannerShowing = true;
+			TriggerShowAnimation();
+		}
+
+		private void HideBanner()
+		{
+			TriggerHideAnimation();
+		}
+
+		public void RestoreBannerState()
+		{
+			if (_savedIsBannerShowing && !_isBannerShowing)
+			{
+				ShowBanner();
+			}
+		}
+
+		public void PreserveBannerState()
+		{
+			FinishAnimations();
+			TriggerHideWithoutAnimation();
+			_savedIsBannerShowing = _isBannerShowing;
+			if (BannerAnimationCompleted != null)
+			{
+				BannerAnimationCompleted(this, null);
+			}
+			_isBannerShowing = false;
+		}
+
+		protected abstract void TriggerShowAnimation();
+
+		protected abstract void TriggerHideAnimation();
+
+		protected abstract void TriggerHideWithoutAnimation();
+
+		protected abstract void FinishAnimations();
+
+		protected abstract void UpdateBannerStatus(BannerState newState);
+
+		protected virtual void OnBannerHidden(object sender, EventArgs e)
+		{
+			if (BannerAnimationCompleted != null)
+			{
+				BannerAnimationCompleted(this, null);
+			}
+			_isBannerShowing = false;
+		}
+
+		protected virtual void OnRefreshStateTriggered(object sender, EventArgs eventArgs)
+		{
+			if (!_isBannerShowing)
+			{
+				if (BannerAnimationStarted != null)
+				{
+					BannerAnimationStarted(this, null);
+				}
+				_isBannerShowing = true;
+			}
 		}
 	}
 }

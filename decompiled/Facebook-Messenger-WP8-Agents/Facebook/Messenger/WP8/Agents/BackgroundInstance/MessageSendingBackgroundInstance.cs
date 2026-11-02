@@ -11,140 +11,141 @@ using Facebook.Models;
 using Facebook.Services.Api.Methods.SendMessage;
 using Facebook.Services.MessageSender;
 
-namespace Facebook.Messenger.WP8.Agents.BackgroundInstance;
-
-public class MessageSendingBackgroundInstance : IBackgroundInstance
+namespace Facebook.Messenger.WP8.Agents.BackgroundInstance
 {
-	public const int MqttConnectDelayMs = 5000;
-
-	private readonly FacebookContext _context;
-
-	private readonly Facebook.Services.MessageSender.Service _sendingService;
-
-	private readonly object _pendingRequestsCounterLock = new object();
-
-	private readonly object _cancelLock = new object();
-
-	private readonly ServiceEngine _serviceEngine;
-
-	private readonly List<Facebook.Services.Api.Methods.SendMessage.Response> _successfulMessages = new List<Facebook.Services.Api.Methods.SendMessage.Response>();
-
-	private readonly SingleExecutionRuntimeLock _runtimeLock = new SingleExecutionRuntimeLock();
-
-	private readonly AutoRenewCancellationTokenSource _cancellationTokenSource = new AutoRenewCancellationTokenSource();
-
-	private int _numberOfPendingRequests;
-
-	public bool IsInstanceRunning { get; private set; }
-
-	public EventHandler ExecutionComplete { get; set; }
-
-	public MessageSendingBackgroundInstance(FacebookContext context, ServiceEngine serviceEngine, Facebook.Services.MessageSender.Service sendingService)
+	public class MessageSendingBackgroundInstance : IBackgroundInstance
 	{
-		_context = context;
-		_serviceEngine = serviceEngine;
-		_sendingService = sendingService;
-	}
+		public const int MqttConnectDelayMs = 5000;
 
-	public async Task Execute()
-	{
-		CancellationToken token = _cancellationTokenSource.Token;
-		try
+		private readonly FacebookContext _context;
+
+		private readonly Facebook.Services.MessageSender.Service _sendingService;
+
+		private readonly object _pendingRequestsCounterLock = new object();
+
+		private readonly object _cancelLock = new object();
+
+		private readonly ServiceEngine _serviceEngine;
+
+		private readonly List<Facebook.Services.Api.Methods.SendMessage.Response> _successfulMessages = new List<Facebook.Services.Api.Methods.SendMessage.Response>();
+
+		private readonly SingleExecutionRuntimeLock _runtimeLock = new SingleExecutionRuntimeLock();
+
+		private readonly AutoRenewCancellationTokenSource _cancellationTokenSource = new AutoRenewCancellationTokenSource();
+
+		private int _numberOfPendingRequests;
+
+		public bool IsInstanceRunning { get; private set; }
+
+		public EventHandler ExecutionComplete { get; set; }
+
+		public MessageSendingBackgroundInstance(FacebookContext context, ServiceEngine serviceEngine, Facebook.Services.MessageSender.Service sendingService)
 		{
-			int num = default;
-			_ = num;
-			_ = 0;
+			_context = context;
+			_serviceEngine = serviceEngine;
+			_sendingService = sendingService;
+		}
+
+		public async Task Execute()
+		{
+			CancellationToken token = _cancellationTokenSource.Token;
 			try
 			{
-				if (_context.IsAuthenticated() && !token.IsCancellationRequested)
+				int num = default(int);
+				int num2 = num;
+				int num3 = 0;
+				try
 				{
-					_runtimeLock.Acquire();
-					IsInstanceRunning = true;
-					List<Facebook.Services.Api.Methods.SendMessage.Request> outgoingMessages = GetOutgoingMessages();
-					BackgroundAnalyticsUtil.BackgroundSendingStarted();
-					_serviceEngine.StartServices(_context);
-					await MqttConnectionWaiter.WaitAsync(5000);
-					SendOutgoingMessages(outgoingMessages).Wait(token);
+					if (_context.IsAuthenticated() && !token.IsCancellationRequested)
+					{
+						_runtimeLock.Acquire();
+						IsInstanceRunning = true;
+						List<Facebook.Services.Api.Methods.SendMessage.Request> outgoingMessages = GetOutgoingMessages();
+						BackgroundAnalyticsUtil.BackgroundSendingStarted();
+						_serviceEngine.StartServices(_context);
+						await MqttConnectionWaiter.WaitAsync(5000);
+						SendOutgoingMessages(outgoingMessages).Wait(token);
+					}
+				}
+				catch (OperationCanceledException arg)
+				{
+					Logger.Warning($"An operation was cancelled when executing the background sender: {arg}", "Execute", "c:\\Open\\messenger\\Facebook\\Facebook-Messenger-WP8-Agents\\BackgroundInstance\\MessageSendingBackgroundInstance.cs", 67);
 				}
 			}
-			catch (OperationCanceledException arg)
+			finally
 			{
-				Logger.Warning($"An operation was cancelled when executing the background sender: {arg}", "Execute", "c:\\Open\\messenger\\Facebook\\Facebook-Messenger-WP8-Agents\\BackgroundInstance\\MessageSendingBackgroundInstance.cs", 67);
+				lock (_pendingRequestsCounterLock)
+				{
+					if (_numberOfPendingRequests > 0)
+					{
+						ToastHelper.ShowPendingSendsToast();
+					}
+				}
+				if (ExecutionComplete != null)
+				{
+					ExecutionComplete(this, null);
+				}
+				CleanUp();
 			}
 		}
-		finally
+
+		private List<Facebook.Services.Api.Methods.SendMessage.Request> GetOutgoingMessages()
 		{
-			lock (_pendingRequestsCounterLock)
-			{
-				if (_numberOfPendingRequests > 0)
-				{
-					ToastHelper.ShowPendingSendsToast();
-				}
-			}
-			if (ExecutionComplete != null)
-			{
-				ExecutionComplete(this, null);
-			}
+			List<Facebook.Services.Api.Methods.SendMessage.Request> outstandingRequestsFromIsolatedStorage = BackgroundRequestUtil.GetOutstandingRequestsFromIsolatedStorage();
+			_numberOfPendingRequests = outstandingRequestsFromIsolatedStorage.Count;
+			BackgroundRequestUtil.DeleteOutstandingRequestsFromIsolatedStorage();
+			return outstandingRequestsFromIsolatedStorage;
+		}
+
+		public void Cancel()
+		{
 			CleanUp();
 		}
-	}
 
-	private List<Facebook.Services.Api.Methods.SendMessage.Request> GetOutgoingMessages()
-	{
-		List<Facebook.Services.Api.Methods.SendMessage.Request> outstandingRequestsFromIsolatedStorage = BackgroundRequestUtil.GetOutstandingRequestsFromIsolatedStorage();
-		_numberOfPendingRequests = outstandingRequestsFromIsolatedStorage.Count;
-		BackgroundRequestUtil.DeleteOutstandingRequestsFromIsolatedStorage();
-		return outstandingRequestsFromIsolatedStorage;
-	}
-
-	public void Cancel()
-	{
-		CleanUp();
-	}
-
-	private void CleanUp()
-	{
-		lock (_cancelLock)
+		private void CleanUp()
 		{
-			if (IsInstanceRunning)
+			lock (_cancelLock)
 			{
-				_cancellationTokenSource.CancelAndRenew();
-				_serviceEngine.StopServices();
-				_runtimeLock.TryRelease();
-				IsInstanceRunning = false;
+				if (IsInstanceRunning)
+				{
+					_cancellationTokenSource.CancelAndRenew();
+					_serviceEngine.StopServices();
+					_runtimeLock.TryRelease();
+					IsInstanceRunning = false;
+				}
 			}
 		}
-	}
 
-	private Task SendOutgoingMessages(List<Facebook.Services.Api.Methods.SendMessage.Request> outgoingMessages)
-	{
-		if (outgoingMessages == null)
+		private Task SendOutgoingMessages(List<Facebook.Services.Api.Methods.SendMessage.Request> outgoingMessages)
 		{
-			return null;
-		}
-		List<Task> tasks = outgoingMessages.Select(CreateMessageTask).ToList();
-		return Task.WhenAll(tasks);
-	}
-
-	private async Task CreateMessageTask(Facebook.Services.Api.Methods.SendMessage.Request request)
-	{
-		if (!request.HasVideo())
-		{
-			request.RetryAttempt = 0;
-			AddSuccessfulRequestAction(await _sendingService.ExecuteAsync<Facebook.Services.Api.Methods.SendMessage.Request, Facebook.Services.Api.Methods.SendMessage.Response>(request));
-		}
-	}
-
-	private void AddSuccessfulRequestAction(Facebook.Services.Api.Methods.SendMessage.Response response)
-	{
-		if (!response.HasError())
-		{
-			lock (_pendingRequestsCounterLock)
+			if (outgoingMessages == null)
 			{
-				_numberOfPendingRequests--;
+				return null;
 			}
-			_successfulMessages.Add(response);
-			BackgroundRequestUtil.SaveSuccessfulResponsesInIsolatedStorage(_successfulMessages);
+			List<Task> tasks = outgoingMessages.Select(CreateMessageTask).ToList();
+			return Task.WhenAll(tasks);
+		}
+
+		private async Task CreateMessageTask(Facebook.Services.Api.Methods.SendMessage.Request request)
+		{
+			if (!request.HasVideo())
+			{
+				request.RetryAttempt = 0;
+				AddSuccessfulRequestAction(await _sendingService.ExecuteAsync<Facebook.Services.Api.Methods.SendMessage.Request, Facebook.Services.Api.Methods.SendMessage.Response>(request));
+			}
+		}
+
+		private void AddSuccessfulRequestAction(Facebook.Services.Api.Methods.SendMessage.Response response)
+		{
+			if (!response.HasError())
+			{
+				lock (_pendingRequestsCounterLock)
+				{
+					_numberOfPendingRequests--;
+				}
+				_successfulMessages.Add(response);
+				BackgroundRequestUtil.SaveSuccessfulResponsesInIsolatedStorage(_successfulMessages);
+			}
 		}
 	}
 }

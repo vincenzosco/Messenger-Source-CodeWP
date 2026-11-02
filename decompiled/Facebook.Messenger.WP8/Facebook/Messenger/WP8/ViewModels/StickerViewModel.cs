@@ -4,110 +4,111 @@ using Facebook.Models;
 using Facebook.Services.Stickers;
 using GalaSoft.MvvmLight;
 
-namespace Facebook.Messenger.WP8.ViewModels;
-
-public class StickerViewModel : ViewModelBase
+namespace Facebook.Messenger.WP8.ViewModels
 {
-	private string _id;
-
-	private string _stickerPackId;
-
-	private Uri _imageUri;
-
-	private FacebookImage _threadImage;
-
-	private FacebookImage _composerImage;
-
-	private FacebookImage _animatedImage;
-
-	public string Id
+	public class StickerViewModel : ViewModelBase
 	{
-		get
-		{
-			return _id;
-		}
-		set
-		{
-			Set(ref _id, value, broadcast: false, "Id");
-		}
-	}
+		private string _id;
 
-	public string StickerPackId
-	{
-		get
-		{
-			return _stickerPackId;
-		}
-		set
-		{
-			Set(ref _stickerPackId, value, broadcast: false, "StickerPackId");
-		}
-	}
+		private string _stickerPackId;
 
-	public Uri ImageUri
-	{
-		get
-		{
-			return _imageUri;
-		}
-		set
-		{
-			Set(ref _imageUri, value, broadcast: false, "ImageUri");
-		}
-	}
+		private Uri _imageUri;
 
-	public FacebookImage ThreadImage
-	{
-		get
-		{
-			return _threadImage;
-		}
-		set
-		{
-			Set(ref _threadImage, value, broadcast: false, "ThreadImage");
-		}
-	}
+		private FacebookImage _threadImage;
 
-	public FacebookImage ComposerImage
-	{
-		get
-		{
-			return _composerImage;
-		}
-		set
-		{
-			Set(ref _composerImage, value, broadcast: false, "ComposerImage");
-		}
-	}
+		private FacebookImage _composerImage;
 
-	public FacebookImage AnimatedImage
-	{
-		get
+		private FacebookImage _animatedImage;
+
+		public string Id
 		{
-			return _animatedImage;
+			get
+			{
+				return _id;
+			}
+			set
+			{
+				Set(ref _id, value, false, "Id");
+			}
 		}
-		set
+
+		public string StickerPackId
 		{
-			Set(ref _animatedImage, value, broadcast: false, "AnimatedImage");
+			get
+			{
+				return _stickerPackId;
+			}
+			set
+			{
+				Set(ref _stickerPackId, value, false, "StickerPackId");
+			}
 		}
-	}
 
-	public StickerViewModel(Sticker sticker, string stickerPackId)
-	{
-		UpdateFrom(sticker);
-		StickerPackId = stickerPackId;
-	}
+		public Uri ImageUri
+		{
+			get
+			{
+				return _imageUri;
+			}
+			set
+			{
+				Set(ref _imageUri, value, false, "ImageUri");
+			}
+		}
 
-	public async Task LoadImageUriAsync(IStickerStorage stickerStorage)
-	{
-		ImageUri = await stickerStorage.GenerateStickerUri(StickerPackId, Id, animatedSticker: false);
-	}
+		public FacebookImage ThreadImage
+		{
+			get
+			{
+				return _threadImage;
+			}
+			set
+			{
+				Set(ref _threadImage, value, false, "ThreadImage");
+			}
+		}
 
-	private void UpdateFrom(Sticker sticker)
-	{
-		Id = sticker.Id;
-		ThreadImage = sticker.ThreadImage;
-		ComposerImage = sticker.ComposerImage;
-		AnimatedImage = sticker.AnimatedImage;
+		public FacebookImage ComposerImage
+		{
+			get
+			{
+				return _composerImage;
+			}
+			set
+			{
+				Set(ref _composerImage, value, false, "ComposerImage");
+			}
+		}
+
+		public FacebookImage AnimatedImage
+		{
+			get
+			{
+				return _animatedImage;
+			}
+			set
+			{
+				Set(ref _animatedImage, value, false, "AnimatedImage");
+			}
+		}
+
+		public StickerViewModel(Sticker sticker, string stickerPackId)
+		{
+			UpdateFrom(sticker);
+			StickerPackId = stickerPackId;
+		}
+
+		public async Task LoadImageUriAsync(IStickerStorage stickerStorage)
+		{
+			ImageUri = await stickerStorage.GenerateStickerUri(StickerPackId, Id, false);
+		}
+
+		private void UpdateFrom(Sticker sticker)
+		{
+			Id = sticker.Id;
+			ThreadImage = sticker.ThreadImage;
+			ComposerImage = sticker.ComposerImage;
+			AnimatedImage = sticker.AnimatedImage;
+		}
 	}
 }

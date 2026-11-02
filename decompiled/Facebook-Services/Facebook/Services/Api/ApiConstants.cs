@@ -1,6 +1,7 @@
-namespace Facebook.Services.Api;
-
-public static class ApiConstants
+namespace Facebook.Services.Api
 {
-	public const int FetchLimit = 10;
+	public static class ApiConstants
+	{
+		public const int FetchLimit = 10;
+	}
 }

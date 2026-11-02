@@ -11,67 +11,68 @@ using Facebook.Services.Api;
 using GalaSoft.MvvmLight.Messaging;
 using Microsoft.Phone.Controls;
 
-namespace Facebook.Messenger.WP8.ViewModels;
-
-public class MessengerApplicationViewModel : FacebookMessengerViewModel
+namespace Facebook.Messenger.WP8.ViewModels
 {
-	private readonly ApplicationState _applicationState;
-
-	private readonly ConnectionBannerViewModel _connectionBannerViewModel;
-
-	public ConnectionBannerType GetConnectionBannerTypeToDisplay => ConnectionBannerType.Colored;
-
-	public ConnectionBannerViewModel ConnectionBannerViewModel => _connectionBannerViewModel;
-
-	public event EventHandler<MessagePopupArgs> MessageReceived;
-
-	public MessengerApplicationViewModel(Facebook.Services.Api.Service apiService, FacebookContext context, Navigator navigator, IDispatcher dispatcher, INetworkStatus networkStatus, ApplicationState applicationState, ConnectionBannerViewModel connectionBannerViewModel)
-		: base(apiService, context, navigator, dispatcher, networkStatus)
+	public class MessengerApplicationViewModel : FacebookMessengerViewModel
 	{
-		_applicationState = applicationState;
-		_connectionBannerViewModel = connectionBannerViewModel;
-		GalaSoft.MvvmLight.Messaging.Messenger.Default.Register<CacheMarkedQueuedThreadsFailedSignal>(this, OnCacheMarkedQueuedThreadsFailedSignal);
-		GalaSoft.MvvmLight.Messaging.Messenger.Default.Register<CacheMessagesUpdatedSignal>(this, OnMessageUpdatedSignal);
-	}
+		private readonly ApplicationState _applicationState;
 
-	private void OnCacheMarkedQueuedThreadsFailedSignal(CacheMarkedQueuedThreadsFailedSignal signal)
-	{
-		if (!_applicationState.ActivatedFromMessageFailedToast)
+		private readonly ConnectionBannerViewModel _connectionBannerViewModel;
+
+		public ConnectionBannerType GetConnectionBannerTypeToDisplay => ConnectionBannerType.Colored;
+
+		public ConnectionBannerViewModel ConnectionBannerViewModel => _connectionBannerViewModel;
+
+		public event EventHandler<MessagePopupArgs> MessageReceived;
+
+		public MessengerApplicationViewModel(Facebook.Services.Api.Service apiService, FacebookContext context, Navigator navigator, IDispatcher dispatcher, INetworkStatus networkStatus, ApplicationState applicationState, ConnectionBannerViewModel connectionBannerViewModel)
+			: base(apiService, context, navigator, dispatcher, networkStatus)
 		{
-			Dispatcher.RunAsync(() =>
+			_applicationState = applicationState;
+			_connectionBannerViewModel = connectionBannerViewModel;
+			GalaSoft.MvvmLight.Messaging.Messenger.Default.Register<CacheMarkedQueuedThreadsFailedSignal>(this, OnCacheMarkedQueuedThreadsFailedSignal);
+			GalaSoft.MvvmLight.Messaging.Messenger.Default.Register<CacheMessagesUpdatedSignal>(this, OnMessageUpdatedSignal);
+		}
+
+		private void OnCacheMarkedQueuedThreadsFailedSignal(CacheMarkedQueuedThreadsFailedSignal signal)
+		{
+			if (!_applicationState.ActivatedFromMessageFailedToast)
 			{
-				//IL_001d: Unknown result type (might be due to invalid IL or missing references)
-				//IL_0023: Expected Obj, but got Unknown
-				CustomMessageBox customMessageBox = new CustomMessageBox
+				Dispatcher.RunAsync(() =>
 				{
-					Caption = StringLibrary.Message_Sending_Failed,
-					Message = StringLibrary.Message_Sending_Failed_App_Exited_Description
-				};
-				TextBlock val = new TextBlock();
-				val.Text = StringLibrary.AppBar_Ok;
-				val.TextWrapping = (TextWrapping)2;
-				customMessageBox.RightButtonContent = val;
-				customMessageBox.IsFullScreen = false;
-				CustomMessageBox customMessageBox2 = customMessageBox;
-				customMessageBox2.Show();
-			});
+					//IL_001d: Unknown result type (might be due to invalid IL or missing references)
+					//IL_0023: Expected Obj, but got Unknown
+					CustomMessageBox customMessageBox = new CustomMessageBox
+					{
+						Caption = StringLibrary.Message_Sending_Failed,
+						Message = StringLibrary.Message_Sending_Failed_App_Exited_Description
+					};
+					TextBlock val = new TextBlock();
+					val.Text = StringLibrary.AppBar_Ok;
+					val.TextWrapping = (TextWrapping)2;
+					customMessageBox.RightButtonContent = val;
+					customMessageBox.IsFullScreen = false;
+					CustomMessageBox customMessageBox2 = customMessageBox;
+					customMessageBox2.Show();
+				});
+			}
 		}
-	}
 
-	private void OnMessageUpdatedSignal(CacheMessagesUpdatedSignal signal)
-	{
-		if (!signal.ShouldNotify || MessageReceived == null)
+		private void OnMessageUpdatedSignal(CacheMessagesUpdatedSignal signal)
 		{
-			return;
-		}
-		foreach (MailMessage message in signal.Messages)
-		{
-			MessageReceived(this, new MessagePopupArgs
+			if (!signal.ShouldNotify || MessageReceived == null)
 			{
-				Thread = signal.Thread,
-				Message = message,
-				Context = Context
-			});
+				return;
+			}
+			foreach (MailMessage message in signal.Messages)
+			{
+				MessageReceived(this, new MessagePopupArgs
+				{
+					Thread = signal.Thread,
+					Message = message,
+					Context = Context
+				});
+			}
 		}
 	}
 }

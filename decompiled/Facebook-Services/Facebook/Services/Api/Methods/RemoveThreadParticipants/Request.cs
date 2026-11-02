@@ -1,17 +1,18 @@
 using System.Collections.Generic;
 
-namespace Facebook.Services.Api.Methods.RemoveThreadParticipants;
-
-[Queue(QueueType.Web)]
-public class Request : FacebookServiceRequest
+namespace Facebook.Services.Api.Methods.RemoveThreadParticipants
 {
-	public string ThreadId { get; set; }
-
-	public IList<string> UserIds { get; set; }
-
-	public Request(string threadId, IList<string> userIds)
+	[Queue(QueueType.Web)]
+	public class Request : FacebookServiceRequest
 	{
-		ThreadId = threadId;
-		UserIds = userIds;
+		public string ThreadId { get; set; }
+
+		public IList<string> UserIds { get; set; }
+
+		public Request(string threadId, IList<string> userIds)
+		{
+			ThreadId = threadId;
+			UserIds = userIds;
+		}
 	}
 }

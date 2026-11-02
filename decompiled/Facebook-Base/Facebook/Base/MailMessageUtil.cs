@@ -1,13 +1,14 @@
-namespace Facebook.Base;
-
-public class MailMessageUtil
+namespace Facebook.Base
 {
-	public static long GetTimestamp(long sendTimestamp, long serverTimestamp)
+	public class MailMessageUtil
 	{
-		if (serverTimestamp == 0)
+		public static long GetTimestamp(long sendTimestamp, long serverTimestamp)
 		{
-			return sendTimestamp;
+			if (serverTimestamp == 0)
+			{
+				return sendTimestamp;
+			}
+			return serverTimestamp;
 		}
-		return serverTimestamp;
 	}
 }

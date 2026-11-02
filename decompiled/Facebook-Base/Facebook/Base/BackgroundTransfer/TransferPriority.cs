@@ -1,7 +1,8 @@
-namespace Facebook.Base.BackgroundTransfer;
-
-public enum TransferPriority
+namespace Facebook.Base.BackgroundTransfer
 {
-	Default,
-	High
+	public enum TransferPriority
+	{
+		Default,
+		High
+	}
 }

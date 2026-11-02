@@ -5,49 +5,53 @@ using System.Windows;
 using System.Windows.Data;
 using System.Windows.Media.Imaging;
 
-namespace ImageTools.Controls;
-
-public class ImageConverter : IValueConverter
+namespace ImageTools.Controls
 {
-	public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+	public class ImageConverter : IValueConverter
 	{
-		object unsetValue = DependencyProperty.UnsetValue;
-		if (value != null)
+		public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
 		{
-			Uri uri = value as Uri;
-			if (uri != null)
+			object unsetValue = DependencyProperty.UnsetValue;
+			if (value != null)
 			{
-				ExtendedImage extendedImage = new ExtendedImage();
-				extendedImage.UriSource = uri;
-				return extendedImage;
+				Uri uri = value as Uri;
+				if (uri != null)
+				{
+					ExtendedImage extendedImage = new ExtendedImage();
+					extendedImage.UriSource = uri;
+					return extendedImage;
+				}
+				string text = value as string;
+				if (text != null)
+				{
+					ExtendedImage extendedImage2 = new ExtendedImage();
+					extendedImage2.UriSource = new Uri(text, UriKind.RelativeOrAbsolute);
+					return extendedImage2;
+				}
+				Stream stream = value as Stream;
+				if (stream != null)
+				{
+					ExtendedImage extendedImage3 = new ExtendedImage();
+					extendedImage3.SetSource(stream);
+					return extendedImage3;
+				}
+				WriteableBitmap val = (WriteableBitmap)((value is WriteableBitmap) ? value : null);
+				if (val != null)
+				{
+					return val.ToImage();
+				}
+				ExtendedImage extendedImage4 = value as ExtendedImage;
+				if (extendedImage4 != null)
+				{
+					return extendedImage4;
+				}
 			}
-			if (value is string uriString)
-			{
-				ExtendedImage extendedImage2 = new ExtendedImage();
-				extendedImage2.UriSource = new Uri(uriString, UriKind.RelativeOrAbsolute);
-				return extendedImage2;
-			}
-			if (value is Stream source)
-			{
-				ExtendedImage extendedImage3 = new ExtendedImage();
-				extendedImage3.SetSource(source);
-				return extendedImage3;
-			}
-			WriteableBitmap val = (WriteableBitmap)((value is WriteableBitmap) ? value : null);
-			if (val != null)
-			{
-				return val.ToImage();
-			}
-			if (value is ExtendedImage result)
-			{
-				return result;
-			}
+			return unsetValue;
 		}
-		return unsetValue;
-	}
 
-	public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
-	{
-		throw new NotSupportedException();
+		public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+		{
+			throw new NotSupportedException();
+		}
 	}
 }

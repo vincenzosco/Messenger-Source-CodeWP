@@ -5,213 +5,215 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using Facebook.Services.Api.Cache;
 
-namespace Facebook.Messenger.WP8.Extensions;
-
-public class ImageCacheExtensions
+namespace Facebook.Messenger.WP8.Extensions
 {
-	private static readonly Uri BlankUri = new Uri(string.Empty, UriKind.Relative);
-
-	private static readonly ImageCache ImageCache = new ImageCache();
-
-	public static readonly DependencyProperty ImageUriProperty = DependencyProperty.RegisterAttached("ImageUri", typeof(Uri), typeof(ImageCacheExtensions), new PropertyMetadata((object)null, (PropertyChangedCallback)OnImageUriChanged));
-
-	public static readonly DependencyProperty PlaceholderUriProperty = DependencyProperty.RegisterAttached("PlaceholderUri", typeof(Uri), typeof(ImageCacheExtensions), new PropertyMetadata((object)null, (PropertyChangedCallback)OnPlaceHolderChanged));
-
-	public static readonly DependencyProperty ClearExistingImageProperty = DependencyProperty.RegisterAttached("ClearExistingImageProperty", typeof(bool), typeof(ImageCacheExtensions), new PropertyMetadata((object)true));
-
-	public static readonly DependencyProperty ImageLoadedHandlerProperty = DependencyProperty.RegisterAttached("ImageLoadedHandlerProperty", typeof(WeakReference<Action<BitmapImage>>), typeof(ImageCacheExtensions), new PropertyMetadata((PropertyChangedCallback)null));
-
-	internal static readonly DependencyProperty FetchingEntryProperty = DependencyProperty.RegisterAttached("FetchingEntryProperty", typeof(WeakReference<ImageFetchingEntry>), typeof(ImageCacheExtensions), new PropertyMetadata((PropertyChangedCallback)null));
-
-	public static ICache Cache => ImageCache;
-
-	public static Uri GetImageUri(FrameworkElement obj)
+	public class ImageCacheExtensions
 	{
-		return (Uri)((DependencyObject)obj).GetValue(ImageUriProperty);
-	}
+		private static readonly Uri BlankUri = new Uri(string.Empty, UriKind.Relative);
 
-	public static void SetImageUri(FrameworkElement obj, Uri value, bool clearExistingImage = true)
-	{
-		((DependencyObject)obj).SetValue(ClearExistingImageProperty, (object)clearExistingImage);
-		((DependencyObject)obj).SetValue(ImageUriProperty, (object)value);
-	}
+		private static readonly ImageCache ImageCache = new ImageCache();
 
-	public static Uri GetPlaceholderUri(FrameworkElement obj)
-	{
-		return (Uri)((DependencyObject)obj).GetValue(PlaceholderUriProperty);
-	}
+		public static readonly DependencyProperty ImageUriProperty = DependencyProperty.RegisterAttached("ImageUri", typeof(Uri), typeof(ImageCacheExtensions), new PropertyMetadata((object)null, (PropertyChangedCallback)OnImageUriChanged));
 
-	public static void SetPlaceholderUri(FrameworkElement obj, Uri value)
-	{
-		((DependencyObject)obj).SetValue(PlaceholderUriProperty, (object)value);
-	}
+		public static readonly DependencyProperty PlaceholderUriProperty = DependencyProperty.RegisterAttached("PlaceholderUri", typeof(Uri), typeof(ImageCacheExtensions), new PropertyMetadata((object)null, (PropertyChangedCallback)OnPlaceHolderChanged));
 
-	public static Action<BitmapImage> GetImageLoadedHandler(FrameworkElement obj)
-	{
-		WeakReference<Action<BitmapImage>> weakReference = (WeakReference<Action<BitmapImage>>)((DependencyObject)obj).GetValue(ImageLoadedHandlerProperty);
-		if (weakReference == null)
+		public static readonly DependencyProperty ClearExistingImageProperty = DependencyProperty.RegisterAttached("ClearExistingImageProperty", typeof(bool), typeof(ImageCacheExtensions), new PropertyMetadata((object)true));
+
+		public static readonly DependencyProperty ImageLoadedHandlerProperty = DependencyProperty.RegisterAttached("ImageLoadedHandlerProperty", typeof(WeakReference<Action<BitmapImage>>), typeof(ImageCacheExtensions), new PropertyMetadata((PropertyChangedCallback)null));
+
+		internal static readonly DependencyProperty FetchingEntryProperty = DependencyProperty.RegisterAttached("FetchingEntryProperty", typeof(WeakReference<ImageFetchingEntry>), typeof(ImageCacheExtensions), new PropertyMetadata((PropertyChangedCallback)null));
+
+		public static ICache Cache => ImageCache;
+
+		public static Uri GetImageUri(FrameworkElement obj)
 		{
-			return null;
+			return (Uri)((DependencyObject)obj).GetValue(ImageUriProperty);
 		}
-		Action<BitmapImage> target = null;
-		weakReference.TryGetTarget(out target);
-		return target;
-	}
 
-	public static void SetImageLoadedHandler(FrameworkElement obj, Action<BitmapImage> handler)
-	{
-		((DependencyObject)obj).SetValue(ImageLoadedHandlerProperty, (object)new WeakReference<Action<BitmapImage>>(handler));
-	}
-
-	internal static WeakReference<ImageFetchingEntry> GetFetchEntry(FrameworkElement obj)
-	{
-		return (WeakReference<ImageFetchingEntry>)((DependencyObject)obj).GetValue(FetchingEntryProperty);
-	}
-
-	internal static void SetFetchEntry(FrameworkElement obj, ImageFetchingEntry entry)
-	{
-		((DependencyObject)obj).SetValue(FetchingEntryProperty, (object)new WeakReference<ImageFetchingEntry>(entry));
-	}
-
-	private static void OnImageUriChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
-	{
-		if (e.NewValue != null && e.OldValue != null && e.NewValue.Equals(e.OldValue))
+		public static void SetImageUri(FrameworkElement obj, Uri value, bool clearExistingImage = true)
 		{
-			return;
+			((DependencyObject)obj).SetValue(ClearExistingImageProperty, (object)clearExistingImage);
+			((DependencyObject)obj).SetValue(ImageUriProperty, (object)value);
 		}
-		bool flag = (bool)d.GetValue(ClearExistingImageProperty);
-		Uri uri = e.NewValue as Uri;
-		Image val = (Image)(object)((d is Image) ? d : null);
-		if (val == null)
+
+		public static Uri GetPlaceholderUri(FrameworkElement obj)
 		{
-			return;
+			return (Uri)((DependencyObject)obj).GetValue(PlaceholderUriProperty);
 		}
-		if (flag)
+
+		public static void SetPlaceholderUri(FrameworkElement obj, Uri value)
 		{
-			ImageSource source = val.Source;
-			BitmapImage val2 = (BitmapImage)(object)((source is BitmapImage) ? source : null);
-			if (val2 != null)
+			((DependencyObject)obj).SetValue(PlaceholderUriProperty, (object)value);
+		}
+
+		public static Action<BitmapImage> GetImageLoadedHandler(FrameworkElement obj)
+		{
+			WeakReference<Action<BitmapImage>> weakReference = (WeakReference<Action<BitmapImage>>)((DependencyObject)obj).GetValue(ImageLoadedHandlerProperty);
+			if (weakReference == null)
 			{
-				val2.UriSource = null;
+				return null;
 			}
-			val.Source = null;
+			Action<BitmapImage> target = null;
+			weakReference.TryGetTarget(out target);
+			return target;
 		}
-		if (uri == null)
-		{
-			ImageCache.CancelExistingRequest(val);
-			LoadPlaceHolder(val, GetPlaceholderUri((FrameworkElement)(object)val));
-			return;
-		}
-		if (flag)
-		{
-			LoadPlaceHolder(val, GetPlaceholderUri((FrameworkElement)(object)val));
-		}
-		if (IsLocalUri(uri))
-		{
-			SetLocalBitmap(val, uri, isPlaceholder: false);
-		}
-		else
-		{
-			ImageCache.LoadMedia(uri, val);
-		}
-	}
 
-	private static void OnPlaceHolderChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
-	{
-		Uri uri = e.NewValue as Uri;
-		Image image = (Image)(object)((d is Image) ? d : null);
-		LoadPlaceHolder(image, uri);
-	}
+		public static void SetImageLoadedHandler(FrameworkElement obj, Action<BitmapImage> handler)
+		{
+			((DependencyObject)obj).SetValue(ImageLoadedHandlerProperty, (object)new WeakReference<Action<BitmapImage>>(handler));
+		}
 
-	private static void LoadPlaceHolder(Image image, Uri uri)
-	{
-		if (uri == null)
+		internal static WeakReference<ImageFetchingEntry> GetFetchEntry(FrameworkElement obj)
 		{
-			return;
+			return (WeakReference<ImageFetchingEntry>)((DependencyObject)obj).GetValue(FetchingEntryProperty);
 		}
-		ImageSource source = image.Source;
-		BitmapImage val = (BitmapImage)(object)((source is BitmapImage) ? source : null);
-		Uri imageUri = GetImageUri((FrameworkElement)(object)image);
-		if (val == null)
+
+		internal static void SetFetchEntry(FrameworkElement obj, ImageFetchingEntry entry)
 		{
-			SetLocalBitmap(image, uri, isPlaceholder: true);
+			((DependencyObject)obj).SetValue(FetchingEntryProperty, (object)new WeakReference<ImageFetchingEntry>(entry));
 		}
-		else if (val.UriSource != null && val.UriSource != BlankUri)
+
+		private static void OnImageUriChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
 		{
-			bool flag = val.UriSource == uri;
-			if (!(imageUri == val.UriSource) && !flag)
+			if (e.NewValue != null && e.OldValue != null && e.NewValue.Equals(e.OldValue))
 			{
-				SetLocalBitmap(image, uri, isPlaceholder: true);
+				return;
+			}
+			bool flag = (bool)d.GetValue(ClearExistingImageProperty);
+			Uri uri = e.NewValue as Uri;
+			Image val = (Image)(object)((d is Image) ? d : null);
+			if (val == null)
+			{
+				return;
+			}
+			if (flag)
+			{
+				ImageSource source = val.Source;
+				BitmapImage val2 = (BitmapImage)(object)((source is BitmapImage) ? source : null);
+				if (val2 != null)
+				{
+					val2.UriSource = null;
+				}
+				val.Source = null;
+			}
+			if (uri == null)
+			{
+				ImageCache.CancelExistingRequest(val);
+				LoadPlaceHolder(val, GetPlaceholderUri((FrameworkElement)(object)val));
+				return;
+			}
+			if (flag)
+			{
+				LoadPlaceHolder(val, GetPlaceholderUri((FrameworkElement)(object)val));
+			}
+			if (IsLocalUri(uri))
+			{
+				SetLocalBitmap(val, uri, false);
+			}
+			else
+			{
+				ImageCache.LoadMedia(uri, val);
 			}
 		}
-	}
 
-	private static void SetLocalBitmap(Image image, Uri uri, bool isPlaceholder)
-	{
-		//IL_0000: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0007: Expected Obj, but got Unknown
-		BitmapImage val = new BitmapImage();
-		val.CreateOptions = (BitmapCreateOptions)18;
-		val.UriSource = uri;
-		BitmapImage source = val;
-		ImageSource source2 = image.Source;
-		BitmapImage val2 = (BitmapImage)(object)((source2 is BitmapImage) ? source2 : null);
-		Uri imageUri = GetImageUri((FrameworkElement)(object)image);
-		if (val2 == null)
+		private static void OnPlaceHolderChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
 		{
-			image.Source = (ImageSource)(object)source;
+			Uri uri = e.NewValue as Uri;
+			Image image = (Image)(object)((d is Image) ? d : null);
+			LoadPlaceHolder(image, uri);
 		}
-		else if (isPlaceholder)
+
+		private static void LoadPlaceHolder(Image image, Uri uri)
 		{
-			bool flag = val2.UriSource == uri;
-			if (!(val2.UriSource == imageUri) && !flag)
+			if (uri == null)
+			{
+				return;
+			}
+			ImageSource source = image.Source;
+			BitmapImage val = (BitmapImage)(object)((source is BitmapImage) ? source : null);
+			Uri imageUri = GetImageUri((FrameworkElement)(object)image);
+			if (val == null)
+			{
+				SetLocalBitmap(image, uri, true);
+			}
+			else if (val.UriSource != null && val.UriSource != BlankUri)
+			{
+				bool flag = val.UriSource == uri;
+				if (!(imageUri == val.UriSource) && !flag)
+				{
+					SetLocalBitmap(image, uri, true);
+				}
+			}
+		}
+
+		private static void SetLocalBitmap(Image image, Uri uri, bool isPlaceholder)
+		{
+			//IL_0000: Unknown result type (might be due to invalid IL or missing references)
+			//IL_0007: Expected Obj, but got Unknown
+			BitmapImage val = new BitmapImage();
+			val.CreateOptions = (BitmapCreateOptions)18;
+			val.UriSource = uri;
+			BitmapImage source = val;
+			ImageSource source2 = image.Source;
+			BitmapImage val2 = (BitmapImage)(object)((source2 is BitmapImage) ? source2 : null);
+			Uri imageUri = GetImageUri((FrameworkElement)(object)image);
+			if (val2 == null)
+			{
+				image.Source = (ImageSource)(object)source;
+			}
+			else if (isPlaceholder)
+			{
+				bool flag = val2.UriSource == uri;
+				if (!(val2.UriSource == imageUri) && !flag)
+				{
+					image.Source = (ImageSource)(object)source;
+				}
+			}
+			else if (uri == imageUri && imageUri != val2.UriSource)
 			{
 				image.Source = (ImageSource)(object)source;
 			}
 		}
-		else if (uri == imageUri && imageUri != val2.UriSource)
-		{
-			image.Source = (ImageSource)(object)source;
-		}
-	}
 
-	public static bool IsLocalUri(Uri uri)
-	{
-		string text = uri.ToString();
-		if (!text.StartsWith("/Assets", StringComparison.CurrentCultureIgnoreCase))
+		public static bool IsLocalUri(Uri uri)
 		{
-			if (uri.IsAbsoluteUri)
+			string text = uri.ToString();
+			if (!text.StartsWith("/Assets", StringComparison.CurrentCultureIgnoreCase))
 			{
-				return uri.IsFile;
+				if (uri.IsAbsoluteUri)
+				{
+					return uri.IsFile;
+				}
+				return false;
 			}
-			return false;
+			return true;
 		}
-		return true;
-	}
 
-	public static void PrefetchImage(string url)
-	{
-		if (Uri.TryCreate(url, UriKind.RelativeOrAbsolute, out var result))
+		public static void PrefetchImage(string url)
 		{
-			ImageCache.LoadMedia(result, null);
+			Uri result;
+			if (Uri.TryCreate(url, UriKind.RelativeOrAbsolute, out result))
+			{
+				ImageCache.LoadMedia(result, null);
+			}
 		}
-	}
 
-	static ImageCacheExtensions()
-	{
-		//IL_003b: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0045: Expected Obj, but got Unknown
-		//IL_0040: Unknown result type (might be due to invalid IL or missing references)
-		//IL_004a: Expected Obj, but got Unknown
-		//IL_0070: Unknown result type (might be due to invalid IL or missing references)
-		//IL_007a: Expected Obj, but got Unknown
-		//IL_0075: Unknown result type (might be due to invalid IL or missing references)
-		//IL_007f: Expected Obj, but got Unknown
-		//IL_00a3: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00ad: Expected Obj, but got Unknown
-		//IL_00cc: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00d6: Expected Obj, but got Unknown
-		//IL_00f5: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00ff: Expected Obj, but got Unknown
+		static ImageCacheExtensions()
+		{
+			//IL_003b: Unknown result type (might be due to invalid IL or missing references)
+			//IL_0045: Expected Obj, but got Unknown
+			//IL_0040: Unknown result type (might be due to invalid IL or missing references)
+			//IL_004a: Expected Obj, but got Unknown
+			//IL_0070: Unknown result type (might be due to invalid IL or missing references)
+			//IL_007a: Expected Obj, but got Unknown
+			//IL_0075: Unknown result type (might be due to invalid IL or missing references)
+			//IL_007f: Expected Obj, but got Unknown
+			//IL_00a3: Unknown result type (might be due to invalid IL or missing references)
+			//IL_00ad: Expected Obj, but got Unknown
+			//IL_00cc: Unknown result type (might be due to invalid IL or missing references)
+			//IL_00d6: Expected Obj, but got Unknown
+			//IL_00f5: Unknown result type (might be due to invalid IL or missing references)
+			//IL_00ff: Expected Obj, but got Unknown
+		}
 	}
 }

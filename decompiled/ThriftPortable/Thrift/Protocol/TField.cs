@@ -1,54 +1,55 @@
-namespace Thrift.Protocol;
-
-public struct TField
+namespace Thrift.Protocol
 {
-	private string name;
-
-	private TType type;
-
-	private short id;
-
-	public string Name
+	public struct TField
 	{
-		get
-		{
-			return name;
-		}
-		set
-		{
-			name = value;
-		}
-	}
+		private string name;
 
-	public TType Type
-	{
-		get
-		{
-			return type;
-		}
-		set
-		{
-			type = value;
-		}
-	}
+		private TType type;
 
-	public short ID
-	{
-		get
-		{
-			return id;
-		}
-		set
-		{
-			id = value;
-		}
-	}
+		private short id;
 
-	public TField(string name, TType type, short id)
-	{
-		this = default;
-		this.name = name;
-		this.type = type;
-		this.id = id;
+		public string Name
+		{
+			get
+			{
+				return name;
+			}
+			set
+			{
+				name = value;
+			}
+		}
+
+		public TType Type
+		{
+			get
+			{
+				return type;
+			}
+			set
+			{
+				type = value;
+			}
+		}
+
+		public short ID
+		{
+			get
+			{
+				return id;
+			}
+			set
+			{
+				id = value;
+			}
+		}
+
+		public TField(string name, TType type, short id)
+		{
+			this = default(TField);
+			this.name = name;
+			this.type = type;
+			this.id = id;
+		}
 	}
 }

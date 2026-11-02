@@ -1,14 +1,15 @@
 using System;
 
-namespace Facebook.Services.Api;
-
-[AttributeUsage(AttributeTargets.Class | AttributeTargets.Struct)]
-public class QueueAttribute : Attribute
+namespace Facebook.Services.Api
 {
-	public QueueType QueueType { get; set; }
-
-	public QueueAttribute(QueueType type)
+	[AttributeUsage(AttributeTargets.Class | AttributeTargets.Struct)]
+	public class QueueAttribute : Attribute
 	{
-		QueueType = type;
+		public QueueType QueueType { get; set; }
+
+		public QueueAttribute(QueueType type)
+		{
+			QueueType = type;
+		}
 	}
 }

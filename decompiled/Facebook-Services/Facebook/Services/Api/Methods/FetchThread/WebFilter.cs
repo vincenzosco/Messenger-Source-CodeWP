@@ -7,68 +7,77 @@ using Facebook.Services.Api.Attributes;
 using Facebook.Services.Api.Fql;
 using Facebook.Services.Http;
 
-namespace Facebook.Services.Api.Methods.FetchThread;
-
-[Bundle(BundleType.Web, typeof(Request), typeof(Response))]
-public class WebFilter : FacebookApiFilter<Request, Response>
+namespace Facebook.Services.Api.Methods.FetchThread
 {
-	public WebFilter(ServiceContext context)
-		: base(context)
+	[Bundle(BundleType.Web, typeof(Request), typeof(Response))]
+	public class WebFilter : FacebookApiFilter<Request, Response>
 	{
-	}
+		public WebFilter(ServiceContext context)
+			: base(context)
+		{
+		}
 
-	public override async Task<Response> ExecuteAsync(Request request, IHandler next)
-	{
-		string query = request.KeyType switch
+		public override async Task<Response> ExecuteAsync(Request request, IHandler next)
 		{
-			Request.RequestKeyType.Recipient => UnifiedThread.GetThreadByRecipient(request.RecipientId), 
-			Request.RequestKeyType.ThreadFbid => UnifiedThread.GetThreadByFbid(request.ThreadFbid), 
-			Request.RequestKeyType.ThreadId => UnifiedThread.GetThreadById(request.ThreadId), 
-			_ => throw new NotImplementedException(), 
-		};
-		Facebook.Services.Http.Request http = CreateGraphRequest(request, "fql").AddParam("q", query);
-		Facebook.Services.Http.Response response = await ExecuteHttpRequest(http);
-		if (response.HasError())
-		{
-			Response response2 = new Response();
-			response2.Error = response.Error;
-			return response2;
-		}
-		Dictionary<string, Type> mapping = new Dictionary<string, Type>
-		{
+			string query;
+			switch (request.KeyType)
 			{
-				"threads",
-				typeof(MailThread)
-			},
-			{
-				"users",
-				typeof(FacebookUser)
-			},
-			{
-				"me",
-				typeof(FacebookProfile)
+			case Request.RequestKeyType.Recipient:
+				query = UnifiedThread.GetThreadByRecipient(request.RecipientId);
+				break;
+			case Request.RequestKeyType.ThreadFbid:
+				query = UnifiedThread.GetThreadByFbid(request.ThreadFbid);
+				break;
+			case Request.RequestKeyType.ThreadId:
+				query = UnifiedThread.GetThreadById(request.ThreadId);
+				break;
+			default:
+				throw new NotImplementedException();
 			}
-		};
-		MultiQueryResponse fql = Facebook.Services.Api.Fql.Common.ParseMulti(mapping, response.DataAsString());
-		if (fql.HasError())
-		{
-			Response response3 = new Response();
-			response3.Error = fql.Error;
-			return response3;
+			Facebook.Services.Http.Request http = CreateGraphRequest(request, "fql").AddParam("q", query);
+			Facebook.Services.Http.Response response = await ExecuteHttpRequest(http);
+			if (response.HasError())
+			{
+				Response response2 = new Response();
+				response2.Error = response.Error;
+				return response2;
+			}
+			Dictionary<string, Type> mapping = new Dictionary<string, Type>
+			{
+				{
+					"threads",
+					typeof(MailThread)
+				},
+				{
+					"users",
+					typeof(FacebookUser)
+				},
+				{
+					"me",
+					typeof(FacebookProfile)
+				}
+			};
+			MultiQueryResponse fql = Facebook.Services.Api.Fql.Common.ParseMulti(mapping, response.DataAsString());
+			if (fql.HasError())
+			{
+				Response response3 = new Response();
+				response3.Error = fql.Error;
+				return response3;
+			}
+			List<FacebookUser> users = fql.Get<FacebookUser>("users");
+			List<MailThread> threads = fql.Get<MailThread>("threads");
+			List<FacebookProfile> me = fql.Get<FacebookProfile>("me");
+			Dictionary<string, FacebookUser> userMap = ParseUtils.CreateIdMap(users);
+			foreach (MailThread item in threads)
+			{
+				ParseUtils.PatchUsers(item.FormerParticipants, userMap);
+				ParseUtils.PatchUsers(item.Participants, userMap);
+				ParseUtils.UpdateMuteUntil(item, me);
+			}
+			return new Response
+			{
+				Thread = threads.FirstOrDefault()
+			};
 		}
-		List<FacebookUser> users = fql.Get<FacebookUser>("users");
-		List<MailThread> threads = fql.Get<MailThread>("threads");
-		List<FacebookProfile> me = fql.Get<FacebookProfile>("me");
-		Dictionary<string, FacebookUser> userMap = ParseUtils.CreateIdMap(users);
-		foreach (MailThread item in threads)
-		{
-			ParseUtils.PatchUsers(item.FormerParticipants, userMap);
-			ParseUtils.PatchUsers(item.Participants, userMap);
-			ParseUtils.UpdateMuteUntil(item, me);
-		}
-		return new Response
-		{
-			Thread = threads.FirstOrDefault()
-		};
 	}
 }

@@ -1,7 +1,8 @@
-namespace Facebook.Services.Api.Methods.ReportCrash;
-
-[Queue(QueueType.Web)]
-public class Request : FacebookServiceRequest
+namespace Facebook.Services.Api.Methods.ReportCrash
 {
-	public string Payload { get; set; }
+	[Queue(QueueType.Web)]
+	public class Request : FacebookServiceRequest
+	{
+		public string Payload { get; set; }
+	}
 }

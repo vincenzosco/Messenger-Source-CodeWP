@@ -1,13 +1,14 @@
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 
-namespace Facebook.Models;
-
-[JsonObject(MemberSerialization.OptIn)]
-[DataContract]
-public class GroupVisibility
+namespace Facebook.Models
 {
-	[JsonProperty("text")]
-	[DataMember]
-	public string Text { get; set; }
+	[JsonObject(MemberSerialization.OptIn)]
+	[DataContract]
+	public class GroupVisibility
+	{
+		[JsonProperty("text")]
+		[DataMember]
+		public string Text { get; set; }
+	}
 }

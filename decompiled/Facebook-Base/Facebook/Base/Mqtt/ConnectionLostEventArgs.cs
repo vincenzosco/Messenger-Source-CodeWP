@@ -1,12 +1,13 @@
-namespace Facebook.Base.Mqtt;
-
-public class ConnectionLostEventArgs : StateChangedEventArgs
+namespace Facebook.Base.Mqtt
 {
-	public readonly string Message;
-
-	public ConnectionLostEventArgs(string message)
-		: base(ClientState.Disconnected)
+	public class ConnectionLostEventArgs : StateChangedEventArgs
 	{
-		Message = message;
+		public readonly string Message;
+
+		public ConnectionLostEventArgs(string message)
+			: base(ClientState.Disconnected)
+		{
+			Message = message;
+		}
 	}
 }

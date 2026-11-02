@@ -1,11 +1,12 @@
 using Newtonsoft.Json;
 
-namespace Facebook.Services.Api.Methods.FetchInitialThreadListSyncData;
-
-[JsonConverter(typeof(InitialThreadListConverter))]
-public class Response : FacebookApiResponse
+namespace Facebook.Services.Api.Methods.FetchInitialThreadListSyncData
 {
-	public int Count { get; set; }
+	[JsonConverter(typeof(InitialThreadListConverter))]
+	public class Response : FacebookApiResponse
+	{
+		public int Count { get; set; }
 
-	public int SyncSequenceId { get; set; }
+		public int SyncSequenceId { get; set; }
+	}
 }

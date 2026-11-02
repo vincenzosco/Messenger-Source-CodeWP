@@ -1,7 +1,8 @@
-namespace Facebook.Messenger.WP8.ViewModels;
-
-public enum ConnectionBannerType
+namespace Facebook.Messenger.WP8.ViewModels
 {
-	None,
-	Colored
+	public enum ConnectionBannerType
+	{
+		None,
+		Colored
+	}
 }

@@ -1,6 +1,7 @@
-namespace Facebook.Models;
-
-public interface IEventType
+namespace Facebook.Models
 {
-	EventType EventType { get; set; }
+	public interface IEventType
+	{
+		EventType EventType { get; set; }
+	}
 }

@@ -1,6 +1,7 @@
-namespace Facebook.Models;
-
-public class EventMemberChangedSignal
+namespace Facebook.Models
 {
-	public string Id;
+	public class EventMemberChangedSignal
+	{
+		public string Id;
+	}
 }

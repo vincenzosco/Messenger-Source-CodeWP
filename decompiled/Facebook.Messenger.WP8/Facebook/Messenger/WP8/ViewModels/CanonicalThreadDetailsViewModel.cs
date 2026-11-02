@@ -8,64 +8,65 @@ using Facebook.Models;
 using Facebook.Services.Api;
 using GalaSoft.MvvmLight.Command;
 
-namespace Facebook.Messenger.WP8.ViewModels;
-
-public class CanonicalThreadDetailsViewModel : BaseThreadDetailsViewModel
+namespace Facebook.Messenger.WP8.ViewModels
 {
-	public const string LastActiveTextParameter = "last_active_text";
-
-	private string _lastActiveText;
-
-	private RelayCommand _launchTimelineCommand;
-
-	private RelayCommand _startGroupConversationWithRecipientCommand;
-
-	public string LastActiveText
+	public class CanonicalThreadDetailsViewModel : BaseThreadDetailsViewModel
 	{
-		get
+		public const string LastActiveTextParameter = "last_active_text";
+
+		private string _lastActiveText;
+
+		private RelayCommand _launchTimelineCommand;
+
+		private RelayCommand _startGroupConversationWithRecipientCommand;
+
+		public string LastActiveText
 		{
-			return _lastActiveText;
+			get
+			{
+				return _lastActiveText;
+			}
+			set
+			{
+				Set(ref _lastActiveText, value, false, "LastActiveText");
+			}
 		}
-		set
+
+		public RelayCommand LaunchTimelineCommand => _launchTimelineCommand ?? (_launchTimelineCommand = new RelayCommand(ExecuteLaunchTimelineCommand));
+
+		public RelayCommand StartGroupConversationWithRecipientCommand => _startGroupConversationWithRecipientCommand ?? (_startGroupConversationWithRecipientCommand = new RelayCommand(ExecuteStartGroupConversationWithRecipientCommand));
+
+		public CanonicalThreadDetailsViewModel(Facebook.Services.Api.Service apiService, FacebookContext context, Navigator navigator, IDispatcher dispatcher, INetworkStatus networkStatus)
+			: base(apiService, context, navigator, dispatcher, networkStatus)
 		{
-			Set(ref _lastActiveText, value, broadcast: false, "LastActiveText");
 		}
-	}
 
-	public RelayCommand LaunchTimelineCommand => _launchTimelineCommand ?? (_launchTimelineCommand = new RelayCommand(ExecuteLaunchTimelineCommand));
-
-	public RelayCommand StartGroupConversationWithRecipientCommand => _startGroupConversationWithRecipientCommand ?? (_startGroupConversationWithRecipientCommand = new RelayCommand(ExecuteStartGroupConversationWithRecipientCommand));
-
-	public CanonicalThreadDetailsViewModel(Facebook.Services.Api.Service apiService, FacebookContext context, Navigator navigator, IDispatcher dispatcher, INetworkStatus networkStatus)
-		: base(apiService, context, navigator, dispatcher, networkStatus)
-	{
-	}
-
-	private void ExecuteLaunchTimelineCommand()
-	{
-		bool isPartial = Thread.CanonicalParticipant.IsPartial;
-		if (!IsPartialUser && !isPartial)
+		private void ExecuteLaunchTimelineCommand()
 		{
-			FacebookAppDeepLinkUtil.LaunchProfile(Thread.SingleRecipient);
+			bool isPartial = Thread.CanonicalParticipant.IsPartial;
+			if (!IsPartialUser && !isPartial)
+			{
+				FacebookAppDeepLinkUtil.LaunchProfile(Thread.SingleRecipient);
+			}
 		}
-	}
 
-	private void ExecuteStartGroupConversationWithRecipientCommand()
-	{
-		FacebookUri composerUri = FacebookUri.GetComposerUri(null, fromExternal: false, Thread.SingleRecipient, Thread.CanonicalParticipant.Name);
-		Navigator.Navigate(composerUri);
-	}
-
-	public override void SetPath(Uri uri)
-	{
-		base.SetPath(uri);
-		if (PathUri.Params.ContainsKey("last_active_text"))
+		private void ExecuteStartGroupConversationWithRecipientCommand()
 		{
-			LastActiveText = PathUri.Params["last_active_text"];
+			FacebookUri composerUri = FacebookUri.GetComposerUri(null, false, Thread.SingleRecipient, Thread.CanonicalParticipant.Name);
+			Navigator.Navigate(composerUri);
 		}
-	}
 
-	protected override void OnThreadUpdated()
-	{
+		public override void SetPath(Uri uri)
+		{
+			base.SetPath(uri);
+			if (PathUri.Params.ContainsKey("last_active_text"))
+			{
+				LastActiveText = PathUri.Params["last_active_text"];
+			}
+		}
+
+		protected override void OnThreadUpdated()
+		{
+		}
 	}
 }

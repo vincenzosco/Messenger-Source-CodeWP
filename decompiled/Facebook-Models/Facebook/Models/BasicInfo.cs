@@ -1,26 +1,27 @@
-namespace Facebook.Models;
-
-public class BasicInfo : IAboutType
+namespace Facebook.Models
 {
-	public string Birthdate { get; set; }
-
-	public string InterestedIn { get; set; }
-
-	public string Gender { get; set; }
-
-	public string Language { get; set; }
-
-	public AboutType Type => AboutType.BasicInfo;
-
-	public bool IsEmpty
+	public class BasicInfo : IAboutType
 	{
-		get
+		public string Birthdate { get; set; }
+
+		public string InterestedIn { get; set; }
+
+		public string Gender { get; set; }
+
+		public string Language { get; set; }
+
+		public AboutType Type => AboutType.BasicInfo;
+
+		public bool IsEmpty
 		{
-			if (string.IsNullOrWhiteSpace(Birthdate) && string.IsNullOrWhiteSpace(InterestedIn) && string.IsNullOrWhiteSpace(Gender))
+			get
 			{
-				return string.IsNullOrWhiteSpace(Language);
+				if (string.IsNullOrWhiteSpace(Birthdate) && string.IsNullOrWhiteSpace(InterestedIn) && string.IsNullOrWhiteSpace(Gender))
+				{
+					return string.IsNullOrWhiteSpace(Language);
+				}
+				return false;
 			}
-			return false;
 		}
 	}
 }

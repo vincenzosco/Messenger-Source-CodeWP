@@ -1,13 +1,14 @@
-namespace Facebook.Base.BackgroundTransfer;
-
-public enum BackgroundTransferStatus
+namespace Facebook.Base.BackgroundTransfer
 {
-	Idle,
-	Running,
-	PausedByApplication,
-	PausedCostedNetwork,
-	PausedNoNetwork,
-	Completed,
-	Canceled,
-	Error
+	public enum BackgroundTransferStatus
+	{
+		Idle,
+		Running,
+		PausedByApplication,
+		PausedCostedNetwork,
+		PausedNoNetwork,
+		Completed,
+		Canceled,
+		Error
+	}
 }

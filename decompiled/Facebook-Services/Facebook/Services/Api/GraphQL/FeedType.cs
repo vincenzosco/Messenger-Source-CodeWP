@@ -1,12 +1,13 @@
-namespace Facebook.Services.Api.GraphQL;
-
-public enum FeedType
+namespace Facebook.Services.Api.GraphQL
 {
-	Unknown,
-	NewsFeed,
-	Timeline,
-	Group,
-	PinnedGroup,
-	Event,
-	PinnedEvent
+	public enum FeedType
+	{
+		Unknown,
+		NewsFeed,
+		Timeline,
+		Group,
+		PinnedGroup,
+		Event,
+		PinnedEvent
+	}
 }

@@ -3,75 +3,76 @@ using System.Runtime.Serialization;
 using Facebook.Base;
 using Newtonsoft.Json;
 
-namespace Facebook.Models;
-
-[JsonObject(MemberSerialization.OptIn)]
-[DataContract]
-public class FacebookPlace
+namespace Facebook.Models
 {
-	[DataMember]
-	[JsonProperty(PropertyName = "page_id")]
-	public string PageId { get; set; }
-
-	[JsonProperty(PropertyName = "target_id")]
-	[DataMember]
-	public string TargetId
+	[JsonObject(MemberSerialization.OptIn)]
+	[DataContract]
+	public class FacebookPlace
 	{
-		set
+		[DataMember]
+		[JsonProperty(PropertyName = "page_id")]
+		public string PageId { get; set; }
+
+		[JsonProperty(PropertyName = "target_id")]
+		[DataMember]
+		public string TargetId
 		{
-			PageId = value;
+			set
+			{
+				PageId = value;
+			}
 		}
-	}
 
-	[JsonProperty(PropertyName = "name")]
-	[DataMember]
-	public string Name { get; set; }
+		[JsonProperty(PropertyName = "name")]
+		[DataMember]
+		public string Name { get; set; }
 
-	[JsonProperty(PropertyName = "short_name")]
-	[DataMember]
-	public string ShortName { get; set; }
+		[JsonProperty(PropertyName = "short_name")]
+		[DataMember]
+		public string ShortName { get; set; }
 
-	[DataMember]
-	[JsonProperty(PropertyName = "checkin_count")]
-	public int CheckinCount { get; set; }
+		[DataMember]
+		[JsonProperty(PropertyName = "checkin_count")]
+		public int CheckinCount { get; set; }
 
-	[JsonProperty(PropertyName = "latitude")]
-	[DataMember]
-	public string Latitude { get; set; }
+		[JsonProperty(PropertyName = "latitude")]
+		[DataMember]
+		public string Latitude { get; set; }
 
-	[DataMember]
-	[JsonProperty(PropertyName = "longitude")]
-	public string Longitude { get; set; }
+		[DataMember]
+		[JsonProperty(PropertyName = "longitude")]
+		public string Longitude { get; set; }
 
-	[JsonProperty(PropertyName = "pic_square")]
-	[DataMember]
-	public string Pic { get; set; }
+		[JsonProperty(PropertyName = "pic_square")]
+		[DataMember]
+		public string Pic { get; set; }
 
-	[DataMember]
-	[JsonProperty(PropertyName = "display_subtext")]
-	public string DisplaySubtext { get; set; }
+		[DataMember]
+		[JsonProperty(PropertyName = "display_subtext")]
+		public string DisplaySubtext { get; set; }
 
-	public string CountryCode { get; set; }
+		public string CountryCode { get; set; }
 
-	public string State { get; set; }
+		public string State { get; set; }
 
-	public string CreateLocationObject()
-	{
-		StringWriter stringWriter = new StringWriter();
-		JsonTextWriter jsonTextWriter = new JsonTextWriter(stringWriter);
-		jsonTextWriter.WriteStartObject();
-		jsonTextWriter.WriteProperty("latitude", Latitude);
-		jsonTextWriter.WriteProperty("longitude", Longitude);
-		jsonTextWriter.WriteEndObject();
-		return stringWriter.ToString();
-	}
-
-	public bool IsValidLocation()
-	{
-		if (!string.IsNullOrWhiteSpace(Latitude))
+		public string CreateLocationObject()
 		{
-			return !string.IsNullOrWhiteSpace(Longitude);
+			StringWriter stringWriter = new StringWriter();
+			JsonTextWriter jsonTextWriter = new JsonTextWriter(stringWriter);
+			jsonTextWriter.WriteStartObject();
+			jsonTextWriter.WriteProperty("latitude", Latitude);
+			jsonTextWriter.WriteProperty("longitude", Longitude);
+			jsonTextWriter.WriteEndObject();
+			return stringWriter.ToString();
 		}
-		return false;
+
+		public bool IsValidLocation()
+		{
+			if (!string.IsNullOrWhiteSpace(Latitude))
+			{
+				return !string.IsNullOrWhiteSpace(Longitude);
+			}
+			return false;
+		}
 	}
 }

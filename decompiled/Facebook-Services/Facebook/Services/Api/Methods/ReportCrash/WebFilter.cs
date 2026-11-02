@@ -3,26 +3,27 @@ using Facebook.Services.Api.Attributes;
 using Facebook.Services.Common;
 using Facebook.Services.Http;
 
-namespace Facebook.Services.Api.Methods.ReportCrash;
-
-[Bundle(BundleType.Web, typeof(Request), typeof(BoolResponse))]
-internal class WebFilter : FacebookApiFilter<Request, BoolResponse>
+namespace Facebook.Services.Api.Methods.ReportCrash
 {
-	public WebFilter(ServiceContext context)
-		: base(context)
+	[Bundle(BundleType.Web, typeof(Request), typeof(BoolResponse))]
+	internal class WebFilter : FacebookApiFilter<Request, BoolResponse>
 	{
-	}
-
-	public override async Task<BoolResponse> ExecuteAsync(Request request, IHandler next)
-	{
-		Facebook.Services.Http.Request http = new Facebook.Services.Http.Request("https://www.facebook.com/mobile/winphone_messenger_crash_logs");
-		http.SetHttpMethod(Method.Post);
-		http.AddParam("values", request.Payload);
-		http.AddParam("access_token", request.AccessToken);
-		Response response = await ExecuteHttpRequest(http);
-		return new BoolResponse
+		public WebFilter(ServiceContext context)
+			: base(context)
 		{
-			Succeeded = !response.HasError()
-		};
+		}
+
+		public override async Task<BoolResponse> ExecuteAsync(Request request, IHandler next)
+		{
+			Facebook.Services.Http.Request http = new Facebook.Services.Http.Request("https://www.facebook.com/mobile/winphone_messenger_crash_logs");
+			http.SetHttpMethod(Method.Post);
+			http.AddParam("values", request.Payload);
+			http.AddParam("access_token", request.AccessToken);
+			Response response = await ExecuteHttpRequest(http);
+			return new BoolResponse
+			{
+				Succeeded = !response.HasError()
+			};
+		}
 	}
 }

@@ -1,9 +1,10 @@
 using Newtonsoft.Json;
 
-namespace Facebook.Services.Api.Methods.SetPinnedThreads;
-
-public class Response : FacebookApiResponse
+namespace Facebook.Services.Api.Methods.SetPinnedThreads
 {
-	[JsonProperty("updated_time")]
-	public long? UpdatedTime;
+	public class Response : FacebookApiResponse
+	{
+		[JsonProperty("updated_time")]
+		public long? UpdatedTime;
+	}
 }

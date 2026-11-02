@@ -1,11 +1,12 @@
-namespace Facebook.Models.Signals;
-
-public class ChatSettingSignal
+namespace Facebook.Models.Signals
 {
-	public bool IsChatEnabled { get; set; }
-
-	public ChatSettingSignal(bool isChatEnabled)
+	public class ChatSettingSignal
 	{
-		IsChatEnabled = isChatEnabled;
+		public bool IsChatEnabled { get; set; }
+
+		public ChatSettingSignal(bool isChatEnabled)
+		{
+			IsChatEnabled = isChatEnabled;
+		}
 	}
 }

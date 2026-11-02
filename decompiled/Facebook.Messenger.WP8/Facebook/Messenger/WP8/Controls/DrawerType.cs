@@ -1,12 +1,13 @@
-namespace Facebook.Messenger.WP8.Controls;
-
-public enum DrawerType
+namespace Facebook.Messenger.WP8.Controls
 {
-	None,
-	Camera,
-	Gallery,
-	Sticker,
-	Voice,
-	ImageSearch,
-	Location
+	public enum DrawerType
+	{
+		None,
+		Camera,
+		Gallery,
+		Sticker,
+		Voice,
+		ImageSearch,
+		Location
+	}
 }

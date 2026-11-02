@@ -1,10 +1,11 @@
-namespace Facebook.Base;
-
-public interface ICrypto
+namespace Facebook.Base
 {
-	string ToMD5HexString(string data);
+	public interface ICrypto
+	{
+		string ToMD5HexString(string data);
 
-	byte[] ToMD5(string data);
+		byte[] ToMD5(string data);
 
-	byte[] ToSHA1(string data);
+		byte[] ToSHA1(string data);
+	}
 }

@@ -1,23 +1,24 @@
 using System.Threading.Tasks;
 using Facebook.Services.Api.Attributes;
 
-namespace Facebook.Services.Api.Methods.SetThreadPicture;
-
-[Bundle(BundleType.InMemoryCache, typeof(Request), typeof(Response))]
-public class CacheFilter : FacebookApiFilter<Request, Response>
+namespace Facebook.Services.Api.Methods.SetThreadPicture
 {
-	public CacheFilter(ServiceContext context)
-		: base(context)
+	[Bundle(BundleType.InMemoryCache, typeof(Request), typeof(Response))]
+	public class CacheFilter : FacebookApiFilter<Request, Response>
 	{
-	}
-
-	public override async Task<Response> ExecuteAsync(Request request, IHandler next)
-	{
-		Response response = await next.ExecuteAsync<Request, Response>(request);
-		if (!response.HasError() && !string.IsNullOrEmpty(response.PictureHash))
+		public CacheFilter(ServiceContext context)
+			: base(context)
 		{
-			await Context.ThreadCache.SetThreadPicture(request.ThreadId, response.PictureHash);
 		}
-		return response;
+
+		public override async Task<Response> ExecuteAsync(Request request, IHandler next)
+		{
+			Response response = await next.ExecuteAsync<Request, Response>(request);
+			if (!response.HasError() && !string.IsNullOrEmpty(response.PictureHash))
+			{
+				await Context.ThreadCache.SetThreadPicture(request.ThreadId, response.PictureHash);
+			}
+			return response;
+		}
 	}
 }

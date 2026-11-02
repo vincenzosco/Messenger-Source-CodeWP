@@ -1,6 +1,7 @@
-namespace Facebook.Models;
-
-public class LoadFinishedSignal
+namespace Facebook.Models
 {
-	public IEventType Obj;
+	public class LoadFinishedSignal
+	{
+		public IEventType Obj;
+	}
 }

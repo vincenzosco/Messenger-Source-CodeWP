@@ -4,183 +4,184 @@ using System.Runtime.Serialization;
 using System.Text;
 using Newtonsoft.Json;
 
-namespace Facebook.Models;
-
-[DataContract]
-[JsonObject(MemberSerialization.OptIn)]
-public class Attachment
+namespace Facebook.Models
 {
-	private string _subline;
-
-	[JsonProperty(PropertyName = "__type__")]
-	[JsonConverter(typeof(FacebookSubTypeConverter))]
-	[DataMember]
-	public FacebookSubType Type { get; set; }
-
-	[DataMember]
-	[JsonProperty(PropertyName = "subattachments")]
-	public List<Attachment> SubAttachments { get; set; }
-
-	[JsonProperty(PropertyName = "target")]
-	[DataMember]
-	public Target Target { get; set; }
-
-	[JsonProperty(PropertyName = "media")]
-	[DataMember]
-	public FeedMedia Media { get; set; }
-
-	[JsonProperty(PropertyName = "source")]
-	[DataMember]
-	public StringEntity Source { get; set; }
-
-	[DataMember]
-	[JsonProperty(PropertyName = "description")]
-	public StringEntity Description { get; set; }
-
-	[DataMember]
-	[JsonProperty(PropertyName = "title")]
-	public string Title { get; set; }
-
-	[JsonProperty(PropertyName = "url")]
-	[DataMember]
-	public string Url { get; set; }
-
-	public string Subline
+	[DataContract]
+	[JsonObject(MemberSerialization.OptIn)]
+	public class Attachment
 	{
-		get
+		private string _subline;
+
+		[JsonProperty(PropertyName = "__type__")]
+		[JsonConverter(typeof(FacebookSubTypeConverter))]
+		[DataMember]
+		public FacebookSubType Type { get; set; }
+
+		[DataMember]
+		[JsonProperty(PropertyName = "subattachments")]
+		public List<Attachment> SubAttachments { get; set; }
+
+		[JsonProperty(PropertyName = "target")]
+		[DataMember]
+		public Target Target { get; set; }
+
+		[JsonProperty(PropertyName = "media")]
+		[DataMember]
+		public FeedMedia Media { get; set; }
+
+		[JsonProperty(PropertyName = "source")]
+		[DataMember]
+		public StringEntity Source { get; set; }
+
+		[DataMember]
+		[JsonProperty(PropertyName = "description")]
+		public StringEntity Description { get; set; }
+
+		[DataMember]
+		[JsonProperty(PropertyName = "title")]
+		public string Title { get; set; }
+
+		[JsonProperty(PropertyName = "url")]
+		[DataMember]
+		public string Url { get; set; }
+
+		public string Subline
 		{
-			if (_subline == null)
+			get
 			{
-				if (Target.Description != null)
+				if (_subline == null)
 				{
-					_subline = Target.Description;
-				}
-				else if (Target.Type == FacebookSubType.Page)
-				{
-					StringBuilder stringBuilder = new StringBuilder();
-					if (Target.CategoryNames != null && Target.CategoryNames.Any())
+					if (Target.Description != null)
 					{
-						stringBuilder.Append(Target.CategoryNames[0]);
+						_subline = Target.Description;
 					}
-					if (Target.PageLikers != null)
+					else if (Target.Type == FacebookSubType.Page)
 					{
-						if (stringBuilder.Length > 0)
+						StringBuilder stringBuilder = new StringBuilder();
+						if (Target.CategoryNames != null && Target.CategoryNames.Any())
 						{
-							stringBuilder.Append(" · ");
+							stringBuilder.Append(Target.CategoryNames[0]);
 						}
-						stringBuilder.AppendFormat("{0:N0} like", new object[1] { Target.PageLikers.Count });
-						if (Target.PageLikers.Count > 0)
+						if (Target.PageLikers != null)
 						{
-							stringBuilder.Append("s");
+							if (stringBuilder.Length > 0)
+							{
+								stringBuilder.Append(" · ");
+							}
+							stringBuilder.AppendFormat("{0:N0} like", new object[1] { Target.PageLikers.Count });
+							if (Target.PageLikers.Count > 0)
+							{
+								stringBuilder.Append("s");
+							}
 						}
+						_subline = stringBuilder.ToString();
 					}
-					_subline = stringBuilder.ToString();
+					else if (Description != null)
+					{
+						_subline = Description.Text;
+					}
+					else
+					{
+						_subline = string.Empty;
+					}
 				}
-				else if (Description != null)
+				return _subline;
+			}
+		}
+
+		public bool HasFileAttachment
+		{
+			get
+			{
+				if (Type == FacebookSubType.StoryAttachment && Media == null && (SubAttachments == null || !SubAttachments.Any()) && Target == null && Url != null)
 				{
-					_subline = Description.Text;
+					return Title != null;
 				}
-				else
+				return false;
+			}
+		}
+
+		public bool HasPhotoAttachment
+		{
+			get
+			{
+				if (Media != null)
 				{
-					_subline = string.Empty;
+					return Media.Type == FacebookSubType.Photo;
 				}
+				return false;
 			}
-			return _subline;
 		}
-	}
 
-	public bool HasFileAttachment
-	{
-		get
+		public bool HasVideoAttachment
 		{
-			if (Type == FacebookSubType.StoryAttachment && Media == null && (SubAttachments == null || !SubAttachments.Any()) && Target == null && Url != null)
+			get
 			{
-				return Title != null;
+				if (Media != null)
+				{
+					return Media.Type == FacebookSubType.Video;
+				}
+				return false;
 			}
-			return false;
 		}
-	}
 
-	public bool HasPhotoAttachment
-	{
-		get
+		public bool HasMediaAttachment
 		{
-			if (Media != null)
+			get
 			{
-				return Media.Type == FacebookSubType.Photo;
+				bool flag = Target != null && Target.Type == FacebookSubType.ExternalUrl;
+				if (Media != null)
+				{
+					flag &= Media.Type == FacebookSubType.GenericAttachmentMedia || Media.Type == FacebookSubType.ProfilePicAttachmentMedia;
+				}
+				return flag;
 			}
-			return false;
 		}
-	}
 
-	public bool HasVideoAttachment
-	{
-		get
+		public bool HasOpenGraphAttachment
 		{
-			if (Media != null)
+			get
 			{
-				return Media.Type == FacebookSubType.Video;
+				if (Target != null)
+				{
+					if (Target.Type != FacebookSubType.OpenGraphObject)
+					{
+						return Target.Type == FacebookSubType.OpenGraphAction;
+					}
+					return true;
+				}
+				return false;
 			}
-			return false;
 		}
-	}
 
-	public bool HasMediaAttachment
-	{
-		get
+		public bool MatchesAttachment(Attachment attachment)
 		{
-			bool flag = Target != null && Target.Type == FacebookSubType.ExternalUrl;
-			if (Media != null)
+			bool flag = true;
+			if (Title != null && attachment.Title != null)
 			{
-				flag &= Media.Type == FacebookSubType.GenericAttachmentMedia || Media.Type == FacebookSubType.ProfilePicAttachmentMedia;
+				flag &= Title.Equals(attachment.Title);
+			}
+			else if (Title != null || attachment.Title != null)
+			{
+				flag = false;
+			}
+			if (Description != null && attachment.Description != null)
+			{
+				flag &= Description.Text.Equals(attachment.Description.Text);
+			}
+			else if (Description != null || attachment.Description != null)
+			{
+				flag = false;
+			}
+			if (Source != null && attachment.Source != null)
+			{
+				flag &= Source.Text.Equals(attachment.Source.Text);
+			}
+			else if (Source != null || attachment.Source != null)
+			{
+				flag = false;
 			}
 			return flag;
 		}
-	}
-
-	public bool HasOpenGraphAttachment
-	{
-		get
-		{
-			if (Target != null)
-			{
-				if (Target.Type != FacebookSubType.OpenGraphObject)
-				{
-					return Target.Type == FacebookSubType.OpenGraphAction;
-				}
-				return true;
-			}
-			return false;
-		}
-	}
-
-	public bool MatchesAttachment(Attachment attachment)
-	{
-		bool flag = true;
-		if (Title != null && attachment.Title != null)
-		{
-			flag &= Title.Equals(attachment.Title);
-		}
-		else if (Title != null || attachment.Title != null)
-		{
-			flag = false;
-		}
-		if (Description != null && attachment.Description != null)
-		{
-			flag &= Description.Text.Equals(attachment.Description.Text);
-		}
-		else if (Description != null || attachment.Description != null)
-		{
-			flag = false;
-		}
-		if (Source != null && attachment.Source != null)
-		{
-			flag &= Source.Text.Equals(attachment.Source.Text);
-		}
-		else if (Source != null || attachment.Source != null)
-		{
-			flag = false;
-		}
-		return flag;
 	}
 }

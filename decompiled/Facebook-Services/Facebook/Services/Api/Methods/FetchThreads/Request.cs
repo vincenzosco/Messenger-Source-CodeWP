@@ -1,36 +1,37 @@
-namespace Facebook.Services.Api.Methods.FetchThreads;
-
-[Queue(QueueType.Web)]
-public class Request : FacebookServiceRequest
+namespace Facebook.Services.Api.Methods.FetchThreads
 {
-	public string Folder { get; set; }
-
-	public long MaxTimestamp { get; set; }
-
-	public long ActionId { get; set; }
-
-	public bool ForceToServer { get; set; }
-
-	public bool ForceFullSync { get; set; }
-
-	public long RecentPushActionId { get; set; }
-
-	public int ThreadLimit { get; set; }
-
-	public bool RequestFromSyncProtocolService { get; set; }
-
-	public Request()
+	[Queue(QueueType.Web)]
+	public class Request : FacebookServiceRequest
 	{
-		Folder = "inbox";
-		ThreadLimit = 10;
-	}
+		public string Folder { get; set; }
 
-	public bool IsIncremental()
-	{
-		if (!ForceFullSync)
+		public long MaxTimestamp { get; set; }
+
+		public long ActionId { get; set; }
+
+		public bool ForceToServer { get; set; }
+
+		public bool ForceFullSync { get; set; }
+
+		public long RecentPushActionId { get; set; }
+
+		public int ThreadLimit { get; set; }
+
+		public bool RequestFromSyncProtocolService { get; set; }
+
+		public Request()
 		{
-			return ActionId > 0;
+			Folder = "inbox";
+			ThreadLimit = 10;
 		}
-		return false;
+
+		public bool IsIncremental()
+		{
+			if (!ForceFullSync)
+			{
+				return ActionId > 0;
+			}
+			return false;
+		}
 	}
 }

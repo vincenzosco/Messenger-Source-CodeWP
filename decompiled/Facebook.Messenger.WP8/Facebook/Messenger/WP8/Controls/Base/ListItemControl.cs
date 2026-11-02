@@ -1,21 +1,22 @@
-namespace Facebook.Messenger.WP8.Controls.Base;
-
-public abstract class ListItemControl<TViewModel> : ViewModelControl<TViewModel> where TViewModel : class
+namespace Facebook.Messenger.WP8.Controls.Base
 {
-	protected abstract void OnItemValueAssigned();
-
-	protected abstract void Recycled(TViewModel oldViewModel);
-
-	protected sealed override void ViewModelUpdated(TViewModel oldViewModel)
+	public abstract class ListItemControl<TViewModel> : ViewModelControl<TViewModel> where TViewModel : class
 	{
-		base.ViewModelUpdated(oldViewModel);
-		if (oldViewModel != null)
+		protected abstract void OnItemValueAssigned();
+
+		protected abstract void Recycled(TViewModel oldViewModel);
+
+		protected sealed override void ViewModelUpdated(TViewModel oldViewModel)
 		{
-			Recycled(oldViewModel);
-		}
-		if (ViewModel != null)
-		{
-			OnItemValueAssigned();
+			base.ViewModelUpdated(oldViewModel);
+			if (oldViewModel != null)
+			{
+				Recycled(oldViewModel);
+			}
+			if (ViewModel != null)
+			{
+				OnItemValueAssigned();
+			}
 		}
 	}
 }

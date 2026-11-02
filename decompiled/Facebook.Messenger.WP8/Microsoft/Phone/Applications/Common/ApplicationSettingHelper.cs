@@ -1,44 +1,45 @@
 using System.IO.IsolatedStorage;
 
-namespace Microsoft.Phone.Applications.Common;
-
-public static class ApplicationSettingHelper
+namespace Microsoft.Phone.Applications.Common
 {
-	public static TValue TryGetValueWithDefault<TValue>(string key, TValue defaultValue)
+	public static class ApplicationSettingHelper
 	{
-		TValue result = defaultValue;
-		if (IsolatedStorageSettings.ApplicationSettings.Contains(key))
+		public static TValue TryGetValueWithDefault<TValue>(string key, TValue defaultValue)
 		{
-			object obj = IsolatedStorageSettings.ApplicationSettings[key];
-			if (obj is TValue)
+			TValue result = defaultValue;
+			if (IsolatedStorageSettings.ApplicationSettings.Contains(key))
 			{
-				result = (TValue)obj;
+				object obj = IsolatedStorageSettings.ApplicationSettings[key];
+				if (obj is TValue)
+				{
+					result = (TValue)obj;
+				}
 			}
+			return result;
 		}
-		return result;
-	}
 
-	public static bool AddOrUpdateValue(string key, object value)
-	{
-		bool result = false;
-		if (IsolatedStorageSettings.ApplicationSettings.Contains(key))
+		public static bool AddOrUpdateValue(string key, object value)
 		{
-			if (IsolatedStorageSettings.ApplicationSettings[key] != value)
+			bool result = false;
+			if (IsolatedStorageSettings.ApplicationSettings.Contains(key))
 			{
-				IsolatedStorageSettings.ApplicationSettings[key] = value;
+				if (IsolatedStorageSettings.ApplicationSettings[key] != value)
+				{
+					IsolatedStorageSettings.ApplicationSettings[key] = value;
+					result = true;
+				}
+			}
+			else
+			{
+				IsolatedStorageSettings.ApplicationSettings.Add(key, value);
 				result = true;
 			}
+			return result;
 		}
-		else
-		{
-			IsolatedStorageSettings.ApplicationSettings.Add(key, value);
-			result = true;
-		}
-		return result;
-	}
 
-	public static void Save()
-	{
-		IsolatedStorageSettings.ApplicationSettings.Save();
+		public static void Save()
+		{
+			IsolatedStorageSettings.ApplicationSettings.Save();
+		}
 	}
 }

@@ -1,6 +1,7 @@
-namespace Facebook.Base;
-
-public interface ITranslator
+namespace Facebook.Base
 {
-	string GetCurrentFBLocale();
+	public interface ITranslator
+	{
+		string GetCurrentFBLocale();
+	}
 }

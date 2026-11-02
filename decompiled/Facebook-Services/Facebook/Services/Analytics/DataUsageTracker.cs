@@ -3,79 +3,80 @@ using System.Collections.Generic;
 using System.Linq;
 using Facebook.Services.Analytics.Logging;
 
-namespace Facebook.Services.Analytics;
-
-internal class DataUsageTracker
+namespace Facebook.Services.Analytics
 {
-	private class Usage
+	internal class DataUsageTracker
 	{
-		public long DownloadedBytes { get; private set; }
-
-		public long UploadedBytes { get; private set; }
-
-		public void IncrementDownloadedBytes(long bytes)
+		private class Usage
 		{
-			DownloadedBytes += bytes;
-		}
+			public long DownloadedBytes { get; private set; }
 
-		public void IncrementUploadedBytes(long bytes)
-		{
-			DownloadedBytes += bytes;
-		}
+			public long UploadedBytes { get; private set; }
 
-		public bool HasData()
-		{
-			if (DownloadedBytes == 0)
+			public void IncrementDownloadedBytes(long bytes)
 			{
-				return UploadedBytes != 0;
+				DownloadedBytes += bytes;
 			}
-			return true;
+
+			public void IncrementUploadedBytes(long bytes)
+			{
+				DownloadedBytes += bytes;
+			}
+
+			public bool HasData()
+			{
+				if (DownloadedBytes == 0)
+				{
+					return UploadedBytes != 0;
+				}
+				return true;
+			}
+
+			public void Reset()
+			{
+				long downloadedBytes = (UploadedBytes = 0L);
+				DownloadedBytes = downloadedBytes;
+			}
 		}
 
-		public void Reset()
+		private readonly Dictionary<DataType, Usage> _runningUsage;
+
+		public DataUsageTracker()
 		{
-			long downloadedBytes = (UploadedBytes = 0L);
-			DownloadedBytes = downloadedBytes;
+			_runningUsage = new Dictionary<DataType, Usage>();
+			foreach (object value in Enum.GetValues(typeof(DataType)))
+			{
+				_runningUsage[(DataType)value] = new Usage();
+			}
 		}
-	}
 
-	private readonly Dictionary<DataType, Usage> _runningUsage;
-
-	public DataUsageTracker()
-	{
-		_runningUsage = new Dictionary<DataType, Usage>();
-		foreach (object value in Enum.GetValues(typeof(DataType)))
+		public void LogData(DataType type, long downloadedBytes, long uploadedBytes)
 		{
-			_runningUsage[(DataType)value] = new Usage();
+			lock (_runningUsage)
+			{
+				Usage usage = _runningUsage[type];
+				usage.IncrementDownloadedBytes(downloadedBytes);
+				usage.IncrementUploadedBytes(uploadedBytes);
+			}
 		}
-	}
 
-	public void LogData(DataType type, long downloadedBytes, long uploadedBytes)
-	{
-		lock (_runningUsage)
+		public IEnumerable<AnalyticsEvent> CreateEventsAndReset()
 		{
-			Usage usage = _runningUsage[type];
-			usage.IncrementDownloadedBytes(downloadedBytes);
-			usage.IncrementUploadedBytes(uploadedBytes);
+			lock (_runningUsage)
+			{
+				IEnumerable<KeyValuePair<DataType, Usage>> source = _runningUsage.Where((KeyValuePair<DataType, Usage> d) => d.Value.HasData());
+				List<AnalyticsEvent> result = source.Select((KeyValuePair<DataType, Usage> d) => DataUsageEventCreator.CreateEvent(d.Key, d.Value.DownloadedBytes, d.Value.UploadedBytes)).ToList();
+				ResetRunningUsage();
+				return result;
+			}
 		}
-	}
 
-	public IEnumerable<AnalyticsEvent> CreateEventsAndReset()
-	{
-		lock (_runningUsage)
+		private void ResetRunningUsage()
 		{
-			IEnumerable<KeyValuePair<DataType, Usage>> source = _runningUsage.Where((KeyValuePair<DataType, Usage> d) => d.Value.HasData());
-			List<AnalyticsEvent> result = source.Select((KeyValuePair<DataType, Usage> d) => DataUsageEventCreator.CreateEvent(d.Key, d.Value.DownloadedBytes, d.Value.UploadedBytes)).ToList();
-			ResetRunningUsage();
-			return result;
-		}
-	}
-
-	private void ResetRunningUsage()
-	{
-		foreach (Usage item in _runningUsage.Select((KeyValuePair<DataType, Usage> kv) => kv.Value))
-		{
-			item.Reset();
+			foreach (Usage item in _runningUsage.Select((KeyValuePair<DataType, Usage> kv) => kv.Value))
+			{
+				item.Reset();
+			}
 		}
 	}
 }

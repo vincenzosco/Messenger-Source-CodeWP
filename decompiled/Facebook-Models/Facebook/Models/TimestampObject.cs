@@ -1,13 +1,14 @@
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 
-namespace Facebook.Models;
-
-[JsonObject(MemberSerialization.OptIn)]
-[DataContract]
-public class TimestampObject
+namespace Facebook.Models
 {
-	[DataMember]
-	[JsonProperty("time")]
-	public long Timestamp { get; set; }
+	[JsonObject(MemberSerialization.OptIn)]
+	[DataContract]
+	public class TimestampObject
+	{
+		[DataMember]
+		[JsonProperty("time")]
+		public long Timestamp { get; set; }
+	}
 }

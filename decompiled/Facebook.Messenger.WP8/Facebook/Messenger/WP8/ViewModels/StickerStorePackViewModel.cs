@@ -15,179 +15,180 @@ using Facebook.Services.Common;
 using Facebook.Services.Stickers;
 using GalaSoft.MvvmLight.Messaging;
 
-namespace Facebook.Messenger.WP8.ViewModels;
-
-public class StickerStorePackViewModel : FacebookMessengerViewModel, IStickerPackProgressHandler
+namespace Facebook.Messenger.WP8.ViewModels
 {
-	private readonly Facebook.Services.Stickers.Service _stickersService;
-
-	private readonly IStickerStorage _stickerStorage;
-
-	private string _stickerPackId;
-
-	private StickerPackViewModel _stickerPack;
-
-	public StickerPackViewModel StickerPack
+	public class StickerStorePackViewModel : FacebookMessengerViewModel, IStickerPackProgressHandler
 	{
-		get
-		{
-			return _stickerPack;
-		}
-		set
-		{
-			Set(ref _stickerPack, value, broadcast: false, "StickerPack");
-		}
-	}
+		private readonly Facebook.Services.Stickers.Service _stickersService;
 
-	public StickerStorePackViewModel(Facebook.Services.Api.Service apiService, Facebook.Services.Stickers.Service stickersService, FacebookContext context, Navigator navigator, IDispatcher dispatcher, INetworkStatus networkStatus, IStickerStorage stickerStorage)
-		: base(apiService, context, navigator, dispatcher, networkStatus)
-	{
-		_stickersService = stickersService;
-		_stickerStorage = stickerStorage;
-		GalaSoft.MvvmLight.Messaging.Messenger.Default.Register<CacheStickerPacksUpdatedSignal>(this, OnCacheStickerPackUpdatedSignal);
-		_stickersService.AddProgressHandler(this);
-	}
+		private readonly IStickerStorage _stickerStorage;
 
-	public override void Cleanup()
-	{
-		GalaSoft.MvvmLight.Messaging.Messenger.Default.Unregister(this);
-		_stickersService.RemoveProgressHandler(this);
-		base.Cleanup();
-	}
+		private string _stickerPackId;
 
-	public override void SetPath(Uri uri)
-	{
-		base.SetPath(uri);
-		if (PathUri.Params.ContainsKey("id"))
-		{
-			_stickerPackId = PathUri.Params["id"];
-		}
-	}
+		private StickerPackViewModel _stickerPack;
 
-	public async Task FetchStickerPack()
-	{
-		if (IsLoading)
+		public StickerPackViewModel StickerPack
 		{
-			return;
-		}
-		try
-		{
-			IsLoading = true;
-			Facebook.Services.Api.Methods.FetchStickerPack.Request request = new Facebook.Services.Api.Methods.FetchStickerPack.Request
+			get
 			{
-				StickerPackId = _stickerPackId
-			};
-			Facebook.Services.Api.Methods.FetchStickerPack.Response response = await _stickersService.ExecuteAsync<Facebook.Services.Api.Methods.FetchStickerPack.Request, Facebook.Services.Api.Methods.FetchStickerPack.Response>(request);
-			if (response.HasError())
+				return _stickerPack;
+			}
+			set
 			{
-				Logger.Warning(this, $"Failed to fetch sticker packs. {response}", "FetchStickerPack", "c:\\Open\\messenger\\Facebook\\Facebook-Messenger-WP8\\ViewModels\\StickerStorePackViewModel.cs", 86);
+				Set(ref _stickerPack, value, false, "StickerPack");
+			}
+		}
+
+		public StickerStorePackViewModel(Facebook.Services.Api.Service apiService, Facebook.Services.Stickers.Service stickersService, FacebookContext context, Navigator navigator, IDispatcher dispatcher, INetworkStatus networkStatus, IStickerStorage stickerStorage)
+			: base(apiService, context, navigator, dispatcher, networkStatus)
+		{
+			_stickersService = stickersService;
+			_stickerStorage = stickerStorage;
+			GalaSoft.MvvmLight.Messaging.Messenger.Default.Register<CacheStickerPacksUpdatedSignal>(this, OnCacheStickerPackUpdatedSignal);
+			_stickersService.AddProgressHandler(this);
+		}
+
+		public override void Cleanup()
+		{
+			GalaSoft.MvvmLight.Messaging.Messenger.Default.Unregister(this);
+			_stickersService.RemoveProgressHandler(this);
+			base.Cleanup();
+		}
+
+		public override void SetPath(Uri uri)
+		{
+			base.SetPath(uri);
+			if (PathUri.Params.ContainsKey("id"))
+			{
+				_stickerPackId = PathUri.Params["id"];
+			}
+		}
+
+		public async Task FetchStickerPack()
+		{
+			if (IsLoading)
+			{
 				return;
 			}
-			StickerPack = new StickerPackViewModel(response.StickerPack, _stickerStorage);
-			if (response.StickerPack.IsDownloaded)
+			try
 			{
-				StickerPack.State = StickerPackViewModel.DownloadState.Downloaded;
+				IsLoading = true;
+				Facebook.Services.Api.Methods.FetchStickerPack.Request request = new Facebook.Services.Api.Methods.FetchStickerPack.Request
+				{
+					StickerPackId = _stickerPackId
+				};
+				Facebook.Services.Api.Methods.FetchStickerPack.Response response = await _stickersService.ExecuteAsync<Facebook.Services.Api.Methods.FetchStickerPack.Request, Facebook.Services.Api.Methods.FetchStickerPack.Response>(request);
+				if (response.HasError())
+				{
+					Logger.Warning(this, $"Failed to fetch sticker packs. {response}", "FetchStickerPack", "c:\\Open\\messenger\\Facebook\\Facebook-Messenger-WP8\\ViewModels\\StickerStorePackViewModel.cs", 86);
+					return;
+				}
+				StickerPack = new StickerPackViewModel(response.StickerPack, _stickerStorage);
+				if (response.StickerPack.IsDownloaded)
+				{
+					StickerPack.State = StickerPackViewModel.DownloadState.Downloaded;
+				}
+				else if (response.IsDownloading)
+				{
+					StickerPack.State = StickerPackViewModel.DownloadState.Downloading;
+				}
 			}
-			else if (response.IsDownloading)
+			finally
+			{
+				IsLoading = false;
+			}
+		}
+
+		public async Task DownloadStickerPack()
+		{
+			if (IsLoading || StickerPack == null)
+			{
+				return;
+			}
+			try
+			{
+				IsLoading = true;
+				StickerPack.State = StickerPackViewModel.DownloadState.Downloading;
+				Facebook.Services.Api.Methods.DownloadStickerPack.Request request = new Facebook.Services.Api.Methods.DownloadStickerPack.Request
+				{
+					StickerPackId = _stickerPackId
+				};
+				BoolResponse response = await _stickersService.ExecuteAsync<Facebook.Services.Api.Methods.DownloadStickerPack.Request, BoolResponse>(request);
+				StickerPack.State = ((!response.HasError() && response.Succeeded) ? StickerPackViewModel.DownloadState.Downloaded : StickerPackViewModel.DownloadState.Failed);
+			}
+			finally
+			{
+				IsLoading = false;
+			}
+		}
+
+		public async Task<bool> DeleteStickerPack()
+		{
+			if (IsLoading || StickerPack == null)
+			{
+				return true;
+			}
+			try
+			{
+				IsLoading = true;
+				StickerPack.State = StickerPackViewModel.DownloadState.Available;
+				Facebook.Services.Api.Methods.DeleteStickerPack.Request request = new Facebook.Services.Api.Methods.DeleteStickerPack.Request
+				{
+					StickerPackId = StickerPack.Id
+				};
+				BoolResponse response = await _stickersService.ExecuteAsync<Facebook.Services.Api.Methods.DeleteStickerPack.Request, BoolResponse>(request);
+				if (response.HasError() || !response.Succeeded)
+				{
+					StickerPack.State = StickerPackViewModel.DownloadState.Downloaded;
+					return false;
+				}
+				StickerPack.DownloadProgress = 0.0;
+				return true;
+			}
+			finally
+			{
+				IsLoading = false;
+			}
+		}
+
+		public void DownloadStarted(string stickerPackId)
+		{
+			if (!(stickerPackId != _stickerPackId))
 			{
 				StickerPack.State = StickerPackViewModel.DownloadState.Downloading;
 			}
 		}
-		finally
-		{
-			IsLoading = false;
-		}
-	}
 
-	public async Task DownloadStickerPack()
-	{
-		if (IsLoading || StickerPack == null)
+		public void DownloadFailed(string stickerPackId)
 		{
-			return;
-		}
-		try
-		{
-			IsLoading = true;
-			StickerPack.State = StickerPackViewModel.DownloadState.Downloading;
-			Facebook.Services.Api.Methods.DownloadStickerPack.Request request = new Facebook.Services.Api.Methods.DownloadStickerPack.Request
+			if (!(stickerPackId != _stickerPackId))
 			{
-				StickerPackId = _stickerPackId
-			};
-			BoolResponse response = await _stickersService.ExecuteAsync<Facebook.Services.Api.Methods.DownloadStickerPack.Request, BoolResponse>(request);
-			StickerPack.State = ((!response.HasError() && response.Succeeded) ? StickerPackViewModel.DownloadState.Downloaded : StickerPackViewModel.DownloadState.Failed);
-		}
-		finally
-		{
-			IsLoading = false;
-		}
-	}
-
-	public async Task<bool> DeleteStickerPack()
-	{
-		if (IsLoading || StickerPack == null)
-		{
-			return true;
-		}
-		try
-		{
-			IsLoading = true;
-			StickerPack.State = StickerPackViewModel.DownloadState.Available;
-			Facebook.Services.Api.Methods.DeleteStickerPack.Request request = new Facebook.Services.Api.Methods.DeleteStickerPack.Request
-			{
-				StickerPackId = StickerPack.Id
-			};
-			BoolResponse response = await _stickersService.ExecuteAsync<Facebook.Services.Api.Methods.DeleteStickerPack.Request, BoolResponse>(request);
-			if (response.HasError() || !response.Succeeded)
-			{
-				StickerPack.State = StickerPackViewModel.DownloadState.Downloaded;
-				return false;
+				StickerPack.State = StickerPackViewModel.DownloadState.Failed;
 			}
-			StickerPack.DownloadProgress = 0.0;
-			return true;
 		}
-		finally
-		{
-			IsLoading = false;
-		}
-	}
 
-	public void DownloadStarted(string stickerPackId)
-	{
-		if (!(stickerPackId != _stickerPackId))
+		public void ProgressUpdated(string stickerPackId, double progress)
 		{
-			StickerPack.State = StickerPackViewModel.DownloadState.Downloading;
-		}
-	}
-
-	public void DownloadFailed(string stickerPackId)
-	{
-		if (!(stickerPackId != _stickerPackId))
-		{
-			StickerPack.State = StickerPackViewModel.DownloadState.Failed;
-		}
-	}
-
-	public void ProgressUpdated(string stickerPackId, double progress)
-	{
-		if (StickerPack != null && !(stickerPackId != _stickerPackId))
-		{
-			StickerPack.State = StickerPackViewModel.DownloadState.Downloading;
-			StickerPack.DownloadProgress = progress;
-		}
-	}
-
-	private void OnCacheStickerPackUpdatedSignal(CacheStickerPacksUpdatedSignal signal)
-	{
-		if (!IsLoading && StickerPack != null && signal.StickerPacks.Any((StickerPack p) => p.Id == _stickerPackId))
-		{
-			switch (signal.State)
+			if (StickerPack != null && !(stickerPackId != _stickerPackId))
 			{
-			case CacheStickerPacksUpdatedSignal.StickerPackState.Downloaded:
-				StickerPack.State = StickerPackViewModel.DownloadState.Downloaded;
-				break;
-			case CacheStickerPacksUpdatedSignal.StickerPackState.Deleted:
-				StickerPack.State = StickerPackViewModel.DownloadState.Available;
-				break;
+				StickerPack.State = StickerPackViewModel.DownloadState.Downloading;
+				StickerPack.DownloadProgress = progress;
+			}
+		}
+
+		private void OnCacheStickerPackUpdatedSignal(CacheStickerPacksUpdatedSignal signal)
+		{
+			if (!IsLoading && StickerPack != null && signal.StickerPacks.Any((StickerPack p) => p.Id == _stickerPackId))
+			{
+				switch (signal.State)
+				{
+				case CacheStickerPacksUpdatedSignal.StickerPackState.Downloaded:
+					StickerPack.State = StickerPackViewModel.DownloadState.Downloaded;
+					break;
+				case CacheStickerPacksUpdatedSignal.StickerPackState.Deleted:
+					StickerPack.State = StickerPackViewModel.DownloadState.Available;
+					break;
+				}
 			}
 		}
 	}

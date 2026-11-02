@@ -3,30 +3,31 @@ using System.Runtime.Serialization;
 using Facebook.Base;
 using Newtonsoft.Json;
 
-namespace Facebook.Models.PhoneContacts;
-
-[DataContract]
-[JsonObject(MemberSerialization.OptIn)]
-public class FBContactBirthday
+namespace Facebook.Models.PhoneContacts
 {
-	[JsonProperty("year")]
-	[DataMember]
-	public string Year;
-
-	[JsonProperty("month")]
-	[DataMember]
-	public string Month;
-
-	[JsonProperty("day")]
-	[DataMember]
-	public string Day;
-
-	public override int GetHashCode()
+	[DataContract]
+	[JsonObject(MemberSerialization.OptIn)]
+	public class FBContactBirthday
 	{
-		List<object> list = new List<object>();
-		list.Add(Year);
-		list.Add(Month);
-		list.Add(Day);
-		return HashGenerator.CalculateHashCode(list);
+		[JsonProperty("year")]
+		[DataMember]
+		public string Year;
+
+		[JsonProperty("month")]
+		[DataMember]
+		public string Month;
+
+		[JsonProperty("day")]
+		[DataMember]
+		public string Day;
+
+		public override int GetHashCode()
+		{
+			List<object> list = new List<object>();
+			list.Add(Year);
+			list.Add(Month);
+			list.Add(Day);
+			return HashGenerator.CalculateHashCode(list);
+		}
 	}
 }

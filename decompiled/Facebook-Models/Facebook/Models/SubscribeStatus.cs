@@ -1,14 +1,15 @@
 using System.Runtime.Serialization;
 
-namespace Facebook.Models;
-
-public enum SubscribeStatus
+namespace Facebook.Models
 {
-	Unknown,
-	[EnumMember(Value = "can_subscribe")]
-	CanSubscribe,
-	[EnumMember(Value = "is_subscribed")]
-	IsSubscribed,
-	[EnumMember(Value = "cannot_subscribe")]
-	CannotSubscribe
+	public enum SubscribeStatus
+	{
+		Unknown,
+		[EnumMember(Value = "can_subscribe")]
+		CanSubscribe,
+		[EnumMember(Value = "is_subscribed")]
+		IsSubscribed,
+		[EnumMember(Value = "cannot_subscribe")]
+		CannotSubscribe
+	}
 }

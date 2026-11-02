@@ -4,46 +4,47 @@ using System.Linq;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 
-namespace Facebook.Services.Api.Methods.FetchGatekeeperSettings;
-
-[JsonObject(MemberSerialization.OptIn)]
-[DataContract]
-public class Response : FacebookApiResponse
+namespace Facebook.Services.Api.Methods.FetchGatekeeperSettings
 {
-	[JsonProperty("result")]
-	public string GatekeeperBitmask { get; set; }
-
-	[JsonProperty("hash")]
-	public string GatekeeperBitmaskServerHash { get; set; }
-
-	public string GatekeeperBitmaskClientHash { get; set; }
-
-	public string QueryHash { get; set; }
-
-	public IEnumerable<string> GatekeeperQueryOrder { get; set; }
-
-	public bool IsResponseValid()
+	[JsonObject(MemberSerialization.OptIn)]
+	[DataContract]
+	public class Response : FacebookApiResponse
 	{
-		bool flag = string.Equals(GatekeeperBitmaskServerHash, GatekeeperBitmaskClientHash, StringComparison.OrdinalIgnoreCase);
-		bool result = GatekeeperBitmask != null && GatekeeperBitmask.Length == GatekeeperQueryOrder.Count();
-		if (flag)
-		{
-			return result;
-		}
-		return false;
-	}
+		[JsonProperty("result")]
+		public string GatekeeperBitmask { get; set; }
 
-	public IReadOnlyDictionary<string, bool> CalculateDictionaryFromResponse()
-	{
-		char[] array = GatekeeperBitmask.ToCharArray();
-		string[] array2 = GatekeeperQueryOrder.ToArray();
-		Dictionary<string, bool> dictionary = new Dictionary<string, bool>();
-		for (int i = 0; i < array.Count(); i++)
+		[JsonProperty("hash")]
+		public string GatekeeperBitmaskServerHash { get; set; }
+
+		public string GatekeeperBitmaskClientHash { get; set; }
+
+		public string QueryHash { get; set; }
+
+		public IEnumerable<string> GatekeeperQueryOrder { get; set; }
+
+		public bool IsResponseValid()
 		{
-			string key = array2[i];
-			bool value = array[i] == '1';
-			dictionary[key] = value;
+			bool flag = string.Equals(GatekeeperBitmaskServerHash, GatekeeperBitmaskClientHash, StringComparison.OrdinalIgnoreCase);
+			bool result = GatekeeperBitmask != null && GatekeeperBitmask.Length == GatekeeperQueryOrder.Count();
+			if (flag)
+			{
+				return result;
+			}
+			return false;
 		}
-		return dictionary;
+
+		public IReadOnlyDictionary<string, bool> CalculateDictionaryFromResponse()
+		{
+			char[] array = GatekeeperBitmask.ToCharArray();
+			string[] array2 = GatekeeperQueryOrder.ToArray();
+			Dictionary<string, bool> dictionary = new Dictionary<string, bool>();
+			for (int i = 0; i < array.Count(); i++)
+			{
+				string key = array2[i];
+				bool value = array[i] == '1';
+				dictionary[key] = value;
+			}
+			return dictionary;
+		}
 	}
 }

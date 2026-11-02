@@ -1,23 +1,24 @@
 using System.Threading;
 
-namespace Facebook.Base;
-
-public class AutoRenewCancellationTokenSource
+namespace Facebook.Base
 {
-	private CancellationTokenSource _source;
-
-	public CancellationToken Token => _source.Token;
-
-	public bool IsCancellationRequested => _source.IsCancellationRequested;
-
-	public AutoRenewCancellationTokenSource()
+	public class AutoRenewCancellationTokenSource
 	{
-		_source = new CancellationTokenSource();
-	}
+		private CancellationTokenSource _source;
 
-	public void CancelAndRenew()
-	{
-		_source.Cancel();
-		_source = new CancellationTokenSource();
+		public CancellationToken Token => _source.Token;
+
+		public bool IsCancellationRequested => _source.IsCancellationRequested;
+
+		public AutoRenewCancellationTokenSource()
+		{
+			_source = new CancellationTokenSource();
+		}
+
+		public void CancelAndRenew()
+		{
+			_source.Cancel();
+			_source = new CancellationTokenSource();
+		}
 	}
 }

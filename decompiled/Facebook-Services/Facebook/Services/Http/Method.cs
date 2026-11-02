@@ -1,9 +1,10 @@
-namespace Facebook.Services.Http;
-
-public enum Method
+namespace Facebook.Services.Http
 {
-	Get,
-	Post,
-	Put,
-	Delete
+	public enum Method
+	{
+		Get,
+		Post,
+		Put,
+		Delete
+	}
 }

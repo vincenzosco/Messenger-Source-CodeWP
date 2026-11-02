@@ -1,7 +1,8 @@
-namespace Facebook.Services.Api;
-
-public enum QueueType
+namespace Facebook.Services.Api
 {
-	Local,
-	Web
+	public enum QueueType
+	{
+		Local,
+		Web
+	}
 }

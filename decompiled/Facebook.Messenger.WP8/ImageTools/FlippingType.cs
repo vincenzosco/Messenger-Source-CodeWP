@@ -1,8 +1,9 @@
-namespace ImageTools;
-
-public enum FlippingType
+namespace ImageTools
 {
-	None,
-	FlipX,
-	FlipY
+	public enum FlippingType
+	{
+		None,
+		FlipX,
+		FlipY
+	}
 }

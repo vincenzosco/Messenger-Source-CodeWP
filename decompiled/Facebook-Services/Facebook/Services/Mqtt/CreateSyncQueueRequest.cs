@@ -1,18 +1,19 @@
 using Facebook.Services.Api;
 using Facebook.Services.Api.Methods;
 
-namespace Facebook.Services.Mqtt;
-
-[Queue(QueueType.Web)]
-public class CreateSyncQueueRequest : FacebookServiceRequest
+namespace Facebook.Services.Mqtt
 {
-	public long LargestSequenceId { get; private set; }
-
-	public int SyncApiVersion { get; private set; }
-
-	public CreateSyncQueueRequest(long largestSequenceId, int syncApiVersion)
+	[Queue(QueueType.Web)]
+	public class CreateSyncQueueRequest : FacebookServiceRequest
 	{
-		LargestSequenceId = largestSequenceId;
-		SyncApiVersion = syncApiVersion;
+		public long LargestSequenceId { get; private set; }
+
+		public int SyncApiVersion { get; private set; }
+
+		public CreateSyncQueueRequest(long largestSequenceId, int syncApiVersion)
+		{
+			LargestSequenceId = largestSequenceId;
+			SyncApiVersion = syncApiVersion;
+		}
 	}
 }

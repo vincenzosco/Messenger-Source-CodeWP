@@ -6,58 +6,59 @@ using System.Windows.Controls;
 using Facebook.Models;
 using PixelLab;
 
-namespace Facebook.Messenger.WP8.Controls;
-
-public class ActiveUsersControl : ActiveUsersItemControl
+namespace Facebook.Messenger.WP8.Controls
 {
-	internal ActiveUsersItemControl ActiveUserControl;
-
-	internal Grid LayoutRoot;
-
-	internal UserTile UserTile;
-
-	internal DynamicTextBlock NameTextBlock;
-
-	internal TextBlock ClientTypeTextBlock;
-
-	private bool _contentLoaded;
-
-	public ActiveUsersControl()
+	public class ActiveUsersControl : ActiveUsersItemControl
 	{
-		InitializeComponent();
-	}
+		internal ActiveUsersItemControl ActiveUserControl;
 
-	protected override void OnItemValueAssigned()
-	{
-		ViewModel.PropertyChanged += OnPropertyChanged;
-	}
+		internal Grid LayoutRoot;
 
-	protected override void Recycled(FacebookUser oldUser)
-	{
-		oldUser.PropertyChanged -= OnPropertyChanged;
-	}
+		internal UserTile UserTile;
 
-	private void OnPropertyChanged(object sender, PropertyChangedEventArgs propertyChangedEventArgs)
-	{
-		UserTile.AssignImages();
-	}
+		internal DynamicTextBlock NameTextBlock;
 
-	[DebuggerNonUserCode]
-	public void InitializeComponent()
-	{
-		//IL_0043: Unknown result type (might be due to invalid IL or missing references)
-		//IL_004d: Expected Obj, but got Unknown
-		//IL_0085: Unknown result type (might be due to invalid IL or missing references)
-		//IL_008f: Expected Obj, but got Unknown
-		if (!_contentLoaded)
+		internal TextBlock ClientTypeTextBlock;
+
+		private bool _contentLoaded;
+
+		public ActiveUsersControl()
 		{
-			_contentLoaded = true;
-			Application.LoadComponent((object)this, new Uri("/Facebook.Messenger.WP8;component/Controls/ActiveUsersControl.xaml", UriKind.Relative));
-			ActiveUserControl = (ActiveUsersItemControl)((FrameworkElement)this).FindName("ActiveUserControl");
-			LayoutRoot = (Grid)((FrameworkElement)this).FindName("LayoutRoot");
-			UserTile = (UserTile)((FrameworkElement)this).FindName("UserTile");
-			NameTextBlock = (DynamicTextBlock)((FrameworkElement)this).FindName("NameTextBlock");
-			ClientTypeTextBlock = (TextBlock)((FrameworkElement)this).FindName("ClientTypeTextBlock");
+			InitializeComponent();
+		}
+
+		protected override void OnItemValueAssigned()
+		{
+			ViewModel.PropertyChanged += OnPropertyChanged;
+		}
+
+		protected override void Recycled(FacebookUser oldUser)
+		{
+			oldUser.PropertyChanged -= OnPropertyChanged;
+		}
+
+		private void OnPropertyChanged(object sender, PropertyChangedEventArgs propertyChangedEventArgs)
+		{
+			UserTile.AssignImages();
+		}
+
+		[DebuggerNonUserCode]
+		public void InitializeComponent()
+		{
+			//IL_0043: Unknown result type (might be due to invalid IL or missing references)
+			//IL_004d: Expected Obj, but got Unknown
+			//IL_0085: Unknown result type (might be due to invalid IL or missing references)
+			//IL_008f: Expected Obj, but got Unknown
+			if (!_contentLoaded)
+			{
+				_contentLoaded = true;
+				Application.LoadComponent((object)this, new Uri("/Facebook.Messenger.WP8;component/Controls/ActiveUsersControl.xaml", UriKind.Relative));
+				ActiveUserControl = (ActiveUsersItemControl)((FrameworkElement)this).FindName("ActiveUserControl");
+				LayoutRoot = (Grid)((FrameworkElement)this).FindName("LayoutRoot");
+				UserTile = (UserTile)((FrameworkElement)this).FindName("UserTile");
+				NameTextBlock = (DynamicTextBlock)((FrameworkElement)this).FindName("NameTextBlock");
+				ClientTypeTextBlock = (TextBlock)((FrameworkElement)this).FindName("ClientTypeTextBlock");
+			}
 		}
 	}
 }

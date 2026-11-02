@@ -3,44 +3,45 @@ using Facebook.Base.Logging;
 using Microsoft.Phone.BackgroundAudio;
 using Microsoft.Xna.Framework.Media;
 
-namespace Facebook.Messenger.WP8.Utilities;
-
-public static class BackgroundAudioHelper
+namespace Facebook.Messenger.WP8.Utilities
 {
-	public static bool IsAnotherApplicationPlayingAudio
+	public static class BackgroundAudioHelper
 	{
-		get
+		public static bool IsAnotherApplicationPlayingAudio
 		{
-			bool gameHasControl = MediaPlayer.GameHasControl;
-			return !gameHasControl;
+			get
+			{
+				bool gameHasControl = MediaPlayer.GameHasControl;
+				return !gameHasControl;
+			}
 		}
-	}
 
-	public static void Stop()
-	{
-		try
+		public static void Stop()
 		{
-			BackgroundAudioPlayer.Instance.Stop();
+			try
+			{
+				BackgroundAudioPlayer.Instance.Stop();
+			}
+			catch (InvalidOperationException arg)
+			{
+				Logger.Warning($"Calling rewind on BackgroundAudioPlayer threw an Exception: {arg}", "Stop", "c:\\Open\\messenger\\Facebook\\Facebook-Messenger-WP8\\Utilities\\BackgroundAudioHelper.cs", 26);
+			}
 		}
-		catch (InvalidOperationException arg)
-		{
-			Logger.Warning($"Calling rewind on BackgroundAudioPlayer threw an Exception: {arg}", "Stop", "c:\\Open\\messenger\\Facebook\\Facebook-Messenger-WP8\\Utilities\\BackgroundAudioHelper.cs", 26);
-		}
-	}
 
-	public static void Play()
-	{
-		//IL_000f: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0019: Expected Obj, but got Unknown
-		try
+		public static void Play()
 		{
-			BackgroundAudioPlayer.Instance.Close();
-			BackgroundAudioPlayer.Instance.Track = new AudioTrack();
-			BackgroundAudioPlayer.Instance.Play();
-		}
-		catch (InvalidOperationException arg)
-		{
-			Logger.Error($"Calling play on BackgroundAudioPlayer threw an Exception: {arg}", "Play", "c:\\Open\\messenger\\Facebook\\Facebook-Messenger-WP8\\Utilities\\BackgroundAudioHelper.cs", 40);
+			//IL_000f: Unknown result type (might be due to invalid IL or missing references)
+			//IL_0019: Expected Obj, but got Unknown
+			try
+			{
+				BackgroundAudioPlayer.Instance.Close();
+				BackgroundAudioPlayer.Instance.Track = new AudioTrack();
+				BackgroundAudioPlayer.Instance.Play();
+			}
+			catch (InvalidOperationException arg)
+			{
+				Logger.Error($"Calling play on BackgroundAudioPlayer threw an Exception: {arg}", "Play", "c:\\Open\\messenger\\Facebook\\Facebook-Messenger-WP8\\Utilities\\BackgroundAudioHelper.cs", 40);
+			}
 		}
 	}
 }

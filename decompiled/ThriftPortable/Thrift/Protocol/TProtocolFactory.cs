@@ -1,8 +1,9 @@
 using Thrift.Transport;
 
-namespace Thrift.Protocol;
-
-public interface TProtocolFactory
+namespace Thrift.Protocol
 {
-	TProtocol GetProtocol(TTransport trans);
+	public interface TProtocolFactory
+	{
+		TProtocol GetProtocol(TTransport trans);
+	}
 }

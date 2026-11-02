@@ -1,46 +1,47 @@
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 
-namespace Facebook.Models;
-
-[DataContract]
-[JsonObject(MemberSerialization.OptIn)]
-public class ActionCount : Notifiable
+namespace Facebook.Models
 {
-	private int? _count = 0;
-
-	[JsonProperty(PropertyName = "count")]
-	[DataMember]
-	public int? Count
+	[DataContract]
+	[JsonObject(MemberSerialization.OptIn)]
+	public class ActionCount : Notifiable
 	{
-		get
-		{
-			return _count;
-		}
-		set
-		{
-			_count = value;
-			OnPropertyChanged("Count");
-			OnPropertyChanged("DisplayCount");
-		}
-	}
+		private int? _count = 0;
 
-	public string DisplayCount
-	{
-		get
+		[JsonProperty(PropertyName = "count")]
+		[DataMember]
+		public int? Count
 		{
-			int num = Count ?? 0;
-			if (num >= 1000000)
+			get
 			{
-				double num2 = (double)num / 1000000.0;
-				return string.Format("{0}M", new object[1] { num2.ToString("0.#") });
+				return _count;
 			}
-			if (num >= 1000)
+			set
 			{
-				double num3 = (double)num / 1000.0;
-				return string.Format("{0}K", new object[1] { num3.ToString("0.#") });
+				_count = value;
+				OnPropertyChanged("Count");
+				OnPropertyChanged("DisplayCount");
 			}
-			return num.ToString();
+		}
+
+		public string DisplayCount
+		{
+			get
+			{
+				int num = Count ?? 0;
+				if (num >= 1000000)
+				{
+					double num2 = (double)num / 1000000.0;
+					return string.Format("{0}M", new object[1] { num2.ToString("0.#") });
+				}
+				if (num >= 1000)
+				{
+					double num3 = (double)num / 1000.0;
+					return string.Format("{0}K", new object[1] { num3.ToString("0.#") });
+				}
+				return num.ToString();
+			}
 		}
 	}
 }

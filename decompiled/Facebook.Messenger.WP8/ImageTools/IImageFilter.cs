@@ -1,6 +1,7 @@
-namespace ImageTools;
-
-public interface IImageFilter
+namespace ImageTools
 {
-	void Apply(ImageBase target, ImageBase source, Rectangle rectangle);
+	public interface IImageFilter
+	{
+		void Apply(ImageBase target, ImageBase source, Rectangle rectangle);
+	}
 }

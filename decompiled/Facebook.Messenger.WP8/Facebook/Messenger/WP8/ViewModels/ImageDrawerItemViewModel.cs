@@ -1,31 +1,32 @@
 using System.Windows.Media;
 using Facebook.Models;
 
-namespace Facebook.Messenger.WP8.ViewModels;
-
-public abstract class ImageDrawerItemViewModel : Notifiable
+namespace Facebook.Messenger.WP8.ViewModels
 {
-	private bool _isSelected;
-
-	public bool IsSelected
+	public abstract class ImageDrawerItemViewModel : Notifiable
 	{
-		get
+		private bool _isSelected;
+
+		public bool IsSelected
 		{
-			return _isSelected;
+			get
+			{
+				return _isSelected;
+			}
+			set
+			{
+				Set(ref _isSelected, value, "IsSelected");
+			}
 		}
-		set
-		{
-			Set(ref _isSelected, value, "IsSelected");
-		}
+
+		public virtual bool CanSend => true;
+
+		public abstract string GetName();
+
+		public abstract PhotoData GetImageToSend();
+
+		public abstract ImageSource GetDisplayImage(int width, int height);
+
+		public abstract RotationAngle GetRotationAngle();
 	}
-
-	public virtual bool CanSend => true;
-
-	public abstract string GetName();
-
-	public abstract PhotoData GetImageToSend();
-
-	public abstract ImageSource GetDisplayImage(int width, int height);
-
-	public abstract RotationAngle GetRotationAngle();
 }

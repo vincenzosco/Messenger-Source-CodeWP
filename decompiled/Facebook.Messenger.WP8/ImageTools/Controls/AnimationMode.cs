@@ -1,8 +1,9 @@
-namespace ImageTools.Controls;
-
-public enum AnimationMode
+namespace ImageTools.Controls
 {
-	None,
-	PlayOnce,
-	Repeat
+	public enum AnimationMode
+	{
+		None,
+		PlayOnce,
+		Repeat
+	}
 }

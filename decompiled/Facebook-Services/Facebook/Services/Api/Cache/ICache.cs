@@ -1,10 +1,11 @@
 using System.Threading.Tasks;
 
-namespace Facebook.Services.Api.Cache;
-
-public interface ICache
+namespace Facebook.Services.Api.Cache
 {
-	Task EnsureSave();
+	public interface ICache
+	{
+		Task EnsureSave();
 
-	Task Purge();
+		Task Purge();
+	}
 }

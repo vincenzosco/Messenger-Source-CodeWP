@@ -1,13 +1,14 @@
 using System;
 
-namespace Facebook.Messenger.WP8.Events;
-
-public class ListEventArgs : EventArgs
+namespace Facebook.Messenger.WP8.Events
 {
-	public ListEvent ListEvent { get; private set; }
-
-	public ListEventArgs(ListEvent listEvent)
+	public class ListEventArgs : EventArgs
 	{
-		ListEvent = listEvent;
+		public ListEvent ListEvent { get; private set; }
+
+		public ListEventArgs(ListEvent listEvent)
+		{
+			ListEvent = listEvent;
+		}
 	}
 }

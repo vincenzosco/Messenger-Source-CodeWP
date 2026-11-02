@@ -1,6 +1,7 @@
-namespace Facebook.Services.Api.Methods.MarkThreadState;
-
-public class Response : FacebookApiResponse
+namespace Facebook.Services.Api.Methods.MarkThreadState
 {
-	public bool Success { get; set; }
+	public class Response : FacebookApiResponse
+	{
+		public bool Success { get; set; }
+	}
 }

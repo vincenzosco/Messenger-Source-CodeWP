@@ -1,11 +1,12 @@
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Facebook.Base.Mqtt.Serialization;
-
-public interface IMqttStreamReader
+namespace Facebook.Base.Mqtt.Serialization
 {
-	Task<byte> ReadByte(CancellationToken token);
+	public interface IMqttStreamReader
+	{
+		Task<byte> ReadByte(CancellationToken token);
 
-	Task ReadBytes(byte[] buff);
+		Task ReadBytes(byte[] buff);
+	}
 }

@@ -3,36 +3,37 @@ using System.Linq;
 using Facebook.Messenger.WP8.ViewModels;
 using Facebook.Models;
 
-namespace Facebook.Messenger.WP8.Utilities;
-
-public class UserUtilities
+namespace Facebook.Messenger.WP8.Utilities
 {
-	public static bool IsCurrentUser(FacebookUser sender, FacebookContext context)
+	public class UserUtilities
 	{
-		if (sender != null)
+		public static bool IsCurrentUser(FacebookUser sender, FacebookContext context)
 		{
-			return IsCurrentUserId(sender.Id, context);
+			if (sender != null)
+			{
+				return IsCurrentUserId(sender.Id, context);
+			}
+			return false;
 		}
-		return false;
-	}
 
-	public static bool IsCurrentUserId(string id, FacebookContext context)
-	{
-		return context?.Session.UserId.Equals(id) ?? false;
-	}
-
-	public static string GetCanonicalParticipantId(ThreadViewModel thread, FacebookContext context)
-	{
-		if (!thread.IsCanonical())
+		public static bool IsCurrentUserId(string id, FacebookContext context)
 		{
+			return context?.Session.UserId.Equals(id) ?? false;
+		}
+
+		public static string GetCanonicalParticipantId(ThreadViewModel thread, FacebookContext context)
+		{
+			if (!thread.IsCanonical())
+			{
+				return string.Empty;
+			}
+			IEnumerable<MailUser> source = thread.Participants.Where((MailUser t) => !IsCurrentUserId(t.Id, context));
+			MailUser mailUser = source.FirstOrDefault();
+			if (mailUser != null)
+			{
+				return mailUser.Id;
+			}
 			return string.Empty;
 		}
-		IEnumerable<MailUser> source = thread.Participants.Where((MailUser t) => !IsCurrentUserId(t.Id, context));
-		MailUser mailUser = source.FirstOrDefault();
-		if (mailUser != null)
-		{
-			return mailUser.Id;
-		}
-		return string.Empty;
 	}
 }

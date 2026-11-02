@@ -1,24 +1,26 @@
 using Newtonsoft.Json.Linq;
 
-namespace Facebook.Models;
-
-public static class ConverterHelper
+namespace Facebook.Models
 {
-	public static string GetTextProperty(JProperty property)
+	public static class ConverterHelper
 	{
-		return GetPropertyString(property, "text");
-	}
-
-	public static string GetPropertyString(JProperty property, string propertyName)
-	{
-		if (property.First is JObject jObject)
+		public static string GetTextProperty(JProperty property)
 		{
-			JProperty jProperty = jObject.Property(propertyName);
-			if (jProperty != null && jProperty.First != null && jProperty.First.Type == JTokenType.String)
-			{
-				return jProperty.First.ToString();
-			}
+			return GetPropertyString(property, "text");
 		}
-		return null;
+
+		public static string GetPropertyString(JProperty property, string propertyName)
+		{
+			JObject jObject = property.First as JObject;
+			if (jObject != null)
+			{
+				JProperty jProperty = jObject.Property(propertyName);
+				if (jProperty != null && jProperty.First != null && jProperty.First.Type == JTokenType.String)
+				{
+					return jProperty.First.ToString();
+				}
+			}
+			return null;
+		}
 	}
 }

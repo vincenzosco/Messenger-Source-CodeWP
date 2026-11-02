@@ -2,14 +2,15 @@ using System;
 using System.Collections.Generic;
 using Facebook.Models;
 
-namespace Facebook.Messenger.WP8.Controls;
-
-public class UserSelectedEventArgs : EventArgs
+namespace Facebook.Messenger.WP8.Controls
 {
-	public List<FacebookUser> SelectedFacebookUsers { get; private set; }
-
-	public UserSelectedEventArgs(List<FacebookUser> selectedUsersList)
+	public class UserSelectedEventArgs : EventArgs
 	{
-		SelectedFacebookUsers = selectedUsersList;
+		public List<FacebookUser> SelectedFacebookUsers { get; private set; }
+
+		public UserSelectedEventArgs(List<FacebookUser> selectedUsersList)
+		{
+			SelectedFacebookUsers = selectedUsersList;
+		}
 	}
 }

@@ -4,35 +4,35 @@ using Facebook.Messenger.Navigation;
 using Facebook.Messenger.WP8.Navigation;
 using Microsoft.Practices.ServiceLocation;
 
-namespace Facebook.Messenger.WP8.ViewModels;
-
-public class ViewModelBuilder
+namespace Facebook.Messenger.WP8.ViewModels
 {
-	private readonly UriMapper _mapper;
-
-	public ViewModelBuilder(UriMapper mapper)
+	public class ViewModelBuilder
 	{
-		_mapper = mapper;
-	}
+		private readonly UriMapper _mapper;
 
-	public TViewModel Build<TViewModel>(Uri uri, Dictionary<string, object> state = null) where TViewModel : FacebookMessengerViewModel
-	{
-		string mapping = _mapper.GetMapping(uri);
-		TViewModel instance = ServiceLocator.Current.GetInstance<TViewModel>();
-		if (mapping == null)
+		public ViewModelBuilder(UriMapper mapper)
 		{
-			throw new Exception("Error parsing uri: " + uri);
+			_mapper = mapper;
 		}
-		if (instance == null)
+
+		public TViewModel Build<TViewModel>(Uri uri, Dictionary<string, object> state = null) where TViewModel : FacebookMessengerViewModel
 		{
-			throw new Exception("ViewModel was not registered in the injector: " + typeof(TViewModel));
+			string mapping = _mapper.GetMapping(uri);
+			TViewModel instance = ServiceLocator.Current.GetInstance<TViewModel>();
+			if (mapping == null)
+			{
+				throw new Exception("Error parsing uri: " + uri);
+			}
+			if (instance == null)
+			{
+				throw new Exception("ViewModel was not registered in the injector: " + typeof(TViewModel));
+			}
+			instance.SetPath(new FacebookUri(mapping, UriKind.RelativeOrAbsolute));
+			if (state != null)
+			{
+				instance.LoadState(state);
+			}
+			return instance;
 		}
-		FacebookUri path = new FacebookUri(mapping, UriKind.RelativeOrAbsolute);
-		instance.SetPath(path);
-		if (state != null)
-		{
-			instance.LoadState(state);
-		}
-		return instance;
 	}
 }

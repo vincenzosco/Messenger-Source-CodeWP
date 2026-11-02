@@ -1,11 +1,12 @@
-namespace Facebook.Base.Mqtt;
-
-public class StateChangedEventArgs
+namespace Facebook.Base.Mqtt
 {
-	public readonly ClientState State;
-
-	public StateChangedEventArgs(ClientState state)
+	public class StateChangedEventArgs
 	{
-		State = state;
+		public readonly ClientState State;
+
+		public StateChangedEventArgs(ClientState state)
+		{
+			State = state;
+		}
 	}
 }

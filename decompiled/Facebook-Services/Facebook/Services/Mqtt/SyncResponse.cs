@@ -1,27 +1,28 @@
 using Facebook.Base;
 
-namespace Facebook.Services.Mqtt;
-
-public class SyncResponse : Response
+namespace Facebook.Services.Mqtt
 {
-	public enum FailureReason
+	public class SyncResponse : Response
 	{
-		None,
-		NotConnected,
-		Exception,
-		NoPubAckReceived
-	}
+		public enum FailureReason
+		{
+			None,
+			NotConnected,
+			Exception,
+			NoPubAckReceived
+		}
 
-	public readonly FailureReason Reason;
+		public readonly FailureReason Reason;
 
-	public SyncResponse()
-		: this(FailureReason.None, null)
-	{
-	}
+		public SyncResponse()
+			: this(FailureReason.None, null)
+		{
+		}
 
-	public SyncResponse(FailureReason reason, Error error)
-	{
-		Reason = reason;
-		Error = error;
+		public SyncResponse(FailureReason reason, Error error)
+		{
+			Reason = reason;
+			Error = error;
+		}
 	}
 }

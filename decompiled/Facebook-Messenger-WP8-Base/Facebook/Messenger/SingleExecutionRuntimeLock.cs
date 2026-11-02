@@ -1,43 +1,44 @@
 using System.Threading;
 using Facebook.Base.Logging;
 
-namespace Facebook.Messenger;
-
-public class SingleExecutionRuntimeLock
+namespace Facebook.Messenger
 {
-	private const string SemaphoreName = "FACEBOOK_MESSENGER_SEMAPHORE";
-
-	private readonly Semaphore _semaphore;
-
-	public SingleExecutionRuntimeLock()
+	public class SingleExecutionRuntimeLock
 	{
-		_semaphore = new Semaphore(1, 1, "FACEBOOK_MESSENGER_SEMAPHORE");
-	}
+		private const string SemaphoreName = "FACEBOOK_MESSENGER_SEMAPHORE";
 
-	public void Acquire()
-	{
-		try
+		private readonly Semaphore _semaphore;
+
+		public SingleExecutionRuntimeLock()
 		{
-			Logger.Info(this, "Attempting to acquire semaphore", "Acquire", "c:\\Open\\messenger\\Facebook\\Facebook-Messenger-WP8-Base\\SingleExecutionRuntimeLock.cs", 21);
-			_semaphore.WaitOne();
-			Logger.Info(this, "Semaphore successfully acquired", "Acquire", "c:\\Open\\messenger\\Facebook\\Facebook-Messenger-WP8-Base\\SingleExecutionRuntimeLock.cs", 23);
+			_semaphore = new Semaphore(1, 1, "FACEBOOK_MESSENGER_SEMAPHORE");
 		}
-		catch (AbandonedMutexException arg)
+
+		public void Acquire()
 		{
-			Logger.Warning(this, $"Semaphore was abandoned: {arg}", "Acquire", "c:\\Open\\messenger\\Facebook\\Facebook-Messenger-WP8-Base\\SingleExecutionRuntimeLock.cs", 27);
+			try
+			{
+				Logger.Info(this, "Attempting to acquire semaphore", "Acquire", "c:\\Open\\messenger\\Facebook\\Facebook-Messenger-WP8-Base\\SingleExecutionRuntimeLock.cs", 21);
+				_semaphore.WaitOne();
+				Logger.Info(this, "Semaphore successfully acquired", "Acquire", "c:\\Open\\messenger\\Facebook\\Facebook-Messenger-WP8-Base\\SingleExecutionRuntimeLock.cs", 23);
+			}
+			catch (AbandonedMutexException arg)
+			{
+				Logger.Warning(this, $"Semaphore was abandoned: {arg}", "Acquire", "c:\\Open\\messenger\\Facebook\\Facebook-Messenger-WP8-Base\\SingleExecutionRuntimeLock.cs", 27);
+			}
 		}
-	}
 
-	public void TryRelease()
-	{
-		Logger.Info(this, "Attempting to release semaphore", "TryRelease", "c:\\Open\\messenger\\Facebook\\Facebook-Messenger-WP8-Base\\SingleExecutionRuntimeLock.cs", 33);
-		_semaphore.Release();
-		Logger.Info(this, "Semaphore successfully released", "TryRelease", "c:\\Open\\messenger\\Facebook\\Facebook-Messenger-WP8-Base\\SingleExecutionRuntimeLock.cs", 35);
-	}
+		public void TryRelease()
+		{
+			Logger.Info(this, "Attempting to release semaphore", "TryRelease", "c:\\Open\\messenger\\Facebook\\Facebook-Messenger-WP8-Base\\SingleExecutionRuntimeLock.cs", 33);
+			_semaphore.Release();
+			Logger.Info(this, "Semaphore successfully released", "TryRelease", "c:\\Open\\messenger\\Facebook\\Facebook-Messenger-WP8-Base\\SingleExecutionRuntimeLock.cs", 35);
+		}
 
-	public void WaitForOwnerToRelease()
-	{
-		Acquire();
-		TryRelease();
+		public void WaitForOwnerToRelease()
+		{
+			Acquire();
+			TryRelease();
+		}
 	}
 }

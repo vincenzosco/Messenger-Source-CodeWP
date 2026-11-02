@@ -6,133 +6,134 @@ using Facebook.Base.Logging;
 using Facebook.Models;
 using Newtonsoft.Json;
 
-namespace Facebook.Services.Api.Cache;
-
-[DataContract]
-[JsonObject(MemberSerialization.OptIn)]
-public class StickerCacheData
+namespace Facebook.Services.Api.Cache
 {
-	[JsonProperty("sticker_packs")]
-	[DataMember]
-	public List<StickerPack> StickerPacks { get; set; }
-
-	[JsonProperty("available_sticker_packs_ids")]
-	[DataMember]
-	public List<string> AvailableStickerPackIds { get; set; }
-
-	[DataMember]
-	[JsonProperty("tray_sticker_packs_ids")]
-	public List<string> TrayStickerPackIds { get; set; }
-
-	[DataMember]
-	[JsonProperty("owned_sticker_packs_ids")]
-	public List<string> OwnedListStickerPackIds { get; set; }
-
-	[JsonProperty("last_sticker_sync_time")]
-	[DataMember]
-	public long LastSyncTime { get; set; }
-
-	public StickerCacheData()
+	[DataContract]
+	[JsonObject(MemberSerialization.OptIn)]
+	public class StickerCacheData
 	{
-		StickerPacks = new List<StickerPack>();
-		AvailableStickerPackIds = new List<string>();
-		TrayStickerPackIds = new List<string>();
-		OwnedListStickerPackIds = new List<string>();
-	}
+		[JsonProperty("sticker_packs")]
+		[DataMember]
+		public List<StickerPack> StickerPacks { get; set; }
 
-	public void ClearAll()
-	{
-		ClearStickerPacks();
-		ClearAvailable();
-		ClearTray();
-		ClearOwned();
-		LastSyncTime = 0L;
-	}
+		[JsonProperty("available_sticker_packs_ids")]
+		[DataMember]
+		public List<string> AvailableStickerPackIds { get; set; }
 
-	public void ClearStickerPacks()
-	{
-		StickerPacks.Clear();
-	}
+		[DataMember]
+		[JsonProperty("tray_sticker_packs_ids")]
+		public List<string> TrayStickerPackIds { get; set; }
 
-	public void ClearAvailable()
-	{
-		AvailableStickerPackIds.Clear();
-	}
+		[DataMember]
+		[JsonProperty("owned_sticker_packs_ids")]
+		public List<string> OwnedListStickerPackIds { get; set; }
 
-	public void ClearTray()
-	{
-		TrayStickerPackIds.Clear();
-	}
+		[JsonProperty("last_sticker_sync_time")]
+		[DataMember]
+		public long LastSyncTime { get; set; }
 
-	public void ClearOwned()
-	{
-		OwnedListStickerPackIds.Clear();
-	}
-
-	public void AddStickerPacks(IEnumerable<StickerPack> stickerPacks)
-	{
-		foreach (StickerPack stickerPack in stickerPacks)
+		public StickerCacheData()
 		{
-			List<StickerPack> stickerPacks2 = StickerPacks;
-			Func<StickerPack, bool> predicate = (StickerPack sp) => sp.Id == stickerPack.Id;
-			if (stickerPacks2.SingleOrDefault(predicate) == null)
+			StickerPacks = new List<StickerPack>();
+			AvailableStickerPackIds = new List<string>();
+			TrayStickerPackIds = new List<string>();
+			OwnedListStickerPackIds = new List<string>();
+		}
+
+		public void ClearAll()
+		{
+			ClearStickerPacks();
+			ClearAvailable();
+			ClearTray();
+			ClearOwned();
+			LastSyncTime = 0L;
+		}
+
+		public void ClearStickerPacks()
+		{
+			StickerPacks.Clear();
+		}
+
+		public void ClearAvailable()
+		{
+			AvailableStickerPackIds.Clear();
+		}
+
+		public void ClearTray()
+		{
+			TrayStickerPackIds.Clear();
+		}
+
+		public void ClearOwned()
+		{
+			OwnedListStickerPackIds.Clear();
+		}
+
+		public void AddStickerPacks(IEnumerable<StickerPack> stickerPacks)
+		{
+			foreach (StickerPack stickerPack in stickerPacks)
 			{
-				StickerPacks.Add(stickerPack);
+				List<StickerPack> stickerPacks2 = StickerPacks;
+				Func<StickerPack, bool> predicate = (StickerPack sp) => sp.Id == stickerPack.Id;
+				if (stickerPacks2.SingleOrDefault(predicate) == null)
+				{
+					StickerPacks.Add(stickerPack);
+				}
 			}
 		}
-	}
 
-	public void AddAvailableStickerPacks(IEnumerable<StickerPack> stickerPacks)
-	{
-		foreach (string item in stickerPacks.Select((StickerPack s) => s.Id))
+		public void AddAvailableStickerPacks(IEnumerable<StickerPack> stickerPacks)
 		{
-			AvailableStickerPackIds.Add(item);
+			foreach (string item in stickerPacks.Select((StickerPack s) => s.Id))
+			{
+				AvailableStickerPackIds.Add(item);
+			}
 		}
-	}
 
-	public void AddTrayStickerPacks(IEnumerable<StickerPack> stickerPacks)
-	{
-		foreach (string item in stickerPacks.Select((StickerPack s) => s.Id))
+		public void AddTrayStickerPacks(IEnumerable<StickerPack> stickerPacks)
 		{
-			TrayStickerPackIds.Add(item);
+			foreach (string item in stickerPacks.Select((StickerPack s) => s.Id))
+			{
+				TrayStickerPackIds.Add(item);
+			}
 		}
-	}
 
-	public void AddOwnedStickerPacks(IEnumerable<StickerPack> stickerPacks)
-	{
-		foreach (string item in stickerPacks.Select((StickerPack s) => s.Id))
+		public void AddOwnedStickerPacks(IEnumerable<StickerPack> stickerPacks)
 		{
-			OwnedListStickerPackIds.Add(item);
+			foreach (string item in stickerPacks.Select((StickerPack s) => s.Id))
+			{
+				OwnedListStickerPackIds.Add(item);
+			}
 		}
-	}
 
-	public void InsertAvailableStickerPack(StickerPack stickerPack, int index)
-	{
-		if (index < AvailableStickerPackIds.Count)
+		public void InsertAvailableStickerPack(StickerPack stickerPack, int index)
 		{
-			AvailableStickerPackIds.Insert(index, stickerPack.Id);
-			return;
+			if (index < AvailableStickerPackIds.Count)
+			{
+				AvailableStickerPackIds.Insert(index, stickerPack.Id);
+				return;
+			}
+			Logger.Error(this, $"Attempted to insert into Available Sticker Packs at invalid index: {index}", "InsertAvailableStickerPack", "c:\\Open\\messenger\\Facebook\\Facebook-Services\\Api\\Cache\\StickerCacheData.cs", 110);
 		}
-		Logger.Error(this, $"Attempted to insert into Available Sticker Packs at invalid index: {index}", "InsertAvailableStickerPack", "c:\\Open\\messenger\\Facebook\\Facebook-Services\\Api\\Cache\\StickerCacheData.cs", 110);
-	}
 
-	public void InsertOwnedStickerPack(StickerPack stickerPack, int index)
-	{
-		if (index < OwnedListStickerPackIds.Count)
+		public void InsertOwnedStickerPack(StickerPack stickerPack, int index)
 		{
-			OwnedListStickerPackIds.Insert(index, stickerPack.Id);
-			return;
+			if (index < OwnedListStickerPackIds.Count)
+			{
+				OwnedListStickerPackIds.Insert(index, stickerPack.Id);
+				return;
+			}
+			Logger.Error(this, $"Attempted to insert into Owned Sticker Packs at invalid index: {index}", "InsertOwnedStickerPack", "c:\\Open\\messenger\\Facebook\\Facebook-Services\\Api\\Cache\\StickerCacheData.cs", 122);
 		}
-		Logger.Error(this, $"Attempted to insert into Owned Sticker Packs at invalid index: {index}", "InsertOwnedStickerPack", "c:\\Open\\messenger\\Facebook\\Facebook-Services\\Api\\Cache\\StickerCacheData.cs", 122);
-	}
 
-	public void InsertTrayStickerPack(StickerPack stickerPack, int index)
-	{
-		if (index < TrayStickerPackIds.Count)
+		public void InsertTrayStickerPack(StickerPack stickerPack, int index)
 		{
-			TrayStickerPackIds.Insert(index, stickerPack.Id);
-			return;
+			if (index < TrayStickerPackIds.Count)
+			{
+				TrayStickerPackIds.Insert(index, stickerPack.Id);
+				return;
+			}
+			Logger.Error(this, $"Attempted to insert into Tray Sticker Packs at invalid index: {index}", "InsertTrayStickerPack", "c:\\Open\\messenger\\Facebook\\Facebook-Services\\Api\\Cache\\StickerCacheData.cs", 134);
 		}
-		Logger.Error(this, $"Attempted to insert into Tray Sticker Packs at invalid index: {index}", "InsertTrayStickerPack", "c:\\Open\\messenger\\Facebook\\Facebook-Services\\Api\\Cache\\StickerCacheData.cs", 134);
 	}
 }

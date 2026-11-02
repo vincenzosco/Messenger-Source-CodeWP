@@ -1,8 +1,9 @@
-namespace Facebook.Models.SyncProtocol;
-
-public enum ThreadAction
+namespace Facebook.Models.SyncProtocol
 {
-	ACTION_INVALID,
-	ACTION_ARCHIVED,
-	ACTION_UNARCHIVED
+	public enum ThreadAction
+	{
+		ACTION_INVALID,
+		ACTION_ARCHIVED,
+		ACTION_UNARCHIVED
+	}
 }

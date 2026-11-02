@@ -1,13 +1,14 @@
 using Facebook.Base.Mqtt;
 
-namespace Facebook.Models.Signals;
-
-public class SyncConnectionStateChangedSignal
+namespace Facebook.Models.Signals
 {
-	public readonly SyncConnectionState State;
-
-	public SyncConnectionStateChangedSignal(SyncConnectionState state)
+	public class SyncConnectionStateChangedSignal
 	{
-		State = state;
+		public readonly SyncConnectionState State;
+
+		public SyncConnectionStateChangedSignal(SyncConnectionState state)
+		{
+			State = state;
+		}
 	}
 }

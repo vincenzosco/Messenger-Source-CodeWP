@@ -3,42 +3,44 @@ using System.Collections.Generic;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
-namespace Facebook.Models;
-
-public class ExperienceWithConverter : CollapseNodesConverter
+namespace Facebook.Models
 {
-	public override object ReadJson(JsonReader reader, Type objectType, object existingValue, JsonSerializer serializer)
+	public class ExperienceWithConverter : CollapseNodesConverter
 	{
-		if (!(base.ReadJson(reader, objectType, existingValue, serializer) is JArray jArray))
+		public override object ReadJson(JsonReader reader, Type objectType, object existingValue, JsonSerializer serializer)
 		{
-			return null;
-		}
-		List<FacebookProfile> list = new List<FacebookProfile>();
-		foreach (JToken item in jArray)
-		{
-			FacebookProfile facebookProfile = new FacebookProfile();
-			foreach (JToken item2 in (IEnumerable<JToken>)item)
+			JArray jArray = base.ReadJson(reader, objectType, existingValue, serializer) as JArray;
+			if (jArray == null)
 			{
-				if (!(item2 is JProperty))
+				return null;
+			}
+			List<FacebookProfile> list = new List<FacebookProfile>();
+			foreach (JToken item in jArray)
+			{
+				FacebookProfile facebookProfile = new FacebookProfile();
+				foreach (JToken item2 in (IEnumerable<JToken>)item)
 				{
-					continue;
-				}
-				JProperty jProperty = item2 as JProperty;
-				if (jProperty.First != null && jProperty.First.Type != JTokenType.Null)
-				{
-					switch (jProperty.Name)
+					if (!(item2 is JProperty))
 					{
-					case "id":
-						facebookProfile.Id = jProperty.First.ToString();
-						break;
-					case "name":
-						facebookProfile.Name = jProperty.First.ToString();
-						break;
+						continue;
+					}
+					JProperty jProperty = item2 as JProperty;
+					if (jProperty.First != null && jProperty.First.Type != JTokenType.Null)
+					{
+						switch (jProperty.Name)
+						{
+						case "id":
+							facebookProfile.Id = jProperty.First.ToString();
+							break;
+						case "name":
+							facebookProfile.Name = jProperty.First.ToString();
+							break;
+						}
 					}
 				}
+				list.Add(facebookProfile);
 			}
-			list.Add(facebookProfile);
+			return list;
 		}
-		return list;
 	}
 }

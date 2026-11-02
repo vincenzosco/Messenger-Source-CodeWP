@@ -1,36 +1,37 @@
 using System;
 using System.Threading.Tasks;
 
-namespace Facebook.Base;
-
-public class DisposableMutexInit : DisposableMutex
+namespace Facebook.Base
 {
-	private Func<Task> _init;
-
-	private bool _initialized;
-
-	public DisposableMutexInit(Func<Task> init)
+	public class DisposableMutexInit : DisposableMutex
 	{
-		_init = init;
-	}
+		private Func<Task> _init;
 
-	public new async Task<IDisposable> WaitAsync()
-	{
-		await base.WaitAsync();
-		if (!_initialized)
+		private bool _initialized;
+
+		public DisposableMutexInit(Func<Task> init)
 		{
-			await _init();
-			_init = null;
-			_initialized = true;
+			_init = init;
 		}
-		return this;
-	}
 
-	public async Task<bool> IsInitialized()
-	{
-		using (await base.WaitAsync())
+		public new async Task<IDisposable> WaitAsync()
 		{
-			return _initialized;
+			await base.WaitAsync();
+			if (!_initialized)
+			{
+				await _init();
+				_init = null;
+				_initialized = true;
+			}
+			return this;
+		}
+
+		public async Task<bool> IsInitialized()
+		{
+			using (await base.WaitAsync())
+			{
+				return _initialized;
+			}
 		}
 	}
 }

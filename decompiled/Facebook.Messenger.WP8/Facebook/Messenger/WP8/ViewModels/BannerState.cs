@@ -1,11 +1,12 @@
-namespace Facebook.Messenger.WP8.ViewModels;
-
-public enum BannerState
+namespace Facebook.Messenger.WP8.ViewModels
 {
-	Hidden,
-	Connecting,
-	Syncing,
-	NoInternet,
-	Connected,
-	Disconnected
+	public enum BannerState
+	{
+		Hidden,
+		Connecting,
+		Syncing,
+		NoInternet,
+		Connected,
+		Disconnected
+	}
 }

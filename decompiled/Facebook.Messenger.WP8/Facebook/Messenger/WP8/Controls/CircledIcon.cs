@@ -1,14 +1,15 @@
 using System;
 using System.Windows;
 
-namespace Facebook.Messenger.WP8.Controls;
-
-public class CircledIcon : ImageButton
+namespace Facebook.Messenger.WP8.Controls
 {
-	public CircledIcon()
+	public class CircledIcon : ImageButton
 	{
-		BackgroundSource = new Uri("\\Assets\\AppBar\\BaseCircle.png", UriKind.Relative);
-		((FrameworkElement)this).Width = 48.0;
-		((FrameworkElement)this).Height = 48.0;
+		public CircledIcon()
+		{
+			BackgroundSource = new Uri("\\Assets\\AppBar\\BaseCircle.png", UriKind.Relative);
+			((FrameworkElement)this).Width = 48.0;
+			((FrameworkElement)this).Height = 48.0;
+		}
 	}
 }

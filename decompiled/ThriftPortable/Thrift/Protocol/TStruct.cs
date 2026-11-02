@@ -1,24 +1,25 @@
-namespace Thrift.Protocol;
-
-public struct TStruct
+namespace Thrift.Protocol
 {
-	private string name;
-
-	public string Name
+	public struct TStruct
 	{
-		get
-		{
-			return name;
-		}
-		set
-		{
-			name = value;
-		}
-	}
+		private string name;
 
-	public TStruct(string name)
-	{
-		this = default;
-		this.name = name;
+		public string Name
+		{
+			get
+			{
+				return name;
+			}
+			set
+			{
+				name = value;
+			}
+		}
+
+		public TStruct(string name)
+		{
+			this = default(TStruct);
+			this.name = name;
+		}
 	}
 }

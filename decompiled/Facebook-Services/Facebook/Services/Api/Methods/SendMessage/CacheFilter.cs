@@ -5,45 +5,46 @@ using Facebook.Models;
 using Facebook.Services.Analytics.Logging;
 using Facebook.Services.Api.Attributes;
 
-namespace Facebook.Services.Api.Methods.SendMessage;
-
-[Bundle(BundleType.InMemoryCache, typeof(Request), typeof(Response))]
-public class CacheFilter : Filter<Request, Response>
+namespace Facebook.Services.Api.Methods.SendMessage
 {
-	public CacheFilter(ServiceContext context)
-		: base(context)
+	[Bundle(BundleType.InMemoryCache, typeof(Request), typeof(Response))]
+	public class CacheFilter : Filter<Request, Response>
 	{
-	}
-
-	public override async Task<Response> ExecuteAsync(Request request, IHandler next)
-	{
-		SendEventLogger.LogSendEvent(request, Context.AnalyticsService);
-		await MarkMessageState(request, MailMessage.MessageState.Queued);
-		return await Next(request, next);
-	}
-
-	private async Task MarkMessageState(Request request, MailMessage.MessageState state)
-	{
-		if (request.HasValidThreadId())
+		public CacheFilter(ServiceContext context)
+			: base(context)
 		{
-			await Context.ThreadCache.UpdateThreadLastMessageState(request.GetValidThreadId(), request.OfflineThreadingId, state);
 		}
-	}
 
-	private static async Task<Response> Next(Request request, IHandler next)
-	{
-		int num = default;
-		_ = num;
-		_ = 0;
-		try
+		public override async Task<Response> ExecuteAsync(Request request, IHandler next)
 		{
-			return await next.ExecuteAsync<Request, Response>(request);
+			SendEventLogger.LogSendEvent(request, Context.AnalyticsService);
+			await MarkMessageState(request, MailMessage.MessageState.Queued);
+			return await Next(request, next);
 		}
-		catch (Exception e)
+
+		private async Task MarkMessageState(Request request, MailMessage.MessageState state)
 		{
-			Response response = new Response();
-			response.Error = Error.FromException(e);
-			return response;
+			if (request.HasValidThreadId())
+			{
+				await Context.ThreadCache.UpdateThreadLastMessageState(request.GetValidThreadId(), request.OfflineThreadingId, state);
+			}
+		}
+
+		private static async Task<Response> Next(Request request, IHandler next)
+		{
+			int num = default(int);
+			int num2 = num;
+			int num3 = 0;
+			try
+			{
+				return await next.ExecuteAsync<Request, Response>(request);
+			}
+			catch (Exception e)
+			{
+				Response response = new Response();
+				response.Error = Error.FromException(e);
+				return response;
+			}
 		}
 	}
 }

@@ -4,33 +4,34 @@ using Facebook.Base.Logging;
 using Microsoft.Xna.Framework.Media;
 using Microsoft.Xna.Framework.Media.PhoneExtensions;
 
-namespace Facebook.Messenger.WP8.Extensions;
-
-public static class PictureExtensions
+namespace Facebook.Messenger.WP8.Extensions
 {
-	public static Stream SafeGetImageOrNull(this Picture picture)
+	public static class PictureExtensions
 	{
-		try
+		public static Stream SafeGetImageOrNull(this Picture picture)
 		{
-			return picture.GetImage();
+			try
+			{
+				return picture.GetImage();
+			}
+			catch (InvalidOperationException)
+			{
+				Logger.Warning($"Failed to GetImage from Picture: {picture.Name}", "SafeGetImageOrNull", "c:\\Open\\messenger\\Facebook\\Facebook-Messenger-WP8\\Extensions\\PictureExtensions.cs", 20);
+				return null;
+			}
 		}
-		catch (InvalidOperationException)
-		{
-			Logger.Warning($"Failed to GetImage from Picture: {picture.Name}", "SafeGetImageOrNull", "c:\\Open\\messenger\\Facebook\\Facebook-Messenger-WP8\\Extensions\\PictureExtensions.cs", 20);
-			return null;
-		}
-	}
 
-	public static Stream SafeGetPreviewImageOrNull(this Picture picture)
-	{
-		try
+		public static Stream SafeGetPreviewImageOrNull(this Picture picture)
 		{
-			return MediaLibraryExtensions.GetPreviewImage(picture);
-		}
-		catch (InvalidOperationException)
-		{
-			Logger.Warning($"Failed to GetPreviewImage from Picture: {picture.Name}", "SafeGetPreviewImageOrNull", "c:\\Open\\messenger\\Facebook\\Facebook-Messenger-WP8\\Extensions\\PictureExtensions.cs", 35);
-			return null;
+			try
+			{
+				return MediaLibraryExtensions.GetPreviewImage(picture);
+			}
+			catch (InvalidOperationException)
+			{
+				Logger.Warning($"Failed to GetPreviewImage from Picture: {picture.Name}", "SafeGetPreviewImageOrNull", "c:\\Open\\messenger\\Facebook\\Facebook-Messenger-WP8\\Extensions\\PictureExtensions.cs", 35);
+				return null;
+			}
 		}
 	}
 }

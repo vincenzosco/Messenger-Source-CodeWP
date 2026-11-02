@@ -3,32 +3,33 @@ using Facebook.Base;
 using Facebook.Services.Api.Attributes;
 using Facebook.Services.Common;
 
-namespace Facebook.Services.Api.Methods.LeaveThread;
-
-[Bundle(BundleType.InMemoryCache, typeof(Request), typeof(BoolResponse))]
-public class CacheFilter : Filter<Request, BoolResponse>
+namespace Facebook.Services.Api.Methods.LeaveThread
 {
-	public CacheFilter(ServiceContext context)
-		: base(context)
+	[Bundle(BundleType.InMemoryCache, typeof(Request), typeof(BoolResponse))]
+	public class CacheFilter : Filter<Request, BoolResponse>
 	{
-	}
+		public CacheFilter(ServiceContext context)
+			: base(context)
+		{
+		}
 
-	public override async Task<BoolResponse> ExecuteAsync(Request request, IHandler next)
-	{
-		if (string.IsNullOrWhiteSpace(request.ThreadId))
+		public override async Task<BoolResponse> ExecuteAsync(Request request, IHandler next)
 		{
-			BoolResponse boolResponse = new BoolResponse();
-			boolResponse.Error = new Error
+			if (string.IsNullOrWhiteSpace(request.ThreadId))
 			{
-				Message = "Missing thread id"
-			};
-			return boolResponse;
+				BoolResponse boolResponse = new BoolResponse();
+				boolResponse.Error = new Error
+				{
+					Message = "Missing thread id"
+				};
+				return boolResponse;
+			}
+			BoolResponse response = await next.ExecuteAsync<Request, BoolResponse>(request);
+			if (response.Succeeded)
+			{
+				await Context.ThreadCache.RemoveThreadAndPinnedThreadByThreadId(request.ThreadId);
+			}
+			return response;
 		}
-		BoolResponse response = await next.ExecuteAsync<Request, BoolResponse>(request);
-		if (response.Succeeded)
-		{
-			await Context.ThreadCache.RemoveThreadAndPinnedThreadByThreadId(request.ThreadId);
-		}
-		return response;
 	}
 }

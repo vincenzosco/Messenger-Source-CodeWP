@@ -1,9 +1,10 @@
-namespace Facebook.Messenger.WP8.ViewModels;
-
-public enum EmptyThreadType
+namespace Facebook.Messenger.WP8.ViewModels
 {
-	None,
-	NoConnection,
-	ServerError,
-	NoThreads
+	public enum EmptyThreadType
+	{
+		None,
+		NoConnection,
+		ServerError,
+		NoThreads
+	}
 }

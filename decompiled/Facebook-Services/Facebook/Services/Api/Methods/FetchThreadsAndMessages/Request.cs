@@ -1,49 +1,50 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Facebook.Services.Api.Methods.FetchThreadsAndMessages;
-
-[Queue(QueueType.Web)]
-public class Request : FacebookServiceRequest
+namespace Facebook.Services.Api.Methods.FetchThreadsAndMessages
 {
-	public readonly IEnumerable<long> ThreadFbIds;
-
-	public readonly IEnumerable<long> ThreadRecipientIds;
-
-	public readonly IEnumerable<string> MessageIds;
-
-	public bool HasThreads
+	[Queue(QueueType.Web)]
+	public class Request : FacebookServiceRequest
 	{
-		get
+		public readonly IEnumerable<long> ThreadFbIds;
+
+		public readonly IEnumerable<long> ThreadRecipientIds;
+
+		public readonly IEnumerable<string> MessageIds;
+
+		public bool HasThreads
 		{
-			if (ThreadFbIds == null || !ThreadFbIds.Any())
+			get
 			{
-				if (ThreadRecipientIds != null)
+				if (ThreadFbIds == null || !ThreadFbIds.Any())
 				{
-					return ThreadRecipientIds.Any();
+					if (ThreadRecipientIds != null)
+					{
+						return ThreadRecipientIds.Any();
+					}
+					return false;
+				}
+				return true;
+			}
+		}
+
+		public bool HasMessages
+		{
+			get
+			{
+				if (MessageIds != null)
+				{
+					return MessageIds.Any();
 				}
 				return false;
 			}
-			return true;
 		}
-	}
 
-	public bool HasMessages
-	{
-		get
+		public Request(IEnumerable<long> threadFbIds, IEnumerable<long> threadRecipientIds, IEnumerable<string> messageIds)
 		{
-			if (MessageIds != null)
-			{
-				return MessageIds.Any();
-			}
-			return false;
+			ThreadFbIds = threadFbIds;
+			ThreadRecipientIds = threadRecipientIds;
+			MessageIds = messageIds;
 		}
-	}
-
-	public Request(IEnumerable<long> threadFbIds, IEnumerable<long> threadRecipientIds, IEnumerable<string> messageIds)
-	{
-		ThreadFbIds = threadFbIds;
-		ThreadRecipientIds = threadRecipientIds;
-		MessageIds = messageIds;
 	}
 }

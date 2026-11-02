@@ -1,8 +1,9 @@
-namespace Facebook.Models.Signals;
-
-public enum DataTypeCleared
+namespace Facebook.Models.Signals
 {
-	Messages,
-	ThreadsAndMessages,
-	All
+	public enum DataTypeCleared
+	{
+		Messages,
+		ThreadsAndMessages,
+		All
+	}
 }

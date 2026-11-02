@@ -1,12 +1,13 @@
 using System.Threading.Tasks;
 
-namespace Facebook.Base;
-
-public interface IUserDataStorage
+namespace Facebook.Base
 {
-	Task<bool> DataExists(string key);
+	public interface IUserDataStorage
+	{
+		Task<bool> DataExists(string key);
 
-	Task<string> GetData(string key);
+		Task<string> GetData(string key);
 
-	Task SetData(string key, string data);
+		Task SetData(string key, string data);
+	}
 }

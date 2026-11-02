@@ -1,8 +1,9 @@
 using Facebook.Models;
 
-namespace Facebook.Services.Localization;
-
-public interface IThreadSnippetGenerator
+namespace Facebook.Services.Localization
 {
-	ThreadSnippetInfo GenerateSnippet(MailMessage message, MailThread thread);
+	public interface IThreadSnippetGenerator
+	{
+		ThreadSnippetInfo GenerateSnippet(MailMessage message, MailThread thread);
+	}
 }

@@ -1,8 +1,9 @@
-namespace Facebook.Models;
-
-public enum RecipientChatOrigin
+namespace Facebook.Models
 {
-	None,
-	Facebook,
-	Messenger
+	public enum RecipientChatOrigin
+	{
+		None,
+		Facebook,
+		Messenger
+	}
 }

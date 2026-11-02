@@ -1,19 +1,20 @@
 using System;
 using System.IO;
 
-namespace ThriftPortable.Extensions;
-
-public interface ISocket : IDisposable
+namespace ThriftPortable.Extensions
 {
-	int ReceiveTimeout { get; set; }
+	public interface ISocket : IDisposable
+	{
+		int ReceiveTimeout { get; set; }
 
-	int SendTimeout { get; set; }
+		int SendTimeout { get; set; }
 
-	bool IsConnected { get; }
+		bool IsConnected { get; }
 
-	Stream GetStream();
+		Stream GetStream();
 
-	void Connect();
+		void Connect();
 
-	void Connect(int timeout);
+		void Connect(int timeout);
+	}
 }

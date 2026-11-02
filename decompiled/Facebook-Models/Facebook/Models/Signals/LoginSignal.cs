@@ -1,11 +1,12 @@
-namespace Facebook.Models.Signals;
-
-public class LoginSignal
+namespace Facebook.Models.Signals
 {
-	public FacebookSession Session { get; private set; }
-
-	public LoginSignal(FacebookSession session)
+	public class LoginSignal
 	{
-		Session = session;
+		public FacebookSession Session { get; private set; }
+
+		public LoginSignal(FacebookSession session)
+		{
+			Session = session;
+		}
 	}
 }

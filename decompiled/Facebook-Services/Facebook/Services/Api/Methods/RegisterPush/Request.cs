@@ -1,15 +1,16 @@
 using System.Collections.Generic;
 
-namespace Facebook.Services.Api.Methods.RegisterPush;
-
-[Queue(QueueType.Web)]
-public class Request : FacebookServiceRequest
+namespace Facebook.Services.Api.Methods.RegisterPush
 {
-	public string DeviceId { get; set; }
+	[Queue(QueueType.Web)]
+	public class Request : FacebookServiceRequest
+	{
+		public string DeviceId { get; set; }
 
-	public string ChannelUri { get; set; }
+		public string ChannelUri { get; set; }
 
-	public string AppVersion { get; set; }
+		public string AppVersion { get; set; }
 
-	public Dictionary<string, string> ExtraParams { get; set; }
+		public Dictionary<string, string> ExtraParams { get; set; }
+	}
 }

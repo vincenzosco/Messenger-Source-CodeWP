@@ -3,57 +3,58 @@ using System.Collections.Generic;
 using System.Threading;
 using Facebook.Base.Mqtt.Messages;
 
-namespace Facebook.Services.Mqtt;
-
-public class PublishAcknowledgementAwaiter
+namespace Facebook.Services.Mqtt
 {
-	public const string NoPubAckReceivedError = "Failed to receive a PubAck";
-
-	private const long TimeoutMs = 15000L;
-
-	private readonly HashSet<int> _receivedMessageIds = new HashSet<int>();
-
-	private AutoResetEvent _waitEvent = new AutoResetEvent(initialState: false);
-
-	private readonly object _pubAckLock = new object();
-
-	public void Reset()
+	public class PublishAcknowledgementAwaiter
 	{
-		lock (_pubAckLock)
-		{
-			_receivedMessageIds.Clear();
-			_waitEvent.Set();
-		}
-	}
+		public const string NoPubAckReceivedError = "Failed to receive a PubAck";
 
-	public void Received(PublishAckMessage message)
-	{
-		lock (_pubAckLock)
-		{
-			_receivedMessageIds.Add(message.MessageId);
-			_waitEvent.Set();
-		}
-	}
+		private const long TimeoutMs = 15000L;
 
-	public bool Await(int messageId)
-	{
-		DateTime dateTime = DateTime.UtcNow.AddMilliseconds(15000.0);
-		while (dateTime > DateTime.UtcNow)
+		private readonly HashSet<int> _receivedMessageIds = new HashSet<int>();
+
+		private AutoResetEvent _waitEvent = new AutoResetEvent(false);
+
+		private readonly object _pubAckLock = new object();
+
+		public void Reset()
 		{
-			if (CheckAndRemoveId(messageId))
+			lock (_pubAckLock)
 			{
-				return true;
+				_receivedMessageIds.Clear();
+				_waitEvent.Set();
 			}
-			_waitEvent.WaitOne(dateTime - DateTime.UtcNow);
 		}
-		return CheckAndRemoveId(messageId);
-	}
 
-	private bool CheckAndRemoveId(int id)
-	{
-		lock (_pubAckLock)
+		public void Received(PublishAckMessage message)
 		{
-			return _receivedMessageIds.Remove(id);
+			lock (_pubAckLock)
+			{
+				_receivedMessageIds.Add(message.MessageId);
+				_waitEvent.Set();
+			}
+		}
+
+		public bool Await(int messageId)
+		{
+			DateTime dateTime = DateTime.UtcNow.AddMilliseconds(15000.0);
+			while (dateTime > DateTime.UtcNow)
+			{
+				if (CheckAndRemoveId(messageId))
+				{
+					return true;
+				}
+				_waitEvent.WaitOne(dateTime - DateTime.UtcNow);
+			}
+			return CheckAndRemoveId(messageId);
+		}
+
+		private bool CheckAndRemoveId(int id)
+		{
+			lock (_pubAckLock)
+			{
+				return _receivedMessageIds.Remove(id);
+			}
 		}
 	}
 }

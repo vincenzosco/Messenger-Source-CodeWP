@@ -1,15 +1,16 @@
 using System;
 using System.Threading.Tasks;
 
-namespace Facebook.Messenger.WP8.Agents.BackgroundInstance;
-
-public interface IBackgroundInstance
+namespace Facebook.Messenger.WP8.Agents.BackgroundInstance
 {
-	bool IsInstanceRunning { get; }
+	public interface IBackgroundInstance
+	{
+		bool IsInstanceRunning { get; }
 
-	EventHandler ExecutionComplete { get; set; }
+		EventHandler ExecutionComplete { get; set; }
 
-	Task Execute();
+		Task Execute();
 
-	void Cancel();
+		void Cancel();
+	}
 }

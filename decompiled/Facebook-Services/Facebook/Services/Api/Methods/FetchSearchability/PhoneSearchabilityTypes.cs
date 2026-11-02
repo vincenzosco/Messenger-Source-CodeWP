@@ -1,8 +1,9 @@
-namespace Facebook.Services.Api.Methods.FetchSearchability;
-
-public enum PhoneSearchabilityTypes
+namespace Facebook.Services.Api.Methods.FetchSearchability
 {
-	Unknown,
-	Self,
-	Everyone
+	public enum PhoneSearchabilityTypes
+	{
+		Unknown,
+		Self,
+		Everyone
+	}
 }

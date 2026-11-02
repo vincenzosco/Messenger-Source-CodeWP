@@ -1,9 +1,10 @@
-namespace Facebook.Models;
-
-public enum ClientTypes
+namespace Facebook.Models
 {
-	Web1 = 1,
-	Web2 = 2,
-	Mobile1 = 4,
-	Mobile2 = 8
+	public enum ClientTypes
+	{
+		Web1 = 1,
+		Web2 = 2,
+		Mobile1 = 4,
+		Mobile2 = 8
+	}
 }

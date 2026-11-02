@@ -4,27 +4,28 @@ using System.Windows.Threading;
 using Facebook.Base;
 using Facebook.Base.Logging;
 
-namespace Facebook.Messenger;
-
-public class UiDispatcher : IDispatcher
+namespace Facebook.Messenger
 {
-	public Dispatcher Dispatcher { get; set; }
-
-	public Task RunAsync(Action action, DispatcherPriority priority = DispatcherPriority.Low)
+	public class UiDispatcher : IDispatcher
 	{
-		Schedule(action, priority);
-		return Task.FromResult(result: true);
-	}
+		public Dispatcher Dispatcher { get; set; }
 
-	public void Schedule(Action action, DispatcherPriority priorty = DispatcherPriority.Low)
-	{
-		if (Dispatcher == null)
+		public Task RunAsync(Action action, DispatcherPriority priority = DispatcherPriority.Low)
 		{
-			Logger.Warning(this, "Calling RunAsync with no window dispatcher", "Schedule", "c:\\Open\\messenger\\Facebook\\Facebook-Messenger-WP8-Base\\UiDispatcher.cs", 23);
+			Schedule(action, priority);
+			return Task.FromResult(true);
 		}
-		else
+
+		public void Schedule(Action action, DispatcherPriority priorty = DispatcherPriority.Low)
 		{
-			Dispatcher.BeginInvoke(action);
+			if (Dispatcher == null)
+			{
+				Logger.Warning(this, "Calling RunAsync with no window dispatcher", "Schedule", "c:\\Open\\messenger\\Facebook\\Facebook-Messenger-WP8-Base\\UiDispatcher.cs", 23);
+			}
+			else
+			{
+				Dispatcher.BeginInvoke(action);
+			}
 		}
 	}
 }

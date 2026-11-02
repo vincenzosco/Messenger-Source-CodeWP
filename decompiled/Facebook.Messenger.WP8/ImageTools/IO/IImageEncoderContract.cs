@@ -2,28 +2,29 @@ using System;
 using System.Diagnostics.Contracts;
 using System.IO;
 
-namespace ImageTools.IO;
-
-internal abstract class IImageEncoderContract : IImageEncoder
+namespace ImageTools.IO
 {
-	string IImageEncoder.Extension
+	internal abstract class IImageEncoderContract : IImageEncoder
 	{
-		get
+		string IImageEncoder.Extension
 		{
+			get
+			{
+				throw new NotImplementedException();
+			}
+		}
+
+		bool IImageEncoder.IsSupportedFileExtension(string extension)
+		{
+			Contract.Requires<ArgumentException>(!string.IsNullOrEmpty(extension), "Extension cannot be null or empty.");
 			throw new NotImplementedException();
 		}
-	}
 
-	bool IImageEncoder.IsSupportedFileExtension(string extension)
-	{
-		Contract.Requires<ArgumentException>(!string.IsNullOrEmpty(extension), "Extension cannot be null or empty.");
-		throw new NotImplementedException();
-	}
-
-	void IImageEncoder.Encode(ExtendedImage image, Stream stream)
-	{
-		Contract.Requires<ArgumentNullException>(image != null, "Image cannot be null.");
-		Contract.Requires<ArgumentNullException>(stream != null, "Stream cannot be null.");
-		throw new NotImplementedException();
+		void IImageEncoder.Encode(ExtendedImage image, Stream stream)
+		{
+			Contract.Requires<ArgumentNullException>(image != null, "Image cannot be null.");
+			Contract.Requires<ArgumentNullException>(stream != null, "Stream cannot be null.");
+			throw new NotImplementedException();
+		}
 	}
 }

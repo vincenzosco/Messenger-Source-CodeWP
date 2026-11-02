@@ -3,30 +3,31 @@ using System.Runtime.Serialization;
 using Facebook.Base;
 using Newtonsoft.Json;
 
-namespace Facebook.Models.PhoneContacts;
-
-[JsonObject(MemberSerialization.OptIn)]
-[DataContract]
-public class FBContactPhoneNumber
+namespace Facebook.Models.PhoneContacts
 {
-	[JsonProperty("number")]
-	[DataMember]
-	public string PhoneNumber;
-
-	[JsonProperty("type")]
-	[DataMember]
-	public string Type;
-
-	[JsonProperty("label")]
-	[DataMember]
-	public string Label;
-
-	public override int GetHashCode()
+	[JsonObject(MemberSerialization.OptIn)]
+	[DataContract]
+	public class FBContactPhoneNumber
 	{
-		List<object> list = new List<object>();
-		list.Add(PhoneNumber);
-		list.Add(Type);
-		list.Add(Label);
-		return HashGenerator.CalculateHashCode(list);
+		[JsonProperty("number")]
+		[DataMember]
+		public string PhoneNumber;
+
+		[JsonProperty("type")]
+		[DataMember]
+		public string Type;
+
+		[JsonProperty("label")]
+		[DataMember]
+		public string Label;
+
+		public override int GetHashCode()
+		{
+			List<object> list = new List<object>();
+			list.Add(PhoneNumber);
+			list.Add(Type);
+			list.Add(Label);
+			return HashGenerator.CalculateHashCode(list);
+		}
 	}
 }

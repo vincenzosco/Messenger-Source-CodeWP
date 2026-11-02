@@ -1,9 +1,10 @@
-namespace Facebook.Messenger.WP8.ViewModels;
-
-public enum EmptyMessageType
+namespace Facebook.Messenger.WP8.ViewModels
 {
-	None,
-	NoConnection,
-	ServerError,
-	NoMessages
+	public enum EmptyMessageType
+	{
+		None,
+		NoConnection,
+		ServerError,
+		NoMessages
+	}
 }

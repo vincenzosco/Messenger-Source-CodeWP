@@ -1,20 +1,21 @@
-namespace Facebook.Base;
-
-public class Response
+namespace Facebook.Base
 {
-	public Error Error { get; set; }
-
-	public bool HasError()
+	public class Response
 	{
-		return Error != null;
-	}
+		public Error Error { get; set; }
 
-	public override string ToString()
-	{
-		if (Error != null)
+		public bool HasError()
 		{
-			return string.Format("Title: {0}, Message: {1}, Exception: {2}", new object[3] { Error.Message, Error.Title, Error.Exception });
+			return Error != null;
 		}
-		return "None";
+
+		public override string ToString()
+		{
+			if (Error != null)
+			{
+				return string.Format("Title: {0}, Message: {1}, Exception: {2}", new object[3] { Error.Message, Error.Title, Error.Exception });
+			}
+			return "None";
+		}
 	}
 }

@@ -1,17 +1,18 @@
 using System;
 
-namespace Facebook.Base.Mqtt;
-
-public class ConnectionFailedEventArgs : StateChangedEventArgs
+namespace Facebook.Base.Mqtt
 {
-	public readonly ConnectionFailureReason FailureReason;
-
-	public readonly Exception FailureException;
-
-	public ConnectionFailedEventArgs(ConnectionFailureReason failureReason, Exception failureException)
-		: base(ClientState.Disconnected)
+	public class ConnectionFailedEventArgs : StateChangedEventArgs
 	{
-		FailureReason = failureReason;
-		FailureException = failureException;
+		public readonly ConnectionFailureReason FailureReason;
+
+		public readonly Exception FailureException;
+
+		public ConnectionFailedEventArgs(ConnectionFailureReason failureReason, Exception failureException)
+			: base(ClientState.Disconnected)
+		{
+			FailureReason = failureReason;
+			FailureException = failureException;
+		}
 	}
 }

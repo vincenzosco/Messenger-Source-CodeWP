@@ -1,24 +1,25 @@
 using Facebook.Models;
 using Facebook.Services.Api;
 
-namespace Facebook.Messenger.Gatekeepers;
-
-public class DebugLogDisplayEnabledProvider : GatekeeperProvider
+namespace Facebook.Messenger.Gatekeepers
 {
-	public override bool Enabled
+	public class DebugLogDisplayEnabledProvider : GatekeeperProvider
 	{
-		get
+		public override bool Enabled
 		{
-			if (!DebuggingUtility.IsTestBuild)
+			get
 			{
-				return base.Enabled;
+				if (!DebuggingUtility.IsTestBuild)
+				{
+					return base.Enabled;
+				}
+				return true;
 			}
-			return true;
 		}
-	}
 
-	public DebugLogDisplayEnabledProvider(FacebookContext context)
-		: base(context, "windows_phone_messenger_debug_log_display")
-	{
+		public DebugLogDisplayEnabledProvider(FacebookContext context)
+			: base(context, "windows_phone_messenger_debug_log_display")
+		{
+		}
 	}
 }

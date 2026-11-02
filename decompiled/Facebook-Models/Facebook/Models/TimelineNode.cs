@@ -1,13 +1,14 @@
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 
-namespace Facebook.Models;
-
-[JsonObject(MemberSerialization.OptIn)]
-[DataContract]
-public class TimelineNode
+namespace Facebook.Models
 {
-	[JsonProperty("node")]
-	[DataMember]
-	public TimelineObject TimelineObject { get; set; }
+	[JsonObject(MemberSerialization.OptIn)]
+	[DataContract]
+	public class TimelineNode
+	{
+		[JsonProperty("node")]
+		[DataMember]
+		public TimelineObject TimelineObject { get; set; }
+	}
 }

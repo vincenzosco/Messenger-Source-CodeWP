@@ -1,13 +1,14 @@
 using System.Runtime.Serialization;
 
-namespace Facebook.Models;
-
-public enum SearchResultType
+namespace Facebook.Models
 {
-	Page,
-	App,
-	User,
-	Group,
-	[EnumMember(Value = "hashtag_exact")]
-	HashtagExact
+	public enum SearchResultType
+	{
+		Page,
+		App,
+		User,
+		Group,
+		[EnumMember(Value = "hashtag_exact")]
+		HashtagExact
+	}
 }

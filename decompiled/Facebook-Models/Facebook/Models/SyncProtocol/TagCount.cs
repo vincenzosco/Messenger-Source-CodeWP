@@ -1,125 +1,126 @@
 using System.Text;
 using Thrift.Protocol;
 
-namespace Facebook.Models.SyncProtocol;
-
-public class TagCount : TBase, TAbstractBase
+namespace Facebook.Models.SyncProtocol
 {
-	public struct Isset
+	public class TagCount : TBase, TAbstractBase
 	{
-		public bool hasMore;
-	}
-
-	private bool _hasMore;
-
-	public Isset __isset;
-
-	public int Count { get; set; }
-
-	public bool HasMore
-	{
-		get
+		public struct Isset
 		{
-			return _hasMore;
+			public bool hasMore;
 		}
-		set
+
+		private bool _hasMore;
+
+		public Isset __isset;
+
+		public int Count { get; set; }
+
+		public bool HasMore
 		{
-			__isset.hasMore = true;
-			_hasMore = value;
-		}
-	}
-
-	public TagCount()
-	{
-	}
-
-	public TagCount(int count)
-		: this()
-	{
-		Count = count;
-	}
-
-	public void Read(TProtocol iprot)
-	{
-		bool flag = false;
-		iprot.ReadStructBegin();
-		while (true)
-		{
-			TField tField = iprot.ReadFieldBegin();
-			if (tField.Type == TType.Stop)
+			get
 			{
-				break;
+				return _hasMore;
 			}
-			switch (tField.ID)
+			set
 			{
-			case 1:
-				if (tField.Type == TType.I32)
-				{
-					Count = iprot.ReadI32();
-					flag = true;
-				}
-				else
-				{
-					TProtocolUtil.Skip(iprot, tField.Type);
-				}
-				break;
-			case 2:
-				if (tField.Type == TType.Bool)
-				{
-					HasMore = iprot.ReadBool();
-				}
-				else
-				{
-					TProtocolUtil.Skip(iprot, tField.Type);
-				}
-				break;
-			default:
-				TProtocolUtil.Skip(iprot, tField.Type);
-				break;
+				__isset.hasMore = true;
+				_hasMore = value;
 			}
-			iprot.ReadFieldEnd();
 		}
-		iprot.ReadStructEnd();
-		if (!flag)
-		{
-			throw new TProtocolException(1);
-		}
-	}
 
-	public void Write(TProtocol oprot)
-	{
-		TStruct struc = new TStruct("TagCount");
-		oprot.WriteStructBegin(struc);
-		TField field = new TField
+		public TagCount()
 		{
-			Name = "count",
-			Type = TType.I32,
-			ID = 1
-		};
-		oprot.WriteFieldBegin(field);
-		oprot.WriteI32(Count);
-		oprot.WriteFieldEnd();
-		if (__isset.hasMore)
+		}
+
+		public TagCount(int count)
+			: this()
 		{
-			field.Name = "hasMore";
-			field.Type = TType.Bool;
-			field.ID = 2;
+			Count = count;
+		}
+
+		public void Read(TProtocol iprot)
+		{
+			bool flag = false;
+			iprot.ReadStructBegin();
+			while (true)
+			{
+				TField tField = iprot.ReadFieldBegin();
+				if (tField.Type == TType.Stop)
+				{
+					break;
+				}
+				switch (tField.ID)
+				{
+				case 1:
+					if (tField.Type == TType.I32)
+					{
+						Count = iprot.ReadI32();
+						flag = true;
+					}
+					else
+					{
+						TProtocolUtil.Skip(iprot, tField.Type);
+					}
+					break;
+				case 2:
+					if (tField.Type == TType.Bool)
+					{
+						HasMore = iprot.ReadBool();
+					}
+					else
+					{
+						TProtocolUtil.Skip(iprot, tField.Type);
+					}
+					break;
+				default:
+					TProtocolUtil.Skip(iprot, tField.Type);
+					break;
+				}
+				iprot.ReadFieldEnd();
+			}
+			iprot.ReadStructEnd();
+			if (!flag)
+			{
+				throw new TProtocolException(1);
+			}
+		}
+
+		public void Write(TProtocol oprot)
+		{
+			TStruct struc = new TStruct("TagCount");
+			oprot.WriteStructBegin(struc);
+			TField field = new TField
+			{
+				Name = "count",
+				Type = TType.I32,
+				ID = 1
+			};
 			oprot.WriteFieldBegin(field);
-			oprot.WriteBool(HasMore);
+			oprot.WriteI32(Count);
 			oprot.WriteFieldEnd();
+			if (__isset.hasMore)
+			{
+				field.Name = "hasMore";
+				field.Type = TType.Bool;
+				field.ID = 2;
+				oprot.WriteFieldBegin(field);
+				oprot.WriteBool(HasMore);
+				oprot.WriteFieldEnd();
+			}
+			oprot.WriteFieldStop();
+			oprot.WriteStructEnd();
 		}
-		oprot.WriteFieldStop();
-		oprot.WriteStructEnd();
-	}
 
-	public override string ToString()
-	{
-		StringBuilder stringBuilder = new StringBuilder("TagCount(");
-		stringBuilder.Append("Count: ");
-		stringBuilder.Append(Count);
-		stringBuilder.Append(",HasMore: ");
-		stringBuilder.Append(HasMore);
-		stringBuilder.Append(")");
-		return stringBuilder.ToString();
+		public override string ToString()
+		{
+			StringBuilder stringBuilder = new StringBuilder("TagCount(");
+			stringBuilder.Append("Count: ");
+			stringBuilder.Append(Count);
+			stringBuilder.Append(",HasMore: ");
+			stringBuilder.Append(HasMore);
+			stringBuilder.Append(")");
+			return stringBuilder.ToString();
+		}
 	}
 }

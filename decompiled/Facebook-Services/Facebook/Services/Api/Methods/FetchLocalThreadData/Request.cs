@@ -1,14 +1,15 @@
 using System.Collections.Generic;
 
-namespace Facebook.Services.Api.Methods.FetchLocalThreadData;
-
-[Queue(QueueType.Local)]
-public class Request : FacebookServiceRequest
+namespace Facebook.Services.Api.Methods.FetchLocalThreadData
 {
-	public List<string> ThreadIds { get; set; }
-
-	public Request(List<string> ids)
+	[Queue(QueueType.Local)]
+	public class Request : FacebookServiceRequest
 	{
-		ThreadIds = ids;
+		public List<string> ThreadIds { get; set; }
+
+		public Request(List<string> ids)
+		{
+			ThreadIds = ids;
+		}
 	}
 }

@@ -1,10 +1,11 @@
-namespace Facebook.Base.Logging;
-
-public enum LogLevel
+namespace Facebook.Base.Logging
 {
-	Debug,
-	Info,
-	Warning,
-	Error,
-	Critical
+	public enum LogLevel
+	{
+		Debug,
+		Info,
+		Warning,
+		Error,
+		Critical
+	}
 }

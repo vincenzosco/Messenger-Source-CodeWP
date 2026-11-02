@@ -1,8 +1,9 @@
-namespace Facebook.Base.Strategy;
-
-public enum ExecutionResult
+namespace Facebook.Base.Strategy
 {
-	Failed,
-	Success,
-	Cancelled
+	public enum ExecutionResult
+	{
+		Failed,
+		Success,
+		Cancelled
+	}
 }

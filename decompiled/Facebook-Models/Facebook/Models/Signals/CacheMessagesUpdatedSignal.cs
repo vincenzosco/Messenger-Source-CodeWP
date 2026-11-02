@@ -1,19 +1,20 @@
 using System.Collections.Generic;
 
-namespace Facebook.Models.Signals;
-
-public class CacheMessagesUpdatedSignal
+namespace Facebook.Models.Signals
 {
-	public readonly MailThread Thread;
-
-	public readonly List<MailMessage> Messages;
-
-	public readonly bool ShouldNotify;
-
-	public CacheMessagesUpdatedSignal(MailThread thread, List<MailMessage> messages, bool shouldNotify)
+	public class CacheMessagesUpdatedSignal
 	{
-		Thread = thread;
-		Messages = messages;
-		ShouldNotify = shouldNotify;
+		public readonly MailThread Thread;
+
+		public readonly List<MailMessage> Messages;
+
+		public readonly bool ShouldNotify;
+
+		public CacheMessagesUpdatedSignal(MailThread thread, List<MailMessage> messages, bool shouldNotify)
+		{
+			Thread = thread;
+			Messages = messages;
+			ShouldNotify = shouldNotify;
+		}
 	}
 }

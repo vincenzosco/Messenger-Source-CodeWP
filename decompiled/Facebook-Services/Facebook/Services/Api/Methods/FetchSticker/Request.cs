@@ -1,7 +1,8 @@
-namespace Facebook.Services.Api.Methods.FetchSticker;
-
-[Queue(QueueType.Web)]
-public class Request : FacebookServiceRequest
+namespace Facebook.Services.Api.Methods.FetchSticker
 {
-	public string StickerId { get; set; }
+	[Queue(QueueType.Web)]
+	public class Request : FacebookServiceRequest
+	{
+		public string StickerId { get; set; }
+	}
 }

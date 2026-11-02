@@ -1,12 +1,13 @@
 using System.IO;
 
-namespace ImageTools.IO;
-
-public interface IImageEncoder
+namespace ImageTools.IO
 {
-	string Extension { get; }
+	public interface IImageEncoder
+	{
+		string Extension { get; }
 
-	bool IsSupportedFileExtension(string extension);
+		bool IsSupportedFileExtension(string extension);
 
-	void Encode(ExtendedImage image, Stream stream);
+		void Encode(ExtendedImage image, Stream stream);
+	}
 }

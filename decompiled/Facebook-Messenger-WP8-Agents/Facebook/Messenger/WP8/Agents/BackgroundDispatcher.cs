@@ -2,17 +2,18 @@ using System;
 using System.Threading.Tasks;
 using Facebook.Base;
 
-namespace Facebook.Messenger.WP8.Agents;
-
-public class BackgroundDispatcher : IDispatcher
+namespace Facebook.Messenger.WP8.Agents
 {
-	public Task RunAsync(Action action, DispatcherPriority priorty = DispatcherPriority.Low)
+	public class BackgroundDispatcher : IDispatcher
 	{
-		return Task.Run(action);
-	}
+		public Task RunAsync(Action action, DispatcherPriority priorty = DispatcherPriority.Low)
+		{
+			return Task.Run(action);
+		}
 
-	public void Schedule(Action action, DispatcherPriority priorty = DispatcherPriority.Low)
-	{
-		action();
+		public void Schedule(Action action, DispatcherPriority priorty = DispatcherPriority.Low)
+		{
+			action();
+		}
 	}
 }

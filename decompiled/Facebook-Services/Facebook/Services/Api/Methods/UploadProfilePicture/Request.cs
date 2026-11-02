@@ -1,7 +1,8 @@
-namespace Facebook.Services.Api.Methods.UploadProfilePicture;
-
-[Queue(QueueType.Web)]
-public class Request : FacebookServiceRequest
+namespace Facebook.Services.Api.Methods.UploadProfilePicture
 {
-	public string ImageUrl { get; set; }
+	[Queue(QueueType.Web)]
+	public class Request : FacebookServiceRequest
+	{
+		public string ImageUrl { get; set; }
+	}
 }

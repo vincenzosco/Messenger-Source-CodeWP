@@ -1,8 +1,9 @@
 using System;
 
-namespace Facebook.Messenger;
-
-public interface IDelegateReference
+namespace Facebook.Messenger
 {
-	Delegate Target { get; }
+	public interface IDelegateReference
+	{
+		Delegate Target { get; }
+	}
 }

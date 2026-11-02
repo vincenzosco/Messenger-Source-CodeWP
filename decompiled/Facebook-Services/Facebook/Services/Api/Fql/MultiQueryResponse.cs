@@ -2,26 +2,27 @@ using System.Collections.Generic;
 using Facebook.Services.Api.Methods;
 using Newtonsoft.Json;
 
-namespace Facebook.Services.Api.Fql;
-
-public class MultiQueryResponse : FacebookApiResponse
+namespace Facebook.Services.Api.Fql
 {
-	[JsonProperty("data")]
-	public MultiQueryData Data { get; set; }
-
-	public MultiQueryResponse()
+	public class MultiQueryResponse : FacebookApiResponse
 	{
-		Data = new MultiQueryData();
-	}
+		[JsonProperty("data")]
+		public MultiQueryData Data { get; set; }
 
-	public List<T> Get<T>(string key)
-	{
-		if (!Data.ContainsKey(key))
+		public MultiQueryResponse()
 		{
-			Data[key] = new List<T>();
+			Data = new MultiQueryData();
 		}
-		object obj = Data[key];
-		List<T> list = obj as List<T>;
-		return list ?? new List<T>();
+
+		public List<T> Get<T>(string key)
+		{
+			if (!Data.ContainsKey(key))
+			{
+				Data[key] = new List<T>();
+			}
+			object obj = Data[key];
+			List<T> list = obj as List<T>;
+			return list ?? new List<T>();
+		}
 	}
 }

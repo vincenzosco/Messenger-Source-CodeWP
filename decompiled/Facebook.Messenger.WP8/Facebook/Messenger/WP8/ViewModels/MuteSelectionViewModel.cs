@@ -10,63 +10,64 @@ using Facebook.Messenger.WP8.Utilities;
 using Facebook.Models;
 using Facebook.Services.Api;
 
-namespace Facebook.Messenger.WP8.ViewModels;
-
-public class MuteSelectionViewModel : FacebookMessengerViewModel
+namespace Facebook.Messenger.WP8.ViewModels
 {
-	private ObservableCollection<MuteSelectionItemViewModel> _menuItems;
-
-	private ThreadViewModel _threadViewModel;
-
-	public ObservableCollection<MuteSelectionItemViewModel> MenuItems
+	public class MuteSelectionViewModel : FacebookMessengerViewModel
 	{
-		get
+		private ObservableCollection<MuteSelectionItemViewModel> _menuItems;
+
+		private ThreadViewModel _threadViewModel;
+
+		public ObservableCollection<MuteSelectionItemViewModel> MenuItems
 		{
-			return _menuItems;
+			get
+			{
+				return _menuItems;
+			}
+			set
+			{
+				Set(ref _menuItems, value, false, "MenuItems");
+			}
 		}
-		set
+
+		public MuteSelectionViewModel(Facebook.Services.Api.Service apiService, FacebookContext context, Navigator navigator, IDispatcher dispatcher, INetworkStatus networkStatus)
+			: base(apiService, context, navigator, dispatcher, networkStatus)
 		{
-			Set(ref _menuItems, value, broadcast: false, "MenuItems");
+			_menuItems = new ObservableCollection<MuteSelectionItemViewModel>();
+			_menuItems.Add(new MuteSelectionItemViewModel(this, MuteDuration.Forever));
+			_menuItems.Add(new MuteSelectionItemViewModel(this, MuteDuration.Hour));
+			_menuItems.Add(new MuteSelectionItemViewModel(this, MuteDuration.EightAM));
 		}
-	}
 
-	public MuteSelectionViewModel(Facebook.Services.Api.Service apiService, FacebookContext context, Navigator navigator, IDispatcher dispatcher, INetworkStatus networkStatus)
-		: base(apiService, context, navigator, dispatcher, networkStatus)
-	{
-		_menuItems = new ObservableCollection<MuteSelectionItemViewModel>();
-		_menuItems.Add(new MuteSelectionItemViewModel(this, MuteDuration.Forever));
-		_menuItems.Add(new MuteSelectionItemViewModel(this, MuteDuration.Hour));
-		_menuItems.Add(new MuteSelectionItemViewModel(this, MuteDuration.EightAM));
-	}
-
-	public override void SetPath(Uri uri)
-	{
-		base.SetPath(uri);
-		_threadViewModel = Navigator.GetAndClearNavigationData() as ThreadViewModel;
-	}
-
-	public override void LoadState(Dictionary<string, object> state)
-	{
-		base.LoadState(state);
-		if (_threadViewModel == null)
+		public override void SetPath(Uri uri)
 		{
-			Navigator.GoBack();
+			base.SetPath(uri);
+			_threadViewModel = Navigator.GetAndClearNavigationData() as ThreadViewModel;
 		}
-	}
 
-	public async Task TurnOnMute(MuteDuration duration)
-	{
-		IsLoading = true;
-		Response response = await MuteHelper.SetThreadMuteState(duration, Context, ApiService, _threadViewModel.Id);
-		IsLoading = false;
-		if (!response.HasError())
+		public override void LoadState(Dictionary<string, object> state)
 		{
-			Navigator.GoBack();
-			return;
+			base.LoadState(state);
+			if (_threadViewModel == null)
+			{
+				Navigator.GoBack();
+			}
 		}
-		OnError(new Error
+
+		public async Task TurnOnMute(MuteDuration duration)
 		{
-			Message = StringLibrary.Error_Changing_Mute
-		});
+			IsLoading = true;
+			Response response = await MuteHelper.SetThreadMuteState(duration, Context, ApiService, _threadViewModel.Id);
+			IsLoading = false;
+			if (!response.HasError())
+			{
+				Navigator.GoBack();
+				return;
+			}
+			OnError(new Error
+			{
+				Message = StringLibrary.Error_Changing_Mute
+			});
+		}
 	}
 }

@@ -1,7 +1,8 @@
-namespace Facebook.Models.SyncProtocol;
-
-public enum RTCEventType
+namespace Facebook.Models.SyncProtocol
 {
-	VOICE_EVENT = 1,
-	VIDEO_EVENT
+	public enum RTCEventType
+	{
+		VOICE_EVENT = 1,
+		VIDEO_EVENT
+	}
 }

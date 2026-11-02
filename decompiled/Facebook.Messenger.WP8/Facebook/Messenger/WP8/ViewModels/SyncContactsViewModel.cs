@@ -7,34 +7,35 @@ using Facebook.Models;
 using Facebook.Services.Api;
 using GalaSoft.MvvmLight.Command;
 
-namespace Facebook.Messenger.WP8.ViewModels;
-
-public class SyncContactsViewModel : FacebookMessengerViewModel
+namespace Facebook.Messenger.WP8.ViewModels
 {
-	private readonly PhoneContactsManager PhoneContactsManager;
-
-	private RelayCommand _syncContactsCommand;
-
-	private RelayCommand _skipSyncCommand;
-
-	public RelayCommand SyncContactsCommand => _syncContactsCommand ?? (_syncContactsCommand = new RelayCommand(ExecuteSyncContactsCommand));
-
-	public RelayCommand SkipSyncCommand => _skipSyncCommand ?? (_skipSyncCommand = new RelayCommand(ExecuteSkipSyncCommand));
-
-	public SyncContactsViewModel(PhoneContactsManager phoneContactsManager, Facebook.Services.Api.Service apiService, FacebookContext context, Navigator navigator, IDispatcher dispatcher, INetworkStatus networkStatus)
-		: base(apiService, context, navigator, dispatcher, networkStatus)
+	public class SyncContactsViewModel : FacebookMessengerViewModel
 	{
-		PhoneContactsManager = phoneContactsManager;
-	}
+		private readonly PhoneContactsManager PhoneContactsManager;
 
-	private void ExecuteSyncContactsCommand()
-	{
-		PhoneContactsManager.StartContactSync();
-		Navigator.Reset(FacebookUri.NuxOnMessengerUri);
-	}
+		private RelayCommand _syncContactsCommand;
 
-	private void ExecuteSkipSyncCommand()
-	{
-		Navigator.Reset(FacebookUri.NuxOnMessengerUri);
+		private RelayCommand _skipSyncCommand;
+
+		public RelayCommand SyncContactsCommand => _syncContactsCommand ?? (_syncContactsCommand = new RelayCommand(ExecuteSyncContactsCommand));
+
+		public RelayCommand SkipSyncCommand => _skipSyncCommand ?? (_skipSyncCommand = new RelayCommand(ExecuteSkipSyncCommand));
+
+		public SyncContactsViewModel(PhoneContactsManager phoneContactsManager, Facebook.Services.Api.Service apiService, FacebookContext context, Navigator navigator, IDispatcher dispatcher, INetworkStatus networkStatus)
+			: base(apiService, context, navigator, dispatcher, networkStatus)
+		{
+			PhoneContactsManager = phoneContactsManager;
+		}
+
+		private void ExecuteSyncContactsCommand()
+		{
+			PhoneContactsManager.StartContactSync();
+			Navigator.Reset(FacebookUri.NuxOnMessengerUri);
+		}
+
+		private void ExecuteSkipSyncCommand()
+		{
+			Navigator.Reset(FacebookUri.NuxOnMessengerUri);
+		}
 	}
 }

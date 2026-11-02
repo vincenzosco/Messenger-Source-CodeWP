@@ -1,9 +1,10 @@
-namespace Thrift.Protocol;
-
-public enum TMessageType
+namespace Thrift.Protocol
 {
-	Call = 1,
-	Reply,
-	Exception,
-	Oneway
+	public enum TMessageType
+	{
+		Call = 1,
+		Reply,
+		Exception,
+		Oneway
+	}
 }

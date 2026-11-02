@@ -1,10 +1,11 @@
-namespace Facebook.Models;
-
-public class EventMembersUpdateSignal
+namespace Facebook.Models
 {
-	public string Id;
+	public class EventMembersUpdateSignal
+	{
+		public string Id;
 
-	public RSVPStatus? RsvpStatus;
+		public RSVPStatus? RsvpStatus;
 
-	public int Count;
+		public int Count;
+	}
 }

@@ -1,14 +1,15 @@
 using System;
 using Facebook.Base;
 
-namespace Facebook.Messenger.WP8.ViewModels;
-
-public class ApiErrorException : Exception
+namespace Facebook.Messenger.WP8.ViewModels
 {
-	public Error Error { get; set; }
-
-	public ApiErrorException(Error error)
+	public class ApiErrorException : Exception
 	{
-		Error = error;
+		public Error Error { get; set; }
+
+		public ApiErrorException(Error error)
+		{
+			Error = error;
+		}
 	}
 }

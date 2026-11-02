@@ -1,8 +1,9 @@
-namespace Facebook.Services.Common;
-
-public enum JewelType
+namespace Facebook.Services.Common
 {
-	FriendRequests,
-	Messages,
-	Notifications
+	public enum JewelType
+	{
+		FriendRequests,
+		Messages,
+		Notifications
+	}
 }

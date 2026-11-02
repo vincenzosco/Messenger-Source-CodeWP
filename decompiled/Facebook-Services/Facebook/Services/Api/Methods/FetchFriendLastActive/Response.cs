@@ -2,27 +2,28 @@ using System.Collections.Generic;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 
-namespace Facebook.Services.Api.Methods.FetchFriendLastActive;
-
-public class Response : FacebookApiResponse
+namespace Facebook.Services.Api.Methods.FetchFriendLastActive
 {
-	[DataMember]
-	[JsonProperty(PropertyName = "data")]
-	public List<LastActiveParams> LastActiveInfo;
-
-	public static Response FromLastActive(LastActiveParams lastActive)
+	public class Response : FacebookApiResponse
 	{
-		Response response = new Response();
-		response.LastActiveInfo = new List<LastActiveParams> { lastActive };
-		return response;
-	}
+		[DataMember]
+		[JsonProperty(PropertyName = "data")]
+		public List<LastActiveParams> LastActiveInfo;
 
-	public bool HasValidLastActive()
-	{
-		if (!HasError() && LastActiveInfo != null && LastActiveInfo.Count > 0)
+		public static Response FromLastActive(LastActiveParams lastActive)
 		{
-			return LastActiveInfo[0].LastActive != null;
+			Response response = new Response();
+			response.LastActiveInfo = new List<LastActiveParams> { lastActive };
+			return response;
 		}
-		return false;
+
+		public bool HasValidLastActive()
+		{
+			if (!HasError() && LastActiveInfo != null && LastActiveInfo.Count > 0)
+			{
+				return LastActiveInfo[0].LastActive != null;
+			}
+			return false;
+		}
 	}
 }

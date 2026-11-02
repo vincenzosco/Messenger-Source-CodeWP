@@ -1,11 +1,12 @@
-namespace Facebook.Models.Signals;
-
-public class ContactSyncToggled
+namespace Facebook.Models.Signals
 {
-	public bool IsEnabled { get; set; }
-
-	public ContactSyncToggled(bool isEnabled)
+	public class ContactSyncToggled
 	{
-		IsEnabled = isEnabled;
+		public bool IsEnabled { get; set; }
+
+		public ContactSyncToggled(bool isEnabled)
+		{
+			IsEnabled = isEnabled;
+		}
 	}
 }

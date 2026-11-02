@@ -1,6 +1,7 @@
-namespace Facebook.Models;
-
-public class FacebookWithFriendTag
+namespace Facebook.Models
 {
-	public string tag_uid { get; set; }
+	public class FacebookWithFriendTag
+	{
+		public string tag_uid { get; set; }
+	}
 }

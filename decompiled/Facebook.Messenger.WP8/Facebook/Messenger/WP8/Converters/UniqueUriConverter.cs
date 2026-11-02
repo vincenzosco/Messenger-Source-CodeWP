@@ -2,30 +2,32 @@ using System;
 using System.Globalization;
 using System.Windows.Data;
 
-namespace Facebook.Messenger.WP8.Converters;
-
-public class UniqueUriConverter : IValueConverter
+namespace Facebook.Messenger.WP8.Converters
 {
-	public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+	public class UniqueUriConverter : IValueConverter
 	{
-		Uri uri = value as Uri;
-		if (uri != null)
+		public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
 		{
-			string text = uri.ToString();
-			if (!string.IsNullOrWhiteSpace(text))
+			Uri uri = value as Uri;
+			if (uri != null)
 			{
-				text += string.Format("{0}&ticks={1}", (!text.Contains("?")) ? "?" : string.Empty, DateTime.Now.Ticks);
-				if (Uri.TryCreate(text, uri.IsAbsoluteUri ? UriKind.Absolute : UriKind.Relative, out var result))
+				string text = uri.ToString();
+				if (!string.IsNullOrWhiteSpace(text))
 				{
-					return result;
+					text += string.Format("{0}&ticks={1}", (!text.Contains("?")) ? "?" : string.Empty, DateTime.Now.Ticks);
+					Uri result;
+					if (Uri.TryCreate(text, uri.IsAbsoluteUri ? UriKind.Absolute : UriKind.Relative, out result))
+					{
+						return result;
+					}
 				}
 			}
+			return value;
 		}
-		return value;
-	}
 
-	public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
-	{
-		throw new NotImplementedException();
+		public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+		{
+			throw new NotImplementedException();
+		}
 	}
 }

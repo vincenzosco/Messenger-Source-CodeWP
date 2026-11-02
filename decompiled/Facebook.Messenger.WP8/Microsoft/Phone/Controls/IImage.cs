@@ -1,8 +1,9 @@
 using System;
 
-namespace Microsoft.Phone.Controls;
-
-public interface IImage
+namespace Microsoft.Phone.Controls
 {
-	Uri GetImageUri();
+	public interface IImage
+	{
+		Uri GetImageUri();
+	}
 }

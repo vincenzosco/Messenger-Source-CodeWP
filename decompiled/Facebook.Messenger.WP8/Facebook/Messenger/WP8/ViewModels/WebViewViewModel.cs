@@ -6,36 +6,37 @@ using Facebook.Messenger.WP8.Navigation;
 using Facebook.Models;
 using Facebook.Services.Api;
 
-namespace Facebook.Messenger.WP8.ViewModels;
-
-public class WebViewViewModel : FacebookMessengerViewModel
+namespace Facebook.Messenger.WP8.ViewModels
 {
-	private Uri _uri;
-
-	public Uri ContentUri
+	public class WebViewViewModel : FacebookMessengerViewModel
 	{
-		get
+		private Uri _uri;
+
+		public Uri ContentUri
 		{
-			return _uri;
+			get
+			{
+				return _uri;
+			}
+			set
+			{
+				Set(ref _uri, value, false, "ContentUri");
+			}
 		}
-		set
+
+		public WebViewViewModel(Facebook.Services.Api.Service apiService, FacebookContext context, Navigator navigator, IDispatcher dispatcher, INetworkStatus networkStatus)
+			: base(apiService, context, navigator, dispatcher, networkStatus)
 		{
-			Set(ref _uri, value, broadcast: false, "ContentUri");
 		}
-	}
 
-	public WebViewViewModel(Facebook.Services.Api.Service apiService, FacebookContext context, Navigator navigator, IDispatcher dispatcher, INetworkStatus networkStatus)
-		: base(apiService, context, navigator, dispatcher, networkStatus)
-	{
-	}
-
-	public override void SetPath(Uri uri)
-	{
-		base.SetPath(uri);
-		FacebookUri facebookUri = (uri as FacebookUri) ?? FacebookUri.UnknownUri;
-		if (facebookUri.Params.ContainsKey("url"))
+		public override void SetPath(Uri uri)
 		{
-			ContentUri = new Uri(facebookUri.Params["url"], UriKind.RelativeOrAbsolute);
+			base.SetPath(uri);
+			FacebookUri facebookUri = (uri as FacebookUri) ?? FacebookUri.UnknownUri;
+			if (facebookUri.Params.ContainsKey("url"))
+			{
+				ContentUri = new Uri(facebookUri.Params["url"], UriKind.RelativeOrAbsolute);
+			}
 		}
 	}
 }

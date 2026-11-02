@@ -1,54 +1,55 @@
-namespace Thrift.Protocol;
-
-public struct TMap
+namespace Thrift.Protocol
 {
-	private TType keyType;
-
-	private TType valueType;
-
-	private int count;
-
-	public TType KeyType
+	public struct TMap
 	{
-		get
-		{
-			return keyType;
-		}
-		set
-		{
-			keyType = value;
-		}
-	}
+		private TType keyType;
 
-	public TType ValueType
-	{
-		get
-		{
-			return valueType;
-		}
-		set
-		{
-			valueType = value;
-		}
-	}
+		private TType valueType;
 
-	public int Count
-	{
-		get
-		{
-			return count;
-		}
-		set
-		{
-			count = value;
-		}
-	}
+		private int count;
 
-	public TMap(TType keyType, TType valueType, int count)
-	{
-		this = default;
-		this.keyType = keyType;
-		this.valueType = valueType;
-		this.count = count;
+		public TType KeyType
+		{
+			get
+			{
+				return keyType;
+			}
+			set
+			{
+				keyType = value;
+			}
+		}
+
+		public TType ValueType
+		{
+			get
+			{
+				return valueType;
+			}
+			set
+			{
+				valueType = value;
+			}
+		}
+
+		public int Count
+		{
+			get
+			{
+				return count;
+			}
+			set
+			{
+				count = value;
+			}
+		}
+
+		public TMap(TType keyType, TType valueType, int count)
+		{
+			this = default(TMap);
+			this.keyType = keyType;
+			this.valueType = valueType;
+			this.count = count;
+		}
 	}
 }

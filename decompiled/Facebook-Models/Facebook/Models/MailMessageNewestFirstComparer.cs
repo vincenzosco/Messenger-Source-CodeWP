@@ -1,31 +1,32 @@
 using System.Collections.Generic;
 
-namespace Facebook.Models;
-
-public class MailMessageNewestFirstComparer : IComparer<MailMessage>
+namespace Facebook.Models
 {
-	public static readonly MailMessageNewestFirstComparer Comparer = new MailMessageNewestFirstComparer();
-
-	public int Compare(MailMessage x, MailMessage y)
+	public class MailMessageNewestFirstComparer : IComparer<MailMessage>
 	{
-		long num = x.Timestamp - y.Timestamp;
-		if (num != 0)
+		public static readonly MailMessageNewestFirstComparer Comparer = new MailMessageNewestFirstComparer();
+
+		public int Compare(MailMessage x, MailMessage y)
 		{
-			if (num <= 0)
+			long num = x.Timestamp - y.Timestamp;
+			if (num != 0)
+			{
+				if (num <= 0)
+				{
+					return 1;
+				}
+				return -1;
+			}
+			long num2 = x.ActionId - y.ActionId;
+			if (num2 == 0)
+			{
+				return 0;
+			}
+			if (num2 <= 0)
 			{
 				return 1;
 			}
 			return -1;
 		}
-		long num2 = x.ActionId - y.ActionId;
-		if (num2 == 0)
-		{
-			return 0;
-		}
-		if (num2 <= 0)
-		{
-			return 1;
-		}
-		return -1;
 	}
 }

@@ -2,83 +2,84 @@ using System.Collections.Generic;
 using Facebook.Models;
 using GalaSoft.MvvmLight;
 
-namespace Facebook.Messenger.WP8.Utilities.PhoneContacts;
-
-public class ContactSyncStatus : ViewModelBase
+namespace Facebook.Messenger.WP8.Utilities.PhoneContacts
 {
-	private SyncState _status;
-
-	private double _contactSyncProgress;
-
-	private List<FacebookUser> _syncedContactsList;
-
-	public SyncState Status
+	public class ContactSyncStatus : ViewModelBase
 	{
-		get
+		private SyncState _status;
+
+		private double _contactSyncProgress;
+
+		private List<FacebookUser> _syncedContactsList;
+
+		public SyncState Status
 		{
-			return _status;
+			get
+			{
+				return _status;
+			}
+			private set
+			{
+				Set(ref _status, value, false, "Status");
+			}
 		}
-		private set
+
+		public double ContactSyncProgress
 		{
-			Set(ref _status, value, broadcast: false, "Status");
+			get
+			{
+				return _contactSyncProgress;
+			}
+			private set
+			{
+				Set(ref _contactSyncProgress, value, false, "ContactSyncProgress");
+			}
 		}
-	}
 
-	public double ContactSyncProgress
-	{
-		get
+		public List<FacebookUser> SyncedContactsList
 		{
-			return _contactSyncProgress;
+			get
+			{
+				return _syncedContactsList;
+			}
+			private set
+			{
+				Set(ref _syncedContactsList, value, false, "SyncedContactsList");
+			}
 		}
-		private set
+
+		public ContactSyncStatus()
 		{
-			Set(ref _contactSyncProgress, value, broadcast: false, "ContactSyncProgress");
+			Status = SyncState.NotStarted;
 		}
-	}
 
-	public List<FacebookUser> SyncedContactsList
-	{
-		get
+		public void OnContactSyncStarted()
 		{
-			return _syncedContactsList;
+			Status = SyncState.InProgress;
+			SyncedContactsList = new List<FacebookUser>();
 		}
-		private set
+
+		public void OnContactSyncComplete(List<FacebookUser> syncedContacts)
 		{
-			Set(ref _syncedContactsList, value, broadcast: false, "SyncedContactsList");
+			Status = SyncState.Complete;
+			SyncedContactsList = syncedContacts;
 		}
-	}
 
-	public ContactSyncStatus()
-	{
-		Status = SyncState.NotStarted;
-	}
+		public void OnContactSyncCancelled()
+		{
+			Status = SyncState.Failed;
+			SyncedContactsList = new List<FacebookUser>();
+		}
 
-	public void OnContactSyncStarted()
-	{
-		Status = SyncState.InProgress;
-		SyncedContactsList = new List<FacebookUser>();
-	}
+		public void OnContactSyncReset()
+		{
+			Status = SyncState.NotStarted;
+			SyncedContactsList = new List<FacebookUser>();
+		}
 
-	public void OnContactSyncComplete(List<FacebookUser> syncedContacts)
-	{
-		Status = SyncState.Complete;
-		SyncedContactsList = syncedContacts;
-	}
-
-	public void OnContactSyncCancelled()
-	{
-		Status = SyncState.Failed;
-		SyncedContactsList = new List<FacebookUser>();
-	}
-
-	public void OnContactSyncReset()
-	{
-		Status = SyncState.NotStarted;
-		SyncedContactsList = new List<FacebookUser>();
-	}
-
-	public void OnProgressUpdate(double progress)
-	{
-		ContactSyncProgress = progress;
+		public void OnProgressUpdate(double progress)
+		{
+			ContactSyncProgress = progress;
+		}
 	}
 }

@@ -1,5 +1,6 @@
-namespace Facebook.Services.Api.Methods.DeleteContact;
-
-public class Response : FacebookApiResponse
+namespace Facebook.Services.Api.Methods.DeleteContact
 {
+	public class Response : FacebookApiResponse
+	{
+	}
 }

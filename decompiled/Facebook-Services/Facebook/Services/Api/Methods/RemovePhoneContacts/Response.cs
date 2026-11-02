@@ -1,6 +1,7 @@
-namespace Facebook.Services.Api.Methods.RemovePhoneContacts;
-
-public class Response : FacebookApiResponse
+namespace Facebook.Services.Api.Methods.RemovePhoneContacts
 {
-	public bool FriendsUpdated { get; set; }
+	public class Response : FacebookApiResponse
+	{
+		public bool FriendsUpdated { get; set; }
+	}
 }

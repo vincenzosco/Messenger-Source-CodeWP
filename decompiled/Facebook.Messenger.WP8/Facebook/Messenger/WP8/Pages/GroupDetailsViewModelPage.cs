@@ -1,7 +1,8 @@
 using Facebook.Messenger.WP8.ViewModels;
 
-namespace Facebook.Messenger.WP8.Pages;
-
-public abstract class GroupDetailsViewModelPage : FacebookBasePage<GroupDetailsViewModel>
+namespace Facebook.Messenger.WP8.Pages
 {
+	public abstract class GroupDetailsViewModelPage : FacebookBasePage<GroupDetailsViewModel>
+	{
+	}
 }

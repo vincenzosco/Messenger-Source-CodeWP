@@ -1,12 +1,13 @@
 using Facebook.Models;
 
-namespace Facebook.Base.Settings;
-
-public interface IPasswordSettings
+namespace Facebook.Base.Settings
 {
-	FacebookCredentials RetrieveCredentials();
+	public interface IPasswordSettings
+	{
+		FacebookCredentials RetrieveCredentials();
 
-	bool RemoveCredentials();
+		bool RemoveCredentials();
 
-	bool SaveCredentials(FacebookCredentials credentials);
+		bool SaveCredentials(FacebookCredentials credentials);
+	}
 }

@@ -2,22 +2,23 @@ using System;
 using System.Globalization;
 using System.Windows.Data;
 
-namespace Facebook.Messenger.WP8.Converters;
-
-public class StringAllCapsConverter : IValueConverter
+namespace Facebook.Messenger.WP8.Converters
 {
-	public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+	public class StringAllCapsConverter : IValueConverter
 	{
-		string text = value as string;
-		if (string.IsNullOrEmpty(text))
+		public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
 		{
-			return "";
+			string text = value as string;
+			if (string.IsNullOrEmpty(text))
+			{
+				return "";
+			}
+			return text.ToUpper();
 		}
-		return text.ToUpper();
-	}
 
-	public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
-	{
-		throw new NotImplementedException();
+		public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+		{
+			throw new NotImplementedException();
+		}
 	}
 }

@@ -2,21 +2,22 @@ using System.Runtime.Serialization;
 using Facebook.Models;
 using Newtonsoft.Json;
 
-namespace Facebook.Services.Api.Methods.AddPinThread;
-
-public class Response : FacebookApiResponse
+namespace Facebook.Services.Api.Methods.AddPinThread
 {
-	[JsonProperty("id")]
-	[DataMember]
-	public string Id { get; set; }
+	public class Response : FacebookApiResponse
+	{
+		[JsonProperty("id")]
+		[DataMember]
+		public string Id { get; set; }
 
-	[JsonProperty("thread_id")]
-	[DataMember]
-	public string ThreadId { get; set; }
+		[JsonProperty("thread_id")]
+		[DataMember]
+		public string ThreadId { get; set; }
 
-	[JsonProperty("update_time")]
-	[DataMember]
-	public long UpdateTime { get; set; }
+		[JsonProperty("update_time")]
+		[DataMember]
+		public long UpdateTime { get; set; }
 
-	public MailThread Thread { get; set; }
+		public MailThread Thread { get; set; }
+	}
 }

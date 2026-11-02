@@ -2,35 +2,36 @@ using System;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
-namespace Facebook.Services.Common;
-
-public class BoolResponseConverter : JsonConverter
+namespace Facebook.Services.Common
 {
-	public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
+	public class BoolResponseConverter : JsonConverter
 	{
-		throw new NotImplementedException();
-	}
-
-	public override object ReadJson(JsonReader reader, Type objectType, object existingValue, JsonSerializer serializer)
-	{
-		BoolResponse boolResponse = new BoolResponse();
-		if (reader.TokenType == JsonToken.Boolean)
+		public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
 		{
-			JToken jToken = JToken.Load(reader);
-			if (jToken.Type == JTokenType.Boolean)
+			throw new NotImplementedException();
+		}
+
+		public override object ReadJson(JsonReader reader, Type objectType, object existingValue, JsonSerializer serializer)
+		{
+			BoolResponse boolResponse = new BoolResponse();
+			if (reader.TokenType == JsonToken.Boolean)
 			{
-				boolResponse.Succeeded = jToken.ToObject<bool>();
+				JToken jToken = JToken.Load(reader);
+				if (jToken.Type == JTokenType.Boolean)
+				{
+					boolResponse.Succeeded = jToken.ToObject<bool>();
+				}
 			}
+			else
+			{
+				serializer.Populate(reader, boolResponse);
+			}
+			return boolResponse;
 		}
-		else
-		{
-			serializer.Populate(reader, boolResponse);
-		}
-		return boolResponse;
-	}
 
-	public override bool CanConvert(Type objectType)
-	{
-		return true;
+		public override bool CanConvert(Type objectType)
+		{
+			return true;
+		}
 	}
 }

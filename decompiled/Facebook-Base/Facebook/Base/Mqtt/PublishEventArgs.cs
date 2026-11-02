@@ -1,14 +1,15 @@
-namespace Facebook.Base.Mqtt;
-
-public class PublishEventArgs
+namespace Facebook.Base.Mqtt
 {
-	public int MessageId { get; set; }
+	public class PublishEventArgs
+	{
+		public int MessageId { get; set; }
 
-	public string TopicName { get; set; }
+		public string TopicName { get; set; }
 
-	public byte[] Payload { get; set; }
+		public byte[] Payload { get; set; }
 
-	public QualityofService QoS { get; set; }
+		public QualityofService QoS { get; set; }
 
-	public bool Retained { get; set; }
+		public bool Retained { get; set; }
+	}
 }

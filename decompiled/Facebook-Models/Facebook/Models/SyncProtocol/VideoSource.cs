@@ -1,7 +1,8 @@
-namespace Facebook.Models.SyncProtocol;
-
-public enum VideoSource
+namespace Facebook.Models.SyncProtocol
 {
-	NON_QUICKCAM = 1,
-	QUICKCAM
+	public enum VideoSource
+	{
+		NON_QUICKCAM = 1,
+		QUICKCAM
+	}
 }

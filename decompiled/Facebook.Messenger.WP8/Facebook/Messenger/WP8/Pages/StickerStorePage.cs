@@ -8,140 +8,141 @@ using Facebook.Base.Extensions;
 using Facebook.Messenger.WP8.Controls.Stickers;
 using Facebook.Messenger.WP8.ViewModels;
 
-namespace Facebook.Messenger.WP8.Pages;
-
-public class StickerStorePage : StickerStoreViewModelPage
+namespace Facebook.Messenger.WP8.Pages
 {
-	internal Grid LayoutRoot;
-
-	internal StickerPackListUserControl FeaturedStickerPackList;
-
-	internal StickerPackListUserControl AllStickerPackList;
-
-	internal StickerPackListUserControl OwnedStickerPackList;
-
-	private bool _contentLoaded;
-
-	public StickerStorePage()
+	public class StickerStorePage : StickerStoreViewModelPage
 	{
-		//IL_0014: Unknown result type (might be due to invalid IL or missing references)
-		//IL_001e: Expected Obj, but got Unknown
-		//IL_0026: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0030: Expected Obj, but got Unknown
-		InitializeComponent();
-		((FrameworkElement)this).Loaded += OnLoaded;
-		((FrameworkElement)this).Unloaded += OnUnloaded;
-	}
+		internal Grid LayoutRoot;
 
-	private void AddEvents(StickerStoreViewModel vm)
-	{
-		RemoveEvents(vm);
-		vm.PropertyChanged += OnPropertyChanged;
-		vm.AvailableStickerPacksUpdated += OnAvailableStickerPacksUpdated;
-		vm.OwnedStickerPacksUpdated += OnOwnedStickerPacksUpdated;
-	}
+		internal StickerPackListUserControl FeaturedStickerPackList;
 
-	private void RemoveEvents(StickerStoreViewModel vm)
-	{
-		vm.PropertyChanged -= OnPropertyChanged;
-		vm.AvailableStickerPacksUpdated -= OnAvailableStickerPacksUpdated;
-		vm.OwnedStickerPacksUpdated -= OnOwnedStickerPacksUpdated;
-	}
+		internal StickerPackListUserControl AllStickerPackList;
 
-	private void UpdateAvailableStickerPacksProgress(StickerStoreViewModel vm)
-	{
-		bool flag = !vm.FeaturedStickerPacks.Any() && string.IsNullOrEmpty(vm.AvailableErrorMessage);
-		bool flag2 = !vm.AvailableStickerPacks.Any() && string.IsNullOrEmpty(vm.AvailableErrorMessage);
-		FeaturedStickerPackList.IsLoading = vm.IsLoadingAvailable || flag;
-		AllStickerPackList.IsLoading = vm.IsLoadingAvailable || flag2;
-	}
+		internal StickerPackListUserControl OwnedStickerPackList;
 
-	private void UpdateOwnedStickerPacksProgress(StickerStoreViewModel vm)
-	{
-		OwnedStickerPackList.IsLoading = vm.IsLoadingOwned || !vm.OwnedStickerPacks.Any();
-	}
+		private bool _contentLoaded;
 
-	private void OnLoaded(object sender, RoutedEventArgs e)
-	{
-		WithViewModel((StickerStoreViewModel vm) =>
+		public StickerStorePage()
 		{
-			AddEvents(vm);
-			vm.FetchStickers().DoNotWait();
-			vm.RegisterProgressHandler();
-			UpdateAvailableStickerPacksProgress(vm);
-			UpdateOwnedStickerPacksProgress(vm);
-		});
-	}
+			//IL_0014: Unknown result type (might be due to invalid IL or missing references)
+			//IL_001e: Expected Obj, but got Unknown
+			//IL_0026: Unknown result type (might be due to invalid IL or missing references)
+			//IL_0030: Expected Obj, but got Unknown
+			InitializeComponent();
+			((FrameworkElement)this).Loaded += OnLoaded;
+			((FrameworkElement)this).Unloaded += OnUnloaded;
+		}
 
-	private void OnUnloaded(object sender, RoutedEventArgs e)
-	{
-		WithViewModel((StickerStoreViewModel vm) =>
+		private void AddEvents(StickerStoreViewModel vm)
 		{
-			vm.UnRegisterProgressHandler();
 			RemoveEvents(vm);
-		});
-	}
+			vm.PropertyChanged += OnPropertyChanged;
+			vm.AvailableStickerPacksUpdated += OnAvailableStickerPacksUpdated;
+			vm.OwnedStickerPacksUpdated += OnOwnedStickerPacksUpdated;
+		}
 
-	private void OnAvailableStickerPacksUpdated(object sender, EventArgs args)
-	{
-		WithViewModel((StickerStoreViewModel vm) =>
+		private void RemoveEvents(StickerStoreViewModel vm)
 		{
-			UpdateAvailableStickerPacksProgress(vm);
-		});
-	}
+			vm.PropertyChanged -= OnPropertyChanged;
+			vm.AvailableStickerPacksUpdated -= OnAvailableStickerPacksUpdated;
+			vm.OwnedStickerPacksUpdated -= OnOwnedStickerPacksUpdated;
+		}
 
-	private void OnOwnedStickerPacksUpdated(object sender, EventArgs args)
-	{
-		WithViewModel((StickerStoreViewModel vm) =>
+		private void UpdateAvailableStickerPacksProgress(StickerStoreViewModel vm)
 		{
-			UpdateOwnedStickerPacksProgress(vm);
-		});
-	}
+			bool flag = !vm.FeaturedStickerPacks.Any() && string.IsNullOrEmpty(vm.AvailableErrorMessage);
+			bool flag2 = !vm.AvailableStickerPacks.Any() && string.IsNullOrEmpty(vm.AvailableErrorMessage);
+			FeaturedStickerPackList.IsLoading = vm.IsLoadingAvailable || flag;
+			AllStickerPackList.IsLoading = vm.IsLoadingAvailable || flag2;
+		}
 
-	private void OnPropertyChanged(object sender, PropertyChangedEventArgs e)
-	{
-		WithViewModel((StickerStoreViewModel vm) =>
+		private void UpdateOwnedStickerPacksProgress(StickerStoreViewModel vm)
 		{
-			if (e.PropertyName == "IsLoadingAvailable")
+			OwnedStickerPackList.IsLoading = vm.IsLoadingOwned || !vm.OwnedStickerPacks.Any();
+		}
+
+		private void OnLoaded(object sender, RoutedEventArgs e)
+		{
+			WithViewModel((StickerStoreViewModel vm) =>
+			{
+				AddEvents(vm);
+				vm.FetchStickers().DoNotWait();
+				vm.RegisterProgressHandler();
+				UpdateAvailableStickerPacksProgress(vm);
+				UpdateOwnedStickerPacksProgress(vm);
+			});
+		}
+
+		private void OnUnloaded(object sender, RoutedEventArgs e)
+		{
+			WithViewModel((StickerStoreViewModel vm) =>
+			{
+				vm.UnRegisterProgressHandler();
+				RemoveEvents(vm);
+			});
+		}
+
+		private void OnAvailableStickerPacksUpdated(object sender, EventArgs args)
+		{
+			WithViewModel((StickerStoreViewModel vm) =>
 			{
 				UpdateAvailableStickerPacksProgress(vm);
-			}
-			else if (e.PropertyName == "IsLoadingOwned")
+			});
+		}
+
+		private void OnOwnedStickerPacksUpdated(object sender, EventArgs args)
+		{
+			WithViewModel((StickerStoreViewModel vm) =>
 			{
 				UpdateOwnedStickerPacksProgress(vm);
+			});
+		}
+
+		private void OnPropertyChanged(object sender, PropertyChangedEventArgs e)
+		{
+			WithViewModel((StickerStoreViewModel vm) =>
+			{
+				if (e.PropertyName == "IsLoadingAvailable")
+				{
+					UpdateAvailableStickerPacksProgress(vm);
+				}
+				else if (e.PropertyName == "IsLoadingOwned")
+				{
+					UpdateOwnedStickerPacksProgress(vm);
+				}
+			});
+		}
+
+		private void OnStickerPackRemoved(object sender, StickerPackViewModel stickerPack)
+		{
+			WithViewModel((StickerStoreViewModel vm) =>
+			{
+				vm.RemoveStickerPack(stickerPack).DoNotWait();
+			});
+		}
+
+		private void OnStickerPackClicked(object sender, StickerPackViewModel stickerPack)
+		{
+			WithViewModel((StickerStoreViewModel vm) =>
+			{
+				vm.NavigateToStickerPack(stickerPack);
+			});
+		}
+
+		[DebuggerNonUserCode]
+		public void InitializeComponent()
+		{
+			//IL_002d: Unknown result type (might be due to invalid IL or missing references)
+			//IL_0037: Expected Obj, but got Unknown
+			if (!_contentLoaded)
+			{
+				_contentLoaded = true;
+				Application.LoadComponent((object)this, new Uri("/Facebook.Messenger.WP8;component/Pages/StickerStorePage.xaml", UriKind.Relative));
+				LayoutRoot = (Grid)((FrameworkElement)this).FindName("LayoutRoot");
+				FeaturedStickerPackList = (StickerPackListUserControl)((FrameworkElement)this).FindName("FeaturedStickerPackList");
+				AllStickerPackList = (StickerPackListUserControl)((FrameworkElement)this).FindName("AllStickerPackList");
+				OwnedStickerPackList = (StickerPackListUserControl)((FrameworkElement)this).FindName("OwnedStickerPackList");
 			}
-		});
-	}
-
-	private void OnStickerPackRemoved(object sender, StickerPackViewModel stickerPack)
-	{
-		WithViewModel((StickerStoreViewModel vm) =>
-		{
-			vm.RemoveStickerPack(stickerPack).DoNotWait();
-		});
-	}
-
-	private void OnStickerPackClicked(object sender, StickerPackViewModel stickerPack)
-	{
-		WithViewModel((StickerStoreViewModel vm) =>
-		{
-			vm.NavigateToStickerPack(stickerPack);
-		});
-	}
-
-	[DebuggerNonUserCode]
-	public void InitializeComponent()
-	{
-		//IL_002d: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0037: Expected Obj, but got Unknown
-		if (!_contentLoaded)
-		{
-			_contentLoaded = true;
-			Application.LoadComponent((object)this, new Uri("/Facebook.Messenger.WP8;component/Pages/StickerStorePage.xaml", UriKind.Relative));
-			LayoutRoot = (Grid)((FrameworkElement)this).FindName("LayoutRoot");
-			FeaturedStickerPackList = (StickerPackListUserControl)((FrameworkElement)this).FindName("FeaturedStickerPackList");
-			AllStickerPackList = (StickerPackListUserControl)((FrameworkElement)this).FindName("AllStickerPackList");
-			OwnedStickerPackList = (StickerPackListUserControl)((FrameworkElement)this).FindName("OwnedStickerPackList");
 		}
 	}
 }

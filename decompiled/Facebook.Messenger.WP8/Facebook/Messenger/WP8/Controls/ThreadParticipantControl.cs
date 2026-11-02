@@ -8,86 +8,87 @@ using Facebook.Messenger.WP8.ViewModels;
 using Facebook.Models;
 using PixelLab;
 
-namespace Facebook.Messenger.WP8.Controls;
-
-public class ThreadParticipantControl : ThreadListItemControl
+namespace Facebook.Messenger.WP8.Controls
 {
-	private FacebookContext _context;
-
-	internal Grid LayoutRoot;
-
-	internal FaceMash FaceMash;
-
-	internal ProfileIndicatorControl IndicatorControl;
-
-	internal DynamicTextBlock ThreadTitle;
-
-	internal DynamicTextBlock ThreadParticipants;
-
-	private bool _contentLoaded;
-
-	private FacebookContext Context => _context ?? (_context = Application.Current.Resources[(object)"FacebookContext"] as FacebookContext);
-
-	public ThreadParticipantControl()
+	public class ThreadParticipantControl : ThreadListItemControl
 	{
-		InitializeComponent();
-	}
+		private FacebookContext _context;
 
-	protected override void OnItemValueAssigned()
-	{
-		ThreadViewModel viewModel = ViewModel;
-		viewModel.PropertyChanged += OnThreadPropertyChanged;
-		SetThreadName(viewModel);
-		SetThreadParticipants(viewModel);
-		SetIndicator(viewModel);
-	}
+		internal Grid LayoutRoot;
 
-	protected override void Recycled(ThreadViewModel oldViewModel)
-	{
-		oldViewModel.PropertyChanged -= OnThreadPropertyChanged;
-	}
+		internal FaceMash FaceMash;
 
-	private void OnThreadPropertyChanged(object sender, PropertyChangedEventArgs args)
-	{
-		if (args.PropertyName.Equals("Name"))
+		internal ProfileIndicatorControl IndicatorControl;
+
+		internal DynamicTextBlock ThreadTitle;
+
+		internal DynamicTextBlock ThreadParticipants;
+
+		private bool _contentLoaded;
+
+		private FacebookContext Context => _context ?? (_context = Application.Current.Resources[(object)"FacebookContext"] as FacebookContext);
+
+		public ThreadParticipantControl()
 		{
-			SetThreadName(ViewModel);
-			SetThreadParticipants(ViewModel);
+			InitializeComponent();
 		}
-	}
 
-	private void SetThreadName(ThreadViewModel threadViewModel)
-	{
-		ThreadTitle.Text = ThreadNameUtils.GetThreadNamePreferCache(threadViewModel, Context);
-	}
-
-	private void SetIndicator(ThreadViewModel threadViewModel)
-	{
-		//IL_000c: Unknown result type (might be due to invalid IL or missing references)
-		((UIElement)IndicatorControl).Visibility = VisibilityUtil.FromBool(threadViewModel.IsCanonical());
-		IndicatorControl.IsPartialUser = Context.IsPartialUser() || threadViewModel.IsPartialContact;
-		IndicatorControl.IsMessengerUser = threadViewModel.IsCanonical() && threadViewModel.IsMessengerUser;
-	}
-
-	private void SetThreadParticipants(ThreadViewModel threadViewModel)
-	{
-		ThreadParticipants.Text = (threadViewModel.HasName() ? ThreadNameUtils.GetThreadParticipantsNameOrId(threadViewModel, Context) : string.Empty);
-	}
-
-	[DebuggerNonUserCode]
-	public void InitializeComponent()
-	{
-		//IL_002d: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0037: Expected Obj, but got Unknown
-		if (!_contentLoaded)
+		protected override void OnItemValueAssigned()
 		{
-			_contentLoaded = true;
-			Application.LoadComponent((object)this, new Uri("/Facebook.Messenger.WP8;component/Controls/ThreadParticipantControl.xaml", UriKind.Relative));
-			LayoutRoot = (Grid)((FrameworkElement)this).FindName("LayoutRoot");
-			FaceMash = (FaceMash)((FrameworkElement)this).FindName("FaceMash");
-			IndicatorControl = (ProfileIndicatorControl)((FrameworkElement)this).FindName("IndicatorControl");
-			ThreadTitle = (DynamicTextBlock)((FrameworkElement)this).FindName("ThreadTitle");
-			ThreadParticipants = (DynamicTextBlock)((FrameworkElement)this).FindName("ThreadParticipants");
+			ThreadViewModel viewModel = ViewModel;
+			viewModel.PropertyChanged += OnThreadPropertyChanged;
+			SetThreadName(viewModel);
+			SetThreadParticipants(viewModel);
+			SetIndicator(viewModel);
+		}
+
+		protected override void Recycled(ThreadViewModel oldViewModel)
+		{
+			oldViewModel.PropertyChanged -= OnThreadPropertyChanged;
+		}
+
+		private void OnThreadPropertyChanged(object sender, PropertyChangedEventArgs args)
+		{
+			if (args.PropertyName.Equals("Name"))
+			{
+				SetThreadName(ViewModel);
+				SetThreadParticipants(ViewModel);
+			}
+		}
+
+		private void SetThreadName(ThreadViewModel threadViewModel)
+		{
+			ThreadTitle.Text = ThreadNameUtils.GetThreadNamePreferCache(threadViewModel, Context);
+		}
+
+		private void SetIndicator(ThreadViewModel threadViewModel)
+		{
+			//IL_000c: Unknown result type (might be due to invalid IL or missing references)
+			((UIElement)IndicatorControl).Visibility = VisibilityUtil.FromBool(threadViewModel.IsCanonical());
+			IndicatorControl.IsPartialUser = Context.IsPartialUser() || threadViewModel.IsPartialContact;
+			IndicatorControl.IsMessengerUser = threadViewModel.IsCanonical() && threadViewModel.IsMessengerUser;
+		}
+
+		private void SetThreadParticipants(ThreadViewModel threadViewModel)
+		{
+			ThreadParticipants.Text = (threadViewModel.HasName() ? ThreadNameUtils.GetThreadParticipantsNameOrId(threadViewModel, Context) : string.Empty);
+		}
+
+		[DebuggerNonUserCode]
+		public void InitializeComponent()
+		{
+			//IL_002d: Unknown result type (might be due to invalid IL or missing references)
+			//IL_0037: Expected Obj, but got Unknown
+			if (!_contentLoaded)
+			{
+				_contentLoaded = true;
+				Application.LoadComponent((object)this, new Uri("/Facebook.Messenger.WP8;component/Controls/ThreadParticipantControl.xaml", UriKind.Relative));
+				LayoutRoot = (Grid)((FrameworkElement)this).FindName("LayoutRoot");
+				FaceMash = (FaceMash)((FrameworkElement)this).FindName("FaceMash");
+				IndicatorControl = (ProfileIndicatorControl)((FrameworkElement)this).FindName("IndicatorControl");
+				ThreadTitle = (DynamicTextBlock)((FrameworkElement)this).FindName("ThreadTitle");
+				ThreadParticipants = (DynamicTextBlock)((FrameworkElement)this).FindName("ThreadParticipants");
+			}
 		}
 	}
 }

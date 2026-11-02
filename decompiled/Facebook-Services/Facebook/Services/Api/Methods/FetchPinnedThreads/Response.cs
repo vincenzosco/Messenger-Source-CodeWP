@@ -3,19 +3,20 @@ using System.Runtime.Serialization;
 using Facebook.Models;
 using Newtonsoft.Json;
 
-namespace Facebook.Services.Api.Methods.FetchPinnedThreads;
-
-public class Response : FacebookApiResponse
+namespace Facebook.Services.Api.Methods.FetchPinnedThreads
 {
-	[JsonProperty(PropertyName = "data")]
-	[DataMember]
-	public List<PinnedThread> PinnedThreads;
-
-	public bool ResultWasPersisted { get; set; }
-
-	public Response()
+	public class Response : FacebookApiResponse
 	{
-		ResultWasPersisted = false;
-		PinnedThreads = new List<PinnedThread>();
+		[JsonProperty(PropertyName = "data")]
+		[DataMember]
+		public List<PinnedThread> PinnedThreads;
+
+		public bool ResultWasPersisted { get; set; }
+
+		public Response()
+		{
+			ResultWasPersisted = false;
+			PinnedThreads = new List<PinnedThread>();
+		}
 	}
 }

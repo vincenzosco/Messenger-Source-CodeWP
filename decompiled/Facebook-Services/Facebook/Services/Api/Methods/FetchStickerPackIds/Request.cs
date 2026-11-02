@@ -1,14 +1,15 @@
-namespace Facebook.Services.Api.Methods.FetchStickerPackIds;
-
-[Queue(QueueType.Web)]
-public class Request : FacebookServiceRequest
+namespace Facebook.Services.Api.Methods.FetchStickerPackIds
 {
-	public enum SourceType
+	[Queue(QueueType.Web)]
+	public class Request : FacebookServiceRequest
 	{
-		DownloadedPacks,
-		OwnedPacks,
-		StorePacks
-	}
+		public enum SourceType
+		{
+			DownloadedPacks,
+			OwnedPacks,
+			StorePacks
+		}
 
-	public SourceType Type { get; set; }
+		public SourceType Type { get; set; }
+	}
 }

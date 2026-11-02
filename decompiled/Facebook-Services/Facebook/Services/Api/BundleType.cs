@@ -1,10 +1,11 @@
-namespace Facebook.Services.Api;
-
-public enum BundleType
+namespace Facebook.Services.Api
 {
-	PreCache,
-	InMemoryCache,
-	Mqtt,
-	Web,
-	BackgroundTransfer
+	public enum BundleType
+	{
+		PreCache,
+		InMemoryCache,
+		Mqtt,
+		Web,
+		BackgroundTransfer
+	}
 }

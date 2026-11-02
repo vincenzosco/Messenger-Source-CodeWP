@@ -1,14 +1,15 @@
-namespace Facebook.Models;
-
-public class LogoutEventArgs
+namespace Facebook.Models
 {
-	public FacebookSession Session { get; private set; }
-
-	public bool SessionWasExpired { get; private set; }
-
-	public LogoutEventArgs(FacebookSession session, bool expired)
+	public class LogoutEventArgs
 	{
-		Session = session;
-		SessionWasExpired = expired;
+		public FacebookSession Session { get; private set; }
+
+		public bool SessionWasExpired { get; private set; }
+
+		public LogoutEventArgs(FacebookSession session, bool expired)
+		{
+			Session = session;
+			SessionWasExpired = expired;
+		}
 	}
 }

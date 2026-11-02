@@ -1,52 +1,53 @@
 using System.Collections.Generic;
 using Facebook.Models.SyncProtocol;
 
-namespace Facebook.Services.SyncProtocol;
-
-public static class SequenceIdUtil
+namespace Facebook.Services.SyncProtocol
 {
-	public class SequenceAndDeltaInformation
+	public static class SequenceIdUtil
 	{
-		public DeltaWrapper Delta;
-
-		public long SequenceId;
-
-		public long ExtraSequenceCount;
-
-		public SequenceAndDeltaInformation(DeltaWrapper delta, long sequenceId)
+		public class SequenceAndDeltaInformation
 		{
-			Delta = delta;
-			SequenceId = sequenceId;
-			ExtraSequenceCount = GetExtraSequenceIdCount(delta);
-		}
+			public DeltaWrapper Delta;
 
-		private static int GetExtraSequenceIdCount(DeltaWrapper delta)
-		{
-			if (delta.GetDeltaType() != DeltaType.NOOP)
+			public long SequenceId;
+
+			public long ExtraSequenceCount;
+
+			public SequenceAndDeltaInformation(DeltaWrapper delta, long sequenceId)
 			{
-				return 0;
+				Delta = delta;
+				SequenceId = sequenceId;
+				ExtraSequenceCount = GetExtraSequenceIdCount(delta);
 			}
-			DeltaNoOp deltaNoOp = delta.DeltaNoOp;
-			int num = ((!deltaNoOp.__isset.numNoOps || deltaNoOp.NumNoOps <= 0) ? 1 : deltaNoOp.NumNoOps);
-			return num - 1;
+
+			private static int GetExtraSequenceIdCount(DeltaWrapper delta)
+			{
+				if (delta.GetDeltaType() != DeltaType.NOOP)
+				{
+					return 0;
+				}
+				DeltaNoOp deltaNoOp = delta.DeltaNoOp;
+				int num = ((!deltaNoOp.__isset.numNoOps || deltaNoOp.NumNoOps <= 0) ? 1 : deltaNoOp.NumNoOps);
+				return num - 1;
+			}
 		}
-	}
 
-	public static bool IsValidSequenceId(long sequenceId)
-	{
-		return sequenceId > 0;
-	}
-
-	public static IEnumerable<SequenceAndDeltaInformation> CalculateDeltasSequenceIds(IEnumerable<DeltaWrapper> deltas, long firstDeltaSequenceId)
-	{
-		List<SequenceAndDeltaInformation> list = new List<SequenceAndDeltaInformation>();
-		long num = firstDeltaSequenceId;
-		foreach (DeltaWrapper delta in deltas)
+		public static bool IsValidSequenceId(long sequenceId)
 		{
-			SequenceAndDeltaInformation sequenceAndDeltaInformation = new SequenceAndDeltaInformation(delta, num);
-			list.Add(sequenceAndDeltaInformation);
-			num += 1 + sequenceAndDeltaInformation.ExtraSequenceCount;
+			return sequenceId > 0;
 		}
-		return list;
+
+		public static IEnumerable<SequenceAndDeltaInformation> CalculateDeltasSequenceIds(IEnumerable<DeltaWrapper> deltas, long firstDeltaSequenceId)
+		{
+			List<SequenceAndDeltaInformation> list = new List<SequenceAndDeltaInformation>();
+			long num = firstDeltaSequenceId;
+			foreach (DeltaWrapper delta in deltas)
+			{
+				SequenceAndDeltaInformation sequenceAndDeltaInformation = new SequenceAndDeltaInformation(delta, num);
+				list.Add(sequenceAndDeltaInformation);
+				num += 1 + sequenceAndDeltaInformation.ExtraSequenceCount;
+			}
+			return list;
+		}
 	}
 }

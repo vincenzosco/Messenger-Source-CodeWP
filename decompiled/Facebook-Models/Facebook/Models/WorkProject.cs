@@ -1,12 +1,13 @@
 using System.Collections.Generic;
 
-namespace Facebook.Models;
-
-public class WorkProject
+namespace Facebook.Models
 {
-	public string Message { get; set; }
+	public class WorkProject
+	{
+		public string Message { get; set; }
 
-	public List<FacebookProfile> ExperienceWith { get; set; }
+		public List<FacebookProfile> ExperienceWith { get; set; }
 
-	public string ProjectName { get; set; }
+		public string ProjectName { get; set; }
+	}
 }

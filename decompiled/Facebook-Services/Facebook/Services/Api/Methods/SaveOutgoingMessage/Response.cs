@@ -1,13 +1,14 @@
 using Facebook.Base;
 
-namespace Facebook.Services.Api.Methods.SaveOutgoingMessage;
-
-public class Response : Facebook.Base.Response
+namespace Facebook.Services.Api.Methods.SaveOutgoingMessage
 {
-	public string GeneratedLocalThreadId { get; set; }
-
-	public bool DidGenerateLocalThreadId()
+	public class Response : Facebook.Base.Response
 	{
-		return !string.IsNullOrWhiteSpace(GeneratedLocalThreadId);
+		public string GeneratedLocalThreadId { get; set; }
+
+		public bool DidGenerateLocalThreadId()
+		{
+			return !string.IsNullOrWhiteSpace(GeneratedLocalThreadId);
+		}
 	}
 }

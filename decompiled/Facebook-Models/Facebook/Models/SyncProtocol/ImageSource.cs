@@ -1,8 +1,9 @@
-namespace Facebook.Models.SyncProtocol;
-
-public enum ImageSource
+namespace Facebook.Models.SyncProtocol
 {
-	FILE = 1,
-	QUICKCAM_FRONT,
-	QUICKCAM_BACK
+	public enum ImageSource
+	{
+		FILE = 1,
+		QUICKCAM_FRONT,
+		QUICKCAM_BACK
+	}
 }

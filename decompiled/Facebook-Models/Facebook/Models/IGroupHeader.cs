@@ -1,8 +1,9 @@
-namespace Facebook.Models;
-
-public interface IGroupHeader
+namespace Facebook.Models
 {
-	bool IsGroupHeader { get; set; }
+	public interface IGroupHeader
+	{
+		bool IsGroupHeader { get; set; }
 
-	string GroupName { get; set; }
+		string GroupName { get; set; }
+	}
 }

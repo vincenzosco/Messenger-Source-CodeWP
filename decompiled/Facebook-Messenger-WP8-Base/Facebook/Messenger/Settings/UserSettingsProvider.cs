@@ -3,30 +3,31 @@ using System.Collections.Generic;
 using System.Linq;
 using Facebook.Base.Settings;
 
-namespace Facebook.Messenger.Settings;
-
-public class UserSettingsProvider : BaseSettings, IUserSettingsProvider
+namespace Facebook.Messenger.Settings
 {
-	public IUserSettings GetOrCreate(string id)
+	public class UserSettingsProvider : BaseSettings, IUserSettingsProvider
 	{
-		return new UserSettings(id);
-	}
-
-	public void Clear(string id)
-	{
-		try
+		public IUserSettings GetOrCreate(string id)
 		{
-			List<string> list = (from string key in BaseSettings.Settings.Keys
-				where BaseSettings.IsUserKey(id, key)
-				select key).ToList();
-			foreach (string item in list)
-			{
-				BaseSettings.Settings.Remove(item);
-			}
-			BaseSettings.Settings.Save();
+			return new UserSettings(id);
 		}
-		catch (Exception)
+
+		public void Clear(string id)
 		{
+			try
+			{
+				List<string> list = (from string key in BaseSettings.Settings.Keys
+					where BaseSettings.IsUserKey(id, key)
+					select key).ToList();
+				foreach (string item in list)
+				{
+					BaseSettings.Settings.Remove(item);
+				}
+				BaseSettings.Settings.Save();
+			}
+			catch (Exception)
+			{
+			}
 		}
 	}
 }

@@ -1,8 +1,9 @@
-namespace Facebook.Models;
-
-public enum LoadMoreType
+namespace Facebook.Models
 {
-	UpcomingEvent,
-	PastEvent,
-	BirthdayEvent
+	public enum LoadMoreType
+	{
+		UpcomingEvent,
+		PastEvent,
+		BirthdayEvent
+	}
 }

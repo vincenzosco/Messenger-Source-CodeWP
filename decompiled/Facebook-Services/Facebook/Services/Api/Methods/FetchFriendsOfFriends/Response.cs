@@ -3,45 +3,46 @@ using System.Linq;
 using Facebook.Models;
 using Newtonsoft.Json;
 
-namespace Facebook.Services.Api.Methods.FetchFriendsOfFriends;
-
-[JsonConverter(typeof(FriendsOfFriendsArrayConverter))]
-public class Response : FacebookApiResponse
+namespace Facebook.Services.Api.Methods.FetchFriendsOfFriends
 {
-	public List<FacebookUberSearchResult> UberSearchResults { private get; set; }
-
-	public List<FacebookUser> Users
+	[JsonConverter(typeof(FriendsOfFriendsArrayConverter))]
+	public class Response : FacebookApiResponse
 	{
-		get
-		{
-			if (UberSearchResults == null || !UberSearchResults.Any())
-			{
-				return new List<FacebookUser>();
-			}
-			return UberSearchResults.Where((FacebookUberSearchResult usl) => !string.IsNullOrWhiteSpace(usl.Subtext)).Select(ToFacebookUser).ToList();
-		}
-	}
+		public List<FacebookUberSearchResult> UberSearchResults { private get; set; }
 
-	public void MarkAsSelected(FacebookUser user)
-	{
-		if (UberSearchResults != null && UberSearchResults.Any())
+		public List<FacebookUser> Users
 		{
-			FacebookUberSearchResult facebookUberSearchResult = UberSearchResults.FirstOrDefault((FacebookUberSearchResult u) => u.Uid == user.Id);
-			if (facebookUberSearchResult != null)
+			get
 			{
-				facebookUberSearchResult.IsSelected = true;
+				if (UberSearchResults == null || !UberSearchResults.Any())
+				{
+					return new List<FacebookUser>();
+				}
+				return UberSearchResults.Where((FacebookUberSearchResult usl) => !string.IsNullOrWhiteSpace(usl.Subtext)).Select(ToFacebookUser).ToList();
 			}
 		}
-	}
 
-	private FacebookUser ToFacebookUser(FacebookUberSearchResult usl)
-	{
-		FacebookUser facebookUser = new FacebookUser();
-		facebookUser.Name = usl.Text;
-		facebookUser.IsMessengerUser = usl.IsMessengerUser;
-		facebookUser.IsSelected = usl.IsSelected;
-		facebookUser.Id = usl.Uid;
-		facebookUser.IsFriendOfFriend = true;
-		return facebookUser;
+		public void MarkAsSelected(FacebookUser user)
+		{
+			if (UberSearchResults != null && UberSearchResults.Any())
+			{
+				FacebookUberSearchResult facebookUberSearchResult = UberSearchResults.FirstOrDefault((FacebookUberSearchResult u) => u.Uid == user.Id);
+				if (facebookUberSearchResult != null)
+				{
+					facebookUberSearchResult.IsSelected = true;
+				}
+			}
+		}
+
+		private FacebookUser ToFacebookUser(FacebookUberSearchResult usl)
+		{
+			FacebookUser facebookUser = new FacebookUser();
+			facebookUser.Name = usl.Text;
+			facebookUser.IsMessengerUser = usl.IsMessengerUser;
+			facebookUser.IsSelected = usl.IsSelected;
+			facebookUser.Id = usl.Uid;
+			facebookUser.IsFriendOfFriend = true;
+			return facebookUser;
+		}
 	}
 }

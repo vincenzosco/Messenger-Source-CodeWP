@@ -1,11 +1,12 @@
-namespace Facebook.Messenger.WP8.Events;
-
-public enum MessageAction
+namespace Facebook.Messenger.WP8.Events
 {
-	Delete,
-	Retry,
-	Forward,
-	ViewDetails,
-	LongMessageDetails,
-	Cancel
+	public enum MessageAction
+	{
+		Delete,
+		Retry,
+		Forward,
+		ViewDetails,
+		LongMessageDetails,
+		Cancel
+	}
 }

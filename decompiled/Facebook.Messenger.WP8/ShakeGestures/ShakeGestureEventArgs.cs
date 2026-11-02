@@ -1,15 +1,16 @@
 using System;
 
-namespace ShakeGestures;
-
-public class ShakeGestureEventArgs : EventArgs
+namespace ShakeGestures
 {
-	private ShakeType _shakeType;
-
-	public ShakeType ShakeType => _shakeType;
-
-	public ShakeGestureEventArgs(ShakeType shakeType)
+	public class ShakeGestureEventArgs : EventArgs
 	{
-		_shakeType = shakeType;
+		private ShakeType _shakeType;
+
+		public ShakeType ShakeType => _shakeType;
+
+		public ShakeGestureEventArgs(ShakeType shakeType)
+		{
+			_shakeType = shakeType;
+		}
 	}
 }

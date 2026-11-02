@@ -1,10 +1,11 @@
-namespace Facebook.Services.Api.Cache;
-
-public class ActionIdResult
+namespace Facebook.Services.Api.Cache
 {
-	public long ThreadLastAddActionId;
+	public class ActionIdResult
+	{
+		public long ThreadLastAddActionId;
 
-	public long MaxMessageActionId;
+		public long MaxMessageActionId;
 
-	public bool HasStaleMessages;
+		public bool HasStaleMessages;
+	}
 }

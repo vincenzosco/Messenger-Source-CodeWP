@@ -1,11 +1,12 @@
-namespace Facebook.Services.Api.Methods.SendAnalyticsEvents;
-
-public class Response : FacebookApiResponse
+namespace Facebook.Services.Api.Methods.SendAnalyticsEvents
 {
-	public int LastUploadedEventLogId { get; set; }
-
-	public Response()
+	public class Response : FacebookApiResponse
 	{
-		LastUploadedEventLogId = -1;
+		public int LastUploadedEventLogId { get; set; }
+
+		public Response()
+		{
+			LastUploadedEventLogId = -1;
+		}
 	}
 }
