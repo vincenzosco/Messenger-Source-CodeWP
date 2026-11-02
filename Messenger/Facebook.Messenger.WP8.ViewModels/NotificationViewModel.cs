@@ -1,4 +1,4 @@
-using Facebook.Messenger.WP8.Utilities;
+﻿using Facebook.Messenger.WP8.Utilities;
 using Facebook.Models;
 using Facebook.Services.Localization;
 using GalaSoft.MvvmLight;

@@ -1,4 +1,4 @@
-namespace Facebook.Services.Api.Methods.FetchUserById
+﻿namespace Facebook.Services.Api.Methods.FetchUserById
 {
 	[Queue(QueueType.Web)]
 	public class Request : FacebookServiceRequest

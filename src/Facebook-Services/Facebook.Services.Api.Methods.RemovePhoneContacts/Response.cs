@@ -1,4 +1,4 @@
-namespace Facebook.Services.Api.Methods.RemovePhoneContacts
+﻿namespace Facebook.Services.Api.Methods.RemovePhoneContacts
 {
 	public class Response : FacebookApiResponse
 	{

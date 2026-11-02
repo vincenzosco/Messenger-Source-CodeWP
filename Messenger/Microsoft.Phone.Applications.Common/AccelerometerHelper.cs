@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using Microsoft.Devices.Sensors;
 
 namespace Microsoft.Phone.Applications.Common

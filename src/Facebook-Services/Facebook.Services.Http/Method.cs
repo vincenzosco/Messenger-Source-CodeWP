@@ -1,4 +1,4 @@
-namespace Facebook.Services.Http
+﻿namespace Facebook.Services.Http
 {
 	public enum Method
 	{

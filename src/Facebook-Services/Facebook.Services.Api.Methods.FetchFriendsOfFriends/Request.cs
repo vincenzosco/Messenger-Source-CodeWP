@@ -1,4 +1,4 @@
-namespace Facebook.Services.Api.Methods.FetchFriendsOfFriends
+﻿namespace Facebook.Services.Api.Methods.FetchFriendsOfFriends
 {
 	[Queue(QueueType.Web)]
 	public class Request : FacebookServiceRequest

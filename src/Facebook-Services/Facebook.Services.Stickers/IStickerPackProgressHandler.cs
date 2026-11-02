@@ -1,4 +1,4 @@
-namespace Facebook.Services.Stickers
+﻿namespace Facebook.Services.Stickers
 {
 	public interface IStickerPackProgressHandler
 	{

@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using Facebook.Base;
 using Facebook.Base.Network;
 using Facebook.Messenger.Localization.Resources;

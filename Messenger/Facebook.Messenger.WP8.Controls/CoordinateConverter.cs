@@ -1,4 +1,4 @@
-using System.Device.Location;
+﻿using System.Device.Location;
 using Windows.Devices.Geolocation;
 
 namespace Facebook.Messenger.WP8.Controls

@@ -48,13 +48,19 @@ MQTT sopra `StreamSocket`, le query GraphQL in
 
 ## Stato
 
-- **0 errori di compilazione** in `Debug|Any CPU` e `Release|Any CPU`.
-- Tutte e otto le assembly producono la propria DLL e l'app emette 115 file
-  `.g.cs` dal markup compiler, quindi le pagine XAML compilano davvero.
-- **Il `.xap` non viene prodotto.** I target di packaging arrivano in fondo
-  (`FilesToXap` e `XapPackager` escono con 0) ma non scrivono nulla: il task che
-  raccoglie il payload arriva con il Windows Phone 8.1 SDK standalone, che qui
-  non è installato. Tutto quello che precede quel passo è verificato.
+- **0 errori, 0 warning** in `Debug|Any CPU` e `Release|Any CPU`, anche partendo da
+  un albero senza `bin/` né `obj/`. I progetti dichiarano `ToolsVersion 12.0`:
+  Visual Studio 2013 e 2015 li aprono così come sono.
+- Tutte e otto le assembly producono la propria DLL e l'app emette i `.g.cs` del
+  markup, quindi le pagine XAML compilano davvero.
+- `python tools/pack-xap.py` scrive `Messenger/bin/Debug/Messenger.xap`: 44 voci,
+  24 assembly, `Assets/` e i due manifest alla radice. Non è firmato e non contiene
+  le satellite di localizzazione, che qui non vengono compilate.
+- I target di packaging WP8.1 non producono il loro `.xap`: `FilesToXap` e
+  `XapPackager` escono con 0 e non scrivono nulla, perché il task che raccoglie il
+  payload arriva con l'SDK standalone.
+- 2 dei 15 metodi che il decompilatore non traduceva eseguono ora il corpo
+  ricostruito in `recovered/`; restano 13 stub.
 
 ## Requisiti
 
@@ -142,6 +148,12 @@ inizializza `$(WMAppManifestOutput)` da `Properties/WMAppManifest.xml`.
 </details>
 
 ## Limiti noti
+
+- **Lo zero warning è in parte una scelta.** `NoWarn` copre `CS0618` (le API
+  WP8.1 che l'app del 2015 chiama), i codici su campi e locali inutilizzati che
+  il decompilatore lascia dietro, e un warning di Thrift. I due che erano
+  difetti veri, un `using` ripetuto e due eventi nascosti, sono corretti in
+  `tools/fixups-warnings.py`.
 
 - **15 metodi async** non sono stati decompilati automaticamente (state machine
   di `CameraView`, `FBGeoLocator`, `SingleInputPaneHelper`). Restano come stub che

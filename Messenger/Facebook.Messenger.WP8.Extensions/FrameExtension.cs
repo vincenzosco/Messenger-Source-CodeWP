@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Windows.Controls;
 
 namespace Facebook.Messenger.WP8.Extensions

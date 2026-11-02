@@ -1,4 +1,4 @@
-internal struct ABCDStruct
+﻿internal struct ABCDStruct
 {
 	public uint A;
 

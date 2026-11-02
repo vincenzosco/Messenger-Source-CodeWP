@@ -1,4 +1,4 @@
-namespace Facebook.Base
+﻿namespace Facebook.Base
 {
 	public static class TimeInterval
 	{

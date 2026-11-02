@@ -1,4 +1,4 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Facebook.Models;
 
 namespace Facebook.Services.Api.Methods.SyncStickerPacks

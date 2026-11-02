@@ -1,4 +1,4 @@
-namespace Facebook.Messenger.WP8.Controls
+﻿namespace Facebook.Messenger.WP8.Controls
 {
 	public enum DrawerType
 	{

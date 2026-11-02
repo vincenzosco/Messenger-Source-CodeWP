@@ -1,4 +1,4 @@
-namespace Facebook.Base.Logging
+﻿namespace Facebook.Base.Logging
 {
 	public enum LogLevel
 	{

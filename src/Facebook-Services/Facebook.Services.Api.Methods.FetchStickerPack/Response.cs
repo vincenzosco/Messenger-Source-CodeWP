@@ -1,4 +1,4 @@
-using Facebook.Base;
+﻿using Facebook.Base;
 using Facebook.Models;
 
 namespace Facebook.Services.Api.Methods.FetchStickerPack

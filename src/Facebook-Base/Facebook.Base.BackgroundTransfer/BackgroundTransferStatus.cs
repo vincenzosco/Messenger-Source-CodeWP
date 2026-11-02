@@ -1,4 +1,4 @@
-namespace Facebook.Base.BackgroundTransfer
+﻿namespace Facebook.Base.BackgroundTransfer
 {
 	public enum BackgroundTransferStatus
 	{

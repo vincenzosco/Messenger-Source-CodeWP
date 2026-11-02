@@ -1,4 +1,4 @@
-namespace Facebook.Services.Api.Methods.FetchMessages
+﻿namespace Facebook.Services.Api.Methods.FetchMessages
 {
 	[Queue(QueueType.Web)]
 	public class Request : FacebookServiceRequest

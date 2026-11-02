@@ -1,4 +1,4 @@
-namespace Facebook.Services.Localization
+﻿namespace Facebook.Services.Localization
 {
 	public class ThreadSnippetInfo
 	{

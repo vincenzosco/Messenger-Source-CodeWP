@@ -1,4 +1,4 @@
-namespace ShakeGestures
+﻿namespace ShakeGestures
 {
 	public enum ShakeType
 	{

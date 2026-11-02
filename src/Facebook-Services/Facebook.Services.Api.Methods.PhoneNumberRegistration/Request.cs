@@ -1,4 +1,4 @@
-namespace Facebook.Services.Api.Methods.PhoneNumberRegistration
+﻿namespace Facebook.Services.Api.Methods.PhoneNumberRegistration
 {
 	[Queue(QueueType.Web)]
 	public class Request : FacebookServiceRequest

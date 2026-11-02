@@ -1,4 +1,4 @@
-namespace Microsoft.Phone.Controls
+﻿namespace Microsoft.Phone.Controls
 {
 	public enum DisplayedElementType
 	{

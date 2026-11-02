@@ -1,4 +1,4 @@
-namespace Facebook.Services.Api.Methods.BypassLoginWithConfirmedMessengerCredentials
+﻿namespace Facebook.Services.Api.Methods.BypassLoginWithConfirmedMessengerCredentials
 {
 	[Queue(QueueType.Web)]
 	public class Request : FacebookServiceRequest

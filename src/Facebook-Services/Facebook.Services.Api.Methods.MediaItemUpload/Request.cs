@@ -1,4 +1,4 @@
-using Facebook.Services.Api.Methods.SendMessage;
+﻿using Facebook.Services.Api.Methods.SendMessage;
 
 namespace Facebook.Services.Api.Methods.MediaItemUpload
 {

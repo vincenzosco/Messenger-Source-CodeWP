@@ -1,4 +1,4 @@
-namespace Facebook.Services.Api.Methods.FetchSearchability
+﻿namespace Facebook.Services.Api.Methods.FetchSearchability
 {
 	public enum PhoneSearchabilityTypes
 	{

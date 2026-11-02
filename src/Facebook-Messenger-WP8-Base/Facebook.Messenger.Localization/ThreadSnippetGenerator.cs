@@ -1,4 +1,4 @@
-using Facebook.Base.Logging;
+﻿using Facebook.Base.Logging;
 using Facebook.Messenger.Localization.Resources;
 using Facebook.Models;
 using Facebook.Services.Localization;

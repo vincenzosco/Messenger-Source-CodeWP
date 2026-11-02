@@ -1,4 +1,4 @@
-using Microsoft.Phone.Net.NetworkInformation;
+﻿using Microsoft.Phone.Net.NetworkInformation;
 
 namespace Facebook.Messenger.WP8.ViewModels.Internal
 {

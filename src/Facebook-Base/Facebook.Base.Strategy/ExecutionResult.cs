@@ -1,4 +1,4 @@
-namespace Facebook.Base.Strategy
+﻿namespace Facebook.Base.Strategy
 {
 	public enum ExecutionResult
 	{

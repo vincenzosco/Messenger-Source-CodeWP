@@ -1,4 +1,4 @@
-using Facebook.Models.SyncProtocol;
+﻿using Facebook.Models.SyncProtocol;
 
 namespace Facebook.Models.Signals
 {

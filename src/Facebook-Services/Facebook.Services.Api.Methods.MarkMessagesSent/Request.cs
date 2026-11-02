@@ -1,4 +1,4 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Facebook.Base;
 using Facebook.Services.Api.Methods.SendMessage;
 

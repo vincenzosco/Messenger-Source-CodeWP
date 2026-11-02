@@ -1,4 +1,4 @@
-using Facebook.Messenger.Localization;
+﻿using Facebook.Messenger.Localization;
 using Facebook.Messenger.Localization.Resources;
 
 namespace Facebook.Messenger.WP8.Localization

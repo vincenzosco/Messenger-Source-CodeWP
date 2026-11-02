@@ -1,4 +1,4 @@
-using Facebook.Base;
+﻿using Facebook.Base;
 
 namespace Facebook.Services.Api.Methods.DownloadStickerPack
 {

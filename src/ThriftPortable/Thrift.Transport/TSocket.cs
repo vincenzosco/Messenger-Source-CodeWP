@@ -1,4 +1,4 @@
-using ThriftPortable.Extensions;
+﻿using ThriftPortable.Extensions;
 
 namespace Thrift.Transport
 {

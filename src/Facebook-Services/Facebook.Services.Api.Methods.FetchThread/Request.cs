@@ -1,4 +1,4 @@
-namespace Facebook.Services.Api.Methods.FetchThread
+﻿namespace Facebook.Services.Api.Methods.FetchThread
 {
 	[Queue(QueueType.Web)]
 	public class Request : FacebookServiceRequest

@@ -1,4 +1,4 @@
-namespace Facebook.Models
+﻿namespace Facebook.Models
 {
 	public class FacebookConfig
 	{

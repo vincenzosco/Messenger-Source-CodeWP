@@ -48,13 +48,19 @@ MvvmLight, MQTT over `StreamSocket`, GraphQL queries in
 
 ## Status
 
-- **0 compile errors** in `Debug|Any CPU` and `Release|Any CPU`.
-- All eight assemblies produce their DLLs, and the app emits 115 `.g.cs` files
-  from the markup compiler, so the XAML pages really do compile.
-- **No `.xap` comes out.** The packaging targets run to the end
-  (`FilesToXap` and `XapPackager` both exit 0) but write nothing: the task that
-  collects the payload ships with the standalone Windows Phone 8.1 SDK, which is
-  not installed here. Everything before that step is verified.
+- **0 errors, 0 warnings** in `Debug|Any CPU` and `Release|Any CPU`, also from a
+  tree with no `bin/` or `obj/`. The projects declare `ToolsVersion 12.0`, so
+  Visual Studio 2013 and 2015 open them unchanged.
+- All eight assemblies produce their DLLs and the app emits its `.g.cs` files, so
+  the XAML pages really do compile.
+- `python tools/pack-xap.py` writes `Messenger/bin/Debug/Messenger.xap`: 44
+  entries, 24 assemblies, `Assets/` and both manifests at the root. It is unsigned
+  and has no language satellites, which are not built here.
+- The WP8.1 packaging targets still do not finish their own `.xap`: `FilesToXap`
+  and `XapPackager` exit 0 and write nothing, because the task that collects the
+  payload belongs to the standalone SDK.
+- 2 of the 15 methods the decompiler could not translate now run the hand-typed
+  body from `recovered/`; 13 stubs remain.
 
 ## Requirements
 
@@ -141,6 +147,12 @@ target the WP targets reference but never declare, and it seeds
 </details>
 
 ## Known limits
+
+- **The zero-warning build is partly policy.** `NoWarn` covers `CS0618` (the
+  WP8.1 APIs the 2015 app calls), the unused field and local codes the
+  decompiler leaves behind, and one Thrift warning. The two that were real
+  defects, a duplicate `using` and two hidden events, are fixed in
+  `tools/fixups-warnings.py`.
 
 - **15 async methods** were not decompiled automatically (state machines in
   `CameraView`, `FBGeoLocator`, `SingleInputPaneHelper`). They stay as stubs that

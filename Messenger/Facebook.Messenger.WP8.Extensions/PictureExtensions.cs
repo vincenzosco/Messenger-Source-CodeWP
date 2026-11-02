@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.IO;
 using Facebook.Base.Logging;
 using Microsoft.Xna.Framework.Media;

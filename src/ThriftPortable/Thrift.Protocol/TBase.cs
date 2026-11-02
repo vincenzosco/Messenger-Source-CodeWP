@@ -1,4 +1,4 @@
-namespace Thrift.Protocol
+﻿namespace Thrift.Protocol
 {
 	public interface TBase : TAbstractBase
 	{

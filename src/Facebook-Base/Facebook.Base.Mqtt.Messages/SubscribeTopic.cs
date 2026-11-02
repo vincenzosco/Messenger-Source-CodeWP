@@ -1,4 +1,4 @@
-namespace Facebook.Base.Mqtt.Messages
+﻿namespace Facebook.Base.Mqtt.Messages
 {
 	public class SubscribeTopic
 	{

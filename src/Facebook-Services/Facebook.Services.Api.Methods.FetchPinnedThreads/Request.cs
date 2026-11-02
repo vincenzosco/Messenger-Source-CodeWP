@@ -1,4 +1,4 @@
-namespace Facebook.Services.Api.Methods.FetchPinnedThreads
+﻿namespace Facebook.Services.Api.Methods.FetchPinnedThreads
 {
 	[Queue(QueueType.Web)]
 	public class Request : FacebookServiceRequest

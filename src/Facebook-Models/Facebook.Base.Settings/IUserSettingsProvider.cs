@@ -1,4 +1,4 @@
-namespace Facebook.Base.Settings
+﻿namespace Facebook.Base.Settings
 {
 	public interface IUserSettingsProvider
 	{

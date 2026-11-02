@@ -1,4 +1,4 @@
-namespace Thrift.Transport
+﻿namespace Thrift.Transport
 {
 	public class TTransportFactory
 	{

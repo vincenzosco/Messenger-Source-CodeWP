@@ -1,4 +1,4 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Facebook.Messenger.WP8.Controls.Base;
 
 namespace Facebook.Messenger.WP8.Controls

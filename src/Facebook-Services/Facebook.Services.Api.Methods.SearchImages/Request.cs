@@ -1,4 +1,4 @@
-namespace Facebook.Services.Api.Methods.SearchImages
+﻿namespace Facebook.Services.Api.Methods.SearchImages
 {
 	[Queue(QueueType.Web)]
 	public class Request : FacebookServiceRequest

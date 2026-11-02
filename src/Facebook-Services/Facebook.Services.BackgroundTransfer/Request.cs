@@ -1,4 +1,4 @@
-using Facebook.Base.BackgroundTransfer;
+﻿using Facebook.Base.BackgroundTransfer;
 using Facebook.Services.Http;
 
 namespace Facebook.Services.BackgroundTransfer

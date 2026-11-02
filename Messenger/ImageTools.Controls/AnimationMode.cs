@@ -1,4 +1,4 @@
-namespace ImageTools.Controls
+﻿namespace ImageTools.Controls
 {
 	public enum AnimationMode
 	{

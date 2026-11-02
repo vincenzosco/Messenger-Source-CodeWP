@@ -1,4 +1,4 @@
-namespace Facebook.Messenger.WP8.ViewModels
+﻿namespace Facebook.Messenger.WP8.ViewModels
 {
 	public enum ConnectionBannerType
 	{

@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using Microsoft.Phone.Shell;
 
 namespace Facebook.Messenger.WP8.Utilities

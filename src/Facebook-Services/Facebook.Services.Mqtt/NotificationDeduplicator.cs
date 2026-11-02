@@ -1,4 +1,4 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Facebook.Base.Logging;
 
 namespace Facebook.Services.Mqtt

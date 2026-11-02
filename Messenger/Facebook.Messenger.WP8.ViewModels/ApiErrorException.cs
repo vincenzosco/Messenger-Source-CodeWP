@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using Facebook.Base;
 
 namespace Facebook.Messenger.WP8.ViewModels

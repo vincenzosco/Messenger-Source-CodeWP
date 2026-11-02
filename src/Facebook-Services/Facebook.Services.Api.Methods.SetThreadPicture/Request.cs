@@ -1,4 +1,4 @@
-namespace Facebook.Services.Api.Methods.SetThreadPicture
+﻿namespace Facebook.Services.Api.Methods.SetThreadPicture
 {
 	[Queue(QueueType.Web)]
 	public class Request : FacebookServiceRequest

@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.IO.IsolatedStorage;
 using System.Windows;
 using System.Windows.Resources;

@@ -1,4 +1,4 @@
-using System.IO;
+﻿using System.IO;
 using ExifLib;
 
 namespace Facebook.Messenger.WP8.Extensions

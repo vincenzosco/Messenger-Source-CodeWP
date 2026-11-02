@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using Facebook.Models.SyncProtocol;
 
 namespace Facebook.Services.SyncProtocol

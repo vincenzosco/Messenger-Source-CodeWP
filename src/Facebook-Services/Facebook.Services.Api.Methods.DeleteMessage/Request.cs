@@ -1,4 +1,4 @@
-namespace Facebook.Services.Api.Methods.DeleteMessage
+﻿namespace Facebook.Services.Api.Methods.DeleteMessage
 {
 	[Queue(QueueType.Web)]
 	public class Request : FacebookServiceRequest

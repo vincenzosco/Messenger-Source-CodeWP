@@ -1,4 +1,4 @@
-namespace Facebook.Messenger.WP8.Events
+﻿namespace Facebook.Messenger.WP8.Events
 {
 	public enum ListEvent
 	{

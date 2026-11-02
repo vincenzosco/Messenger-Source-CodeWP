@@ -1,4 +1,4 @@
-using System.Text;
+﻿using System.Text;
 using Thrift.Protocol;
 
 namespace Facebook.Models.SyncProtocol

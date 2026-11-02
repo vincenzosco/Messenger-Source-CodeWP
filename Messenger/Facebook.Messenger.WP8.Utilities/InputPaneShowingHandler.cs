@@ -1,4 +1,4 @@
-using Windows.UI.ViewManagement;
+﻿using Windows.UI.ViewManagement;
 
 namespace Facebook.Messenger.WP8.Utilities
 {

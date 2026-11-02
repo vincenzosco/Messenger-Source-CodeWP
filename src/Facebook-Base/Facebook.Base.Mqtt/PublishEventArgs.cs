@@ -1,4 +1,4 @@
-namespace Facebook.Base.Mqtt
+﻿namespace Facebook.Base.Mqtt
 {
 	public class PublishEventArgs
 	{

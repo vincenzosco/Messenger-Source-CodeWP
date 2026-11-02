@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using Facebook.Base.Logging;
 using Microsoft.Phone.BackgroundAudio;
 using Microsoft.Xna.Framework.Media;

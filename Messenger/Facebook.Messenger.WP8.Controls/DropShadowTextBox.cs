@@ -65,7 +65,7 @@ namespace Facebook.Messenger.WP8.Controls
 			}
 		}
 
-		public event RoutedEventHandler GotFocus
+		public new event RoutedEventHandler GotFocus
 		{
 			add
 			{
@@ -97,7 +97,7 @@ namespace Facebook.Messenger.WP8.Controls
 			}
 		}
 
-		public event RoutedEventHandler LostFocus
+		public new event RoutedEventHandler LostFocus
 		{
 			add
 			{

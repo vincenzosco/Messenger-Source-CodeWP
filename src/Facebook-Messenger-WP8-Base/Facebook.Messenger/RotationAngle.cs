@@ -1,4 +1,4 @@
-namespace Facebook.Messenger
+﻿namespace Facebook.Messenger
 {
 	public enum RotationAngle
 	{

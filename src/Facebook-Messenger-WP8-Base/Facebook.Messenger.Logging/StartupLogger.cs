@@ -1,4 +1,4 @@
-namespace Facebook.Messenger.Logging
+﻿namespace Facebook.Messenger.Logging
 {
 	public class StartupLogger : FileLogger
 	{

@@ -1,4 +1,4 @@
-namespace Facebook.Services.Api.Methods.SendAnalyticsEvents
+﻿namespace Facebook.Services.Api.Methods.SendAnalyticsEvents
 {
 	public class Response : FacebookApiResponse
 	{

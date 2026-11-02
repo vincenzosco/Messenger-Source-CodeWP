@@ -1,4 +1,4 @@
-namespace Facebook.Services.Api.Methods.AddContact
+﻿namespace Facebook.Services.Api.Methods.AddContact
 {
 	[Queue(QueueType.Web)]
 	public class Request : FacebookServiceRequest

@@ -1,4 +1,4 @@
-namespace Facebook.Base.Network
+﻿namespace Facebook.Base.Network
 {
 	public interface IUserAgentGenerator
 	{

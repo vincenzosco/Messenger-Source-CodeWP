@@ -1,4 +1,4 @@
-namespace Facebook.Messenger.WP8.Text
+﻿namespace Facebook.Messenger.WP8.Text
 {
 	public enum TextType
 	{

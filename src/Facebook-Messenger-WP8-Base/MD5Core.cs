@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Text;
 
 public sealed class MD5Core

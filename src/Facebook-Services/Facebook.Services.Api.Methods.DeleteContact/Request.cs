@@ -1,4 +1,4 @@
-namespace Facebook.Services.Api.Methods.DeleteContact
+﻿namespace Facebook.Services.Api.Methods.DeleteContact
 {
 	[Queue(QueueType.Web)]
 	public class Request : FacebookServiceRequest

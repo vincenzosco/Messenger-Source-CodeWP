@@ -1,4 +1,4 @@
-using Facebook.Base;
+﻿using Facebook.Base;
 using Facebook.Base.Extensions;
 using Facebook.Models;
 using Facebook.Services.Api.Methods.MediaItemUpload;

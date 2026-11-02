@@ -16,7 +16,6 @@ using Facebook.Base.Logging;
 using Facebook.Messenger.Localization.Resources;
 using Facebook.Models;
 using Microsoft.Devices;
-using Windows.Phone.Media.Capture;
 
 namespace Facebook.Messenger.WP8.Controls
 {

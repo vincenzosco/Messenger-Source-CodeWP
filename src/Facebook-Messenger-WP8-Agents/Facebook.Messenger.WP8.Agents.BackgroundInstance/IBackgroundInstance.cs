@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Threading.Tasks;
 
 namespace Facebook.Messenger.WP8.Agents.BackgroundInstance

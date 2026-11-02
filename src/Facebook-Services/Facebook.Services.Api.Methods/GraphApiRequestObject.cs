@@ -1,4 +1,4 @@
-namespace Facebook.Services.Api.Methods
+﻿namespace Facebook.Services.Api.Methods
 {
 	internal class GraphApiRequestObject
 	{

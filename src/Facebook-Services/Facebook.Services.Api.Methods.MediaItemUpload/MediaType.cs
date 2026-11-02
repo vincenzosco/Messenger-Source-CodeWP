@@ -1,4 +1,4 @@
-namespace Facebook.Services.Api.Methods.MediaItemUpload
+﻿namespace Facebook.Services.Api.Methods.MediaItemUpload
 {
 	public enum MediaType
 	{

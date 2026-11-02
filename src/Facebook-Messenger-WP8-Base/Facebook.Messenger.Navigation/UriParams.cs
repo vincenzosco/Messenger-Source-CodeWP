@@ -1,4 +1,4 @@
-namespace Facebook.Messenger.Navigation
+﻿namespace Facebook.Messenger.Navigation
 {
 	public static class UriParams
 	{

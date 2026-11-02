@@ -1,4 +1,4 @@
-namespace Facebook.Messenger.WP8.Utilities
+﻿namespace Facebook.Messenger.WP8.Utilities
 {
 	public enum PhonePrivacyTypes
 	{

@@ -1,4 +1,4 @@
-namespace Facebook.Services.Api.Methods.LeaveThread
+﻿namespace Facebook.Services.Api.Methods.LeaveThread
 {
 	[Queue(QueueType.Web)]
 	public class Request : FacebookServiceRequest

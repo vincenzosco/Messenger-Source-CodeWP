@@ -1,4 +1,4 @@
-namespace ImageTools
+﻿namespace ImageTools
 {
 	public interface IImageResizer
 	{

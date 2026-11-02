@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Linq;
 using Facebook.Base.Logging;
 using Microsoft.Phone.Shell;

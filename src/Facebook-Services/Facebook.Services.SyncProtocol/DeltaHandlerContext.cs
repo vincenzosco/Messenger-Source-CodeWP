@@ -1,4 +1,4 @@
-using Facebook.Models.Utilities;
+﻿using Facebook.Models.Utilities;
 using Facebook.Services.Api.Cache;
 
 namespace Facebook.Services.SyncProtocol

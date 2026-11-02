@@ -1,4 +1,4 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using Facebook.Base;
 using Facebook.Messenger.WP8.Extensions;

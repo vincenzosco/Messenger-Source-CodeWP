@@ -1,4 +1,4 @@
-using Facebook.Base;
+﻿using Facebook.Base;
 using Facebook.Base.Network;
 using Windows.Graphics.Display;
 

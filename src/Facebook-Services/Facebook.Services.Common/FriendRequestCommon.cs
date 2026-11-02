@@ -1,4 +1,4 @@
-namespace Facebook.Services.Common
+﻿namespace Facebook.Services.Common
 {
 	internal class FriendRequestCommon
 	{

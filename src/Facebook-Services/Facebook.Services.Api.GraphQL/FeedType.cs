@@ -1,4 +1,4 @@
-namespace Facebook.Services.Api.GraphQL
+﻿namespace Facebook.Services.Api.GraphQL
 {
 	public enum FeedType
 	{

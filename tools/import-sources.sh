@@ -176,7 +176,7 @@ emit_csproj() {
 
   cat > "$csproj" <<XML
 <?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <ProjectGuid>$guid</ProjectGuid>
     <ProjectTypeGuids>{C089C8C0-30E0-4E22-80C0-CE093F111A43};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -191,7 +191,17 @@ emit_csproj() {
     <LangVersion>5</LangVersion>
     <FileAlignment>512</FileAlignment>
     <MinimumVisualStudioVersion>12</MinimumVisualStudioVersion>
-    <NoWarn>1591</NoWarn>
+    <!--
+      Warning soppressi, e perche' sono inevitabili in questo sorgente:
+      CS0618 le API WP8.1 usate dall'app sono obsolete nel framework stesso
+             (AudioVideoCaptureDevice, DisplayProperties, Geocoordinate): sostituirle
+             significherebbe riscrivere l'app, non il decompilato.
+      CS0169 CS0649 CS0414 campi che il IL dichiara e non usa: il decompilato conserva
+             il layout originale, toglierli cambierebbe i tipi pubblici.
+      CS0219 locali che il decompilatore lascia senza uso (num3).
+      CS0675 or bit a bit su operando con segno, nel trasporto Thrift di terzi.
+    -->
+    <NoWarn>1591;CS0618;CS0169;CS0649;CS0414;CS0219;CS0675</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition=" '\$(Configuration)|\$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -249,6 +259,7 @@ XML
     </Reference>
   </ItemGroup>
   <Import Project="..\build\WpPackagingFallback.targets" />
+  <Import Project="../build/CompileFix.targets" />
   <ItemGroup>
     <Content Include="Assets\**\*" />
     <Content Include="AppManifest.xaml" />
@@ -346,5 +357,7 @@ python tools/fixups-residual.py
 python tools/fixups-links.py
 python tools/fixups-il.py
 python tools/fixups-resources.py
+python tools/fixups-recovered.py
+python tools/fixups-warnings.py
 
 echo "import completato: app in $APP_DIR/, librerie in src/, dll in lib/"

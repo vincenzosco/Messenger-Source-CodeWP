@@ -1,4 +1,4 @@
-namespace Facebook.Messenger.WP8.Utilities.PhoneContacts
+﻿namespace Facebook.Messenger.WP8.Utilities.PhoneContacts
 {
 	public enum SyncState
 	{

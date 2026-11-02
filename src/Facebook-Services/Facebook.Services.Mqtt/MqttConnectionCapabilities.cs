@@ -1,4 +1,4 @@
-namespace Facebook.Services.Mqtt
+﻿namespace Facebook.Services.Mqtt
 {
 	internal enum MqttConnectionCapabilities
 	{

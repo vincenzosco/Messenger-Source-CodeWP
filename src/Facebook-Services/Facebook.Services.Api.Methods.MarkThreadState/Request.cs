@@ -1,4 +1,4 @@
-using Facebook.Models;
+﻿using Facebook.Models;
 
 namespace Facebook.Services.Api.Methods.MarkThreadState
 {

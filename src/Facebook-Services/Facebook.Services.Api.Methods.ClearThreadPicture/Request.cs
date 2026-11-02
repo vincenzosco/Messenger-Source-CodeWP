@@ -1,4 +1,4 @@
-namespace Facebook.Services.Api.Methods.ClearThreadPicture
+﻿namespace Facebook.Services.Api.Methods.ClearThreadPicture
 {
 	[Queue(QueueType.Web)]
 	public class Request : FacebookServiceRequest

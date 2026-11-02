@@ -1,4 +1,4 @@
-namespace Facebook.Services.Api.Methods.SyncFriends
+﻿namespace Facebook.Services.Api.Methods.SyncFriends
 {
 	[Queue(QueueType.Web)]
 	public class Request : FacebookServiceRequest

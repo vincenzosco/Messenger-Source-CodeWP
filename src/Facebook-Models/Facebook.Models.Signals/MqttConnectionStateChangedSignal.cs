@@ -1,4 +1,4 @@
-using Facebook.Base.Mqtt;
+﻿using Facebook.Base.Mqtt;
 
 namespace Facebook.Models.Signals
 {

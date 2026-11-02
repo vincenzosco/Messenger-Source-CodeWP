@@ -1,4 +1,4 @@
-namespace Facebook.Services.Api.Cache
+﻿namespace Facebook.Services.Api.Cache
 {
 	public class ActionIdResult
 	{

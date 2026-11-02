@@ -1,4 +1,4 @@
-namespace Facebook.Base.Mqtt.Serialization
+﻿namespace Facebook.Base.Mqtt.Serialization
 {
 	public interface IMqttStreamWriter
 	{

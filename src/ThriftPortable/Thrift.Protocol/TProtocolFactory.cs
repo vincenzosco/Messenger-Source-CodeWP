@@ -1,4 +1,4 @@
-using Thrift.Transport;
+﻿using Thrift.Transport;
 
 namespace Thrift.Protocol
 {

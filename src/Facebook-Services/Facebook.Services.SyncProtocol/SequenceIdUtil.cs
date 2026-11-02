@@ -1,4 +1,4 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Facebook.Models.SyncProtocol;
 
 namespace Facebook.Services.SyncProtocol

@@ -1,4 +1,4 @@
-namespace Facebook.Messenger.WP8.ViewModels.Internal
+﻿namespace Facebook.Messenger.WP8.ViewModels.Internal
 {
 	public class BuildDetailsViewModel
 	{

@@ -1,4 +1,4 @@
-namespace Facebook.Services.Api.Methods.Login
+﻿namespace Facebook.Services.Api.Methods.Login
 {
 	[Queue(QueueType.Web)]
 	public class Request : FacebookServiceRequest

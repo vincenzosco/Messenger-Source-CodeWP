@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Windows.Navigation;
 using Facebook.Messenger.Navigation;
 using Facebook.Messenger.WP8.Utilities;

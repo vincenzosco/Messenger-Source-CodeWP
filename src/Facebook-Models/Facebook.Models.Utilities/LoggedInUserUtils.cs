@@ -1,4 +1,4 @@
-namespace Facebook.Models.Utilities
+﻿namespace Facebook.Models.Utilities
 {
 	public class LoggedInUserUtils
 	{

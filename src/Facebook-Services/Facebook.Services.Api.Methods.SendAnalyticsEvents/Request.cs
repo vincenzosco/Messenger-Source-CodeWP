@@ -1,4 +1,4 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Facebook.Services.Analytics;
 
 namespace Facebook.Services.Api.Methods.SendAnalyticsEvents

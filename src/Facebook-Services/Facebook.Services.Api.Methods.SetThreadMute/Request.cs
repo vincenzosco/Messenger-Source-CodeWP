@@ -1,4 +1,4 @@
-namespace Facebook.Services.Api.Methods.SetThreadMute
+﻿namespace Facebook.Services.Api.Methods.SetThreadMute
 {
 	[Queue(QueueType.Web)]
 	public class Request : FacebookServiceRequest

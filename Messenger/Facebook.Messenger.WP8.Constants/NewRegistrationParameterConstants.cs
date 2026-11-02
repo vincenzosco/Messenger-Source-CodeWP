@@ -1,4 +1,4 @@
-namespace Facebook.Messenger.WP8.Constants
+﻿namespace Facebook.Messenger.WP8.Constants
 {
 	public static class NewRegistrationParameterConstants
 	{

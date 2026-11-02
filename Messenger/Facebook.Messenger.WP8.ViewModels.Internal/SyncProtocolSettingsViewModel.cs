@@ -1,4 +1,4 @@
-using Facebook.Base.Extensions;
+﻿using Facebook.Base.Extensions;
 using Facebook.Services.Api.Cache;
 using Facebook.Services.SyncProtocol;
 

@@ -1,4 +1,4 @@
-using Facebook.Services.Api.Methods;
+﻿using Facebook.Services.Api.Methods;
 using Newtonsoft.Json;
 
 namespace Facebook.Services.Common

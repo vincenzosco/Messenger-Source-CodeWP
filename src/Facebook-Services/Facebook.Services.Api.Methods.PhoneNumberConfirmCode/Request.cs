@@ -1,4 +1,4 @@
-namespace Facebook.Services.Api.Methods.PhoneNumberConfirmCode
+﻿namespace Facebook.Services.Api.Methods.PhoneNumberConfirmCode
 {
 	[Queue(QueueType.Web)]
 	public class Request : FacebookServiceRequest

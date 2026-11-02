@@ -1,4 +1,4 @@
-using Facebook.Base.Extensions;
+﻿using Facebook.Base.Extensions;
 using Facebook.Services.Common;
 
 namespace Facebook.Services.Analytics.Logging

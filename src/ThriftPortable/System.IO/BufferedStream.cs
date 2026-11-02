@@ -1,4 +1,4 @@
-namespace System.IO
+﻿namespace System.IO
 {
 	internal sealed class BufferedStream : Stream
 	{

@@ -1,4 +1,4 @@
-namespace Facebook.Services.Api.Methods.SendFlytrapReport
+﻿namespace Facebook.Services.Api.Methods.SendFlytrapReport
 {
 	[Queue(QueueType.Web)]
 	public class Request : FacebookServiceRequest

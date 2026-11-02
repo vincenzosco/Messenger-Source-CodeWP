@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using Facebook.Messenger.Localization.Resources;
 using Microsoft.Phone.Controls;
 

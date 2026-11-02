@@ -1,4 +1,4 @@
-namespace Facebook.Services.Api.Methods.DeleteThread
+﻿namespace Facebook.Services.Api.Methods.DeleteThread
 {
 	[Queue(QueueType.Web)]
 	public class Request : FacebookServiceRequest

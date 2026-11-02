@@ -1,4 +1,4 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using Facebook.Models;
 using Facebook.Models.SyncProtocol;

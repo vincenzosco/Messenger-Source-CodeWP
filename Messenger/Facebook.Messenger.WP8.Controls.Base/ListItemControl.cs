@@ -1,4 +1,4 @@
-namespace Facebook.Messenger.WP8.Controls.Base
+﻿namespace Facebook.Messenger.WP8.Controls.Base
 {
 	public abstract class ListItemControl<TViewModel> : ViewModelControl<TViewModel> where TViewModel : class
 	{

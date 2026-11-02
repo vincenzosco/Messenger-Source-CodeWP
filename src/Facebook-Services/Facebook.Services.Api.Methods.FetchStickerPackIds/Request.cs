@@ -1,4 +1,4 @@
-namespace Facebook.Services.Api.Methods.FetchStickerPackIds
+﻿namespace Facebook.Services.Api.Methods.FetchStickerPackIds
 {
 	[Queue(QueueType.Web)]
 	public class Request : FacebookServiceRequest

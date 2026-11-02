@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Text;
 using Facebook.Base.Logging;
 using Facebook.Messenger.Utilities;

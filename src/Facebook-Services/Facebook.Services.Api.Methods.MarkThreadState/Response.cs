@@ -1,4 +1,4 @@
-namespace Facebook.Services.Api.Methods.MarkThreadState
+﻿namespace Facebook.Services.Api.Methods.MarkThreadState
 {
 	public class Response : FacebookApiResponse
 	{

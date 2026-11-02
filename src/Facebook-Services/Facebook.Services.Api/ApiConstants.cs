@@ -1,4 +1,4 @@
-namespace Facebook.Services.Api
+﻿namespace Facebook.Services.Api
 {
 	public static class ApiConstants
 	{

@@ -1,4 +1,4 @@
-namespace Facebook.Services.Api.Methods.CreateNewUserAccount
+﻿namespace Facebook.Services.Api.Methods.CreateNewUserAccount
 {
 	[Queue(QueueType.Web)]
 	public class Request : FacebookServiceRequest

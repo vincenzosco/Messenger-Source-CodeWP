@@ -1,4 +1,4 @@
-namespace Facebook.Services.Api.Methods.FetchFriendLastActive
+﻿namespace Facebook.Services.Api.Methods.FetchFriendLastActive
 {
 	[Queue(QueueType.Web)]
 	public class Request : FacebookServiceRequest

@@ -1,4 +1,4 @@
-using Facebook.Base.Strategy;
+﻿using Facebook.Base.Strategy;
 
 namespace Facebook.Services.SyncProtocol
 {

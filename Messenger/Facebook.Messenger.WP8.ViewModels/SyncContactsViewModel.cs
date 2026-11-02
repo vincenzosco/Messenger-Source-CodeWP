@@ -1,4 +1,4 @@
-using Facebook.Base;
+﻿using Facebook.Base;
 using Facebook.Base.Network;
 using Facebook.Messenger.Navigation;
 using Facebook.Messenger.WP8.Navigation;

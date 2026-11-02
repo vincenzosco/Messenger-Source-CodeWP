@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using Facebook.Messenger.WP8.ViewModels;
 
 namespace Facebook.Messenger.WP8.Events

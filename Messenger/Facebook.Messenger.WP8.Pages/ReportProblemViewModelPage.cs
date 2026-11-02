@@ -1,4 +1,4 @@
-using Facebook.Messenger.WP8.ViewModels;
+﻿using Facebook.Messenger.WP8.ViewModels;
 
 namespace Facebook.Messenger.WP8.Pages
 {

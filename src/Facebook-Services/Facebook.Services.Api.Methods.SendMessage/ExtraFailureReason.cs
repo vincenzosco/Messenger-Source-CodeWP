@@ -1,4 +1,4 @@
-namespace Facebook.Services.Api.Methods.SendMessage
+﻿namespace Facebook.Services.Api.Methods.SendMessage
 {
 	public enum ExtraFailureReason
 	{

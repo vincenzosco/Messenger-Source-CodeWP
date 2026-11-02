@@ -1,4 +1,4 @@
-namespace Facebook.Models.Signals
+﻿namespace Facebook.Models.Signals
 {
 	public class LogoutSignal
 	{

@@ -1,4 +1,4 @@
-namespace Facebook.Services.Api.Methods.FetchGroupSearchResults
+﻿namespace Facebook.Services.Api.Methods.FetchGroupSearchResults
 {
 	[Queue(QueueType.Web)]
 	public class Request : FacebookServiceRequest

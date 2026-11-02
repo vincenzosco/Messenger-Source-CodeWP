@@ -1,4 +1,4 @@
-namespace Facebook.Services.Api.Methods.ReportCrash
+﻿namespace Facebook.Services.Api.Methods.ReportCrash
 {
 	[Queue(QueueType.Web)]
 	public class Request : FacebookServiceRequest

@@ -1,4 +1,4 @@
-namespace Facebook.Services.Analytics.Logging
+﻿namespace Facebook.Services.Analytics.Logging
 {
 	public enum DataType
 	{

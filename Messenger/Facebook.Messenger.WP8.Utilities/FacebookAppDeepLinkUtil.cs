@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using Facebook.Messenger.Extensions;
 using Facebook.Messenger.Navigation;
 using Facebook.Models;

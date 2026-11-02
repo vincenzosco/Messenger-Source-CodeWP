@@ -1,4 +1,4 @@
-namespace Facebook.Models.SyncProtocol
+﻿namespace Facebook.Models.SyncProtocol
 {
 	public enum PaymentLogMessageType
 	{

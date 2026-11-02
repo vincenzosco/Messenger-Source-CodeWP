@@ -1,4 +1,4 @@
-namespace Facebook.Services.Api.Methods.ContactsMessengerSync
+﻿namespace Facebook.Services.Api.Methods.ContactsMessengerSync
 {
 	[Queue(QueueType.Web)]
 	public class Request : FacebookServiceRequest

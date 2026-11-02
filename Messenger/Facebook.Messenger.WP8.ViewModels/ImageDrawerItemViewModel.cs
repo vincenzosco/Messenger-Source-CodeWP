@@ -1,4 +1,4 @@
-using System.Windows.Media;
+﻿using System.Windows.Media;
 using Facebook.Models;
 
 namespace Facebook.Messenger.WP8.ViewModels
